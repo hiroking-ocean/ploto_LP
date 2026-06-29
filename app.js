@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
   let currentLang = localStorage.getItem("ploto-lang") || "ja";
   let currentTheme = localStorage.getItem("ploto-theme") || "dark";
+  const screenshotNames = ["01-gantt.png", "02-kanban.png", "03-matrix.png", "04-darkmode.png"];
+  let screenshotIndex = 0;
+  let slideshowInterval = null;
 
   // --- 2. Translation Dictionary ---
   const i18nData = {
@@ -364,6 +367,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Refresh Gantt locale if loaded
     updateGanttLocale(lang);
+
+    // Update hero screenshot language based on current slide
+    const heroScreenshot = document.getElementById("hero-screenshot");
+    if (heroScreenshot) {
+      heroScreenshot.src = `assets/screenshots/${lang === "ja" ? "ja-jp" : "en-us"}/${screenshotNames[screenshotIndex]}`;
+    }
   }
 
   // --- 6. DHTMLX Gantt Demo Initialization ---
@@ -666,8 +675,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 11. Initial Invocation ---
+  // --- 11. Hero Visual Slideshow Logic ---
+  function startScreenshotSlideshow() {
+    if (slideshowInterval) clearInterval(slideshowInterval);
+    
+    slideshowInterval = setInterval(() => {
+      const heroScreenshot = document.getElementById("hero-screenshot");
+      if (!heroScreenshot) return;
+
+      screenshotIndex = (screenshotIndex + 1) % screenshotNames.length;
+      
+      // Smooth fade transition
+      heroScreenshot.style.opacity = "0";
+      
+      setTimeout(() => {
+        heroScreenshot.src = `assets/screenshots/${currentLang === "ja" ? "ja-jp" : "en-us"}/${screenshotNames[screenshotIndex]}`;
+        heroScreenshot.style.opacity = "1";
+      }, 300);
+    }, 5000); // 5 seconds per slide
+  }
+
+  // --- 12. Initial Invocation ---
   applyLanguage(currentLang);
   // Auto-init Gantt demo as Gantt is the first active tab
   initGanttDemo();
+  // Start visual slideshow
+  startScreenshotSlideshow();
 });
