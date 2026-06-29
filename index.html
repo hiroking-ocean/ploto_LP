@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ploto - 美しく直感的なローカルファースト・プロジェクト管理ツール</title>
+  <meta name="description" content="Plotoはガントチャート、カンバン、優先度マトリクスを融合した、美しく高速なデスクトップ向けプロジェクト管理アプリケーションです。SQLiteによるローカルファースト設計で、データを安全に管理します。">
+  
+  <!-- SEO & OGP -->
+  <meta property="og:title" content="Ploto - 美しく直感的なローカルファースト・プロジェクト管理ツール">
+  <meta property="og:description" content="ガントチャート、カンバン、優先度マトリクスを統合。SQLiteで高速・安全にローカル管理するデスクトッププロジェクト管理ツール。">
+  <meta property="og:type" content="website">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- DHTMLX Gantt (Standard Edition) CDN -->
+  <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" type="text/css">
+  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Application Script -->
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo-area">
+        <img src="assets/logo.svg" alt="Ploto Logo" class="logo-img">
+        <span class="logo-text">Ploto</span>
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="#features" data-i18n="nav_features">特徴</a>
+        <a href="#demo" data-i18n="nav_demo">体験デモ</a>
+        <a href="#beta" data-i18n="nav_beta">ベータ版</a>
+      </nav>
+      
+      <div class="header-actions">
+        <!-- Language Switcher -->
+        <button id="lang-toggle" class="btn-icon" aria-label="Toggle Language" title="Change Language">
+          <span class="lang-text">EN</span>
+        </button>
+        
+        <!-- Dark/Light Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        
+        <a href="#download" class="btn-primary" data-i18n="cta_download">無料ダウンロード</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="glow-container">
+        <div class="glow-orb orb-primary"></div>
+        <div class="glow-orb orb-secondary"></div>
+      </div>
+      
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="badge" data-i18n="hero_badge">✨ 個人開発・チームに最適なローカルファースト</div>
+          <h1 class="hero-title" data-i18n="hero_title">
+            プロジェクト管理を、<br><span class="text-gradient">もっと直感的に、美しく。</span>
+          </h1>
+          <p class="hero-description" data-i18n="hero_desc">
+            Ploto（プロト）は、ガントチャート、カンバン、優先度マトリクスを一つの美しいインターフェースに統合した、ローカルファーストのプロジェクト管理ツールです。SQLiteによる高速動作と、抜群 of プライバシー保護を実現します。
+          </p>
+          <div class="hero-buttons">
+            <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">無料で手に入れる</a>
+            <a href="#demo" class="btn-secondary btn-large" data-i18n="hero_cta_demo">デモを触ってみる</a>
+          </div>
+          <div class="hero-meta-info" data-i18n="hero_meta">
+            <span>✓ クラウドサインイン不要</span>
+            <span>✓ 完全オフライン対応</span>
+            <span>✓ 5言語ローカライズ</span>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <div class="browser-mockup">
+            <div class="browser-header">
+              <div class="browser-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="browser-tab">
+                <img src="assets/logo.svg" alt="Ploto Tab Icon" class="tab-icon">
+                <span>Ploto Workspace</span>
+              </div>
+            </div>
+            <div class="browser-content">
+              <!-- Visual Mockup of App UI in CSS -->
+              <div class="mock-sidebar">
+                <div class="mock-sidebar-item active">
+                  <div class="mock-icon circle"></div>
+                  <div class="mock-line short"></div>
+                </div>
+                <div class="mock-sidebar-item">
+                  <div class="mock-icon circle"></div>
+                  <div class="mock-line medium"></div>
+                </div>
+                <div class="mock-sidebar-item">
+                  <div class="mock-icon circle"></div>
+                  <div class="mock-line short"></div>
+                </div>
+              </div>
+              <div class="mock-main">
+                <div class="mock-toolbar">
+                  <div class="mock-tabs">
+                    <span class="mock-tab-item active" data-i18n="mock_tab_gantt">ガントチャート</span>
+                    <span class="mock-tab-item" data-i18n="mock_tab_kanban">カンバン</span>
+                    <span class="mock-tab-item" data-i18n="mock_tab_matrix">優先度マトリクス</span>
+                  </div>
+                  <div class="mock-actions">
+                    <div class="mock-btn-sm">Save</div>
+                  </div>
+                </div>
+                <div class="mock-workspace">
+                  <!-- CSS simulated Gantt chart -->
+                  <div class="mock-gantt">
+                    <div class="mock-gantt-sidebar">
+                      <div class="mock-gantt-header-cell" data-i18n="mock_col_task">タスク名</div>
+                      <div class="mock-gantt-row">
+                        <div class="mock-alert-line green"></div>
+                        <div class="mock-text-bold">プロジェクト立ち上げ</div>
+                      </div>
+                      <div class="mock-gantt-row sub-row">
+                        <div class="mock-alert-line green"></div>
+                        <div>市場調査と要件定義</div>
+                      </div>
+                      <div class="mock-gantt-row sub-row">
+                        <div class="mock-alert-line orange"></div>
+                        <div>UI/UX デザイン作成</div>
+                      </div>
+                      <div class="mock-gantt-row sub-row">
+                        <div class="mock-alert-line red"></div>
+                        <div>フロントエンド開発</div>
+                      </div>
+                    </div>
+                    <div class="mock-gantt-timeline">
+                      <div class="mock-gantt-header-timeline">
+                        <div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div>
+                      </div>
+                      <div class="mock-gantt-grid-rows">
+                        <div class="mock-gantt-bar-row">
+                          <div class="mock-gantt-bar primary" style="left: 10%; width: 60%;"></div>
+                        </div>
+                        <div class="mock-gantt-bar-row">
+                          <div class="mock-gantt-bar secondary" style="left: 10%; width: 30%;"></div>
+                        </div>
+                        <div class="mock-gantt-bar-row">
+                          <div class="mock-gantt-bar secondary" style="left: 35%; width: 25%;"></div>
+                        </div>
+                        <div class="mock-gantt-bar-row">
+                          <div class="mock-gantt-bar warn" style="left: 55%; width: 40%;"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="features_title">プロジェクト管理を加速する強力な機能</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">Plotoは使いやすさと高い機能性を両立するために設計されています。</p>
+        </div>
+        
+        <div class="features-grid">
+          <!-- Feature 1: Alert Line -->
+          <div class="feature-card">
+            <div class="feature-icon alert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title" data-i18n="feat_alert_title">健康度アラートライン</h3>
+            <p class="feature-card-desc" data-i18n="feat_alert_desc">
+              タスクの進行状況を「期限超過（赤）」「開始遅延（オレンジ）」「正常（緑）」の3色で左端にライン表示。対応が必要なタスクが一目でわかります。
+            </p>
+          </div>
+          
+          <!-- Feature 2: Calendar UX -->
+          <div class="feature-card">
+            <div class="feature-icon calendar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <h3 class="feature-card-title" data-i18n="feat_cal_title">祝日・週末のカスタマイズ表示</h3>
+            <p class="feature-card-desc" data-i18n="feat_cal_desc">
+              独自の祝日データをインポート・追加可能。週末の減色表示や祝日ハイライトにより、現実に即した稼働スケジュールを視覚化します。
+            </p>
+          </div>
+          
+          <!-- Feature 3: Undo/Redo -->
+          <div class="feature-card">
+            <div class="feature-icon undo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <polyline points="23 20 23 14 17 14"></polyline>
+                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title" data-i18n="feat_undo_title">無限の Undo / Redo</h3>
+            <p class="feature-card-desc" data-i18n="feat_undo_desc">
+              タスクのドラッグ、情報の追加、削除など、あらゆる操作を無制限に元に戻す・やり直す（Ctrl+Z / Y）ことができます。
+            </p>
+          </div>
+
+          <!-- Feature 4: Local SQLite -->
+          <div class="feature-card">
+            <div class="feature-icon lock-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="feature-card-title" data-i18n="feat_db_title">プライバシー重視の SQLite 設計</h3>
+            <p class="feature-card-desc" data-i18n="feat_db_desc">
+              データはすべてローカルの安全なSQLiteファイル（.ploto）に保存。インターネット環境不要で、プライベートなデータがクラウドに漏洩する心配はありません。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Live Demo Section -->
+    <section id="demo" class="demo-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="demo_title">実際に動かしてみましょう</h2>
+          <p class="section-subtitle" data-i18n="demo_subtitle">
+            ダウンロード前に、Plotoの代表的なインターフェース（ガントチャート、カンバン、マトリクス）の操作性を体験してください。
+          </p>
+        </div>
+        
+        <!-- Live Demo Container -->
+        <div class="demo-container">
+          <div class="demo-tabs">
+            <button class="demo-tab-btn active" data-demo-tab="gantt">
+              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              <span data-i18n="demo_tab_gantt">ガントチャート</span>
+            </button>
+            <button class="demo-tab-btn" data-demo-tab="kanban">
+              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line></svg>
+              <span data-i18n="demo_tab_kanban">カンバンボード</span>
+            </button>
+            <button class="demo-tab-btn" data-demo-tab="matrix">
+              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg>
+              <span data-i18n="demo_tab_matrix">優先度マトリクス</span>
+            </button>
+          </div>
+          
+          <div class="demo-window">
+            <!-- Gantt Demo (DHTMLX Gantt Container) -->
+            <div id="demo-pane-gantt" class="demo-pane active">
+              <div id="gantt_container"></div>
+            </div>
+            
+            <!-- Kanban Demo -->
+            <div id="demo-pane-kanban" class="demo-pane">
+              <div class="kanban-instructions" data-i18n="demo_kanban_help">カードを別の列にドラッグ＆ドロップしてステータスを変更できます。</div>
+              <div class="kanban-board">
+                <div class="kanban-column" id="col-todo">
+                  <div class="kanban-column-header">
+                    <span class="column-title" data-i18n="kanban_todo">未実施</span>
+                    <span class="column-count">2</span>
+                  </div>
+                  <div class="kanban-column-notes" data-i18n="kanban_todo_notes">💡 ここにはこれから取り組むタスクを配置します。</div>
+                  <div class="kanban-cards-container" id="cards-todo">
+                    <div class="kanban-card" draggable="true" id="task-1" style="border-left-color: #3b82f6;">
+                      <div class="card-tags"><span class="tag-badge">Research</span></div>
+                      <div class="card-title">競合アプリの機能調査</div>
+                      <div class="card-footer">
+                        <span class="card-date">07/05</span>
+                        <span class="card-assignee">鈴木</span>
+                      </div>
+                    </div>
+                    <div class="kanban-card" draggable="true" id="task-2" style="border-left-color: #10b981;">
+                      <div class="card-tags"><span class="tag-badge">Design</span></div>
+                      <div class="card-title">LPのワイヤーフレーム作成</div>
+                      <div class="card-footer">
+                        <span class="card-date">07/08</span>
+                        <span class="card-assignee">佐藤</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="kanban-column" id="col-progress">
+                  <div class="kanban-column-header">
+                    <span class="column-title" data-i18n="kanban_progress">実施中</span>
+                    <span class="column-count">1</span>
+                  </div>
+                  <div class="kanban-column-notes" data-i18n="kanban_progress_notes">💡 現在取り組んでいる最中のタスクです。</div>
+                  <div class="kanban-cards-container" id="cards-progress">
+                    <div class="kanban-card" draggable="true" id="task-3" style="border-left-color: #f59e0b;">
+                      <div class="card-tags"><span class="tag-badge">Dev</span></div>
+                      <div class="card-title">LPのHTML/CSSモックアップ実装</div>
+                      <div class="card-footer">
+                        <span class="card-date">07/02</span>
+                        <span class="card-assignee">田中</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="kanban-column" id="col-done">
+                  <div class="kanban-column-header">
+                    <span class="column-title" data-i18n="kanban_done">完了</span>
+                    <span class="column-count">1</span>
+                  </div>
+                  <div class="kanban-column-notes" data-i18n="kanban_done_notes">💡 完了済みのタスクです。達成感を味わいましょう！</div>
+                  <div class="kanban-cards-container" id="cards-done">
+                    <div class="kanban-card done" draggable="true" id="task-4" style="border-left-color: #8b5cf6;">
+                      <div class="card-tags"><span class="tag-badge">Planning</span></div>
+                      <div class="card-title">プロジェクト要件定義書作成</div>
+                      <div class="card-footer">
+                        <span class="card-date">06/28</span>
+                        <span class="card-assignee">鈴木</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Matrix Demo -->
+            <div id="demo-pane-matrix" class="demo-pane">
+              <div class="matrix-instructions" data-i18n="demo_matrix_help">緊急度と重要度の4つのエリアをクリックして、タスクをプロットできます。</div>
+              <div class="matrix-board">
+                <div class="matrix-plane">
+                  <!-- Quadrant 1: High Urgent, High Important -->
+                  <div class="matrix-quadrant" id="quad-1">
+                    <div class="quadrant-label" data-i18n="matrix_quad1">第Ⅰ象限: 緊急・重要</div>
+                    <div class="quad-task-list" id="quad-list-1">
+                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #ef4444;">重要なセキュリティアップデート</div>
+                    </div>
+                  </div>
+                  <!-- Quadrant 2: Low Urgent, High Important -->
+                  <div class="matrix-quadrant" id="quad-2">
+                    <div class="quadrant-label" data-i18n="matrix_quad2">第Ⅱ象限: 緊急でない・重要</div>
+                    <div class="quad-task-list" id="quad-list-2">
+                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #f59e0b;">リファクタリングと技術的負債解消</div>
+                    </div>
+                  </div>
+                  <!-- Quadrant 3: High Urgent, Low Important -->
+                  <div class="matrix-quadrant" id="quad-3">
+                    <div class="quadrant-label" data-i18n="matrix_quad3">第Ⅲ象限: 緊急・重要でない</div>
+                    <div class="quad-task-list" id="quad-list-3">
+                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #3b82f6;">週例報告書の作成</div>
+                    </div>
+                  </div>
+                  <!-- Quadrant 4: Low Urgent, Low Important -->
+                  <div class="matrix-quadrant" id="quad-4">
+                    <div class="quadrant-label" data-i18n="matrix_quad4">第Ⅳ象限: 緊急でない・重要でない</div>
+                    <div class="quad-task-list" id="quad-list-4">
+                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #10b981;">オフィス整理整頓</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="matrix-creator">
+                  <h4 data-i18n="matrix_add_title">タスクをマトリクスに追加</h4>
+                  <div class="matrix-input-group">
+                    <input type="text" id="matrix-task-name" placeholder="新しいタスク名..." data-i18n-placeholder="matrix_placeholder">
+                    <select id="matrix-quadrant-select">
+                      <option value="1" data-i18n="matrix_opt1">Ⅰ. 緊急・重要</option>
+                      <option value="2" data-i18n="matrix_opt2">Ⅱ. 緊急でない・重要</option>
+                      <option value="3" data-i18n="matrix_opt3">Ⅲ. 緊急・重要でない</option>
+                      <option value="4" data-i18n="matrix_opt4">Ⅳ. 緊急でない・重要でない</option>
+                    </select>
+                    <button id="btn-add-matrix-task" class="btn-primary" data-i18n="btn_add">追加</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beta & Pricing Section -->
+    <section id="beta" class="beta-section">
+      <div class="container">
+        <div class="beta-box">
+          <div class="badge" data-i18n="beta_badge">📢 ベータテスト実施中</div>
+          <h2 class="beta-title" data-i18n="beta_title">ベータ期間中に作成されたファイルは<br>将来もずっと追加料金なしで利用可能！</h2>
+          <p class="beta-desc" data-i18n="beta_desc">
+            Plotoは現在、品質向上のためのベータテストを行っています。将来的に高度な機能を備えた有料プランを導入する予定ですが、ベータ期間中に作成されたプロジェクトファイル（.ploto）は、有料化後もすべての機能を無料で引き続きご利用いただけます。
+          </p>
+          <div class="beta-info-card">
+            <div class="info-card-item">
+              <span class="info-label" data-i18n="beta_price">ベータ版価格</span>
+              <span class="info-value text-green">Free (無料)</span>
+            </div>
+            <div class="info-card-item border-left">
+              <span class="info-label" data-i18n="beta_limit">将来のライセンス</span>
+              <span class="info-value" data-i18n="beta_unlimited">作成済みファイルは永久無料</span>
+            </div>
+          </div>
+
+          <!-- Feedback Form -->
+          <div class="feedback-form-container">
+            <h3 class="feedback-form-title" data-i18n="feedback_title">ベータ版フィードバック送信</h3>
+            <p class="feedback-form-desc" data-i18n="feedback_desc">バグ報告、機能のご要望、ご感想などをお寄せください。</p>
+            
+            <!-- 
+              【公開時の設定】
+              静的サイトで動作させるために、アクション属性に 'https://formsubmit.co/your-email@example.com' などの
+              フォーム送信サービスを指定して利用できます。your-email@example.com を実際の受信メールアドレスに変更してください。
+            -->
+            <form id="feedback-form" action="https://formsubmit.co/hiroki.lab@outlook.com" method="POST">
+              <!-- FormSubmit config -->
+              <input type="hidden" name="_captcha" value="false">
+              
+              <div class="form-group-row">
+                <div class="form-control-wrap">
+                  <label for="fb-name" data-i18n="feedback_name">お名前（任意）</label>
+                  <input type="text" id="fb-name" name="name" placeholder="山田 太郎" data-i18n-placeholder="feedback_name_placeholder">
+                </div>
+                <div class="form-control-wrap">
+                  <label for="fb-email" data-i18n="feedback_email">メールアドレス（任意）</label>
+                  <input type="email" id="fb-email" name="email" placeholder="taro@example.com" data-i18n-placeholder="feedback_email_placeholder">
+                </div>
+              </div>
+              
+              <div class="form-control-wrap">
+                <label for="fb-message" data-i18n="feedback_msg">フィードバック内容（必須）</label>
+                <textarea id="fb-message" name="message" rows="4" required placeholder="機能の要望や改善点など..." data-i18n-placeholder="feedback_msg_placeholder"></textarea>
+              </div>
+              
+              <button type="submit" id="btn-submit-feedback" class="btn-primary" data-i18n="btn_send">フィードバックを送信する</button>
+            </form>
+            <div id="feedback-success-msg" class="feedback-success" style="display: none;" data-i18n="feedback_success">
+              フィードバックを送信しました。ご協力ありがとうございました！
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download CTA Section -->
+    <section id="download" class="download-section">
+      <div class="glow-container">
+        <div class="glow-orb orb-primary"></div>
+      </div>
+      <div class="container">
+        <div class="download-box">
+          <h2 class="download-title" data-i18n="dl_title">Plotoでプロジェクト管理をシンプルに</h2>
+          <p class="download-subtitle" data-i18n="dl_desc">
+            今すぐアプリケーションをダウンロードして、ローカルファーストで快適なプロジェクト管理を開始しましょう。
+          </p>
+          
+          <div class="download-buttons">
+            <!-- Windows Microsoft Store -->
+            <a href="https://apps.microsoft.com/detail/9N4NJNMT2B77" target="_blank" class="download-btn-store">
+              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.95 1.95L24 0v11.55H10.95V1.95zM10.95 12.45H24v11.55l-13.05-1.95v-9.6z"/>
+              </svg>
+              <div class="store-text">
+                <span class="store-sub" data-i18n="dl_win_sub">Get it from</span>
+                <span class="store-main">Microsoft Store</span>
+              </div>
+            </a>
+          </div>
+          
+          <p class="download-notes" data-i18n="dl_notes">
+            * Windows 10/11 対応。SQLite 3標準搭載。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ploto Project. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" data-i18n="footer_privacy">プライバシーポリシー</a>
+          <a href="#" data-i18n="footer_terms">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
