@@ -403,23 +403,25 @@ button {
   width: 100%;
   max-width: 550px;
   border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  /* 境界線を物理borderではなくbox-shadowの1px拡張で表現することで、角丸の隙間から白フチが漏れるのを防ぐ */
+  box-shadow: 0 0 0 1px var(--border-color), 0 20px 40px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transform: rotateY(-5deg) rotateX(5deg);
   transition: var(--transition-bounce);
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-card);
+  background-color: transparent; /* フェード中に親の背景が白く浮き出るのを防ぐ */
 }
 
 .hero-screenshot-container:hover {
   transform: rotateY(0deg) rotateX(0deg) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0 1px var(--border-color), 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
 .app-screenshot-img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: inherit; /* 画像自体にも親コンテナと全く同じ角丸を適用して隙間をなくす */
+  transform: scale(1.015); /* 画像自体の端に映り込んでいる白枠や影を枠外に押し出して隠す */
   transition: opacity 0.3s ease-in-out;
 }
 

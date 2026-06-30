@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
       feat_alert_desc: "タスクの進行状況を「期限超過（赤）」「開始遅延（オレンジ）」「正常（緑）」の3色で左端にライン表示。対応が必要なタスクが一目でわかります。",
       feat_cal_title: "祝日・週末のカスタマイズ表示",
       feat_cal_desc: "独自の祝日データをインポート・追加可能。週末の減色表示や祝日ハイライトにより、現実に即した稼働スケジュールを視覚化します。",
-      feat_undo_title: "無限の Undo / Redo",
-      feat_undo_desc: "タスクのドラッグ、情報の追加、削除など、あらゆる操作を無制限に元に戻す・やり直す（Ctrl+Z / Y）ことができます。",
+      feat_undo_title: "Undo / Redo 対応",
+      feat_undo_desc: "タスクのドラッグ、情報の追加、削除など、誤った操作を行ってもスムーズに元に戻す・やり直す（Ctrl+Z / Y）ことができます。",
       feat_db_title: "プライバシー重視の SQLite 設計",
       feat_db_desc: "データはすべてローカルの安全なSQLiteファイル（.ploto）に保存。インターネット環境不要で、プライベートなデータがクラウドに漏洩する心配はありません。",
 
@@ -134,8 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
       feat_alert_desc: "Visualizes schedules with red (overdue), orange (delayed), and green (on track) left lines, helping you instantly spot tasks requiring immediate attention.",
       feat_cal_title: "Custom Holidays & Weekends",
       feat_cal_desc: "Supports importing custom holidays and highlights weekends/holidays with lower contrast to visualize real-world work capacities.",
-      feat_undo_title: "Infinite Undo / Redo",
-      feat_undo_desc: "Allows you to restore or redo any operation—like task drags, creation, deletion, or edits—infinitely (Ctrl+Z / Y support).",
+      feat_undo_title: "Reliable Undo / Redo",
+      feat_undo_desc: "Easily restore or redo your operations—like task drags, creation, deletion, or edits—with standard Ctrl+Z / Y support.",
       feat_db_title: "SQLite Built for Privacy",
       feat_db_desc: "Your data remains securely stored in local SQLite database files (.ploto). No cloud required, ensuring strict corporate data governance.",
 
