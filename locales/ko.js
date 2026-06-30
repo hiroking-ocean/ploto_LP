@@ -2,8 +2,8 @@ export default {
   locale: "ko",
   screenshotFolder: "en-us",
   meta: {
-    title: "Ploto - 아름답고 직관적인 로컬 퍼스트 프로젝트 관리 도구",
-    description: "Ploto는 간트 차트, 칸반 보드, 우선순위 매트릭스를 하나의 아름다운 UI로 통합한 로컬 퍼스트 프로젝트 관리 도구입니다. SQLite로 고성능과 뛰어난 프라이버시 보호를 제공합니다."
+    title: "무료 간트 차트 앱 Ploto | 클라우드 불필요, 완전 오프라인",
+    description: "Ploto는 클라우드 계정 불필요 · 완전 오프라인으로 작동하는 무료 간트 차트 앱. 칸반 · 우선순위 매트릭스 통합. 모든 데이터는 로컬 SQLite에 안전하게 저장. Windows 10/11 지원."
   },
   i18n: {
     nav_features: "기능",
@@ -11,12 +11,12 @@ export default {
     nav_beta: "베타 제안",
     cta_download: "무료 다운로드",
 
-    hero_badge: "✨ 개인 개발과 팀에 최적화된 로컬 퍼스트",
+    hero_badge: "🚀 무료 다운로드 | 클라우드 불필요 | 완전 오프라인",
     hero_title: '프로젝트 관리를,<br><span class="text-gradient">더 직관적이고 아름답게。</span>',
     hero_desc: "Ploto는 간트 차트, 칸반 보드, 우선순위 매트릭스를 하나의 아름다운 UI에 통합한 로컬 퍼스트 프로젝트 관리 도구입니다. SQLite로 고성능과 뛰어난 프라이버시 보호를 제공합니다.",
     hero_cta_download: "무료로 받기",
     hero_cta_demo: "데모 사용해보기",
-    hero_meta: "<span>✓ 클라우드 로그인 불필요</span><span>✓ 완전 오프라인 지원</span><span>✓ 5개 언어 로컬라이즈</span>",
+    hero_meta: "<span>✓ 무료 & 가입 불필요</span><span>✓ 클라우드 없음 · 완전 오프라인</span><span>✓ 데이터는 로컬에 안전 저장</span>",
 
     mock_tab_gantt: "간트 차트",
     mock_tab_kanban: "칸반",

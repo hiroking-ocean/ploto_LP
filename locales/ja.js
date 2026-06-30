@@ -2,8 +2,8 @@ export default {
   locale: "ja",
   screenshotFolder: "ja-jp",
   meta: {
-    title: "Ploto - 美しく直感的なローカルファースト・プロジェクト管理ツール",
-    description: "Plotoはガントチャート、カンバン、優先度マトリクスを融合した、美しく高速なデスクトップ向けプロジェクト管理アプリです。SQLite によるローカルファースト設計で、データを安全に管理します。"
+    title: "無料ガントチャートアプリ Ploto | クラウド不要・完全オフライン対応",
+    description: "Plotoはクラウド登録不要・完全オフラインで動く無料のガントチャートアプリ。カンバン・優先度マトリクスも統合。データはすべてローカルSQLiteに保存するため、プライバシーが安全。Windows 10/11対応。"
   },
   i18n: {
     nav_features: "特徴",
@@ -11,12 +11,12 @@ export default {
     nav_beta: "ベータ版",
     cta_download: "無料ダウンロード",
 
-    hero_badge: "✨ 個人開発・チームに最適なローカルファースト",
+    hero_badge: "🚀 無料ダウンロード | クラウド不要 | 完全オフライン対応",
     hero_title: 'プロジェクト管理を、<br><span class="text-gradient">もっと直感的に、美しく。</span>',
     hero_desc: "Ploto（プロト）は、ガントチャート、カンバン、優先度マトリクスを一つの美しいインターフェースに統合した、ローカルファーストのプロジェクト管理ツールです。SQLiteによる高速動作と、抜群のプライバシー保護を実現します。",
     hero_cta_download: "無料で手に入れる",
     hero_cta_demo: "デモを触ってみる",
-    hero_meta: "<span>✓ クラウドサインイン不要</span><span>✓ 完全オフライン対応</span><span>✓ 5言語ローカライズ</span>",
+    hero_meta: "<span>✓ 完全無料・登録不要</span><span>✓ クラウドなし・完全オフライン</span><span>✓ データはローカルに安全保存</span>",
 
     mock_tab_gantt: "ガントチャート",
     mock_tab_kanban: "カンバン",

@@ -2,8 +2,8 @@ export default {
   locale: "de",
   screenshotFolder: "en-us",
   meta: {
-    title: "Ploto - Schönes und intuitives lokal-first Projektmanagement-Tool",
-    description: "Ploto ist ein lokal-first Projektmanagement-Tool, das Gantt-Diagramme, Kanban-Boards und Prioritätsmatrizen in einer eleganten Oberfläche vereint. Leistungsstark dank lokalem SQLite und hoher Datenschutz."
+    title: "Kostenlose Gantt-Chart-App Ploto | Kein Cloud, vollständig offline",
+    description: "Ploto ist eine kostenlose Gantt-Chart-App für Windows – ohne Cloud-Konto, vollständig offline nutzbar. Integriert Kanban & Prioritätsmatrix. Alle Daten lokal in SQLite gespeichert."
   },
   i18n: {
     nav_features: "Funktionen",
@@ -11,12 +11,12 @@ export default {
     nav_beta: "Beta-Angebot",
     cta_download: "Kostenloser Download",
 
-    hero_badge: "✨ Ideal für Einzelentwickler und Teams (Local-First)",
+    hero_badge: "🚀 Kostenloser Download | Kein Cloud | Vollständig offline",
     hero_title: 'Projektmanagement,<br><span class="text-gradient">Intuitiver & schöner.</span>',
     hero_desc: "Ploto ist ein lokal-first Projektmanagement-Tool, das Gantt-Diagramme, Kanban-Boards und Prioritätsmatrizen in einer eleganten Benutzeroberfläche vereint. Hohe Leistung dank SQLite und exzellenter Datenschutz.",
     hero_cta_download: "Kostenlos herunterladen",
     hero_cta_demo: "Demo ausprobieren",
-    hero_meta: "<span>✓ Keine Cloud-Anmeldung</span><span>✓ Vollständig offlinefähig</span><span>✓ 5 Sprachversionen</span>",
+    hero_meta: "<span>✓ Kostenlos & Keine Anmeldung</span><span>✓ Kein Cloud · Offline fähig</span><span>✓ Daten lokal & sicher gespeichert</span>",
 
     mock_tab_gantt: "Gantt-Diagramm",
     mock_tab_kanban: "Kanban",

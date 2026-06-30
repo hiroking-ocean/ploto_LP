@@ -2,8 +2,8 @@ export default {
   locale: "fr",
   screenshotFolder: "en-us",
   meta: {
-    title: "Ploto - Outil de gestion de projet local-first, élégant et intuitif",
-    description: "Ploto est un outil de gestion de projet local-first, qui intègre Gantt, Kanban et matrice de priorité dans une interface élégante. Performant grâce à SQLite local et respectueux de la vie privée."
+    title: "Application Gantt gratuite Ploto | Sans cloud, hors ligne",
+    description: "Ploto est une application Gantt gratuite pour Windows, sans compte cloud, utilisable hors ligne. Intègre Kanban & matrice de priorité. Toutes les données sont stockées localement dans SQLite."
   },
   i18n: {
     nav_features: "Fonctionnalités",
@@ -11,12 +11,12 @@ export default {
     nav_beta: "Offre bêta",
     cta_download: "Téléchargement gratuit",
 
-    hero_badge: "✨ Idéal pour le développement solo et les équipes (local-first)",
+    hero_badge: "🚀 Téléchargement gratuit | Sans cloud | Hors ligne",
     hero_title: 'Gestion de projet,<br><span class="text-gradient">plus intuitive et plus belle.</span>',
     hero_desc: "Ploto est un outil de gestion de projet local-first qui intègre diagrammes de Gantt, tableaux Kanban et matrices de priorité dans une seule interface élégante. Performant grâce à SQLite et offrant une excellente protection de la vie privée.",
     hero_cta_download: "Télécharger gratuitement",
     hero_cta_demo: "Essayer la démo",
-    hero_meta: "<span>✓ Pas de connexion cloud</span><span>✓ Entièrement disponible hors ligne</span><span>✓ Localisé en 5 langues</span>",
+    hero_meta: "<span>✓ Gratuit & Sans inscription</span><span>✓ Sans cloud · Hors ligne</span><span>✓ Données stockées localement</span>",
 
     mock_tab_gantt: "Gantt",
     mock_tab_kanban: "Kanban",
