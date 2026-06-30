@@ -304,6 +304,179 @@ button {
   letter-spacing: 0.5px;
 }
 
+/* --- ハンバーガーボタン（デフォルトは非表示・PCのみ） --- */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+}
+
+.hamburger-btn:hover {
+  border-color: var(--color-primary-light);
+  background-color: var(--bg-card-hover);
+}
+
+.hamburger-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+/* メニューオープン時に×アイコンへ変形 */
+.hamburger-btn[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburger-btn[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.hamburger-btn[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* --- スマホ向け注記バナー（デフォルト非表示、スマホのみ表示） --- */
+.demo-mobile-notice {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.demo-mobile-notice svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+/* PC縦横比を維持するためのラッパー（デフォルトは通常表示） */
+.demo-scale-wrapper {
+  width: 100%;
+}
+
+/* スマホ幅（768px以下）でのヘッダー・デモ調整 */
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  /* PCのナビメニューを非表示 */
+  .nav-menu {
+    display: none;
+  }
+
+  /* ヘッダー右側のダウンロードボタンを非表示（ドロワー内に移動） */
+  .header-actions .btn-primary {
+    display: none;
+  }
+
+  /* ドロワーナビ本体 */
+  .nav-menu-mobile {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: var(--bg-header);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* 初期状態：上に隠れた位置 */
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-menu-mobile.is-open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-menu-mobile a {
+    display: block;
+    padding: 14px 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+  }
+
+  .nav-menu-mobile a:last-of-type {
+    border-bottom: none;
+  }
+
+  .nav-menu-mobile a:hover {
+    color: var(--color-primary-light);
+    padding-left: 16px;
+  }
+
+  /* ドロワー内ダウンロードボタン */
+  .nav-mobile-cta {
+    margin-top: 16px;
+  }
+
+  .nav-mobile-cta .btn-primary {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 1rem;
+    border-radius: 10px;
+    justify-content: center;
+  }
+
+  /* スマホ向け注記バナーを表示 */
+  .demo-mobile-notice {
+    display: flex;
+  }
+
+  /*
+   * デモエリアをPC縦横比のまま縮小表示する。
+   * transform: scale() はレイアウト上のサイズを変えないため、
+   * overflow: hidden な親 + padding-bottom でスペースを確保する。
+   * --scale-ratio はJSで画面幅に応じて動的に設定する。
+   */
+  .demo-scale-wrapper {
+    overflow: hidden;
+    /* スケール後の実際の高さ分を確保するためpadding-bottomをJSで制御 */
+    position: relative;
+  }
+
+  .demo-scale-wrapper .demo-container {
+    /* PCのデモ幅を基準に固定。スマホでscale縮小する */
+    width: 1100px;
+    transform-origin: top left;
+    /* JS側で --demo-scale カスタムプロパティを設定し、動的にスケールを適用 */
+    transform: scale(var(--demo-scale, 0.32));
+  }
+}
+
+
+
 /* --- 5. Hero Section --- */
 .hero-section {
   position: relative;

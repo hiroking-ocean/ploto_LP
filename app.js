@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       demo_tab_gantt: "ガントチャート",
       demo_tab_kanban: "カンバンボード",
       demo_tab_matrix: "優先度マトリクス",
+      demo_mobile_notice: "スマートフォンでは見た目の確認のみ可能です。全機能はPCでお試しください。",
 
       // Kanban Demo Specific
       demo_kanban_help: "カードを別の列にドラッグ＆ドロップしてステータスを変更できます。",
@@ -145,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
       demo_tab_gantt: "Gantt Chart",
       demo_tab_kanban: "Kanban Board",
       demo_tab_matrix: "Priority Matrix",
+      demo_mobile_notice: "On smartphones, you can preview the UI only. Try the full experience on a PC.",
 
       // Kanban Demo Specific
       demo_kanban_help: "Drag and drop cards between columns to change task status.",
@@ -701,4 +703,72 @@ document.addEventListener("DOMContentLoaded", () => {
   initGanttDemo();
   // Start visual slideshow
   startScreenshotSlideshow();
+
+  // --- 13. ハンバーガーメニュー開閉制御 ---
+  const hamburgerBtn = document.getElementById("hamburger-btn");
+  const navMobile = document.getElementById("nav-mobile");
+
+  /** ドロワーを開く／閉じるをトグルする */
+  function toggleMobileNav() {
+    const isOpen = navMobile.classList.toggle("is-open");
+    hamburgerBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    hamburgerBtn.setAttribute("aria-label", isOpen ? "メニューを閉じる" : "メニューを開く");
+    // スクロール禁止はメニューが開いているときのみ
+    document.body.style.overflow = isOpen ? "hidden" : "";
+  }
+
+  /** ドロワーを明示的に閉じる */
+  function closeMobileNav() {
+    navMobile.classList.remove("is-open");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
+    hamburgerBtn.setAttribute("aria-label", "メニューを開く");
+    document.body.style.overflow = "";
+  }
+
+  if (hamburgerBtn && navMobile) {
+    hamburgerBtn.addEventListener("click", toggleMobileNav);
+
+    // ドロワー内のリンクをタップしたら閉じる
+    navMobile.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMobileNav);
+    });
+  }
+
+  // --- 14. デモセクションのモバイルスケール制御 ---
+  const demoScaleWrapper = document.querySelector(".demo-scale-wrapper");
+  const demoContainer = demoScaleWrapper ? demoScaleWrapper.querySelector(".demo-container") : null;
+
+  /**
+   * スマホ幅でのみ、demo-containerをPC縦横比のままscale縮小する。
+   * CSSに固定値を書くと端末幅ごとにズレるため、JSで動的に計算する。
+   */
+  function updateDemoScale() {
+    if (!demoScaleWrapper || !demoContainer) return;
+
+    const MOBILE_BREAKPOINT = 768;
+    const DEMO_FIXED_WIDTH = 1100; // CSSで設定したdemo-containerの固定幅と合わせる
+
+    if (window.innerWidth <= MOBILE_BREAKPOINT) {
+      // ラッパーの実際の表示幅に対するスケール比を計算
+      const wrapperWidth = demoScaleWrapper.getBoundingClientRect().width;
+      const scale = wrapperWidth / DEMO_FIXED_WIDTH;
+
+      // CSSカスタムプロパティにセットしてtransform: scaleに反映
+      demoContainer.style.setProperty("--demo-scale", scale);
+      demoContainer.style.transform = `scale(${scale})`;
+
+      // scale後のコンテナ実高さ（元の高さ × scale）でラッパーの高さを確保
+      // これをしないとラッパーが0高さになって後続要素が重なる
+      const originalHeight = demoContainer.scrollHeight;
+      demoScaleWrapper.style.height = `${originalHeight * scale}px`;
+    } else {
+      // PCではscaleなし・高さ指定なし（通常レイアウト）
+      demoContainer.style.transform = "";
+      demoScaleWrapper.style.height = "";
+    }
+  }
+
+  // 初回実行 & リサイズ時に再計算
+  updateDemoScale();
+  window.addEventListener("resize", updateDemoScale);
 });
