@@ -304,6 +304,57 @@ button {
   letter-spacing: 0.5px;
 }
 
+/* --- 言語切替ドロップダウン --- */
+.lang-switcher {
+  position: relative;
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 150px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 6px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  z-index: 1100;
+}
+
+.lang-switcher.is-open .lang-menu {
+  display: flex;
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 12px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--transition-smooth);
+}
+
+.lang-option:hover {
+  background-color: var(--bg-card-hover);
+  color: var(--color-primary-light);
+}
+
+.lang-option.active {
+  color: var(--color-primary-light);
+  font-weight: 700;
+}
+
 /* --- ハンバーガーボタン（デフォルトは非表示・PCのみ） --- */
 .hamburger-btn {
   display: none;

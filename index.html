@@ -41,7 +41,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- Application Script -->
-  <script src="app.js" defer></script>
+  <script type="module" src="app.js" defer></script>
 </head>
 
 <body>
@@ -61,10 +61,20 @@
 
 
       <div class="header-actions">
-        <!-- Language Switcher -->
-        <button id="lang-toggle" class="btn-icon" aria-label="Toggle Language" title="Change Language">
-          <span class="lang-text">EN</span>
-        </button>
+        <!-- Language Switcher (dropdown) -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false"
+            aria-label="言語を選択" title="Change Language">
+            <span class="lang-text">JA</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
+            <button type="button" class="lang-option" data-lang="ja" role="option">日本語</button>
+            <button type="button" class="lang-option" data-lang="en" role="option">English</button>
+            <button type="button" class="lang-option" data-lang="de" role="option">Deutsch</button>
+            <button type="button" class="lang-option" data-lang="fr" role="option">Français</button>
+            <button type="button" class="lang-option" data-lang="ko" role="option">한국어</button>
+          </div>
+        </div>
 
         <!-- Dark/Light Theme Toggle -->
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">

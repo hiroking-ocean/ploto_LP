@@ -2,6 +2,8 @@
    Ploto LP - Application Control Logic
    ========================================================================== */
 
+import locales from "./locales/index.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
   let currentLang = localStorage.getItem("ploto-lang") || "ja";
@@ -11,293 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
   let slideshowInterval = null;
 
   // --- 2. Translation Dictionary ---
-  const i18nData = {
-    ja: {
-      // Header & Navigation
-      nav_features: "特徴",
-      nav_demo: "体験デモ",
-      nav_beta: "ベータ版",
-      cta_download: "無料ダウンロード",
-
-      // Hero Section
-      hero_badge: "✨ 個人開発・チームに最適なローカルファースト",
-      hero_title: 'プロジェクト管理を、<br><span class="text-gradient">もっと直感的に、美しく。</span>',
-      hero_desc: "Ploto（プロト）は、ガントチャート、カンバン、優先度マトリクスを一つの美しいインターフェースに統合した、ローカルファーストのプロジェクト管理ツールです。SQLiteによる高速動作と、抜群のプライバシー保護を実現します。",
-      hero_cta_download: "無料で手に入れる",
-      hero_cta_demo: "デモを触ってみる",
-      hero_meta: "<span>✓ クラウドサインイン不要</span><span>✓ 完全オフライン対応</span><span>✓ 5言語ローカライズ</span>",
-
-      // Simulated Workspace in Hero Visual
-      mock_tab_gantt: "ガントチャート",
-      mock_tab_kanban: "カンバン",
-      mock_tab_matrix: "優先度マトリクス",
-      mock_col_task: "タスク名",
-
-      // Features Section
-      features_title: "プロジェクト管理を加速する強力な機能",
-      features_subtitle: "Plotoは使いやすさと高い機能性を両立するために設計されています。",
-      feat_alert_title: "健康度アラートライン",
-      feat_alert_desc: "タスクの進行状況を「期限超過（赤）」「開始遅延（オレンジ）」「正常（緑）」の3色で左端にライン表示。対応が必要なタスクが一目でわかります。",
-      feat_cal_title: "祝日・週末のカスタマイズ表示",
-      feat_cal_desc: "独自の祝日データをインポート・追加可能。週末の減色表示や祝日ハイライトにより、現実に即した稼働スケジュールを視覚化します。",
-      feat_undo_title: "Undo / Redo 対応",
-      feat_undo_desc: "タスクのドラッグ、情報の追加、削除など、誤った操作を行ってもスムーズに元に戻す・やり直す（Ctrl+Z / Y）ことができます。",
-      feat_db_title: "プライバシー重視の SQLite 設計",
-      feat_db_desc: "データはすべてローカルの安全なSQLiteファイル（.ploto）に保存。インターネット環境不要で、プライベートなデータがクラウドに漏洩する心配はありません。",
-
-      // Beta Offer Section
-      beta_badge: "📢 ベータテスト実施中",
-      beta_title: "今作ったファイルは、有料化後も<br>永久に有料機能をそのまま利用可能！",
-      beta_desc: "Plotoは現在ベータテスト中です。将来的に機能拡張に伴う買い切りライセンスを導入する予定ですが、ベータ期間中に作成したプロジェクトファイル（.ploto）は、有料化後も追加購入不要で有料機能を引き続きそのままお使いいただけます。",
-      beta_price: "ベータ版価格",
-      beta_limit: "将来のライセンス形態",
-      beta_unlimited: "買い切り（ベータファイルは追加購入不要）",
-
-      // Demo Section Headers
-      demo_title: "実際に動かしてみましょう",
-      demo_subtitle: "ダウンロード前に、Plotoの代表的なインターフェース（ガントチャート、カンバン、マトリクス）の操作性を体験してください。",
-      demo_tab_gantt: "ガントチャート",
-      demo_tab_kanban: "カンバンボード",
-      demo_tab_matrix: "優先度マトリクス",
-      demo_mobile_notice: "スマートフォンでは見た目の確認のみ可能です。全機能はPCでお試しください。",
-
-      // Kanban Demo Specific
-      demo_kanban_help: "カードを別の列にドラッグ＆ドロップしてステータスを変更できます。",
-      kanban_todo: "未実施",
-      kanban_progress: "実施中",
-      kanban_done: "完了",
-      kanban_todo_notes: "💡 ここにはこれから取り組むタスクを配置します。",
-      kanban_progress_notes: "💡 現在取り組んでいる最中のタスクです。",
-      kanban_done_notes: "💡 完了済みのタスクです。達成感を味わいましょう！",
-
-      // Matrix Demo Specific
-      demo_matrix_help: "緊急度と重要度の4つのエリアをクリックして、タスクをプロットできます（タスクチップをクリックすると削除できます）。",
-      matrix_quad1: "第Ⅰ象限: 緊急・重要",
-      matrix_quad2: "第Ⅱ象限: 緊急でない・重要",
-      matrix_quad3: "第Ⅲ象限: 緊急・重要でない",
-      matrix_quad4: "第Ⅳ象限: 緊急でない・重要でない",
-      matrix_add_title: "タスクをマトリクスに追加",
-      matrix_placeholder: "新しいタスク名...",
-      matrix_opt1: "Ⅰ. 緊急・重要",
-      matrix_opt2: "Ⅱ. 緊急でない・重要",
-      matrix_opt3: "Ⅲ. 緊急・重要でない",
-      matrix_opt4: "Ⅳ. 緊急でない・重要でない",
-      btn_add: "追加",
-
-      // Download Section
-
-      dl_title: "Plotoでプロジェクト管理をシンプルに",
-      dl_desc: "今すぐアプリケーションをダウンロードして、ローカルファーストで快適なプロジェクト管理を開始しましょう。",
-      dl_win_sub: "手に入れる",
-      dl_win_exe: "Windows インストーラー",
-      dl_notes: "* Windows 10/11 対応。SQLite 3標準搭載。",
-
-      // Footer
-      footer_privacy: "プライバシーポリシー",
-      footer_terms: "利用規約",
-
-      // Feedback Form
-      feedback_title: "ベータ版フィードバック送信",
-      feedback_desc: "バグ報告、機能のご要望、ご感想などをお寄せください。",
-      feedback_name: "お名前（任意）",
-      feedback_name_placeholder: "山田 太郎",
-      feedback_email: "メールアドレス（任意）",
-      feedback_email_placeholder: "taro@example.com",
-      feedback_msg: "フィードバック内容（必須）",
-      feedback_msg_placeholder: "機能の要望や改善点など...",
-      btn_send: "フィードバックを送信する",
-      feedback_success: "フィードバックを送信しました。ご協力ありがとうございました！"
-    },
-    en: {
-      // Header & Navigation
-      nav_features: "Features",
-      nav_demo: "Live Demo",
-      nav_beta: "Beta Offer",
-      cta_download: "Free Download",
-
-      // Hero Section
-      hero_badge: "✨ Ideal for Personal Dev & Teams (Local-First)",
-      hero_title: 'Project Management,<br><span class="text-gradient">More Intuitive & Beautiful.</span>',
-      hero_desc: "Ploto is a local-first project management tool that integrates Gantt charts, Kanban boards, and priority matrices into one gorgeous user interface. High performance via SQLite and outstanding privacy protection.",
-      hero_cta_download: "Get it for Free",
-      hero_cta_demo: "Try Live Demo",
-      hero_meta: "<span>✓ No Cloud Sign-in</span><span>✓ Fully Offline Ready</span><span>✓ 5-Language Localization</span>",
-
-      // Simulated Workspace in Hero Visual
-      mock_tab_gantt: "Gantt Chart",
-      mock_tab_kanban: "Kanban",
-      mock_tab_matrix: "Priority Matrix",
-      mock_col_task: "Task Name",
-
-      // Features Section
-      features_title: "Powerful Features to Accelerate Your Projects",
-      features_subtitle: "Ploto is engineered to strike the perfect balance between simplicity and productivity.",
-      feat_alert_title: "Health Alert Line",
-      feat_alert_desc: "Visualizes schedules with red (overdue), orange (delayed), and green (on track) left lines, helping you instantly spot tasks requiring immediate attention.",
-      feat_cal_title: "Custom Holidays & Weekends",
-      feat_cal_desc: "Supports importing custom holidays and highlights weekends/holidays with lower contrast to visualize real-world work capacities.",
-      feat_undo_title: "Reliable Undo / Redo",
-      feat_undo_desc: "Easily restore or redo your operations—like task drags, creation, deletion, or edits—with standard Ctrl+Z / Y support.",
-      feat_db_title: "SQLite Built for Privacy",
-      feat_db_desc: "Your data remains securely stored in local SQLite database files (.ploto). No cloud required, ensuring strict corporate data governance.",
-
-      // Demo Section Headers
-      demo_title: "See It In Action",
-      demo_subtitle: "Interact directly with Ploto's core views—Gantt Chart, Kanban Board, and Priority Matrix—before downloading.",
-      demo_tab_gantt: "Gantt Chart",
-      demo_tab_kanban: "Kanban Board",
-      demo_tab_matrix: "Priority Matrix",
-      demo_mobile_notice: "On smartphones, you can preview the UI only. Try the full experience on a PC.",
-
-      // Kanban Demo Specific
-      demo_kanban_help: "Drag and drop cards between columns to change task status.",
-      kanban_todo: "To Do",
-      kanban_progress: "In Progress",
-      kanban_done: "Done",
-      kanban_todo_notes: "💡 Place tasks here that are waiting to be started.",
-      kanban_progress_notes: "💡 Tasks currently in active development.",
-      kanban_done_notes: "💡 Finished tasks. Celebrate your achievements!",
-
-      // Matrix Demo Specific
-      demo_matrix_help: "Click in any of the quadrants or use the creator to plot tasks. Click a chip to remove it.",
-      matrix_quad1: "Q I: Urgent & Important",
-      matrix_quad2: "Q II: Not Urgent & Important",
-      matrix_quad3: "Q III: Urgent & Not Important",
-      matrix_quad4: "Q IV: Not Urgent & Not Important",
-      matrix_add_title: "Add Task to Matrix",
-      matrix_placeholder: "New task title...",
-      matrix_opt1: "I. Urgent & Important",
-      matrix_opt2: "II. Not Urgent & Important",
-      matrix_opt3: "III. Urgent & Not Important",
-      matrix_opt4: "IV. Not Urgent & Not Important",
-      btn_add: "Add",
-
-      // Beta Offer Section
-      beta_badge: "📢 Active Beta Phase",
-      beta_title: "Files You Create Now<br>Keep All Paid Features—Forever!",
-      beta_desc: "Ploto is currently in beta. We plan to introduce a one-time purchase license for advanced features in the future—but any project files (.ploto) you create during the beta period will continue to enjoy those paid features without any additional purchase.",
-      beta_price: "Beta Phase Price",
-      beta_limit: "Future License Model",
-      beta_unlimited: "One-time purchase (Beta files included free)",
-
-      // Download Section
-      dl_title: "Simplify Your Project Management Now",
-      dl_desc: "Download the application and experience smooth, offline project management today.",
-      dl_win_sub: "Get it from",
-      dl_win_exe: "Windows Installer",
-      dl_notes: "* Compatible with Windows 10/11. Ships with local SQLite 3 support.",
-
-      // Footer
-      footer_privacy: "Privacy Policy",
-      footer_terms: "Terms of Service",
-
-      // Feedback Form
-      feedback_title: "Beta Feedback Submission",
-      feedback_desc: "Send us your bug reports, feature requests, or general feedback.",
-      feedback_name: "Your Name (Optional)",
-      feedback_name_placeholder: "John Doe",
-      feedback_email: "Email Address (Optional)",
-      feedback_email_placeholder: "john@example.com",
-      feedback_msg: "Feedback Message (Required)",
-      feedback_msg_placeholder: "Type your feature request, bug details, or thoughts...",
-      btn_send: "Submit Feedback",
-      feedback_success: "Thank you! Your feedback has been submitted successfully."
-    }
+  const localesData = locales;
+  const supportedLangs = ["ja", "en", "de", "fr", "ko"];
+  // 切替ボタンに表示する現在言語の短縮ラベル
+  const languageShortLabels = {
+    ja: "JA",
+    en: "EN",
+    de: "DE",
+    fr: "FR",
+    ko: "KO"
   };
 
   // --- 3. DHTMLX Gantt Locale Dictionaries ---
-  const ganttLocales = {
-    ja: {
-      labels: {
-        new_task: "新規タスク",
-        column_text: "タスク名",
-        column_start_date: "開始日時",
-        column_duration: "期間",
-        column_add: "",
-        link: "リンク",
-        confirm_link_deleting: "リンクを削除しますか？",
-        link_start: " (開始)",
-        link_end: " (終了)",
-        type_task: "タスク",
-        type_project: "プロジェクト",
-        type_milestone: "マイルストーン",
-        minutes: "分",
-        hours: "時間",
-        days: "日",
-        weeks: "週",
-        months: "月",
-        years: "年"
-      },
-      date: {
-        month_full: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-        month_short: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-        day_full: ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"],
-        day_short: ["日", "月", "火", "水", "木", "金", "土"]
-      }
-    },
-    en: {
-      labels: {
-        new_task: "New Task",
-        column_text: "Task name",
-        column_start_date: "Start time",
-        column_duration: "Duration",
-        column_add: "",
-        link: "Link",
-        confirm_link_deleting: "Do you want to delete this link?",
-        link_start: " (start)",
-        link_end: " (end)",
-        type_task: "Task",
-        type_project: "Project",
-        type_milestone: "Milestone",
-        minutes: "Minutes",
-        hours: "Hours",
-        days: "Days",
-        weeks: "Weeks",
-        months: "Months",
-        years: "Years"
-      },
-      date: {
-        month_full: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        month_short: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        day_full: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        day_short: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-      }
-    }
-  };
+  // Gantt locale data is provided by the individual locale modules.
 
   // --- 4. Interactive Demo Mock Data ---
-  const initialGanttData = {
-    data: [
-      { id: 1, text: "プロジェクト立ち上げ", start_date: "2026-07-01", duration: 8, open: true, progress: 0.6, type: "project" },
-      { id: 2, text: "市場調査と要件定義", start_date: "2026-07-01", duration: 4, parent: 1, progress: 0.8 },
-      { id: 3, text: "UI/UX デザイン作成", start_date: "2026-07-05", duration: 4, parent: 1, progress: 0.3 },
-      { id: 4, text: "プロトタイプ開発", start_date: "2026-07-09", duration: 10, open: true, progress: 0.1, type: "project" },
-      { id: 5, text: "フロントエンド開発", start_date: "2026-07-09", duration: 7, parent: 4, progress: 0.2 },
-      { id: 6, text: "バックエンドAPI構築", start_date: "2026-07-12", duration: 7, parent: 4, progress: 0.0 }
-    ],
-    links: [
-      { id: 1, source: 2, target: 3, type: "0" },
-      { id: 2, source: 3, target: 5, type: "0" },
-      { id: 3, source: 5, target: 6, type: "0" }
-    ]
-  };
-
-  const initialGanttDataEn = {
-    data: [
-      { id: 1, text: "Project Initialization", start_date: "2026-07-01", duration: 8, open: true, progress: 0.6, type: "project" },
-      { id: 2, text: "Market Research & Scope", start_date: "2026-07-01", duration: 4, parent: 1, progress: 0.8 },
-      { id: 3, text: "UI/UX Wireframes", start_date: "2026-07-05", duration: 4, parent: 1, progress: 0.3 },
-      { id: 4, text: "Prototype Development", start_date: "2026-07-09", duration: 10, open: true, progress: 0.1, type: "project" },
-      { id: 5, text: "Frontend Coding", start_date: "2026-07-09", duration: 7, parent: 4, progress: 0.2 },
-      { id: 6, text: "Backend API Integration", start_date: "2026-07-12", duration: 7, parent: 4, progress: 0.0 }
-    ],
-    links: [
-      { id: 1, source: 2, target: 3, type: "0" },
-      { id: 2, source: 3, target: 5, type: "0" },
-      { id: 3, source: 5, target: 6, type: "0" }
-    ]
-  };
-
   // --- 5. Initialization / Theme & Lang Application ---
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
@@ -325,56 +55,96 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(nextTheme);
   });
 
-  // Toggle Language Button
+  // Language Switcher (dropdown)
+  const langSwitcher = document.getElementById("lang-switcher");
   const langToggleBtn = document.getElementById("lang-toggle");
-  langToggleBtn.addEventListener("click", () => {
-    const nextLang = currentLang === "ja" ? "en" : "ja";
-    applyLanguage(nextLang);
+  const langMenu = document.getElementById("lang-menu");
+  const langOptions = langMenu ? langMenu.querySelectorAll(".lang-option") : [];
+
+  function openLangMenu() {
+    langSwitcher.classList.add("is-open");
+    langToggleBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeLangMenu() {
+    langSwitcher.classList.remove("is-open");
+    langToggleBtn.setAttribute("aria-expanded", "false");
+  }
+
+  // ボタンクリックで開閉トグル
+  langToggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (langSwitcher.classList.contains("is-open")) {
+      closeLangMenu();
+    } else {
+      openLangMenu();
+    }
+  });
+
+  // 各言語オプションを選択
+  langOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      const lang = option.getAttribute("data-lang");
+      if (supportedLangs.includes(lang)) {
+        applyLanguage(lang);
+      }
+      closeLangMenu();
+    });
+  });
+
+  // メニュー外クリック・Escキーで閉じる
+  document.addEventListener("click", (e) => {
+    if (!langSwitcher.contains(e.target)) {
+      closeLangMenu();
+    }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeLangMenu();
+    }
   });
 
   function applyLanguage(lang) {
+    const locale = localesData[lang] || localesData.ja;
     currentLang = lang;
     localStorage.setItem("ploto-lang", lang);
     
-    // Update Toggle Button label (displays the OTHER language option)
-    langToggleBtn.querySelector(".lang-text").textContent = lang === "ja" ? "EN" : "日本語";
+    // 切替ボタンには現在の言語を表示し、メニューの選択中項目をハイライト
+    langToggleBtn.querySelector(".lang-text").textContent = languageShortLabels[lang];
+    langOptions.forEach((option) => {
+      option.classList.toggle("active", option.getAttribute("data-lang") === lang);
+    });
 
     // Replace data-i18n attributes
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (i18nData[lang][key]) {
-        el.innerHTML = i18nData[lang][key];
+      if (locale.i18n[key]) {
+        el.innerHTML = locale.i18n[key];
       }
     });
 
     // Replace inputs with data-i18n-placeholder
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
       const key = el.getAttribute("data-i18n-placeholder");
-      if (i18nData[lang][key]) {
-        el.setAttribute("placeholder", i18nData[lang][key]);
+      if (locale.i18n[key]) {
+        el.setAttribute("placeholder", locale.i18n[key]);
       }
     });
 
     // Set page title & description
-    document.title = lang === "ja" 
-      ? "Ploto - 美しく直感的なローカルファースト・プロジェクト管理ツール"
-      : "Ploto - Gorgeous & Intuitive Local-First Project Management Tool";
-
+    document.title = locale.meta.title;
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-      metaDesc.setAttribute("content", lang === "ja"
-        ? "Plotoはガントチャート、カンバン、優先度マトリクスを融合した、美しく高速なデスクトップ向けプロジェクト管理アプリケーションです。SQLiteによるローカルファースト設計で、データを安全に管理します。"
-        : "Ploto is a beautiful, offline-first desktop project management app integrating Gantt, Kanban, and Priority Matrix, powered by secure local SQLite."
-      );
+      metaDesc.setAttribute("content", locale.meta.description);
     }
 
     // Refresh Gantt locale if loaded
     updateGanttLocale(lang);
 
-    // Update hero screenshot language based on current slide
+    // Update hero screenshot language based on current locale settings
     const heroScreenshot = document.getElementById("hero-screenshot");
     if (heroScreenshot) {
-      heroScreenshot.src = `assets/screenshots/${lang === "ja" ? "ja-jp" : "en-us"}/${screenshotNames[screenshotIndex]}`;
+      heroScreenshot.src = `assets/screenshots/${locale.screenshotFolder}/${screenshotNames[screenshotIndex]}`;
     }
   }
 
@@ -389,23 +159,24 @@ document.addEventListener("DOMContentLoaded", () => {
     gantt.config.scale_height = 50;
     gantt.config.grid_width = 240;
 
+    const localeGantt = localesData[currentLang].gantt;
+
     // Configure grid headers & column mapping
     gantt.config.columns = [
-      { name: "text", label: currentLang === "ja" ? "タスク名" : "Task Name", width: "*", tree: true },
-      { name: "duration", label: currentLang === "ja" ? "期間" : "Days", align: "center", width: 60 }
+      { name: "text", label: localeGantt.labels.column_text, width: "*", tree: true },
+      { name: "duration", label: localeGantt.labels.column_duration, align: "center", width: 60 }
     ];
 
     // Grid config
     gantt.config.scales = [
-      { unit: "month", step: 1, format: "%Y年%M" },
-      { unit: "day", step: 1, format: "%d" }
+      { unit: "month", step: 1, format: currentLang === "ja" ? "%Y年%M" : "%F, %Y" },
+      { unit: "day", step: 1, format: currentLang === "ja" ? "%d" : "%j" }
     ];
 
     gantt.init("gantt_container");
     
     // Parse respective language data initially
-    const activeData = currentLang === "ja" ? initialGanttData : initialGanttDataEn;
-    gantt.parse(activeData);
+    gantt.parse(localeGantt.data);
 
     isGanttInitialized = true;
   }
@@ -413,38 +184,23 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateGanttLocale(lang) {
     if (!isGanttInitialized) return;
 
-    // Apply translations directly into gantt.locale.labels
-    const loc = ganttLocales[lang];
-    Object.assign(gantt.locale.labels, loc.labels);
-    Object.assign(gantt.locale.date, loc.date);
+    const localeGantt = localesData[lang]?.gantt || localesData.ja.gantt;
+    Object.assign(gantt.locale.labels, localeGantt.labels);
+    Object.assign(gantt.locale.date, localeGantt.date);
 
     // Apply grid column headers
-    gantt.config.columns[0].label = lang === "ja" ? "タスク名" : "Task Name";
-    gantt.config.columns[1].label = lang === "ja" ? "期間" : "Days";
+    gantt.config.columns[0].label = localeGantt.labels.column_text;
+    gantt.config.columns[1].label = localeGantt.labels.column_duration;
 
     // Set timeline scales format depending on language
-    if (lang === "ja") {
-      gantt.config.scales = [
-        { unit: "month", step: 1, format: "%Y年%M" },
-        { unit: "day", step: 1, format: "%d" }
-      ];
-    } else {
-      gantt.config.scales = [
-        { unit: "month", step: 1, format: "%F, %Y" },
-        { unit: "day", step: 1, format: "%j" }
-      ];
-    }
+    gantt.config.scales = [
+      { unit: "month", step: 1, format: lang === "ja" ? "%Y年%M" : "%F, %Y" },
+      { unit: "day", step: 1, format: lang === "ja" ? "%d" : "%j" }
+    ];
 
-    // Replace entire tasks with local translations for demo elegance
-    const taskData = lang === "ja" ? initialGanttData.data : initialGanttDataEn.data;
-    taskData.forEach((task) => {
-      if (gantt.isTaskExists(task.id)) {
-        const item = gantt.getTask(task.id);
-        item.text = task.text;
-        gantt.updateTask(task.id);
-      }
-    });
-
+    // Reload translated task data for this locale
+    gantt.clearAll();
+    gantt.parse(localeGantt.data);
     gantt.render();
   }
 
@@ -633,7 +389,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const btn = document.getElementById("btn-submit-feedback");
       const originalText = btn.innerHTML;
       btn.disabled = true;
-      btn.textContent = currentLang === "ja" ? "送信中..." : "Sending...";
+      const feedbackLocale = localesData[currentLang] || localesData.ja;
+      btn.textContent = feedbackLocale.i18n.feedback_sending;
 
       const action = feedbackForm.getAttribute("action");
 

@@ -1,0 +1,137 @@
+export default {
+  locale: "ko",
+  screenshotFolder: "en-us",
+  meta: {
+    title: "Ploto - 아름답고 직관적인 로컬 퍼스트 프로젝트 관리 도구",
+    description: "Ploto는 간트 차트, 칸반 보드, 우선순위 매트릭스를 하나의 아름다운 UI로 통합한 로컬 퍼스트 프로젝트 관리 도구입니다. SQLite로 고성능과 뛰어난 프라이버시 보호를 제공합니다."
+  },
+  i18n: {
+    nav_features: "기능",
+    nav_demo: "라이브 데모",
+    nav_beta: "베타 제안",
+    cta_download: "무료 다운로드",
+
+    hero_badge: "✨ 개인 개발과 팀에 최적화된 로컬 퍼스트",
+    hero_title: '프로젝트 관리를,<br><span class="text-gradient">더 직관적이고 아름답게。</span>',
+    hero_desc: "Ploto는 간트 차트, 칸반 보드, 우선순위 매트릭스를 하나의 아름다운 UI에 통합한 로컬 퍼스트 프로젝트 관리 도구입니다. SQLite로 고성능과 뛰어난 프라이버시 보호를 제공합니다.",
+    hero_cta_download: "무료로 받기",
+    hero_cta_demo: "데모 사용해보기",
+    hero_meta: "<span>✓ 클라우드 로그인 불필요</span><span>✓ 완전 오프라인 지원</span><span>✓ 5개 언어 로컬라이즈</span>",
+
+    mock_tab_gantt: "간트 차트",
+    mock_tab_kanban: "칸반",
+    mock_tab_matrix: "우선순위 매트릭스",
+    mock_col_task: "작업 이름",
+
+    features_title: "프로젝트 관리를 가속하는 강력한 기능",
+    features_subtitle: "Ploto는 사용 편의성과 높은 생산성을 동시에 달성하도록 설계되었습니다.",
+    feat_alert_title: "헬스 알림 라인",
+    feat_alert_desc: "기한 초과(빨강), 지연(주황), 정상(초록)의 3가지 색상으로 작업 상태를 표시하여 즉시 조치가 필요한 항목을 한눈에 파악할 수 있습니다.",
+    feat_cal_title: "맞춤형 공휴일 및 주말 표시",
+    feat_cal_desc: "사용자 정의 공휴일을 가져오고 주말/공휴일을 하이라이트하여 현실적인 작업 일정을 시각화할 수 있습니다.",
+    feat_undo_title: "Undo / Redo 지원",
+    feat_undo_desc: "작업 드래그, 추가, 삭제 등의 실수를 Ctrl+Z / Y로 쉽게 되돌리거나 다시 수행할 수 있습니다.",
+    feat_db_title: "프라이버시 중심 SQLite 설계",
+    feat_db_desc: "데이터는 모두 로컬의 안전한 SQLite 파일(.ploto)에 저장됩니다. 클라우드가 필요 없으며 민감한 데이터 유출 걱정이 없습니다.",
+
+    demo_title: "실제로 확인해보세요",
+    demo_subtitle: "다운로드 전에 Ploto의 핵심 뷰인 간트 차트, 칸반 보드, 우선순위 매트릭스의 작동 방식을 체험해보세요.",
+    demo_tab_gantt: "간트 차트",
+    demo_tab_kanban: "칸반 보드",
+    demo_tab_matrix: "우선순위 매트릭스",
+    demo_mobile_notice: "스마트폰에서는 UI 미리보기만 가능합니다. 전체 기능은 PC에서 확인하세요.",
+
+    demo_kanban_help: "카드를 열 사이에서 드래그하여 작업 상태를 변경하세요.",
+    kanban_todo: "해야 할 일",
+    kanban_progress: "진행 중",
+    kanban_done: "완료",
+    kanban_todo_notes: "💡 아직 시작하지 않은 작업을 여기에 배치하세요.",
+    kanban_progress_notes: "💡 현재 진행 중인 작업입니다.",
+    kanban_done_notes: "💡 완료된 작업입니다. 성과를 축하하세요!",
+
+    demo_matrix_help: "사분면 중 하나를 클릭하거나 생성기를 사용하여 작업을 배치하세요. 칩을 클릭하면 삭제됩니다.",
+    matrix_quad1: "Q I: 긴급 & 중요",
+    matrix_quad2: "Q II: 긴급하지 않음 & 중요",
+    matrix_quad3: "Q III: 긴급 & 중요하지 않음",
+    matrix_quad4: "Q IV: 긴급하지 않음 & 중요하지 않음",
+    matrix_add_title: "행렬에 작업 추가",
+    matrix_placeholder: "새 작업 이름...",
+    matrix_opt1: "I. 긴급 & 중요",
+    matrix_opt2: "II. 긴급하지 않음 & 중요",
+    matrix_opt3: "III. 긴급 & 중요하지 않음",
+    matrix_opt4: "IV. 긴급하지 않음 & 중요하지 않음",
+    btn_add: "추가",
+
+    beta_badge: "📢 베타 테스트 진행 중",
+    beta_title: "지금 만든 파일은<br>유료 기능을 영구히 유지합니다!",
+    beta_desc: "Ploto는 현재 베타 테스트 중입니다. 향후 고급 기능에 대해 일회성 구매 라이선스를 도입할 예정이지만, 베타 기간 중 생성한 프로젝트 파일(.ploto)은 추가 구매 없이 유료 기능을 계속 사용할 수 있습니다.",
+    beta_price: "베타 가격",
+    beta_limit: "향후 라이선스 형태",
+    beta_unlimited: "일회성 구매 (베타 파일 무료 포함)",
+
+    feedback_title: "베타 피드백 제출",
+    feedback_desc: "버그 리포트, 기능 요청 또는 의견을 보내주세요.",
+    feedback_name: "이름 (선택)",
+    feedback_name_placeholder: "홍길동",
+    feedback_email: "이메일 주소 (선택)",
+    feedback_email_placeholder: "hong@example.com",
+    feedback_msg: "피드백 내용 (필수)",
+    feedback_msg_placeholder: "기능 요청, 버그 세부 정보 또는 의견을 입력하세요...",
+    btn_send: "피드백 보내기",
+    feedback_success: "감사합니다! 피드백이 성공적으로 제출되었습니다.",
+    feedback_sending: "전송 중...",
+    feedback_error: "전송 중 오류가 발생했습니다. action URL을 확인하세요.",
+
+    dl_title: "지금 프로젝트 관리를 간소화하세요",
+    dl_desc: "앱을 다운로드하고 지금 바로 매끄러운 오프라인 프로젝트 관리를 경험하세요.",
+    dl_win_sub: "에서 받기",
+    dl_win_exe: "Windows 설치 프로그램",
+    dl_notes: "* Windows 10/11 호환. SQLite 3 기본 탑재.",
+
+    footer_privacy: "개인정보처리방침",
+    footer_terms: "이용약관"
+  },
+  gantt: {
+    labels: {
+      new_task: "새 작업",
+      column_text: "작업 이름",
+      column_start_date: "시작 시간",
+      column_duration: "기간",
+      column_add: "",
+      link: "링크",
+      confirm_link_deleting: "이 링크를 삭제하시겠습니까?",
+      link_start: " (시작)",
+      link_end: " (종료)",
+      type_task: "작업",
+      type_project: "프로젝트",
+      type_milestone: "마일스톤",
+      minutes: "분",
+      hours: "시간",
+      days: "일",
+      weeks: "주",
+      months: "월",
+      years: "년"
+    },
+    date: {
+      month_full: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+      month_short: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+      day_full: ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+      day_short: ["일", "월", "화", "수", "목", "금", "토"]
+    },
+    data: {
+      data: [
+        { id: 1, text: "프로젝트 초기화", start_date: "2026-07-01", duration: 8, open: true, progress: 0.6, type: "project" },
+        { id: 2, text: "시장 조사 및 요구사항 정의", start_date: "2026-07-01", duration: 4, parent: 1, progress: 0.8 },
+        { id: 3, text: "UI/UX 와이어프레임 작성", start_date: "2026-07-05", duration: 4, parent: 1, progress: 0.3 },
+        { id: 4, text: "프로토타입 개발", start_date: "2026-07-09", duration: 10, open: true, progress: 0.1, type: "project" },
+        { id: 5, text: "프론트엔드 개발", start_date: "2026-07-09", duration: 7, parent: 4, progress: 0.2 },
+        { id: 6, text: "백엔드 API 통합", start_date: "2026-07-12", duration: 7, parent: 4, progress: 0.0 }
+      ],
+      links: [
+        { id: 1, source: 2, target: 3, type: "0" },
+        { id: 2, source: 3, target: 5, type: "0" },
+        { id: 3, source: 5, target: 6, type: "0" }
+      ]
+    }
+  }
+};
