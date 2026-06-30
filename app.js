@@ -45,6 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
       feat_db_title: "プライバシー重視の SQLite 設計",
       feat_db_desc: "データはすべてローカルの安全なSQLiteファイル（.ploto）に保存。インターネット環境不要で、プライベートなデータがクラウドに漏洩する心配はありません。",
 
+      // Beta Offer Section
+      beta_badge: "📢 ベータテスト実施中",
+      beta_title: "今作ったファイルは、有料化後も<br>永久に有料機能をそのまま利用可能！",
+      beta_desc: "Plotoは現在ベータテスト中です。将来的に機能拡張に伴う買い切りライセンスを導入する予定ですが、ベータ期間中に作成したプロジェクトファイル（.ploto）は、有料化後も追加購入不要で有料機能を引き続きそのままお使いいただけます。",
+      beta_price: "ベータ版価格",
+      beta_limit: "将来のライセンス形態",
+      beta_unlimited: "買い切り（ベータファイルは追加購入不要）",
+
       // Demo Section Headers
       demo_title: "実際に動かしてみましょう",
       demo_subtitle: "ダウンロード前に、Plotoの代表的なインターフェース（ガントチャート、カンバン、マトリクス）の操作性を体験してください。",
@@ -76,15 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
       matrix_opt4: "Ⅳ. 緊急でない・重要でない",
       btn_add: "追加",
 
-      // Beta Offer Section
-      beta_badge: "📢 ベータテスト実施中",
-      beta_title: "ベータ期間中に作成されたファイルは<br>将来もずっと追加料金なしで利用可能！",
-      beta_desc: "Plotoは現在、品質向上のためのベータテストを行っています。将来的に高度な機能を備えた有料プランを導入する予定ですが、ベータ期間中に作成されたプロジェクトファイル（.ploto）は、有料化後もすべての機能を無料で引き続きご利用いただけます。",
-      beta_price: "ベータ版価格",
-      beta_limit: "将来のライセンス",
-      beta_unlimited: "作成済みファイルは永久無料",
-
       // Download Section
+
       dl_title: "Plotoでプロジェクト管理をシンプルに",
       dl_desc: "今すぐアプリケーションをダウンロードして、ローカルファーストで快適なプロジェクト管理を開始しましょう。",
       dl_win_sub: "手に入れる",
@@ -173,11 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Beta Offer Section
       beta_badge: "📢 Active Beta Phase",
-      beta_title: "Files Created During Beta<br>Remain Fully Free Forever!",
-      beta_desc: "Ploto is currently in beta testing for final polishing. We plan to introduce advanced features as part of a paid plan, but any project files (.ploto) created during the beta period will stay completely free and usable without restrictions.",
+      beta_title: "Files You Create Now<br>Keep All Paid Features—Forever!",
+      beta_desc: "Ploto is currently in beta. We plan to introduce a one-time purchase license for advanced features in the future—but any project files (.ploto) you create during the beta period will continue to enjoy those paid features without any additional purchase.",
       beta_price: "Beta Phase Price",
-      beta_limit: "Future License",
-      beta_unlimited: "Beta files remain free forever",
+      beta_limit: "Future License Model",
+      beta_unlimited: "One-time purchase (Beta files included free)",
 
       // Download Section
       dl_title: "Simplify Your Project Management Now",
