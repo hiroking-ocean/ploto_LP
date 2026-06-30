@@ -94,14 +94,14 @@ export default {
     security_title: "Ihre Sicherheitsfragen, beantwortet",
     security_subtitle: "Auch in Umgebungen, in denen Cloud-Dienste keine Sicherheitsprüfung bestehen, kann Ploto sofort eingesetzt werden. Kein Konto erforderlich \u2014 Daten bleiben auf Ihrem PC.",
     security_c1_title: "Null Risiko von Datenlecks",
-    security_c1_desc: "Alle Daten werden in einer lokalen SQLite-Datei (.ploto) gespeichert. Vertrauliche Aufgaben werden niemals an externe Server gesendet \u2014 von Grund auf. Cloud-Verbote kein Problem.",
-    security_c2_title: "Offizielle Microsoft Store-Verteilung",
-    security_c2_desc: "Microsofts Sicherheitsprüfung und Code-Signierung bestanden. Erleichtert die Einhaltung interner Sicherheitsrichtlinien und vereinfacht den Beschaffungsprozess.",
+    security_c1_desc: "Alle Daten werden in einer lokalen SQLite-Datei (.ploto) gespeichert. Vertrauliche Aufgaben werden \u2014 systembedingt \u2014 niemals an externe Server gesendet. Auch Cloud-Verbote sind kein Problem.",
+    security_c2_title: "Offiziell über den Microsoft Store",
+    security_c2_desc: "Hat Microsofts Sicherheitsprüfung und Code-Signierung bestanden. Das erleichtert die Einhaltung interner Sicherheitsrichtlinien und vereinfacht den Beschaffungsprozess.",
     security_c3_title: "Kein Konto \u00b7 Vollst\u00e4ndig anonym",
     security_c3_desc: "Keine E-Mail-Registrierung oder Anmeldung erforderlich. Keine pers\u00f6nlichen Daten n\u00f6tig. Installieren und sofort loslegen.",
 
     // --- Excel vs Ploto Section ---
-    excel_title: "Gro\u00dfen Sie Ihren Excel-Projektplan aus?",
+    excel_title: "St\u00f6\u00dft Ihr Excel-Projektplan an seine Grenzen?",
     excel_subtitle: "Vergleichen Sie typische Excel-Frustrationen mit Plotos L\u00f6sungen f\u00fcr Gantt & WBS-Management.",
     excel_col_excel: "\ud83d\ude30 Excel-Frustrationen",
     excel_col_ploto: "\u2705 Gel\u00f6st mit Ploto",
