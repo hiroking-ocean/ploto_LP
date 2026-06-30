@@ -31,13 +31,21 @@
   <meta property="og:description" content="クラウド不要・登録なし・完全オフラインで使える無料ガントチャートアプリ。カンバン・優先度マトリクスも統合。データはローカル保存で安全。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/">
+  <meta property="og:site_name" content="Ploto">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ko_KR">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/screenshots/ja-jp/01-gantt.png">
+  <meta property="og:image:alt" content="Plotoのガントチャート画面">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="無料ガントチャートアプリ Ploto | クラウド不要・完全オフライン">
   <meta name="twitter:description" content="クラウド不要・登録なし・完全オフライン。無料ガントチャート+カンバン+優先度マトリクスの統合プロジェクト管理アプリ。">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/screenshots/ja-jp/01-gantt.png">
+  <meta name="twitter:image:alt" content="Plotoのガントチャート画面">
 
   <!-- 構造化データ (schema.org SoftwareApplication) - Googleリッチ結果・ナレッジパネル向け -->
   <script type="application/ld+json">
@@ -71,7 +79,8 @@
 
   <!-- DHTMLX Gantt (Standard Edition) CDN -->
   <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" type="text/css">
-  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+  <!-- defer: レンダリングをブロックせず、app.js(module)より先に実行されるため gantt は利用可能 -->
+  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js" defer></script>
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -164,14 +173,11 @@
 
       <div class="hero-container">
         <div class="hero-content">
-          <div class="badge" data-i18n="hero_badge">🚀 無料ダウンロード | クラウド不要 | 完全オフライン対応</div>
+          <div class="badge" data-i18n="hero_badge">🏢 クラウド禁止の現場にも使えます｜完全ローカル｜無料</div>
           <h1 class="hero-title" data-i18n="hero_title">
             プロジェクト管理を、<br><span class="text-gradient">もっと直感的に、美しく。</span>
           </h1>
-          <p class="hero-description" data-i18n="hero_desc">
-            Ploto（プロト）は、ガントチャート、カンバン、優先度マトリクスを一つの美しいインターフェースに統合した、ローカルファーストのプロジェクト管理ツールです。SQLiteによる高速動作と、抜群の
-            プライバシー保護を実現します。
-          </p>
+          <p class="hero-description" data-i18n="hero_desc">「クラウド禁止」「重いExcel工程表」に悩む現場へ。PlotoはMS Storeから今すぐ使える、ガントチャート・カンバン・マトリクスを統合した完全ローカル型プロジェクト管理ツールです。登録不要・完全無料で今すぐ使い始められます。</p>
           <div class="hero-buttons">
             <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">無料で手に入れる</a>
             <a href="#demo" class="btn-secondary btn-large" data-i18n="hero_cta_demo">デモを触ってみる</a>
@@ -188,6 +194,73 @@
             <img id="hero-screenshot" src="assets/screenshots/ja-jp/01-gantt.png" alt="Ploto Application UI"
               class="app-screenshot-img">
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security / Trust Section -->
+    <section id="security" class="security-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="security_title">「本当に安全か」に答えます</h2>
+          <p class="section-subtitle" data-i18n="security_subtitle">クラウドサービスのセキュリティ審査が通らない環境でも、Plotoなら即日導入できます。アカウント登録も不要、データは完全にあなたのPC内に留まります。</p>
+        </div>
+        <div class="security-grid">
+          <!-- Card 1: Zero data leakage -->
+          <div class="security-card">
+            <div class="security-card-icon">🔒</div>
+            <h3 class="security-card-title" data-i18n="security_c1_title">情報漏洩リスクはゼロ</h3>
+            <p class="security-card-desc" data-i18n="security_c1_desc">全データはローカルSQLiteファイル（.ploto）に保存。社外秘のタスク・工程情報が外部サーバーに送信されることは、構造上ありません。クラウド禁止ポリシーの組織にも対応できます。</p>
+          </div>
+          <!-- Card 2: MS Store official -->
+          <div class="security-card">
+            <div class="security-card-icon">🏪</div>
+            <h3 class="security-card-title" data-i18n="security_c2_title">Microsoft Store 公式配布</h3>
+            <p class="security-card-desc" data-i18n="security_c2_desc">Microsoftのセキュリティ審査・コード署名を通過済み。社内のセキュリティ規定をクリアしやすく、面倒な導入稟議を簡略化・スキップできます。</p>
+          </div>
+          <!-- Card 3: No account -->
+          <div class="security-card">
+            <div class="security-card-icon">👤</div>
+            <h3 class="security-card-title" data-i18n="security_c3_title">アカウント不要・完全匿名</h3>
+            <p class="security-card-desc" data-i18n="security_c3_desc">メール登録・サインイン不要。個人情報の入力は一切不要です。インストール後すぐに使い始めることができます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Excel vs Ploto Section -->
+    <section id="excel-vs-ploto" class="excel-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="excel_title">Excelの工程表、そろそろ限界では？</h2>
+          <p class="section-subtitle" data-i18n="excel_subtitle">WBS管理・ガントチャートをExcelで運用している現場のよくある「絶望」と、Plotoの解決策を比較します。</p>
+        </div>
+        <div class="excel-comparison">
+          <!-- Left: Excel problems -->
+          <div class="comparison-col excel-col">
+            <div class="col-header" data-i18n="excel_col_excel">😰 Excelの絶望</div>
+            <ul class="comparison-list">
+              <li data-i18n="excel_pain1">1マスの列幅変更でガントチャート全体が崩れる</li>
+              <li data-i18n="excel_pain2">タスクが増えるにつれてスクロールが地獄になる</li>
+              <li data-i18n="excel_pain3">共有はメール添付、バージョン管理が混乱する</li>
+              <li data-i18n="excel_pain4">関数が壊れると原因不明のエラーに悩まされる</li>
+              <li data-i18n="excel_pain5">カンバンや優先度管理はシートを別に作る必要がある</li>
+            </ul>
+          </div>
+          <!-- Right: Ploto solutions -->
+          <div class="comparison-col ploto-col">
+            <div class="col-header" data-i18n="excel_col_ploto">✅ Plotoで解決</div>
+            <ul class="comparison-list">
+              <li data-i18n="ploto_sol1">ドラッグ＆ドロップで期間変更、ガントチャートが自動更新</li>
+              <li data-i18n="ploto_sol2">カンバン・優先度マトリクスへ1クリックで切り替え</li>
+              <li data-i18n="ploto_sol3">.plotoファイルを渡すだけ、常に最新1ファイル管理</li>
+              <li data-i18n="ploto_sol4">Undo/Redoで全操作をいつでも元に戻せる</li>
+              <li data-i18n="ploto_sol5">ガントチャート・カンバン・マトリクスが1アプリで完結</li>
+            </ul>
+          </div>
+        </div>
+        <div class="excel-cta">
+          <a href="#download" class="btn-primary btn-large" data-i18n="excel_cta">Excelから卒業する →</a>
         </div>
       </div>
     </section>

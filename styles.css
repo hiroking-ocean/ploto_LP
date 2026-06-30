@@ -1733,3 +1733,194 @@ button {
     text-align: center;
   }
 }
+
+/* ==========================================================================
+   Security / Trust Section
+   ========================================================================== */
+.security-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* セクション全体に微妙なグラデーション背景を付与して Features と差別化 */
+[data-theme="dark"] .security-section {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 0%, rgba(99, 102, 241, 0.04) 50%, rgba(15, 23, 42, 0) 100%);
+}
+[data-theme="light"] .security-section {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0) 0%, rgba(79, 70, 229, 0.03) 50%, rgba(248, 250, 252, 0) 100%);
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.security-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+/* カード上辺のグラデーションライン */
+.security-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.security-card:hover {
+  border-color: var(--color-primary);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-glow);
+}
+
+.security-card:hover::before {
+  opacity: 1;
+}
+
+.security-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  display: block;
+  line-height: 1;
+}
+
+.security-card-title {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.875rem;
+}
+
+.security-card-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   Excel vs Ploto Comparison Section
+   ========================================================================== */
+.excel-section {
+  padding: 5rem 0;
+}
+
+.excel-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+.comparison-col {
+  border-radius: 1.25rem;
+  padding: 2rem;
+  border: 1px solid;
+}
+
+/* Excel 列：赤系警告スタイル */
+.excel-col {
+  background: rgba(239, 68, 68, 0.05);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+[data-theme="light"] .excel-col {
+  background: rgba(220, 38, 38, 0.04);
+  border-color: rgba(220, 38, 38, 0.2);
+}
+
+/* Ploto 列：ブランドカラー（インディゴ）スタイル */
+.ploto-col {
+  background: rgba(99, 102, 241, 0.06);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+[data-theme="light"] .ploto-col {
+  background: rgba(79, 70, 229, 0.04);
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+.col-header {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid;
+}
+
+.excel-col .col-header {
+  color: var(--color-danger);
+  border-color: rgba(239, 68, 68, 0.25);
+}
+
+.ploto-col .col-header {
+  color: var(--color-primary);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ✗ / ✓ プレフィックスを疑似要素で付与 */
+.excel-col .comparison-list li::before {
+  content: '✗  ';
+  color: var(--color-danger);
+  font-weight: 700;
+}
+
+.ploto-col .comparison-list li::before {
+  content: '✓  ';
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.comparison-list li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* CTA ボタン */
+.excel-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Responsive: モバイルは1カラム */
+@media (max-width: 768px) {
+  .security-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .excel-comparison {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .security-section,
+  .excel-section {
+    padding: 3rem 0;
+  }
+}
+

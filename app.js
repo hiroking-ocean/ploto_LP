@@ -138,6 +138,9 @@ document.addEventListener("DOMContentLoaded", () => {
       metaDesc.setAttribute("content", locale.meta.description);
     }
 
+    // Update <html lang> so crawlers & screen readers see the active language
+    document.documentElement.lang = locale.locale || lang;
+
     // Refresh Gantt locale if loaded
     updateGanttLocale(lang);
 
