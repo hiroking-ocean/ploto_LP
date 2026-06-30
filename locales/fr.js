@@ -89,7 +89,33 @@ export default {
     dl_notes: "* Compatible avec Windows 10/11. Livré avec SQLite 3.",
 
     footer_privacy: "Politique de confidentialité",
-    footer_terms: "Conditions d'utilisation"
+    footer_terms: "Conditions d'utilisation",
+    // --- Security Section ---
+    security_title: "Vos questions de s\u00e9curit\u00e9, r\u00e9pondues",
+    security_subtitle: "M\u00eame l\u00e0 o\u00f9 les services cloud \u00e9chouent aux audits de s\u00e9curit\u00e9, Ploto peut \u00eatre d\u00e9ploy\u00e9 imm\u00e9diatement. Aucun compte requis \u2014 les donn\u00e9es restent sur votre PC.",
+    security_c1_title: "Z\u00e9ro risque de fuite de donn\u00e9es",
+    security_c1_desc: "Toutes les donn\u00e9es sont stock\u00e9es dans un fichier SQLite local (.ploto). Les informations confidentielles ne sont jamais envoy\u00e9es \u00e0 des serveurs externes \u2014 par conception.",
+    security_c2_title: "Distribution officielle Microsoft Store",
+    security_c2_desc: "Approuv\u00e9 par la v\u00e9rification de s\u00e9curit\u00e9 et la signature de code Microsoft. Facilite la conformit\u00e9 aux politiques de s\u00e9curit\u00e9 internes et simplifie les approbations d'achat.",
+    security_c3_title: "Sans compte \u00b7 Totalement anonyme",
+    security_c3_desc: "Aucune inscription par e-mail ni connexion requise. Aucune information personnelle n\u00e9cessaire. Installez et commencez imm\u00e9diatement.",
+
+    // --- Excel vs Ploto Section ---
+    excel_title: "Votre planification Excel arrive-t-elle \u00e0 ses limites\u00a0?",
+    excel_subtitle: "Comparez les frustrations courantes d'Excel avec les solutions de Ploto pour la gestion de Gantt et WBS.",
+    excel_col_excel: "\ud83d\ude30 Frustrations Excel",
+    excel_col_ploto: "\u2705 R\u00e9solu avec Ploto",
+    excel_pain1: "Modifier une largeur de colonne brise tout le diagramme de Gantt",
+    excel_pain2: "Le d\u00e9filement devient un cauchemar quand les t\u00e2ches s'accumulent",
+    excel_pain3: "Le partage par e-mail cr\u00e9e une confusion de versions",
+    excel_pain4: "Les formules bris\u00e9es entra\u00eenent des erreurs myst\u00e9rieuses",
+    excel_pain5: "Kanban et vues de priorit\u00e9 n\u00e9cessitent des feuilles s\u00e9par\u00e9es",
+    ploto_sol1: "Glisser-d\u00e9poser pour changer la dur\u00e9e, Gantt se met \u00e0 jour automatiquement",
+    ploto_sol2: "Basculer vers Kanban ou Matrice de priorit\u00e9 en un clic",
+    ploto_sol3: "Partagez un seul fichier .ploto \u2014 toujours la derni\u00e8re version",
+    ploto_sol4: "Annuler/R\u00e9tablir pour chaque action \u2014 toujours r\u00e9cup\u00e9rable",
+    ploto_sol5: "Gantt, Kanban et Matrice \u2014 tout dans une seule application",
+    excel_cta: "Lib\u00e9rez-vous d'Excel \u2192",
   },
   gantt: {
     labels: {
@@ -132,32 +158,6 @@ export default {
         { id: 2, source: 3, target: 5, type: "0" },
         { id: 3, source: 5, target: 6, type: "0" }
       ]
-    },
-    // --- Security Section ---
-    security_title: "Vos questions de s\u00e9curit\u00e9, r\u00e9pondues",
-    security_subtitle: "M\u00eame l\u00e0 o\u00f9 les services cloud \u00e9chouent aux audits de s\u00e9curit\u00e9, Ploto peut \u00eatre d\u00e9ploy\u00e9 imm\u00e9diatement. Aucun compte requis \u2014 les donn\u00e9es restent sur votre PC.",
-    security_c1_title: "Z\u00e9ro risque de fuite de donn\u00e9es",
-    security_c1_desc: "Toutes les donn\u00e9es sont stock\u00e9es dans un fichier SQLite local (.ploto). Les informations confidentielles ne sont jamais envoy\u00e9es \u00e0 des serveurs externes \u2014 par conception.",
-    security_c2_title: "Distribution officielle Microsoft Store",
-    security_c2_desc: "Approuv\u00e9 par la v\u00e9rification de s\u00e9curit\u00e9 et la signature de code Microsoft. Facilite la conformit\u00e9 aux politiques de s\u00e9curit\u00e9 internes et simplifie les approbations d'achat.",
-    security_c3_title: "Sans compte \u00b7 Totalement anonyme",
-    security_c3_desc: "Aucune inscription par e-mail ni connexion requise. Aucune information personnelle n\u00e9cessaire. Installez et commencez imm\u00e9diatement.",
-
-    // --- Excel vs Ploto Section ---
-    excel_title: "Votre planification Excel arrive-t-elle \u00e0 ses limites\u00a0?",
-    excel_subtitle: "Comparez les frustrations courantes d'Excel avec les solutions de Ploto pour la gestion de Gantt et WBS.",
-    excel_col_excel: "\ud83d\ude30 Frustrations Excel",
-    excel_col_ploto: "\u2705 R\u00e9solu avec Ploto",
-    excel_pain1: "Modifier une largeur de colonne brise tout le diagramme de Gantt",
-    excel_pain2: "Le d\u00e9filement devient un cauchemar quand les t\u00e2ches s'accumulent",
-    excel_pain3: "Le partage par e-mail cr\u00e9e une confusion de versions",
-    excel_pain4: "Les formules bris\u00e9es entra\u00eenent des erreurs myst\u00e9rieuses",
-    excel_pain5: "Kanban et vues de priorit\u00e9 n\u00e9cessitent des feuilles s\u00e9par\u00e9es",
-    ploto_sol1: "Glisser-d\u00e9poser pour changer la dur\u00e9e, Gantt se met \u00e0 jour automatiquement",
-    ploto_sol2: "Basculer vers Kanban ou Matrice de priorit\u00e9 en un clic",
-    ploto_sol3: "Partagez un seul fichier .ploto \u2014 toujours la derni\u00e8re version",
-    ploto_sol4: "Annuler/R\u00e9tablir pour chaque action \u2014 toujours r\u00e9cup\u00e9rable",
-    ploto_sol5: "Gantt, Kanban et Matrice \u2014 tout dans une seule application",
-    excel_cta: "Lib\u00e9rez-vous d'Excel \u2192",
+    }
   }
 };

@@ -89,7 +89,33 @@ export default {
     dl_notes: "* Windows 10/11 対応。SQLite 3標準搭載。",
 
     footer_privacy: "プライバシーポリシー",
-    footer_terms: "利用規約"
+    footer_terms: "利用規約",
+    // --- Security Section ---
+    security_title: "「本当に安全か」に答えます",
+    security_subtitle: "クラウドサービスのセキュリティ審査が通らない環境でも、Plotoなら即日導入できます。アカウント登録も不要、データは完全にあなたのPC内に留まります。",
+    security_c1_title: "情報漏洩リスクはゼロ",
+    security_c1_desc: "全データはローカルSQLiteファイル（.ploto）に保存。社外秘のタスク・工程情報が外部サーバーに送信されることは、構造上ありません。クラウド禁止ポリシーの組織にも対応できます。",
+    security_c2_title: "Microsoft Store 公式配布",
+    security_c2_desc: "Microsoftのセキュリティ審査・コード署名を通過済み。社内のセキュリティ規定をクリアしやすく、面倒な導入稟議を簡略化・スキップできます。",
+    security_c3_title: "アカウント不要・完全匿名",
+    security_c3_desc: "メール登録・サインイン不要。個人情報の入力は一切不要です。インストール後すぐに使い始めることができます。",
+
+    // --- Excel vs Ploto Section ---
+    excel_title: "Excelの工程表、そろそろ限界では？",
+    excel_subtitle: "WBS管理・ガントチャートをExcelで運用している現場のよくある「絶望」と、Plotoの解決策を比較します。",
+    excel_col_excel: "😰 Excelの絶望",
+    excel_col_ploto: "✅ Plotoで解決",
+    excel_pain1: "1マスの列幅変更でガントチャート全体が崩れる",
+    excel_pain2: "タスクが増えるにつれてスクロールが地獄になる",
+    excel_pain3: "共有はメール添付、バージョン管理が混乱する",
+    excel_pain4: "関数が壊れると原因不明のエラーに悩まされる",
+    excel_pain5: "カンバンや優先度管理はシートを別に作る必要がある",
+    ploto_sol1: "ドラッグ＆ドロップで期間変更、ガントチャートが自動更新",
+    ploto_sol2: "カンバン・優先度マトリクスへ1クリックで切り替え",
+    ploto_sol3: ".plotoファイルを渡すだけ、常に最新1ファイル管理",
+    ploto_sol4: "Undo/Redoで全操作をいつでも元に戻せる",
+    ploto_sol5: "ガントチャート・カンバン・マトリクスが1アプリで完結",
+    excel_cta: "Excelから卒業する →",
   },
   gantt: {
     labels: {
@@ -132,32 +158,6 @@ export default {
         { id: 2, source: 3, target: 5, type: "0" },
         { id: 3, source: 5, target: 6, type: "0" }
       ]
-    },
-    // --- Security Section ---
-    security_title: "「本当に安全か」に答えます",
-    security_subtitle: "クラウドサービスのセキュリティ審査が通らない環境でも、Plotoなら即日導入できます。アカウント登録も不要、データは完全にあなたのPC内に留まります。",
-    security_c1_title: "情報漏洩リスクはゼロ",
-    security_c1_desc: "全データはローカルSQLiteファイル（.ploto）に保存。社外秘のタスク・工程情報が外部サーバーに送信されることは、構造上ありません。クラウド禁止ポリシーの組織にも対応できます。",
-    security_c2_title: "Microsoft Store 公式配布",
-    security_c2_desc: "Microsoftのセキュリティ審査・コード署名を通過済み。社内のセキュリティ規定をクリアしやすく、面倒な導入稟議を簡略化・スキップできます。",
-    security_c3_title: "アカウント不要・完全匿名",
-    security_c3_desc: "メール登録・サインイン不要。個人情報の入力は一切不要です。インストール後すぐに使い始めることができます。",
-
-    // --- Excel vs Ploto Section ---
-    excel_title: "Excelの工程表、そろそろ限界では？",
-    excel_subtitle: "WBS管理・ガントチャートをExcelで運用している現場のよくある「絶望」と、Plotoの解決策を比較します。",
-    excel_col_excel: "😰 Excelの絶望",
-    excel_col_ploto: "✅ Plotoで解決",
-    excel_pain1: "1マスの列幅変更でガントチャート全体が崩れる",
-    excel_pain2: "タスクが増えるにつれてスクロールが地獄になる",
-    excel_pain3: "共有はメール添付、バージョン管理が混乱する",
-    excel_pain4: "関数が壊れると原因不明のエラーに悩まされる",
-    excel_pain5: "カンバンや優先度管理はシートを別に作る必要がある",
-    ploto_sol1: "ドラッグ＆ドロップで期間変更、ガントチャートが自動更新",
-    ploto_sol2: "カンバン・優先度マトリクスへ1クリックで切り替え",
-    ploto_sol3: ".plotoファイルを渡すだけ、常に最新1ファイル管理",
-    ploto_sol4: "Undo/Redoで全操作をいつでも元に戻せる",
-    ploto_sol5: "ガントチャート・カンバン・マトリクスが1アプリで完結",
-    excel_cta: "Excelから卒業する →",
+    }
   }
 };

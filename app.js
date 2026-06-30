@@ -6,7 +6,11 @@ import locales from "./locales/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
-  let currentLang = localStorage.getItem("ploto-lang") || "ja";
+  // 初期言語は「ページが持つ言語」(<html lang>) を正とする。
+  // 各言語は別URLでプリレンダリングされており、これによりSSR内容とJSの再適用が一致する。
+  const BASE = "/ploto_LP/";
+  const urlForLang = (lang) => (lang === "ja" ? BASE : `${BASE}${lang}/`);
+  let currentLang = document.documentElement.lang || "ja";
   let currentTheme = localStorage.getItem("ploto-theme") || "dark";
   const screenshotNames = ["01-gantt.png", "02-kanban.png", "03-matrix.png", "04-darkmode.png"];
   let screenshotIndex = 0;
@@ -85,8 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
   langOptions.forEach((option) => {
     option.addEventListener("click", () => {
       const lang = option.getAttribute("data-lang");
-      if (supportedLangs.includes(lang)) {
-        applyLanguage(lang);
+      // 言語切替は該当言語のURLへ遷移（URL=言語の正 を維持）
+      if (supportedLangs.includes(lang) && lang !== currentLang) {
+        location.href = urlForLang(lang);
+        return;
       }
       closeLangMenu();
     });
@@ -147,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update hero screenshot language based on current locale settings
     const heroScreenshot = document.getElementById("hero-screenshot");
     if (heroScreenshot) {
-      heroScreenshot.src = `assets/screenshots/${locale.screenshotFolder}/${screenshotNames[screenshotIndex]}`;
+      heroScreenshot.src = `${BASE}assets/screenshots/${locale.screenshotFolder}/${screenshotNames[screenshotIndex]}`;
     }
   }
 
@@ -452,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
       heroScreenshot.style.opacity = "0";
       
       setTimeout(() => {
-        heroScreenshot.src = `assets/screenshots/${currentLang === "ja" ? "ja-jp" : "en-us"}/${screenshotNames[screenshotIndex]}`;
+        heroScreenshot.src = `${BASE}assets/screenshots/${currentLang === "ja" ? "ja-jp" : "en-us"}/${screenshotNames[screenshotIndex]}`;
         heroScreenshot.style.opacity = "1";
       }, 300);
     }, 5000); // 5 seconds per slide

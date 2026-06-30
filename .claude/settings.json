@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git --no-pager diff locales/)"
+      "Bash(git --no-pager diff locales/)",
+      "Bash(git mv *)",
+      "Bash(node build.js)",
+      "Bash(node -e ' *)",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(node -e 'const s=require\\(\"fs\"\\).readFileSync\\(\"./locales/en.js\",\"latin1\"\\);console.log\\(\"CRLF:\",s.includes\\(\"\\\\r\\\\n\"\\),\"| LFのみ:\",/[^\\\\r]\\\\n/.test\\(s\\)\\);const i=s.indexOf\\(\"Security Section\"\\);console.log\\(JSON.stringify\\(s.slice\\(i-12,i+20\\)\\)\\);')",
+      "Bash(node --input-type=module -e \"import\\('./locales/index.js'\\).then\\(\\(\\)=>console.log\\('locales: OK'\\)\\).catch\\(e=>console.log\\('ERR:'+e.message\\)\\)\")",
+      "Bash(node --check app.js)"
     ]
   }
 }

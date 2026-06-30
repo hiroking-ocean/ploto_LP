@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://hiroking-ocean.github.io/ploto_LP/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
     <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

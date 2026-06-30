@@ -89,7 +89,33 @@ export default {
     dl_notes: "* Compatible with Windows 10/11. Ships with local SQLite 3 support.",
 
     footer_privacy: "Privacy Policy",
-    footer_terms: "Terms of Service"
+    footer_terms: "Terms of Service",
+    // --- Security Section ---
+    security_title: "Your Security Questions, Answered",
+    security_subtitle: "Even where cloud services fail security reviews, Ploto can be deployed immediately. No account needed — data stays entirely on your PC.",
+    security_c1_title: "Zero Risk of Data Leakage",
+    security_c1_desc: "All data is stored in a local SQLite file (.ploto). Confidential tasks and schedules are never sent to external servers — by design. Compatible with cloud-ban policies.",
+    security_c2_title: "Official Microsoft Store Distribution",
+    security_c2_desc: "Passed Microsoft's security review and code signing. Easier to meet internal security policies and simplify or skip procurement approval.",
+    security_c3_title: "No Account Required · Fully Anonymous",
+    security_c3_desc: "No email registration or sign-in needed. No personal information required. Install and start immediately.",
+
+    // --- Excel vs Ploto Section ---
+    excel_title: "Hitting the Limits of Excel Gantt Charts?",
+    excel_subtitle: "Compare common Excel frustrations with Ploto's solutions for Gantt & WBS management.",
+    excel_col_excel: "😰 Excel Frustrations",
+    excel_col_ploto: "✅ Solved by Ploto",
+    excel_pain1: "Changing one column width breaks the entire Gantt chart",
+    excel_pain2: "Scrolling becomes a nightmare as tasks multiply",
+    excel_pain3: "Sharing via email causes version confusion",
+    excel_pain4: "Broken formulas lead to mysterious errors",
+    excel_pain5: "Kanban and priority views require separate sheets",
+    ploto_sol1: "Drag & drop to change duration, Gantt updates automatically",
+    ploto_sol2: "Switch to Kanban or Priority Matrix in one click",
+    ploto_sol3: "Share a single .ploto file — always the latest version",
+    ploto_sol4: "Undo/Redo for every action — always recoverable",
+    ploto_sol5: "Gantt, Kanban, and Matrix all in one app",
+    excel_cta: "Break Free from Excel →",
   },
   gantt: {
     labels: {
@@ -132,32 +158,6 @@ export default {
         { id: 2, source: 3, target: 5, type: "0" },
         { id: 3, source: 5, target: 6, type: "0" }
       ]
-    },
-    // --- Security Section ---
-    security_title: "Your Security Questions, Answered",
-    security_subtitle: "Even where cloud services fail security reviews, Ploto can be deployed immediately. No account needed — data stays entirely on your PC.",
-    security_c1_title: "Zero Risk of Data Leakage",
-    security_c1_desc: "All data is stored in a local SQLite file (.ploto). Confidential tasks and schedules are never sent to external servers — by design. Compatible with cloud-ban policies.",
-    security_c2_title: "Official Microsoft Store Distribution",
-    security_c2_desc: "Passed Microsoft's security review and code signing. Easier to meet internal security policies and simplify or skip procurement approval.",
-    security_c3_title: "No Account Required · Fully Anonymous",
-    security_c3_desc: "No email registration or sign-in needed. No personal information required. Install and start immediately.",
-
-    // --- Excel vs Ploto Section ---
-    excel_title: "Hitting the Limits of Excel Gantt Charts?",
-    excel_subtitle: "Compare common Excel frustrations with Ploto's solutions for Gantt & WBS management.",
-    excel_col_excel: "😰 Excel Frustrations",
-    excel_col_ploto: "✅ Solved by Ploto",
-    excel_pain1: "Changing one column width breaks the entire Gantt chart",
-    excel_pain2: "Scrolling becomes a nightmare as tasks multiply",
-    excel_pain3: "Sharing via email causes version confusion",
-    excel_pain4: "Broken formulas lead to mysterious errors",
-    excel_pain5: "Kanban and priority views require separate sheets",
-    ploto_sol1: "Drag & drop to change duration, Gantt updates automatically",
-    ploto_sol2: "Switch to Kanban or Priority Matrix in one click",
-    ploto_sol3: "Share a single .ploto file — always the latest version",
-    ploto_sol4: "Undo/Redo for every action — always recoverable",
-    ploto_sol5: "Gantt, Kanban, and Matrix all in one app",
-    excel_cta: "Break Free from Excel →",
+    }
   }
 };
