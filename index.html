@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja" data-theme="dark">
 
 <head>
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3JMMY03ZCB"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-213Q3C7JLN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-3JMMY03ZCB');
+    gtag('config', 'G-213Q3C7JLN');
   </script>
 
   <meta name="google-site-verification" content="2Lyy2qrZi_Obob4bnB3PW7ITsJMQ0T-Vmx3CV3ra4JU" />
@@ -72,8 +72,8 @@
       <div class="header-actions">
         <!-- Language Switcher (dropdown) -->
         <div class="lang-switcher" id="lang-switcher">
-          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false"
-            aria-label="言語を選択" title="Change Language">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択"
+            title="Change Language">
             <span class="lang-text">JA</span>
           </button>
           <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
@@ -261,165 +261,168 @@
         <!-- PC縦横比を維持したまま縮小するためのラッパー -->
         <div class="demo-scale-wrapper">
           <div class="demo-container">
-          <div class="demo-tabs">
-            <button class="demo-tab-btn active" data-demo-tab="gantt">
-              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="8" y1="6" x2="21" y2="6"></line>
-                <line x1="8" y1="12" x2="21" y2="12"></line>
-                <line x1="8" y1="18" x2="21" y2="18"></line>
-                <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                <line x1="3" y1="18" x2="3.01" y2="18"></line>
-              </svg>
-              <span data-i18n="demo_tab_gantt">ガントチャート</span>
-            </button>
-            <button class="demo-tab-btn" data-demo-tab="kanban">
-              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="9" y1="3" x2="9" y2="21"></line>
-                <line x1="15" y1="3" x2="15" y2="21"></line>
-              </svg>
-              <span data-i18n="demo_tab_kanban">カンバンボード</span>
-            </button>
-            <button class="demo-tab-btn" data-demo-tab="matrix">
-              <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="12" y1="3" x2="12" y2="21"></line>
-              </svg>
-              <span data-i18n="demo_tab_matrix">優先度マトリクス</span>
-            </button>
-          </div>
-
-          <div class="demo-window">
-            <!-- Gantt Demo (DHTMLX Gantt Container) -->
-            <div id="demo-pane-gantt" class="demo-pane active">
-              <div id="gantt_container"></div>
+            <div class="demo-tabs">
+              <button class="demo-tab-btn active" data-demo-tab="gantt">
+                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+                <span data-i18n="demo_tab_gantt">ガントチャート</span>
+              </button>
+              <button class="demo-tab-btn" data-demo-tab="kanban">
+                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+                <span data-i18n="demo_tab_kanban">カンバンボード</span>
+              </button>
+              <button class="demo-tab-btn" data-demo-tab="matrix">
+                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="12" y1="3" x2="12" y2="21"></line>
+                </svg>
+                <span data-i18n="demo_tab_matrix">優先度マトリクス</span>
+              </button>
             </div>
 
-            <!-- Kanban Demo -->
-            <div id="demo-pane-kanban" class="demo-pane">
-              <div class="kanban-instructions" data-i18n="demo_kanban_help">カードを別の列にドラッグ＆ドロップしてステータスを変更できます。</div>
-              <div class="kanban-board">
-                <div class="kanban-column" id="col-todo">
-                  <div class="kanban-column-header">
-                    <span class="column-title" data-i18n="kanban_todo">未実施</span>
-                    <span class="column-count">2</span>
-                  </div>
-                  <div class="kanban-column-notes" data-i18n="kanban_todo_notes">💡 ここにはこれから取り組むタスクを配置します。</div>
-                  <div class="kanban-cards-container" id="cards-todo">
-                    <div class="kanban-card" draggable="true" id="task-1" style="border-left-color: #3b82f6;">
-                      <div class="card-tags"><span class="tag-badge">Research</span></div>
-                      <div class="card-title">競合アプリの機能調査</div>
-                      <div class="card-footer">
-                        <span class="card-date">07/05</span>
-                        <span class="card-assignee">鈴木</span>
-                      </div>
-                    </div>
-                    <div class="kanban-card" draggable="true" id="task-2" style="border-left-color: #10b981;">
-                      <div class="card-tags"><span class="tag-badge">Design</span></div>
-                      <div class="card-title">LPのワイヤーフレーム作成</div>
-                      <div class="card-footer">
-                        <span class="card-date">07/08</span>
-                        <span class="card-assignee">佐藤</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="demo-window">
+              <!-- Gantt Demo (DHTMLX Gantt Container) -->
+              <div id="demo-pane-gantt" class="demo-pane active">
+                <div id="gantt_container"></div>
+              </div>
 
-                <div class="kanban-column" id="col-progress">
-                  <div class="kanban-column-header">
-                    <span class="column-title" data-i18n="kanban_progress">実施中</span>
-                    <span class="column-count">1</span>
-                  </div>
-                  <div class="kanban-column-notes" data-i18n="kanban_progress_notes">💡 現在取り組んでいる最中のタスクです。</div>
-                  <div class="kanban-cards-container" id="cards-progress">
-                    <div class="kanban-card" draggable="true" id="task-3" style="border-left-color: #f59e0b;">
-                      <div class="card-tags"><span class="tag-badge">Dev</span></div>
-                      <div class="card-title">LPのHTML/CSSモックアップ実装</div>
-                      <div class="card-footer">
-                        <span class="card-date">07/02</span>
-                        <span class="card-assignee">田中</span>
+              <!-- Kanban Demo -->
+              <div id="demo-pane-kanban" class="demo-pane">
+                <div class="kanban-instructions" data-i18n="demo_kanban_help">カードを別の列にドラッグ＆ドロップしてステータスを変更できます。</div>
+                <div class="kanban-board">
+                  <div class="kanban-column" id="col-todo">
+                    <div class="kanban-column-header">
+                      <span class="column-title" data-i18n="kanban_todo">未実施</span>
+                      <span class="column-count">2</span>
+                    </div>
+                    <div class="kanban-column-notes" data-i18n="kanban_todo_notes">💡 ここにはこれから取り組むタスクを配置します。</div>
+                    <div class="kanban-cards-container" id="cards-todo">
+                      <div class="kanban-card" draggable="true" id="task-1" style="border-left-color: #3b82f6;">
+                        <div class="card-tags"><span class="tag-badge">Research</span></div>
+                        <div class="card-title">競合アプリの機能調査</div>
+                        <div class="card-footer">
+                          <span class="card-date">07/05</span>
+                          <span class="card-assignee">鈴木</span>
+                        </div>
+                      </div>
+                      <div class="kanban-card" draggable="true" id="task-2" style="border-left-color: #10b981;">
+                        <div class="card-tags"><span class="tag-badge">Design</span></div>
+                        <div class="card-title">LPのワイヤーフレーム作成</div>
+                        <div class="card-footer">
+                          <span class="card-date">07/08</span>
+                          <span class="card-assignee">佐藤</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <div class="kanban-column" id="col-done">
-                  <div class="kanban-column-header">
-                    <span class="column-title" data-i18n="kanban_done">完了</span>
-                    <span class="column-count">1</span>
+                  <div class="kanban-column" id="col-progress">
+                    <div class="kanban-column-header">
+                      <span class="column-title" data-i18n="kanban_progress">実施中</span>
+                      <span class="column-count">1</span>
+                    </div>
+                    <div class="kanban-column-notes" data-i18n="kanban_progress_notes">💡 現在取り組んでいる最中のタスクです。</div>
+                    <div class="kanban-cards-container" id="cards-progress">
+                      <div class="kanban-card" draggable="true" id="task-3" style="border-left-color: #f59e0b;">
+                        <div class="card-tags"><span class="tag-badge">Dev</span></div>
+                        <div class="card-title">LPのHTML/CSSモックアップ実装</div>
+                        <div class="card-footer">
+                          <span class="card-date">07/02</span>
+                          <span class="card-assignee">田中</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="kanban-column-notes" data-i18n="kanban_done_notes">💡 完了済みのタスクです。達成感を味わいましょう！</div>
-                  <div class="kanban-cards-container" id="cards-done">
-                    <div class="kanban-card done" draggable="true" id="task-4" style="border-left-color: #8b5cf6;">
-                      <div class="card-tags"><span class="tag-badge">Planning</span></div>
-                      <div class="card-title">プロジェクト要件定義書作成</div>
-                      <div class="card-footer">
-                        <span class="card-date">06/28</span>
-                        <span class="card-assignee">鈴木</span>
+
+                  <div class="kanban-column" id="col-done">
+                    <div class="kanban-column-header">
+                      <span class="column-title" data-i18n="kanban_done">完了</span>
+                      <span class="column-count">1</span>
+                    </div>
+                    <div class="kanban-column-notes" data-i18n="kanban_done_notes">💡 完了済みのタスクです。達成感を味わいましょう！</div>
+                    <div class="kanban-cards-container" id="cards-done">
+                      <div class="kanban-card done" draggable="true" id="task-4" style="border-left-color: #8b5cf6;">
+                        <div class="card-tags"><span class="tag-badge">Planning</span></div>
+                        <div class="card-title">プロジェクト要件定義書作成</div>
+                        <div class="card-footer">
+                          <span class="card-date">06/28</span>
+                          <span class="card-assignee">鈴木</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Matrix Demo -->
-            <div id="demo-pane-matrix" class="demo-pane">
-              <div class="matrix-instructions" data-i18n="demo_matrix_help">緊急度と重要度の4つのエリアをクリックして、タスクをプロットできます。</div>
-              <div class="matrix-board">
-                <div class="matrix-plane">
-                  <!-- Quadrant 1: High Urgent, High Important -->
-                  <div class="matrix-quadrant" id="quad-1">
-                    <div class="quadrant-label" data-i18n="matrix_quad1">第Ⅰ象限: 緊急・重要</div>
-                    <div class="quad-task-list" id="quad-list-1">
-                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #ef4444;">重要なセキュリティアップデート
+              <!-- Matrix Demo -->
+              <div id="demo-pane-matrix" class="demo-pane">
+                <div class="matrix-instructions" data-i18n="demo_matrix_help">緊急度と重要度の4つのエリアをクリックして、タスクをプロットできます。</div>
+                <div class="matrix-board">
+                  <div class="matrix-plane">
+                    <!-- Quadrant 1: High Urgent, High Important -->
+                    <div class="matrix-quadrant" id="quad-1">
+                      <div class="quadrant-label" data-i18n="matrix_quad1">第Ⅰ象限: 緊急・重要</div>
+                      <div class="quad-task-list" id="quad-list-1">
+                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #ef4444;">
+                          重要なセキュリティアップデート
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Quadrant 2: Low Urgent, High Important -->
+                    <div class="matrix-quadrant" id="quad-2">
+                      <div class="quadrant-label" data-i18n="matrix_quad2">第Ⅱ象限: 緊急でない・重要</div>
+                      <div class="quad-task-list" id="quad-list-2">
+                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #f59e0b;">
+                          リファクタリングと技術的負債解消</div>
+                      </div>
+                    </div>
+                    <!-- Quadrant 3: High Urgent, Low Important -->
+                    <div class="matrix-quadrant" id="quad-3">
+                      <div class="quadrant-label" data-i18n="matrix_quad3">第Ⅲ象限: 緊急・重要でない</div>
+                      <div class="quad-task-list" id="quad-list-3">
+                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #3b82f6;">週例報告書の作成
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Quadrant 4: Low Urgent, Low Important -->
+                    <div class="matrix-quadrant" id="quad-4">
+                      <div class="quadrant-label" data-i18n="matrix_quad4">第Ⅳ象限: 緊急でない・重要でない</div>
+                      <div class="quad-task-list" id="quad-list-4">
+                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #10b981;">オフィス整理整頓
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <!-- Quadrant 2: Low Urgent, High Important -->
-                  <div class="matrix-quadrant" id="quad-2">
-                    <div class="quadrant-label" data-i18n="matrix_quad2">第Ⅱ象限: 緊急でない・重要</div>
-                    <div class="quad-task-list" id="quad-list-2">
-                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #f59e0b;">
-                        リファクタリングと技術的負債解消</div>
-                    </div>
-                  </div>
-                  <!-- Quadrant 3: High Urgent, Low Important -->
-                  <div class="matrix-quadrant" id="quad-3">
-                    <div class="quadrant-label" data-i18n="matrix_quad3">第Ⅲ象限: 緊急・重要でない</div>
-                    <div class="quad-task-list" id="quad-list-3">
-                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #3b82f6;">週例報告書の作成</div>
-                    </div>
-                  </div>
-                  <!-- Quadrant 4: Low Urgent, Low Important -->
-                  <div class="matrix-quadrant" id="quad-4">
-                    <div class="quadrant-label" data-i18n="matrix_quad4">第Ⅳ象限: 緊急でない・重要でない</div>
-                    <div class="quad-task-list" id="quad-list-4">
-                      <div class="matrix-task-chip" draggable="true" style="border-left-color: #10b981;">オフィス整理整頓</div>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="matrix-creator">
-                  <h4 data-i18n="matrix_add_title">タスクをマトリクスに追加</h4>
-                  <div class="matrix-input-group">
-                    <input type="text" id="matrix-task-name" placeholder="新しいタスク名..."
-                      data-i18n-placeholder="matrix_placeholder">
-                    <select id="matrix-quadrant-select">
-                      <option value="1" data-i18n="matrix_opt1">Ⅰ. 緊急・重要</option>
-                      <option value="2" data-i18n="matrix_opt2">Ⅱ. 緊急でない・重要</option>
-                      <option value="3" data-i18n="matrix_opt3">Ⅲ. 緊急・重要でない</option>
-                      <option value="4" data-i18n="matrix_opt4">Ⅳ. 緊急でない・重要でない</option>
-                    </select>
-                    <button id="btn-add-matrix-task" class="btn-primary" data-i18n="btn_add">追加</button>
+                  <div class="matrix-creator">
+                    <h4 data-i18n="matrix_add_title">タスクをマトリクスに追加</h4>
+                    <div class="matrix-input-group">
+                      <input type="text" id="matrix-task-name" placeholder="新しいタスク名..."
+                        data-i18n-placeholder="matrix_placeholder">
+                      <select id="matrix-quadrant-select">
+                        <option value="1" data-i18n="matrix_opt1">Ⅰ. 緊急・重要</option>
+                        <option value="2" data-i18n="matrix_opt2">Ⅱ. 緊急でない・重要</option>
+                        <option value="3" data-i18n="matrix_opt3">Ⅲ. 緊急・重要でない</option>
+                        <option value="4" data-i18n="matrix_opt4">Ⅳ. 緊急でない・重要でない</option>
+                      </select>
+                      <button id="btn-add-matrix-task" class="btn-primary" data-i18n="btn_add">追加</button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
         </div> <!-- /.demo-scale-wrapper -->
       </div>
     </section>
