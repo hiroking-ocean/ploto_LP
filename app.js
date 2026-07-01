@@ -65,6 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(nextTheme);
   });
 
+  // Microsoft Store バッジのクリックイベントをインターセプトしてWebサイトを開く
+  // (Storeアプリの強制起動やインストーラー自動DLを防ぎ、安全にブラウザでストアを開く)
+  document.addEventListener("click", (e) => {
+    const badge = e.target.closest("ms-store-badge");
+    if (badge) {
+      e.preventDefault();
+      e.stopPropagation();
+      window.open("https://apps.microsoft.com/detail/9n4njnmt2b77", "_blank");
+    }
+  }, true); // キャプチャリングフェーズで先に処理を奪う
+
   // Language Switcher (dropdown)
   const langSwitcher = document.getElementById("lang-switcher");
   const langToggleBtn = document.getElementById("lang-toggle");
