@@ -109,7 +109,27 @@ function buildPage(lang) {
   $("#hero-screenshot").attr("src", `${BASE}assets/screenshots/${locale.screenshotFolder}/01-gantt.png`);
   $("#hero-screenshot").attr("alt", IMG_ALT[lang]);
 
-  // 8. アセットパス絶対化（サブ階層 /en/ で 404 しないように）
+  // 8. Microsoft Store バッジのローカライズ
+  const badgeLang = {
+    ja: "ja-jp",
+    en: "en-us",
+    de: "de-de",
+    fr: "fr-fr",
+    ko: "ko-kr"
+  }[lang] || "en-us";
+
+  const badgeProductName = {
+    ja: "Ploto - ガントチャート プロジェクト管理",
+    en: "Ploto - Gantt Chart Project Management",
+    de: "Ploto - Gantt-Diagramm Projektmanagement",
+    fr: "Ploto - Diagramme de Gantt Gestion de Projet",
+    ko: "Ploto - 간트 차트 프로젝트 관리"
+  }[lang] || "Ploto - Gantt Chart Project Management";
+
+  $("ms-store-badge").attr("language", badgeLang);
+  $("ms-store-badge").attr("productname", badgeProductName);
+
+  // 9. アセットパス絶対化（サブ階層 /en/ で 404 しないように）
   $("img[src], script[src]").each((_, el) => {
     const a = el.tagName === "img" ? "src" : "src";
     $(el).attr(a, absolutize($(el).attr(a)));

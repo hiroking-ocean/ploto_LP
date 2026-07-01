@@ -571,15 +571,9 @@
 
           <div class="download-buttons">
             <!-- Windows Microsoft Store -->
-            <a href="https://apps.microsoft.com/detail/9N4NJNMT2B77" target="_blank" class="download-btn-store">
-              <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.1zM10.95 1.95L24 0v11.55H10.95V1.95zM10.95 12.45H24v11.55l-13.05-1.95v-9.6z"></path>
-              </svg>
-              <div class="store-text">
-                <span class="store-sub" data-i18n="dl_win_sub">Disponible sur</span>
-                <span class="store-main">Microsoft Store</span>
-              </div>
-            </a>
+            <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
+            <ms-store-badge productid="9n4njnmt2b77" productname="Ploto - Diagramme de Gantt Gestion de Projet" window-mode="direct" theme="auto" size="large" language="fr-fr" animation="on">
+            </ms-store-badge>
           </div>
 
           <p class="download-notes" data-i18n="dl_notes">* Compatible avec Windows 10/11. Livré avec SQLite 3.</p>
