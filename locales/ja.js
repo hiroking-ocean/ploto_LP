@@ -90,6 +90,7 @@ export default {
 
     footer_privacy: "プライバシーポリシー",
     footer_terms: "利用規約",
+    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "「本当に安全か」に答えます",
     security_subtitle: "クラウドサービスのセキュリティ審査が通らない環境でも、Plotoなら即日導入できます。アカウント登録も不要、データは完全にあなたのPC内に留まります。",

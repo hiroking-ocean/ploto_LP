@@ -90,6 +90,7 @@ export default {
 
     footer_privacy: "Politique de confidentialité",
     footer_terms: "Conditions d'utilisation",
+    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Vos questions de s\u00e9curit\u00e9, r\u00e9pondues",
     security_subtitle: "M\u00eame l\u00e0 o\u00f9 les services cloud \u00e9chouent aux audits de s\u00e9curit\u00e9, Ploto peut \u00eatre d\u00e9ploy\u00e9 imm\u00e9diatement. Aucun compte requis \u2014 les donn\u00e9es restent sur votre PC.",

@@ -90,6 +90,7 @@ export default {
 
     footer_privacy: "개인정보처리방침",
     footer_terms: "이용약관",
+    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "\ubcf4\uc548 \uc9c8\ubb38\uc5d0 \ub2f5\ud569\ub2c8\ub2e4",
     security_subtitle: "\ud074\ub77c\uc6b0\ub4dc \uc11c\ube44\uc2a4\uac00 \ubcf4\uc548 \uac80\ud1a0\ub97c \ud1b5\uacfc\ud558\uc9c0 \ubabb\ud558\ub294 \ud658\uacbd\uc5d0\uc11c\ub3c4 Ploto\ub294 \uc989\uc2dc \ub3c4\uc785 \uac00\ub2a5\ud569\ub2c8\ub2e4. \uacc4\uc815 \ubd88\ud544\uc694 \u2014 \ub370\uc774\ud130\ub294 PC\uc5d0 \uc548\uc804\ud558\uac8c \ubcf4\uad00\ub429\ub2c8\ub2e4.",

@@ -90,6 +90,7 @@ export default {
 
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms of Service",
+    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Your Security Questions, Answered",
     security_subtitle: "Even where cloud services fail security reviews, Ploto can be deployed immediately. No account needed — data stays entirely on your PC.",

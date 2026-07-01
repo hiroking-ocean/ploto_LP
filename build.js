@@ -57,6 +57,10 @@ function buildPage(lang) {
     const key = $(el).attr("data-i18n-placeholder");
     if (i18n[key] != null) $(el).attr("placeholder", i18n[key]);
   });
+  $("[data-i18n-href]").each((_, el) => {
+    const key = $(el).attr("data-i18n-href");
+    if (i18n[key] != null) $(el).attr("href", i18n[key]);
+  });
 
   // 2. <html lang> （app.js が初期言語の正として読む）
   $("html").attr("lang", lang);
