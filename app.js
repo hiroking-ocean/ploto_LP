@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.documentElement.setAttribute("data-theme", theme);
     currentTheme = theme;
     localStorage.setItem("ploto-theme", theme);
+
+    // Microsoft Store バッジのテーマを連動させる
+    const storeBadge = document.querySelector("ms-store-badge");
+    if (storeBadge) {
+      storeBadge.setAttribute("theme", theme);
+    }
   }
 
   // OS theme detection
