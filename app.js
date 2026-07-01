@@ -72,7 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (badge) {
       e.preventDefault();
       e.stopPropagation();
-      window.open("https://apps.microsoft.com/detail/9n4njnmt2b77", "_blank");
+
+      // 現在表示中の言語に合わせたMicrosoft Storeのロケールパスをマッピング
+      const storeLocale = {
+        ja: "ja-jp",
+        en: "en-us",
+        de: "de-de",
+        fr: "fr-fr",
+        ko: "ko-kr"
+      }[currentLang] || "en-us";
+
+      window.open(`https://apps.microsoft.com/${storeLocale}/detail/9n4njnmt2b77`, "_blank");
     }
   }, true); // キャプチャリングフェーズで先に処理を奪う
 
