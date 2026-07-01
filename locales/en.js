@@ -63,11 +63,11 @@ export default {
     btn_add: "Add",
 
     beta_badge: "📢 Active Beta Phase",
-    beta_title: "Files You Create Now<br>Keep All Paid Features—Forever!",
-    beta_desc: "Ploto is currently in beta. We plan to introduce a one-time purchase license for advanced features in the future—but any project files (.ploto) you create during the beta period will continue to enjoy those paid features without any additional purchase.",
+    beta_title: "Core Features Will Remain Free—Forever!<br>(Some add-ons will be paid)",
+    beta_desc: "Ploto is currently in beta. We aim to keep core features such as the Gantt chart, Kanban board, and priority matrix free forever. Future paid features are expected to include Excel file export and advanced convenience features (such as holiday imports) via one-time purchases.",
     beta_price: "Beta Phase Price",
     beta_limit: "Future License Model",
-    beta_unlimited: "One-time purchase (Beta files included free)",
+    beta_unlimited: "One-time purchase (for exports & advanced features)",
 
     feedback_title: "Beta Feedback Submission",
     feedback_desc: "Send us your bug reports, feature requests, or general feedback.",

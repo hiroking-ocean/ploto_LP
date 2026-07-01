@@ -63,11 +63,11 @@ export default {
     btn_add: "Hinzufügen",
 
     beta_badge: "📢 Aktive Beta-Phase",
-    beta_title: "Dateien, die Sie jetzt erstellen,<br>behalten alle kostenpflichtigen Funktionen — für immer!",
-    beta_desc: "Ploto befindet sich derzeit in der Beta-Phase. Wir planen zukünftig eine Einmalzahlungslizenz für erweiterte Funktionen, aber Projektdateien (.ploto), die während der Beta erstellt werden, behalten auch später ohne zusätzliche Kosten den Zugriff auf diese Funktionen.",
+    beta_title: "Grundfunktionen bleiben für immer kostenlos!<br>(Einige Zusatzfunktionen sind kostenpflichtig)",
+    beta_desc: "Ploto befindet sich derzeit in der Beta-Phase. Unser Ziel ist es, grundlegende Funktionen wie das Gantt-Diagramm, das Kanban-Board und die Prioritätsmatrix für immer kostenlos anzubieten. Zukünftige kostenpflichtige Elemente werden voraussichtlich den Excel-Dateiexport und erweiterte Komfortfunktionen (wie den Feiertagsimport) über Einmalkäufe umfassen.",
     beta_price: "Beta-Preis",
     beta_limit: "Zukünftiges Lizenzmodell",
-    beta_unlimited: "Einmalzahlung (Beta-Dateien inklusive)",
+    beta_unlimited: "Einmalkauf (für Exporte & Zusatzfunktionen)",
 
     feedback_title: "Beta-Feedback senden",
     feedback_desc: "Senden Sie uns Ihre Fehlerberichte, Funktionswünsche oder allgemeines Feedback.",
