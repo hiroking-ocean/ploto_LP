@@ -44,28 +44,28 @@
 
 /* Light Theme Variables */
 [data-theme="light"] {
-  --bg-main: #f8fafc;
+  --bg-main: #f3f4f6;
   --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-header: rgba(248, 250, 252, 0.8);
-  --border-color: #e2e8f0;
+  --bg-card-hover: #f9fafb;
+  --bg-header: rgba(243, 244, 246, 0.8);
+  --border-color: #cbd5e1;
   
   --text-main: #0f172a;
-  --text-muted: #64748b;
+  --text-muted: #475569;
   --text-inverse: #ffffff;
   
-  --color-primary: #4f46e5;
-  --color-primary-light: #6366f1;
-  --color-secondary: #0891b2;
-  --color-accent: #d97706;
-  --color-success: #059669;
-  --color-danger: #dc2626;
+  --color-primary: #0078d4;
+  --color-primary-light: #106ebe;
+  --color-secondary: #107c41;
+  --color-accent: #f7630c;
+  --color-success: #107c41;
+  --color-danger: #a80000;
   
-  --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
-  --gradient-glow: radial-gradient(circle, rgba(79, 70, 229, 0.08) 0%, rgba(0,0,0,0) 70%);
+  --gradient-primary: linear-gradient(135deg, #0078d4 0%, #005a9e 100%);
+  --gradient-glow: radial-gradient(circle, rgba(0, 120, 212, 0.05) 0%, rgba(0,0,0,0) 70%);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.15);
+  --shadow-glow: 0 0 15px rgba(0, 120, 212, 0.15);
   
   --scrollbar-track: #f1f5f9;
   --scrollbar-thumb: #cbd5e1;

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const BASE = "/ploto_LP/";
   const urlForLang = (lang) => (lang === "ja" ? BASE : `${BASE}${lang}/`);
   let currentLang = document.documentElement.lang || "ja";
-  let currentTheme = localStorage.getItem("ploto-theme") || "dark";
+  let currentTheme = localStorage.getItem("ploto-theme") || "light";
   const screenshotNames = ["01-gantt.png", "02-kanban.png", "03-matrix.png", "04-darkmode.png"];
   let screenshotIndex = 0;
   let slideshowInterval = null;
@@ -45,10 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // OS theme detection
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+  // OS theme detection (初期表示はOS設定に関わらず常にライトモードを優先)
   if (!localStorage.getItem("ploto-theme")) {
-    applyTheme(prefersDark.matches ? "dark" : "light");
+    applyTheme("light");
   } else {
     applyTheme(currentTheme);
   }
