@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // OS theme detection (初期表示はOS設定に関わらず常にライトモードを優先)
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
   if (!localStorage.getItem("ploto-theme")) {
     applyTheme("light");
   } else {
