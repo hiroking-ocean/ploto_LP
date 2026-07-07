@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="ja" data-theme="light"><head>
+  <!-- Google Analytics 4 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-213Q3C7JLN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-213Q3C7JLN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-manual-title="">カンバン (進捗ボード) | Ploto マニュアル</title>
+  <meta name="description" content="カンバン (進捗ボード) - Plotoのメイン機能であるガントチャートでは、プロジェクトのタスク一覧とスケジュールを視覚的に管理できます。直感的なドラッグ＆ドロップ操作で期間の変更やタスクの移動が可能です。">
+
+  <!-- SEO & OGP -->
+  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
+  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
+  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html">
+  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html">
+  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html">
+  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html">
+  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/ploto_LP/styles.css">
+  <link rel="stylesheet" href="/ploto_LP/manual.css">
+
+  <!-- Application Script -->
+  <script type="module" src="/ploto_LP/manual.js" defer=""></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/ploto_LP/" class="logo-area" data-lp-href="">
+        <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+        <span class="logo-text">Ploto</span>
+      </a>
+
+      <!-- ナビゲーションメニュー（モバイルドロワー用） -->
+      <nav class="nav-menu">
+        <a href="/ploto_LP/" data-lp-href="" data-i18n="manual_back_to_lp">← 公式サイトに戻る</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher (dropdown) -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択" title="Change Language">
+            <span class="lang-text">JA</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
+            <button type="button" class="lang-option" data-lang="ja" role="option">日本語</button>
+            <button type="button" class="lang-option" data-lang="en" role="option">English</button>
+            <button type="button" class="lang-option" data-lang="de" role="option">Deutsch</button>
+            <button type="button" class="lang-option" data-lang="fr" role="option">Français</button>
+            <button type="button" class="lang-option" data-lang="ko" role="option">한국어</button>
+          </div>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="/ploto_LP/#download" data-lp-download-href="" class="btn-primary" data-i18n="cta_download">無料ダウンロード</a>
+
+        <!-- ハンバーガーボタン（スマホのみ表示） -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
+  <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">ガントチャート (工程表)</a>
+    <a href="/ploto_LP/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">カンバン (進捗ボード)</a>
+    <a href="/ploto_LP/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">優先度マトリクス</a>
+    <div class="nav-mobile-cta">
+      <a href="/ploto_LP/" data-lp-href="" data-i18n="manual_back_to_lp">← 公式サイトに戻る</a>
+    </div>
+  </nav>
+
+  <div class="manual-container">
+    <!-- Sidebar -->
+    <aside class="manual-sidebar">
+      <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto マニュアル</div>
+      <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="gantt">
+          <a href="/ploto_LP/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">ガントチャート (工程表)</a>
+        </li>
+        <li class="manual-menu-item active" data-menu-id="kanban">
+          <a href="/ploto_LP/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">カンバン (進捗ボード)</a>
+        </li>
+        <li class="manual-menu-item" data-menu-id="matrix">
+          <a href="/ploto_LP/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">優先度マトリクス</a>
+        </li>
+      </ul>
+      <div class="manual-back-link">
+        <a href="/ploto_LP/" data-lp-href="">
+          <span data-i18n="manual_back_to_lp">← 公式サイトに戻る</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="manual-content">
+      <!-- 1. Gantt Chart Manual -->
+      <article id="content-gantt" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_gantt_heading">ガントチャート（工程表）の使い方</h1>
+        <p data-i18n="manual_gantt_intro">Plotoのメイン機能であるガントチャートでは、プロジェクトのタスク一覧とスケジュールを視覚的に管理できます。直感的なドラッグ＆ドロップ操作で期間の変更やタスクの移動が可能です。</p>
+
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/ja/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_gantt">ガントチャート (工程表)</div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_basic">1. 基本操作</h2>
+        <p data-i18n="manual_gantt_basic_desc">ガントチャートの最も基本的な操作方法です。マウス操作で直感的にスケジュールを構築できます。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_multi_project_title">プロジェクトの追加と切り替え（マルチタブ）</h3>
+          <p data-i18n="manual_gantt_multi_project_desc">Plotoでは、1つのファイル内で複数のプロジェクトを同時に管理できます。画面左側のサイドバーにある『一覧』ボタンをクリックし、プロジェクトセクションの『＋』ボタンを押すことで新規プロジェクトを追加できます。追加されたプロジェクトは画面上部に『タブ』として表示され、タブをクリックするだけでガントチャートの表示を切り替えられます。</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_add_title">タスクの追加と削除</h3>
+          <p data-i18n="manual_gantt_add_desc">画面左側のタスク一覧（グリッド）の上部、または各行の右端にある「＋」ボタンをクリックすると、新しいタスクが追加されます。タスクを削除するには、タスク名を右クリックしてメニューから「削除」を選択するか、タスクを選択して削除キーを押します。</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_drag_title">期間の調整（ドラッグ＆ドロップ）</h3>
+          <p data-i18n="manual_gantt_drag_desc">チャート上のタスクバー（青い帯）の左右の端をドラッグすると、開始日や終了日を変更できます。バーの中央をドラッグすると、期間（日数）を維持したままスケジュール全体を左右に移動させることができます。</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_link_title">依存関係（リンク）の設定</h3>
+          <p data-i18n="manual_gantt_link_desc">タスク間の前後関係（先行・後行）を定義できます。タスクバーの端にある丸いドットをドラッグし、別のタスクの端に繋ぐことでリンク（依存関係）が作成されます。作成されたリンク線をダブルクリックすると、リンクを削除できます。</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_progress_title">進捗状況（Progress）の更新</h3>
+          <p data-i18n="manual_gantt_progress_desc">タスクバーの内部にある小さなスライダーを左右にドラッグすることで、進捗率（0%〜100%）を変更できます。進捗率はバーの内部が濃い色で塗りつぶされることで視覚的に表現されます。</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_detail_panel_title">タスクの詳細設定（詳細・ToDo・メモ）</h3>
+          <p data-i18n="manual_gantt_detail_panel_desc">タスクをダブルクリックするか詳細ボタンをクリックすると、画面右側に『詳細パネル』が開きます。このパネルには3つのタブがあり、タスクの基本パラメータ変更、ToDoの追加、書式付きメモの記述が可能です。</p>
+          
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_detail_tab_title">① 詳細タブ（基本情報の設定）</h4>
+          <p data-i18n="manual_gantt_detail_tab_desc">タスク名、進行状況、優先度、期間、開始日時など、タスクに関する様々な基本項目を設定できます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_todo_tab_title">② ToDoタブ（タスクの細分化）</h4>
+          <p data-i18n="manual_gantt_todo_tab_desc">タスクに関連する細かいチェックリスト（ToDo）を入力できます。各ToDoには、個別の期限と担当者を設定することができます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_memo_tab_title">③ メモタブ（書式設定メモ）</h4>
+          <p data-i18n="manual_gantt_memo_tab_desc">タスクに関する詳細情報を自由に記述できます。文字の装飾（太字・斜体など）や箇条書きなどの書式設定が可能です。</p>
+
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_advanced">2. 高度な機能・設定</h2>
+        <p data-i18n="manual_gantt_advanced_desc">プロジェクト管理をより詳細かつ堅牢にするための機能です。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_calendar_title">祝日・会社休日の設定</h3>
+          <p data-i18n="manual_gantt_calendar_desc">標準の土日に加え、日本の祝日や会社独自の特別休日をカレンダーに登録できます。休日に指定された日はチャート上でグレーアウトされ、稼働日数（期間）の計算から自動的に除外されるため、実際の営業日に即した正確な計画が立てられます。</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_alert_title">健康度アラートライン</h3>
+          <p data-i18n="manual_gantt_alert_desc">現在の進捗と今日の日付に基づいて、タスクの健康度を自動判定します。タスクバーの左端に「期限超過（赤）」「開始遅延（黄）」「順調（緑）」のラインが自動で表示され、手遅れになる前に対処すべきタスクを見つけることができます。</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_undo_title">元に戻す・やり直し (Undo / Redo)</h3>
+          <p data-i18n="manual_gantt_undo_desc">操作を誤ってしまっても心配いりません。Excelと同様に <kbd>Ctrl + Z</kbd>（元に戻す）や <kbd>Ctrl + Y</kbd>（やり直し）のキーボードショートカットで、直前の操作を何段階でも復元・やり直すことができます。</p>
+        </div>
+      </article>
+
+      <!-- 2. Kanban Board Manual (Coming Soon) -->
+      <article id="content-kanban" class="manual-article">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">📋</div>
+          <h1 data-i18n="manual_coming_soon_title">準備中</h1>
+          <p data-i18n="manual_coming_soon_desc">この機能のマニュアルは現在準備中です。今後のアップデートをお待ちください。</p>
+        </div>
+      </article>
+
+      <!-- 3. Priority Matrix Manual (Coming Soon) -->
+      <article id="content-matrix" class="manual-article" style="display: none;">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">🎯</div>
+          <h1 data-i18n="manual_coming_soon_title">準備中</h1>
+          <p data-i18n="manual_coming_soon_desc">この機能のマニュアルは現在準備中です。今後のアップデートをお待ちください。</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="logo-area" data-lp-href="" href="/ploto_LP/">
+          <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+          <span class="logo-text">Ploto</span>
+        </div>
+        <p class="footer-copy">© 2026 Ploto. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/hiroking-ocean/ploto-privacy" target="_blank" data-i18n="footer_privacy">プライバシーポリシー</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>

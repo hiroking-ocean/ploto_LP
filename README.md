@@ -13,8 +13,11 @@ Ploto ランディングページ。日本語・英語・ドイツ語・フラ�
 
 | 編集対象 | 役割 |
 |----------|------|
-| `template.html` | ページの構造・レイアウト（全言語共通の雛形） |
-| `locales/*.js` | 各言語の翻訳テキスト・メタ情報 |
+| `template.html` | LPの構造・レイアウト（全言語共通の雛形） |
+| `manual-template.html` | マニュアルの構造・レイアウト（全言語共通の雛形） |
+| `styles.css` / `manual.css` | スタイルシート（全体 / マニュアル専用） |
+| `app.js` / `manual.js` | フロントエンドロジック（LP / マニュアル専用） |
+| `locales/*.js` | 各言語の翻訳テキスト・メタ情報（LPとマニュアル共通） |
 
 ---
 
@@ -68,23 +71,35 @@ push 後、GitHub Pages が自動でデプロイし、以下の5URLすべてが�
 - 動き（タブ・デモ・言語切替など）→ `app.js`
 - 変更後は `npm run build`（template/翻訳を触っていなくても、成果物を最新にするため実行）→ commit → push。
 
+### マニュアル（ヘルプ）を編集したい
+- 構造 → `manual-template.html`
+- マニュアル用スタイル → `manual.css`
+- マニュアル用ロジック → `manual.js`
+- 翻訳テキスト → `locales/*.js` の `manual_` から始まるキー
+- 変更後は `npm run build` → commit → push。
+
 ---
 
 ## ファイル構成
 
 ```
 ploto_LP/
-├── template.html      ← 編集元（ページの雛形）
+├── template.html      ← 編集元（LPの雛形）
+├── manual-template.html ← 編集元（マニュアルの雛形）
 ├── locales/
 │   ├── ja.js / en.js / de.js / fr.js / ko.js   ← 編集元（翻訳）
 │   └── index.js       ← 上記をまとめて読み込む（基本触らない）
 ├── build.js           ← ビルドスクリプト（基本触らない）
-├── styles.css         ← スタイル
-├── app.js             ← フロントのロジック（言語切替・デモ等）
+├── styles.css         ← LP用スタイル
+├── manual.css         ← マニュアル用スタイル
+├── app.js             ← LPフロントのロジック
+├── manual.js          ← マニュアルフロントのロジック
 ├── assets/            ← ロゴ・スクリーンショット
 │
-├── index.html         ← 【生成物】日本語ページ
-├── en/ de/ fr/ ko/    ← 【生成物】各言語ページ
+├── index.html         ← 【生成物】日本語LPページ
+├── manual/            ← 【生成物】日本語マニュアルページ（gantt.html 等）
+├── en/ de/ fr/ ko/    ← 【生成物】各言語LPページ
+│   └── manual/        ← 【生成物】各言語マニュアルページ（gantt.html 等）
 ├── sitemap.xml        ← 【生成物】サイトマップ
 └── robots.txt         ← クローラ向け設定
 ```
@@ -119,6 +134,25 @@ ploto_LP/
 
 ## 開発メモ
 
-- 言語の「正」はURL。各ページは自分の言語で静的に出力され、言語切替は該当URLへの遷移（`app.js`）で行います。ブラウザ言語による自動リダイレクトはしません。
-- 日本語はルート（`/`）に配置。既存のリンク資産・canonical を維持するためです。
+- 言語の「正」はURL。各ページは自分の言語で静的に出力され、言語切替は該当URLへの遷移（`app.js` / `manual.js`）で行います。ブラウザ言語による自動リダイレクトはしません。
+- 日本語はルート（`/`）および `/manual/` に配置。既存のリンク資産・canonical を維持するためです。
 - ビルドには Node.js と `cheerio`（devDependency）を使用します。`node_modules/` と `.claude/` は Git 管理対象外です。
+
+---
+
+## ローカルでの動作確認方法
+
+Ploto LPは、GitHub Pagesのサブディレクトリ `/ploto_LP/` を想定してアセットパスを絶対パス化（例: `/ploto_LP/styles.css`）しています。
+そのため、ローカルでHTMLファイルをダブルクリックして直接ブラウザで開く（`file:///` 経由）と、パスが壊れてスタイルが適用されません。
+
+ローカルで正しく動作確認するには、**親ディレクトリをルートとしたローカルサーバー**を立ち上げる必要があります。
+
+**例: Node.js (http-server) を使用する場合**
+1. リポジトリの親ディレクトリ（`ploto_LP` フォルダがある場所）に移動します。
+2. 以下のコマンドでサーバーを起動します。
+   ```bash
+   npx http-server -p 8080
+   ```
+3. ブラウザで以下のURLにアクセスします。
+   - LPトップ: `http://localhost:8080/ploto_LP/`
+   - マニュアル: `http://localhost:8080/ploto_LP/manual/gantt.html`

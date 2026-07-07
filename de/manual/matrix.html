@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="de" data-theme="light"><head>
+  <!-- Google Analytics 4 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-213Q3C7JLN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-213Q3C7JLN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-manual-title="">Prioritätenmatrix | Ploto Handbuch</title>
+  <meta name="description" content="Prioritätenmatrix - Das Gantt-Diagramm, die Kernfunktion von Ploto, ermöglicht es Ihnen, Aufgaben und Termine Ihres Projekts visuell zu verwalten. Mit intuitiven Drag-and-Drop-Operationen können Sie Dauern ändern und Aufgaben verschieben.">
+
+  <!-- SEO & OGP -->
+  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html">
+  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html">
+  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html">
+  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html">
+  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html">
+  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html">
+  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/ploto_LP/styles.css">
+  <link rel="stylesheet" href="/ploto_LP/manual.css">
+
+  <!-- Application Script -->
+  <script type="module" src="/ploto_LP/manual.js" defer=""></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/ploto_LP/de/" class="logo-area" data-lp-href="">
+        <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+        <span class="logo-text">Ploto</span>
+      </a>
+
+      <!-- ナビゲーションメニュー（モバイルドロワー用） -->
+      <nav class="nav-menu">
+        <a href="/ploto_LP/de/" data-lp-href="" data-i18n="manual_back_to_lp">← Zurück zur Website</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher (dropdown) -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択" title="Change Language">
+            <span class="lang-text">JA</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
+            <button type="button" class="lang-option" data-lang="ja" role="option">日本語</button>
+            <button type="button" class="lang-option" data-lang="en" role="option">English</button>
+            <button type="button" class="lang-option" data-lang="de" role="option">Deutsch</button>
+            <button type="button" class="lang-option" data-lang="fr" role="option">Français</button>
+            <button type="button" class="lang-option" data-lang="ko" role="option">한국어</button>
+          </div>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="/ploto_LP/de/#download" data-lp-download-href="" class="btn-primary" data-i18n="cta_download">Kostenloser Download</a>
+
+        <!-- ハンバーガーボタン（スマホのみ表示） -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
+  <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/de/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt-Diagramm</a>
+    <a href="/ploto_LP/de/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban-Board</a>
+    <a href="/ploto_LP/de/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Prioritätenmatrix</a>
+    <div class="nav-mobile-cta">
+      <a href="/ploto_LP/de/" data-lp-href="" data-i18n="manual_back_to_lp">← Zurück zur Website</a>
+    </div>
+  </nav>
+
+  <div class="manual-container">
+    <!-- Sidebar -->
+    <aside class="manual-sidebar">
+      <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto Handbuch</div>
+      <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="gantt">
+          <a href="/ploto_LP/de/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt-Diagramm</a>
+        </li>
+        <li class="manual-menu-item" data-menu-id="kanban">
+          <a href="/ploto_LP/de/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban-Board</a>
+        </li>
+        <li class="manual-menu-item active" data-menu-id="matrix">
+          <a href="/ploto_LP/de/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Prioritätenmatrix</a>
+        </li>
+      </ul>
+      <div class="manual-back-link">
+        <a href="/ploto_LP/de/" data-lp-href="">
+          <span data-i18n="manual_back_to_lp">← Zurück zur Website</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="manual-content">
+      <!-- 1. Gantt Chart Manual -->
+      <article id="content-gantt" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_gantt_heading">Verwendung des Gantt-Diagramms</h1>
+        <p data-i18n="manual_gantt_intro">Das Gantt-Diagramm, die Kernfunktion von Ploto, ermöglicht es Ihnen, Aufgaben und Termine Ihres Projekts visuell zu verwalten. Mit intuitiven Drag-and-Drop-Operationen können Sie Dauern ändern und Aufgaben verschieben.</p>
+
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/de/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_gantt">Gantt-Diagramm</div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_basic">1. Grundlegende Operationen</h2>
+        <p data-i18n="manual_gantt_basic_desc">Dies sind die grundlegendsten Operationen für das Gantt-Diagramm. Sie können Ihren Zeitplan intuitiv mit Mausaktionen erstellen.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_multi_project_title">Projekte hinzufügen und wechseln (Multi-Tab)</h3>
+          <p data-i18n="manual_gantt_multi_project_desc">In Ploto können Sie mehrere Projekte gleichzeitig in einer einzigen Datei verwalten. Klicken Sie ganz links in der Seitenleiste auf die Schaltfläche 'Liste', um das Panel zu öffnen, und klicken Sie dann auf die Schaltfläche '+' im Bereich 'Projekt', um ein neues Projekt hinzuzufügen. Hinzugefügte Projekte werden als 'Tabs' oben auf dem Bildschirm angezeigt. Klicken Sie einfach auf einen Tab, um sofort zwischen verschiedenen Gantt-Diagrammen zu wechseln.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_add_title">Aufgaben hinzufügen und löschen</h3>
+          <p data-i18n="manual_gantt_add_desc">Klicken Sie auf die Schaltfläche '+' oben in der Aufgabenliste (Raster) auf der linken Seite oder am rechten Ende jeder Zeile, um eine neue Aufgabe hinzuzufügen. Um eine Aufgabe zu löschen, klicken Sie mit der rechten Maustaste auf den Aufgabennamen und wählen Sie 'Löschen' aus dem Menü, oder wählen Sie die Aufgabe aus und drücken Sie die Entf-Taste.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_drag_title">Dauer anpassen (Drag &amp; Drop)</h3>
+          <p data-i18n="manual_gantt_drag_desc">Ziehen Sie den linken oder rechten Rand eines Aufgabenbalkens (blauer Balken) im Diagramm, um das Start- oder Enddatum zu ändern. Ziehen Sie die Mitte des Balkens, um den gesamten Zeitplan nach links oder rechts zu verschieben, während die Dauer (Anzahl der Tage) beibehalten wird.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_link_title">Abhängigkeiten definieren (Links)</h3>
+          <p data-i18n="manual_gantt_link_desc">Sie können zeitliche Beziehungen (Vorgänger/Nachfolger) zwischen Aufgaben definieren. Ziehen Sie den kreisförmigen Punkt am Rand eines Aufgabenbalkens und verbinden Sie ihn mit einem anderen Aufgabenbalken, um eine Verknüpfung (Abhängigkeit) zu erstellen. Doppelklicken Sie auf die Verbindungslinie, um sie zu löschen.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_progress_title">Fortschritt aktualisieren</h3>
+          <p data-i18n="manual_gantt_progress_desc">Ziehen Sie den kleinen Schieberegler innerhalb des Aufgabenbalkens nach links oder rechts, um den Fortschritt (0% bis 100%) zu ändern. Der Fortschritt wird visuell durch die dunklere Füllung im Balken dargestellt.</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_detail_panel_title">Aufgabendetail-Einstellungen (Details, ToDo, Memo)</h3>
+          <p data-i18n="manual_gantt_detail_panel_desc">Doppelklicken Sie auf eine Aufgabe oder klicken Sie auf die Detailschaltfläche, um das 'Detail-Panel' auf der rechten Seite des Bildschirms zu öffnen. Dieses Panel enthält drei Registerkarten, auf denen Sie grundlegende Parameter bearbeiten, ToDos verwalten und formatierte Notizen schreiben können.</p>
+          
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_detail_tab_title">1. Registerkarte Details (Grundeinstellungen)</h4>
+          <p data-i18n="manual_gantt_detail_tab_desc">Konfigurieren Sie verschiedene grundlegende Elemente der Aufgabe, wie Aufgabename, Fortschritt, Priorität, Dauer und Startdatum/-zeit.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_todo_tab_title">2. Registerkarte ToDo (Aufgabenunterteilung)</h4>
+          <p data-i18n="manual_gantt_todo_tab_desc">Geben Sie eine detaillierte Checkliste (ToDo-Liste) ein, die mit der Aufgabe verknüpft ist. Sie können jedem ToDo-Element ein individuelles Fälligkeitsdatum und einen Verantwortlichen zuweisen.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_memo_tab_title">3. Registerkarte Memo (Formatierte Notizen)</h4>
+          <p data-i18n="manual_gantt_memo_tab_desc">Schreiben Sie detaillierte Notizen oder Anweisungen für die Aufgabe. Rich-Text-Formatierungen wie Fett, Kursiv und Listen werden unterstützt.</p>
+
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_advanced">2. Erweiterte Funktionen</h2>
+        <p data-i18n="manual_gantt_advanced_desc">Funktionen, die entwickelt wurden, um Ihr Projektmanagement detaillierter und robuster zu gestalten.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_calendar_title">Feiertags- &amp; Betriebsferieneinstellungen</h3>
+          <p data-i18n="manual_gantt_calendar_desc">Zusätzlich zu den Standardwochenenden können Sie gesetzliche Feiertage oder unternehmensspezifische Feiertage im Kalender registrieren. Als Feiertage deklarierte Tage werden im Diagramm ausgegraut und automatisch von den Berechnungen der aktiven Dauer ausgeschlossen, sodass Sie Pläne basierend auf tatsächlichen Arbeitstagen erstellen können.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/de/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_alert_title">Gesundheitswarnlinie</h3>
+          <p data-i18n="manual_gantt_alert_desc">Bewertet den Zustand von Aufgaben automatisch basierend auf dem aktuellen Fortschritt und dem heutigen Datum. Linien für 'Überfällig (Rot)', 'Verzögerter Start (Gelb)' und 'Im Zeitplan (Grün)' werden automatisch am linken Rand des Aufgabenbalkens angezeigt, sodass Sie Aufgaben identifizieren können, die sofortige Aufmerksamkeit erfordern.</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_undo_title">Rückgängig machen / Wiederholen</h3>
+          <p data-i18n="manual_gantt_undo_desc">Machen Sie sich keine Sorgen, wenn Sie einen Fehler machen. Wie in Excel können Sie die Tastaturkürzel <kbd>Strg + Z</kbd> (Rückgängig) und <kbd>Strg + Y</kbd> (Wiederholen) verwenden, um Ihre letzten Aktionen Schritt für Schritt rückgängig zu machen oder erneut anzuwenden.</p>
+        </div>
+      </article>
+
+      <!-- 2. Kanban Board Manual (Coming Soon) -->
+      <article id="content-kanban" class="manual-article" style="display: none;">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">📋</div>
+          <h1 data-i18n="manual_coming_soon_title">In Kürze</h1>
+          <p data-i18n="manual_coming_soon_desc">Das Handbuch für diese Funktion wird derzeit vorbereitet. Bitte warten Sie auf zukünftige Updates.</p>
+        </div>
+      </article>
+
+      <!-- 3. Priority Matrix Manual (Coming Soon) -->
+      <article id="content-matrix" class="manual-article">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">🎯</div>
+          <h1 data-i18n="manual_coming_soon_title">In Kürze</h1>
+          <p data-i18n="manual_coming_soon_desc">Das Handbuch für diese Funktion wird derzeit vorbereitet. Bitte warten Sie auf zukünftige Updates.</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="logo-area" data-lp-href="" href="/ploto_LP/de/">
+          <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+          <span class="logo-text">Ploto</span>
+        </div>
+        <p class="footer-copy">© 2026 Ploto. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/hiroking-ocean/ploto-privacy" target="_blank" data-i18n="footer_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>

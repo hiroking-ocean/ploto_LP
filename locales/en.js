@@ -9,6 +9,7 @@ export default {
     nav_features: "Features",
     nav_demo: "Live Demo",
     nav_beta: "Beta Offer",
+    nav_manual: "User Manual",
     cta_download: "Free Download",
 
     hero_badge: "🏢 Built for Cloud-Restricted & SaaS-Blocked Teams | Works Locally | Free",
@@ -117,6 +118,60 @@ export default {
     ploto_sol4: "Familiar 'Undo (Ctrl+Z)' instantly resets any missteps or accidental edits",
     ploto_sol5: "Gantt charts, Kanban boards, and priority matrix unified in one simple app",
     excel_cta: "Say Goodbye to Excel Frustrations →",
+
+    // --- Manual Sidebar ---
+    manual_sidebar_title: "Ploto Manual",
+    manual_menu_gantt: "Gantt Chart",
+    manual_menu_kanban: "Kanban Board",
+    manual_menu_matrix: "Priority Matrix",
+    manual_back_to_lp: "← Back to Official Site",
+
+    // --- Manual Common / Coming Soon ---
+    manual_coming_soon_title: "Coming Soon",
+    manual_coming_soon_desc: "The manual for this feature is currently under preparation. Please stay tuned for future updates.",
+
+    // --- Manual Gantt Page ---
+    manual_gantt_heading: "How to Use Gantt Chart",
+    manual_gantt_intro: "The Gantt Chart, the core feature of Ploto, allows you to visually manage your project's tasks and schedules. With intuitive drag-and-drop operations, you can easily change durations and move tasks.",
+    
+    manual_gantt_section_basic: "1. Basic Operations",
+    manual_gantt_basic_desc: "Here are the most fundamental operations for the Gantt Chart. You can intuitively build your schedule using mouse actions.",
+    
+    manual_gantt_multi_project_title: "Adding and Switching Projects (Multi-Tab)",
+    manual_gantt_multi_project_desc: "In Ploto, you can manage multiple projects simultaneously within a single file. Click the 'List' button on the far left sidebar to open the panel, then click the '+' button in the Project section to add a new project. Added projects will appear as 'tabs' at the top of the screen. Simply click a tab to instantly switch between different Gantt charts.",
+    
+    manual_gantt_add_title: "Adding and Deleting Tasks",
+    manual_gantt_add_desc: "Click the '+' button at the top of the task list (grid) on the left, or at the right end of each row, to add a new task. To delete a task, right-click the task name and select 'Delete' from the menu, or select the task and press the Delete key.",
+    
+    manual_gantt_drag_title: "Adjusting Duration (Drag & Drop)",
+    manual_gantt_drag_desc: "Drag the left or right edge of a task bar (blue bar) on the chart to change the start or end date. Drag the center of the bar to move the entire schedule left or right while maintaining the duration (number of days).",
+    
+    manual_gantt_link_title: "Setting Dependencies (Links)",
+    manual_gantt_link_desc: "You can define sequential relationships (predecessor/successor) between tasks. Drag the circular dot at the edge of a task bar and connect it to another task bar to create a link (dependency). Double-click the link line to delete it.",
+    
+    manual_gantt_progress_title: "Updating Progress",
+    manual_gantt_progress_desc: "Drag the small slider inside the task bar left or right to change the progress rate (0% to 100%). The progress is visually represented by the darker fill inside the bar.",
+    
+    manual_gantt_detail_panel_title: "Task Details Settings (Details, ToDo, Memo)",
+    manual_gantt_detail_panel_desc: "Double-click a task or click the details button to open the 'Details Panel' on the right side of the screen. This panel contains three tabs where you can edit basic parameters, manage ToDos, and write formatted notes.",
+    manual_gantt_detail_tab_title: "1. Details Tab (Basic Info Settings)",
+    manual_gantt_detail_tab_desc: "Configure various basic items related to the task, such as task name, progress rate, priority, duration, and start date/time.",
+    manual_gantt_todo_tab_title: "2. ToDo Tab (Task Breakdowns)",
+    manual_gantt_todo_tab_desc: "Enter a detailed checklist (ToDo list) associated with the task. You can assign an individual due date and assignee to each ToDo item.",
+    manual_gantt_memo_tab_title: "3. Memo Tab (Formatted Notes)",
+    manual_gantt_memo_tab_desc: "Write detailed notes or instructions for the task. Rich-text formatting such as bold, italics, and lists is supported.",
+    
+    manual_gantt_section_advanced: "2. Advanced Features",
+    manual_gantt_advanced_desc: "Features designed to make your project management more detailed and robust.",
+    
+    manual_gantt_calendar_title: "Holiday & Company Off-day Settings",
+    manual_gantt_calendar_desc: "In addition to standard weekends, you can register public holidays or unique company-specific holidays in the calendar. Days designated as holidays are grayed out on the chart and automatically excluded from active duration calculations, allowing you to create plans based on actual working days.",
+    
+    manual_gantt_alert_title: "Health Alert Line",
+    manual_gantt_alert_desc: "Automatically evaluates task health based on current progress and today's date. Lines for 'Overdue (Red)', 'Delayed Start (Yellow)', and 'On Track (Green)' are automatically displayed on the left edge of the task bar, letting you identify tasks that require immediate attention.",
+    
+    manual_gantt_undo_title: "Undo / Redo",
+    manual_gantt_undo_desc: "Don't worry if you make a mistake. Just like in Excel, you can use the keyboard shortcuts <kbd>Ctrl + Z</kbd> (Undo) and <kbd>Ctrl + Y</kbd> (Redo) to revert or re-apply your recent actions step-by-step.",
   },
   gantt: {
     labels: {

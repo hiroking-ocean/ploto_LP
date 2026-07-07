@@ -9,6 +9,7 @@ export default {
     nav_features: "Fonctionnalités",
     nav_demo: "Démo en direct",
     nav_beta: "Offre bêta",
+    nav_manual: "Manuel",
     cta_download: "Téléchargement gratuit",
 
     hero_badge: "🏢 Conçu pour les équipes restreintes en cloud et sans SaaS | Utilisation locale | Gratuit",
@@ -117,6 +118,60 @@ export default {
     ploto_sol4: "Le raccourci familier 'Annuler (Ctrl+Z)' réinitialise instantanément les clics erronés ou les modifications accidentelles",
     ploto_sol5: "Diagrammes de Gantt, tableaux Kanban et matrice de priorité réunis dans une seule application simple",
     excel_cta: "Dites adieu aux frustrations d'Excel →",
+
+    // --- Manual Sidebar ---
+    manual_sidebar_title: "Manuel Ploto",
+    manual_menu_gantt: "Diagramme de Gantt",
+    manual_menu_kanban: "Tableau Kanban",
+    manual_menu_matrix: "Matrice des Priorités",
+    manual_back_to_lp: "← Retour au site officiel",
+
+    // --- Manual Common / Coming Soon ---
+    manual_coming_soon_title: "Bientôt disponible",
+    manual_coming_soon_desc: "Le manuel de cette fonctionnalité est en cours de préparation. Veuillez patienter pour les futures mises à jour.",
+
+    // --- Manual Gantt Page ---
+    manual_gantt_heading: "Comment utiliser le diagramme de Gantt",
+    manual_gantt_intro: "Le diagramme de Gantt, la fonctionnalité principale de Ploto, vous permet de gérer visuellement les tâches et les plannings de votre projet. Grâce à des opérations intuitives de glisser-déposer, vous pouvez facilement modifier les durées et déplacer les tâches.",
+    
+    manual_gantt_section_basic: "1. Opérations de base",
+    manual_gantt_basic_desc: "Voici les opérations les plus fondamentales du diagramme de Gantt. Vous pouvez construire intuitivement votre planning à l'aide des actions de la souris.",
+    
+    manual_gantt_multi_project_title: "Ajouter et changer de projet (Multi-onglet)",
+    manual_gantt_multi_project_desc: "Dans Ploto, vous pouvez gérer plusieurs projets simultanément au sein d'un seul fichier. Cliquez sur le bouton 'Liste' dans la barre latérale gauche pour ouvrir le panneau, puis cliquez sur le bouton '+' dans la section 'Projet' pour ajouter un nouveau projet. Les projets ajoutés apparaîtront sous forme d'onglets en haut de l'écran. Il vous suffit de cliquer sur un onglet pour basculer instantanément d'un diagramme de Gantt à un autre.",
+    
+    manual_gantt_add_title: "Ajouter et supprimer des tâches",
+    manual_gantt_add_desc: "Cliquez sur le bouton '+' en haut de la liste des tâches (grille) à gauche, ou à l'extrémité droite de chaque ligne, pour ajouter une nouvelle tâche. Pour supprimer une tâche, faites un clic droit sur le nom de la tâche et sélectionnez 'Supprimer' dans le menu, ou sélectionnez la tâche et appuyez sur la touche Suppr.",
+    
+    manual_gantt_drag_title: "Ajuster la durée (Glisser-Déposer)",
+    manual_gantt_drag_desc: "Faites glisser le bord gauche ou droit d'une barre de tâche (barre bleue) sur le diagramme pour modifier la date de début ou de fin. Faites glisser le centre de la barre pour déplacer l'ensemble du planning vers la gauche ou la droite tout en conservant la durée (nombre de jours).",
+    
+    manual_gantt_link_title: "Définir les dépendances (Liens)",
+    manual_gantt_link_desc: "Vous pouvez définir des relations séquentielles (prédécesseur/successeur) entre les tâches. Faites glisser le point circulaire au bord d'une barre de tâche et connectez-le à une autre barre de tâche pour créer un lien (dépendance). Double-cliquez sur la ligne de liaison pour la supprimer.",
+    
+    manual_gantt_progress_title: "Mettre à jour la progression",
+    manual_gantt_progress_desc: "Faites glisser le petit curseur à l'intérieur de la barre de tâche vers la gauche ou la droite pour modifier le taux de progression (0% à 100%). La progression est représentée visuellement par le remplissage plus foncé à l'intérieur de la barre.",
+    
+    manual_gantt_detail_panel_title: "Paramètres des détails de la tâche (Détails, ToDo, Mémo)",
+    manual_gantt_detail_panel_desc: "Double-cliquez sur une tâche ou cliquez sur le bouton de détails pour ouvrir le 'Panneau de détails' sur le côté droit de l'écran. Ce panneau contient trois onglets dans lesquels vous pouvez modifier les paramètres de base, gérer les ToDo et rédiger notes formatées.",
+    manual_gantt_detail_tab_title: "1. Onglet Détails (Paramètres des informations de base)",
+    manual_gantt_detail_tab_desc: "Configurez divers éléments de base liés à la tâche, tels que le nom de la tâche, la progression, la priorité, la durée et la date/heure de début.",
+    manual_gantt_todo_tab_title: "2. Onglet ToDo (Décomposition de la tâche)",
+    manual_gantt_todo_tab_desc: "Saisissez une liste de contrôle détaillée (liste ToDo) associée à la tâche. Vous pouvez attribuer une date d'échéance et un responsable individuels à chaque élément ToDo.",
+    manual_gantt_memo_tab_title: "3. Onglet Mémo (Notes formatées)",
+    manual_gantt_memo_tab_desc: "Rédigez des notes ou instructions détaillées pour la tâche. Le formatage de texte enrichi tel que le gras, l'italique et les listes est pris en charge.",
+    
+    manual_gantt_section_advanced: "2. Fonctionnalités avancées",
+    manual_gantt_advanced_desc: "Fonctionnalités conçues pour rendre la gestion de vos projets plus détaillée et robuste.",
+    
+    manual_gantt_calendar_title: "Paramètres des jours fériés et des congés de l'entreprise",
+    manual_gantt_calendar_desc: "En plus des week-ends standard, vous pouvez enregistrer des jours fériés ou des congés spécifiques à l'entreprise dans le calendrier. Les jours désignés comme fériés sont grisés sur le diagramme et automatiquement exclus des calculs de durée active, ce qui vous permet de créer des plans basés sur les jours ouvrables réels.",
+    
+    manual_gantt_alert_title: "Ligne d'alerte de santé",
+    manual_gantt_alert_desc: "Évalue automatiquement la santé des tâches en fonction de la progression actuelle et de la date du jour. Des lignes pour 'En retard (Rouge)', 'Début retardé (Jaune)' et 'Sur la bonne voie (Vert)' s'affichent automatiquement sur le bord gauche de la barre de tâche, vous permettant d'identifier les tâches qui nécessitent une attention immédiate.",
+    
+    manual_gantt_undo_title: "Annuler / Rétablir",
+    manual_gantt_undo_desc: "Ne vous inquiétez pas si vous commettez une erreur. Tout comme dans Excel, vous pouvez utiliser les raccourcis clavier <kbd>Ctrl + Z</kbd> (Annuler) et <kbd>Ctrl + Y</kbd> (Rétablir) pour annuler ou réappliquer vos actions récentes étape par étape.",
   },
   gantt: {
     labels: {

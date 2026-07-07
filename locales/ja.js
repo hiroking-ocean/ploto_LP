@@ -9,6 +9,7 @@ export default {
     nav_features: "特徴",
     nav_demo: "体験デモ",
     nav_beta: "ベータ版",
+    nav_manual: "使い方マニュアル",
     cta_download: "無料ダウンロード",
 
     hero_badge: "🏢 クラウド禁止・SaaS導入不可の現場でも使える｜完全ローカル動作｜無料",
@@ -117,6 +118,60 @@ export default {
     ploto_sol4: "Excel感覚の「元に戻す（Ctrl+Z）」で、誤操作も即座にリセット可能",
     ploto_sol5: "工程表、進捗ボード、優先順位整理が、1つのシンプルなアプリに統合",
     excel_cta: "Excel管理のイライラから卒業する →",
+
+    // --- Manual Sidebar ---
+    manual_sidebar_title: "Ploto マニュアル",
+    manual_menu_gantt: "ガントチャート (工程表)",
+    manual_menu_kanban: "カンバン (進捗ボード)",
+    manual_menu_matrix: "優先度マトリクス",
+    manual_back_to_lp: "← 公式サイトに戻る",
+
+    // --- Manual Common / Coming Soon ---
+    manual_coming_soon_title: "準備中",
+    manual_coming_soon_desc: "この機能のマニュアルは現在準備中です。今後のアップデートをお待ちください。",
+
+    // --- Manual Gantt Page ---
+    manual_gantt_heading: "ガントチャート（工程表）の使い方",
+    manual_gantt_intro: "Plotoのメイン機能であるガントチャートでは、プロジェクトのタスク一覧とスケジュールを視覚的に管理できます。直感的なドラッグ＆ドロップ操作で期間の変更やタスクの移動が可能です。",
+    
+    manual_gantt_section_basic: "1. 基本操作",
+    manual_gantt_basic_desc: "ガントチャートの最も基本的な操作方法です。マウス操作で直感的にスケジュールを構築できます。",
+    
+    manual_gantt_multi_project_title: "プロジェクトの追加と切り替え（マルチタブ）",
+    manual_gantt_multi_project_desc: "Plotoでは、1つのファイル内で複数のプロジェクトを同時に管理できます。画面左側のサイドバーにある『一覧』ボタンをクリックし、プロジェクトセクションの『＋』ボタンを押すことで新規プロジェクトを追加できます。追加されたプロジェクトは画面上部に『タブ』として表示され、タブをクリックするだけでガントチャートの表示を切り替えられます。",
+    
+    manual_gantt_add_title: "タスクの追加と削除",
+    manual_gantt_add_desc: "画面左側のタスク一覧（グリッド）の上部、または各行の右端にある「＋」ボタンをクリックすると、新しいタスクが追加されます。タスクを削除するには、タスク名を右クリックしてメニューから「削除」を選択するか、タスクを選択して削除キーを押します。",
+    
+    manual_gantt_drag_title: "期間の調整（ドラッグ＆ドロップ）",
+    manual_gantt_drag_desc: "チャート上のタスクバー（青い帯）の左右の端をドラッグすると、開始日や終了日を変更できます。バーの中央をドラッグすると、期間（日数）を維持したままスケジュール全体を左右に移動させることができます。",
+    
+    manual_gantt_link_title: "依存関係（リンク）の設定",
+    manual_gantt_link_desc: "タスク間の前後関係（先行・後行）を定義できます。タスクバーの端にある丸いドットをドラッグし、別のタスクの端に繋ぐことでリンク（依存関係）が作成されます。作成されたリンク線をダブルクリックすると、リンクを削除できます。",
+    
+    manual_gantt_progress_title: "進捗状況（Progress）の更新",
+    manual_gantt_progress_desc: "タスクバーの内部にある小さなスライダーを左右にドラッグすることで、進捗率（0%〜100%）を変更できます。進捗率はバーの内部が濃い色で塗りつぶされることで視覚的に表現されます。",
+    
+    manual_gantt_detail_panel_title: "タスクの詳細設定（詳細・ToDo・メモ）",
+    manual_gantt_detail_panel_desc: "タスクをダブルクリックするか詳細ボタンをクリックすると、画面右側に『詳細パネル』が開きます。このパネルには3つのタブがあり、タスクの基本パラメータ変更、ToDoの追加、書式付きメモの記述が可能です。",
+    manual_gantt_detail_tab_title: "① 詳細タブ（基本情報の設定）",
+    manual_gantt_detail_tab_desc: "タスク名、進行状況、優先度、期間、開始日時など、タスクに関する様々な基本項目を設定できます。",
+    manual_gantt_todo_tab_title: "② ToDoタブ（タスクの細分化）",
+    manual_gantt_todo_tab_desc: "タスクに関連する細かいチェックリスト（ToDo）を入力できます。各ToDoには、個別の期限と担当者を設定することができます。",
+    manual_gantt_memo_tab_title: "③ メモタブ（書式設定メモ）",
+    manual_gantt_memo_tab_desc: "タスクに関する詳細情報を自由に記述できます。文字の装飾（太字・斜体など）や箇条書きなどの書式設定が可能です。",
+    
+    manual_gantt_section_advanced: "2. 高度な機能・設定",
+    manual_gantt_advanced_desc: "プロジェクト管理をより詳細かつ堅牢にするための機能です。",
+    
+    manual_gantt_calendar_title: "祝日・会社休日の設定",
+    manual_gantt_calendar_desc: "標準の土日に加え、日本の祝日や会社独自の特別休日をカレンダーに登録できます。休日に指定された日はチャート上でグレーアウトされ、稼働日数（期間）の計算から自動的に除外されるため、実際の営業日に即した正確な計画が立てられます。",
+    
+    manual_gantt_alert_title: "健康度アラートライン",
+    manual_gantt_alert_desc: "現在の進捗と今日の日付に基づいて、タスクの健康度を自動判定します。タスクバーの左端に「期限超過（赤）」「開始遅延（黄）」「順調（緑）」のラインが自動で表示され、手遅れになる前に対処すべきタスクを見つけることができます。",
+    
+    manual_gantt_undo_title: "元に戻す・やり直し (Undo / Redo)",
+    manual_gantt_undo_desc: "操作を誤ってしまっても心配いりません。Excelと同様に <kbd>Ctrl + Z</kbd>（元に戻す）や <kbd>Ctrl + Y</kbd>（やり直し）のキーボードショートカットで、直前の操作を何段階でも復元・やり直すことができます。",
   },
   gantt: {
     labels: {

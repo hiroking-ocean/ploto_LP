@@ -129,6 +129,13 @@ function buildPage(lang) {
   $("ms-store-badge").attr("language", badgeLang);
   $("ms-store-badge").attr("productname", badgeProductName);
 
+  // 8.5 data-manual-link の href 置換
+  $("[data-manual-link]").each((_, el) => {
+    const targetPage = $(el).attr("data-manual-link");
+    const targetUrl = lang === "ja" ? `${BASE}manual/${targetPage}.html` : `${BASE}${lang}/manual/${targetPage}.html`;
+    $(el).attr("href", targetUrl);
+  });
+
   // 9. アセットパス絶対化（サブ階層 /en/ で 404 しないように）
   $("img[src], script[src]").each((_, el) => {
     const a = el.tagName === "img" ? "src" : "src";
@@ -164,7 +171,111 @@ ${urls}
 `;
 }
 
+const MANUAL_PAGES = ["gantt", "kanban", "matrix"];
+const manualTemplate = readFileSync(join(__dirname, "manual-template.html"), "utf8");
+
+function buildManualPage(lang, pageName) {
+  const locale = locales[lang];
+  const i18n = locale.i18n;
+  const url = lang === "ja" ? `${SITE}manual/${pageName}.html` : `${SITE}${lang}/manual/${pageName}.html`;
+  const $ = cheerio.load(manualTemplate, { decodeEntities: false });
+
+  // 1. data-i18n テキスト注入
+  $("[data-i18n]").each((_, el) => {
+    const key = $(el).attr("data-i18n");
+    if (i18n[key] != null) $(el).html(i18n[key]);
+  });
+
+  // 2. html lang
+  $("html").attr("lang", lang);
+
+  // 3. title & description
+  const pageTitleKey = `manual_menu_${pageName}`;
+  const pageTitle = i18n[pageTitleKey] || pageName;
+  const siteTitle = i18n["manual_sidebar_title"] || "Ploto Manual";
+  $("title").text(`${pageTitle} | ${siteTitle}`);
+  
+  // メタ記述のフォールバック
+  const introText = i18n["manual_gantt_intro"] || "";
+  $('meta[name="description"]').attr("content", `${pageTitle} - ${introText}`);
+
+  // 4. canonical / hreflang
+  $('link[rel="canonical"]').attr("href", url);
+  LANGS.forEach((l) => {
+    const targetUrl = l === "ja" ? `${SITE}manual/${pageName}.html` : `${SITE}${l}/manual/${pageName}.html`;
+    $(`link[hreflang="${l}"]`).attr("href", targetUrl);
+  });
+  $('link[hreflang="x-default"]').attr("href", `${SITE}manual/${pageName}.html`);
+
+  // 5. OGP / Twitter
+  const shot = `${SITE}assets/manual/${lang}/${pageName}-overview.png`;
+  $('meta[property="og:url"]').attr("content", url);
+  $('meta[property="og:locale"]').attr("content", OG_LOCALE[lang]);
+  $('meta[property="og:locale:alternate"]').remove();
+  const ogLocaleTag = $('meta[property="og:locale"]');
+  LANGS.filter((l) => l !== lang).forEach((l) => {
+    ogLocaleTag.after(`\n  <meta property="og:locale:alternate" content="${OG_LOCALE[l]}">`);
+  });
+  $('meta[property="og:title"]').attr("content", `${pageTitle} | ${siteTitle}`);
+  $('meta[property="og:description"]').attr("content", `${pageTitle} - ${introText}`);
+  $('meta[property="og:image"]').attr("content", shot);
+  $('meta[property="og:image:alt"]').attr("content", pageTitle);
+  $('meta[name="twitter:title"]').attr("content", `${pageTitle} | ${siteTitle}`);
+  $('meta[name="twitter:description"]').attr("content", `${pageTitle} - ${introText}`);
+  $('meta[name="twitter:image"]').attr("content", shot);
+  $('meta[name="twitter:image:alt"]').attr("content", pageTitle);
+
+  // 6. data-lp-href の置換（LPトップへの絶対パス化）
+  $("[data-lp-href]").each((_, el) => {
+    const targetUrl = lang === "ja" ? BASE : `${BASE}${lang}/`;
+    $(el).attr("href", targetUrl);
+  });
+
+  // 7. data-lp-download-href の置換（LPダウンロード位置へのアンカー）
+  $("[data-lp-download-href]").each((_, el) => {
+    const targetUrl = lang === "ja" ? `${BASE}#download` : `${BASE}${lang}/#download`;
+    $(el).attr("href", targetUrl);
+  });
+
+  // 8. data-manual-link の href 置換
+  $("[data-manual-link]").each((_, el) => {
+    const targetPage = $(el).attr("data-manual-link");
+    const targetUrl = lang === "ja" ? `${BASE}manual/${targetPage}.html` : `${BASE}${lang}/manual/${targetPage}.html`;
+    $(el).attr("href", targetUrl);
+  });
+
+  // 9. サイドバーのアクティブクラス付与
+  $(`.manual-menu-item[data-menu-id="${pageName}"]`).addClass("active");
+
+  // 10. コンテンツ表示制御
+  $(`#content-${pageName}`).removeAttr("style");
+
+  // 11. スクリーンショット画像のローカライズと絶対パス化
+  $("[data-screenshot-path]").each((_, el) => {
+    const file = $(el).attr("data-screenshot-path");
+    const relativePath = `assets/manual/${lang}/${file}`;
+    $(el).attr("src", absolutize(relativePath));
+  });
+
+  // 12. アセットパス絶対化
+  $("img[src], script[src]").each((_, el) => {
+    const src = $(el).attr("src");
+    if (src && !src.startsWith(BASE) && !src.startsWith("http")) {
+      $(el).attr("src", absolutize(src));
+    }
+  });
+  $("link[href]").each((_, el) => {
+    const href = $(el).attr("href");
+    if (href && !href.startsWith(BASE) && !href.startsWith("http")) {
+      $(el).attr("href", absolutize(href));
+    }
+  });
+
+  return $.html();
+}
+
 // --- 実行 -----------------------------------------------------------------
+// LPのビルド
 for (const lang of LANGS) {
   const html = buildPage(lang);
   if (lang === "ja") {
@@ -176,6 +287,23 @@ for (const lang of LANGS) {
     console.log(`✓ ${lang}/index.html`);
   }
 }
+
+// マニュアルページのビルド
+for (const page of MANUAL_PAGES) {
+  for (const lang of LANGS) {
+    const html = buildManualPage(lang, page);
+    if (lang === "ja") {
+      mkdirSync(join(__dirname, "manual"), { recursive: true });
+      writeFileSync(join(__dirname, "manual", `${page}.html`), html);
+      console.log(`✓ manual/${page}.html (ja)`);
+    } else {
+      mkdirSync(join(__dirname, lang, "manual"), { recursive: true });
+      writeFileSync(join(__dirname, lang, "manual", `${page}.html`), html);
+      console.log(`✓ ${lang}/manual/${page}.html`);
+    }
+  }
+}
+
 writeFileSync(join(__dirname, "sitemap.xml"), buildSitemap());
 console.log("✓ sitemap.xml");
 console.log("\nBuild complete.");

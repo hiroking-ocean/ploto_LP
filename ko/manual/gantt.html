@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="ko" data-theme="light"><head>
+  <!-- Google Analytics 4 -->
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-213Q3C7JLN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-213Q3C7JLN');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-manual-title="">간트 차트 (공정표) | Ploto 매뉴얼</title>
+  <meta name="description" content="간트 차트 (공정표) - Ploto의 핵심 기능인 간트 차트에서는 프로젝트의 작업 목록과 일정을 시각적으로 관리할 수 있습니다. 직관적인 드래그 앤 드롭 작업으로 기간을 변경하거나 작업을 이동할 수 있습니다.">
+
+  <!-- SEO & OGP -->
+  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html">
+  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html">
+  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html">
+  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html">
+  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html">
+  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html">
+  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/ploto_LP/styles.css">
+  <link rel="stylesheet" href="/ploto_LP/manual.css">
+
+  <!-- Application Script -->
+  <script type="module" src="/ploto_LP/manual.js" defer=""></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/ploto_LP/ko/" class="logo-area" data-lp-href="">
+        <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+        <span class="logo-text">Ploto</span>
+      </a>
+
+      <!-- ナビゲーションメニュー（モバイルドロワー用） -->
+      <nav class="nav-menu">
+        <a href="/ploto_LP/ko/" data-lp-href="" data-i18n="manual_back_to_lp">← 공식 사이트로 돌아가기</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher (dropdown) -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択" title="Change Language">
+            <span class="lang-text">JA</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
+            <button type="button" class="lang-option" data-lang="ja" role="option">日本語</button>
+            <button type="button" class="lang-option" data-lang="en" role="option">English</button>
+            <button type="button" class="lang-option" data-lang="de" role="option">Deutsch</button>
+            <button type="button" class="lang-option" data-lang="fr" role="option">Français</button>
+            <button type="button" class="lang-option" data-lang="ko" role="option">한국어</button>
+          </div>
+        </div>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="/ploto_LP/ko/#download" data-lp-download-href="" class="btn-primary" data-i18n="cta_download">무료 다운로드</a>
+
+        <!-- ハンバーガーボタン（スマホのみ表示） -->
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
+  <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">간트 차트 (공정표)</a>
+    <a href="/ploto_LP/ko/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">칸반 (진행 보드)</a>
+    <a href="/ploto_LP/ko/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">우선순위 매트릭스</a>
+    <div class="nav-mobile-cta">
+      <a href="/ploto_LP/ko/" data-lp-href="" data-i18n="manual_back_to_lp">← 공식 사이트로 돌아가기</a>
+    </div>
+  </nav>
+
+  <div class="manual-container">
+    <!-- Sidebar -->
+    <aside class="manual-sidebar">
+      <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto 매뉴얼</div>
+      <ul class="manual-menu-list">
+        <li class="manual-menu-item active" data-menu-id="gantt">
+          <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">간트 차트 (공정표)</a>
+        </li>
+        <li class="manual-menu-item" data-menu-id="kanban">
+          <a href="/ploto_LP/ko/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">칸반 (진행 보드)</a>
+        </li>
+        <li class="manual-menu-item" data-menu-id="matrix">
+          <a href="/ploto_LP/ko/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">우선순위 매트릭스</a>
+        </li>
+      </ul>
+      <div class="manual-back-link">
+        <a href="/ploto_LP/ko/" data-lp-href="">
+          <span data-i18n="manual_back_to_lp">← 공식 사이트로 돌아가기</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="manual-content">
+      <!-- 1. Gantt Chart Manual -->
+      <article id="content-gantt" class="manual-article">
+        <h1 data-i18n="manual_gantt_heading">간트 차트 사용법</h1>
+        <p data-i18n="manual_gantt_intro">Ploto의 핵심 기능인 간트 차트에서는 프로젝트의 작업 목록과 일정을 시각적으로 관리할 수 있습니다. 직관적인 드래그 앤 드롭 작업으로 기간을 변경하거나 작업을 이동할 수 있습니다.</p>
+
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/ko/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_gantt">간트 차트 (공정표)</div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_basic">1. 기본 조작</h2>
+        <p data-i18n="manual_gantt_basic_desc">간트 차트의 가장 기본적인 조작 방법입니다. 마우스 조작을 통해 직관적으로 일정을 계획할 수 있습니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_multi_project_title">프로젝트 추가 및 전환 (멀티 탭)</h3>
+          <p data-i18n="manual_gantt_multi_project_desc">Ploto에서는 단일 파일 내에서 여러 프로젝트를 동시에 관리할 수 있습니다. 화면 왼쪽 끝 사이드바에 있는 '목록' 버튼을 클릭하여 패널을 연 후, 프로젝트 섹션의 '+' 버튼을 클릭하면 새 프로젝트를 추가할 수 있습니다. 추가된 프로젝트는 화면 상단에 '탭'으로 표시되며, 탭을 클릭하는 것만으로 다른 간트 차트로 즉시 전환할 수 있습니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_add_title">작업 추가 및 삭제</h3>
+          <p data-i18n="manual_gantt_add_desc">왼쪽 작업 목록(그리드) 상단 또는 각 행의 오른쪽 끝에 있는 '+' 버튼을 클릭하면 새 작업이 추가됩니다. 작업을 삭제하려면 작업 이름을 우클릭하여 메뉴에서 '삭제'를 선택하거나, 작업을 선택하고 Delete 키를 누릅니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_drag_title">기간 조정 (드래그 앤 드롭)</h3>
+          <p data-i18n="manual_gantt_drag_desc">차트에서 작업 바(파란색 막대)의 왼쪽 또는 오른쪽 끝을 드래그하면 시작일이나 종료일을 변경할 수 있습니다. 막대의 중앙을 드래그하면 기간(일수)을 유지한 채 일정 전체를 좌우로 이동할 수 있습니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_link_title">의존 관계(링크) 설정</h3>
+          <p data-i18n="manual_gantt_link_desc">작업 간의 전후 관계(선행/후행)를 정의할 수 있습니다. 작업 바 끝에 있는 원형 도트를 드래그하여 다른 작업 바에 연결하면 링크(의존 관계)가 생성됩니다. 생성된 링크 선을 더블 클릭하면 링크를 삭제할 수 있습니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_progress_title">진행 상황(Progress) 업데이트</h3>
+          <p data-i18n="manual_gantt_progress_desc">작업 바 내부에 있는 작은 슬라이더를 좌우로 드래그하면 진행률(0%~100%)을 변경할 수 있습니다. 진행률은 막대 내부가 진한 색으로 채워짐으로써 시각적으로 표현됩니다.</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_detail_panel_title">작업 상세 설정 (상세, ToDo, 메모)</h3>
+          <p data-i18n="manual_gantt_detail_panel_desc">작업을 더블 클릭하거나 상세 버튼을 클릭하면 화면 오른쪽에 '상세 패널'이 열립니다. 이 패널에는 3개의 탭이 있으며, 작업의 기본 매개변수 수정, ToDo 관리, 서식 있는 메모 작성이 가능합니다.</p>
+          
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_detail_tab_title">1. 상세 탭 (기본 정보 설정)</h4>
+          <p data-i18n="manual_gantt_detail_tab_desc">작업 이름, 진행률, 우선순위, 기간, 시작 일시 등 작업과 관련된 다양한 기본 항목을 설정할 수 있습니다.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_todo_tab_title">2. ToDo 탭 (작업 세분화)</h4>
+          <p data-i18n="manual_gantt_todo_tab_desc">작업과 관련된 세부 체크리스트(ToDo 목록)를 입력할 수 있습니다. 각 ToDo 항목에 대해 개별 마감일과 담당자를 지정할 수 있습니다.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_memo_tab_title">3. 메모 탭 (서식 설정 메모)</h4>
+          <p data-i18n="manual_gantt_memo_tab_desc">작업에 관한 상세 정보나 지시 사항을 기록할 수 있습니다. 굵게, 기울임꼴, 글머리 기호 등의 리치 텍스트 서식이 지원됩니다.</p>
+
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_gantt_section_advanced">2. 고급 기능 및 설정</h2>
+        <p data-i18n="manual_gantt_advanced_desc">프로젝트 관리를 보다 상세하고 견고하게 만들기 위한 기능입니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_calendar_title">공휴일 및 회사 휴일 설정</h3>
+          <p data-i18n="manual_gantt_calendar_desc">기본적인 주말 외에도 공휴일이나 회사 고유의 휴일을 캘린더에 등록할 수 있습니다. 휴일로 지정된 날은 차트에서 회색으로 표시되며 활성 기간 계산에서 자동으로 제외되므로, 실제 영업일에 맞춘 정확한 계획을 세울 수 있습니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_alert_title">건강도 경고 라인</h3>
+          <p data-i18n="manual_gantt_alert_desc">현재 진행 상황과 오늘 날짜를 기준으로 작업의 상태를 자동으로 평가합니다. 작업 바 왼쪽 끝에 '기한 초과(빨간색)', '시작 지연(노란색)', '정상(초록색)' 라인이 자동으로 표시되어 즉각적인 조치가 필요한 작업을 식별할 수 있습니다.</p>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_undo_title">실행 취소 / 다시 실행 (Undo / Redo)</h3>
+          <p data-i18n="manual_gantt_undo_desc">실수를 해도 걱정하지 마세요. Excel과 마찬가지로 <kbd>Ctrl + Z</kbd> (실행 취소) 및 <kbd>Ctrl + Y</kbd> (다시 실행) 키보드 단축키를 사용하여 최근 작업을 단계별로 되돌리거나 다시 적용할 수 있습니다.</p>
+        </div>
+      </article>
+
+      <!-- 2. Kanban Board Manual (Coming Soon) -->
+      <article id="content-kanban" class="manual-article" style="display: none;">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">📋</div>
+          <h1 data-i18n="manual_coming_soon_title">준비 중</h1>
+          <p data-i18n="manual_coming_soon_desc">이 기능의 매뉴얼은 현재 준비 중입니다. 향후 업데이트를 기다려 주세요.</p>
+        </div>
+      </article>
+
+      <!-- 3. Priority Matrix Manual (Coming Soon) -->
+      <article id="content-matrix" class="manual-article" style="display: none;">
+        <div class="coming-soon-container">
+          <div class="coming-soon-icon">🎯</div>
+          <h1 data-i18n="manual_coming_soon_title">준비 중</h1>
+          <p data-i18n="manual_coming_soon_desc">이 기능의 매뉴얼은 현재 준비 중입니다. 향후 업데이트를 기다려 주세요.</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="logo-area" data-lp-href="" href="/ploto_LP/ko/">
+          <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+          <span class="logo-text">Ploto</span>
+        </div>
+        <p class="footer-copy">© 2026 Ploto. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/hiroking-ocean/ploto-privacy" target="_blank" data-i18n="footer_privacy">개인정보처리방침</a>
+      </div>
+    </div>
+  </footer>
+
+
+</body></html>

@@ -9,6 +9,7 @@ export default {
     nav_features: "Funktionen",
     nav_demo: "Live-Demo",
     nav_beta: "Beta-Angebot",
+    nav_manual: "Handbuch",
     cta_download: "Kostenloser Download",
 
     hero_badge: "🏢 Entwickelt für Cloud-eingeschränkte & SaaS-gesperrte Teams | Lokale Nutzung | Kostenlos",
@@ -117,6 +118,60 @@ export default {
     ploto_sol4: "Das vertraute 'Rückgängig (Strg+Z)' setzt Fehlklicks oder versehentliche Änderungen sofort zurück",
     ploto_sol5: "Gantt-Diagramme, Kanban-Boards und Prioritätsmatrix vereint in einer einfachen App",
     excel_cta: "Excel hinter sich lassen →",
+
+    // --- Manual Sidebar ---
+    manual_sidebar_title: "Ploto Handbuch",
+    manual_menu_gantt: "Gantt-Diagramm",
+    manual_menu_kanban: "Kanban-Board",
+    manual_menu_matrix: "Prioritätenmatrix",
+    manual_back_to_lp: "← Zurück zur Website",
+
+    // --- Manual Common / Coming Soon ---
+    manual_coming_soon_title: "In Kürze",
+    manual_coming_soon_desc: "Das Handbuch für diese Funktion wird derzeit vorbereitet. Bitte warten Sie auf zukünftige Updates.",
+
+    // --- Manual Gantt Page ---
+    manual_gantt_heading: "Verwendung des Gantt-Diagramms",
+    manual_gantt_intro: "Das Gantt-Diagramm, die Kernfunktion von Ploto, ermöglicht es Ihnen, Aufgaben und Termine Ihres Projekts visuell zu verwalten. Mit intuitiven Drag-and-Drop-Operationen können Sie Dauern ändern und Aufgaben verschieben.",
+    
+    manual_gantt_section_basic: "1. Grundlegende Operationen",
+    manual_gantt_basic_desc: "Dies sind die grundlegendsten Operationen für das Gantt-Diagramm. Sie können Ihren Zeitplan intuitiv mit Mausaktionen erstellen.",
+    
+    manual_gantt_multi_project_title: "Projekte hinzufügen und wechseln (Multi-Tab)",
+    manual_gantt_multi_project_desc: "In Ploto können Sie mehrere Projekte gleichzeitig in einer einzigen Datei verwalten. Klicken Sie ganz links in der Seitenleiste auf die Schaltfläche 'Liste', um das Panel zu öffnen, und klicken Sie dann auf die Schaltfläche '+' im Bereich 'Projekt', um ein neues Projekt hinzuzufügen. Hinzugefügte Projekte werden als 'Tabs' oben auf dem Bildschirm angezeigt. Klicken Sie einfach auf einen Tab, um sofort zwischen verschiedenen Gantt-Diagrammen zu wechseln.",
+    
+    manual_gantt_add_title: "Aufgaben hinzufügen und löschen",
+    manual_gantt_add_desc: "Klicken Sie auf die Schaltfläche '+' oben in der Aufgabenliste (Raster) auf der linken Seite oder am rechten Ende jeder Zeile, um eine neue Aufgabe hinzuzufügen. Um eine Aufgabe zu löschen, klicken Sie mit der rechten Maustaste auf den Aufgabennamen und wählen Sie 'Löschen' aus dem Menü, oder wählen Sie die Aufgabe aus und drücken Sie die Entf-Taste.",
+    
+    manual_gantt_drag_title: "Dauer anpassen (Drag & Drop)",
+    manual_gantt_drag_desc: "Ziehen Sie den linken oder rechten Rand eines Aufgabenbalkens (blauer Balken) im Diagramm, um das Start- oder Enddatum zu ändern. Ziehen Sie die Mitte des Balkens, um den gesamten Zeitplan nach links oder rechts zu verschieben, während die Dauer (Anzahl der Tage) beibehalten wird.",
+    
+    manual_gantt_link_title: "Abhängigkeiten definieren (Links)",
+    manual_gantt_link_desc: "Sie können zeitliche Beziehungen (Vorgänger/Nachfolger) zwischen Aufgaben definieren. Ziehen Sie den kreisförmigen Punkt am Rand eines Aufgabenbalkens und verbinden Sie ihn mit einem anderen Aufgabenbalken, um eine Verknüpfung (Abhängigkeit) zu erstellen. Doppelklicken Sie auf die Verbindungslinie, um sie zu löschen.",
+    
+    manual_gantt_progress_title: "Fortschritt aktualisieren",
+    manual_gantt_progress_desc: "Ziehen Sie den kleinen Schieberegler innerhalb des Aufgabenbalkens nach links oder rechts, um den Fortschritt (0% bis 100%) zu ändern. Der Fortschritt wird visuell durch die dunklere Füllung im Balken dargestellt.",
+    
+    manual_gantt_detail_panel_title: "Aufgabendetail-Einstellungen (Details, ToDo, Memo)",
+    manual_gantt_detail_panel_desc: "Doppelklicken Sie auf eine Aufgabe oder klicken Sie auf die Detailschaltfläche, um das 'Detail-Panel' auf der rechten Seite des Bildschirms zu öffnen. Dieses Panel enthält drei Registerkarten, auf denen Sie grundlegende Parameter bearbeiten, ToDos verwalten und formatierte Notizen schreiben können.",
+    manual_gantt_detail_tab_title: "1. Registerkarte Details (Grundeinstellungen)",
+    manual_gantt_detail_tab_desc: "Konfigurieren Sie verschiedene grundlegende Elemente der Aufgabe, wie Aufgabename, Fortschritt, Priorität, Dauer und Startdatum/-zeit.",
+    manual_gantt_todo_tab_title: "2. Registerkarte ToDo (Aufgabenunterteilung)",
+    manual_gantt_todo_tab_desc: "Geben Sie eine detaillierte Checkliste (ToDo-Liste) ein, die mit der Aufgabe verknüpft ist. Sie können jedem ToDo-Element ein individuelles Fälligkeitsdatum und einen Verantwortlichen zuweisen.",
+    manual_gantt_memo_tab_title: "3. Registerkarte Memo (Formatierte Notizen)",
+    manual_gantt_memo_tab_desc: "Schreiben Sie detaillierte Notizen oder Anweisungen für die Aufgabe. Rich-Text-Formatierungen wie Fett, Kursiv und Listen werden unterstützt.",
+    
+    manual_gantt_section_advanced: "2. Erweiterte Funktionen",
+    manual_gantt_advanced_desc: "Funktionen, die entwickelt wurden, um Ihr Projektmanagement detaillierter und robuster zu gestalten.",
+    
+    manual_gantt_calendar_title: "Feiertags- & Betriebsferieneinstellungen",
+    manual_gantt_calendar_desc: "Zusätzlich zu den Standardwochenenden können Sie gesetzliche Feiertage oder unternehmensspezifische Feiertage im Kalender registrieren. Als Feiertage deklarierte Tage werden im Diagramm ausgegraut und automatisch von den Berechnungen der aktiven Dauer ausgeschlossen, sodass Sie Pläne basierend auf tatsächlichen Arbeitstagen erstellen können.",
+    
+    manual_gantt_alert_title: "Gesundheitswarnlinie",
+    manual_gantt_alert_desc: "Bewertet den Zustand von Aufgaben automatisch basierend auf dem aktuellen Fortschritt und dem heutigen Datum. Linien für 'Überfällig (Rot)', 'Verzögerter Start (Gelb)' und 'Im Zeitplan (Grün)' werden automatisch am linken Rand des Aufgabenbalkens angezeigt, sodass Sie Aufgaben identifizieren können, die sofortige Aufmerksamkeit erfordern.",
+    
+    manual_gantt_undo_title: "Rückgängig machen / Wiederholen",
+    manual_gantt_undo_desc: "Machen Sie sich keine Sorgen, wenn Sie einen Fehler machen. Wie in Excel können Sie die Tastaturkürzel <kbd>Strg + Z</kbd> (Rückgängig) und <kbd>Strg + Y</kbd> (Wiederholen) verwenden, um Ihre letzten Aktionen Schritt für Schritt rückgängig zu machen oder erneut anzuwenden.",
   },
   gantt: {
     labels: {

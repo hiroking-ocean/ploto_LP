@@ -9,6 +9,7 @@ export default {
     nav_features: "기능",
     nav_demo: "라이브 데모",
     nav_beta: "베타 제안",
+    nav_manual: "사용 설명서",
     cta_download: "무료 다운로드",
 
     hero_badge: "🏢 클라우드 금지·SaaS 도입 불가 현장용 | 로컬 동작 | 무료",
@@ -117,6 +118,60 @@ export default {
     ploto_sol4: "Excel과 익숙한 '되돌리기(Ctrl+Z)' 기능으로 잘못 조작해도 즉시 리셋 가능합니다",
     ploto_sol5: "공정표, 진행 보드, 우선순위 정리가 하나의 단순한 앱에 모두 통합되어 있습니다",
     excel_cta: "Excel 관리의 스트레스에서 졸업하기 →",
+
+    // --- Manual Sidebar ---
+    manual_sidebar_title: "Ploto 매뉴얼",
+    manual_menu_gantt: "간트 차트 (공정표)",
+    manual_menu_kanban: "칸반 (진행 보드)",
+    manual_menu_matrix: "우선순위 매트릭스",
+    manual_back_to_lp: "← 공식 사이트로 돌아가기",
+
+    // --- Manual Common / Coming Soon ---
+    manual_coming_soon_title: "준비 중",
+    manual_coming_soon_desc: "이 기능의 매뉴얼은 현재 준비 중입니다. 향후 업데이트를 기다려 주세요.",
+
+    // --- Manual Gantt Page ---
+    manual_gantt_heading: "간트 차트 사용법",
+    manual_gantt_intro: "Ploto의 핵심 기능인 간트 차트에서는 프로젝트의 작업 목록과 일정을 시각적으로 관리할 수 있습니다. 직관적인 드래그 앤 드롭 작업으로 기간을 변경하거나 작업을 이동할 수 있습니다.",
+    
+    manual_gantt_section_basic: "1. 기본 조작",
+    manual_gantt_basic_desc: "간트 차트의 가장 기본적인 조작 방법입니다. 마우스 조작을 통해 직관적으로 일정을 계획할 수 있습니다.",
+    
+    manual_gantt_multi_project_title: "프로젝트 추가 및 전환 (멀티 탭)",
+    manual_gantt_multi_project_desc: "Ploto에서는 단일 파일 내에서 여러 프로젝트를 동시에 관리할 수 있습니다. 화면 왼쪽 끝 사이드바에 있는 '목록' 버튼을 클릭하여 패널을 연 후, 프로젝트 섹션의 '+' 버튼을 클릭하면 새 프로젝트를 추가할 수 있습니다. 추가된 프로젝트는 화면 상단에 '탭'으로 표시되며, 탭을 클릭하는 것만으로 다른 간트 차트로 즉시 전환할 수 있습니다.",
+    
+    manual_gantt_add_title: "작업 추가 및 삭제",
+    manual_gantt_add_desc: "왼쪽 작업 목록(그리드) 상단 또는 각 행의 오른쪽 끝에 있는 '+' 버튼을 클릭하면 새 작업이 추가됩니다. 작업을 삭제하려면 작업 이름을 우클릭하여 메뉴에서 '삭제'를 선택하거나, 작업을 선택하고 Delete 키를 누릅니다.",
+    
+    manual_gantt_drag_title: "기간 조정 (드래그 앤 드롭)",
+    manual_gantt_drag_desc: "차트에서 작업 바(파란색 막대)의 왼쪽 또는 오른쪽 끝을 드래그하면 시작일이나 종료일을 변경할 수 있습니다. 막대의 중앙을 드래그하면 기간(일수)을 유지한 채 일정 전체를 좌우로 이동할 수 있습니다.",
+    
+    manual_gantt_link_title: "의존 관계(링크) 설정",
+    manual_gantt_link_desc: "작업 간의 전후 관계(선행/후행)를 정의할 수 있습니다. 작업 바 끝에 있는 원형 도트를 드래그하여 다른 작업 바에 연결하면 링크(의존 관계)가 생성됩니다. 생성된 링크 선을 더블 클릭하면 링크를 삭제할 수 있습니다.",
+    
+    manual_gantt_progress_title: "진행 상황(Progress) 업데이트",
+    manual_gantt_progress_desc: "작업 바 내부에 있는 작은 슬라이더를 좌우로 드래그하면 진행률(0%~100%)을 변경할 수 있습니다. 진행률은 막대 내부가 진한 색으로 채워짐으로써 시각적으로 표현됩니다.",
+    
+    manual_gantt_detail_panel_title: "작업 상세 설정 (상세, ToDo, 메모)",
+    manual_gantt_detail_panel_desc: "작업을 더블 클릭하거나 상세 버튼을 클릭하면 화면 오른쪽에 '상세 패널'이 열립니다. 이 패널에는 3개의 탭이 있으며, 작업의 기본 매개변수 수정, ToDo 관리, 서식 있는 메모 작성이 가능합니다.",
+    manual_gantt_detail_tab_title: "1. 상세 탭 (기본 정보 설정)",
+    manual_gantt_detail_tab_desc: "작업 이름, 진행률, 우선순위, 기간, 시작 일시 등 작업과 관련된 다양한 기본 항목을 설정할 수 있습니다.",
+    manual_gantt_todo_tab_title: "2. ToDo 탭 (작업 세분화)",
+    manual_gantt_todo_tab_desc: "작업과 관련된 세부 체크리스트(ToDo 목록)를 입력할 수 있습니다. 각 ToDo 항목에 대해 개별 마감일과 담당자를 지정할 수 있습니다.",
+    manual_gantt_memo_tab_title: "3. 메모 탭 (서식 설정 메모)",
+    manual_gantt_memo_tab_desc: "작업에 관한 상세 정보나 지시 사항을 기록할 수 있습니다. 굵게, 기울임꼴, 글머리 기호 등의 리치 텍스트 서식이 지원됩니다.",
+    
+    manual_gantt_section_advanced: "2. 고급 기능 및 설정",
+    manual_gantt_advanced_desc: "프로젝트 관리를 보다 상세하고 견고하게 만들기 위한 기능입니다.",
+    
+    manual_gantt_calendar_title: "공휴일 및 회사 휴일 설정",
+    manual_gantt_calendar_desc: "기본적인 주말 외에도 공휴일이나 회사 고유의 휴일을 캘린더에 등록할 수 있습니다. 휴일로 지정된 날은 차트에서 회색으로 표시되며 활성 기간 계산에서 자동으로 제외되므로, 실제 영업일에 맞춘 정확한 계획을 세울 수 있습니다.",
+    
+    manual_gantt_alert_title: "건강도 경고 라인",
+    manual_gantt_alert_desc: "현재 진행 상황과 오늘 날짜를 기준으로 작업의 상태를 자동으로 평가합니다. 작업 바 왼쪽 끝에 '기한 초과(빨간색)', '시작 지연(노란색)', '정상(초록색)' 라인이 자동으로 표시되어 즉각적인 조치가 필요한 작업을 식별할 수 있습니다.",
+    
+    manual_gantt_undo_title: "실행 취소 / 다시 실행 (Undo / Redo)",
+    manual_gantt_undo_desc: "실수를 해도 걱정하지 마세요. Excel과 마찬가지로 <kbd>Ctrl + Z</kbd> (실행 취소) 및 <kbd>Ctrl + Y</kbd> (다시 실행) 키보드 단축키를 사용하여 최근 작업을 단계별로 되돌리거나 다시 적용할 수 있습니다.",
   },
   gantt: {
     labels: {
