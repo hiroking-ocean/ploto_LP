@@ -189,6 +189,13 @@ function buildManualPage(lang, pageName) {
   // 2. html lang
   $("html").attr("lang", lang);
 
+  // 言語切り替えボタンのテキストを現在の言語に設定
+  const languageShortLabels = { ja: "JA", en: "EN", de: "DE", fr: "FR", ko: "KO" };
+  $("#lang-toggle .lang-text").text(languageShortLabels[lang] || "JA");
+  
+  // ドロップダウンメニューの選択中クラス(active)を設定
+  $(`.lang-option[data-lang="${lang}"]`).addClass("active");
+
   // 3. title & description
   const pageTitleKey = `manual_menu_${pageName}`;
   const pageTitle = i18n[pageTitleKey] || pageName;

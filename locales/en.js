@@ -165,7 +165,7 @@ export default {
     manual_gantt_advanced_desc: "Features designed to make your project management more detailed and robust.",
     
     manual_gantt_calendar_title: "Holiday & Company Off-day Settings",
-    manual_gantt_calendar_desc: "In addition to standard weekends, you can register public holidays or unique company-specific holidays in the calendar. Days designated as holidays are grayed out on the chart and automatically excluded from active duration calculations, allowing you to create plans based on actual working days.",
+    manual_gantt_calendar_desc: "In addition to standard weekends, you can register public holidays or unique company-specific holidays in the calendar. Days designated as holidays are grayed out on the chart and automatically excluded from active duration calculations, allowing you to create plans based on actual working days. *The function to import national holidays in bulk is a premium (Pro) feature (manual addition/editing is available for free).",
     
     manual_gantt_alert_title: "Health Alert Line",
     manual_gantt_alert_desc: "Automatically evaluates task health based on current progress and today's date. Lines for 'Overdue (Red)', 'Delayed Start (Yellow)', and 'On Track (Green)' are automatically displayed on the left edge of the task bar, letting you identify tasks that require immediate attention.",

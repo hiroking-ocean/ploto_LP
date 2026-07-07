@@ -165,7 +165,7 @@ export default {
     manual_gantt_advanced_desc: "Funktionen, die entwickelt wurden, um Ihr Projektmanagement detaillierter und robuster zu gestalten.",
     
     manual_gantt_calendar_title: "Feiertags- & Betriebsferieneinstellungen",
-    manual_gantt_calendar_desc: "Zusätzlich zu den Standardwochenenden können Sie gesetzliche Feiertage oder unternehmensspezifische Feiertage im Kalender registrieren. Als Feiertage deklarierte Tage werden im Diagramm ausgegraut und automatisch von den Berechnungen der aktiven Dauer ausgeschlossen, sodass Sie Pläne basierend auf tatsächlichen Arbeitstagen erstellen können.",
+    manual_gantt_calendar_desc: "Zusätzlich zu den Standardwochenenden können Sie gesetzliche Feiertage oder unternehmensspezifische Feiertage im Kalender registrieren. Als Feiertage deklarierte Tage werden im Diagramm ausgegraut und automatisch von den Berechnungen der aktiven Dauer ausgeschlossen, sodass Sie Pläne basierend auf tatsächlichen Arbeitstagen erstellen können. *Die Funktion zum gesammelten Importieren von Feiertagen ist eine Premium-Funktion (Pro) (manuelles Hinzufügen/Bearbeiten ist kostenlos verfügbar).",
     
     manual_gantt_alert_title: "Gesundheitswarnlinie",
     manual_gantt_alert_desc: "Bewertet den Zustand von Aufgaben automatisch basierend auf dem aktuellen Fortschritt und dem heutigen Datum. Linien für 'Überfällig (Rot)', 'Verzögerter Start (Gelb)' und 'Im Zeitplan (Grün)' werden automatisch am linken Rand des Aufgabenbalkens angezeigt, sodass Sie Aufgaben identifizieren können, die sofortige Aufmerksamkeit erfordern.",

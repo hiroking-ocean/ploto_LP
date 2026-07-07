@@ -7,7 +7,7 @@ import locales from "./locales/index.js";
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
   const BASE = "/ploto_LP/";
-  let currentLang = document.documentElement.lang || "ja";
+  let currentLang = (document.documentElement.getAttribute("lang") || "ja").split("-")[0].toLowerCase();
   let currentTheme = localStorage.getItem("ploto-theme") || "light";
 
   const supportedLangs = ["ja", "en", "de", "fr", "ko"];

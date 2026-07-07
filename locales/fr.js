@@ -165,7 +165,7 @@ export default {
     manual_gantt_advanced_desc: "Fonctionnalités conçues pour rendre la gestion de vos projets plus détaillée et robuste.",
     
     manual_gantt_calendar_title: "Paramètres des jours fériés et des congés de l'entreprise",
-    manual_gantt_calendar_desc: "En plus des week-ends standard, vous pouvez enregistrer des jours fériés ou des congés spécifiques à l'entreprise dans le calendrier. Les jours désignés comme fériés sont grisés sur le diagramme et automatiquement exclus des calculs de durée active, ce qui vous permet de créer des plans basés sur les jours ouvrables réels.",
+    manual_gantt_calendar_desc: "En plus des week-ends standard, vous pouvez enregistrer des jours fériés ou des congés spécifiques à l'entreprise dans le calendrier. Les jours désignés comme fériés sont grisés sur le diagramme et automatiquement exclus des calculs de durée active, ce qui vous permet de créer des plans basés sur les jours ouvrables réels. *La fonction d'importation en masse des jours fériés est une fonctionnalité premium (Pro) (l'ajout/édition manuelle est disponible gratuitement).",
     
     manual_gantt_alert_title: "Ligne d'alerte de santé",
     manual_gantt_alert_desc: "Évalue automatiquement la santé des tâches en fonction de la progression actuelle et de la date du jour. Des lignes pour 'En retard (Rouge)', 'Début retardé (Jaune)' et 'Sur la bonne voie (Vert)' s'affichent automatiquement sur le bord gauche de la barre de tâche, vous permettant d'identifier les tâches qui nécessitent une attention immédiate.",

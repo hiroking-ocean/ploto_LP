@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 各言語は別URLでプリレンダリングされており、これによりSSR内容とJSの再適用が一致する。
   const BASE = "/ploto_LP/";
   const urlForLang = (lang) => (lang === "ja" ? BASE : `${BASE}${lang}/`);
-  let currentLang = document.documentElement.lang || "ja";
+  let currentLang = (document.documentElement.getAttribute("lang") || "ja").split("-")[0].toLowerCase();
   let currentTheme = localStorage.getItem("ploto-theme") || "light";
   const screenshotNames = ["01-gantt.png", "02-kanban.png", "03-matrix.png", "04-darkmode.png"];
   let screenshotIndex = 0;
