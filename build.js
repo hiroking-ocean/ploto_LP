@@ -171,6 +171,10 @@ ${urls}
 `;
 }
 
+function buildSitemapTxt() {
+  return LANGS.map((lang) => urlFor(lang)).join("\n") + "\n";
+}
+
 const MANUAL_PAGES = ["gantt", "kanban", "matrix"];
 const manualTemplate = readFileSync(join(__dirname, "manual-template.html"), "utf8");
 
@@ -313,4 +317,7 @@ for (const page of MANUAL_PAGES) {
 
 writeFileSync(join(__dirname, "sitemap.xml"), buildSitemap());
 console.log("✓ sitemap.xml");
+
+writeFileSync(join(__dirname, "sitemap.txt"), buildSitemapTxt());
+console.log("✓ sitemap.txt");
 console.log("\nBuild complete.");
