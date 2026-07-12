@@ -99,6 +99,7 @@
 
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/ko/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">기본 조작</a>
     <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">간트 차트 (공정표)</a>
     <a href="/ploto_LP/ko/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">칸반 (진행 보드)</a>
     <a href="/ploto_LP/ko/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">우선순위 매트릭스</a>
@@ -112,6 +113,9 @@
     <aside class="manual-sidebar">
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto 매뉴얼</div>
       <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="basic">
+          <a href="/ploto_LP/ko/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">기본 조작</a>
+        </li>
         <li class="manual-menu-item active" data-menu-id="gantt">
           <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">간트 차트 (공정표)</a>
         </li>
@@ -131,6 +135,110 @@
 
     <!-- Main Content -->
     <main class="manual-content">
+      <!-- 0. Basic Operations Manual -->
+      <article id="content-basic" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_basic_heading">기본 조작 사용법</h1>
+        <p data-i18n="manual_basic_intro">Ploto의 공통 화면 조작 및 파일 저장/관리 방법에 대해 설명합니다.</p>
+
+        <h2 data-i18n="manual_basic_section_start">1. 시작 화면</h2>
+        <p data-i18n="manual_basic_start_desc">Ploto를 실행하면 먼저 프로젝트를 생성하거나 열 수 있는 시작 팝업이 표시됩니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_start_new_title">새 프로젝트 생성</h3>
+          <p data-i18n="manual_basic_start_new_desc">'새 프로젝트 작성' 버튼을 클릭하면 새로운 빈 프로젝트가 열려 즉시 작업을 관리할 수 있습니다.</p>
+          <h3 data-i18n="manual_basic_start_open_title">기존 파일 열기</h3>
+          <p data-i18n="manual_basic_start_open_desc">'로컬 파일 열기' 버튼을 클릭하면 파일 선택 대화상자가 열리고 PC에 저장된 `.ploto` 파일을 불러와 편집을 재개할 수 있습니다.</p>
+          <h3 data-i18n="manual_basic_start_recent_title">최근에 연 프로젝트</h3>
+          <p data-i18n="manual_basic_start_recent_desc">이전에 Ploto에서 열었던 프로젝트가 목록에 표시됩니다. 파일 경로를 찾을 필요 없이 한 번의 클릭으로 빠르게 열 수 있습니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_file">2. 파일 및 도움말 메뉴</h2>
+        <p data-i18n="manual_basic_file_desc">상단 헤더 왼쪽의 메뉴에서 프로젝트 파일을 관리하고 다양한 정보를 확인할 수 있습니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_file_menu_title">파일 메뉴</h3>
+          <p data-i18n="manual_basic_file_menu_desc">'파일' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• **새로 만들기**: 새로운 프로젝트 파일을 생성합니다.<br>• **열기**: PC에서 프로젝트 파일(.ploto)을 선택하여 불러옵니다.<br>• **저장**: 현재 프로젝트를 덮어쓰고 저장합니다.<br>• **다른 이름으로 저장**: 새로운 파일 이름으로 프로젝트를 저장합니다.<br>• **Excel 출력 / 인쇄 [PRO]**: 간트 차트나 작업 목록을 Excel 또는 PDF로 내보냅니다(프로 기능).</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_help_menu_title">도움말 메뉴</h3>
+          <p data-i18n="manual_basic_help_menu_desc">'도움말' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• **매뉴얼**: 이 매뉴얼 페이지를 엽니다.<br>• **업데이트 이력**: 앱의 업데이트 내역을 확인합니다.<br>• **라이선스**: 라이선스 정보를 확인합니다.<br>• **Language**: 앱 표시 언어(일본어, 영어, 독일어, 프랑스어, 한국어)를 전환합니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_sidebar">3. 사이드바 기능</h2>
+        <p data-i18n="manual_basic_sidebar_desc">왼쪽 사이드바의 아이콘을 클릭하여 프로젝트 보기 전환, 작업 검색, 마일스톤 관리 및 설정 등의 패널을 표시할 수 있습니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_sidebar_menu_title">사이드바 전환 패널 (3종류)</h3>
+          <p data-i18n="manual_basic_sidebar_menu_intro">사이드바의 주요 메뉴는 다음과 같습니다.</p>
+          <ul class="manual-icon-list">
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12 3-10 5 10 5 10-5-10-5Z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_list_title">목록</strong>: 
+                <span data-i18n="manual_basic_sidebar_list_desc">새 프로젝트, 칸반 보드, 우선순위 매트릭스, 멤버별 작업, 화이트보드 등 다양한 보기 화면을 추가하거나 전환합니다.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_search_title">작업 검색</strong>: 
+                <span data-i18n="manual_basic_sidebar_search_desc">작업 이름을 입력하여 프로젝트 내 작업을 키워드로 검색합니다.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_milestone_title">마일스톤</strong>: 
+                <span data-i18n="manual_basic_sidebar_milestone_desc">프로젝트에 설정된 중요한 마일스톤 목록을 관리하고 확인합니다.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_settings_title">설정</strong>: 
+                <span data-i18n="manual_basic_sidebar_settings_desc">애플리케이션 설정을 변경합니다.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_header">4. 헤더 컨트롤</h2>
+        <p data-i18n="manual_basic_header_desc">우측 상단의 버튼들을 통해 빠른 조작 및 설정 변경이 가능합니다.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_header_undo_title">실행 취소 / 다시 실행 (Undo / Redo)</h3>
+          <p data-i18n="manual_basic_header_undo_desc">화살표 아이콘(또는 단축키 Ctrl+Z / Ctrl+Y)을 사용하여 최근 작업을 취소하거나 다시 실행할 수 있습니다.</p>
+          <h3 data-i18n="manual_basic_header_save_title">수동 저장</h3>
+          <p data-i18n="manual_basic_header_save_desc">디스켓 아이콘을 클릭하여 현재 변경 사항을 즉시 수동으로 저장합니다(앱에서 자동 저장을 지원하지만 언제든지 수동 저장도 가능합니다).</p>
+          <h3 data-i18n="manual_basic_header_theme_title">테마 전환</h3>
+          <p data-i18n="manual_basic_header_theme_desc">달/태양 아이콘을 클릭하여 라이트 모드와 다크 모드 간을 전환합니다.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ko/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
+        </div>
+      </article>
+
       <!-- 1. Gantt Chart Manual -->
       <article id="content-gantt" class="manual-article">
         <h1 data-i18n="manual_gantt_heading">간트 차트 사용법</h1>

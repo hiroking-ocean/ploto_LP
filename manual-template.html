@@ -101,6 +101,7 @@
 
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="#" data-manual-link="basic" data-i18n="manual_menu_basic">基本操作</a>
     <a href="#" data-manual-link="gantt" data-i18n="manual_menu_gantt">ガントチャート (工程表)</a>
     <a href="#" data-manual-link="kanban" data-i18n="manual_menu_kanban">カンバン (進捗ボード)</a>
     <a href="#" data-manual-link="matrix" data-i18n="manual_menu_matrix">優先度マトリクス</a>
@@ -114,6 +115,9 @@
     <aside class="manual-sidebar">
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto マニュアル</div>
       <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="basic">
+          <a href="#" data-manual-link="basic" data-i18n="manual_menu_basic">基本操作</a>
+        </li>
         <li class="manual-menu-item" data-menu-id="gantt">
           <a href="#" data-manual-link="gantt" data-i18n="manual_menu_gantt">ガントチャート (工程表)</a>
         </li>
@@ -133,6 +137,110 @@
 
     <!-- Main Content -->
     <main class="manual-content">
+      <!-- 0. Basic Operations Manual -->
+      <article id="content-basic" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_basic_heading">基本操作の使い方</h1>
+        <p data-i18n="manual_basic_intro">Plotoの共通の画面操作や、ファイルの保存・管理方法について説明します。</p>
+
+        <h2 data-i18n="manual_basic_section_start">1. スタートアップ画面</h2>
+        <p data-i18n="manual_basic_start_desc">Plotoを起動すると、まずプロジェクトの作成や読み込みを行うスタートポップアップが表示されます。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_start_new_title">新規プロジェクトの作成</h3>
+          <p data-i18n="manual_basic_start_new_desc">『新規プロジェクトを作成』ボタンをクリックすると、新しい空のプロジェクトが開かれ、すぐにタスク管理を開始できます。</p>
+          <h3 data-i18n="manual_basic_start_open_title">既存ファイルを開く</h3>
+          <p data-i18n="manual_basic_start_open_desc">『ローカルファイルを開く』ボタンをクリックすると、ファイル選択ダイアログが開き、お使いのPC内に保存されている `.ploto` ファイルを読み込んで編集を再開できます。</p>
+          <h3 data-i18n="manual_basic_start_recent_title">最近開いたプロジェクト</h3>
+          <p data-i18n="manual_basic_start_recent_desc">過去に Ploto で開いたプロジェクトがリスト表示されます。ファイルパスを探す手間なく、クリックするだけで素早く最新の状態で開くことが可能です。</p>
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_file">2. ファイル・ヘルプメニュー</h2>
+        <p data-i18n="manual_basic_file_desc">画面上部のヘッダー左側にあるメニューから、プロジェクトファイルの操作や各種情報の確認ができます。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_file_menu_title">ファイルメニュー</h3>
+          <p data-i18n="manual_basic_file_menu_desc">『ファイル』メニューから以下の操作が行えます。<br>・**新規**: 新しいプロジェクトファイルを作成します。<br>・**開く**: PC内のプロジェクトファイル（.ploto）を選択して読み込みます。<br>・**保存**: 現在のプロジェクトを上書き保存します。<br>・**別名で保存**: 新規ファイル名で保存します。<br>・**Excel出力/印刷 [PRO]**: ガントチャートやタスク一覧をExcelやPDFとしてエクスポートします（Pro機能）。</p>
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_help_menu_title">ヘルプメニュー</h3>
+          <p data-i18n="manual_basic_help_menu_desc">『ヘルプ』メニューから以下の操作が行えます。<br>・**マニュアル**: 本マニュアルページを開きます。<br>・**更新履歴**: アプリの更新履歴を確認できます。<br>・**ライセンス**: ライセンス情報を確認します。<br>・**Language**: アプリの表示言語（日本語、英語、ドイツ語、フランス語、韓国語）を切り替えます。</p>
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_sidebar">3. サイドバー機能</h2>
+        <p data-i18n="manual_basic_sidebar_desc">画面左側のサイドバーの各アイコンをクリックすることで、プロジェクト全体のビュー切り替え、タスク検索、マイルストーン管理などの設定パネルを表示できます。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_sidebar_menu_title">サイドバーの切り替えパネル (3種類)</h3>
+          <p data-i18n="manual_basic_sidebar_menu_intro">サイドバーの主なメニューは以下の通りです。</p>
+          <ul class="manual-icon-list">
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12 3-10 5 10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_list_title">一覧</strong>: 
+                <span data-i18n="manual_basic_sidebar_list_desc">新規プロジェクト、カンバン、優先度マトリクス、メンバー別タスク、ホワイトボードなどの各ビューの追加と切り替えを行います。</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_search_title">タスク検索</strong>: 
+                <span data-i18n="manual_basic_sidebar_search_desc">タスク名を入力して、プロジェクト内のタスクをキーワードで検索します。</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_milestone_title">マイルストーン</strong>: 
+                <span data-i18n="manual_basic_sidebar_milestone_desc">プロジェクトに設定された重要なマイルストーンの一覧管理や確認が行えます。</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_settings_title">設定</strong>: 
+                <span data-i18n="manual_basic_sidebar_settings_desc">アプリケーションの設定を行います。</span>
+              </div>
+            </li>
+          </ul>
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_header">4. ヘッダーコントロール</h2>
+        <p data-i18n="manual_basic_header_desc">画面右上にあるボタン群から、直感的な操作や設定が可能です。</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_header_undo_title">元に戻す・やり直し (Undo / Redo)</h3>
+          <p data-i18n="manual_basic_header_undo_desc">矢印アイコン（またはショートカットキー Ctrl+Z / Ctrl+Y）を使って、直前の操作を元に戻したり、やり直したりできます。</p>
+          <h3 data-i18n="manual_basic_header_save_title">手動保存</h3>
+          <p data-i18n="manual_basic_header_save_desc">フロッピーディスクのアイコンをクリックすることで、現在の変更内容を手動で即座に保存します（基本的には自動保存されますが、手動での保存も可能です）。</p>
+          <h3 data-i18n="manual_basic_header_theme_title">テーマ切り替え</h3>
+          <p data-i18n="manual_basic_header_theme_desc">月/太陽のアイコンをクリックすることで、ライトモードとダークモードを切り替えることができます。</p>
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
+        </div>
+      </article>
+
       <!-- 1. Gantt Chart Manual -->
       <article id="content-gantt" class="manual-article" style="display: none;">
         <h1 data-i18n="manual_gantt_heading">ガントチャート（工程表）の使い方</h1>

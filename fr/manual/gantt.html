@@ -99,6 +99,7 @@
 
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/fr/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Opérations de base</a>
     <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Diagramme de Gantt</a>
     <a href="/ploto_LP/fr/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Tableau Kanban</a>
     <a href="/ploto_LP/fr/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Matrice des Priorités</a>
@@ -112,6 +113,9 @@
     <aside class="manual-sidebar">
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Manuel Ploto</div>
       <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="basic">
+          <a href="/ploto_LP/fr/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Opérations de base</a>
+        </li>
         <li class="manual-menu-item active" data-menu-id="gantt">
           <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Diagramme de Gantt</a>
         </li>
@@ -131,6 +135,110 @@
 
     <!-- Main Content -->
     <main class="manual-content">
+      <!-- 0. Basic Operations Manual -->
+      <article id="content-basic" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_basic_heading">Comment utiliser les opérations de base</h1>
+        <p data-i18n="manual_basic_intro">Cette section explique les opérations d'écran courantes et comment sauvegarder/gérer les fichiers dans Ploto.</p>
+
+        <h2 data-i18n="manual_basic_section_start">1. Écran de démarrage</h2>
+        <p data-i18n="manual_basic_start_desc">Lorsque vous lancez Ploto, une fenêtre contextuelle de démarrage apparaît pour créer ou ouvrir des projets.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_start_new_title">Créer un nouveau projet</h3>
+          <p data-i18n="manual_basic_start_new_desc">En cliquant sur le bouton 'Créer un nouveau projet', vous ouvrez un nouveau projet vide afin de commencer à gérer vos tâches immédiatement.</p>
+          <h3 data-i18n="manual_basic_start_open_title">Ouvrir des fichiers existants</h3>
+          <p data-i18n="manual_basic_start_open_desc">En cliquant sur le bouton 'Ouvrir un fichier local', vous ouvrez une boîte de dialogue de sélection de fichier pour charger et reprendre l'édition d'un fichier `.ploto` enregistré sur votre PC.</p>
+          <h3 data-i18n="manual_basic_start_recent_title">Projets récemment ouverts</h3>
+          <p data-i18n="manual_basic_start_recent_desc">Les projets que vous avez précédemment ouverts dans Ploto sont répertoriés. Vous pouvez les ouvrir rapidement d'un simple clic sans avoir à chercher le chemin du fichier.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/fr/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_file">2. Menu Fichier et Aide</h2>
+        <p data-i18n="manual_basic_file_desc">Depuis le menu situé à gauche de l'en-tête supérieur, vous pouvez gérer les fichiers de projet et afficher diverses informations.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_file_menu_title">Menu Fichier</h3>
+          <p data-i18n="manual_basic_file_menu_desc">Le menu 'Fichier' vous permet d'effectuer les opérations suivantes :<br>• **Nouveau**: Créer un nouveau fichier de projet.<br>• **Ouvrir**: Sélectionner et charger un fichier de projet (.ploto) depuis votre PC.<br>• **Enregistrer**: Remplacer et enregistrer le projet en cours.<br>• **Enregistrer sous**: Enregistrer le projet sous un nouveau nom de fichier.<br>• **Export Excel / Impression [PRO]**: Exporter des diagrammes de Gantt ou des listes de tâches vers Excel ou PDF (fonctionnalités Pro).</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/fr/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_help_menu_title">Menu Aide</h3>
+          <p data-i18n="manual_basic_help_menu_desc">Le menu 'Aide' vous permet d'effectuer les opérations suivantes :<br>• **Manuel**: Ouvrir cette page de manuel.<br>• **Notes de mise à jour**: Afficher l'historique des mises à jour de l'application.<br>• **Licence**: Afficher les informations de licence.<br>• **Language**: Changer la langue de l'application (japonais, anglais, allemand, français, coréen).</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/fr/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_sidebar">3. Fonctionnalités de la barre latérale</h2>
+        <p data-i18n="manual_basic_sidebar_desc">En cliquant sur les icônes de la barre latérale gauche, vous pouvez afficher des panneaux pour changer de vue de projet, rechercher des tâches, gérer des jalons et ajuster les paramètres.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_sidebar_menu_title">Panneaux de la barre latérale (3 types)</h3>
+          <p data-i18n="manual_basic_sidebar_menu_intro">Les principaux menus de la barre latérale sont les suivants :</p>
+          <ul class="manual-icon-list">
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12 3-10 5 10 5 10-5-10-5Z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_list_title">Liste</strong>: 
+                <span data-i18n="manual_basic_sidebar_list_desc">Ajoutez ou basculez entre les vues de projet, y compris les diagrammes de Gantt, les tableaux Kanban, les matrices de priorité, les tâches spécifiques aux membres et les tableaux blancs.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_search_title">Recherche de tâches</strong>: 
+                <span data-i18n="manual_basic_sidebar_search_desc">Saisissez un nom de tâche pour rechercher des tâches dans le projet par mots-clés.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_milestone_title">Jalons</strong>: 
+                <span data-i18n="manual_basic_sidebar_milestone_desc">Gérez et vérifiez la liste des jalons importants définis dans le projet.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_settings_title">Paramètres</strong>: 
+                <span data-i18n="manual_basic_sidebar_settings_desc">Configurez les paramètres de l'application.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/fr/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_header">4. Contrôles de l'en-tête</h2>
+        <p data-i18n="manual_basic_header_desc">À partir des boutons situés en haut à droite, vous pouvez effectuer des opérations rapides et ajuster les paramètres.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_header_undo_title">Annuler / Rétablir</h3>
+          <p data-i18n="manual_basic_header_undo_desc">À l'aide des icônes fléchées (ou des raccourcis Ctrl+Z / Ctrl+Y), vous pouvez annuler ou rétablir vos actions récentes.</p>
+          <h3 data-i18n="manual_basic_header_save_title">Sauvegarde manuelle</h3>
+          <p data-i18n="manual_basic_header_save_desc">Cliquez sur l'icône de disquette pour enregistrer immédiatement et manuellement vos modifications en cours (l'application effectue des sauvegardes automatiques, mais vous pouvez également enregistrer manuellement à tout moment).</p>
+          <h3 data-i18n="manual_basic_header_theme_title">Changement de thème</h3>
+          <p data-i18n="manual_basic_header_theme_desc">Cliquez sur l'icône de lune/soleil pour basculer entre le mode clair et le mode sombre.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/fr/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
+        </div>
+      </article>
+
       <!-- 1. Gantt Chart Manual -->
       <article id="content-gantt" class="manual-article">
         <h1 data-i18n="manual_gantt_heading">Comment utiliser le diagramme de Gantt</h1>

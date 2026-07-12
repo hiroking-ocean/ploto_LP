@@ -6,7 +6,7 @@
    使い方: node build.js   （または npm run build）
    ========================================================================== */
 
-import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import * as cheerio from "cheerio";
@@ -175,7 +175,7 @@ function buildSitemapTxt() {
   return LANGS.map((lang) => urlFor(lang)).join("\n") + "\n";
 }
 
-const MANUAL_PAGES = ["gantt", "kanban", "matrix"];
+const MANUAL_PAGES = ["basic", "gantt", "kanban", "matrix"];
 const manualTemplate = readFileSync(join(__dirname, "manual-template.html"), "utf8");
 
 function buildManualPage(lang, pageName) {
@@ -264,7 +264,17 @@ function buildManualPage(lang, pageName) {
   // 11. スクリーンショット画像のローカライズと絶対パス化
   $("[data-screenshot-path]").each((_, el) => {
     const file = $(el).attr("data-screenshot-path");
-    const relativePath = `assets/manual/${lang}/${file}`;
+    let relativePath = `assets/manual/${lang}/${file}`;
+
+    // 同名で拡張子が .gif のファイルが存在するか確認
+    const gifFile = file.replace(/\.[^/.]+$/, ".gif");
+    const relativePathGif = `assets/manual/${lang}/${gifFile}`;
+    const absolutePathGif = join(__dirname, relativePathGif);
+
+    if (existsSync(absolutePathGif)) {
+      relativePath = relativePathGif;
+    }
+
     $(el).attr("src", absolutize(relativePath));
   });
 

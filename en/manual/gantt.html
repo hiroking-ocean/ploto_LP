@@ -99,6 +99,7 @@
 
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
+    <a href="/ploto_LP/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
     <a href="/ploto_LP/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
     <a href="/ploto_LP/en/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban Board</a>
     <a href="/ploto_LP/en/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Priority Matrix</a>
@@ -112,6 +113,9 @@
     <aside class="manual-sidebar">
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto Manual</div>
       <ul class="manual-menu-list">
+        <li class="manual-menu-item" data-menu-id="basic">
+          <a href="/ploto_LP/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
+        </li>
         <li class="manual-menu-item active" data-menu-id="gantt">
           <a href="/ploto_LP/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
         </li>
@@ -131,6 +135,110 @@
 
     <!-- Main Content -->
     <main class="manual-content">
+      <!-- 0. Basic Operations Manual -->
+      <article id="content-basic" class="manual-article" style="display: none;">
+        <h1 data-i18n="manual_basic_heading">How to Use Basic Operations</h1>
+        <p data-i18n="manual_basic_intro">This section explains common screen operations and how to save/manage files in Ploto.</p>
+
+        <h2 data-i18n="manual_basic_section_start">1. Startup Screen</h2>
+        <p data-i18n="manual_basic_start_desc">When you launch Ploto, a start popup will first appear to create or open projects.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_start_new_title">Creating a New Project</h3>
+          <p data-i18n="manual_basic_start_new_desc">Clicking the 'Create New Project' button opens a new empty project so you can start managing tasks right away.</p>
+          <h3 data-i18n="manual_basic_start_open_title">Opening Existing Files</h3>
+          <p data-i18n="manual_basic_start_open_desc">Clicking the 'Open Local File' button opens a file selection dialog to load and resume editing a `.ploto` file saved on your PC.</p>
+          <h3 data-i18n="manual_basic_start_recent_title">Recently Opened Projects</h3>
+          <p data-i18n="manual_basic_start_recent_desc">Projects you have previously opened in Ploto are listed. You can quickly open them with a single click without searching for the file path.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_file">2. File &amp; Help Menu</h2>
+        <p data-i18n="manual_basic_file_desc">From the menu on the left side of the top header, you can manage project files and view various information.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_file_menu_title">File Menu</h3>
+          <p data-i18n="manual_basic_file_menu_desc">The 'File' menu allows you to perform the following:<br>• **New**: Create a new project file.<br>• **Open**: Select and load a project file (.ploto) from your PC.<br>• **Save**: Overwrite and save the current project.<br>• **Save As**: Save the project under a new file name.<br>• **Excel Export / Print [PRO]**: Export Gantt charts or task lists as Excel or PDF (Pro features).</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_help_menu_title">Help Menu</h3>
+          <p data-i18n="manual_basic_help_menu_desc">The 'Help' menu allows you to perform the following:<br>• **Manual**: Open this manual page.<br>• **Changelog**: View the app update history.<br>• **License**: View license information.<br>• **Language**: Switch the app language (Japanese, English, German, French, Korean).</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_sidebar">3. Sidebar Features</h2>
+        <p data-i18n="manual_basic_sidebar_desc">By clicking the icons on the left sidebar, you can display panels for switching project views, searching tasks, managing milestones, and adjusting settings.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_sidebar_menu_title">Sidebar Panels (3 Types)</h3>
+          <p data-i18n="manual_basic_sidebar_menu_intro">The main sidebar menus are as follows:</p>
+          <ul class="manual-icon-list">
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12 3-10 5 10 5 10-5-10-5Z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_list_title">List</strong>: 
+                <span data-i18n="manual_basic_sidebar_list_desc">Add or switch between project views, including Gantt charts, Kanban boards, priority matrices, member-specific tasks, and whiteboards.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_search_title">Task Search</strong>: 
+                <span data-i18n="manual_basic_sidebar_search_desc">Type in a task name to search for tasks within the project by keywords.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_milestone_title">Milestones</strong>: 
+                <span data-i18n="manual_basic_sidebar_milestone_desc">Manage and check lists of important milestones set in the project.</span>
+              </div>
+            </li>
+            <li>
+              <span class="manual-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </span>
+              <div>
+                <strong data-i18n="manual_basic_sidebar_settings_title">Settings</strong>: 
+                <span data-i18n="manual_basic_sidebar_settings_desc">Configure application settings.</span>
+              </div>
+            </li>
+          </ul>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
+        </div>
+
+        <h2 data-i18n="manual_basic_section_header">4. Header Controls</h2>
+        <p data-i18n="manual_basic_header_desc">From the buttons on the top right, you can perform quick operations and adjust settings.</p>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_basic_header_undo_title">Undo / Redo</h3>
+          <p data-i18n="manual_basic_header_undo_desc">Using the arrow icons (or shortcuts Ctrl+Z / Ctrl+Y), you can revert or redo your recent actions.</p>
+          <h3 data-i18n="manual_basic_header_save_title">Manual Save</h3>
+          <p data-i18n="manual_basic_header_save_desc">Click the floppy disk icon to immediately save your current changes manually (the app autosaves, but you can also save manually at any time).</p>
+          <h3 data-i18n="manual_basic_header_theme_title">Theme Switcher</h3>
+          <p data-i18n="manual_basic_header_theme_desc">Click the moon/sun icon to toggle between light and dark mode.</p>
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
+        </div>
+      </article>
+
       <!-- 1. Gantt Chart Manual -->
       <article id="content-gantt" class="manual-article">
         <h1 data-i18n="manual_gantt_heading">How to Use Gantt Chart</h1>
