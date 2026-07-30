@@ -10,36 +10,36 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-manual-title="">Opérations de base | Manuel Ploto</title>
-  <meta name="description" content="Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).">
+  <title data-manual-title="">Tableau blanc | Manuel Ploto</title>
+  <meta name="description" content="Le tableau blanc de Ploto : placer des cartes de tâches, les regrouper par hiérarchie, ajouter formes et connecteurs, et bâtir un tableau de bord.">
 
   <!-- SEO & OGP -->
-  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html">
-  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html">
-  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html">
-  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html">
-  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html">
-  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html">
-  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html">
+  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html">
+  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html">
+  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html">
+  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html">
+  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html">
+  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html">
+  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html">
 
   <!-- OGP / Twitter （中身は build.js が各言語・各ページの値で埋める） -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ploto">
-  <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html">
+  <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="ko_KR">
   <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
-  <meta property="og:title" content="Opérations de base | Manuel Ploto">
-  <meta property="og:description" content="Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).">
+  <meta property="og:title" content="Tableau blanc | Manuel Ploto">
+  <meta property="og:description" content="Le tableau blanc de Ploto : placer des cartes de tâches, les regrouper par hiérarchie, ajouter formes et connecteurs, et bâtir un tableau de bord.">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/fr/gantt-overview.png">
-  <meta property="og:image:alt" content="Opérations de base">
+  <meta property="og:image:alt" content="Tableau blanc">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Opérations de base | Manuel Ploto">
-  <meta name="twitter:description" content="Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).">
+  <meta name="twitter:title" content="Tableau blanc | Manuel Ploto">
+  <meta name="twitter:description" content="Le tableau blanc de Ploto : placer des cartes de tâches, les regrouper par hiérarchie, ajouter formes et connecteurs, et bâtir un tableau de bord.">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/fr/gantt-overview.png">
-  <meta name="twitter:image:alt" content="Opérations de base">
+  <meta name="twitter:image:alt" content="Tableau blanc">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
@@ -132,7 +132,7 @@
     <aside class="manual-sidebar">
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Manuel Ploto</div>
       <ul class="manual-menu-list">
-        <li class="manual-menu-item active" data-menu-id="basic">
+        <li class="manual-menu-item" data-menu-id="basic">
           <a href="/ploto_LP/fr/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Opérations de base</a>
         </li>
         <li class="manual-menu-item" data-menu-id="gantt">
@@ -144,7 +144,7 @@
         <li class="manual-menu-item" data-menu-id="note">
           <a href="/ploto_LP/fr/manual/note.html" data-manual-link="note" data-i18n="manual_menu_note">Notes</a>
         </li>
-        <li class="manual-menu-item" data-menu-id="whiteboard">
+        <li class="manual-menu-item active" data-menu-id="whiteboard">
           <a href="/ploto_LP/fr/manual/whiteboard.html" data-manual-link="whiteboard" data-i18n="manual_menu_whiteboard">Tableau blanc</a>
         </li>
         <li class="manual-menu-item" data-menu-id="matrix">
@@ -161,7 +161,7 @@
     <!-- Main Content -->
     <main class="manual-content">
       <!-- 0. Basic Operations Manual -->
-      <article id="content-basic" class="manual-article">
+      <article id="content-basic" class="manual-article" style="display: none;">
         <h1 data-i18n="manual_basic_heading">Comment utiliser les opérations de base</h1>
         <p data-i18n="manual_basic_intro">Cette section explique les opérations d'écran courantes et comment sauvegarder/gérer les fichiers dans Ploto.</p>
 
@@ -636,7 +636,7 @@
       </article>
 
       <!-- 5. Whiteboard Manual -->
-      <article id="content-whiteboard" class="manual-article" style="display: none;">
+      <article id="content-whiteboard" class="manual-article">
         <h1 data-i18n="manual_whiteboard_heading">Comment utiliser le tableau blanc</h1>
         <p data-i18n="manual_whiteboard_intro">Le tableau blanc est un plan de bataille où vous disposez librement vos tâches sous forme de cartes. Vous pouvez y dessiner des relations avec des formes et des pense-bêtes, ou y déposer des widgets de synthèse pour en faire un tableau de bord. Ce qui le distingue d'un tableau blanc en ligne classique : les cartes ne sont pas des papillons statiques, elles affichent en permanence l'avancement, les échéances et les responsables à jour. Mettez l'avancement à jour dans le diagramme de Gantt et le tableau suit automatiquement.</p>
 

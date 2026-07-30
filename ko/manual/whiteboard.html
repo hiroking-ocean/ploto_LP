@@ -10,36 +10,36 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-manual-title="">칸반 (진행 보드) | Ploto 매뉴얼</title>
-  <meta name="description" content="Ploto 칸반(진행 보드) 사용법. 공정 열 만들기, 카드 이동, 공정별 표준 ToDo, 완료 시 확인, 필터를 설명합니다.">
+  <title data-manual-title="">화이트보드 | Ploto 매뉴얼</title>
+  <meta name="description" content="Ploto 화이트보드 사용법. 작업 카드 배치, 계층을 반영한 묶음 표시, 도형과 커넥터, 진행 대시보드 위젯을 설명합니다.">
 
   <!-- SEO & OGP -->
-  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html">
-  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
-  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html">
-  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html">
-  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html">
-  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html">
-  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
+  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html">
+  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html">
+  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html">
+  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html">
+  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html">
+  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html">
+  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html">
 
   <!-- OGP / Twitter （中身は build.js が各言語・各ページの値で埋める） -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ploto">
-  <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html">
+  <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:locale:alternate" content="fr_FR">
   <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
-  <meta property="og:title" content="칸반 (진행 보드) | Ploto 매뉴얼">
-  <meta property="og:description" content="Ploto 칸반(진행 보드) 사용법. 공정 열 만들기, 카드 이동, 공정별 표준 ToDo, 완료 시 확인, 필터를 설명합니다.">
+  <meta property="og:title" content="화이트보드 | Ploto 매뉴얼">
+  <meta property="og:description" content="Ploto 화이트보드 사용법. 작업 카드 배치, 계층을 반영한 묶음 표시, 도형과 커넥터, 진행 대시보드 위젯을 설명합니다.">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
-  <meta property="og:image:alt" content="칸반 (진행 보드)">
+  <meta property="og:image:alt" content="화이트보드">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="칸반 (진행 보드) | Ploto 매뉴얼">
-  <meta name="twitter:description" content="Ploto 칸반(진행 보드) 사용법. 공정 열 만들기, 카드 이동, 공정별 표준 ToDo, 완료 시 확인, 필터를 설명합니다.">
+  <meta name="twitter:title" content="화이트보드 | Ploto 매뉴얼">
+  <meta name="twitter:description" content="Ploto 화이트보드 사용법. 작업 카드 배치, 계층을 반영한 묶음 표시, 도형과 커넥터, 진행 대시보드 위젯을 설명합니다.">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
-  <meta name="twitter:image:alt" content="칸반 (진행 보드)">
+  <meta name="twitter:image:alt" content="화이트보드">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
@@ -138,13 +138,13 @@
         <li class="manual-menu-item" data-menu-id="gantt">
           <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">간트 차트 (공정표)</a>
         </li>
-        <li class="manual-menu-item active" data-menu-id="kanban">
+        <li class="manual-menu-item" data-menu-id="kanban">
           <a href="/ploto_LP/ko/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">칸반 (진행 보드)</a>
         </li>
         <li class="manual-menu-item" data-menu-id="note">
           <a href="/ploto_LP/ko/manual/note.html" data-manual-link="note" data-i18n="manual_menu_note">노트</a>
         </li>
-        <li class="manual-menu-item" data-menu-id="whiteboard">
+        <li class="manual-menu-item active" data-menu-id="whiteboard">
           <a href="/ploto_LP/ko/manual/whiteboard.html" data-manual-link="whiteboard" data-i18n="manual_menu_whiteboard">화이트보드</a>
         </li>
         <li class="manual-menu-item" data-menu-id="matrix">
@@ -345,7 +345,7 @@
       </article>
 
       <!-- 2. Kanban Board Manual -->
-      <article id="content-kanban" class="manual-article">
+      <article id="content-kanban" class="manual-article" style="display: none;">
         <h1 data-i18n="manual_kanban_heading">칸반(진행 보드) 사용법</h1>
         <p data-i18n="manual_kanban_intro">칸반은 간트 차트와 동일한 작업을 '공정(열)'의 흐름으로 관리하는 화면입니다. 카드를 오른쪽으로 끌기만 하면 진행 상황이 기록되고, 그 결과는 간트 차트에도 그대로 반영됩니다. 일정으로 생각하는 간트 차트와 달리 칸반은 '지금 누가 어느 단계의 일을 하고 있는지' 파악하는 데 적합합니다.</p>
 
@@ -636,7 +636,7 @@
       </article>
 
       <!-- 5. Whiteboard Manual -->
-      <article id="content-whiteboard" class="manual-article" style="display: none;">
+      <article id="content-whiteboard" class="manual-article">
         <h1 data-i18n="manual_whiteboard_heading">화이트보드 사용법</h1>
         <p data-i18n="manual_whiteboard_intro">화이트보드는 작업을 카드로 자유롭게 배치할 수 있는 '작전판'입니다. 도형과 메모지로 관계를 그려 넣거나 집계 위젯을 놓아 대시보드로 만들 수도 있습니다. 일반적인 온라인 화이트보드와 다른 점은, 놓은 카드가 정적인 쪽지가 아니라 진행률·기한·담당자를 항상 최신 상태로 계속 표시한다는 것입니다. 간트 차트에서 진행률을 갱신하면 보드의 표시도 자동으로 따라갑니다.</p>
 

@@ -126,7 +126,7 @@ export default {
     manual_basic_start_new_title: "새 프로젝트 생성",
     manual_basic_start_new_desc: "'새 프로젝트 작성' 버튼을 클릭하면 새로운 빈 프로젝트가 열려 즉시 작업을 관리할 수 있습니다.",
     manual_basic_start_open_title: "기존 파일 열기",
-    manual_basic_start_open_desc: "'로컬 파일 열기' 버튼을 클릭하면 파일 선택 대화상자가 열리고 PC에 저장된 `.ploto` 파일을 불러와 편집을 재개할 수 있습니다.",
+    manual_basic_start_open_desc: "'로컬 파일 열기' 버튼을 클릭하면 파일 선택 대화상자가 열리고 PC에 저장된 .ploto 파일을 불러와 편집을 재개할 수 있습니다.",
     manual_basic_start_recent_title: "최근에 연 프로젝트",
     manual_basic_start_recent_desc: "이전에 Ploto에서 열었던 프로젝트가 목록에 표시됩니다. 파일 경로를 찾을 필요 없이 한 번의 클릭으로 빠르게 열 수 있습니다.",
     manual_basic_heading: "기본 조작 사용법",
@@ -134,9 +134,9 @@ export default {
     manual_basic_section_file: "2. 파일 및 도움말 메뉴",
     manual_basic_file_desc: "상단 헤더 왼쪽의 메뉴에서 프로젝트 파일을 관리하고 다양한 정보를 확인할 수 있습니다.",
     manual_basic_file_menu_title: "파일 메뉴",
-    manual_basic_file_menu_desc: "'파일' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• **새로 만들기**: 새로운 프로젝트 파일을 생성합니다.<br>• **열기**: PC에서 프로젝트 파일(.ploto)을 선택하여 불러옵니다.<br>• **저장**: 현재 프로젝트를 덮어쓰고 저장합니다.<br>• **다른 이름으로 저장**: 새로운 파일 이름으로 프로젝트를 저장합니다.<br>• **Excel 출력 / 인쇄 [PRO]**: 간트 차트나 작업 목록을 Excel 또는 PDF로 내보냅니다(프로 기능).",
+    manual_basic_file_menu_desc: "'파일' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• <strong>새로 만들기</strong>: 새로운 프로젝트 파일을 생성합니다.<br>• <strong>열기</strong>: PC에서 프로젝트 파일(.ploto)을 선택하여 불러옵니다.<br>• <strong>저장</strong>: 현재 프로젝트를 덮어쓰고 저장합니다.<br>• <strong>다른 이름으로 저장</strong>: 새로운 파일 이름으로 프로젝트를 저장합니다.<br>• <strong>Excel 출력 / 인쇄 [PRO]</strong>: 간트 차트나 작업 목록을 Excel 또는 PDF로 내보냅니다(프로 기능).",
     manual_basic_help_menu_title: "도움말 메뉴",
-    manual_basic_help_menu_desc: "'도움말' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• **매뉴얼**: 이 매뉴얼 페이지를 엽니다.<br>• **업데이트 이력**: 앱의 업데이트 내역을 확인합니다.<br>• **라이선스**: 라이선스 정보를 확인합니다.<br>• **Language**: 앱 표시 언어(일본어, 영어, 독일어, 프랑스어, 한국어)를 전환합니다.",
+    manual_basic_help_menu_desc: "'도움말' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• <strong>튜토리얼 시작</strong>: 실제 앱 화면을 직접 조작하면서 기본 흐름을 익힐 수 있습니다. 간트 차트·칸반·노트 세 가지 과정이 있으며 언제든 다시 시작할 수 있습니다.<br>• <strong>매뉴얼</strong>: 이 매뉴얼 페이지를 엽니다.<br>• <strong>업데이트 이력</strong>: 앱의 업데이트 내역을 확인합니다.<br>• <strong>라이선스</strong>: 라이선스 정보를 확인합니다.<br>• <strong>Language</strong>: 앱 표시 언어(일본어, 영어, 독일어, 프랑스어, 한국어)를 전환합니다.",
     manual_basic_section_sidebar: "3. 사이드바 기능",
     manual_basic_sidebar_desc: "왼쪽 사이드바의 아이콘을 클릭하여 프로젝트 보기 전환, 작업 검색, 마일스톤 관리 및 설정 등의 패널을 표시할 수 있습니다.",
     manual_basic_sidebar_menu_title: "사이드바 전환 패널 (3종류)",
@@ -161,7 +161,17 @@ export default {
     manual_menu_gantt: "간트 차트 (공정표)",
     manual_menu_kanban: "칸반 (진행 보드)",
     manual_menu_matrix: "우선순위 매트릭스",
+    manual_menu_note: "노트",
+    manual_menu_whiteboard: "화이트보드",
     manual_back_to_lp: "← 공식 사이트로 돌아가기",
+
+    // --- Manual Meta Descriptions (検索結果のスニペット用) ---
+    manual_basic_meta_desc: "Ploto 기본 조작. 시작 화면, 파일·도움말 메뉴, 사이드바 패널, 저장과 실행 취소 등 헤더 기능의 사용법을 설명합니다.",
+    manual_gantt_meta_desc: "Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.",
+    manual_kanban_meta_desc: "Ploto 칸반(진행 보드) 사용법. 공정 열 만들기, 카드 이동, 공정별 표준 ToDo, 완료 시 확인, 필터를 설명합니다.",
+    manual_matrix_meta_desc: "Ploto 우선순위 매트릭스 사용법. 긴급도와 중요도 두 축으로 작업을 배치하고 우선순위 점수·표시 모드·필터로 정리합니다.",
+    manual_note_meta_desc: "Ploto 노트 사용법. 작업 계층을 그대로 목차로 삼아 회의록·작업 로그를 작성하는 방법과 서식 설정, 본문 검색을 설명합니다.",
+    manual_whiteboard_meta_desc: "Ploto 화이트보드 사용법. 작업 카드 배치, 계층을 반영한 묶음 표시, 도형과 커넥터, 진행 대시보드 위젯을 설명합니다.",
 
     // --- Manual Common / Coming Soon ---
     manual_coming_soon_title: "준비 중",
@@ -209,6 +219,184 @@ export default {
     
     manual_gantt_undo_title: "실행 취소 / 다시 실행 (Undo / Redo)",
     manual_gantt_undo_desc: "실수를 해도 걱정하지 마세요. Excel과 마찬가지로 <kbd>Ctrl + Z</kbd> (실행 취소) 및 <kbd>Ctrl + Y</kbd> (다시 실행) 키보드 단축키를 사용하여 최근 작업을 단계별로 되돌리거나 다시 적용할 수 있습니다.",
+
+    // --- Manual Kanban Page ---
+    manual_kanban_heading: "칸반(진행 보드) 사용법",
+    manual_kanban_intro: "칸반은 간트 차트와 동일한 작업을 '공정(열)'의 흐름으로 관리하는 화면입니다. 카드를 오른쪽으로 끌기만 하면 진행 상황이 기록되고, 그 결과는 간트 차트에도 그대로 반영됩니다. 일정으로 생각하는 간트 차트와 달리 칸반은 '지금 누가 어느 단계의 일을 하고 있는지' 파악하는 데 적합합니다.",
+
+    manual_kanban_section_setup: "1. 보드와 공정 준비",
+    manual_kanban_setup_desc: "먼저 보드를 만들고, 팀이 실제로 일하는 흐름에 맞게 공정 열을 배치합니다.",
+
+    manual_kanban_add_board_title: "칸반 보드 추가하기",
+    manual_kanban_add_board_desc: "화면 왼쪽 사이드바의 '목록' 버튼을 클릭하고 '칸반 보드' 오른쪽의 '＋' 버튼을 누릅니다. 보드 이름을 입력해 확정하면 화면 위쪽에 탭이 추가되고, 간트 차트에서 이미 만든 작업이 '미배치' 열에 놓인 상태로 보드가 열립니다. 작업을 두 번 등록할 필요가 없습니다.<br>※무료 버전에서는 하나의 .ploto 파일당 최대 3개의 보드를 새로 만들 수 있습니다(다른 파일을 만들면 그 파일에서 다시 3개까지 만들 수 있습니다).",
+
+    manual_kanban_column_title: "공정 열 만들기와 편집하기",
+    manual_kanban_column_desc: "새로 만든 보드에는 '미배치'와 '완료' 두 열만 있습니다. 열과 열 사이의 '＋' 버튼을 눌러 '설계', '진행 중', '검토' 등 팀의 공정을 삽입하세요. 열 머리글에서는 다음 작업을 할 수 있습니다.",
+    manual_kanban_column_icon_title: "아이콘·테마 색상",
+    manual_kanban_column_icon_desc: "열마다 아이콘과 색상을 지정할 수 있습니다. 공정의 성격(진행 중, 확인 대기, 반송 등)을 한눈에 구분할 수 있습니다.",
+    manual_kanban_column_rename_title: "이름 변경",
+    manual_kanban_column_rename_desc: "열 이름을 두 번 클릭하면 그 자리에서 이름을 바꿀 수 있습니다.",
+    manual_kanban_column_move_title: "순서 변경·삭제",
+    manual_kanban_column_move_desc: "좌우 화살표 버튼으로 열 순서를 바꿀 수 있습니다. 열을 삭제하면 그 열에 있던 작업은 첫 번째 열로 이동합니다.",
+
+    manual_kanban_column_memo_title: "열 메모(공정별 규칙)",
+    manual_kanban_column_memo_desc: "열 머리글의 메모 아이콘에서 해당 공정의 진행 방식과 판단 기준을 남길 수 있습니다. '검토는 반드시 2명이 한다', '이 열로 옮기기 전에 견적을 확정한다' 같은 약속을 화면에 두면 담당자가 바뀌어도 운영이 흔들리지 않습니다.",
+
+    manual_kanban_section_flow: "2. 카드로 진행 상황 관리하기",
+    manual_kanban_flow_desc: "카드 한 장이 작업 하나입니다. 카드를 옮기는 동작이 그대로 진행 기록이 됩니다.",
+
+    manual_kanban_move_title: "카드를 공정으로 옮기기",
+    manual_kanban_move_desc: "카드를 목표 열로 끌어다 놓으면 해당 작업의 현재 공정이 바뀝니다. 열이 많을 때는 카드를 잡은 채 화면 좌우 끝으로 가까이 가면 자동으로 가로 스크롤됩니다. 또한 카드가 없는 빈 공간을 끌면 보드 전체를 잡아 움직일 수 있습니다.",
+
+    manual_kanban_card_title: "카드에 표시되는 정보",
+    manual_kanban_card_desc: "카드에는 담당자, 태그, 기한, ToDo 진행 상황처럼 판단에 필요한 정보가 함께 표시됩니다. 기한은 상태에 따라 '기한 초과', '오늘 마감', '마감 임박'으로 색상이 구분되어 위험한 작업이 눈에 들어옵니다. 카드를 클릭하면 화면 오른쪽에 상세 패널이 열려 간트 차트와 동일한 내용(상세·ToDo·메모)을 그 자리에서 편집할 수 있습니다.",
+
+    manual_kanban_todo_template_title: "표준 ToDo(공정별 정형 작업)",
+    manual_kanban_todo_template_desc: "열 머리글의 체크리스트 아이콘을 누르면 '표준 ToDo' 설정란이 열립니다. 여기에 등록한 항목은 그 열에 카드가 들어올 때 해당 작업의 ToDo로 자동 생성됩니다. '검토 요청하기', '검수서 보내기'처럼 매번 같은 절차를 등록해 두면 담당자가 공정 방식을 기억할 필요가 없고 누락도 막을 수 있습니다. 항목은 끌어서 순서를 바꿀 수 있습니다.",
+
+    manual_kanban_progress_title: "ToDo와 진행률의 연동",
+    manual_kanban_progress_desc: "ToDo 왼쪽의 원을 클릭해 완료하면 그만큼 작업의 진행률이 자동으로 올라갑니다(상세 패널의 'ToDo로 진행률 자동 계산'이 켜져 있는 경우). 진행률을 손으로 다시 입력할 필요가 없고, 칸반에서의 작업만으로 간트 차트의 진행 바까지 최신 상태로 유지됩니다.",
+
+    manual_kanban_guard_title: "'완료'로 옮길 때의 확인",
+    manual_kanban_guard_desc: "Ploto는 실제로 끝나지 않은 카드가 '완료'에 들어가는 것을 막습니다. 하위 작업이 끝나지 않았거나, ToDo가 남아 있거나, 진행률이 100%에 이르지 않은 경우에는 완료 열로 옮길 수 없고 이유가 표시됩니다.<br>공정을 건너뛴 경우도 감지합니다. 이전 공정의 표준 ToDo가 완료되지 않은 상태로 다음 공정으로 옮기려 하면 경고가 표시됩니다. 반대로 중간 공정부터 작업을 시작하는 경우에는, 그 이전의 표준 ToDo를 완료 처리해도 되는지 확인이 표시됩니다.",
+
+    manual_kanban_section_filter: "3. 보고 싶은 작업만 남기기",
+    manual_kanban_filter_intro: "하나의 보드에서 여러 프로젝트의 작업을 다룰 수 있으므로 실제 사용에서는 필터가 중요합니다.",
+
+    manual_kanban_filter_title: "필터와 검색",
+    manual_kanban_filter_desc: "보드 위쪽 막대에서 프로젝트, 담당자, 태그로 걸러내고 작업 이름을 키워드로 검색할 수 있습니다. '내 담당분만 보기', '특정 프로젝트의 공정만 추적하기' 같은 사용이 가능합니다. 필터 설정은 보드별로 저장되므로 파일을 다시 열어도 이전 상태에서 작업을 이어갈 수 있습니다.",
+
+    manual_kanban_sync_title: "간트 차트와의 연계",
+    manual_kanban_sync_desc: "칸반과 간트 차트는 같은 작업을 다른 각도에서 보는 것이므로 어느 쪽에서 편집해도 내용은 같습니다. 간트 차트 왼쪽 표의 머리글 행을 두 번 클릭해 '칸반'에 체크하면 각 작업이 현재 어느 공정에 있는지 공정표의 열로 표시할 수 있습니다. 일정과 공정을 한 표에서 함께 확인하고 싶을 때 편리합니다.",
+
+    // --- Manual Priority Matrix Page ---
+    manual_matrix_heading: "우선순위 매트릭스 사용법",
+    manual_matrix_intro: "우선순위 매트릭스는 작업을 '긴급도'와 '중요도'라는 두 축의 평면에 배치해, 정말 먼저 손대야 할 일을 가려내는 화면입니다. 마감이 가까운 순으로 처리하다 보면 계속 뒤로 밀리는 '중요하지만 급하지 않은 일'을 눈에 보이게 합니다. 여기서 다루는 작업도 간트 차트나 칸반과 같은 것입니다.",
+
+    manual_matrix_section_basic: "1. 기본 조작",
+    manual_matrix_basic_desc: "뷰를 추가하고 작업을 평면에 놓기만 해도 우선순위가 정리됩니다.",
+
+    manual_matrix_add_title: "우선순위 매트릭스 추가하기",
+    manual_matrix_add_desc: "화면 왼쪽 사이드바의 '목록' 버튼을 클릭하고 '우선순위 매트릭스' 오른쪽의 '＋' 버튼을 누릅니다. 이름을 입력해 확정하면 화면 위쪽에 탭이 추가되고 매트릭스가 열립니다.",
+
+    manual_matrix_quadrant_title: "네 사분면의 의미",
+    manual_matrix_quadrant_desc: "가로축은 오른쪽으로 갈수록 긴급도가 높고, 세로축은 위로 갈수록 중요도가 높아집니다. 평면은 네 개의 사분면으로 나뉘며 각각 취해야 할 행동이 다릅니다.",
+    manual_matrix_q1_title: "사분면 I: 중요하고 긴급",
+    manual_matrix_q1_desc: "지금 바로 착수해야 하는 작업입니다. 장애 대응이나 마감 직전 작업이 들어갑니다. 이곳이 항상 붐빈다면 계획 단계에 문제가 있다는 신호입니다.",
+    manual_matrix_q2_title: "사분면 II: 중요하지만 긴급하지 않음",
+    manual_matrix_q2_desc: "계획적으로 시간을 확보해야 하는, 성과에 가장 크게 작용하는 작업입니다. 개선 활동, 체계 만들기, 교육 등이 해당합니다. 의식하고 착수하지 않으면 계속 뒤로 밀립니다.",
+    manual_matrix_q3_title: "사분면 III: 긴급하지만 중요하지 않음",
+    manual_matrix_q3_desc: "재촉을 받지만 성과에 미치는 영향은 작은 작업입니다. 정형 업무나 단순 문의 대응 등, 맡길 수 없는지 또는 간소화할 수 없는지 검토할 대상입니다.",
+    manual_matrix_q4_title: "사분면 IV: 긴급하지도 중요하지도 않음",
+    manual_matrix_q4_desc: "정말 필요한지 다시 살펴볼 대상입니다. 그만두어도 되는 작업이 묻혀 있는 경우가 있습니다.",
+
+    manual_matrix_place_title: "작업 배치하기·해제하기",
+    manual_matrix_place_desc: "화면 왼쪽의 '미배치 작업'에는 아직 우선순위가 설정되지 않은 작업이 나열됩니다. 여기서 카드를 평면의 원하는 위치로 끌면 배치가 완료됩니다. 배치한 뒤에도 끌어서 위치를 미세 조정할 수 있어, 사분면 경계 부근에 있는 작업을 어떻게 다룰지 검토할 때 도움이 됩니다. 배치를 취소하려면 카드를 '미배치 작업' 영역으로 다시 끌어다 놓으세요.",
+
+    manual_matrix_score_title: "우선순위 점수",
+    manual_matrix_score_desc: "배치한 위치에서 0~100의 우선순위 점수가 자동으로 계산됩니다. 점수는 긴급도를 40%, 중요도를 60%의 가중치로 평가하므로 급한 정도가 비슷하다면 중요한 쪽이 더 높게 나옵니다. 마감에 끌려 판단이 흔들리는 것을 막기 위한 지표입니다.",
+
+    manual_matrix_detail_title: "상세 패널에서 우선순위 설정하기",
+    manual_matrix_detail_desc: "매트릭스 화면을 열지 않고 작업의 상세 패널에서 우선순위를 설정할 수도 있습니다. 상세 탭의 '매트릭스 활성화'를 켜면 작은 평면이 표시되고, 클릭한 위치가 그 작업의 긴급도·중요도가 됩니다(초기값은 중앙입니다). 간트 차트에서 작업을 만들면서 그 자리에서 우선순위를 정해 두는 방식으로 쓸 수 있습니다.",
+
+    manual_matrix_section_display: "2. 표시 조정과 필터",
+    manual_matrix_display_desc: "작업 수가 늘어도 평면이 보기 어려워지지 않도록 표시 방법을 바꿀 수 있습니다.",
+
+    manual_matrix_mode_title: "표시 모드(상세 카드 / 간단 배지 / 점)",
+    manual_matrix_mode_desc: "'상세 카드'는 담당자와 기한까지 표시하므로 소수의 작업을 검토할 때 적합합니다. 작업이 많아 겹쳐서 보기 어려울 때는 '간단 배지'로 작업 이름만 표시하고, 전체 분포를 한눈에 보고 싶을 때는 '점'으로 바꾸세요. 어느 모드에서든 클릭하면 상세 패널을 열 수 있습니다.",
+
+    manual_matrix_filter_title: "필터와 확대·축소",
+    manual_matrix_filter_desc: "프로젝트, 담당자, 태그, 키워드로 걸러내는 것 외에 '완료 숨기기'로 끝난 작업을 제외하거나 '상위 작업 포함'으로 상위 작업까지 배치 대상에 넣을 수 있습니다. 특정 칸반 뷰를 선택하면 그 보드의 공정에 올라 있는 작업만 표시할 수도 있습니다. 평면은 확대·축소할 수 있어 밀집한 부분을 크게 확인할 수 있습니다. 이 설정들도 뷰별로 저장됩니다.",
+
+    // --- Manual Note Page ---
+    manual_note_heading: "노트 사용법",
+    manual_note_intro: "노트는 프로젝트의 작업을 위에서부터 차례로 늘어놓아 '한 편의 긴 문서'로 다루는 화면입니다. 왼쪽 아웃라인은 간트 차트의 상하위 관계가 그대로 목차가 되므로, 회의록이나 작업 로그의 구성을 직접 만들 필요가 없습니다. 작성한 내용은 해당 작업에 연결되어 저장되므로 '그 이야기가 어느 작업 건이었는지'를 나중에 다시 찾을 필요가 없습니다.",
+
+    manual_note_section_basic: "1. 기본 조작",
+    manual_note_basic_desc: "뷰를 추가하면 바로 쓸 수 있는 상태로 노트가 열립니다.",
+
+    manual_note_add_title: "노트 뷰 추가하기",
+    manual_note_add_desc: "화면 왼쪽 사이드바의 '목록' 버튼을 클릭하고 '노트' 오른쪽의 '＋' 버튼을 누릅니다. 이름을 입력해 확정하면 간트 차트에서 만든 작업이 위에서부터 차례로 놓인 노트가 열립니다.",
+
+    manual_note_outline_title: "아웃라인에서 원하는 위치로 이동하기",
+    manual_note_outline_desc: "왼쪽 아웃라인은 공정표의 작업 계층을 그대로 보여 줍니다. 항목을 클릭하면 본문이 그 위치까지 스크롤됩니다. 작업 이름 오른쪽의 점은 '노트 있음' 표시로, 어느 작업에 기록이 남아 있는지 한눈에 알 수 있습니다. 아웃라인과 본문의 경계를 끌면 읽기 좋은 너비로 조절할 수 있습니다.",
+
+    manual_note_write_title: "작업별로 노트 작성하기",
+    manual_note_write_desc: "본문 영역을 클릭해 회의에서 정해진 사항이나 알게 된 점을 입력합니다. 내용은 해당 작업에 연결되어 프로젝트 파일과 함께 저장됩니다. 작업 제목에는 기간과 진행률도 표시되므로 기록을 쓰면서 현재 상황을 확인할 수 있습니다.",
+
+    manual_note_format_title: "서식 정리하기",
+    manual_note_format_desc: "위쪽 서식 바를 사용하면 길어진 기록도 다시 읽을 수 있는 형태로 정리할 수 있습니다.",
+    manual_note_format_heading_title: "제목·문자 장식",
+    manual_note_format_heading_desc: "제목1~3으로 단락을 나눌 수 있습니다. 굵게·기울임·밑줄·글자 색도 지원합니다.",
+    manual_note_format_list_title: "글머리 기호·번호 매기기",
+    manual_note_format_list_desc: "결정 사항이나 절차를 항목별로 정리할 수 있습니다.",
+    manual_note_format_date_title: "오늘 날짜 넣기",
+    manual_note_format_date_desc: "달력 아이콘을 누르면 커서 위치에 오늘 날짜가 입력됩니다. 같은 노트에 날짜별 기록을 더해 가면 그 작업의 작업 로그가 됩니다.",
+
+    manual_note_section_link: "2. 작업과의 연결",
+    manual_note_link_desc: "노트는 별도의 메모장이 아니라 작업 자체에 적어 넣는 공간입니다.",
+
+    manual_note_memo_title: "노트와 메모는 같은 것입니다",
+    manual_note_memo_desc: "노트에 쓴 내용은 그 작업의 상세 패널 '메모' 탭에 표시되는 내용과 완전히 같습니다. 적는 곳이 두 군데로 늘어나는 것이 아니라, 어느 쪽에서 쓰든 같은 한 곳에 남습니다. 노트 뷰는 각 작업의 메모를 세로로 늘어놓아 한 편의 문서처럼 읽을 수 있게 보여 주는 화면이라고 생각하면 됩니다.",
+
+    manual_note_detail_title: "쓰면서 상세와 ToDo 다루기",
+    manual_note_detail_desc: "작업 제목 왼쪽의 아이콘을 누르면 그 작업의 상세 패널이 열립니다. 노트를 열어 둔 채로 담당자·기간·색상 같은 설정에 바로 손이 닿습니다. 또한 본문 오른쪽의 'ToDo' 영역은 그 작업의 ToDo 그 자체로, 동그라미를 클릭해 완료하면 그만큼 진행률도 움직입니다. 기록을 쓰면서 작업을 진행할 수 있습니다.",
+
+    manual_note_section_search: "3. 작성한 기록 찾기",
+    manual_note_search_intro: "기록은 쓴 뒤에 찾을 수 있어야 비로소 쓸모가 있습니다.",
+
+    manual_note_search_title: "본문까지 검색하기",
+    manual_note_search_desc: "왼쪽 위 검색란은 작업 이름뿐 아니라 노트 본문도 검색합니다. '그 이야기를 어디에 썼더라'에서 되짚어 갈 수 있어 기록이 쌓일수록 효과가 커집니다. 일치한 작업만 남고 그 상위 작업도 계층을 유지한 채 표시되므로, 어느 공정의 이야기인지 알고 결과를 읽을 수 있습니다. 검색란을 비우면 원래대로 돌아갑니다.",
+
+    manual_note_filter_title: "필터",
+    manual_note_filter_desc: "프로젝트, 최상위 작업, 진행 상태(미실시·실시 중·완료)로 표시를 좁힐 수 있습니다. '노트 있는 항목만'을 선택하면 기록이 남아 있는 작업만 늘어놓을 수 있어 회의록을 다시 읽거나 인수인계 자료를 만들 때 좋습니다.",
+
+    // --- Manual Whiteboard Page ---
+    manual_whiteboard_heading: "화이트보드 사용법",
+    manual_whiteboard_intro: "화이트보드는 작업을 카드로 자유롭게 배치할 수 있는 '작전판'입니다. 도형과 메모지로 관계를 그려 넣거나 집계 위젯을 놓아 대시보드로 만들 수도 있습니다. 일반적인 온라인 화이트보드와 다른 점은, 놓은 카드가 정적인 쪽지가 아니라 진행률·기한·담당자를 항상 최신 상태로 계속 표시한다는 것입니다. 간트 차트에서 진행률을 갱신하면 보드의 표시도 자동으로 따라갑니다.",
+
+    manual_whiteboard_section_setup: "1. 보드를 만들고 작업 배치하기",
+    manual_whiteboard_setup_desc: "먼저 보드를 만들고 필요한 작업만 캔버스에 배치합니다.",
+
+    manual_whiteboard_add_title: "화이트보드 추가하기",
+    manual_whiteboard_add_desc: "화면 왼쪽 사이드바의 '목록' 버튼을 클릭하고 '화이트보드' 오른쪽의 '＋' 버튼을 누릅니다. 간트 차트 툴바의 전환 버튼에서도 열 수 있습니다.<br>※무료 버전에서 새로 만들 수 있는 보드는 <strong>누적 3개까지</strong>입니다. 칸반 보드의 제한과 세는 방식이 달라, 이쪽은 <strong>보드를 삭제해도 한도가 돌아오지 않습니다</strong>(만들 때마다 1개씩 소모됩니다). 남은 개수는 만들기 버튼 근처에 항상 표시되며 만들 때도 확인이 표시됩니다. 한도를 다 쓴 뒤에도 자신이 만든 보드는 계속 편집할 수 있습니다.",
+
+    manual_whiteboard_palette_title: "작업 팔레트에서 배치하기",
+    manual_whiteboard_palette_desc: "화면 오른쪽의 '작업 팔레트'에는 프로젝트의 작업이 계층 그대로 나열됩니다. 여기서 캔버스로 끌면 카드로 배치됩니다. '프로젝트 일괄 배치'를 사용하면 계층 구조를 반영한 형태로 한꺼번에 늘어놓을 수도 있습니다. 팔레트에서는 작업 이름으로 검색하거나 '미배치만 표시'로 좁힐 수 있어 작업 수가 많아도 필요한 것을 찾을 수 있습니다.<br>탭을 전환했다고 해서 모든 작업이 자동으로 배치되지는 않습니다. 무엇을 놓을지는 직접 고르는 설계입니다.",
+
+    manual_whiteboard_group_title: "상위 작업은 '묶음'이 됩니다",
+    manual_whiteboard_group_desc: "상위 작업을 배치하면 그 하위 작업을 모으는 '묶음'으로 표시됩니다. 묶음 머리글을 클릭하면 펼치거나 접을 수 있고, 접으면 카드 한 장으로 줄어들면서 하위 작업의 건수와 진행률이 배지로 표시됩니다. 전체를 조망할 때는 접고, 세부를 다룰 때는 펼치는 식으로 쓸 수 있습니다.<br>묶음은 항상 그 작업의 하위 전체를 비추므로, 나중에 간트 차트에서 하위 작업을 추가한 경우에도 자동으로 묶음 안에 채워집니다. 이 구조 때문에 하위 작업만 보드에서 뺄 수는 없습니다(뺄 수 있는 것은 배치한 묶음의 최상위 작업입니다).",
+
+    manual_whiteboard_section_draw: "2. 도형과 선으로 생각 더하기",
+    manual_whiteboard_draw_desc: "작업만으로는 나타낼 수 없는 관계나 보충 설명을 캔버스에 자유롭게 그릴 수 있습니다.",
+
+    manual_whiteboard_shape_title: "도형·메모지·텍스트",
+    manual_whiteboard_shape_desc: "툴바에서 사각형, 타원, 마름모, 삼각형, 평행사변형, 메모지, 텍스트를 배치할 수 있습니다. 채우기 색과 불투명도, 테두리 색, 글자 색, 정렬, 굵게·기울임을 설정할 수 있고 글꼴은 표준·고딕·명조·교과서체·손글씨풍·고정폭 중에서 고를 수 있습니다. 겹침 순서는 '맨 앞으로', '맨 뒤로' 등으로 조정합니다. 여러 도형을 선택해 그룹으로 묶으면 선택·이동·삭제가 하나로 움직입니다.<br>메모지와 텍스트는 크기를 조절하면 글자 크기도 함께 바뀝니다. 사각형이나 타원의 라벨은 상자를 넓혀 여백을 만드는 용도이므로 글자 크기가 바뀌지 않습니다.",
+
+    manual_whiteboard_connector_title: "커넥터(선)로 연결하기",
+    manual_whiteboard_connector_desc: "카드나 도형의 가장자리에서 끌면 커넥터로 이을 수 있습니다. 연결하는 동안 상대의 네 변에 표시가 나타나고, 선의 도착점은 놓은 위치에서 가장 가까운 변에 고정되므로 노린 변에 연결됩니다. 선에는 화살표 표시 전환과 라벨 입력이 가능해 '이 작업이 끝나면 다음은 여기'와 같은 흐름이나 담당자 간 인계를 나타낼 수 있습니다.",
+
+    manual_whiteboard_layout_title: "선택·이동·배율",
+    manual_whiteboard_layout_desc: "캔버스는 자유롭게 이동하고 확대·축소할 수 있습니다. 오른쪽 버튼으로 끌면 범위 선택이 되어 고른 것을 한꺼번에 이동하거나 삭제할 수 있고, 외곽 사각형의 모서리를 끌면 선택한 것 전체를 같은 비율로 확대·축소할 수 있습니다.<br>작업 카드와 접힌 묶음은 모서리를 끌어 25%~200% 범위로 확대·축소할 수 있으며 글자도 함께 바뀝니다. 펼친 상태의 묶음은 모서리를 끌면 내용의 배율이 바뀌고, 중첩된 경우에는 상위의 배율이 곱해집니다. 중요한 묶음을 크게, 참고 정보를 작게 두면 보드 전체에 강약을 줄 수 있습니다. 조작을 잘못한 경우에는 보드 안에서 되돌릴 수 있습니다.",
+
+    manual_whiteboard_section_widget: "3. 위젯으로 대시보드 만들기",
+    manual_whiteboard_widget_intro: "보드 위에 집계 패널을 놓으면 상황을 그 자리에서 읽어낼 수 있는 진행 대시보드가 됩니다.",
+
+    manual_whiteboard_widget_types_title: "두 가지 위젯",
+    manual_whiteboard_widget_types_desc: "툴바의 위젯에서 배치할 수 있습니다.",
+    manual_whiteboard_widget_progress_title: "기간 진행",
+    manual_whiteboard_widget_progress_desc: "대상 작업의 실제 진행률과 일정에서 계산한 '오늘의 예정'을 나란히 표시하고, 예정보다 몇 포인트 앞서거나 뒤처졌는지를 알려 줍니다. 완료 건수, 진행 중인 작업, 기한 초과나 기한 임박 건수, 남은 작업 일수도 함께 확인할 수 있습니다.",
+    manual_whiteboard_widget_member_title: "멤버 부하",
+    manual_whiteboard_widget_member_desc: "담당자별 건수를 막대로 표시합니다. 실시 중·대기의 내역과 미담당 작업도 알 수 있어 부하의 쏠림이나 배정 누락을 알아챌 수 있습니다.",
+
+    manual_whiteboard_widget_scope_title: "집계 대상 좁히기",
+    manual_whiteboard_widget_scope_desc: "위젯은 기본적으로 보드 전체를 집계합니다. 특정 범위만 보고 싶다면 위젯에서 작업 카드로 커넥터를 이어 주세요. 이은 작업만 집계 대상이 되고, 선을 지우면 해제됩니다. 집계는 대상 작업 아래의 말단 작업을 세므로 상위 작업에 잇기만 해도 그 묶음 전체의 상황이 나옵니다.<br>팀별·공정별로 위젯을 늘어놓으면 보드 한 장에서 여러 관점을 동시에 볼 수 있습니다.",
+
+    manual_whiteboard_export_title: "PNG 이미지로 내보내기",
+    manual_whiteboard_export_desc: "위쪽 버튼에서 보드를 PNG 이미지로 저장할 수 있습니다. 아무것도 선택하지 않았다면 보드 전체가, 노드를 선택한 경우에는 그 범위만 내보내집니다. 회의 자료나 보고서에 붙여 넣는 용도로 쓸 수 있습니다.",
+
+    manual_whiteboard_share_title: "보드 공유와 열람",
+    manual_whiteboard_share_desc: "프로젝트 파일을 받은 상대도 보드를 열어 내용을 볼 수 있습니다. 무료 버전에서는 다른 사람이 만든 보드는 열람만 가능하며, 표시·이동·확대·묶음 펼치기와 위젯의 최신 표시는 그대로 이용할 수 있습니다. 대시보드로 공유하는 용도라면 받는 쪽의 환경을 가리지 않습니다.",
   },
   gantt: {
     labels: {

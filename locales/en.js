@@ -126,7 +126,7 @@ export default {
     manual_basic_start_new_title: "Creating a New Project",
     manual_basic_start_new_desc: "Clicking the 'Create New Project' button opens a new empty project so you can start managing tasks right away.",
     manual_basic_start_open_title: "Opening Existing Files",
-    manual_basic_start_open_desc: "Clicking the 'Open Local File' button opens a file selection dialog to load and resume editing a `.ploto` file saved on your PC.",
+    manual_basic_start_open_desc: "Clicking the 'Open Local File' button opens a file selection dialog to load and resume editing a .ploto file saved on your PC.",
     manual_basic_start_recent_title: "Recently Opened Projects",
     manual_basic_start_recent_desc: "Projects you have previously opened in Ploto are listed. You can quickly open them with a single click without searching for the file path.",
     manual_basic_heading: "How to Use Basic Operations",
@@ -134,9 +134,9 @@ export default {
     manual_basic_section_file: "2. File & Help Menu",
     manual_basic_file_desc: "From the menu on the left side of the top header, you can manage project files and view various information.",
     manual_basic_file_menu_title: "File Menu",
-    manual_basic_file_menu_desc: "The 'File' menu allows you to perform the following:<br>• **New**: Create a new project file.<br>• **Open**: Select and load a project file (.ploto) from your PC.<br>• **Save**: Overwrite and save the current project.<br>• **Save As**: Save the project under a new file name.<br>• **Excel Export / Print [PRO]**: Export Gantt charts or task lists as Excel or PDF (Pro features).",
+    manual_basic_file_menu_desc: "The 'File' menu allows you to perform the following:<br>• <strong>New</strong>: Create a new project file.<br>• <strong>Open</strong>: Select and load a project file (.ploto) from your PC.<br>• <strong>Save</strong>: Overwrite and save the current project.<br>• <strong>Save As</strong>: Save the project under a new file name.<br>• <strong>Excel Export / Print [PRO]</strong>: Export Gantt charts or task lists as Excel or PDF (Pro features).",
     manual_basic_help_menu_title: "Help Menu",
-    manual_basic_help_menu_desc: "The 'Help' menu allows you to perform the following:<br>• **Manual**: Open this manual page.<br>• **Changelog**: View the app update history.<br>• **License**: View license information.<br>• **Language**: Switch the app language (Japanese, English, German, French, Korean).",
+    manual_basic_help_menu_desc: "The 'Help' menu allows you to perform the following:<br>• <strong>Start Tutorial</strong>: Learn the basic flow by working through the actual app screens. Three courses are available — Gantt chart, Kanban, and Notes — and you can restart them at any time.<br>• <strong>Manual</strong>: Open this manual page.<br>• <strong>Changelog</strong>: View the app update history.<br>• <strong>License</strong>: View license information.<br>• <strong>Language</strong>: Switch the app language (Japanese, English, German, French, Korean).",
     manual_basic_section_sidebar: "3. Sidebar Features",
     manual_basic_sidebar_desc: "By clicking the icons on the left sidebar, you can display panels for switching project views, searching tasks, managing milestones, and adjusting settings.",
     manual_basic_sidebar_menu_title: "Sidebar Panels (3 Types)",
@@ -161,7 +161,17 @@ export default {
     manual_menu_gantt: "Gantt Chart",
     manual_menu_kanban: "Kanban Board",
     manual_menu_matrix: "Priority Matrix",
+    manual_menu_note: "Notes",
+    manual_menu_whiteboard: "Whiteboard",
     manual_back_to_lp: "← Back to Official Site",
+
+    // --- Manual Meta Descriptions (検索結果のスニペット用) ---
+    manual_basic_meta_desc: "Ploto basics: the startup screen, the File and Help menus, the sidebar panels, and header controls such as saving and undo/redo.",
+    manual_gantt_meta_desc: "How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, the details panel, and holiday settings.",
+    manual_kanban_meta_desc: "How to use Ploto's Kanban board: building stage columns, moving cards, standard ToDos per stage, completion checks, and filters.",
+    manual_matrix_meta_desc: "How to use Ploto's Priority Matrix: place tasks by urgency and importance, then work with priority scores, display modes, and filters.",
+    manual_note_meta_desc: "How to use Ploto's Note view: write meeting minutes and work logs structured by your task hierarchy, with formatting and full-text search.",
+    manual_whiteboard_meta_desc: "How to use Ploto's Whiteboard: place task cards, group them by hierarchy, add shapes and connectors, and build a progress dashboard.",
 
     // --- Manual Common / Coming Soon ---
     manual_coming_soon_title: "Coming Soon",
@@ -209,6 +219,184 @@ export default {
     
     manual_gantt_undo_title: "Undo / Redo",
     manual_gantt_undo_desc: "Don't worry if you make a mistake. Just like in Excel, you can use the keyboard shortcuts <kbd>Ctrl + Z</kbd> (Undo) and <kbd>Ctrl + Y</kbd> (Redo) to revert or re-apply your recent actions step-by-step.",
+
+    // --- Manual Kanban Page ---
+    manual_kanban_heading: "How to Use the Kanban Board",
+    manual_kanban_intro: "The Kanban board manages the same tasks as your Gantt chart, but arranged as a series of stages (columns). Simply dragging a card to the right records its progress, and the result is reflected in the Gantt chart as well. While the Gantt chart is about dates, the Kanban board is best for seeing who is working on what stage right now.",
+
+    manual_kanban_section_setup: "1. Setting Up the Board and Stages",
+    manual_kanban_setup_desc: "Start by creating a board, then arrange the columns to match how your team actually works.",
+
+    manual_kanban_add_board_title: "Adding a Kanban Board",
+    manual_kanban_add_board_desc: "Click the 'List' button on the left sidebar, then press the '+' button next to 'Kanban Board'. Enter a name to confirm, and a new tab appears at the top of the screen with the board open. Tasks you already created in the Gantt chart are lined up in the 'Unplaced' column, so there is no need to enter them twice.<br>*In the free version you can create up to 3 boards per .ploto file (create another file and you get 3 more there).",
+
+    manual_kanban_column_title: "Creating and Editing Stage Columns",
+    manual_kanban_column_desc: "A newly created board only has two columns: 'Unplaced' and 'Completed'. Press the '+' button between columns to insert your own stages, such as 'Design', 'In Progress', or 'Review'. The column header gives you the following options:",
+    manual_kanban_column_icon_title: "Icon & Theme Color",
+    manual_kanban_column_icon_desc: "Set an icon and a color for each column so the nature of each stage (in progress, awaiting approval, sent back, and so on) is distinguishable at a glance.",
+    manual_kanban_column_rename_title: "Renaming",
+    manual_kanban_column_rename_desc: "Double-click a column name to rename it in place.",
+    manual_kanban_column_move_title: "Reordering & Deleting",
+    manual_kanban_column_move_desc: "Use the left and right arrow buttons to change the column order. If you delete a column, the tasks it held are moved to the first column.",
+
+    manual_kanban_column_memo_title: "Column Notes (Rules per Stage)",
+    manual_kanban_column_memo_desc: "The note icon in the column header lets you record how work should proceed at that stage and what the criteria are. Keeping agreements such as 'reviews always require two people' or 'finalize the estimate before moving a card here' visible on screen keeps your process consistent even when the person in charge changes.",
+
+    manual_kanban_section_flow: "2. Managing Progress with Cards",
+    manual_kanban_flow_desc: "Each card is one task. Moving a card is itself the act of recording progress.",
+
+    manual_kanban_move_title: "Moving Cards Between Stages",
+    manual_kanban_move_desc: "Drag and drop a card onto the target column to switch that task's current stage. If you have many columns, hold the card near the left or right edge of the screen and the board scrolls horizontally on its own. You can also drag an empty area of the board to pan the whole view.",
+
+    manual_kanban_card_title: "What a Card Shows",
+    manual_kanban_card_desc: "Each card gathers the information you need to make a decision: assignee, tags, due date, and how many ToDos are done. Due dates are color-coded as 'Overdue', 'Due today', or 'Due soon', so tasks at risk stand out. Click a card to open the details panel on the right, where you can edit the same content as in the Gantt chart (Details, ToDo, and Memo).",
+
+    manual_kanban_todo_template_title: "Standard ToDos (Routine Work per Stage)",
+    manual_kanban_todo_template_desc: "Press the checklist icon in a column header to open the 'Standard ToDo' settings. Items you register here are created automatically as that task's ToDos whenever a card enters the column. Registering steps you repeat every time, such as 'request a review' or 'send the acceptance form', means nobody has to remember the procedure and nothing gets skipped. Items can be reordered by dragging.",
+
+    manual_kanban_progress_title: "ToDos Drive the Progress Rate",
+    manual_kanban_progress_desc: "Click the circle to the left of a ToDo to complete it, and the task's progress rate rises accordingly (when 'Calculate progress from ToDos' is on in the details panel). You never have to retype a percentage, and working on the Kanban board alone keeps the Gantt chart's progress bars up to date.",
+
+    manual_kanban_guard_title: "Checks Before Moving to 'Completed'",
+    manual_kanban_guard_desc: "Ploto prevents cards from reaching 'Completed' before the work really is. If child tasks are unfinished, ToDos remain, or progress has not reached 100%, the move is blocked and the reason is shown.<br>Skipped stages are detected too. Trying to move a card ahead while an earlier stage still has incomplete standard ToDos triggers a warning. Conversely, if you start a task from a later stage, Ploto asks whether the standard ToDos from the earlier stages should be registered as already done.",
+
+    manual_kanban_section_filter: "3. Narrowing Down to What Matters",
+    manual_kanban_filter_intro: "Since a single board can hold tasks from multiple projects, filtering is essential in daily use.",
+
+    manual_kanban_filter_title: "Filters and Search",
+    manual_kanban_filter_desc: "The bar at the top of the board lets you filter by project, assignee, and tag, and search task names by keyword. This makes it easy to view only your own workload or follow just one project's flow. Filter settings are saved per board, so reopening the file resumes exactly where you left off.",
+
+    manual_kanban_sync_title: "Working Together with the Gantt Chart",
+    manual_kanban_sync_desc: "The Kanban board and the Gantt chart are just two views of the same tasks, so editing either one updates both. Double-click the header row of the grid on the left of the Gantt chart and check 'Kanban' to show each task's current stage as a column in the schedule table — handy when you want dates and stages side by side.",
+
+    // --- Manual Priority Matrix Page ---
+    manual_matrix_heading: "How to Use the Priority Matrix",
+    manual_matrix_intro: "The Priority Matrix plots tasks on a plane defined by two axes — urgency and importance — to help you identify what truly deserves your attention first. It reveals the work that is important but not urgent, the kind that gets pushed back indefinitely when you simply handle whatever is closest to its deadline. The tasks here are the same ones as in your Gantt chart and Kanban board.",
+
+    manual_matrix_section_basic: "1. Basic Operations",
+    manual_matrix_basic_desc: "Add the view and place your tasks on the plane — that alone sorts out your priorities.",
+
+    manual_matrix_add_title: "Adding a Priority Matrix",
+    manual_matrix_add_desc: "Click the 'List' button on the left sidebar, then press the '+' button next to 'Priority Matrix'. Enter a name to confirm, and a new tab appears at the top of the screen with the matrix open.",
+
+    manual_matrix_quadrant_title: "What the Four Quadrants Mean",
+    manual_matrix_quadrant_desc: "Urgency increases toward the right on the horizontal axis, and importance increases upward on the vertical axis. The plane is divided into four quadrants, each calling for a different response.",
+    manual_matrix_q1_title: "Quadrant I: Important and Urgent",
+    manual_matrix_q1_desc: "Tasks to start right away, such as incident response or work just before a deadline. If this quadrant is always crowded, it is a sign that something is wrong at the planning stage.",
+    manual_matrix_q2_title: "Quadrant II: Important but Not Urgent",
+    manual_matrix_q2_desc: "The tasks with the greatest impact on results, and the ones you should deliberately reserve time for — process improvement, building systems, training. Without conscious effort they are postponed forever.",
+    manual_matrix_q3_title: "Quadrant III: Urgent but Not Important",
+    manual_matrix_q3_desc: "Tasks that feel pressing but contribute little, such as routine paperwork or simple inquiries. Consider whether they can be delegated or simplified.",
+    manual_matrix_q4_title: "Quadrant IV: Neither Urgent nor Important",
+    manual_matrix_q4_desc: "Work worth questioning altogether. Tasks you could reasonably decide to stop doing are often buried here.",
+
+    manual_matrix_place_title: "Placing and Unplacing Tasks",
+    manual_matrix_place_desc: "The 'Unplaced Tasks' panel on the left lists tasks with no priority set yet. Drag a card from there to any position on the plane to place it. You can keep dragging it afterwards to fine-tune the position, which helps when deciding how to treat tasks near a quadrant boundary. To undo a placement, drag the card back into the 'Unplaced Tasks' area.",
+
+    manual_matrix_score_title: "Priority Score",
+    manual_matrix_score_desc: "A priority score from 0 to 100 is calculated automatically from where you place a task. The score weights urgency at 40% and importance at 60%, so between two equally urgent tasks the more important one scores higher. It is a deliberate counterweight to letting deadlines dictate your judgment.",
+
+    manual_matrix_detail_title: "Setting Priority from the Details Panel",
+    manual_matrix_detail_desc: "You can also set priority without opening the matrix view. Turn on 'Enable matrix' in the Details tab and a small plane appears; wherever you click becomes that task's urgency and importance (it starts at the center). This lets you decide priority on the spot while creating tasks in the Gantt chart.",
+
+    manual_matrix_section_display: "2. Adjusting the Display and Filtering",
+    manual_matrix_display_desc: "Switch how tasks are drawn so the plane stays readable as the number of tasks grows.",
+
+    manual_matrix_mode_title: "Display Modes (Detailed Card / Compact Badge / Dot)",
+    manual_matrix_mode_desc: "'Detailed Card' shows assignees and due dates, which suits reviewing a small number of tasks. When cards overlap and become hard to read, switch to 'Compact Badge' to show names only, or to 'Dot' to take in the overall distribution at a glance. You can open the details panel by clicking a task in any mode.",
+
+    manual_matrix_filter_title: "Filtering and Zoom",
+    manual_matrix_filter_desc: "Besides filtering by project, assignee, tag, and keyword, you can exclude finished work with 'Hide completed' or bring higher-level tasks into scope with 'Include parent tasks'. Selecting a specific Kanban view shows only the tasks currently on that board's stages. The plane can be zoomed in and out so you can inspect crowded areas. These settings are also saved per view.",
+
+    // --- Manual Note Page ---
+    manual_note_heading: "How to Use Notes",
+    manual_note_intro: "The Note view treats your project as a single long document, with tasks laid out from top to bottom. The outline on the left uses the parent-child structure of your Gantt chart as its chapter headings, so you never have to build a structure for meeting minutes or work logs yourself. Everything you write is stored against the task it belongs to, which spares you from hunting for which task a discussion was about.",
+
+    manual_note_section_basic: "1. Basic Operations",
+    manual_note_basic_desc: "Add the view and the note opens ready to write in.",
+
+    manual_note_add_title: "Adding a Note View",
+    manual_note_add_desc: "Click the 'List' button on the left sidebar, then press the '+' button next to 'Note'. Enter a name to confirm, and the note opens with the tasks you already created in the Gantt chart laid out in order.",
+
+    manual_note_outline_title: "Jumping to a Task from the Outline",
+    manual_note_outline_desc: "The outline on the left mirrors the task hierarchy of your schedule. Click an entry and the body scrolls to that position. The dot to the right of a task name marks 'has a note', so you can see at a glance where records exist. Drag the divider between the outline and the body to give each the width you prefer.",
+
+    manual_note_write_title: "Writing a Note per Task",
+    manual_note_write_desc: "Click the body area and type up decisions from a meeting or anything you noticed. The content is stored against that task and saved together with the project file. Each task heading also shows its duration and progress rate, so you can check the current state while writing.",
+
+    manual_note_format_title: "Formatting Your Text",
+    manual_note_format_desc: "The formatting bar at the top helps you shape a long record into something you can read back.",
+    manual_note_format_heading_title: "Headings & Text Styles",
+    manual_note_format_heading_desc: "Break up sections with headings 1 to 3. Bold, italic, underline, and text color are also supported.",
+    manual_note_format_list_title: "Bulleted & Numbered Lists",
+    manual_note_format_list_desc: "Lay out decisions or procedures as itemized points.",
+    manual_note_format_date_title: "Inserting Today's Date",
+    manual_note_format_date_desc: "Press the calendar icon to insert today's date at the cursor. Keep adding dated entries to the same note and it becomes a work log for that task.",
+
+    manual_note_section_link: "2. The Link to Your Tasks",
+    manual_note_link_desc: "A note is not a separate notepad — it is written onto the task itself.",
+
+    manual_note_memo_title: "Notes and Memos Are the Same Thing",
+    manual_note_memo_desc: "What you write in a note is exactly what appears in the 'Memo' tab of that task's details panel. There are not two places to write; whichever you use, it lives in the same single place. Think of the Note view as a screen that lines up every task's memo vertically so you can read them as one document.",
+
+    manual_note_detail_title: "Working with Details and ToDos While Writing",
+    manual_note_detail_desc: "Press the icon to the left of a task heading to open that task's details panel, putting assignee, duration, and color within reach without leaving the note. The 'ToDo' area to the right of the body is that task's actual ToDo list — click a circle to complete an item and the progress rate moves accordingly. You can keep the work moving while you write.",
+
+    manual_note_section_search: "3. Finding What You Wrote",
+    manual_note_search_intro: "A record only earns its keep if you can find it later.",
+
+    manual_note_search_title: "Searching Across Note Bodies",
+    manual_note_search_desc: "The search box at the top left searches note bodies, not just task names, so you can work back from 'where did I write that?'. The payoff grows as your records do. Only matching tasks remain, with their parents still shown in hierarchy, so you read each result already knowing which stage it belongs to. Clear the box to return to the full view.",
+
+    manual_note_filter_title: "Filtering",
+    manual_note_filter_desc: "Narrow the view by project, top-level task, or progress state (not started, in progress, done). Choosing 'With notes only' lists just the tasks that have records, which suits reading back minutes or putting together handover material.",
+
+    // --- Manual Whiteboard Page ---
+    manual_whiteboard_heading: "How to Use the Whiteboard",
+    manual_whiteboard_intro: "The Whiteboard is a strategy board where you place tasks as cards anywhere you like. You can draw in relationships with shapes and sticky notes, or drop in summary widgets to turn it into a dashboard. What sets it apart from a general-purpose online whiteboard is that the cards are not static sticky notes: they continuously show current progress, due dates, and assignees. Update progress in the Gantt chart and the board follows automatically.",
+
+    manual_whiteboard_section_setup: "1. Creating a Board and Placing Tasks",
+    manual_whiteboard_setup_desc: "Create a board first, then place only the tasks you actually need on the canvas.",
+
+    manual_whiteboard_add_title: "Adding a Whiteboard",
+    manual_whiteboard_add_desc: "Click the 'List' button on the left sidebar, then press the '+' button next to 'Whiteboard'. You can also open it from the switch button on the Gantt chart toolbar.<br>*The free version lets you create <strong>3 boards in total</strong>. This is counted differently from the Kanban board limit: here, <strong>deleting a board does not give the slot back</strong> — each creation uses one permanently. The remaining count is always shown near the create button, and a confirmation appears before each creation. Once the allowance is used up, boards you created yourself remain fully editable.",
+
+    manual_whiteboard_palette_title: "Placing Tasks from the Palette",
+    manual_whiteboard_palette_desc: "The 'Task palette' on the right lists your project's tasks in their hierarchy. Drag from there onto the canvas to place a card. 'Place whole project' lays them out together following the hierarchy. The palette lets you search by task name or narrow the list with 'Unplaced only', so you can find what you need even with many tasks.<br>Switching to the tab never scatters every task onto the board automatically — you choose what goes on it.",
+
+    manual_whiteboard_group_title: "Parent Tasks Become Containers",
+    manual_whiteboard_group_desc: "Placing a parent task displays it as a container holding its child tasks. Click the container header to expand or collapse it; collapsed, it shrinks to a single card with badges showing the number of children and their progress. Close containers to survey the whole board, open them to work on the details.<br>A container always reflects the task's entire subtree, so children you add later in the Gantt chart are filled into it automatically. Because of this, a child task cannot be removed from the board on its own — only the top task of a placed group can be removed.",
+
+    manual_whiteboard_section_draw: "2. Drawing In Your Thinking",
+    manual_whiteboard_draw_desc: "Add the relationships and context that tasks alone cannot express.",
+
+    manual_whiteboard_shape_title: "Shapes, Sticky Notes, and Text",
+    manual_whiteboard_shape_desc: "From the toolbar you can place rectangles, ellipses, diamonds, triangles, parallelograms, sticky notes, and text. Set fill color and opacity, border color, text color, alignment, bold, and italic; fonts can be chosen from default, gothic, mincho, textbook, handwriting, and monospace. Stacking order is adjusted with 'Bring to front', 'Send to back', and so on. Select several shapes and group them to make selection, movement, and deletion act as one.<br>Sticky notes and text scale their font size when resized. Labels on rectangles and ellipses do not, since resizing those is for creating room inside the box.",
+
+    manual_whiteboard_connector_title: "Connecting with Connectors",
+    manual_whiteboard_connector_desc: "Drag from the edge of a card or shape to link it with a connector. While connecting, markers appear on all four sides of the target, and the line lands on whichever side is closest to where you drop — so it connects where you aimed. Connectors support toggling the arrowhead and adding a label, letting you draw flows such as 'once this is done, next comes this' or handovers between people.",
+
+    manual_whiteboard_layout_title: "Selecting, Moving, and Scaling",
+    manual_whiteboard_layout_desc: "Pan and zoom the canvas freely. Dragging with the right button makes a rubber-band selection; selected items can be moved or deleted together, and dragging a corner of the bounding box scales everything selected proportionally.<br>Task cards and collapsed containers can be scaled between 25% and 200% by dragging a corner, with text scaling too. Dragging a corner of an expanded container changes the scale of its contents, and nesting multiplies the parent's scale down through it. Making important groups larger and reference material smaller gives the whole board a sense of emphasis. If you misstep, you can undo within the board.",
+
+    manual_whiteboard_section_widget: "3. Turning the Board into a Dashboard",
+    manual_whiteboard_widget_intro: "Drop summary panels onto the board and it becomes a progress dashboard you can read at a glance.",
+
+    manual_whiteboard_widget_types_title: "Two Widgets",
+    manual_whiteboard_widget_types_desc: "Place them from the widget menu on the toolbar.",
+    manual_whiteboard_widget_progress_title: "Period Progress",
+    manual_whiteboard_widget_progress_desc: "Shows the actual progress of the target tasks alongside the figure your schedule calls for today, and states how many points you are ahead or behind. It also gathers the completed count, tasks in progress, how many are overdue or due soon, and the remaining days of work.",
+    manual_whiteboard_widget_member_title: "Member Load",
+    manual_whiteboard_widget_member_desc: "Shows the task count per assignee as bars, broken down into in-progress and waiting, along with unassigned tasks — making uneven workloads and assignment gaps visible.",
+
+    manual_whiteboard_widget_scope_title: "Narrowing What a Widget Counts",
+    manual_whiteboard_widget_scope_desc: "By default a widget summarizes the whole board. To look at one area, draw a connector from the widget to a task card: only the connected tasks are counted, and removing the line releases them. The count covers the leaf tasks beneath each target, so connecting to a parent task alone reports on that entire group.<br>Line up widgets per team or per stage and a single board shows several perspectives at once.",
+
+    manual_whiteboard_export_title: "Exporting as a PNG Image",
+    manual_whiteboard_export_desc: "The button at the top saves the board as a PNG image. With nothing selected the whole board is exported; with nodes selected, only that area is. Handy for pasting into meeting material or reports.",
+
+    manual_whiteboard_share_title: "Sharing and Viewing Boards",
+    manual_whiteboard_share_desc: "Anyone you send the project file to can open the board and see its contents. In the free version, boards created by someone else are view-only, but display, panning, zooming, expanding containers, and live widget figures all still work. If you are sharing a board as a dashboard, the recipient's setup does not matter.",
   },
   gantt: {
     labels: {

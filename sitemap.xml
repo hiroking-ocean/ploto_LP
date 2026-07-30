@@ -9,7 +9,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +21,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -33,7 +33,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -45,7 +45,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -57,8 +57,368 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/"/>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/basic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/basic.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/basic.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/note.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/note.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/note.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/whiteboard.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/whiteboard.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/matrix.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/matrix.html"/>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

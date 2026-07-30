@@ -18,7 +18,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const SITE = "https://hiroking-ocean.github.io/ploto_LP/"; // 末尾スラッシュ必須
 const BASE = "/ploto_LP/"; // GitHub Pages のサブパス（絶対パス化に使用）
 const LANGS = ["ja", "en", "de", "fr", "ko"];
-const LASTMOD = "2026-06-30";
+// マニュアルのスクリーンショットが当該言語に無い場合の代替言語。
+const FALLBACK_LANG = "en";
+const LASTMOD = "2026-07-30"; // sitemap の更新日。内容を更新したらここも上げる
 
 const OG_LOCALE = { ja: "ja_JP", en: "en_US", de: "de_DE", fr: "fr_FR", ko: "ko_KR" };
 const IMG_ALT = {
@@ -149,33 +151,51 @@ function buildPage(lang) {
 }
 
 function buildSitemap() {
-  const alts = LANGS.map(
-    (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlFor(l)}"/>`
-  ).join("\n");
-  const xdefault = `    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor("ja")}"/>`;
-  const urls = LANGS.map(
-    (lang) => `  <url>
-    <loc>${urlFor(lang)}</loc>
+  const entry = ({ urls: alternates, loc, priority }) => {
+    const alts = LANGS.map(
+      (l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${alternates[l]}"/>`
+    ).join("\n");
+    return `  <url>
+    <loc>${loc}</loc>
 ${alts}
-${xdefault}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${alternates.ja}"/>
     <lastmod>${LASTMOD}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${lang === "ja" ? "1.0" : "0.8"}</priority>
-  </url>`
-  ).join("\n");
+    <priority>${priority}</priority>
+  </url>`;
+  };
+
+  const lpAlternates = Object.fromEntries(LANGS.map((l) => [l, urlFor(l)]));
+  const lpUrls = LANGS.map((lang) =>
+    entry({ urls: lpAlternates, loc: urlFor(lang), priority: lang === "ja" ? "1.0" : "0.8" })
+  );
+
+  // マニュアルは検索流入・サイト内参照が多いため、LPと同様に全言語分を登録する。
+  const manualUrls = MANUAL_PAGES.flatMap((page) => {
+    const alternates = Object.fromEntries(LANGS.map((l) => [l, manualUrlFor(l, page)]));
+    return LANGS.map((lang) =>
+      entry({ urls: alternates, loc: manualUrlFor(lang, page), priority: lang === "ja" ? "0.9" : "0.7" })
+    );
+  });
+
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${urls}
+${[...lpUrls, ...manualUrls].join("\n")}
 </urlset>
 `;
 }
 
 function buildSitemapTxt() {
-  return LANGS.map((lang) => urlFor(lang)).join("\n") + "\n";
+  const lp = LANGS.map((lang) => urlFor(lang));
+  const manual = MANUAL_PAGES.flatMap((page) => LANGS.map((lang) => manualUrlFor(lang, page)));
+  return [...lp, ...manual].join("\n") + "\n";
 }
 
-const MANUAL_PAGES = ["basic", "gantt", "kanban", "matrix"];
+// サイドバーの目次と同じ並び順にする（sitemap の出力順もこれに従う）
+const MANUAL_PAGES = ["basic", "gantt", "kanban", "note", "whiteboard", "matrix"];
+const manualUrlFor = (lang, page) =>
+  lang === "ja" ? `${SITE}manual/${page}.html` : `${SITE}${lang}/manual/${page}.html`;
 const manualTemplate = readFileSync(join(__dirname, "manual-template.html"), "utf8");
 
 function buildManualPage(lang, pageName) {
@@ -206,9 +226,10 @@ function buildManualPage(lang, pageName) {
   const siteTitle = i18n["manual_sidebar_title"] || "Ploto Manual";
   $("title").text(`${pageTitle} | ${siteTitle}`);
   
-  // メタ記述のフォールバック
-  const introText = i18n["manual_gantt_intro"] || "";
-  $('meta[name="description"]').attr("content", `${pageTitle} - ${introText}`);
+  // メタ記述は検索スニペット用の短い専用文を優先し、無ければページの導入文で代替する。
+  const introText = i18n[`manual_${pageName}_intro`] || i18n["manual_gantt_intro"] || "";
+  const metaDesc = i18n[`manual_${pageName}_meta_desc`] || `${pageTitle} - ${introText}`;
+  $('meta[name="description"]').attr("content", metaDesc);
 
   // 4. canonical / hreflang
   $('link[rel="canonical"]').attr("href", url);
@@ -219,7 +240,15 @@ function buildManualPage(lang, pageName) {
   $('link[hreflang="x-default"]').attr("href", `${SITE}manual/${pageName}.html`);
 
   // 5. OGP / Twitter
-  const shot = `${SITE}assets/manual/${lang}/${pageName}-overview.png`;
+  //    ページ固有の概要スクショが未撮影なら、ガントの概要図をOGP画像として使う。
+  const ogCandidates = [
+    `assets/manual/${lang}/${pageName}-overview.png`,
+    `assets/manual/${FALLBACK_LANG}/${pageName}-overview.png`,
+    `assets/manual/${lang}/gantt-overview.png`,
+    `assets/manual/${FALLBACK_LANG}/gantt-overview.png`,
+  ];
+  const ogPath = ogCandidates.find((p) => existsSync(join(__dirname, p))) || ogCandidates[0];
+  const shot = `${SITE}${ogPath}`;
   $('meta[property="og:url"]').attr("content", url);
   $('meta[property="og:locale"]').attr("content", OG_LOCALE[lang]);
   $('meta[property="og:locale:alternate"]').remove();
@@ -228,11 +257,11 @@ function buildManualPage(lang, pageName) {
     ogLocaleTag.after(`\n  <meta property="og:locale:alternate" content="${OG_LOCALE[l]}">`);
   });
   $('meta[property="og:title"]').attr("content", `${pageTitle} | ${siteTitle}`);
-  $('meta[property="og:description"]').attr("content", `${pageTitle} - ${introText}`);
+  $('meta[property="og:description"]').attr("content", metaDesc);
   $('meta[property="og:image"]').attr("content", shot);
   $('meta[property="og:image:alt"]').attr("content", pageTitle);
   $('meta[name="twitter:title"]').attr("content", `${pageTitle} | ${siteTitle}`);
-  $('meta[name="twitter:description"]').attr("content", `${pageTitle} - ${introText}`);
+  $('meta[name="twitter:description"]').attr("content", metaDesc);
   $('meta[name="twitter:image"]').attr("content", shot);
   $('meta[name="twitter:image:alt"]').attr("content", pageTitle);
 
@@ -262,20 +291,28 @@ function buildManualPage(lang, pageName) {
   $(`#content-${pageName}`).removeAttr("style");
 
   // 11. スクリーンショット画像のローカライズと絶対パス化
+  //     当該言語 → FALLBACK_LANG の順に探し、どちらも無ければ画像枠ごと削除する
+  //     （未撮影のスクショで壊れた画像アイコンが出ないようにするため）。
+  //     同名の .gif があれば GIF アニメーションを優先する。
   $("[data-screenshot-path]").each((_, el) => {
     const file = $(el).attr("data-screenshot-path");
-    let relativePath = `assets/manual/${lang}/${file}`;
-
-    // 同名で拡張子が .gif のファイルが存在するか確認
     const gifFile = file.replace(/\.[^/.]+$/, ".gif");
-    const relativePathGif = `assets/manual/${lang}/${gifFile}`;
-    const absolutePathGif = join(__dirname, relativePathGif);
 
-    if (existsSync(absolutePathGif)) {
-      relativePath = relativePathGif;
+    const candidates = [
+      `assets/manual/${lang}/${gifFile}`,
+      `assets/manual/${lang}/${file}`,
+      `assets/manual/${FALLBACK_LANG}/${gifFile}`,
+      `assets/manual/${FALLBACK_LANG}/${file}`,
+    ];
+    const found = candidates.find((p) => existsSync(join(__dirname, p)));
+
+    if (!found) {
+      const container = $(el).closest(".manual-image-container");
+      (container.length ? container : $(el)).remove();
+      return;
     }
 
-    $(el).attr("src", absolutize(relativePath));
+    $(el).attr("src", absolutize(found));
   });
 
   // 12. アセットパス絶対化
