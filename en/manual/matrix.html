@@ -1,11 +1,34 @@
 <!DOCTYPE html><html lang="en" data-theme="light"><head>
-  <!-- Google Analytics 4 -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3JMMY03ZCB"></script>
+  <!-- Google Analytics 4
+       自分自身のアクセスは計測しない。ローカルプレビュー（localhost / file:）は自動で除外され、
+       本番サイトは ?ga=off を一度開いたブラウザを恒久的に除外する（解除は ?ga=on）。
+       IP 指定の内部トラフィック除外と違い、回線や端末が変わっても効き続ける。 -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-3JMMY03ZCB');
+    (function () {
+      var GA_ID = 'G-3JMMY03ZCB';
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag; // 除外時も呼び出し側が壊れないよう、常に定義しておく
+
+      try {
+        var mode = new URLSearchParams(location.search).get('ga');
+        if (mode === 'off') localStorage.setItem('ga_optout', '1');
+        if (mode === 'on') localStorage.removeItem('ga_optout');
+      } catch (e) { /* localStorage が使えない環境では何もしない */ }
+
+      var isLocal = location.protocol === 'file:' ||
+        /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+      var optedOut = false;
+      try { optedOut = localStorage.getItem('ga_optout') === '1'; } catch (e) { }
+      if (isLocal || optedOut) return; // 計測タグ自体を読み込まない
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    })();
   </script>
 
   <meta charset="UTF-8">
@@ -33,12 +56,12 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Priority Matrix | Ploto Manual">
   <meta property="og:description" content="How to use Ploto's Priority Matrix: place tasks by urgency and importance, then work with priority scores, display modes, and filters.">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
+  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/matrix-overview.png">
   <meta property="og:image:alt" content="Priority Matrix">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Priority Matrix | Ploto Manual">
   <meta name="twitter:description" content="How to use Ploto's Priority Matrix: place tasks by urgency and importance, then work with priority scores, display modes, and filters.">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
+  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/matrix-overview.png">
   <meta name="twitter:image:alt" content="Priority Matrix">
 
   <!-- Favicon -->
@@ -184,13 +207,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_file_menu_title">File Menu</h3>
           <p data-i18n="manual_basic_file_menu_desc">The 'File' menu allows you to perform the following:<br>• <strong>New</strong>: Create a new project file.<br>• <strong>Open</strong>: Select and load a project file (.ploto) from your PC.<br>• <strong>Save</strong>: Overwrite and save the current project.<br>• <strong>Save As</strong>: Save the project under a new file name.<br>• <strong>Excel Export / Print [PRO]</strong>: Export Gantt charts or task lists as Excel or PDF (Pro features).</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_help_menu_title">Help Menu</h3>
           <p data-i18n="manual_basic_help_menu_desc">The 'Help' menu allows you to perform the following:<br>• <strong>Start Tutorial</strong>: Learn the basic flow by working through the actual app screens. Three courses are available — Gantt chart, Kanban, and Notes — and you can restart them at any time.<br>• <strong>Manual</strong>: Open this manual page.<br>• <strong>Changelog</strong>: View the app update history.<br>• <strong>License</strong>: View license information.<br>• <strong>Language</strong>: Switch the app language (Japanese, English, German, French, Korean).</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_sidebar">3. Sidebar Features</h2>
@@ -237,7 +264,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_header">4. Header Controls</h2>
@@ -250,7 +279,9 @@
           <p data-i18n="manual_basic_header_save_desc">Click the floppy disk icon to immediately save your current changes manually (the app autosaves, but you can also save manually at any time).</p>
           <h3 data-i18n="manual_basic_header_theme_title">Theme Switcher</h3>
           <p data-i18n="manual_basic_header_theme_desc">Click the moon/sun icon to toggle between light and dark mode.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
         </div>
       </article>
 
@@ -349,7 +380,10 @@
         <h1 data-i18n="manual_kanban_heading">How to Use the Kanban Board</h1>
         <p data-i18n="manual_kanban_intro">The Kanban board manages the same tasks as your Gantt chart, but arranged as a series of stages (columns). Simply dragging a card to the right records its progress, and the result is reflected in the Gantt chart as well. While the Gantt chart is about dates, the Kanban board is best for seeing who is working on what stage right now.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_kanban">Kanban Board</div>
+        </div>
 
         <h2 data-i18n="manual_kanban_section_setup">1. Setting Up the Board and Stages</h2>
         <p data-i18n="manual_kanban_setup_desc">Start by creating a board, then arrange the columns to match how your team actually works.</p>
@@ -439,7 +473,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_filter_title">Filters and Search</h3>
           <p data-i18n="manual_kanban_filter_desc">The bar at the top of the board lets you filter by project, assignee, and tag, and search task names by keyword. This makes it easy to view only your own workload or follow just one project's flow. Filter settings are saved per board, so reopening the file resumes exactly where you left off.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -453,7 +489,10 @@
         <h1 data-i18n="manual_matrix_heading">How to Use the Priority Matrix</h1>
         <p data-i18n="manual_matrix_intro">The Priority Matrix plots tasks on a plane defined by two axes — urgency and importance — to help you identify what truly deserves your attention first. It reveals the work that is important but not urgent, the kind that gets pushed back indefinitely when you simply handle whatever is closest to its deadline. The tasks here are the same ones as in your Gantt chart and Kanban board.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/matrix-overview.png" data-screenshot-path="matrix-overview.png" alt="Priority Matrix Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_matrix">Priority Matrix</div>
+        </div>
 
         <h2 data-i18n="manual_matrix_section_basic">1. Basic Operations</h2>
         <p data-i18n="manual_matrix_basic_desc">Add the view and place your tasks on the plane — that alone sorts out your priorities.</p>
@@ -546,7 +585,10 @@
         <h1 data-i18n="manual_note_heading">How to Use Notes</h1>
         <p data-i18n="manual_note_intro">The Note view treats your project as a single long document, with tasks laid out from top to bottom. The outline on the left uses the parent-child structure of your Gantt chart as its chapter headings, so you never have to build a structure for meeting minutes or work logs yourself. Everything you write is stored against the task it belongs to, which spares you from hunting for which task a discussion was about.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/note-overview.png" data-screenshot-path="note-overview.png" alt="Note View Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_note">Notes</div>
+        </div>
 
         <h2 data-i18n="manual_note_section_basic">1. Basic Operations</h2>
         <p data-i18n="manual_note_basic_desc">Add the view and the note opens ready to write in.</p>
@@ -560,13 +602,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_outline_title">Jumping to a Task from the Outline</h3>
           <p data-i18n="manual_note_outline_desc">The outline on the left mirrors the task hierarchy of your schedule. Click an entry and the body scrolls to that position. The dot to the right of a task name marks 'has a note', so you can see at a glance where records exist. Drag the divider between the outline and the body to give each the width you prefer.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-outline.png" data-screenshot-path="note-outline.png" alt="Outline">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_write_title">Writing a Note per Task</h3>
           <p data-i18n="manual_note_write_desc">Click the body area and type up decisions from a meeting or anything you noticed. The content is stored against that task and saved together with the project file. Each task heading also shows its duration and progress rate, so you can check the current state while writing.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-write.png" data-screenshot-path="note-write.png" alt="Writing a Note">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -640,7 +686,10 @@
         <h1 data-i18n="manual_whiteboard_heading">How to Use the Whiteboard</h1>
         <p data-i18n="manual_whiteboard_intro">The Whiteboard is a strategy board where you place tasks as cards anywhere you like. You can draw in relationships with shapes and sticky notes, or drop in summary widgets to turn it into a dashboard. What sets it apart from a general-purpose online whiteboard is that the cards are not static sticky notes: they continuously show current progress, due dates, and assignees. Update progress in the Gantt chart and the board follows automatically.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/whiteboard-overview.png" data-screenshot-path="whiteboard-overview.png" alt="Whiteboard Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_whiteboard">Whiteboard</div>
+        </div>
 
         <h2 data-i18n="manual_whiteboard_section_setup">1. Creating a Board and Placing Tasks</h2>
         <p data-i18n="manual_whiteboard_setup_desc">Create a board first, then place only the tasks you actually need on the canvas.</p>
@@ -654,7 +703,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_whiteboard_palette_title">Placing Tasks from the Palette</h3>
           <p data-i18n="manual_whiteboard_palette_desc">The 'Task palette' on the right lists your project's tasks in their hierarchy. Drag from there onto the canvas to place a card. 'Place whole project' lays them out together following the hierarchy. The palette lets you search by task name or narrow the list with 'Unplaced only', so you can find what you need even with many tasks.<br>Switching to the tab never scatters every task onto the board automatically — you choose what goes on it.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-palette.png" data-screenshot-path="whiteboard-palette.png" alt="Task Palette">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -710,7 +761,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-widgets.png" data-screenshot-path="whiteboard-widgets.png" alt="Widgets">
+          </div>
         </div>
 
         <div class="manual-step-card">

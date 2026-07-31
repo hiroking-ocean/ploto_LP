@@ -1,11 +1,34 @@
 <!DOCTYPE html><html lang="de" data-theme="light"><head>
-  <!-- Google Analytics 4 -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3JMMY03ZCB"></script>
+  <!-- Google Analytics 4
+       自分自身のアクセスは計測しない。ローカルプレビュー（localhost / file:）は自動で除外され、
+       本番サイトは ?ga=off を一度開いたブラウザを恒久的に除外する（解除は ?ga=on）。
+       IP 指定の内部トラフィック除外と違い、回線や端末が変わっても効き続ける。 -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-3JMMY03ZCB');
+    (function () {
+      var GA_ID = 'G-3JMMY03ZCB';
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag; // 除外時も呼び出し側が壊れないよう、常に定義しておく
+
+      try {
+        var mode = new URLSearchParams(location.search).get('ga');
+        if (mode === 'off') localStorage.setItem('ga_optout', '1');
+        if (mode === 'on') localStorage.removeItem('ga_optout');
+      } catch (e) { /* localStorage が使えない環境では何もしない */ }
+
+      var isLocal = location.protocol === 'file:' ||
+        /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+      var optedOut = false;
+      try { optedOut = localStorage.getItem('ga_optout') === '1'; } catch (e) { }
+      if (isLocal || optedOut) return; // 計測タグ自体を読み込まない
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    })();
   </script>
 
   <meta charset="UTF-8">
@@ -184,13 +207,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_file_menu_title">Dateimenü</h3>
           <p data-i18n="manual_basic_file_menu_desc">Das 'Datei'-Menü ermöglicht folgende Aktionen:<br>• <strong>Neu</strong>: Eine neue Projektdatei erstellen.<br>• <strong>Öffnen</strong>: Eine Projektdatei (.ploto) von Ihrem PC auswählen und laden.<br>• <strong>Speichern</strong>: Das aktuelle Projekt überschreiben und speichern.<br>• <strong>Speichern unter</strong>: Das Projekt unter einem neuen Dateinamen speichern.<br>• <strong>Excel-Export / Drucken [PRO]</strong>: Gantt-Diagramme oder Aufgabenlisten als Excel oder PDF exportieren (Pro-Funktionen).</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_help_menu_title">Hilfemenü</h3>
           <p data-i18n="manual_basic_help_menu_desc">Das 'Hilfe'-Menü ermöglicht folgende Aktionen:<br>• <strong>Tutorial starten</strong>: Lernen Sie den grundlegenden Ablauf, indem Sie direkt in der App arbeiten. Es gibt drei Kurse – Gantt-Diagramm, Kanban und Notizen – die Sie jederzeit erneut starten können.<br>• <strong>Handbuch</strong>: Diese Handbuchseite öffnen.<br>• <strong>Änderungsprotokoll</strong>: Den Update-Verlauf der App anzeigen.<br>• <strong>Lizenz</strong>: Lizenzinformationen anzeigen.<br>• <strong>Language</strong>: Die App-Sprache ändern (Japanisch, Englisch, Deutsch, Französisch, Koreanisch).</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_sidebar">3. Seitenleisten-Funktionen</h2>
@@ -237,7 +264,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_header">4. Kopfzeilen-Steuerelemente</h2>
@@ -250,7 +279,9 @@
           <p data-i18n="manual_basic_header_save_desc">Klicken Sie auf das Disketten-Symbol, um Ihre aktuellen Änderungen sofort manuell zu speichern (die App speichert automatisch, aber Sie können auch jederzeit manuell speichern).</p>
           <h3 data-i18n="manual_basic_header_theme_title">Design umschalten</h3>
           <p data-i18n="manual_basic_header_theme_desc">Klicken Sie auf das Mond-/Sonnensymbol, um zwischen hellem und dunklem Design zu wechseln.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
         </div>
       </article>
 
@@ -349,7 +380,10 @@
         <h1 data-i18n="manual_kanban_heading">So verwenden Sie das Kanban-Board</h1>
         <p data-i18n="manual_kanban_intro">Das Kanban-Board verwaltet dieselben Aufgaben wie Ihr Gantt-Diagramm, ordnet sie jedoch als Folge von Arbeitsschritten (Spalten) an. Sie ziehen eine Karte einfach nach rechts, und der Fortschritt ist erfasst – auch im Gantt-Diagramm. Während es im Gantt-Diagramm um Termine geht, zeigt das Kanban-Board am besten, wer sich gerade in welchem Arbeitsschritt befindet.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_kanban">Kanban-Board</div>
+        </div>
 
         <h2 data-i18n="manual_kanban_section_setup">1. Board und Arbeitsschritte einrichten</h2>
         <p data-i18n="manual_kanban_setup_desc">Erstellen Sie zunächst ein Board und ordnen Sie die Spalten so an, wie Ihr Team tatsächlich arbeitet.</p>
@@ -439,7 +473,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_filter_title">Filter und Suche</h3>
           <p data-i18n="manual_kanban_filter_desc">Über die Leiste am oberen Rand filtern Sie nach Projekt, Verantwortlichen und Tags und durchsuchen Aufgabennamen per Stichwort. So sehen Sie nur Ihre eigenen Aufgaben oder verfolgen den Ablauf eines einzelnen Projekts. Die Filtereinstellungen werden pro Board gespeichert – beim erneuten Öffnen der Datei arbeiten Sie genau dort weiter, wo Sie aufgehört haben.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -453,7 +489,10 @@
         <h1 data-i18n="manual_matrix_heading">So verwenden Sie die Prioritätsmatrix</h1>
         <p data-i18n="manual_matrix_intro">Die Prioritätsmatrix ordnet Aufgaben auf einer Fläche mit zwei Achsen an – Dringlichkeit und Wichtigkeit – und hilft Ihnen zu erkennen, was wirklich zuerst Aufmerksamkeit verdient. Sichtbar wird vor allem die Arbeit, die wichtig aber nicht dringend ist und deshalb immer wieder verschoben wird, wenn man nur nach Nähe zum Termin arbeitet. Die Aufgaben sind dieselben wie im Gantt-Diagramm und im Kanban-Board.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/matrix-overview.png" data-screenshot-path="matrix-overview.png" alt="Priority Matrix Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_matrix">Prioritätenmatrix</div>
+        </div>
 
         <h2 data-i18n="manual_matrix_section_basic">1. Grundlegende Bedienung</h2>
         <p data-i18n="manual_matrix_basic_desc">Ansicht hinzufügen und Aufgaben auf der Fläche platzieren – allein das ordnet Ihre Prioritäten.</p>
@@ -546,7 +585,10 @@
         <h1 data-i18n="manual_note_heading">So verwenden Sie Notizen</h1>
         <p data-i18n="manual_note_intro">Die Notizansicht behandelt Ihr Projekt als ein einziges langes Dokument, in dem die Aufgaben von oben nach unten angeordnet sind. Die Gliederung links übernimmt die Eltern-Kind-Struktur Ihres Gantt-Diagramms als Kapitelüberschriften – Sie müssen für Protokolle oder Arbeitsprotokolle also keine eigene Struktur aufbauen. Alles, was Sie schreiben, wird bei der zugehörigen Aufgabe gespeichert; die Suche danach, zu welcher Aufgabe eine Besprechung gehörte, entfällt.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/note-overview.png" data-screenshot-path="note-overview.png" alt="Note View Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_note">Notizen</div>
+        </div>
 
         <h2 data-i18n="manual_note_section_basic">1. Grundlegende Bedienung</h2>
         <p data-i18n="manual_note_basic_desc">Fügen Sie die Ansicht hinzu – die Notiz öffnet sich sofort schreibbereit.</p>
@@ -560,13 +602,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_outline_title">Über die Gliederung zu einer Aufgabe springen</h3>
           <p data-i18n="manual_note_outline_desc">Die Gliederung links spiegelt die Aufgabenhierarchie Ihres Terminplans. Ein Klick auf einen Eintrag scrollt den Text an die passende Stelle. Der Punkt rechts neben einem Aufgabennamen bedeutet 'Notiz vorhanden', sodass Sie auf einen Blick sehen, wo Aufzeichnungen existieren. Ziehen Sie die Trennlinie zwischen Gliederung und Text, um beiden die gewünschte Breite zu geben.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-outline.png" data-screenshot-path="note-outline.png" alt="Outline">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_write_title">Notizen je Aufgabe schreiben</h3>
           <p data-i18n="manual_note_write_desc">Klicken Sie in den Textbereich und halten Sie Beschlüsse aus einer Besprechung oder eigene Beobachtungen fest. Der Inhalt wird bei der Aufgabe gespeichert und zusammen mit der Projektdatei gesichert. Jede Aufgabenüberschrift zeigt zudem Dauer und Fortschritt an, sodass Sie den aktuellen Stand beim Schreiben im Blick haben.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-write.png" data-screenshot-path="note-write.png" alt="Writing a Note">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -640,7 +686,10 @@
         <h1 data-i18n="manual_whiteboard_heading">So verwenden Sie das Whiteboard</h1>
         <p data-i18n="manual_whiteboard_intro">Das Whiteboard ist eine Planungsfläche, auf der Sie Aufgaben als Karten frei anordnen. Mit Formen und Haftnotizen ergänzen Sie Zusammenhänge, mit Auswertungs-Widgets wird daraus ein Dashboard. Der Unterschied zu einem allgemeinen Online-Whiteboard: Die Karten sind keine statischen Zettel, sondern zeigen fortlaufend aktuellen Fortschritt, Termine und Verantwortliche. Aktualisieren Sie den Fortschritt im Gantt-Diagramm, zieht das Board automatisch nach.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/whiteboard-overview.png" data-screenshot-path="whiteboard-overview.png" alt="Whiteboard Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_whiteboard">Whiteboard</div>
+        </div>
 
         <h2 data-i18n="manual_whiteboard_section_setup">1. Board anlegen und Aufgaben platzieren</h2>
         <p data-i18n="manual_whiteboard_setup_desc">Legen Sie zuerst ein Board an und setzen Sie nur die wirklich benötigten Aufgaben auf die Fläche.</p>
@@ -654,7 +703,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_whiteboard_palette_title">Aufgaben aus der Palette platzieren</h3>
           <p data-i18n="manual_whiteboard_palette_desc">Die 'Aufgabenpalette' rechts listet die Aufgaben Ihres Projekts in ihrer Hierarchie. Ziehen Sie von dort auf die Fläche, um eine Karte zu platzieren. 'Projekt gesammelt platzieren' ordnet sie entsprechend der Hierarchie gemeinsam an. In der Palette können Sie nach Aufgabennamen suchen oder mit 'Nur nicht platzierte' filtern und finden so auch bei vielen Aufgaben das Gesuchte.<br>Ein Tabwechsel verteilt niemals automatisch alle Aufgaben auf dem Board – Sie entscheiden, was daraufkommt.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-palette.png" data-screenshot-path="whiteboard-palette.png" alt="Task Palette">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -710,7 +761,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-widgets.png" data-screenshot-path="whiteboard-widgets.png" alt="Widgets">
+          </div>
         </div>
 
         <div class="manual-step-card">

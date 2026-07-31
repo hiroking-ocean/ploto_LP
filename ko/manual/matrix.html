@@ -1,11 +1,34 @@
 <!DOCTYPE html><html lang="ko" data-theme="light"><head>
-  <!-- Google Analytics 4 -->
-  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3JMMY03ZCB"></script>
+  <!-- Google Analytics 4
+       自分自身のアクセスは計測しない。ローカルプレビュー（localhost / file:）は自動で除外され、
+       本番サイトは ?ga=off を一度開いたブラウザを恒久的に除外する（解除は ?ga=on）。
+       IP 指定の内部トラフィック除外と違い、回線や端末が変わっても効き続ける。 -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-3JMMY03ZCB');
+    (function () {
+      var GA_ID = 'G-3JMMY03ZCB';
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag; // 除外時も呼び出し側が壊れないよう、常に定義しておく
+
+      try {
+        var mode = new URLSearchParams(location.search).get('ga');
+        if (mode === 'off') localStorage.setItem('ga_optout', '1');
+        if (mode === 'on') localStorage.removeItem('ga_optout');
+      } catch (e) { /* localStorage が使えない環境では何もしない */ }
+
+      var isLocal = location.protocol === 'file:' ||
+        /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+      var optedOut = false;
+      try { optedOut = localStorage.getItem('ga_optout') === '1'; } catch (e) { }
+      if (isLocal || optedOut) return; // 計測タグ自体を読み込まない
+
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    })();
   </script>
 
   <meta charset="UTF-8">
@@ -33,12 +56,12 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="우선순위 매트릭스 | Ploto 매뉴얼">
   <meta property="og:description" content="Ploto 우선순위 매트릭스 사용법. 긴급도와 중요도 두 축으로 작업을 배치하고 우선순위 점수·표시 모드·필터로 정리합니다.">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
+  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/matrix-overview.png">
   <meta property="og:image:alt" content="우선순위 매트릭스">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="우선순위 매트릭스 | Ploto 매뉴얼">
   <meta name="twitter:description" content="Ploto 우선순위 매트릭스 사용법. 긴급도와 중요도 두 축으로 작업을 배치하고 우선순위 점수·표시 모드·필터로 정리합니다.">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
+  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/matrix-overview.png">
   <meta name="twitter:image:alt" content="우선순위 매트릭스">
 
   <!-- Favicon -->
@@ -184,13 +207,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_file_menu_title">파일 메뉴</h3>
           <p data-i18n="manual_basic_file_menu_desc">'파일' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• <strong>새로 만들기</strong>: 새로운 프로젝트 파일을 생성합니다.<br>• <strong>열기</strong>: PC에서 프로젝트 파일(.ploto)을 선택하여 불러옵니다.<br>• <strong>저장</strong>: 현재 프로젝트를 덮어쓰고 저장합니다.<br>• <strong>다른 이름으로 저장</strong>: 새로운 파일 이름으로 프로젝트를 저장합니다.<br>• <strong>Excel 출력 / 인쇄 [PRO]</strong>: 간트 차트나 작업 목록을 Excel 또는 PDF로 내보냅니다(프로 기능).</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_basic_help_menu_title">도움말 메뉴</h3>
           <p data-i18n="manual_basic_help_menu_desc">'도움말' 메뉴에서 다음 작업을 수행할 수 있습니다.<br>• <strong>튜토리얼 시작</strong>: 실제 앱 화면을 직접 조작하면서 기본 흐름을 익힐 수 있습니다. 간트 차트·칸반·노트 세 가지 과정이 있으며 언제든 다시 시작할 수 있습니다.<br>• <strong>매뉴얼</strong>: 이 매뉴얼 페이지를 엽니다.<br>• <strong>업데이트 이력</strong>: 앱의 업데이트 내역을 확인합니다.<br>• <strong>라이선스</strong>: 라이선스 정보를 확인합니다.<br>• <strong>Language</strong>: 앱 표시 언어(일본어, 영어, 독일어, 프랑스어, 한국어)를 전환합니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_sidebar">3. 사이드바 기능</h2>
@@ -237,7 +264,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_header">4. 헤더 컨트롤</h2>
@@ -250,7 +279,9 @@
           <p data-i18n="manual_basic_header_save_desc">디스켓 아이콘을 클릭하여 현재 변경 사항을 즉시 수동으로 저장합니다(앱에서 자동 저장을 지원하지만 언제든지 수동 저장도 가능합니다).</p>
           <h3 data-i18n="manual_basic_header_theme_title">테마 전환</h3>
           <p data-i18n="manual_basic_header_theme_desc">달/태양 아이콘을 클릭하여 라이트 모드와 다크 모드 간을 전환합니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
+          </div>
         </div>
       </article>
 
@@ -349,7 +380,10 @@
         <h1 data-i18n="manual_kanban_heading">칸반(진행 보드) 사용법</h1>
         <p data-i18n="manual_kanban_intro">칸반은 간트 차트와 동일한 작업을 '공정(열)'의 흐름으로 관리하는 화면입니다. 카드를 오른쪽으로 끌기만 하면 진행 상황이 기록되고, 그 결과는 간트 차트에도 그대로 반영됩니다. 일정으로 생각하는 간트 차트와 달리 칸반은 '지금 누가 어느 단계의 일을 하고 있는지' 파악하는 데 적합합니다.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_kanban">칸반 (진행 보드)</div>
+        </div>
 
         <h2 data-i18n="manual_kanban_section_setup">1. 보드와 공정 준비</h2>
         <p data-i18n="manual_kanban_setup_desc">먼저 보드를 만들고, 팀이 실제로 일하는 흐름에 맞게 공정 열을 배치합니다.</p>
@@ -439,7 +473,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_filter_title">필터와 검색</h3>
           <p data-i18n="manual_kanban_filter_desc">보드 위쪽 막대에서 프로젝트, 담당자, 태그로 걸러내고 작업 이름을 키워드로 검색할 수 있습니다. '내 담당분만 보기', '특정 프로젝트의 공정만 추적하기' 같은 사용이 가능합니다. 필터 설정은 보드별로 저장되므로 파일을 다시 열어도 이전 상태에서 작업을 이어갈 수 있습니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -453,7 +489,10 @@
         <h1 data-i18n="manual_matrix_heading">우선순위 매트릭스 사용법</h1>
         <p data-i18n="manual_matrix_intro">우선순위 매트릭스는 작업을 '긴급도'와 '중요도'라는 두 축의 평면에 배치해, 정말 먼저 손대야 할 일을 가려내는 화면입니다. 마감이 가까운 순으로 처리하다 보면 계속 뒤로 밀리는 '중요하지만 급하지 않은 일'을 눈에 보이게 합니다. 여기서 다루는 작업도 간트 차트나 칸반과 같은 것입니다.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/matrix-overview.png" data-screenshot-path="matrix-overview.png" alt="Priority Matrix Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_matrix">우선순위 매트릭스</div>
+        </div>
 
         <h2 data-i18n="manual_matrix_section_basic">1. 기본 조작</h2>
         <p data-i18n="manual_matrix_basic_desc">뷰를 추가하고 작업을 평면에 놓기만 해도 우선순위가 정리됩니다.</p>
@@ -546,7 +585,10 @@
         <h1 data-i18n="manual_note_heading">노트 사용법</h1>
         <p data-i18n="manual_note_intro">노트는 프로젝트의 작업을 위에서부터 차례로 늘어놓아 '한 편의 긴 문서'로 다루는 화면입니다. 왼쪽 아웃라인은 간트 차트의 상하위 관계가 그대로 목차가 되므로, 회의록이나 작업 로그의 구성을 직접 만들 필요가 없습니다. 작성한 내용은 해당 작업에 연결되어 저장되므로 '그 이야기가 어느 작업 건이었는지'를 나중에 다시 찾을 필요가 없습니다.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/note-overview.png" data-screenshot-path="note-overview.png" alt="Note View Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_note">노트</div>
+        </div>
 
         <h2 data-i18n="manual_note_section_basic">1. 기본 조작</h2>
         <p data-i18n="manual_note_basic_desc">뷰를 추가하면 바로 쓸 수 있는 상태로 노트가 열립니다.</p>
@@ -560,13 +602,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_outline_title">아웃라인에서 원하는 위치로 이동하기</h3>
           <p data-i18n="manual_note_outline_desc">왼쪽 아웃라인은 공정표의 작업 계층을 그대로 보여 줍니다. 항목을 클릭하면 본문이 그 위치까지 스크롤됩니다. 작업 이름 오른쪽의 점은 '노트 있음' 표시로, 어느 작업에 기록이 남아 있는지 한눈에 알 수 있습니다. 아웃라인과 본문의 경계를 끌면 읽기 좋은 너비로 조절할 수 있습니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-outline.png" data-screenshot-path="note-outline.png" alt="Outline">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_write_title">작업별로 노트 작성하기</h3>
           <p data-i18n="manual_note_write_desc">본문 영역을 클릭해 회의에서 정해진 사항이나 알게 된 점을 입력합니다. 내용은 해당 작업에 연결되어 프로젝트 파일과 함께 저장됩니다. 작업 제목에는 기간과 진행률도 표시되므로 기록을 쓰면서 현재 상황을 확인할 수 있습니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/note-write.png" data-screenshot-path="note-write.png" alt="Writing a Note">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -640,7 +686,10 @@
         <h1 data-i18n="manual_whiteboard_heading">화이트보드 사용법</h1>
         <p data-i18n="manual_whiteboard_intro">화이트보드는 작업을 카드로 자유롭게 배치할 수 있는 '작전판'입니다. 도형과 메모지로 관계를 그려 넣거나 집계 위젯을 놓아 대시보드로 만들 수도 있습니다. 일반적인 온라인 화이트보드와 다른 점은, 놓은 카드가 정적인 쪽지가 아니라 진행률·기한·담당자를 항상 최신 상태로 계속 표시한다는 것입니다. 간트 차트에서 진행률을 갱신하면 보드의 표시도 자동으로 따라갑니다.</p>
 
-        
+        <div class="manual-image-container">
+          <img src="/ploto_LP/assets/manual/en/whiteboard-overview.png" data-screenshot-path="whiteboard-overview.png" alt="Whiteboard Overview">
+          <div class="manual-image-caption" data-i18n="manual_menu_whiteboard">화이트보드</div>
+        </div>
 
         <h2 data-i18n="manual_whiteboard_section_setup">1. 보드를 만들고 작업 배치하기</h2>
         <p data-i18n="manual_whiteboard_setup_desc">먼저 보드를 만들고 필요한 작업만 캔버스에 배치합니다.</p>
@@ -654,7 +703,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_whiteboard_palette_title">작업 팔레트에서 배치하기</h3>
           <p data-i18n="manual_whiteboard_palette_desc">화면 오른쪽의 '작업 팔레트'에는 프로젝트의 작업이 계층 그대로 나열됩니다. 여기서 캔버스로 끌면 카드로 배치됩니다. '프로젝트 일괄 배치'를 사용하면 계층 구조를 반영한 형태로 한꺼번에 늘어놓을 수도 있습니다. 팔레트에서는 작업 이름으로 검색하거나 '미배치만 표시'로 좁힐 수 있어 작업 수가 많아도 필요한 것을 찾을 수 있습니다.<br>탭을 전환했다고 해서 모든 작업이 자동으로 배치되지는 않습니다. 무엇을 놓을지는 직접 고르는 설계입니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-palette.png" data-screenshot-path="whiteboard-palette.png" alt="Task Palette">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -710,7 +761,9 @@
               </div>
             </li>
           </ul>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/whiteboard-widgets.png" data-screenshot-path="whiteboard-widgets.png" alt="Widgets">
+          </div>
         </div>
 
         <div class="manual-step-card">
