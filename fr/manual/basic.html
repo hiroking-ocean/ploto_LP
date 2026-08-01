@@ -56,12 +56,12 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Opérations de base | Manuel Ploto">
   <meta property="og:description" content="Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/fr/gantt-overview.png">
+  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="Opérations de base">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Opérations de base | Manuel Ploto">
   <meta name="twitter:description" content="Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/fr/gantt-overview.png">
+  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="Opérations de base">
 
   <!-- Favicon -->
@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
-  <link rel="stylesheet" href="/ploto_LP/manual.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=2.5.7" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
 </head>
 
 <body>
@@ -196,9 +196,13 @@
           <p data-i18n="manual_basic_start_new_desc">En cliquant sur le bouton 'Créer un nouveau projet', vous ouvrez un nouveau projet vide afin de commencer à gérer vos tâches immédiatement.</p>
           <h3 data-i18n="manual_basic_start_open_title">Ouvrir des fichiers existants</h3>
           <p data-i18n="manual_basic_start_open_desc">En cliquant sur le bouton 'Ouvrir un fichier local', vous ouvrez une boîte de dialogue de sélection de fichier pour charger et reprendre l'édition d'un fichier .ploto enregistré sur votre PC.</p>
+          <h3 data-i18n="manual_basic_start_tutorial_title">Suivre la visite guidée</h3>
+          <p data-i18n="manual_basic_start_tutorial_desc">Si vous utilisez Ploto pour la première fois, commencez par le bouton « Suivre la visite guidée ». À partir d'un planning d'exemple, l'application vous guide pas à pas : vous apprenez les bases en manipulant réellement l'écran. Trois parcours sont proposés : <strong>diagramme de Gantt (environ 4 min)</strong>, <strong>Kanban (environ 6 min)</strong> et <strong>Notes (environ 5 min)</strong>. Le lancement crée un nouveau projet d'entraînement : vos propres fichiers ne sont pas modifiés. Vous pouvez arrêter à tout moment et recommencer plus tard via « Démarrer le tutoriel » dans le menu « Aide ».</p>
           <h3 data-i18n="manual_basic_start_recent_title">Projets récemment ouverts</h3>
           <p data-i18n="manual_basic_start_recent_desc">Les projets que vous avez précédemment ouverts dans Ploto sont répertoriés. Vous pouvez les ouvrir rapidement d'un simple clic sans avoir à chercher le chemin du fichier.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_file">2. Menu Fichier et Aide</h2>
@@ -291,7 +295,7 @@
         <p data-i18n="manual_gantt_intro">Le diagramme de Gantt, la fonctionnalité principale de Ploto, vous permet de gérer visuellement les tâches et les plannings de votre projet. Grâce à des opérations intuitives de glisser-déposer, vous pouvez facilement modifier les durées et déplacer les tâches.</p>
 
         <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/fr/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <img src="/ploto_LP/assets/manual/en/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
           <div class="manual-image-caption" data-i18n="manual_menu_gantt">Diagramme de Gantt</div>
         </div>
 
@@ -302,7 +306,7 @@
           <h3 data-i18n="manual_gantt_multi_project_title">Ajouter et changer de projet (Multi-onglet)</h3>
           <p data-i18n="manual_gantt_multi_project_desc">Dans Ploto, vous pouvez gérer plusieurs projets simultanément au sein d'un seul fichier. Cliquez sur le bouton 'Liste' dans la barre latérale gauche pour ouvrir le panneau, puis cliquez sur le bouton '+' dans la section 'Projet' pour ajouter un nouveau projet. Les projets ajoutés apparaîtront sous forme d'onglets en haut de l'écran. Il vous suffit de cliquer sur un onglet pour basculer instantanément d'un diagramme de Gantt à un autre.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
           </div>
         </div>
 
@@ -310,7 +314,7 @@
           <h3 data-i18n="manual_gantt_add_title">Ajouter et supprimer des tâches</h3>
           <p data-i18n="manual_gantt_add_desc">Cliquez sur le bouton '+' en haut de la liste des tâches (grille) à gauche, ou à l'extrémité droite de chaque ligne, pour ajouter une nouvelle tâche. Pour supprimer une tâche, faites un clic droit sur le nom de la tâche et sélectionnez 'Supprimer' dans le menu, ou sélectionnez la tâche et appuyez sur la touche Suppr.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+            <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
           </div>
         </div>
 
@@ -318,7 +322,7 @@
           <h3 data-i18n="manual_gantt_drag_title">Ajuster la durée (Glisser-Déposer)</h3>
           <p data-i18n="manual_gantt_drag_desc">Faites glisser le bord gauche ou droit d'une barre de tâche (barre bleue) sur le diagramme pour modifier la date de début ou de fin. Faites glisser le centre de la barre pour déplacer l'ensemble du planning vers la gauche ou la droite tout en conservant la durée (nombre de jours).</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+            <img src="/ploto_LP/assets/manual/en/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
           </div>
         </div>
 
@@ -326,7 +330,7 @@
           <h3 data-i18n="manual_gantt_link_title">Définir les dépendances (Liens)</h3>
           <p data-i18n="manual_gantt_link_desc">Vous pouvez définir des relations séquentielles (prédécesseur/successeur) entre les tâches. Faites glisser le point circulaire au bord d'une barre de tâche et connectez-le à une autre barre de tâche pour créer un lien (dépendance). Double-cliquez sur la ligne de liaison pour la supprimer.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+            <img src="/ploto_LP/assets/manual/en/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
           </div>
         </div>
 
@@ -349,7 +353,7 @@
           <p data-i18n="manual_gantt_memo_tab_desc">Rédigez des notes ou instructions détaillées pour la tâche. Le formatage de texte enrichi tel que le gras, l'italique et les listes est pris en charge.</p>
 
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
           </div>
         </div>
 
@@ -360,7 +364,7 @@
           <h3 data-i18n="manual_gantt_calendar_title">Paramètres des jours fériés et des congés de l'entreprise</h3>
           <p data-i18n="manual_gantt_calendar_desc">En plus des week-ends standard, vous pouvez enregistrer des jours fériés ou des congés spécifiques à l'entreprise dans le calendrier. Les jours désignés comme fériés sont grisés sur le diagramme et automatiquement exclus des calculs de durée active, ce qui vous permet de créer des plans basés sur les jours ouvrables réels. *La fonction d'importation en masse des jours fériés est une fonctionnalité premium (Pro) (l'ajout/édition manuelle est disponible gratuitement).</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/fr/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+            <img src="/ploto_LP/assets/manual/en/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
           </div>
         </div>
 

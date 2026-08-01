@@ -7,6 +7,7 @@
    ========================================================================== */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import * as cheerio from "cheerio";
@@ -41,6 +42,37 @@ const absolutize = (val) => {
   if (/^(https?:)?\/\//i.test(val) || val.startsWith("#") || val.startsWith("/")) return val;
   return BASE + val;
 };
+
+// --- キャッシュバスティング -------------------------------------------------
+// styles.css / app.js などはファイル名が変わらないため、ブラウザやCDNが古い版を
+// 掴んだままだと「HTMLは新しいのに見た目だけ壊れる」状態になる（新しいセクションの
+// CSSだけ当たらない、など）。中身のハッシュを ?v= に付けて、変更時だけURLを変える。
+// app.js / manual.js は locales/*.js を import するため、翻訳の変更もハッシュに含める。
+const LOCALE_FILES = ["locales/index.js", ...LANGS.map((l) => `locales/${l}.js`)];
+const hashOf = (files) => {
+  const h = createHash("sha1");
+  for (const f of files) h.update(readFileSync(join(__dirname, f)));
+  return h.digest("hex").slice(0, 8);
+};
+const ASSET_VERSION = {
+  "styles.css": hashOf(["styles.css"]),
+  "manual.css": hashOf(["manual.css"]),
+  "app.js": hashOf(["app.js", ...LOCALE_FILES]),
+  "manual.js": hashOf(["manual.js", ...LOCALE_FILES]),
+};
+
+/** 自前の css/js に ?v=<内容ハッシュ> を付ける（既存のクエリは置き換える）。 */
+function stampAssetVersions($) {
+  $('link[rel="stylesheet"][href], script[src]').each((_, el) => {
+    const attr = el.tagName === "script" ? "src" : "href";
+    const value = $(el).attr(attr) || "";
+    const path = value.split("?")[0];
+    const name = path.split("/").pop();
+    if (path.startsWith(BASE) && ASSET_VERSION[name]) {
+      $(el).attr(attr, `${path}?v=${ASSET_VERSION[name]}`);
+    }
+  });
+}
 
 const template = readFileSync(join(__dirname, "template.html"), "utf8");
 
@@ -146,6 +178,9 @@ function buildPage(lang) {
   $("link[href]").each((_, el) => {
     $(el).attr("href", absolutize($(el).attr("href")));
   });
+
+  // 10. 自前アセットに ?v=<内容ハッシュ> を付ける（古いCSS/JSを掴ませない）
+  stampAssetVersions($);
 
   return $.html();
 }
@@ -328,6 +363,9 @@ function buildManualPage(lang, pageName) {
       $(el).attr("href", absolutize(href));
     }
   });
+
+  // 13. 自前アセットに ?v=<内容ハッシュ> を付ける（手書きの ?v=2.5.7 もここで上書きされる）
+  stampAssetVersions($);
 
   return $.html();
 }

@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
-  <link rel="stylesheet" href="/ploto_LP/manual.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=2.5.7" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
 </head>
 
 <body>
@@ -196,6 +196,8 @@
           <p data-i18n="manual_basic_start_new_desc">『新規プロジェクトを作成』ボタンをクリックすると、新しい空のプロジェクトが開かれ、すぐにタスク管理を開始できます。</p>
           <h3 data-i18n="manual_basic_start_open_title">既存ファイルを開く</h3>
           <p data-i18n="manual_basic_start_open_desc">『ローカルファイルを開く』ボタンをクリックすると、ファイル選択ダイアログが開き、お使いのPC内に保存されている .ploto ファイルを読み込んで編集を再開できます。</p>
+          <h3 data-i18n="manual_basic_start_tutorial_title">チュートリアルで体験する</h3>
+          <p data-i18n="manual_basic_start_tutorial_desc">初めて使う方は『チュートリアルで体験する』ボタンがおすすめです。サンプルの工程表を使って、画面の案内に沿って実際に手を動かしながら基本操作を覚えられます。コースは<strong>ガントチャート（約4分）</strong>、<strong>カンバン（約6分）</strong>、<strong>ノート（約5分）</strong>の3種類です。開始すると練習用のプロジェクトが新しく作られるため、お使いのファイルには影響しません。途中でやめても、あとから『ヘルプ』メニューの『チュートリアルを開始』でいつでもやり直せます。</p>
           <h3 data-i18n="manual_basic_start_recent_title">最近開いたプロジェクト</h3>
           <p data-i18n="manual_basic_start_recent_desc">過去に Ploto で開いたプロジェクトがリスト表示されます。ファイルパスを探す手間なく、クリックするだけで素早く最新の状態で開くことが可能です。</p>
           <div class="manual-image-container">
@@ -393,7 +395,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_add_board_title">カンバンボードを追加する</h3>
           <p data-i18n="manual_kanban_add_board_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『カンバンボード』の右にある『＋』ボタンを押します。ボードの名前を入力して確定すると、画面上部にタブが追加され、ガントチャートで作成済みのタスクが『未配置』列に並んだ状態でボードが開きます。タスクを二重に登録する必要はありません。<br>※無料版で新規作成できるボードは、1つの .ploto ファイルにつき3枚までです（別のファイルを作れば、そちらでまた3枚まで作成できます）。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/kanban-add-board.png" data-screenshot-path="kanban-add-board.png" alt="Add Kanban Board">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -434,7 +438,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_column_memo_title">列メモ（工程ごとのルール）</h3>
           <p data-i18n="manual_kanban_column_memo_desc">列ヘッダーのメモアイコンから、その工程での進め方や判断基準を書き残せます。「レビューは必ず2名で行う」「この列に入れる前に見積を確定する」といった取り決めを画面上に置いておけるため、担当者が変わっても運用がぶれません。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/kanban-column-memo.png" data-screenshot-path="kanban-column-memo.png" alt="Column Memo">
+          </div>
         </div>
 
         <h2 data-i18n="manual_kanban_section_flow">2. カードで進捗を管理する</h2>
@@ -449,13 +455,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_card_title">カードの表示内容</h3>
           <p data-i18n="manual_kanban_card_desc">カードには、担当者、タグ、期限、ToDoの消化状況といった判断に必要な情報がまとめて表示されます。期限は状態に応じて『期限切れ』『本日が期限』『期限間近』が色分けで示されるため、危ないタスクが目に入ります。カードをクリックすると画面右側に詳細パネルが開き、ガントチャートと同じ内容（詳細・ToDo・メモ）をその場で編集できます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/kanban-card.png" data-screenshot-path="kanban-card.png" alt="Card Contents">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_todo_template_title">標準ToDo（工程ごとの定型作業）</h3>
           <p data-i18n="manual_kanban_todo_template_desc">列ヘッダーのチェックリストアイコンを押すと、『標準ToDo』の設定欄が開きます。ここに登録した項目は、その列にカードが入ったときに自動でそのタスクのToDoとして作成されます。「レビュー依頼を出す」「検収書を送る」といった毎回同じ手順を登録しておけば、担当者が工程のやり方を思い出す必要がなくなり、抜け漏れも防げます。項目はドラッグで並び替えできます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/kanban-todo-template.png" data-screenshot-path="kanban-todo-template.png" alt="Standard ToDo Templates">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -466,7 +476,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_guard_title">「完了」への移動チェック</h3>
           <p data-i18n="manual_kanban_guard_desc">Plotoは、実態が伴わないままカードが『完了』に入ることを防ぎます。子タスクが終わっていない場合、ToDoが残っている場合、進捗が100%に達していない場合は、完了列へ移動できず理由が表示されます。<br>また、工程を飛ばした場合も検知します。前の工程の標準ToDoが未完了のまま先の工程へ移そうとすると警告が出ます。逆に、途中の工程からタスクを開始する場合は、それ以前の標準ToDoを完了済みとして登録してよいか確認が表示されます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/kanban-guard.png" data-screenshot-path="kanban-guard.png" alt="Completion Check">
+          </div>
         </div>
 
         <h2 data-i18n="manual_kanban_section_filter">3. 見たいタスクだけに絞る</h2>

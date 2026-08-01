@@ -56,12 +56,12 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="간트 차트 (공정표) | Ploto 매뉴얼">
   <meta property="og:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
+  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="간트 차트 (공정표)">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="간트 차트 (공정표) | Ploto 매뉴얼">
   <meta name="twitter:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ko/gantt-overview.png">
+  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="간트 차트 (공정표)">
 
   <!-- Favicon -->
@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
-  <link rel="stylesheet" href="/ploto_LP/manual.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=2.5.7" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
 </head>
 
 <body>
@@ -196,9 +196,13 @@
           <p data-i18n="manual_basic_start_new_desc">'새 프로젝트 작성' 버튼을 클릭하면 새로운 빈 프로젝트가 열려 즉시 작업을 관리할 수 있습니다.</p>
           <h3 data-i18n="manual_basic_start_open_title">기존 파일 열기</h3>
           <p data-i18n="manual_basic_start_open_desc">'로컬 파일 열기' 버튼을 클릭하면 파일 선택 대화상자가 열리고 PC에 저장된 .ploto 파일을 불러와 편집을 재개할 수 있습니다.</p>
+          <h3 data-i18n="manual_basic_start_tutorial_title">튜토리얼로 익히기</h3>
+          <p data-i18n="manual_basic_start_tutorial_desc">Ploto를 처음 사용한다면 '튜토리얼로 익히기' 버튼부터 시작해 보세요. 샘플 공정표를 사용해 화면의 안내에 따라 직접 조작하면서 기본 흐름을 익힐 수 있습니다. 과정은 <strong>간트 차트(약 4분)</strong>, <strong>칸반(약 6분)</strong>, <strong>노트(약 5분)</strong> 세 가지입니다. 시작하면 연습용 프로젝트가 새로 만들어지므로 사용 중인 파일에는 영향을 주지 않습니다. 도중에 그만두어도 나중에 '도움말' 메뉴의 '튜토리얼 시작'에서 언제든 다시 시작할 수 있습니다.</p>
           <h3 data-i18n="manual_basic_start_recent_title">최근에 연 프로젝트</h3>
           <p data-i18n="manual_basic_start_recent_desc">이전에 Ploto에서 열었던 프로젝트가 목록에 표시됩니다. 파일 경로를 찾을 필요 없이 한 번의 클릭으로 빠르게 열 수 있습니다.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_file">2. 파일 및 도움말 메뉴</h2>
@@ -291,7 +295,7 @@
         <p data-i18n="manual_gantt_intro">Ploto의 핵심 기능인 간트 차트에서는 프로젝트의 작업 목록과 일정을 시각적으로 관리할 수 있습니다. 직관적인 드래그 앤 드롭 작업으로 기간을 변경하거나 작업을 이동할 수 있습니다.</p>
 
         <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ko/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <img src="/ploto_LP/assets/manual/en/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
           <div class="manual-image-caption" data-i18n="manual_menu_gantt">간트 차트 (공정표)</div>
         </div>
 
@@ -302,7 +306,7 @@
           <h3 data-i18n="manual_gantt_multi_project_title">프로젝트 추가 및 전환 (멀티 탭)</h3>
           <p data-i18n="manual_gantt_multi_project_desc">Ploto에서는 단일 파일 내에서 여러 프로젝트를 동시에 관리할 수 있습니다. 화면 왼쪽 끝 사이드바에 있는 '목록' 버튼을 클릭하여 패널을 연 후, 프로젝트 섹션의 '+' 버튼을 클릭하면 새 프로젝트를 추가할 수 있습니다. 추가된 프로젝트는 화면 상단에 '탭'으로 표시되며, 탭을 클릭하는 것만으로 다른 간트 차트로 즉시 전환할 수 있습니다.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
           </div>
         </div>
 
@@ -310,7 +314,7 @@
           <h3 data-i18n="manual_gantt_add_title">작업 추가 및 삭제</h3>
           <p data-i18n="manual_gantt_add_desc">왼쪽 작업 목록(그리드) 상단 또는 각 행의 오른쪽 끝에 있는 '+' 버튼을 클릭하면 새 작업이 추가됩니다. 작업을 삭제하려면 작업 이름을 우클릭하여 메뉴에서 '삭제'를 선택하거나, 작업을 선택하고 Delete 키를 누릅니다.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+            <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
           </div>
         </div>
 
@@ -318,7 +322,7 @@
           <h3 data-i18n="manual_gantt_drag_title">기간 조정 (드래그 앤 드롭)</h3>
           <p data-i18n="manual_gantt_drag_desc">차트에서 작업 바(파란색 막대)의 왼쪽 또는 오른쪽 끝을 드래그하면 시작일이나 종료일을 변경할 수 있습니다. 막대의 중앙을 드래그하면 기간(일수)을 유지한 채 일정 전체를 좌우로 이동할 수 있습니다.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+            <img src="/ploto_LP/assets/manual/en/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
           </div>
         </div>
 
@@ -326,7 +330,7 @@
           <h3 data-i18n="manual_gantt_link_title">의존 관계(링크) 설정</h3>
           <p data-i18n="manual_gantt_link_desc">작업 간의 전후 관계(선행/후행)를 정의할 수 있습니다. 작업 바 끝에 있는 원형 도트를 드래그하여 다른 작업 바에 연결하면 링크(의존 관계)가 생성됩니다. 생성된 링크 선을 더블 클릭하면 링크를 삭제할 수 있습니다.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+            <img src="/ploto_LP/assets/manual/en/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
           </div>
         </div>
 
@@ -349,7 +353,7 @@
           <p data-i18n="manual_gantt_memo_tab_desc">작업에 관한 상세 정보나 지시 사항을 기록할 수 있습니다. 굵게, 기울임꼴, 글머리 기호 등의 리치 텍스트 서식이 지원됩니다.</p>
 
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
           </div>
         </div>
 
@@ -360,7 +364,7 @@
           <h3 data-i18n="manual_gantt_calendar_title">공휴일 및 회사 휴일 설정</h3>
           <p data-i18n="manual_gantt_calendar_desc">기본적인 주말 외에도 공휴일이나 회사 고유의 휴일을 캘린더에 등록할 수 있습니다. 휴일로 지정된 날은 차트에서 회색으로 표시되며 활성 기간 계산에서 자동으로 제외되므로, 실제 영업일에 맞춘 정확한 계획을 세울 수 있습니다. *국가별 공휴일을 일괄 가져오는 기능은 프리미엄(Pro) 기능입니다(수동 추가/편집은 무료로 제공됩니다).</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ko/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+            <img src="/ploto_LP/assets/manual/en/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
           </div>
         </div>
 

@@ -56,12 +56,12 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Gantt-Diagramm | Ploto Handbuch">
   <meta property="og:description" content="Das Gantt-Diagramm in Ploto: Aufgaben anlegen, Dauer per Drag &amp; Drop anpassen, Abhängigkeiten, Detailfenster und Feiertagseinstellungen.">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/de/gantt-overview.png">
+  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="Gantt-Diagramm">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gantt-Diagramm | Ploto Handbuch">
   <meta name="twitter:description" content="Das Gantt-Diagramm in Ploto: Aufgaben anlegen, Dauer per Drag &amp; Drop anpassen, Abhängigkeiten, Detailfenster und Feiertagseinstellungen.">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/de/gantt-overview.png">
+  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="Gantt-Diagramm">
 
   <!-- Favicon -->
@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
-  <link rel="stylesheet" href="/ploto_LP/manual.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=2.5.7" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
 </head>
 
 <body>
@@ -196,9 +196,13 @@
           <p data-i18n="manual_basic_start_new_desc">Durch Klicken auf die Schaltfläche 'Neues Projekt erstellen' wird ein neues leeres Projekt geöffnet, sodass Sie sofort mit der Verwaltung von Aufgaben beginnen können.</p>
           <h3 data-i18n="manual_basic_start_open_title">Vorhandene Dateien öffnen</h3>
           <p data-i18n="manual_basic_start_open_desc">Durch Klicken auf die Schaltfläche 'Lokale Datei öffnen' wird ein Dateiauswahldialog geöffnet, um eine auf Ihrem PC gespeicherte .ploto-Datei zu laden und die Bearbeitung fortzusetzen.</p>
+          <h3 data-i18n="manual_basic_start_tutorial_title">Interaktive Tour starten</h3>
+          <p data-i18n="manual_basic_start_tutorial_desc">Wenn Sie Ploto zum ersten Mal verwenden, beginnen Sie am besten mit der Schaltfläche 'Interaktive Tour starten'. Anhand eines Beispielplans führt Sie die App Schritt für Schritt, sodass Sie die Grundlagen direkt am Bildschirm erlernen. Es stehen drei Kurse zur Verfügung: <strong>Gantt-Diagramm (ca. 4 Min.)</strong>, <strong>Kanban (ca. 6 Min.)</strong> und <strong>Notizen (ca. 5 Min.)</strong>. Beim Start wird ein neues Übungsprojekt angelegt, Ihre eigenen Dateien bleiben also unberührt. Sie können jederzeit abbrechen und die Tour später über 'Tutorial starten' im Menü 'Hilfe' erneut beginnen.</p>
           <h3 data-i18n="manual_basic_start_recent_title">Kürzlich geöffnete Projekte</h3>
           <p data-i18n="manual_basic_start_recent_desc">Projekte, die Sie zuvor in Ploto geöffnet haben, werden aufgelistet. Sie können sie mit einem einzigen Klick schnell öffnen, ohne nach dem Dateipfad suchen zu müssen.</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/en/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
+          </div>
         </div>
 
         <h2 data-i18n="manual_basic_section_file">2. Datei- und Hilfemenü</h2>
@@ -291,7 +295,7 @@
         <p data-i18n="manual_gantt_intro">Das Gantt-Diagramm, die Kernfunktion von Ploto, ermöglicht es Ihnen, Aufgaben und Termine Ihres Projekts visuell zu verwalten. Mit intuitiven Drag-and-Drop-Operationen können Sie Dauern ändern und Aufgaben verschieben.</p>
 
         <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/de/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
+          <img src="/ploto_LP/assets/manual/en/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
           <div class="manual-image-caption" data-i18n="manual_menu_gantt">Gantt-Diagramm</div>
         </div>
 
@@ -302,7 +306,7 @@
           <h3 data-i18n="manual_gantt_multi_project_title">Projekte hinzufügen und wechseln (Multi-Tab)</h3>
           <p data-i18n="manual_gantt_multi_project_desc">In Ploto können Sie mehrere Projekte gleichzeitig in einer einzigen Datei verwalten. Klicken Sie ganz links in der Seitenleiste auf die Schaltfläche 'Liste', um das Panel zu öffnen, und klicken Sie dann auf die Schaltfläche '+' im Bereich 'Projekt', um ein neues Projekt hinzuzufügen. Hinzugefügte Projekte werden als 'Tabs' oben auf dem Bildschirm angezeigt. Klicken Sie einfach auf einen Tab, um sofort zwischen verschiedenen Gantt-Diagrammen zu wechseln.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
           </div>
         </div>
 
@@ -310,7 +314,7 @@
           <h3 data-i18n="manual_gantt_add_title">Aufgaben hinzufügen und löschen</h3>
           <p data-i18n="manual_gantt_add_desc">Klicken Sie auf die Schaltfläche '+' oben in der Aufgabenliste (Raster) auf der linken Seite oder am rechten Ende jeder Zeile, um eine neue Aufgabe hinzuzufügen. Um eine Aufgabe zu löschen, klicken Sie mit der rechten Maustaste auf den Aufgabennamen und wählen Sie 'Löschen' aus dem Menü, oder wählen Sie die Aufgabe aus und drücken Sie die Entf-Taste.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
+            <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
           </div>
         </div>
 
@@ -318,7 +322,7 @@
           <h3 data-i18n="manual_gantt_drag_title">Dauer anpassen (Drag &amp; Drop)</h3>
           <p data-i18n="manual_gantt_drag_desc">Ziehen Sie den linken oder rechten Rand eines Aufgabenbalkens (blauer Balken) im Diagramm, um das Start- oder Enddatum zu ändern. Ziehen Sie die Mitte des Balkens, um den gesamten Zeitplan nach links oder rechts zu verschieben, während die Dauer (Anzahl der Tage) beibehalten wird.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
+            <img src="/ploto_LP/assets/manual/en/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
           </div>
         </div>
 
@@ -326,7 +330,7 @@
           <h3 data-i18n="manual_gantt_link_title">Abhängigkeiten definieren (Links)</h3>
           <p data-i18n="manual_gantt_link_desc">Sie können zeitliche Beziehungen (Vorgänger/Nachfolger) zwischen Aufgaben definieren. Ziehen Sie den kreisförmigen Punkt am Rand eines Aufgabenbalkens und verbinden Sie ihn mit einem anderen Aufgabenbalken, um eine Verknüpfung (Abhängigkeit) zu erstellen. Doppelklicken Sie auf die Verbindungslinie, um sie zu löschen.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
+            <img src="/ploto_LP/assets/manual/en/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
           </div>
         </div>
 
@@ -349,7 +353,7 @@
           <p data-i18n="manual_gantt_memo_tab_desc">Schreiben Sie detaillierte Notizen oder Anweisungen für die Aufgabe. Rich-Text-Formatierungen wie Fett, Kursiv und Listen werden unterstützt.</p>
 
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
+            <img src="/ploto_LP/assets/manual/en/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
           </div>
         </div>
 
@@ -360,7 +364,7 @@
           <h3 data-i18n="manual_gantt_calendar_title">Feiertags- &amp; Betriebsferieneinstellungen</h3>
           <p data-i18n="manual_gantt_calendar_desc">Zusätzlich zu den Standardwochenenden können Sie gesetzliche Feiertage oder unternehmensspezifische Feiertage im Kalender registrieren. Als Feiertage deklarierte Tage werden im Diagramm ausgegraut und automatisch von den Berechnungen der aktiven Dauer ausgeschlossen, sodass Sie Pläne basierend auf tatsächlichen Arbeitstagen erstellen können. *Die Funktion zum gesammelten Importieren von Feiertagen ist eine Premium-Funktion (Pro) (manuelles Hinzufügen/Bearbeiten ist kostenlos verfügbar).</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/de/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
+            <img src="/ploto_LP/assets/manual/en/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
           </div>
         </div>
 

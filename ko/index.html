@@ -96,16 +96,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-  <!-- DHTMLX Gantt (Standard Edition) CDN -->
-  <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" type="text/css">
-  <!-- defer: レンダリングをブロックせず、app.js(module)より先に実行されるため gantt は利用可能 -->
-  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js" defer=""></script>
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/app.js" defer=""></script>
+  <script type="module" src="/ploto_LP/app.js?v=843ac6eb" defer=""></script>
 </head>
 
 <body>
@@ -119,9 +114,8 @@
 
       <nav class="nav-menu">
         <a href="#features" data-i18n="nav_features">기능</a>
-        <a href="#demo" data-i18n="nav_demo">라이브 데모</a>
-        <a href="#beta" data-i18n="nav_beta">베타 제안</a>
-        <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="nav_manual">사용 설명서</a>
+        <a href="#manual" data-i18n="nav_manual_guide">매뉴얼 보기</a>
+        <a href="#pricing" data-i18n="nav_pricing">요금</a>
       </nav>
 
 
@@ -173,9 +167,8 @@
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
     <a href="#features" data-i18n="nav_features">기능</a>
-    <a href="#demo" data-i18n="nav_demo">라이브 데모</a>
-    <a href="#beta" data-i18n="nav_beta">베타 제안</a>
-    <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" data-i18n="nav_manual">사용 설명서</a>
+    <a href="#manual" data-i18n="nav_manual_guide">매뉴얼 보기</a>
+    <a href="#pricing" data-i18n="nav_pricing">요금</a>
     <div class="nav-mobile-cta">
       <a href="#download" class="btn-primary" data-i18n="cta_download">무료 다운로드</a>
     </div>
@@ -196,7 +189,7 @@
           <p class="hero-description" data-i18n="hero_desc">클라우드 금지로 툴을 도입할 수 없거나, 무거운 Excel 공정표 관리에 한계를 느끼는 현장에. Ploto는 Microsoft Store에서 즉시 설치 가능한 완전 오프라인형 프로젝트 관리 소프트웨어입니다. 계정 등록이나 번거로운 사내 승인 없이 바로 시작할 수 있습니다.</p>
           <div class="hero-buttons">
             <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">무료로 받기</a>
-            <a href="#demo" class="btn-secondary btn-large" data-i18n="hero_cta_demo">데모 사용해보기</a>
+            <a href="#manual" class="btn-secondary btn-large" data-i18n="hero_cta_manual">매뉴얼 보기</a>
           </div>
           <div class="hero-meta-info" data-i18n="hero_meta"><span>✓ 계정 등록 없음·완전 무료</span><span>✓ 외부 연결 없음·완전 오프라인</span><span>✓ 독자 파일 저장으로 정보 유출 위험 제로</span></div>
         </div>
@@ -239,49 +232,132 @@
       </div>
     </section>
 
-    <!-- Excel vs Ploto Section -->
-    <section id="excel-vs-ploto" class="excel-section">
+    <!-- One task, many views -->
+    <!-- マニュアル案内（#manual）と同じカード並びにしないこと。
+         ここは「1件のタスク」→「6通りの見え方」という構造そのものを見せる図として作る。 -->
+    <section id="views" class="views-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="excel_title">Excel을 이용한 일정 관리에 한계를 느끼고 계신가요?</h2>
-          <p class="section-subtitle" data-i18n="excel_subtitle">공정표나 WBS를 Excel로 작성할 때 자주 발생하는 '문제점'과 Ploto의 '해결책'을 비교해 보세요.</p>
-        </div>
-        <div class="excel-comparison">
-          <!-- Left: Excel problems -->
-          <div class="comparison-col excel-col">
-            <div class="col-header" data-i18n="excel_col_excel">😰 Excel에서의 문제점·불편함</div>
-            <ul class="comparison-list">
-              <li data-i18n="excel_pain1">열 너비나 날짜 하나만 조정해도 전체 표 레이아웃이 무너집니다</li>
-              <li data-i18n="excel_pain2">작업이 늘어나면 가로세로 스크롤이 길어져 프로젝트의 전체상을 놓치게 됩니다</li>
-              <li data-i18n="excel_pain3">이메일이나 메신저로 첨부하여 공유하기 때문에 어떤 파일이 최신인지 알 수 없게 됩니다</li>
-              <li data-i18n="excel_pain4">누거나 시트를 편집하다가 함수나 매크로가 망가져 파일이 작동하지 않습니다</li>
-              <li data-i18n="excel_pain5">작업 진행 상태(칸반)와 우선순위 정리를 별도 시트에서 각각 수동 관리합니다</li>
+        <div class="views-layout">
+          <div class="views-intro">
+            <h2 class="section-title views-heading" data-i18n="views_title">작업은 하나, 보는 방식은 여섯 가지.</h2>
+            <p class="views-lead" data-i18n="views_subtitle">Ploto는 같은 작업을 목적에 맞는 화면으로 바꿔 보여줄 뿐입니다. 어느 화면에서 고쳐도 내용은 같은 한 건이므로, 옮겨 적거나 대조할 필요가 없습니다.</p>
+
+            <p class="views-flow-caption" data-i18n="views_source_caption">이 한 건이 아래 모든 화면에 그대로 나타납니다.</p>
+          </div>
+
+          <div class="views-flow">
+            <div class="views-flow-head">
+              <span class="views-source-label" data-i18n="views_source_label">등록은 한 건뿐</span>
+              <div class="views-source-card">
+                <span class="views-source-title" data-i18n="views_source_task">메인 페이지 구현</span>
+                <div class="views-source-meta">
+                  <span>7/7 → 7/12</span>
+                  <span data-i18n="views_source_progress">진행률 40%</span>
+                </div>
+                <div class="views-source-bar"><span></span></div>
+              </div>
+            </div>
+            <div class="views-flow-stem" aria-hidden="true"></div>
+
+            <ul class="views-list">
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="18" y2="12"></line>
+                  <line x1="11" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_gantt_title">간트 차트(공정표)</strong>
+                <span data-i18n="views_gantt_desc">언제 시작해서 얼마나 걸리는지 정합니다.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_kanban_title">칸반</strong>
+                <span data-i18n="views_kanban_desc">카드를 옮겨 지금 어느 공정에 있는지 바꿉니다.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="12" y1="3" x2="12" y2="21"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_matrix_title">우선순위 매트릭스</strong>
+                <span data-i18n="views_matrix_desc">긴급도와 중요도로 배치해 무엇부터 할지 정합니다.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_members_title">담당자별 작업</strong>
+                <span data-i18n="views_members_desc">누구에게 얼마나 몰려 있는지 보고 배분을 조정합니다.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="8" y1="13" x2="16" y2="13"></line>
+                  <line x1="8" y1="17" x2="13" y2="17"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_note_title">노트</strong>
+                <span data-i18n="views_note_desc">정해진 사항과 알게 된 점을 작업별로 남깁니다.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="8" y1="22" x2="16" y2="22"></line>
+                  <line x1="6" y1="9" x2="11" y2="9"></line>
+                  <line x1="14" y1="13" x2="18" y2="13"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_whiteboard_title">화이트보드</strong>
+                <span data-i18n="views_whiteboard_desc">작업을 도형으로 배치해 전체 관계를 그려 공유합니다.</span>
+              </div>
+            </li>
             </ul>
           </div>
-          <!-- Right: Ploto solutions -->
-          <div class="comparison-col ploto-col">
-            <div class="col-header" data-i18n="excel_col_ploto">✅ Ploto를 통한 해결책</div>
-            <ul class="comparison-list">
-              <li data-i18n="ploto_sol1">마우스로 직관적으로 기간을 드래그하는 것만으로 일정이 자동 업데이트됩니다</li>
-              <li data-i18n="ploto_sol2">동일한 작업을 공정표, 진행 보드, 우선순위 정리 화면으로 원클릭 전환할 수 있습니다</li>
-              <li data-i18n="ploto_sol3">가벼운 단일 '.ploto' 파일 하나만 주고받으면 되므로 최신 버전이 일원화 관리됩니다</li>
-              <li data-i18n="ploto_sol4">Excel과 익숙한 '되돌리기(Ctrl+Z)' 기능으로 잘못 조작해도 즉시 리셋 가능합니다</li>
-              <li data-i18n="ploto_sol5">공정표, 진행 보드, 우선순위 정리가 하나의 단순한 앱에 모두 통합되어 있습니다</li>
-            </ul>
-          </div>
         </div>
-        <div class="excel-cta">
-          <a href="#download" class="btn-primary btn-large" data-i18n="excel_cta">Excel 관리의 스트레스에서 졸업하기 →</a>
-        </div>
+
+        <p class="views-note" data-i18n="views_note">예를 들어 칸반에서 카드를 '구현' 열로 옮기면 그 작업의 공정이 바뀌고, 공정표 목록에도 노트의 ToDo에도 같은 상태가 나타납니다. 뷰를 아무리 늘려도 관리하는 데이터는 하나뿐입니다.</p>
       </div>
     </section>
 
-    <!-- Key Features Section -->
     <section id="features" class="features-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="features_title">Excel의 불편함을 해결하는 편리한 기능</h2>
-          <p class="section-subtitle" data-i18n="features_subtitle">Ploto는 스프레드시트 관리에서 겪는 번거로운 반복 작업을 없애기 위해 설계되었습니다.</p>
+          <h2 class="section-title" data-i18n="features_title">매일의 일정 관리에서 걸리는 부분을 미리 없앱니다</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">작지만 효과가 큰 기능들을, 따로 손대지 않아도 쓸 수 있게 설계했습니다.</p>
         </div>
 
         <div class="features-grid">
@@ -313,241 +389,210 @@
             <p class="feature-card-desc" data-i18n="feat_cal_desc">회사 고유의 휴일 일정을 등록할 수 있습니다. 주말 및 공휴일의 음영 처리로 실제 근무일수에 맞춘 정확한 일정을 계획할 수 있습니다.</p>
           </div>
 
-          <!-- Feature 3: Undo/Redo -->
+          <!-- Feature 3: 日程の自動追従（依存関係・親子） -->
           <div class="feature-card">
-            <div class="feature-icon undo-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="1 4 1 10 7 10"></polyline>
-                <polyline points="23 20 23 14 17 14"></polyline>
-                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+            <div class="feature-icon schedule-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_undo_title">실수해도 안심하고 되돌리기 (Ctrl+Z)</h3>
-            <p class="feature-card-desc" data-i18n="feat_undo_desc">Excel과 마찬가지로, 작업 중 실수가 발생해도 `Ctrl+Z`(되돌리기) 및 `Ctrl+Y`(다시 실행)로 즉시 수정할 수 있습니다. 조작 실수를 두려워할 필요가 없습니다.</p>
+            <h3 class="feature-card-title" data-i18n="feat_auto_title">하나만 옮기면 뒤 일정도 따라옵니다</h3>
+            <p class="feature-card-desc" data-i18n="feat_auto_desc">작업을 선으로 연결하고 자동 스케줄링을 켜면, 앞 공정이 밀린 만큼 뒤 일정이 자동으로 이동합니다. 상위 작업의 기간과 진행률은 처음부터 하위 작업에서 자동 계산되므로, 한 곳을 고칠 때마다 표 전체를 손볼 필요가 없습니다.</p>
           </div>
 
-          <!-- Feature 4: Local SQLite -->
+          <!-- Feature 4: 同じタスクを複数のビューで -->
           <div class="feature-card">
-            <div class="feature-icon lock-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            <div class="feature-icon views-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-10 5 10 5 10-5-10-5Z"></path>
+                <path d="m2 17 10 5 10-5"></path>
+                <path d="m2 12 10 5 10-5"></path>
               </svg>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_db_title">철저한 데이터 보안을 위한 오프라인 저장</h3>
-            <p class="feature-card-desc" data-i18n="feat_db_desc">모든 데이터는 사용자 PC 내에 독자 파일(.ploto)로 저장됩니다. 외부 서버와 통신하지 않으므로 사내 기밀 프로젝트 데이터가 외부로 유출될 염려가 전혀 없습니다.</p>
+            <h3 class="feature-card-title" data-i18n="feat_views_title">입력은 한 번, 보는 방식은 여러 가지</h3>
+            <p class="feature-card-desc" data-i18n="feat_views_desc">같은 작업을 공정표·진행 보드·우선순위·노트로 바꿔 가며 볼 수 있습니다. 시트마다 같은 표를 다시 만들거나 옮겨 적다가 숫자가 어긋나는 일이 없어집니다.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Live Demo Section -->
-    <section id="demo" class="demo-section">
+    <!-- Manual Guide Section -->
+    <section id="manual" class="manual-guide-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="demo_title">실제로 확인해보세요</h2>
-          <p class="section-subtitle" data-i18n="demo_subtitle">설치하기 전에 브라우저에서 직접 간트 차트와 진행 보드의 가벼운 작동감을 체험해 보세요.</p>
+          <h2 class="section-title" data-i18n="manual_guide_title">매뉴얼에서 할 수 있는 일을 확인해 보세요</h2>
+          <p class="section-subtitle" data-i18n="manual_guide_subtitle">설치 전에 실제 화면과 조작 순서를 확인할 수 있습니다. 계정 등록이 필요 없는 완전 무료 앱이므로, 마음에 드는 기능은 바로 사용해 볼 수 있습니다.</p>
         </div>
 
-        <!-- スマホ向け注記バナー（768px以下のみ表示） -->
-        <div class="demo-mobile-notice">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <span data-i18n="demo_mobile_notice">스마트폰에서는 UI 미리보기만 가능합니다. 전체 기능은 PC에서 확인하세요.</span>
+        <div class="manual-guide-grid">
+          <!-- 基本操作 -->
+          <a href="/ploto_LP/ko/manual/basic.html" data-manual-link="basic" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_basic_title">기본 조작</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_basic_desc">실행부터 저장까지의 흐름, 파일·도움말 메뉴, 사이드바 사용법. 처음이라면 여기부터.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
+
+          <!-- ガントチャート -->
+          <a href="/ploto_LP/ko/manual/gantt.html" data-manual-link="gantt" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="18" y2="12"></line>
+                <line x1="11" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_gantt_title">간트 차트</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_gantt_desc">막대를 드래그해 일정과 진행률을 조정하고 의존 관계로 작업을 연결합니다. 공휴일·회사 휴일 설정도 가능합니다.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
+
+          <!-- カンバン -->
+          <a href="/ploto_LP/ko/manual/kanban.html" data-manual-link="kanban" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+                <line x1="15" y1="3" x2="15" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_kanban_title">칸반</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_kanban_desc">같은 작업을 공정 열로 관리합니다. 카드를 옮기면 상태가 바뀌고, 열마다 표준 ToDo가 자동으로 붙습니다.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
+
+          <!-- ノート -->
+          <a href="/ploto_LP/ko/manual/note.html" data-manual-link="note" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="8" y1="13" x2="16" y2="13"></line>
+                <line x1="8" y1="17" x2="13" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_note_title">노트</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_note_desc">작업별 기록을 하나의 긴 노트에 적고, 나중에 한 번에 검색할 수 있습니다.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
+
+          <!-- ホワイトボード -->
+          <a href="/ploto_LP/ko/manual/whiteboard.html" data-manual-link="whiteboard" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12" y2="22"></line>
+                <line x1="8" y1="22" x2="16" y2="22"></line>
+                <line x1="6" y1="9" x2="11" y2="9"></line>
+                <line x1="14" y1="13" x2="18" y2="13"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_whiteboard_title">화이트보드</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_whiteboard_desc">작업을 도형처럼 자유롭게 배치하고 선으로 연결해 전체 그림을 그립니다. 진행 위젯도 놓을 수 있습니다.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
+
+          <!-- 優先度マトリクス -->
+          <a href="/ploto_LP/ko/manual/matrix.html" data-manual-link="matrix" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_matrix_title">우선순위 매트릭스</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_matrix_desc">긴급도와 중요도 두 축에 작업을 배치해 지금 손대야 할 일을 판단합니다.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">매뉴얼 읽기 →</span>
+          </a>
         </div>
-
-        <!-- PC縦横比を維持したまま縮小するためのラッパー -->
-        <div class="demo-scale-wrapper">
-          <div class="demo-container">
-            <div class="demo-tabs">
-              <button class="demo-tab-btn active" data-demo-tab="gantt">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="8" y1="6" x2="21" y2="6"></line>
-                  <line x1="8" y1="12" x2="21" y2="12"></line>
-                  <line x1="8" y1="18" x2="21" y2="18"></line>
-                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-                <span data-i18n="demo_tab_gantt">간트 차트</span>
-              </button>
-              <button class="demo-tab-btn" data-demo-tab="kanban">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="9" y1="3" x2="9" y2="21"></line>
-                  <line x1="15" y1="3" x2="15" y2="21"></line>
-                </svg>
-                <span data-i18n="demo_tab_kanban">칸반 보드</span>
-              </button>
-              <button class="demo-tab-btn" data-demo-tab="matrix">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="12" y1="3" x2="12" y2="21"></line>
-                </svg>
-                <span data-i18n="demo_tab_matrix">우선순위 매트릭스</span>
-              </button>
-            </div>
-
-            <div class="demo-window">
-              <!-- Gantt Demo (DHTMLX Gantt Container) -->
-              <div id="demo-pane-gantt" class="demo-pane active">
-                <div id="gantt_container"></div>
-              </div>
-
-              <!-- Kanban Demo -->
-              <div id="demo-pane-kanban" class="demo-pane">
-                <div class="kanban-instructions" data-i18n="demo_kanban_help">카드를 열 사이에서 드래그하여 작업 상태를 변경하세요.</div>
-                <div class="kanban-board">
-                  <div class="kanban-column" id="col-todo">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_todo">해야 할 일</span>
-                      <span class="column-count">2</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_todo_notes">💡 아직 시작하지 않은 작업을 여기에 배치하세요.</div>
-                    <div class="kanban-cards-container" id="cards-todo">
-                      <div class="kanban-card" draggable="true" id="task-1" style="border-left-color: #3b82f6;">
-                        <div class="card-tags"><span class="tag-badge">Research</span></div>
-                        <div class="card-title">競合アプリの機能調査</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/05</span>
-                          <span class="card-assignee">鈴木</span>
-                        </div>
-                      </div>
-                      <div class="kanban-card" draggable="true" id="task-2" style="border-left-color: #10b981;">
-                        <div class="card-tags"><span class="tag-badge">Design</span></div>
-                        <div class="card-title">LPのワイヤーフレーム作成</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/08</span>
-                          <span class="card-assignee">佐藤</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="kanban-column" id="col-progress">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_progress">진행 중</span>
-                      <span class="column-count">1</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_progress_notes">💡 현재 진행 중인 작업입니다.</div>
-                    <div class="kanban-cards-container" id="cards-progress">
-                      <div class="kanban-card" draggable="true" id="task-3" style="border-left-color: #f59e0b;">
-                        <div class="card-tags"><span class="tag-badge">Dev</span></div>
-                        <div class="card-title">LPのHTML/CSSモックアップ実装</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/02</span>
-                          <span class="card-assignee">田中</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="kanban-column" id="col-done">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_done">완료</span>
-                      <span class="column-count">1</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_done_notes">💡 완료된 작업입니다. 성과를 축하하세요!</div>
-                    <div class="kanban-cards-container" id="cards-done">
-                      <div class="kanban-card done" draggable="true" id="task-4" style="border-left-color: #8b5cf6;">
-                        <div class="card-tags"><span class="tag-badge">Planning</span></div>
-                        <div class="card-title">プロジェクト要件定義書作成</div>
-                        <div class="card-footer">
-                          <span class="card-date">06/28</span>
-                          <span class="card-assignee">鈴木</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Matrix Demo -->
-              <div id="demo-pane-matrix" class="demo-pane">
-                <div class="matrix-instructions" data-i18n="demo_matrix_help">사분면 중 하나를 클릭하거나 생성기를 사용하여 작업을 배치하세요. 칩을 클릭하면 삭제됩니다.</div>
-                <div class="matrix-board">
-                  <div class="matrix-plane">
-                    <!-- Quadrant 1: High Urgent, High Important -->
-                    <div class="matrix-quadrant" id="quad-1">
-                      <div class="quadrant-label" data-i18n="matrix_quad1">Q I: 긴급 &amp; 중요</div>
-                      <div class="quad-task-list" id="quad-list-1">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #ef4444;">
-                          重要なセキュリティアップデート
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 2: Low Urgent, High Important -->
-                    <div class="matrix-quadrant" id="quad-2">
-                      <div class="quadrant-label" data-i18n="matrix_quad2">Q II: 긴급하지 않음 &amp; 중요</div>
-                      <div class="quad-task-list" id="quad-list-2">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #f59e0b;">
-                          リファクタリングと技術的負債解消</div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 3: High Urgent, Low Important -->
-                    <div class="matrix-quadrant" id="quad-3">
-                      <div class="quadrant-label" data-i18n="matrix_quad3">Q III: 긴급 &amp; 중요하지 않음</div>
-                      <div class="quad-task-list" id="quad-list-3">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #3b82f6;">週例報告書の作成
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 4: Low Urgent, Low Important -->
-                    <div class="matrix-quadrant" id="quad-4">
-                      <div class="quadrant-label" data-i18n="matrix_quad4">Q IV: 긴급하지 않음 &amp; 중요하지 않음</div>
-                      <div class="quad-task-list" id="quad-list-4">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #10b981;">オフィス整理整頓
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="matrix-creator">
-                    <h4 data-i18n="matrix_add_title">행렬에 작업 추가</h4>
-                    <div class="matrix-input-group">
-                      <input type="text" id="matrix-task-name" placeholder="새 작업 이름..." data-i18n-placeholder="matrix_placeholder">
-                      <select id="matrix-quadrant-select">
-                        <option value="1" data-i18n="matrix_opt1">I. 긴급 &amp; 중요</option>
-                        <option value="2" data-i18n="matrix_opt2">II. 긴급하지 않음 &amp; 중요</option>
-                        <option value="3" data-i18n="matrix_opt3">III. 긴급 &amp; 중요하지 않음</option>
-                        <option value="4" data-i18n="matrix_opt4">IV. 긴급하지 않음 &amp; 중요하지 않음</option>
-                      </select>
-                      <button id="btn-add-matrix-task" class="btn-primary" data-i18n="btn_add">추가</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /.demo-scale-wrapper -->
       </div>
     </section>
 
-    <!-- Beta & Pricing Section -->
-    <section id="beta" class="beta-section">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
       <div class="container">
-        <div class="beta-box">
-          <div class="badge" data-i18n="beta_badge">📢 베타 테스트 진행 중</div>
-          <h2 class="beta-title" data-i18n="beta_title">기본 기능은 앞으로도 무료 이용 가능!<br>(일부 고도화 기능은 유료 구매 제공 예정)</h2>
-          <p class="beta-desc" data-i18n="beta_desc">Ploto는 현재 베타 버전을 제공하고 있습니다. 간트 차트와 진행 보드 등의 기본 기능은 앞으로도 무료로 이용 가능합니다. 엑셀 파일 가져오기/내보내기 및 고급 설정 기능 등 비즈니스 효율을 극대화하는 일부 기능만 향후 영구 소장형(일회성 구매)으로 유료 제공될 예정입니다.</p>
-          <div class="beta-info-card">
+        <div class="pricing-box">
+          <div class="badge" data-i18n="pricing_badge">💡 한 번 결제, 구독 없음</div>
+          <h2 class="pricing-title" data-i18n="pricing_title">기본 기능은 계속 무료.<br>필요할 때만 한 번 결제하는 Pro.</h2>
+          <p class="pricing-desc" data-i18n="pricing_desc">Ploto는 무료로 계속 사용할 수 있습니다. Pro는 한 번 결제하면 이후 비용이 없는 방식으로, 월 사용료나 연 사용료가 없습니다. 구매는 Microsoft Store의 앱 내 구매와, 웹(Stripe)에서 시리얼 코드를 받는 방법 두 가지가 있습니다. 회사 PC에서 결제 페이지를 열 수 없다면 집 PC나 스마트폰으로 구매한 뒤, 받은 코드를 회사 PC에 입력하면 그대로 사용할 수 있습니다.</p>
+          <div class="pricing-info-card">
             <div class="info-card-item">
-              <span class="info-label" data-i18n="beta_price">베타 가격</span>
-              <span class="info-value text-green">Free (無料)</span>
+              <span class="info-label" data-i18n="pricing_model_label">요금 방식</span>
+              <span class="info-value text-green" data-i18n="pricing_model_value">한 번 결제 (구독 없음)</span>
             </div>
             <div class="info-card-item border-left">
-              <span class="info-label" data-i18n="beta_limit">향후 라이선스 형태</span>
-              <span class="info-value" data-i18n="beta_unlimited">일회성 구매 (내보내기 및 편의 기능)</span>
+              <span class="info-label" data-i18n="pricing_buy_label">구매 방법</span>
+              <span class="info-value" data-i18n="pricing_buy_value">Microsoft Store / 웹(시리얼 코드)</span>
             </div>
+          </div>
+
+          <!-- 無料版 / Pro の比較表。行の内容はアプリ内ライセンス画面（license.compare_*）と揃えること。 -->
+          <div class="plan-compare">
+            <h3 class="plan-compare-title" data-i18n="plan_compare_title">무료 버전과 Pro 버전 비교</h3>
+            <p class="plan-compare-desc" data-i18n="plan_compare_desc">Ploto의 기본 기능은 모두 무료입니다. Pro는 한 번만 결제하는 방식이며 구독료가 없고, 아래 표의 항목만 달라집니다.</p>
+
+            <div class="plan-compare-scroll">
+              <table class="plan-compare-table">
+                <thead>
+                  <tr>
+                    <th scope="col" data-i18n="plan_compare_col_feature">기능</th>
+                    <th scope="col" data-i18n="plan_compare_col_free">무료 버전</th>
+                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Ploto Pro (한 번 결제)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_core">간트 차트·우선순위 매트릭스·노트</th>
+                    <td data-i18n="plan_compare_core_free">모두 이용 가능</td>
+                    <td class="is-pro" data-i18n="plan_compare_core_pro">모두 이용 가능</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_kanban">칸반 보드</th>
+                    <td data-i18n="plan_compare_kanban_free">파일당 최대 3개</td>
+                    <td class="is-pro" data-i18n="plan_compare_kanban_pro">제한 없음</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_whiteboard">화이트보드</th>
+                    <td data-i18n="plan_compare_whiteboard_free">기기당 누적 3개</td>
+                    <td class="is-pro" data-i18n="plan_compare_whiteboard_pro">제한 없음</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_baseline">기준선</th>
+                    <td class="is-off" data-i18n="plan_compare_baseline_free">이용 불가</td>
+                    <td class="is-pro" data-i18n="plan_compare_baseline_pro">계획을 저장하고 현재 진행 상황과 비교</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_export">Excel / PDF 내보내기</th>
+                    <td class="is-off" data-i18n="plan_compare_export_free">이용 불가</td>
+                    <td class="is-pro" data-i18n="plan_compare_export_pro">일정표 내보내기 및 인쇄</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_holidays">공휴일 등록</th>
+                    <td data-i18n="plan_compare_holidays_free">수동 추가 및 편집</td>
+                    <td class="is-pro" data-i18n="plan_compare_holidays_pro">수동 + 국가별 공휴일 일괄 가져오기</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="plan-compare-note" data-i18n="plan_compare_note">※ 표에 없는 기능은 무료 버전에서도 제한 없이 사용할 수 있습니다. 단, 다른 사람이 만든 화이트보드는 무료 버전에서 보기 전용입니다.</p>
+            <p class="plan-compare-note" data-i18n="plan_compare_license_note">※ 보드 개수 제한은 새로 만들 때만 적용됩니다. Pro로 만든 보드가 들어 있는 파일도 무료 버전에서 그대로 열고 편집할 수 있습니다. 시리얼 코드는 본인이 쓰는 여러 기기에 등록할 수 있으며, 등록 후에는 오프라인에서도 인증됩니다.</p>
           </div>
 
           <!-- Feedback Form -->
           <div class="feedback-form-container">
-            <h3 class="feedback-form-title" data-i18n="feedback_title">베타 피드백 제출</h3>
+            <h3 class="feedback-form-title" data-i18n="feedback_title">피드백 보내기</h3>
             <p class="feedback-form-desc" data-i18n="feedback_desc">버그 리포트, 기능 요청 또는 의견을 보내주세요.</p>
 
             <!-- 

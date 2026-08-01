@@ -96,16 +96,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-  <!-- DHTMLX Gantt (Standard Edition) CDN -->
-  <link rel="stylesheet" href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" type="text/css">
-  <!-- defer: レンダリングをブロックせず、app.js(module)より先に実行されるため gantt は利用可能 -->
-  <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js" defer=""></script>
-
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/app.js" defer=""></script>
+  <script type="module" src="/ploto_LP/app.js?v=843ac6eb" defer=""></script>
 </head>
 
 <body>
@@ -119,9 +114,8 @@
 
       <nav class="nav-menu">
         <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
-        <a href="#demo" data-i18n="nav_demo">Démo en direct</a>
-        <a href="#beta" data-i18n="nav_beta">Offre bêta</a>
-        <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" data-i18n="nav_manual">Manuel</a>
+        <a href="#manual" data-i18n="nav_manual_guide">Voir le manuel</a>
+        <a href="#pricing" data-i18n="nav_pricing">Tarifs</a>
       </nav>
 
 
@@ -173,9 +167,8 @@
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
     <a href="#features" data-i18n="nav_features">Fonctionnalités</a>
-    <a href="#demo" data-i18n="nav_demo">Démo en direct</a>
-    <a href="#beta" data-i18n="nav_beta">Offre bêta</a>
-    <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" data-i18n="nav_manual">Manuel</a>
+    <a href="#manual" data-i18n="nav_manual_guide">Voir le manuel</a>
+    <a href="#pricing" data-i18n="nav_pricing">Tarifs</a>
     <div class="nav-mobile-cta">
       <a href="#download" class="btn-primary" data-i18n="cta_download">Téléchargement gratuit</a>
     </div>
@@ -196,7 +189,7 @@
           <p class="hero-description" data-i18n="hero_desc">Pas d'accès cloud autorisé ? Frustré par les feuilles Excel lentes ? Ploto est une application de gestion de projet hors ligne installable directement depuis le Microsoft Store. Démarrez immédiatement sans création de compte ni processus d'approbation fastidieux.</p>
           <div class="hero-buttons">
             <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">Télécharger gratuitement</a>
-            <a href="#demo" class="btn-secondary btn-large" data-i18n="hero_cta_demo">Essayer la démo</a>
+            <a href="#manual" class="btn-secondary btn-large" data-i18n="hero_cta_manual">Voir le manuel</a>
           </div>
           <div class="hero-meta-info" data-i18n="hero_meta"><span>✓ Gratuit &amp; Sans inscription</span><span>✓ Offline-First · Exécution locale</span><span>✓ Stockage direct de fichiers sans risque de fuite</span></div>
         </div>
@@ -239,49 +232,132 @@
       </div>
     </section>
 
-    <!-- Excel vs Ploto Section -->
-    <section id="excel-vs-ploto" class="excel-section">
+    <!-- One task, many views -->
+    <!-- マニュアル案内（#manual）と同じカード並びにしないこと。
+         ここは「1件のタスク」→「6通りの見え方」という構造そのものを見せる図として作る。 -->
+    <section id="views" class="views-section">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title" data-i18n="excel_title">Votre planification de projet Excel arrive-t-elle à ses limites ?</h2>
-          <p class="section-subtitle" data-i18n="excel_subtitle">Comparez les problèmes courants d'Excel lors de la création de diagrammes de Gantt et de WBS avec les solutions de Ploto.</p>
-        </div>
-        <div class="excel-comparison">
-          <!-- Left: Excel problems -->
-          <div class="comparison-col excel-col">
-            <div class="col-header" data-i18n="excel_col_excel">😰 Problèmes et frustrations sur Excel</div>
-            <ul class="comparison-list">
-              <li data-i18n="excel_pain1">La modification d'une largeur de colonne détruit la mise en page de toute la feuille</li>
-              <li data-i18n="excel_pain2">Défilement infini pour les projets volumineux, entraînant la perte de la vue d'ensemble</li>
-              <li data-i18n="excel_pain3">Le partage par e-mail crée des conflits de versions et du désordre</li>
-              <li data-i18n="excel_pain4">Quelqu'un endommage une macro ou une formule et le tableau devient inutilisable</li>
-              <li data-i18n="excel_pain5">Mise à jour manuelle des tableaux de tâches et des listes de priorités sur des feuilles séparées</li>
+        <div class="views-layout">
+          <div class="views-intro">
+            <h2 class="section-title views-heading" data-i18n="views_title">Une tâche. Six façons de la voir.</h2>
+            <p class="views-lead" data-i18n="views_subtitle">Ploto se contente d'afficher la même tâche dans la vue adaptée à ce que vous décidez. Où que vous la modifiiez, c'est toujours un seul enregistrement : ni recopie, ni recoupement.</p>
+
+            <p class="views-flow-caption" data-i18n="views_source_caption">C'est cette unique tâche qu'affiche chacune des vues ci-dessous.</p>
+          </div>
+
+          <div class="views-flow">
+            <div class="views-flow-head">
+              <span class="views-source-label" data-i18n="views_source_label">Saisie une seule fois</span>
+              <div class="views-source-card">
+                <span class="views-source-title" data-i18n="views_source_task">Développement de la page d'accueil</span>
+                <div class="views-source-meta">
+                  <span>7/7 → 7/12</span>
+                  <span data-i18n="views_source_progress">40 % réalisé</span>
+                </div>
+                <div class="views-source-bar"><span></span></div>
+              </div>
+            </div>
+            <div class="views-flow-stem" aria-hidden="true"></div>
+
+            <ul class="views-list">
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="18" y2="12"></line>
+                  <line x1="11" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_gantt_title">Diagramme de Gantt (planning)</strong>
+                <span data-i18n="views_gantt_desc">Décider quand commencer et combien de temps prévoir.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="9" y1="3" x2="9" y2="21"></line>
+                  <line x1="15" y1="3" x2="15" y2="21"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_kanban_title">Kanban</strong>
+                <span data-i18n="views_kanban_desc">Déplacer une carte pour changer l'étape en cours.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="12" y1="3" x2="12" y2="21"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_matrix_title">Matrice de priorités</strong>
+                <span data-i18n="views_matrix_desc">Classer par urgence et importance pour savoir par quoi commencer.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_members_title">Tâches par personne</strong>
+                <span data-i18n="views_members_desc">Voir la charge de chacun et rééquilibrer la répartition.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="8" y1="13" x2="16" y2="13"></line>
+                  <line x1="8" y1="17" x2="13" y2="17"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_note_title">Notes</strong>
+                <span data-i18n="views_note_desc">Consigner décisions et observations tâche par tâche.</span>
+              </div>
+            </li>
+            <li class="views-list-item">
+              <span class="views-list-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12" y2="22"></line>
+                  <line x1="8" y1="22" x2="16" y2="22"></line>
+                  <line x1="6" y1="9" x2="11" y2="9"></line>
+                  <line x1="14" y1="13" x2="18" y2="13"></line>
+                </svg>
+              </span>
+              <div class="views-list-text">
+                <strong data-i18n="views_whiteboard_title">Tableau blanc</strong>
+                <span data-i18n="views_whiteboard_desc">Disposer les tâches en schéma pour partager la vue d'ensemble.</span>
+              </div>
+            </li>
             </ul>
           </div>
-          <!-- Right: Ploto solutions -->
-          <div class="comparison-col ploto-col">
-            <div class="col-header" data-i18n="excel_col_ploto">✅ Résolu avec Ploto</div>
-            <ul class="comparison-list">
-              <li data-i18n="ploto_sol1">Déplacez directement les barres de tâches pour ajuster les plannings – le diagramme se met à jour immédiatement</li>
-              <li data-i18n="ploto_sol2">Basculez de manière transparente entre planning, tableau de statut et matrice de priorité</li>
-              <li data-i18n="ploto_sol3">Transmettez un seul fichier '.ploto' léger pour garantir une base de données unifiée</li>
-              <li data-i18n="ploto_sol4">Le raccourci familier 'Annuler (Ctrl+Z)' réinitialise instantanément les clics erronés ou les modifications accidentelles</li>
-              <li data-i18n="ploto_sol5">Diagrammes de Gantt, tableaux Kanban et matrice de priorité réunis dans une seule application simple</li>
-            </ul>
-          </div>
         </div>
-        <div class="excel-cta">
-          <a href="#download" class="btn-primary btn-large" data-i18n="excel_cta">Dites adieu aux frustrations d'Excel →</a>
-        </div>
+
+        <p class="views-note" data-i18n="views_note">Déplacez par exemple une carte dans la colonne « Développement » : l'étape de la tâche change, et la même information apparaît dans le tableau du planning comme dans les ToDo des notes. Quel que soit le nombre de vues, les données restent uniques.</p>
       </div>
     </section>
 
-    <!-- Key Features Section -->
     <section id="features" class="features-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="features_title">Résolvez vos frustrations d'Excel avec des fonctionnalités simples</h2>
-          <p class="section-subtitle" data-i18n="features_subtitle">Ploto est conçu pour éliminer les tâches fastidieuses et répétitives de la gestion basée sur les tableurs.</p>
+          <h2 class="section-title" data-i18n="features_title">Les détails qui font trébucher la planification, réglés d'avance</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">Des fonctions discrètes mais décisives, conçues pour ne rien avoir à paramétrer.</p>
         </div>
 
         <div class="features-grid">
@@ -313,241 +389,210 @@
             <p class="feature-card-desc" data-i18n="feat_cal_desc">Configurez les jours fériés personnalisés et les horaires de travail. L'estompement des week-ends et la mise en évidence des jours fériés assurent une planification précise de la capacité en fonction de votre planning réel.</p>
           </div>
 
-          <!-- Feature 3: Undo/Redo -->
+          <!-- Feature 3: 日程の自動追従（依存関係・親子） -->
           <div class="feature-card">
-            <div class="feature-icon undo-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="1 4 1 10 7 10"></polyline>
-                <polyline points="23 20 23 14 17 14"></polyline>
-                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+            <div class="feature-icon schedule-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
               </svg>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_undo_title">Corriger les erreurs avec Ctrl+Z</h3>
-            <p class="feature-card-desc" data-i18n="feat_undo_desc">Tout comme dans Excel, vous pouvez corriger des actions telles que le glisser-déposer, la création ou la suppression avec `Ctrl+Z` (Annuler) ou `Ctrl+Y` (Rétablir). Plus de crainte des clics erronés.</p>
+            <h3 class="feature-card-title" data-i18n="feat_auto_title">Décalez une barre, la suite suit</h3>
+            <p class="feature-card-desc" data-i18n="feat_auto_desc">Reliez les tâches entre elles et activez la planification automatique : si une étape prend du retard, toutes les suivantes se décalent. La durée et l'avancement des tâches parentes se calculent d'emblée à partir des sous-tâches — plus besoin de retoucher tout le tableau à chaque changement.</p>
           </div>
 
-          <!-- Feature 4: Local SQLite -->
+          <!-- Feature 4: 同じタスクを複数のビューで -->
           <div class="feature-card">
-            <div class="feature-icon lock-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            <div class="feature-icon views-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-10 5 10 5 10-5-10-5Z"></path>
+                <path d="m2 17 10 5 10-5"></path>
+                <path d="m2 12 10 5 10-5"></path>
               </svg>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_db_title">Stockage local pour une protection stricte des données</h3>
-            <p class="feature-card-desc" data-i18n="feat_db_desc">Toutes les données sont enregistrées directement sur votre PC dans des fichiers standards (.ploto). Aucune connexion cloud n'étant établie, les données confidentielles de projet ne quittent jamais votre environnement informatique.</p>
+            <h3 class="feature-card-title" data-i18n="feat_views_title">Saisi une fois, consultable de plusieurs façons</h3>
+            <p class="feature-card-desc" data-i18n="feat_views_desc">Les mêmes tâches s'affichent en planning, en tableau d'avancement, en matrice de priorités ou en notes. Fini de reconstruire le même tableau sur une autre feuille et de voir les chiffres diverger faute de recopie.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Live Demo Section -->
-    <section id="demo" class="demo-section">
+    <!-- Manual Guide Section -->
+    <section id="manual" class="manual-guide-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="demo_title">Voyez-le en action</h2>
-          <p class="section-subtitle" data-i18n="demo_subtitle">Testez le diagramme de Gantt interactif et le tableau de tâches directement dans votre navigateur avant d'installer l'application.</p>
+          <h2 class="section-title" data-i18n="manual_guide_title">Découvrez ce que Ploto sait faire, dans le manuel</h2>
+          <p class="section-subtitle" data-i18n="manual_guide_subtitle">Consultez les écrans réels et les procédures pas à pas avant d'installer. Ploto est entièrement gratuit et sans inscription : ce qui vous intéresse, vous pouvez l'essayer directement.</p>
         </div>
 
-        <!-- スマホ向け注記バナー（768px以下のみ表示） -->
-        <div class="demo-mobile-notice">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="12" y1="8" x2="12" y2="12"></line>
-            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-          </svg>
-          <span data-i18n="demo_mobile_notice">Sur smartphone, vous pouvez uniquement prévisualiser l'interface. Essayez l'expérience complète sur PC.</span>
+        <div class="manual-guide-grid">
+          <!-- 基本操作 -->
+          <a href="/ploto_LP/fr/manual/basic.html" data-manual-link="basic" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_basic_title">Utilisation de base</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_basic_desc">Du démarrage à l'enregistrement : les menus Fichier et Aide, et les panneaux de la barre latérale. Commencez ici.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
+
+          <!-- ガントチャート -->
+          <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="18" y2="12"></line>
+                <line x1="11" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_gantt_title">Diagramme de Gantt</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_gantt_desc">Faites glisser les barres pour ajuster dates et avancement, reliez les tâches par des dépendances, tenez compte des jours fériés et des congés.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
+
+          <!-- カンバン -->
+          <a href="/ploto_LP/fr/manual/kanban.html" data-manual-link="kanban" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+                <line x1="15" y1="3" x2="15" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_kanban_title">Kanban</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_kanban_desc">Gérez les mêmes tâches en colonnes d'étapes. Déplacer une carte met à jour son statut, et chaque colonne peut appliquer ses ToDo standard.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
+
+          <!-- ノート -->
+          <a href="/ploto_LP/fr/manual/note.html" data-manual-link="note" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="8" y1="13" x2="16" y2="13"></line>
+                <line x1="8" y1="17" x2="13" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_note_title">Notes</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_note_desc">Consignez le suivi de chaque tâche dans une note continue, puis retrouvez tout par recherche.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
+
+          <!-- ホワイトボード -->
+          <a href="/ploto_LP/fr/manual/whiteboard.html" data-manual-link="whiteboard" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12" y2="22"></line>
+                <line x1="8" y1="22" x2="16" y2="22"></line>
+                <line x1="6" y1="9" x2="11" y2="9"></line>
+                <line x1="14" y1="13" x2="18" y2="13"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_whiteboard_title">Tableau blanc</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_whiteboard_desc">Disposez librement les tâches sous forme de schéma, reliez-les par des lignes et ajoutez des widgets d'avancement.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
+
+          <!-- 優先度マトリクス -->
+          <a href="/ploto_LP/fr/manual/matrix.html" data-manual-link="matrix" class="manual-guide-card">
+            <div class="manual-guide-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="12" y1="3" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3 class="manual-guide-card-title" data-i18n="manual_guide_matrix_title">Matrice de priorités</h3>
+            <p class="manual-guide-card-desc" data-i18n="manual_guide_matrix_desc">Placez les tâches selon l'urgence et l'importance pour savoir par quoi commencer.</p>
+            <span class="manual-guide-more" data-i18n="manual_guide_more">Lire le manuel →</span>
+          </a>
         </div>
-
-        <!-- PC縦横比を維持したまま縮小するためのラッパー -->
-        <div class="demo-scale-wrapper">
-          <div class="demo-container">
-            <div class="demo-tabs">
-              <button class="demo-tab-btn active" data-demo-tab="gantt">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="8" y1="6" x2="21" y2="6"></line>
-                  <line x1="8" y1="12" x2="21" y2="12"></line>
-                  <line x1="8" y1="18" x2="21" y2="18"></line>
-                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-                <span data-i18n="demo_tab_gantt">Gantt</span>
-              </button>
-              <button class="demo-tab-btn" data-demo-tab="kanban">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="9" y1="3" x2="9" y2="21"></line>
-                  <line x1="15" y1="3" x2="15" y2="21"></line>
-                </svg>
-                <span data-i18n="demo_tab_kanban">Tableau Kanban</span>
-              </button>
-              <button class="demo-tab-btn" data-demo-tab="matrix">
-                <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="12" y1="3" x2="12" y2="21"></line>
-                </svg>
-                <span data-i18n="demo_tab_matrix">Matrice de priorité</span>
-              </button>
-            </div>
-
-            <div class="demo-window">
-              <!-- Gantt Demo (DHTMLX Gantt Container) -->
-              <div id="demo-pane-gantt" class="demo-pane active">
-                <div id="gantt_container"></div>
-              </div>
-
-              <!-- Kanban Demo -->
-              <div id="demo-pane-kanban" class="demo-pane">
-                <div class="kanban-instructions" data-i18n="demo_kanban_help">Glissez et déposez les cartes entre les colonnes pour changer le statut des tâches.</div>
-                <div class="kanban-board">
-                  <div class="kanban-column" id="col-todo">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_todo">À faire</span>
-                      <span class="column-count">2</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_todo_notes">💡 Placez ici les tâches qui doivent encore être démarrées.</div>
-                    <div class="kanban-cards-container" id="cards-todo">
-                      <div class="kanban-card" draggable="true" id="task-1" style="border-left-color: #3b82f6;">
-                        <div class="card-tags"><span class="tag-badge">Research</span></div>
-                        <div class="card-title">競合アプリの機能調査</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/05</span>
-                          <span class="card-assignee">鈴木</span>
-                        </div>
-                      </div>
-                      <div class="kanban-card" draggable="true" id="task-2" style="border-left-color: #10b981;">
-                        <div class="card-tags"><span class="tag-badge">Design</span></div>
-                        <div class="card-title">LPのワイヤーフレーム作成</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/08</span>
-                          <span class="card-assignee">佐藤</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="kanban-column" id="col-progress">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_progress">En cours</span>
-                      <span class="column-count">1</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_progress_notes">💡 Tâches actuellement en cours de développement.</div>
-                    <div class="kanban-cards-container" id="cards-progress">
-                      <div class="kanban-card" draggable="true" id="task-3" style="border-left-color: #f59e0b;">
-                        <div class="card-tags"><span class="tag-badge">Dev</span></div>
-                        <div class="card-title">LPのHTML/CSSモックアップ実装</div>
-                        <div class="card-footer">
-                          <span class="card-date">07/02</span>
-                          <span class="card-assignee">田中</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="kanban-column" id="col-done">
-                    <div class="kanban-column-header">
-                      <span class="column-title" data-i18n="kanban_done">Terminé</span>
-                      <span class="column-count">1</span>
-                    </div>
-                    <div class="kanban-column-notes" data-i18n="kanban_done_notes">💡 Tâches terminées. Célébrez vos réussites !</div>
-                    <div class="kanban-cards-container" id="cards-done">
-                      <div class="kanban-card done" draggable="true" id="task-4" style="border-left-color: #8b5cf6;">
-                        <div class="card-tags"><span class="tag-badge">Planning</span></div>
-                        <div class="card-title">プロジェクト要件定義書作成</div>
-                        <div class="card-footer">
-                          <span class="card-date">06/28</span>
-                          <span class="card-assignee">鈴木</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Matrix Demo -->
-              <div id="demo-pane-matrix" class="demo-pane">
-                <div class="matrix-instructions" data-i18n="demo_matrix_help">Cliquez dans l'un des quadrants ou utilisez le créateur pour tracer des tâches. Cliquez sur une puce pour la supprimer.</div>
-                <div class="matrix-board">
-                  <div class="matrix-plane">
-                    <!-- Quadrant 1: High Urgent, High Important -->
-                    <div class="matrix-quadrant" id="quad-1">
-                      <div class="quadrant-label" data-i18n="matrix_quad1">Q I : Urgent &amp; Important</div>
-                      <div class="quad-task-list" id="quad-list-1">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #ef4444;">
-                          重要なセキュリティアップデート
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 2: Low Urgent, High Important -->
-                    <div class="matrix-quadrant" id="quad-2">
-                      <div class="quadrant-label" data-i18n="matrix_quad2">Q II : Peu urgent &amp; Important</div>
-                      <div class="quad-task-list" id="quad-list-2">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #f59e0b;">
-                          リファクタリングと技術的負債解消</div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 3: High Urgent, Low Important -->
-                    <div class="matrix-quadrant" id="quad-3">
-                      <div class="quadrant-label" data-i18n="matrix_quad3">Q III : Urgent &amp; Peu important</div>
-                      <div class="quad-task-list" id="quad-list-3">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #3b82f6;">週例報告書の作成
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Quadrant 4: Low Urgent, Low Important -->
-                    <div class="matrix-quadrant" id="quad-4">
-                      <div class="quadrant-label" data-i18n="matrix_quad4">Q IV : Peu urgent &amp; Peu important</div>
-                      <div class="quad-task-list" id="quad-list-4">
-                        <div class="matrix-task-chip" draggable="true" style="border-left-color: #10b981;">オフィス整理整頓
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="matrix-creator">
-                    <h4 data-i18n="matrix_add_title">Ajouter une tâche à la matrice</h4>
-                    <div class="matrix-input-group">
-                      <input type="text" id="matrix-task-name" placeholder="Nouveau nom de tâche..." data-i18n-placeholder="matrix_placeholder">
-                      <select id="matrix-quadrant-select">
-                        <option value="1" data-i18n="matrix_opt1">I. Urgent &amp; Important</option>
-                        <option value="2" data-i18n="matrix_opt2">II. Peu urgent &amp; Important</option>
-                        <option value="3" data-i18n="matrix_opt3">III. Urgent &amp; Peu important</option>
-                        <option value="4" data-i18n="matrix_opt4">IV. Peu urgent &amp; Peu important</option>
-                      </select>
-                      <button id="btn-add-matrix-task" class="btn-primary" data-i18n="btn_add">Ajouter</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> <!-- /.demo-scale-wrapper -->
       </div>
     </section>
 
-    <!-- Beta & Pricing Section -->
-    <section id="beta" class="beta-section">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
       <div class="container">
-        <div class="beta-box">
-          <div class="badge" data-i18n="beta_badge">📢 Bêta active</div>
-          <h2 class="beta-title" data-i18n="beta_title">Les fonctionnalités de base resteront gratuites à vie !<br>(Certaines fonctions pratiques seront payantes)</h2>
-          <p class="beta-desc" data-i18n="beta_desc">Ploto est actuellement en bêta. Nous visons à maintenir les fonctionnalités de base, telles que le diagramme de Gantt, le tableau Kanban et la matrice de priorité, gratuites pour toujours. Les futurs éléments payants devraient inclure l'exportation de fichiers Excel et des fonctionnalités pratiques avancées (comme l'importation de jours fériés) via un achat unique.</p>
-          <div class="beta-info-card">
+        <div class="pricing-box">
+          <div class="badge" data-i18n="pricing_badge">💡 Achat unique, sans abonnement</div>
+          <h2 class="pricing-title" data-i18n="pricing_title">L'essentiel reste gratuit.<br>Pro s'achète une fois, si vous en avez besoin.</h2>
+          <p class="pricing-desc" data-i18n="pricing_desc">Vous pouvez continuer à utiliser Ploto gratuitement. Pro est un achat unique : plus rien à payer ensuite, ni au mois ni à l'année. L'achat se fait au choix dans le Microsoft Store ou sur le web (Stripe), qui vous envoie un code de série par e-mail. Si votre PC professionnel ne peut pas ouvrir les pages de paiement, achetez depuis votre PC personnel ou votre téléphone et saisissez le code sur le PC professionnel.</p>
+          <div class="pricing-info-card">
             <div class="info-card-item">
-              <span class="info-label" data-i18n="beta_price">Prix bêta</span>
-              <span class="info-value text-green">Free (無料)</span>
+              <span class="info-label" data-i18n="pricing_model_label">Modèle tarifaire</span>
+              <span class="info-value text-green" data-i18n="pricing_model_value">Achat unique (sans abonnement)</span>
             </div>
             <div class="info-card-item border-left">
-              <span class="info-label" data-i18n="beta_limit">Modèle de licence futur</span>
-              <span class="info-value" data-i18n="beta_unlimited">Achat unique (pour les exports et fonctions pratiques)</span>
+              <span class="info-label" data-i18n="pricing_buy_label">Où acheter</span>
+              <span class="info-value" data-i18n="pricing_buy_value">Microsoft Store / Web (code de série)</span>
             </div>
+          </div>
+
+          <!-- 無料版 / Pro の比較表。行の内容はアプリ内ライセンス画面（license.compare_*）と揃えること。 -->
+          <div class="plan-compare">
+            <h3 class="plan-compare-title" data-i18n="plan_compare_title">Ce que fait la version gratuite et ce qu'ajoute Pro</h3>
+            <p class="plan-compare-desc" data-i18n="plan_compare_desc">Toutes les fonctions essentielles de Ploto sont gratuites. Pro est un achat unique, sans abonnement, et ne change que les points du tableau ci-dessous.</p>
+
+            <div class="plan-compare-scroll">
+              <table class="plan-compare-table">
+                <thead>
+                  <tr>
+                    <th scope="col" data-i18n="plan_compare_col_feature">Fonction</th>
+                    <th scope="col" data-i18n="plan_compare_col_free">Gratuit</th>
+                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Ploto Pro (achat unique)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_core">Diagramme de Gantt, matrice de priorités, notes</th>
+                    <td data-i18n="plan_compare_core_free">Entièrement disponible</td>
+                    <td class="is-pro" data-i18n="plan_compare_core_pro">Entièrement disponible</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_kanban">Tableaux kanban</th>
+                    <td data-i18n="plan_compare_kanban_free">Jusqu'à 3 par fichier</td>
+                    <td class="is-pro" data-i18n="plan_compare_kanban_pro">Illimités</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_whiteboard">Tableaux blancs</th>
+                    <td data-i18n="plan_compare_whiteboard_free">3 au total par appareil</td>
+                    <td class="is-pro" data-i18n="plan_compare_whiteboard_pro">Illimités</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_baseline">Références</th>
+                    <td class="is-off" data-i18n="plan_compare_baseline_free">Non disponible</td>
+                    <td class="is-pro" data-i18n="plan_compare_baseline_pro">Enregistrer les plans et les comparer à l'avancement</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_export">Export Excel / PDF</th>
+                    <td class="is-off" data-i18n="plan_compare_export_free">Non disponible</td>
+                    <td class="is-pro" data-i18n="plan_compare_export_pro">Exporter et imprimer les plannings</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" data-i18n="plan_compare_holidays">Gestion des jours fériés</th>
+                    <td data-i18n="plan_compare_holidays_free">Ajout et modification manuels</td>
+                    <td class="is-pro" data-i18n="plan_compare_holidays_pro">Manuel + import groupé par pays</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="plan-compare-note" data-i18n="plan_compare_note">* Tout ce qui ne figure pas ici reste sans restriction en version gratuite. Seule exception : les tableaux blancs créés par une autre personne sont en lecture seule dans la version gratuite.</p>
+            <p class="plan-compare-note" data-i18n="plan_compare_license_note">* Les limites de tableaux ne s'appliquent qu'à la création. Un fichier contenant des tableaux créés avec Pro s'ouvre et se modifie normalement en version gratuite. Un code de série peut être enregistré sur plusieurs de vos appareils et, une fois enregistré, il se valide hors ligne.</p>
           </div>
 
           <!-- Feedback Form -->
           <div class="feedback-form-container">
-            <h3 class="feedback-form-title" data-i18n="feedback_title">Soumission de feedback bêta</h3>
+            <h3 class="feedback-form-title" data-i18n="feedback_title">Envoyer un retour</h3>
             <p class="feedback-form-desc" data-i18n="feedback_desc">Envoyez-nous vos rapports de bugs, demandes de fonctionnalités ou retours généraux.</p>
 
             <!-- 

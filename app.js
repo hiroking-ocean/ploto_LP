@@ -28,11 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ko: "KO"
   };
 
-  // --- 3. DHTMLX Gantt Locale Dictionaries ---
-  // Gantt locale data is provided by the individual locale modules.
-
-  // --- 4. Interactive Demo Mock Data ---
-  // --- 5. Initialization / Theme & Lang Application ---
+  // --- 3. Initialization / Theme & Lang Application ---
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     currentTheme = theme;
@@ -175,9 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Update <html lang> so crawlers & screen readers see the active language
     document.documentElement.lang = locale.locale || lang;
 
-    // Refresh Gantt locale if loaded
-    updateGanttLocale(lang);
-
     // Update hero screenshot language based on current locale settings
     const heroScreenshot = document.getElementById("hero-screenshot");
     if (heroScreenshot) {
@@ -185,237 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // --- 6. DHTMLX Gantt Demo Initialization ---
-  let isGanttInitialized = false;
-
-  function initGanttDemo() {
-    if (isGanttInitialized) return;
-
-    gantt.config.date_format = "%Y-%m-%d";
-    gantt.config.row_height = 40;
-    gantt.config.scale_height = 50;
-    gantt.config.grid_width = 240;
-
-    const localeGantt = localesData[currentLang].gantt;
-
-    // Configure grid headers & column mapping
-    gantt.config.columns = [
-      { name: "text", label: localeGantt.labels.column_text, width: "*", tree: true },
-      { name: "duration", label: localeGantt.labels.column_duration, align: "center", width: 60 }
-    ];
-
-    // Grid config
-    gantt.config.scales = [
-      { unit: "month", step: 1, format: currentLang === "ja" ? "%Y年%M" : "%F, %Y" },
-      { unit: "day", step: 1, format: currentLang === "ja" ? "%d" : "%j" }
-    ];
-
-    gantt.init("gantt_container");
-    
-    // Parse respective language data initially
-    gantt.parse(localeGantt.data);
-
-    isGanttInitialized = true;
-  }
-
-  function updateGanttLocale(lang) {
-    if (!isGanttInitialized) return;
-
-    const localeGantt = localesData[lang]?.gantt || localesData.ja.gantt;
-    Object.assign(gantt.locale.labels, localeGantt.labels);
-    Object.assign(gantt.locale.date, localeGantt.date);
-
-    // Apply grid column headers
-    gantt.config.columns[0].label = localeGantt.labels.column_text;
-    gantt.config.columns[1].label = localeGantt.labels.column_duration;
-
-    // Set timeline scales format depending on language
-    gantt.config.scales = [
-      { unit: "month", step: 1, format: lang === "ja" ? "%Y年%M" : "%F, %Y" },
-      { unit: "day", step: 1, format: lang === "ja" ? "%d" : "%j" }
-    ];
-
-    // Reload translated task data for this locale
-    gantt.clearAll();
-    gantt.parse(localeGantt.data);
-    gantt.render();
-  }
-
-  // --- 7. Kanban Board Drag & Drop Logic ---
-  const cards = document.querySelectorAll(".kanban-card");
-  const containers = document.querySelectorAll(".kanban-cards-container");
-  let draggedCard = null;
-
-  cards.forEach((card) => {
-    card.addEventListener("dragstart", () => {
-      draggedCard = card;
-      card.classList.add("dragging");
-    });
-
-    card.addEventListener("dragend", () => {
-      card.classList.remove("dragging");
-      draggedCard = null;
-      updateKanbanCounts();
-    });
-  });
-
-  containers.forEach((container) => {
-    container.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      const afterElement = getDragAfterElement(container, e.clientY);
-      if (afterElement == null) {
-        container.appendChild(draggedCard);
-      } else {
-        container.insertBefore(draggedCard, afterElement);
-      }
-    });
-  });
-
-  function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll(".kanban-card:not(.dragging)")];
-
-    return draggableElements.reduce((closest, child) => {
-      const box = child.getBoundingClientRect();
-      const offset = y - box.top - box.height / 2;
-      if (offset < 0 && offset > closest.offset) {
-        return { offset: offset, element: child };
-      } else {
-        return closest;
-      }
-    }, { offset: Number.NEGATIVE_INFINITY }).element;
-  }
-
-  function updateKanbanCounts() {
-    containers.forEach((container) => {
-      const count = container.querySelectorAll(".kanban-card").length;
-      const column = container.closest(".kanban-column");
-      if (column) {
-        column.querySelector(".column-count").textContent = count;
-      }
-    });
-  }
-
-  // --- 8. Priority Matrix Demo Logic ---
-  const matrixAddBtn = document.getElementById("btn-add-matrix-task");
-  const matrixInput = document.getElementById("matrix-task-name");
-  const quadrantSelect = document.getElementById("matrix-quadrant-select");
-  const quadLists = document.querySelectorAll(".quad-task-list");
-  let draggedMatrixChip = null;
-
-  function makeMatrixChipDraggable(chip) {
-    chip.setAttribute("draggable", "true");
-    
-    chip.addEventListener("dragstart", () => {
-      draggedMatrixChip = chip;
-      chip.classList.add("dragging");
-    });
-
-    chip.addEventListener("dragend", () => {
-      chip.classList.remove("dragging");
-      draggedMatrixChip = null;
-    });
-    
-    // Click to remove interaction
-    chip.addEventListener("click", () => {
-      chip.style.transform = "scale(0.8)";
-      chip.style.opacity = "0";
-      setTimeout(() => chip.remove(), 200);
-    });
-  }
-
-  // Setup drop containers
-  quadLists.forEach((list) => {
-    list.addEventListener("dragover", (e) => {
-      e.preventDefault();
-    });
-
-    list.addEventListener("drop", (e) => {
-      e.preventDefault();
-      if (draggedMatrixChip) {
-        list.appendChild(draggedMatrixChip);
-        
-        // Update border color depending on target quadrant
-        const quadId = list.id;
-        const quadIndex = parseInt(quadId.replace("quad-list-", "")) - 1;
-        const borderColors = ["#ef4444", "#f59e0b", "#3b82f6", "#10b981"];
-        draggedMatrixChip.style.borderLeftColor = borderColors[quadIndex];
-      }
-    });
-  });
-
-  if (matrixAddBtn && matrixInput && quadrantSelect) {
-    matrixAddBtn.addEventListener("click", () => {
-      const taskName = matrixInput.value.trim();
-      if (!taskName) return;
-
-      const quadValue = quadrantSelect.value;
-      const targetContainer = document.getElementById(`quad-list-${quadValue}`);
-      
-      if (targetContainer) {
-        // Create chip
-        const chip = document.createElement("div");
-        chip.className = "matrix-task-chip";
-        chip.textContent = taskName;
-
-        // Apply distinct colors per quadrant
-        const borderColors = ["#ef4444", "#f59e0b", "#3b82f6", "#10b981"];
-        chip.style.borderLeftColor = borderColors[parseInt(quadValue) - 1];
-
-        // Setup drag & drop and delete interaction
-        makeMatrixChipDraggable(chip);
-
-        targetContainer.appendChild(chip);
-        matrixInput.value = "";
-      }
-    });
-
-    // Press Enter to submit
-    matrixInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        matrixAddBtn.click();
-      }
-    });
-
-    // Setup initial chips
-    document.querySelectorAll(".matrix-task-chip").forEach((chip) => {
-      makeMatrixChipDraggable(chip);
-    });
-  }
-
-  // --- 9. Tab Switcher Logic (Gantt / Kanban / Matrix) ---
-  const tabButtons = document.querySelectorAll(".demo-tab-btn");
-  const panes = document.querySelectorAll(".demo-pane");
-
-  tabButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetTab = btn.getAttribute("data-demo-tab");
-
-      // Set button active
-      tabButtons.forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-
-      // Set pane active
-      panes.forEach((pane) => {
-        pane.classList.remove("active");
-        if (pane.id === `demo-pane-${targetTab}`) {
-          pane.classList.add("active");
-        }
-      });
-
-      // Special Initialization for Gantt when selected
-      if (targetTab === "gantt") {
-        initGanttDemo();
-        // Force refresh Gantt to resolve layout glitch in hidden div
-        setTimeout(() => {
-          if (isGanttInitialized) {
-            gantt.render();
-          }
-        }, 100);
-      }
-    });
-  });
-
-  // --- 10. Feedback Form Submission Handler ---
+  // --- 4. Feedback Form Submission Handler ---
   const feedbackForm = document.getElementById("feedback-form");
   const feedbackSuccessMsg = document.getElementById("feedback-success-msg");
 
@@ -472,7 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 11. Hero Visual Slideshow Logic ---
+  // --- 5. Hero Visual Slideshow Logic ---
   function startScreenshotSlideshow() {
     if (slideshowInterval) clearInterval(slideshowInterval);
     
@@ -492,14 +255,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000); // 5 seconds per slide
   }
 
-  // --- 12. Initial Invocation ---
+  // --- 6. Initial Invocation ---
   applyLanguage(currentLang);
-  // Auto-init Gantt demo as Gantt is the first active tab
-  initGanttDemo();
   // Start visual slideshow
   startScreenshotSlideshow();
 
-  // --- 13. ハンバーガーメニュー開閉制御 ---
+  // --- 7. ハンバーガーメニュー開閉制御 ---
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const navMobile = document.getElementById("nav-mobile");
 
@@ -529,41 +290,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 14. デモセクションのモバイルスケール制御 ---
-  const demoScaleWrapper = document.querySelector(".demo-scale-wrapper");
-  const demoContainer = demoScaleWrapper ? demoScaleWrapper.querySelector(".demo-container") : null;
-
-  /**
-   * スマホ幅でのみ、demo-containerをPC縦横比のままscale縮小する。
-   * CSSに固定値を書くと端末幅ごとにズレるため、JSで動的に計算する。
-   */
-  function updateDemoScale() {
-    if (!demoScaleWrapper || !demoContainer) return;
-
-    const MOBILE_BREAKPOINT = 768;
-    const DEMO_FIXED_WIDTH = 1100; // CSSで設定したdemo-containerの固定幅と合わせる
-
-    if (window.innerWidth <= MOBILE_BREAKPOINT) {
-      // ラッパーの実際の表示幅に対するスケール比を計算
-      const wrapperWidth = demoScaleWrapper.getBoundingClientRect().width;
-      const scale = wrapperWidth / DEMO_FIXED_WIDTH;
-
-      // CSSカスタムプロパティにセットしてtransform: scaleに反映
-      demoContainer.style.setProperty("--demo-scale", scale);
-      demoContainer.style.transform = `scale(${scale})`;
-
-      // scale後のコンテナ実高さ（元の高さ × scale）でラッパーの高さを確保
-      // これをしないとラッパーが0高さになって後続要素が重なる
-      const originalHeight = demoContainer.scrollHeight;
-      demoScaleWrapper.style.height = `${originalHeight * scale}px`;
-    } else {
-      // PCではscaleなし・高さ指定なし（通常レイアウト）
-      demoContainer.style.transform = "";
-      demoScaleWrapper.style.height = "";
-    }
-  }
-
-  // 初回実行 & リサイズ時に再計算
-  updateDemoScale();
-  window.addEventListener("resize", updateDemoScale);
 });
