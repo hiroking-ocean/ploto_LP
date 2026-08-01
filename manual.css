@@ -378,6 +378,124 @@ kbd {
 }
 
 /* ==========================================================================
+   図の中のパーツに説明を出すツールチップ（カンバンのカード見本・ノートの書式バー）
+   --------------------------------------------------------------------------
+   トリガーを button にしているのは、hover のないタッチ環境でもタップで
+   フォーカスが当たり、説明を開けるようにするため。
+   ========================================================================== */
+/* 説明を出す各パーツ。button だが図の中での見た目は素の要素と同じにする。 */
+.manual-tip-part {
+  position: relative;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  cursor: help;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.manual-tip-part:hover,
+.manual-tip-part:focus,
+.manual-tip-part:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-primary) 60%, transparent);
+  outline-offset: 2px;
+}
+
+/* --- パーツの説明ツールチップ ---------------------------------------------
+   visibility で開閉する。aria-describedby から参照している要素は非表示でも
+   読み上げ対象になるため、支援技術には常に説明が届く。 */
+.manual-tip {
+  /* ライトテーマではカードとほぼ同じ白になって浮いて見えないため、
+     吹き出しだけ濃い面色にする（三角も同じ変数を参照する）。 */
+  --manual-tip-bg: var(--bg-card-hover);
+  --manual-tip-fg: var(--text-main);
+  --manual-tip-border: var(--border-color);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: max-content;
+  max-width: min(260px, 62vw);
+  padding: 10px 12px;
+  border: 1px solid var(--manual-tip-border);
+  border-radius: 8px;
+  background-color: var(--manual-tip-bg);
+  color: var(--manual-tip-fg);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  white-space: normal;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+/* 吹き出しの三角。枠線と同色の三角の上に背景色の三角を重ねて縁取りを作る。 */
+.manual-tip::before,
+.manual-tip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+}
+
+.manual-tip::before { top: 100%; border-top-color: var(--manual-tip-border); }
+.manual-tip::after  { top: calc(100% - 1px); border-top-color: var(--manual-tip-bg); }
+
+[data-theme="light"] .manual-tip {
+  --manual-tip-bg: #1f2937;
+  --manual-tip-fg: #f8fafc;
+  --manual-tip-border: #111827;
+}
+
+/* カードの上端に近いパーツは、図の外へ飛び出さないよう下側に開く */
+.manual-tip--below {
+  top: calc(100% + 10px);
+  bottom: auto;
+}
+
+.manual-tip--below::before { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--manual-tip-border); }
+.manual-tip--below::after  { top: auto; bottom: calc(100% - 1px); border-top-color: transparent; border-bottom-color: var(--manual-tip-bg); }
+
+/* 左端・右端のパーツは中央揃えだとカードからはみ出すので、端に寄せる */
+.manual-tip--start { left: 0; transform: none; }
+.manual-tip--end   { left: auto; right: 0; transform: none; }
+
+.manual-tip--start::before,
+.manual-tip--start::after { left: 20px; }
+
+.manual-tip--end::before,
+.manual-tip--end::after { left: auto; right: 20px; transform: none; }
+
+.manual-tip-part:hover > .manual-tip,
+.manual-tip-part:focus > .manual-tip,
+.manual-tip-part:focus-visible > .manual-tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manual-tip { transition: none; }
+}
+
+
+@media (max-width: 640px) {
+  .manual-tip {
+    max-width: min(240px, 72vw);
+  }
+}
+
+/* ==========================================================================
    カンバンのカード見本
    --------------------------------------------------------------------------
    4象限の図と同じ理由（多言語化・テーマ追従・軽量化）でスクリーンショット
@@ -398,7 +516,7 @@ kbd {
   box-shadow: var(--shadow-sm);
 }
 
-.kc-caption {
+.manual-figure-caption {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -408,7 +526,7 @@ kbd {
   line-height: 1.6;
 }
 
-.kc-caption-hint {
+.manual-figure-hint {
   font-size: 0.75rem;
   opacity: 0.85;
 }
@@ -422,29 +540,6 @@ kbd {
   border-radius: 8px;
   background-color: var(--bg-card);
   box-shadow: var(--shadow-sm);
-}
-
-/* 説明を出す各パーツ。button だがカード内の見た目は素の要素と同じにする。 */
-.kc-part {
-  position: relative;
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: 0;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  cursor: help;
-  border-radius: 6px;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.kc-part:hover,
-.kc-part:focus,
-.kc-part:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--color-primary) 60%, transparent);
-  outline-offset: 2px;
 }
 
 .kc-assignee {
@@ -535,88 +630,6 @@ kbd {
   white-space: nowrap;
 }
 
-/* --- パーツの説明ツールチップ ---------------------------------------------
-   visibility で開閉する。aria-describedby から参照している要素は非表示でも
-   読み上げ対象になるため、支援技術には常に説明が届く。 */
-.kc-tip {
-  /* ライトテーマではカードとほぼ同じ白になって浮いて見えないため、
-     吹き出しだけ濃い面色にする（三角も同じ変数を参照する）。 */
-  --kc-tip-bg: var(--bg-card-hover);
-  --kc-tip-fg: var(--text-main);
-  --kc-tip-border: var(--border-color);
-  position: absolute;
-  bottom: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  width: max-content;
-  max-width: min(260px, 62vw);
-  padding: 10px 12px;
-  border: 1px solid var(--kc-tip-border);
-  border-radius: 8px;
-  background-color: var(--kc-tip-bg);
-  color: var(--kc-tip-fg);
-  font-size: 0.78rem;
-  font-weight: 400;
-  line-height: 1.65;
-  text-align: left;
-  white-space: normal;
-  box-shadow: var(--shadow-md);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.15s ease, visibility 0.15s ease;
-}
-
-/* 吹き出しの三角。枠線と同色の三角の上に背景色の三角を重ねて縁取りを作る。 */
-.kc-tip::before,
-.kc-tip::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-}
-
-.kc-tip::before { top: 100%; border-top-color: var(--kc-tip-border); }
-.kc-tip::after  { top: calc(100% - 1px); border-top-color: var(--kc-tip-bg); }
-
-[data-theme="light"] .kc-tip {
-  --kc-tip-bg: #1f2937;
-  --kc-tip-fg: #f8fafc;
-  --kc-tip-border: #111827;
-}
-
-/* カードの上端に近いパーツは、図の外へ飛び出さないよう下側に開く */
-.kc-tip--below {
-  top: calc(100% + 10px);
-  bottom: auto;
-}
-
-.kc-tip--below::before { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--kc-tip-border); }
-.kc-tip--below::after  { top: auto; bottom: calc(100% - 1px); border-top-color: transparent; border-bottom-color: var(--kc-tip-bg); }
-
-/* 左端・右端のパーツは中央揃えだとカードからはみ出すので、端に寄せる */
-.kc-tip--start { left: 0; transform: none; }
-.kc-tip--end   { left: auto; right: 0; transform: none; }
-
-.kc-tip--start::before,
-.kc-tip--start::after { left: 20px; }
-
-.kc-tip--end::before,
-.kc-tip--end::after { left: auto; right: 20px; transform: none; }
-
-.kc-part:hover > .kc-tip,
-.kc-part:focus > .kc-tip,
-.kc-part:focus-visible > .kc-tip {
-  opacity: 1;
-  visibility: visible;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .kc-tip { transition: none; }
-}
-
 @media (max-width: 640px) {
   .kanban-card-figure {
     padding: 16px;
@@ -625,8 +638,132 @@ kbd {
   .kc-meta {
     flex-wrap: wrap;
   }
+}
 
-  .kc-tip {
-    max-width: min(240px, 72vw);
+/* ==========================================================================
+   ノートの書式バー
+   --------------------------------------------------------------------------
+   note-format.png の代わりにHTML/CSSで再現している。アイコンだけのボタンが
+   並ぶため、説明は共通のツールチップ（.manual-tip）で出す。
+   ========================================================================== */
+.note-format-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.nf-toolbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --border-color はダークテーマのカード上だとほぼ見えないので、少し強い色にする */
+.nf-divider {
+  width: 1px;
+  align-self: stretch;
+  margin: 0 4px;
+  background-color: color-mix(in srgb, var(--text-muted) 40%, transparent);
+}
+
+.nf-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--text-main);
+}
+
+.nf-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* 文字色ボタンは、アプリと同じように現在の色を下線で示す */
+.nf-btn-color {
+  position: relative;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 3px;
+}
+
+.nf-btn-color::after {
+  content: "";
+  width: 17px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--color-danger);
+}
+
+.nf-select {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nf-select svg {
+  width: 14px;
+  height: 14px;
+  color: var(--text-muted);
+}
+
+.nf-btn:hover,
+.nf-select:hover {
+  background-color: var(--bg-card-hover);
+}
+
+/* 説明はボタンではなくツールバー全体を基準に置く。ボタンが小さいうえに
+   狭い画面では折り返すため、ボタン中央に出すと図の外へはみ出してしまう。 */
+.nf-toolbar .manual-tip-part {
+  position: static;
+}
+
+.nf-toolbar .manual-tip {
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 10px);
+  width: auto;
+  max-width: none;
+  transform: none;
+  text-align: center;
+}
+
+.nf-toolbar .manual-tip::before,
+.nf-toolbar .manual-tip::after {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .note-format-figure {
+    padding: 16px;
+  }
+
+  .nf-divider {
+    margin: 0 2px;
   }
 }

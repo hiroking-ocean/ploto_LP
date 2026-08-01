@@ -462,44 +462,44 @@
                説明文は aria-describedby で読み上げにも渡す。 -->
           <figure class="kanban-card-figure">
             <div class="kc-card">
-              <button type="button" class="kc-part kc-assignee" aria-describedby="kc-tip-assignee">
+              <button type="button" class="manual-tip-part kc-assignee" aria-describedby="manual-tip-assignee">
                 <span data-i18n="manual_kanban_card_sample_assignee">開発</span>
-                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">担当者。このタスクを誰が進めるかを示します。ボード上部のバーで担当者による絞り込みもできます。</span>
+                <span class="manual-tip manual-tip--start manual-tip--below" role="tooltip" id="manual-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">担当者。このタスクを誰が進めるかを示します。ボード上部のバーで担当者による絞り込みもできます。</span>
               </button>
-              <button type="button" class="kc-part kc-title" aria-describedby="kc-tip-title">
+              <button type="button" class="manual-tip-part kc-title" aria-describedby="manual-tip-title">
                 <span data-i18n="manual_kanban_card_sample_title">認証機能の実装</span>
-                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-title" data-i18n="manual_kanban_card_tip_title">タスク名。ガントチャートやノートに出てくるものと同じ1件のタスクです。</span>
+                <span class="manual-tip manual-tip--start manual-tip--below" role="tooltip" id="manual-tip-title" data-i18n="manual_kanban_card_tip_title">タスク名。ガントチャートやノートに出てくるものと同じ1件のタスクです。</span>
               </button>
               <div class="kc-tags">
-                <button type="button" class="kc-part kc-tag kc-tag-a" aria-describedby="kc-tip-tag1">
+                <button type="button" class="manual-tip-part kc-tag kc-tag-a" aria-describedby="manual-tip-tag1">
                   <span data-i18n="manual_kanban_card_sample_tag1">バックエンド</span>
-                  <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-tag1" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
+                  <span class="manual-tip manual-tip--start manual-tip--below" role="tooltip" id="manual-tip-tag1" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
                 </button>
-                <button type="button" class="kc-part kc-tag kc-tag-b" aria-describedby="kc-tip-tag2">
+                <button type="button" class="manual-tip-part kc-tag kc-tag-b" aria-describedby="manual-tip-tag2">
                   <span data-i18n="manual_kanban_card_sample_tag2">重要</span>
-                  <span class="kc-tip kc-tip--below" role="tooltip" id="kc-tip-tag2" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
+                  <span class="manual-tip manual-tip--below" role="tooltip" id="manual-tip-tag2" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
                 </button>
               </div>
               <div class="kc-meta">
-                <button type="button" class="kc-part kc-due" aria-describedby="kc-tip-due">
+                <button type="button" class="manual-tip-part kc-due" aria-describedby="manual-tip-due">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
                   2026-07-15
-                  <span class="kc-tip kc-tip--start" role="tooltip" id="kc-tip-due" data-i18n="manual_kanban_card_tip_due">期限。『期限切れ』『本日が期限』『期限間近』の状態に応じて色が変わります。</span>
+                  <span class="manual-tip manual-tip--start" role="tooltip" id="manual-tip-due" data-i18n="manual_kanban_card_tip_due">期限。『期限切れ』『本日が期限』『期限間近』の状態に応じて色が変わります。</span>
                 </button>
-                <button type="button" class="kc-part kc-todo" aria-describedby="kc-tip-todo">
+                <button type="button" class="manual-tip-part kc-todo" aria-describedby="manual-tip-todo">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-square" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
                   1/9
-                  <span class="kc-tip" role="tooltip" id="kc-tip-todo" data-i18n="manual_kanban_card_tip_todo">ToDoの消化状況。そのタスクのToDoが、全体のうち何件終わったかを表します。</span>
+                  <span class="manual-tip" role="tooltip" id="manual-tip-todo" data-i18n="manual_kanban_card_tip_todo">ToDoの消化状況。そのタスクのToDoが、全体のうち何件終わったかを表します。</span>
                 </button>
-                <button type="button" class="kc-part kc-priority" aria-describedby="kc-tip-priority">
+                <button type="button" class="manual-tip-part kc-priority" aria-describedby="manual-tip-priority">
                   <span data-i18n="manual_kanban_card_sample_priority">高</span>
-                  <span class="kc-tip kc-tip--end" role="tooltip" id="kc-tip-priority" data-i18n="manual_kanban_card_tip_priority">優先度。詳細タブで設定した優先度が表示されます。</span>
+                  <span class="manual-tip manual-tip--end" role="tooltip" id="manual-tip-priority" data-i18n="manual_kanban_card_tip_priority">優先度。詳細タブで設定した優先度が表示されます。</span>
                 </button>
               </div>
             </div>
-            <figcaption class="kc-caption">
+            <figcaption class="manual-figure-caption">
               <span data-i18n="manual_kanban_card_figure_alt">カンバンのカードに表示される項目の例</span>
-              <span class="kc-caption-hint" data-i18n="manual_kanban_card_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
+              <span class="manual-figure-hint" data-i18n="manual_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
             </figcaption>
           </figure>
         </div>
@@ -741,9 +741,57 @@
               </div>
             </li>
           </ul>
-          <div class="manual-image-container">
-            <img src="assets/manual/ja/note-format.png" data-screenshot-path="note-format.png" alt="Formatting Toolbar">
-          </div>
+          <!-- 書式バーもスクショではなくHTML/CSSで描画する。アイコンだけでは何のボタンか
+               分からないため、各ボタンの説明はツールチップと aria-label の両方に入れる。 -->
+          <figure class="note-format-figure">
+            <div class="nf-toolbar">
+              <button type="button" class="manual-tip-part nf-select" aria-label="Heading" data-i18n-aria-label="manual_note_format_tool_heading">
+                <span data-i18n="manual_note_format_sample_heading">見出し1</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_heading">見出し。本文と見出し1〜3を切り替えて、段落を区切ります。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Bold" data-i18n-aria-label="manual_note_format_tool_bold">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bold" aria-hidden="true"><path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_bold">太字。選択した文字を太くします。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Italic" data-i18n-aria-label="manual_note_format_tool_italic">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-italic" aria-hidden="true"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_italic">斜体。選択した文字を斜めにします。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Underline" data-i18n-aria-label="manual_note_format_tool_underline">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-underline" aria-hidden="true"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_underline">下線。選択した文字に下線を引きます。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Bulleted list" data-i18n-aria-label="manual_note_format_tool_bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list" aria-hidden="true"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_bullet">箇条書き。決定事項などを項目立てて並べます。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Numbered list" data-i18n-aria-label="manual_note_format_tool_numbered">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-ordered" aria-hidden="true"><line x1="10" x2="21" y1="6" y2="6"></line><line x1="10" x2="21" y1="12" y2="12"></line><line x1="10" x2="21" y1="18" y2="18"></line><path d="M4 6h1v4"></path><path d="M4 10h2"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_numbered">番号付きリスト。手順のように順序があるものに使います。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn nf-btn-color" aria-label="Text color" data-i18n-aria-label="manual_note_format_tool_color">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-baseline" aria-hidden="true"><path d="M4 20h16"></path><path d="m6 16 6-12 6 12"></path><path d="M8.5 12h7"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_color">文字色。選択した文字の色を変えます。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Clear formatting" data-i18n-aria-label="manual_note_format_tool_clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-remove-formatting" aria-hidden="true"><path d="M4 7V4h16v3"></path><path d="M5 20h6"></path><path d="M13 4 8 20"></path><path d="m15 15 5 5"></path><path d="m20 15-5 5"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_clear">書式クリア。設定した書式を取り消して、素の文字に戻します。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="Today's date" data-i18n-aria-label="manual_note_format_tool_today">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-plus" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M10 16h4"></path><path d="M12 14v4"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_today">今日の日付。カーソル位置に今日の日付を差し込みます。</span>
+              </button>
+            </div>
+            <figcaption class="manual-figure-caption">
+              <span data-i18n="manual_note_format_figure_alt">ノートの上部に並ぶ書式バー</span>
+              <span class="manual-figure-hint" data-i18n="manual_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
+            </figcaption>
+          </figure>
         </div>
 
         <h2 data-i18n="manual_note_section_link">2. タスクとのつながり</h2>

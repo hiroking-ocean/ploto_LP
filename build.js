@@ -47,7 +47,7 @@ const absolutize = (val) => {
 // styles.css / app.js などはファイル名が変わらないため、ブラウザやCDNが古い版を
 // 掴んだままだと「HTMLは新しいのに見た目だけ壊れる」状態になる（新しいセクションの
 // CSSだけ当たらない、など）。中身のハッシュを ?v= に付けて、変更時だけURLを変える。
-// app.js / manual.js は locales/*.js を import するため、翻訳の変更もハッシュに含める。
+// app.js は locales/*.js を import するため、翻訳の変更もハッシュに含める。
 const LOCALE_FILES = ["locales/index.js", ...LANGS.map((l) => `locales/${l}.js`)];
 const hashOf = (files) => {
   const h = createHash("sha1");
@@ -58,8 +58,33 @@ const ASSET_VERSION = {
   "styles.css": hashOf(["styles.css"]),
   "manual.css": hashOf(["manual.css"]),
   "app.js": hashOf(["app.js", ...LOCALE_FILES]),
-  "manual.js": hashOf(["manual.js", ...LOCALE_FILES]),
+  // manual.js は locales を読み込まない（プリレンダリング済みのため）ので自分自身のみ
+  "manual.js": hashOf(["manual.js"]),
 };
+
+// --- 画像の実寸取得 ---------------------------------------------------------
+// lazy 読み込みは width/height（= 内在アスペクト比）が無いと機能しない。高さ0の
+// 画像は「全部ビューポート内」と判定され、結局すべて先読みされてしまうため。
+// スクショは PNG か GIF なのでヘッダを直接読む（依存パッケージを増やさない）。
+const imageSizeCache = new Map();
+function imageSize(relPath) {
+  if (imageSizeCache.has(relPath)) return imageSizeCache.get(relPath);
+  let size = null;
+  try {
+    const buf = readFileSync(join(__dirname, relPath));
+    if (buf.length > 24 && buf.readUInt32BE(0) === 0x89504e47) {
+      // PNG: 8バイトのシグネチャ + IHDR チャンク(長さ4 + 型4)の直後が幅・高さ
+      size = { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+    } else if (buf.length > 10 && buf.toString("ascii", 0, 3) === "GIF") {
+      // GIF: 論理画面記述子の先頭がリトルエンディアンの幅・高さ
+      size = { width: buf.readUInt16LE(6), height: buf.readUInt16LE(8) };
+    }
+  } catch {
+    size = null;
+  }
+  imageSizeCache.set(relPath, size);
+  return size;
+}
 
 /** 自前の css/js に ?v=<内容ハッシュ> を付ける（既存のクエリは置き換える）。 */
 function stampAssetVersions($) {
@@ -328,12 +353,20 @@ function buildManualPage(lang, pageName) {
   $(`.manual-menu-item[data-menu-id="${pageName}"]`).addClass("active");
 
   // 10. コンテンツ表示制御
+  //     テンプレートは全ページ分の <article> を持つが、1ページに必要なのは1つだけ。
+  //     display:none の記事も画像は取得されるため（ブラウザは非表示要素の img も
+  //     ダウンロードする）、残したままだと他ページ分の数MBを毎回読むことになる。
+  //     HTML自体も 89KB → 20KB 程度まで減るので、ここで丸ごと取り除く。
+  $(`.manual-article:not(#content-${pageName})`).remove();
   $(`#content-${pageName}`).removeAttr("style");
 
   // 11. スクリーンショット画像のローカライズと絶対パス化
   //     当該言語 → FALLBACK_LANG の順に探し、どちらも無ければ画像枠ごと削除する
   //     （未撮影のスクショで壊れた画像アイコンが出ないようにするため）。
   //     同名の .gif があれば GIF アニメーションを優先する。
+  //     あわせて lazy 読み込み属性と実寸を付与する。最初の1枚だけはファースト
+  //     ビューに入るので eager + 高優先度で読ませ、LCP を遅らせないようにする。
+  let isFirstScreenshot = true;
   $("[data-screenshot-path]").each((_, el) => {
     const file = $(el).attr("data-screenshot-path");
     const gifFile = file.replace(/\.[^/.]+$/, ".gif");
@@ -353,6 +386,20 @@ function buildManualPage(lang, pageName) {
     }
 
     $(el).attr("src", absolutize(found));
+
+    const size = imageSize(found);
+    if (size) {
+      $(el).attr("width", String(size.width));
+      $(el).attr("height", String(size.height));
+    }
+
+    if (isFirstScreenshot) {
+      $(el).attr("loading", "eager").attr("fetchpriority", "high");
+      isFirstScreenshot = false;
+    } else {
+      $(el).attr("loading", "lazy").attr("fetchpriority", "low");
+    }
+    $(el).attr("decoding", "async");
   });
 
   // 12. アセットパス絶対化

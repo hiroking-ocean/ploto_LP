@@ -74,10 +74,10 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/ploto_LP/styles.css?v=f1abead6">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=4b15b304">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=3335fef3">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=135b9c92" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=2ebce4f0" defer=""></script>
 </head>
 
 <body>
@@ -184,489 +184,16 @@
     <!-- Main Content -->
     <main class="manual-content">
       <!-- 0. Basic Operations Manual -->
-      <article id="content-basic" class="manual-article" style="display: none;">
-        <h1 data-i18n="manual_basic_heading">基本操作の使い方</h1>
-        <p data-i18n="manual_basic_intro">Plotoの共通の画面操作や、ファイルの保存・管理方法について説明します。</p>
-
-        <h2 data-i18n="manual_basic_section_start">1. スタートアップ画面</h2>
-        <p data-i18n="manual_basic_start_desc">Plotoを起動すると、まずプロジェクトの作成や読み込みを行うスタートポップアップが表示されます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_basic_start_new_title">新規プロジェクトの作成</h3>
-          <p data-i18n="manual_basic_start_new_desc">『新規プロジェクトを作成』ボタンをクリックすると、新しい空のプロジェクトが開かれ、すぐにタスク管理を開始できます。</p>
-          <h3 data-i18n="manual_basic_start_open_title">既存ファイルを開く</h3>
-          <p data-i18n="manual_basic_start_open_desc">『ローカルファイルを開く』ボタンをクリックすると、ファイル選択ダイアログが開き、お使いのPC内に保存されている .ploto ファイルを読み込んで編集を再開できます。</p>
-          <h3 data-i18n="manual_basic_start_tutorial_title">チュートリアルで体験する</h3>
-          <p data-i18n="manual_basic_start_tutorial_desc">初めて使う方は『チュートリアルで体験する』ボタンがおすすめです。サンプルの工程表を使って、画面の案内に沿って実際に手を動かしながら基本操作を覚えられます。コースは<strong>ガントチャート（約4分）</strong>、<strong>カンバン（約6分）</strong>、<strong>ノート（約5分）</strong>の3種類です。開始すると練習用のプロジェクトが新しく作られるため、お使いのファイルには影響しません。途中でやめても、あとから『ヘルプ』メニューの『チュートリアルを開始』でいつでもやり直せます。</p>
-          <h3 data-i18n="manual_basic_start_recent_title">最近開いたプロジェクト</h3>
-          <p data-i18n="manual_basic_start_recent_desc">過去に Ploto で開いたプロジェクトがリスト表示されます。ファイルパスを探す手間なく、クリックするだけで素早く最新の状態で開くことが可能です。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/basic-start-popup.png" data-screenshot-path="basic-start-popup.png" alt="Start Popup">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_basic_section_file">2. ファイル・ヘルプメニュー</h2>
-        <p data-i18n="manual_basic_file_desc">画面上部のヘッダー左側にあるメニューから、プロジェクトファイルの操作や各種情報の確認ができます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_basic_file_menu_title">ファイルメニュー</h3>
-          <p data-i18n="manual_basic_file_menu_desc">『ファイル』メニューから以下の操作が行えます。<br>・<strong>新規</strong>: 新しいプロジェクトファイルを作成します。<br>・<strong>開く</strong>: PC内のプロジェクトファイル（.ploto）を選択して読み込みます。<br>・<strong>保存</strong>: 現在のプロジェクトを上書き保存します。<br>・<strong>別名で保存</strong>: 新規ファイル名で保存します。<br>・<strong>Excel出力/印刷 [PRO]</strong>: ガントチャートやタスク一覧をExcelやPDFとしてエクスポートします（Pro機能）。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/basic-file-menu.png" data-screenshot-path="basic-file-menu.png" alt="File Menu">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_basic_help_menu_title">ヘルプメニュー</h3>
-          <p data-i18n="manual_basic_help_menu_desc">『ヘルプ』メニューから以下の操作が行えます。<br>・<strong>チュートリアルを開始</strong>: アプリの画面を実際に操作しながら基本の流れを覚えられます。ガントチャート・カンバン・ノートの3つのコースがあり、いつでもやり直せます。<br>・<strong>マニュアル</strong>: 本マニュアルページを開きます。<br>・<strong>更新履歴</strong>: アプリの更新履歴を確認できます。<br>・<strong>ライセンス</strong>: ライセンス情報を確認します。<br>・<strong>Language</strong>: アプリの表示言語（日本語、英語、ドイツ語、フランス語、韓国語）を切り替えます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/basic-help-menu.png" data-screenshot-path="basic-help-menu.png" alt="Help Menu">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_basic_section_sidebar">3. サイドバー機能</h2>
-        <p data-i18n="manual_basic_sidebar_desc">画面左側のサイドバーの各アイコンをクリックすることで、プロジェクト全体のビュー切り替え、タスク検索、マイルストーン管理などの設定パネルを表示できます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_basic_sidebar_menu_title">サイドバーの切り替えパネル (3種類)</h3>
-          <p data-i18n="manual_basic_sidebar_menu_intro">サイドバーの主なメニューは以下の通りです。</p>
-          <ul class="manual-icon-list">
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="m12 3-10 5 10 5 10-5-10-5Z"></path><path d="m2 17 10 5 10-5"></path><path d="m2 12 10 5 10-5"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_basic_sidebar_list_title">一覧</strong>: 
-                <span data-i18n="manual_basic_sidebar_list_desc">新規プロジェクト、カンバン、優先度マトリクス、メンバー別タスク、ホワイトボードなどの各ビューの追加と切り替えを行います。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_basic_sidebar_search_title">タスク検索</strong>: 
-                <span data-i18n="manual_basic_sidebar_search_desc">タスク名を入力して、プロジェクト内のタスクをキーワードで検索します。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_basic_sidebar_milestone_title">マイルストーン</strong>: 
-                <span data-i18n="manual_basic_sidebar_milestone_desc">プロジェクトに設定された重要なマイルストーンの一覧管理や確認が行えます。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.1a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_basic_sidebar_settings_title">設定</strong>: 
-                <span data-i18n="manual_basic_sidebar_settings_desc">アプリケーションの設定を行います。</span>
-              </div>
-            </li>
-          </ul>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/basic-sidebar.png" data-screenshot-path="basic-sidebar.png" alt="Sidebar Panel">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_basic_section_header">4. ヘッダーコントロール</h2>
-        <p data-i18n="manual_basic_header_desc">画面右上にあるボタン群から、直感的な操作や設定が可能です。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_basic_header_undo_title">元に戻す・やり直し (Undo / Redo)</h3>
-          <p data-i18n="manual_basic_header_undo_desc">矢印アイコン（またはショートカットキー Ctrl+Z / Ctrl+Y）を使って、直前の操作を元に戻したり、やり直したりできます。</p>
-          <h3 data-i18n="manual_basic_header_save_title">手動保存</h3>
-          <p data-i18n="manual_basic_header_save_desc">フロッピーディスクのアイコンをクリックすることで、現在の変更内容を手動で即座に保存します（基本的には自動保存されますが、手動での保存も可能です）。</p>
-          <h3 data-i18n="manual_basic_header_theme_title">テーマ切り替え</h3>
-          <p data-i18n="manual_basic_header_theme_desc">月/太陽のアイコンをクリックすることで、ライトモードとダークモードを切り替えることができます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/basic-header-buttons.png" data-screenshot-path="basic-header-buttons.png" alt="Header Controls">
-          </div>
-        </div>
-      </article>
+      
 
       <!-- 1. Gantt Chart Manual -->
-      <article id="content-gantt" class="manual-article" style="display: none;">
-        <h1 data-i18n="manual_gantt_heading">ガントチャート（工程表）の使い方</h1>
-        <p data-i18n="manual_gantt_intro">Plotoのメイン機能であるガントチャートでは、プロジェクトのタスク一覧とスケジュールを視覚的に管理できます。直感的なドラッグ＆ドロップ操作で期間の変更やタスクの移動が可能です。</p>
-
-        <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ja/gantt-overview.png" data-screenshot-path="gantt-overview.png" alt="Gantt Chart Overview">
-          <div class="manual-image-caption" data-i18n="manual_menu_gantt">ガントチャート (工程表)</div>
-        </div>
-
-        <h2 data-i18n="manual_gantt_section_basic">1. 基本操作</h2>
-        <p data-i18n="manual_gantt_basic_desc">ガントチャートの最も基本的な操作方法です。マウス操作で直感的にスケジュールを構築できます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_multi_project_title">プロジェクトの追加と切り替え（マルチタブ）</h3>
-          <p data-i18n="manual_gantt_multi_project_desc">Plotoでは、1つのファイル内で複数のプロジェクトを同時に管理できます。画面左側のサイドバーにある『一覧』ボタンをクリックし、プロジェクトセクションの『＋』ボタンを押すことで新規プロジェクトを追加できます。追加されたプロジェクトは画面上部に『タブ』として表示され、タブをクリックするだけでガントチャートの表示を切り替えられます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-multi-project.png" data-screenshot-path="gantt-multi-project.png" alt="Multi-Project Tabs">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_add_title">タスクの追加と削除</h3>
-          <p data-i18n="manual_gantt_add_desc">画面左側のタスク一覧（グリッド）の上部、または各行の右端にある「＋」ボタンをクリックすると、新しいタスクが追加されます。タスクを削除するには、タスク名を右クリックしてメニューから「削除」を選択するか、タスクを選択して削除キーを押します。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_drag_title">期間の調整（ドラッグ＆ドロップ）</h3>
-          <p data-i18n="manual_gantt_drag_desc">チャート上のタスクバー（青い帯）の左右の端をドラッグすると、開始日や終了日を変更できます。バーの中央をドラッグすると、期間（日数）を維持したままスケジュール全体を左右に移動させることができます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-drag-duration.png" data-screenshot-path="gantt-drag-duration.png" alt="Adjust Duration">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_link_title">依存関係（リンク）の設定</h3>
-          <p data-i18n="manual_gantt_link_desc">タスク間の前後関係（先行・後行）を定義できます。タスクバーの端にある丸いドットをドラッグし、別のタスクの端に繋ぐことでリンク（依存関係）が作成されます。作成されたリンク線をダブルクリックすると、リンクを削除できます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-create-link.png" data-screenshot-path="gantt-create-link.png" alt="Create Link">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_progress_title">進捗状況（Progress）の更新</h3>
-          <p data-i18n="manual_gantt_progress_desc">タスクバーの内部にある小さなスライダーを左右にドラッグすることで、進捗率（0%〜100%）を変更できます。進捗率はバーの内部が濃い色で塗りつぶされることで視覚的に表現されます。</p>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_detail_panel_title">タスクの詳細設定（詳細・ToDo・メモ）</h3>
-          <p data-i18n="manual_gantt_detail_panel_desc">タスクをダブルクリックするか詳細ボタンをクリックすると、画面右側に『詳細パネル』が開きます。このパネルには3つのタブがあり、タスクの基本パラメータ変更、ToDoの追加、書式付きメモの記述が可能です。</p>
-          
-          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_detail_tab_title">① 詳細タブ（基本情報の設定）</h4>
-          <p data-i18n="manual_gantt_detail_tab_desc">タスク名、進行状況、優先度、期間、開始日時など、タスクに関する様々な基本項目を設定できます。</p>
-
-          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_todo_tab_title">② ToDoタブ（タスクの細分化）</h4>
-          <p data-i18n="manual_gantt_todo_tab_desc">タスクに関連する細かいチェックリスト（ToDo）を入力できます。各ToDoには、個別の期限と担当者を設定することができます。</p>
-
-          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_memo_tab_title">③ メモタブ（書式設定メモ）</h4>
-          <p data-i18n="manual_gantt_memo_tab_desc">タスクに関する詳細情報を自由に記述できます。文字の装飾（太字・斜体など）や箇条書きなどの書式設定が可能です。</p>
-
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-detail-tabs.png" data-screenshot-path="gantt-detail-tabs.png" alt="Task Detail Tabs">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_gantt_section_advanced">2. 高度な機能・設定</h2>
-        <p data-i18n="manual_gantt_advanced_desc">プロジェクト管理をより詳細かつ堅牢にするための機能です。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_calendar_title">祝日・会社休日の設定</h3>
-          <p data-i18n="manual_gantt_calendar_desc">標準の土日に加え、日本の祝日や会社独自の特別休日をカレンダーに登録できます。休日に指定された日はチャート上でグレーアウトされ、稼働日数（期間）の計算から自動的に除外されるため、実際の営業日に即した正確な計画が立てられます。※国別の祝日を一括でインポートする機能はプレミアム（Pro）機能となります（手動での追加・編集は無料で利用可能です）。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/gantt-calendar-settings.png" data-screenshot-path="gantt-calendar-settings.png" alt="Calendar Settings">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_alert_title">健康度アラートライン</h3>
-          <p data-i18n="manual_gantt_alert_desc">現在の進捗と今日の日付に基づいて、タスクの健康度を自動判定します。タスクバーの左端に「期限超過（赤）」「開始遅延（黄）」「順調（緑）」のラインが自動で表示され、手遅れになる前に対処すべきタスクを見つけることができます。</p>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_gantt_undo_title">元に戻す・やり直し (Undo / Redo)</h3>
-          <p data-i18n="manual_gantt_undo_desc">操作を誤ってしまっても心配いりません。Excelと同様に <kbd>Ctrl + Z</kbd>（元に戻す）や <kbd>Ctrl + Y</kbd>（やり直し）のキーボードショートカットで、直前の操作を何段階でも復元・やり直すことができます。</p>
-        </div>
-      </article>
+      
 
       <!-- 2. Kanban Board Manual -->
-      <article id="content-kanban" class="manual-article" style="display: none;">
-        <h1 data-i18n="manual_kanban_heading">カンバン（進捗ボード）の使い方</h1>
-        <p data-i18n="manual_kanban_intro">カンバンは、ガントチャートと同じタスクを「工程（列）」の並びとして管理する画面です。カードを右へドラッグしていくだけで進捗が記録され、その結果はガントチャート側にもそのまま反映されます。日程で考えるガントチャートに対し、カンバンは「いま誰が何をしている段階か」を把握するのに向いています。</p>
-
-        <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ja/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview">
-          <div class="manual-image-caption" data-i18n="manual_menu_kanban">カンバン (進捗ボード)</div>
-        </div>
-
-        <h2 data-i18n="manual_kanban_section_setup">1. ボードと工程の準備</h2>
-        <p data-i18n="manual_kanban_setup_desc">はじめにボードを作り、自分たちの仕事の流れに合わせて工程の列を並べます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_add_board_title">カンバンボードを追加する</h3>
-          <p data-i18n="manual_kanban_add_board_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『カンバンボード』の右にある『＋』ボタンを押します。ボードの名前を入力して確定すると、画面上部にタブが追加され、ガントチャートで作成済みのタスクが『未配置』列に並んだ状態でボードが開きます。タスクを二重に登録する必要はありません。<br>※無料版で新規作成できるボードは、1つの .ploto ファイルにつき3枚までです（別のファイルを作れば、そちらでまた3枚まで作成できます）。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/kanban-add-board.png" data-screenshot-path="kanban-add-board.png" alt="Add Kanban Board">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_column_title">工程の列を作る・編集する</h3>
-          <p data-i18n="manual_kanban_column_desc">作成直後のボードには『未配置』と『完了』の2列しかありません。列と列の間にある『＋』ボタンを押して、『設計』『実施中』『レビュー』など自分たちの工程を挿入してください。列ヘッダーからは次の操作ができます。</p>
-          <ul class="manual-icon-list">
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" x2="9.01" y1="9" y2="9"></line><line x1="15" x2="15.01" y1="9" y2="9"></line></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_kanban_column_icon_title">アイコン・テーマカラー</strong>:
-                <span data-i18n="manual_kanban_column_icon_desc">列ごとにアイコンと色を設定できます。工程の性質（進行中、確認待ち、差し戻しなど）が一目で区別できるようになります。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-edit-2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_kanban_column_rename_title">名前の変更</strong>:
-                <span data-i18n="manual_kanban_column_rename_desc">列名をダブルクリックすると、その場で名前を変更できます。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left-right"><path d="M8 3 4 7l4 4"></path><path d="M4 7h16"></path><path d="m16 21 4-4-4-4"></path><path d="M20 17H4"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_kanban_column_move_title">並び替え・削除</strong>:
-                <span data-i18n="manual_kanban_column_move_desc">左右の矢印ボタンで列の順序を入れ替えられます。列を削除した場合、その列にあったタスクは先頭の列へ移動します。</span>
-              </div>
-            </li>
-          </ul>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_column_memo_title">列メモ（工程ごとのルール）</h3>
-          <p data-i18n="manual_kanban_column_memo_desc">列ヘッダーのメモアイコンから、その工程での進め方や判断基準を書き残せます。「レビューは必ず2名で行う」「この列に入れる前に見積を確定する」といった取り決めを画面上に置いておけるため、担当者が変わっても運用がぶれません。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/kanban-column-memo.png" data-screenshot-path="kanban-column-memo.png" alt="Column Memo">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_kanban_section_flow">2. カードで進捗を管理する</h2>
-        <p data-i18n="manual_kanban_flow_desc">1枚のカードが1つのタスクです。カードを動かす操作が、そのままタスクの進捗記録になります。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_move_title">カードを工程へ移動する</h3>
-          <p data-i18n="manual_kanban_move_desc">カードを目的の列へドラッグ＆ドロップすると、そのタスクの現在の工程が切り替わります。列の数が多い場合は、カードをつかんだまま画面の左右端に近づけると自動で横スクロールします。また、カードのない余白部分をドラッグすると、ボード全体を掴んで動かせます。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_card_title">カードの表示内容</h3>
-          <p data-i18n="manual_kanban_card_desc">カードには、担当者、タグ、期限、ToDoの消化状況といった判断に必要な情報がまとめて表示されます。期限は状態に応じて『期限切れ』『本日が期限』『期限間近』が色分けで示されるため、危ないタスクが目に入ります。カードをクリックすると画面右側に詳細パネルが開き、ガントチャートと同じ内容（詳細・ToDo・メモ）をその場で編集できます。</p>
-          <!-- カードの見本はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため）。
-               各項目は button にして、hover と focus の両方で説明を出す（タッチでも開けるようにするため）。
-               説明文は aria-describedby で読み上げにも渡す。 -->
-          <figure class="kanban-card-figure">
-            <div class="kc-card">
-              <button type="button" class="kc-part kc-assignee" aria-describedby="kc-tip-assignee">
-                <span data-i18n="manual_kanban_card_sample_assignee">開発</span>
-                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">担当者。このタスクを誰が進めるかを示します。ボード上部のバーで担当者による絞り込みもできます。</span>
-              </button>
-              <button type="button" class="kc-part kc-title" aria-describedby="kc-tip-title">
-                <span data-i18n="manual_kanban_card_sample_title">認証機能の実装</span>
-                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-title" data-i18n="manual_kanban_card_tip_title">タスク名。ガントチャートやノートに出てくるものと同じ1件のタスクです。</span>
-              </button>
-              <div class="kc-tags">
-                <button type="button" class="kc-part kc-tag kc-tag-a" aria-describedby="kc-tip-tag1">
-                  <span data-i18n="manual_kanban_card_sample_tag1">バックエンド</span>
-                  <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-tag1" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
-                </button>
-                <button type="button" class="kc-part kc-tag kc-tag-b" aria-describedby="kc-tip-tag2">
-                  <span data-i18n="manual_kanban_card_sample_tag2">重要</span>
-                  <span class="kc-tip kc-tip--below" role="tooltip" id="kc-tip-tag2" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
-                </button>
-              </div>
-              <div class="kc-meta">
-                <button type="button" class="kc-part kc-due" aria-describedby="kc-tip-due">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
-                  2026-07-15
-                  <span class="kc-tip kc-tip--start" role="tooltip" id="kc-tip-due" data-i18n="manual_kanban_card_tip_due">期限。『期限切れ』『本日が期限』『期限間近』の状態に応じて色が変わります。</span>
-                </button>
-                <button type="button" class="kc-part kc-todo" aria-describedby="kc-tip-todo">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-square" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
-                  1/9
-                  <span class="kc-tip" role="tooltip" id="kc-tip-todo" data-i18n="manual_kanban_card_tip_todo">ToDoの消化状況。そのタスクのToDoが、全体のうち何件終わったかを表します。</span>
-                </button>
-                <button type="button" class="kc-part kc-priority" aria-describedby="kc-tip-priority">
-                  <span data-i18n="manual_kanban_card_sample_priority">高</span>
-                  <span class="kc-tip kc-tip--end" role="tooltip" id="kc-tip-priority" data-i18n="manual_kanban_card_tip_priority">優先度。詳細タブで設定した優先度が表示されます。</span>
-                </button>
-              </div>
-            </div>
-            <figcaption class="kc-caption">
-              <span data-i18n="manual_kanban_card_figure_alt">カンバンのカードに表示される項目の例</span>
-              <span class="kc-caption-hint" data-i18n="manual_kanban_card_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
-            </figcaption>
-          </figure>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_todo_template_title">標準ToDo（工程ごとの定型作業）</h3>
-          <p data-i18n="manual_kanban_todo_template_desc">列ヘッダーのチェックリストアイコンを押すと、『標準ToDo』の設定欄が開きます。ここに登録した項目は、その列にカードが入ったときに自動でそのタスクのToDoとして作成されます。「レビュー依頼を出す」「検収書を送る」といった毎回同じ手順を登録しておけば、担当者が工程のやり方を思い出す必要がなくなり、抜け漏れも防げます。項目はドラッグで並び替えできます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/kanban-todo-template.png" data-screenshot-path="kanban-todo-template.png" alt="Standard ToDo Templates">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_progress_title">ToDoと進捗率の連動</h3>
-          <p data-i18n="manual_kanban_progress_desc">ToDoの左にある丸をクリックして完了にすると、その分だけタスクの進捗率が自動で上がります（詳細パネルの『ToDoから進捗を自動計算する』がオンの場合）。進捗率を手で入力し直す作業が不要になり、カンバン上の操作だけでガントチャートの進捗バーまで最新に保たれます。</p>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_guard_title">「完了」への移動チェック</h3>
-          <p data-i18n="manual_kanban_guard_desc">Plotoは、実態が伴わないままカードが『完了』に入ることを防ぎます。子タスクが終わっていない場合、ToDoが残っている場合、進捗が100%に達していない場合は、完了列へ移動できず理由が表示されます。<br>また、工程を飛ばした場合も検知します。前の工程の標準ToDoが未完了のまま先の工程へ移そうとすると警告が出ます。逆に、途中の工程からタスクを開始する場合は、それ以前の標準ToDoを完了済みとして登録してよいか確認が表示されます。</p>
-          
-        </div>
-
-        <h2 data-i18n="manual_kanban_section_filter">3. 見たいタスクだけに絞る</h2>
-        <p data-i18n="manual_kanban_filter_intro">1つのボードで複数プロジェクトのタスクを扱えるため、絞り込み機能が実用上重要になります。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_filter_title">フィルターと検索</h3>
-          <p data-i18n="manual_kanban_filter_desc">ボード上部のバーから、プロジェクト、担当者、タグによる絞り込みと、タスク名のキーワード検索が行えます。「自分の担当分だけを見る」「特定プロジェクトの工程だけを追う」といった使い方ができます。絞り込みの設定はボードごとに保存されるため、ファイルを開き直しても前回の状態から作業を再開できます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_kanban_sync_title">ガントチャートとの連携</h3>
-          <p data-i18n="manual_kanban_sync_desc">カンバンとガントチャートは同じタスクを別の角度から見ているだけなので、どちらで編集しても内容は共通です。ガントチャート左側の表の見出し行をダブルクリックして『カンバン』にチェックを入れると、各タスクが現在どの工程にあるかを工程表の列として表示できます。日程と工程を1つの表で同時に確認したいときに便利です。</p>
-        </div>
-      </article>
+      
 
       <!-- 3. Priority Matrix Manual -->
-      <article id="content-matrix" class="manual-article" style="display: none;">
-        <h1 data-i18n="manual_matrix_heading">優先度マトリクスの使い方</h1>
-        <p data-i18n="manual_matrix_intro">優先度マトリクスは、タスクを『緊急度』と『重要度』の2軸の平面に配置して、本当に先に手を付けるべき仕事を見極める画面です。締切が近い順に処理していると後回しにされがちな「重要だが急ぎではない仕事」を可視化できます。ここで扱うタスクもガントチャートやカンバンと同じものです。</p>
-
-        <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ja/matrix-overview.png" data-screenshot-path="matrix-overview.png" alt="Priority Matrix Overview">
-          <div class="manual-image-caption" data-i18n="manual_menu_matrix">優先度マトリクス</div>
-        </div>
-
-        <h2 data-i18n="manual_matrix_section_basic">1. 基本操作</h2>
-        <p data-i18n="manual_matrix_basic_desc">ビューを追加し、タスクを平面上に置いていくだけで優先順位が整理されます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_add_title">優先度マトリクスを追加する</h3>
-          <p data-i18n="manual_matrix_add_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『優先度マトリクス』の右にある『＋』ボタンを押します。名前を入力して確定すると、画面上部にタブが追加され、マトリクスが開きます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/matrix-add-view.png" data-screenshot-path="matrix-add-view.png" alt="Add Priority Matrix">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_quadrant_title">4つの象限の意味</h3>
-          <p data-i18n="manual_matrix_quadrant_desc">横軸が右に行くほど緊急度が高く、縦軸が上に行くほど重要度が高くなります。平面は4つの象限に分かれ、それぞれ取るべき行動が異なります。</p>
-          <ul class="manual-icon-list">
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_matrix_q1_title">象限 I: 重要かつ緊急</strong>:
-                <span data-i18n="manual_matrix_q1_desc">今すぐ着手すべきタスクです。トラブル対応や締切直前の作業が入ります。ここが常に多い状態は、計画段階に問題があるサインです。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_matrix_q2_title">象限 II: 重要だが非緊急</strong>:
-                <span data-i18n="manual_matrix_q2_desc">計画的に時間を確保すべき、成果に最も効くタスクです。改善活動や仕組みづくり、教育などが該当します。意識して着手しないと後回しになり続けます。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_matrix_q3_title">象限 III: 緊急だが非重要</strong>:
-                <span data-i18n="manual_matrix_q3_desc">急かされるものの成果への影響が小さいタスクです。定型作業や単純な問い合わせ対応など、任せられないか、簡略化できないかを検討する対象です。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_matrix_q4_title">象限 IV: 非緊急かつ非重要</strong>:
-                <span data-i18n="manual_matrix_q4_desc">本当に必要か見直す対象です。やめる判断をしてよいタスクが埋もれていることがあります。</span>
-              </div>
-            </li>
-          </ul>
-          <!-- 4象限の図はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため） -->
-          <figure class="matrix-quadrants" role="img" aria-label="緊急度と重要度の2軸でできる4つの象限を示した図" data-i18n-aria-label="manual_matrix_figure_alt">
-            <span class="mq-axis mq-axis-top" data-i18n="manual_matrix_axis_importance_high">重要度（高）</span>
-            <span class="mq-axis mq-axis-bottom" data-i18n="manual_matrix_axis_importance_low">重要度（低）</span>
-            <span class="mq-axis mq-axis-left" data-i18n="manual_matrix_axis_urgency_low">緊急度（低）</span>
-            <span class="mq-axis mq-axis-right" data-i18n="manual_matrix_axis_urgency_high">緊急度（高）</span>
-            <div class="mq-plane">
-              <div class="mq-cell mq-q2">
-                <span class="mq-numeral" aria-hidden="true">II</span>
-                <span class="mq-label" data-i18n="manual_matrix_q2_short">重要だが非緊急</span>
-              </div>
-              <div class="mq-cell mq-q1">
-                <span class="mq-numeral" aria-hidden="true">I</span>
-                <span class="mq-label" data-i18n="manual_matrix_q1_short">重要かつ緊急</span>
-              </div>
-              <div class="mq-cell mq-q4">
-                <span class="mq-numeral" aria-hidden="true">IV</span>
-                <span class="mq-label" data-i18n="manual_matrix_q4_short">非緊急かつ非重要</span>
-              </div>
-              <div class="mq-cell mq-q3">
-                <span class="mq-numeral" aria-hidden="true">III</span>
-                <span class="mq-label" data-i18n="manual_matrix_q3_short">緊急だが非重要</span>
-              </div>
-            </div>
-          </figure>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_place_title">タスクを配置する・解除する</h3>
-          <p data-i18n="manual_matrix_place_desc">画面左の『未配置タスク』には、まだ優先度が設定されていないタスクが並びます。ここからカードを平面上の任意の位置へドラッグすると配置が完了します。配置後もドラッグで位置を微調整でき、象限の境界付近にあるタスクの扱いを検討する際に役立ちます。配置を取り消したい場合は、カードを『未配置タスク』のエリアへドラッグして戻してください。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/matrix-place-task.png" data-screenshot-path="matrix-place-task.png" alt="Place Task">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_score_title">優先度スコア</h3>
-          <p data-i18n="manual_matrix_score_desc">配置した位置から、0〜100の優先度スコアが自動計算されます。スコアは緊急度を40%、重要度を60%の重みで評価するため、同じくらい急ぎのタスクなら重要なものが高く出ます。締切に引っ張られて判断がぶれるのを防ぐための指標です。</p>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_detail_title">詳細パネルから優先度を設定する</h3>
-          <p data-i18n="manual_matrix_detail_desc">マトリクス画面を開かずに、タスクの詳細パネルから優先度を設定することもできます。詳細タブの『マトリクスを設定する』をオンにすると小さな平面が表示され、クリックした位置がそのタスクの緊急度・重要度になります（初期値は中央です）。ガントチャートでタスクを作りながら、その場で優先度を決めておく使い方ができます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/matrix-detail-panel.png" data-screenshot-path="matrix-detail-panel.png" alt="Set Priority from Detail Panel">
-          </div>
-        </div>
-
-        <h2 data-i18n="manual_matrix_section_display">2. 表示の調整と絞り込み</h2>
-        <p data-i18n="manual_matrix_display_desc">タスクの数が増えても平面が見づらくならないよう、表示方法を切り替えられます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_mode_title">表示モード（詳細カード / 簡易バッジ / ドット）</h3>
-          <p data-i18n="manual_matrix_mode_desc">『詳細カード』は担当者や期限まで表示するため、少数のタスクを検討するときに向いています。タスクが多く重なって見えにくい場合は『簡易バッジ』でタスク名だけの表示に、さらに全体の分布を俯瞰したい場合は『ドット』に切り替えてください。どのモードでもクリックすれば詳細パネルを開けます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/matrix-display-modes.png" data-screenshot-path="matrix-display-modes.png" alt="Display Modes">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_matrix_filter_title">絞り込みとズーム</h3>
-          <p data-i18n="manual_matrix_filter_desc">プロジェクト、担当者、タグ、キーワードでの絞り込みに加え、『完了を隠す』で終わったタスクを除外したり、『親タスクを含める』で上位のタスクも配置対象にしたりできます。特定のカンバンビューを選べば、そのボードの工程に乗っているタスクだけを表示することも可能です。平面はズームイン・ズームアウトができ、密集した部分を拡大して確認できます。これらの設定もビューごとに保存されます。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/matrix-filters.png" data-screenshot-path="matrix-filters.png" alt="Filters and Zoom">
-          </div>
-        </div>
-      </article>
+      
 
       <!-- 4. Note Manual -->
       <article id="content-note" class="manual-article">
@@ -674,7 +201,7 @@
         <p data-i18n="manual_note_intro">ノートは、プロジェクトのタスクを上から順に並べた「1本の長い文書」として扱う画面です。左のアウトラインはガントチャートの親子関係がそのまま章立てになっているため、議事録や作業ログの構成を自分で作る必要がありません。書いた内容はそのタスクに紐づいて保存されるので、「あの話はどのタスクの件だったか」を後から探し直さずに済みます。</p>
 
         <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ja/note-overview.png" data-screenshot-path="note-overview.png" alt="Note View Overview">
+          <img src="/ploto_LP/assets/manual/ja/note-overview.png" data-screenshot-path="note-overview.png" alt="Note View Overview" width="2560" height="1440" loading="eager" fetchpriority="high" decoding="async">
           <div class="manual-image-caption" data-i18n="manual_menu_note">ノート</div>
         </div>
 
@@ -684,14 +211,16 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_add_title">ノートビューを追加する</h3>
           <p data-i18n="manual_note_add_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『ノート』の右にある『＋』ボタンを押します。名前を入力して確定すると、ガントチャートで作成済みのタスクが上から順に並んだノートが開きます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/note-add-view.png" data-screenshot-path="note-add-view.png" alt="Add Note View" width="2560" height="1441" loading="lazy" fetchpriority="low" decoding="async">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_outline_title">アウトラインから目的の場所へ飛ぶ</h3>
           <p data-i18n="manual_note_outline_desc">左側のアウトラインは、工程表のタスク階層をそのまま表示しています。項目をクリックすると本文がその位置までスクロールします。タスク名の右にある点は『ノートあり』の印で、どのタスクに記録が残っているかが一覧で分かります。アウトラインと本文の境界をドラッグすれば、幅を読みやすい配分に変えられます。</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/note-outline.png" data-screenshot-path="note-outline.png" alt="Outline">
+            <img src="/ploto_LP/assets/manual/ja/note-outline.png" data-screenshot-path="note-outline.png" alt="Outline" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
         </div>
 
@@ -699,7 +228,7 @@
           <h3 data-i18n="manual_note_write_title">タスクごとにノートを書く</h3>
           <p data-i18n="manual_note_write_desc">本文欄をクリックして、打ち合わせの決定事項や気づいたことを入力します。内容はそのタスクに紐づいて保存され、プロジェクトファイルと一緒に保存されます。タスクの見出しには期間や進捗率も表示されるため、記録を書きながら現在の状況を確認できます。</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/note-write.png" data-screenshot-path="note-write.png" alt="Writing a Note">
+            <img src="/ploto_LP/assets/manual/ja/note-write.png" data-screenshot-path="note-write.png" alt="Writing a Note" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
         </div>
 
@@ -735,7 +264,57 @@
               </div>
             </li>
           </ul>
-          
+          <!-- 書式バーもスクショではなくHTML/CSSで描画する。アイコンだけでは何のボタンか
+               分からないため、各ボタンの説明はツールチップと aria-label の両方に入れる。 -->
+          <figure class="note-format-figure">
+            <div class="nf-toolbar">
+              <button type="button" class="manual-tip-part nf-select" aria-label="見出し。本文と見出し1〜3を切り替えて、段落を区切ります。" data-i18n-aria-label="manual_note_format_tool_heading">
+                <span data-i18n="manual_note_format_sample_heading">見出し1</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_heading">見出し。本文と見出し1〜3を切り替えて、段落を区切ります。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="太字。選択した文字を太くします。" data-i18n-aria-label="manual_note_format_tool_bold">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bold" aria-hidden="true"><path d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_bold">太字。選択した文字を太くします。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="斜体。選択した文字を斜めにします。" data-i18n-aria-label="manual_note_format_tool_italic">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-italic" aria-hidden="true"><line x1="19" x2="10" y1="4" y2="4"></line><line x1="14" x2="5" y1="20" y2="20"></line><line x1="15" x2="9" y1="4" y2="20"></line></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_italic">斜体。選択した文字を斜めにします。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="下線。選択した文字に下線を引きます。" data-i18n-aria-label="manual_note_format_tool_underline">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-underline" aria-hidden="true"><path d="M6 4v6a6 6 0 0 0 12 0V4"></path><line x1="4" x2="20" y1="20" y2="20"></line></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_underline">下線。選択した文字に下線を引きます。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="箇条書き。決定事項などを項目立てて並べます。" data-i18n-aria-label="manual_note_format_tool_bullet">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list" aria-hidden="true"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_bullet">箇条書き。決定事項などを項目立てて並べます。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="番号付きリスト。手順のように順序があるものに使います。" data-i18n-aria-label="manual_note_format_tool_numbered">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-ordered" aria-hidden="true"><line x1="10" x2="21" y1="6" y2="6"></line><line x1="10" x2="21" y1="12" y2="12"></line><line x1="10" x2="21" y1="18" y2="18"></line><path d="M4 6h1v4"></path><path d="M4 10h2"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_numbered">番号付きリスト。手順のように順序があるものに使います。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn nf-btn-color" aria-label="文字色。選択した文字の色を変えます。" data-i18n-aria-label="manual_note_format_tool_color">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-baseline" aria-hidden="true"><path d="M4 20h16"></path><path d="m6 16 6-12 6 12"></path><path d="M8.5 12h7"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_color">文字色。選択した文字の色を変えます。</span>
+              </button>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="書式クリア。設定した書式を取り消して、素の文字に戻します。" data-i18n-aria-label="manual_note_format_tool_clear">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-remove-formatting" aria-hidden="true"><path d="M4 7V4h16v3"></path><path d="M5 20h6"></path><path d="M13 4 8 20"></path><path d="m15 15 5 5"></path><path d="m20 15-5 5"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_clear">書式クリア。設定した書式を取り消して、素の文字に戻します。</span>
+              </button>
+              <span class="nf-divider" aria-hidden="true"></span>
+              <button type="button" class="manual-tip-part nf-btn" aria-label="今日の日付。カーソル位置に今日の日付を差し込みます。" data-i18n-aria-label="manual_note_format_tool_today">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-plus" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M10 16h4"></path><path d="M12 14v4"></path></svg>
+                <span class="manual-tip" aria-hidden="true" data-i18n="manual_note_format_tool_today">今日の日付。カーソル位置に今日の日付を差し込みます。</span>
+              </button>
+            </div>
+            <figcaption class="manual-figure-caption">
+              <span data-i18n="manual_note_format_figure_alt">ノートの上部に並ぶ書式バー</span>
+              <span class="manual-figure-hint" data-i18n="manual_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
+            </figcaption>
+          </figure>
         </div>
 
         <h2 data-i18n="manual_note_section_link">2. タスクとのつながり</h2>
@@ -744,13 +323,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_memo_title">ノートとメモは同じものです</h3>
           <p data-i18n="manual_note_memo_desc">ノートに書いた内容は、そのタスクの詳細パネルの『メモ』タブに表示される内容とまったく同じものです。書き場所が2つに増えるわけではなく、どちらで書いても同じ1か所に残ります。ノートビューは、各タスクのメモを縦に並べて一覧できる形で見せている画面だと考えてください。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/note-memo-same.png" data-screenshot-path="note-memo-same.png" alt="Note and Memo Are the Same" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_note_detail_title">書きながら詳細やToDoを操作する</h3>
           <p data-i18n="manual_note_detail_desc">タスクの見出しの左にあるアイコンを押すと、そのタスクの詳細パネルが開きます。ノートを開いたまま担当者・期間・色といった設定に手が届きます。また本文の右にある『ToDo』欄はそのタスクのToDoそのもので、丸をクリックして完了にすればその分だけ進捗率も動きます。記録を書きながら作業を進められます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/note-todo.png" data-screenshot-path="note-todo.png" alt="Details and ToDo" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
+          </div>
         </div>
 
         <h2 data-i18n="manual_note_section_search">3. 書いた記録を探す</h2>
@@ -770,107 +353,7 @@
       </article>
 
       <!-- 5. Whiteboard Manual -->
-      <article id="content-whiteboard" class="manual-article" style="display: none;">
-        <h1 data-i18n="manual_whiteboard_heading">ホワイトボードの使い方</h1>
-        <p data-i18n="manual_whiteboard_intro">ホワイトボードは、タスクをカードとして自由に配置できる「作戦盤」です。図形や付箋で関係を描き足したり、集計ウィジェットを置いてダッシュボードにしたりできます。一般的なオンラインホワイトボードと違うのは、置いたカードが静的な付箋ではなく、進捗・期限・担当者を常に最新の状態で表示し続ける点です。ガントチャートで進捗を更新すれば、ボード上の表示も自動的に追随します。</p>
-
-        <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/ja/whiteboard-overview.png" data-screenshot-path="whiteboard-overview.png" alt="Whiteboard Overview">
-          <div class="manual-image-caption" data-i18n="manual_menu_whiteboard">ホワイトボード</div>
-        </div>
-
-        <h2 data-i18n="manual_whiteboard_section_setup">1. ボードを作ってタスクを置く</h2>
-        <p data-i18n="manual_whiteboard_setup_desc">まずボードを作り、必要なタスクだけをキャンバスに配置します。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_add_title">ホワイトボードを追加する</h3>
-          <p data-i18n="manual_whiteboard_add_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『ホワイトボード』の右にある『＋』ボタンを押します。ガントチャートのツールバーにある切り替えボタンからも開けます。<br>※無料版で新規作成できるボードは<strong>累計3枚まで</strong>です。カンバンボードの制限とは数え方が異なり、こちらは<strong>ボードを削除しても枠は戻りません</strong>（作成のたびに1枚消費します）。残り枚数は作成ボタンの近くに常に表示され、作成時にも確認が入ります。枠を使い切った後も、自分が作成したボードはこれまでどおり編集できます。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_palette_title">タスクパレットから配置する</h3>
-          <p data-i18n="manual_whiteboard_palette_desc">画面右側の『タスクパレット』には、プロジェクトのタスクが階層のまま並びます。ここからキャンバスへドラッグするとカードとして配置されます。『プロジェクトを一括配置』を使えば、階層構造を反映した形でまとめて並べることも可能です。パレットではタスク名で検索したり『未配置のみ表示』で絞り込んだりできるので、タスク数が多くても必要なものを見つけられます。<br>タブを切り替えただけで全タスクが自動的に配置されることはありません。置くものを自分で選ぶ設計です。</p>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/whiteboard-palette.png" data-screenshot-path="whiteboard-palette.png" alt="Task Palette">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_group_title">親タスクは「囲い」になる</h3>
-          <p data-i18n="manual_whiteboard_group_desc">親タスクを配置すると、その子タスクをまとめる『囲い』として表示されます。囲いのヘッダーをクリックすると開閉でき、折りたたむとカード1枚に縮退して、子タスクの件数と進捗がバッジで表示されます。全体を俯瞰したいときは閉じ、細部を詰めたいときは開く、という使い分けができます。<br>囲いは常にそのタスクのサブツリー全体を映すため、後からガントチャート側で子タスクを追加した場合も自動的に囲いの中へ補充されます。この仕組み上、子タスクだけをボードから外すことはできません（外せるのは配置したまとまりの最上位タスクです）。</p>
-          
-        </div>
-
-        <h2 data-i18n="manual_whiteboard_section_draw">2. 図形・線で考えを描き足す</h2>
-        <p data-i18n="manual_whiteboard_draw_desc">タスクだけでは表せない関係や補足を、キャンバス上に自由に描けます。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_shape_title">図形・付箋・テキスト</h3>
-          <p data-i18n="manual_whiteboard_shape_desc">ツールバーから四角形、楕円、ひし形、三角形、平行四辺形、付箋、テキストを配置できます。塗りつぶしの色と不透明度、枠線の色、文字色、文字揃え、太字・斜体を設定でき、フォントは標準・ゴシック・明朝・教科書体・手書き風・等幅から選べます。重なり順は『最前面へ』『最背面へ』などで調整します。複数の図形を選んでグループ化すれば、選択・移動・削除がひとまとまりになります。<br>付箋とテキストは、リサイズすると文字の大きさも一緒に変わります。四角形や楕円のラベルは、箱を広げて余白を作る用途のため文字サイズは変わりません。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_connector_title">コネクタ（線）でつなぐ</h3>
-          <p data-i18n="manual_whiteboard_connector_desc">カードや図形の端からドラッグすると、コネクタで結べます。接続中は相手の四辺に目印が出て、線の到着点はドロップした位置にいちばん近い辺に固定されるため、狙った辺につながります。線には矢印の表示切り替えとラベルの入力ができるので、「この作業が終わったら次はここ」といった流れや、担当者間の引き継ぎを描き表せます。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_layout_title">選択・移動・縮尺</h3>
-          <p data-i18n="manual_whiteboard_layout_desc">キャンバスは自由にパン・ズームできます。右ボタンでのドラッグは範囲選択になり、選んだものをまとめて移動・削除できるほか、外接矩形の角をドラッグすれば選択物全体を等比で拡大・縮小できます。<br>タスクカードや閉じた囲いは角のドラッグで25%〜200%の範囲で拡大・縮小でき、文字も一緒に変わります。開いた状態の囲いは角をドラッグすると中身の縮尺が変わり、入れ子になっている場合は親の縮尺が掛け合わされます。重要なまとまりを大きく、参考情報を小さく置くことで、ボード全体に強弱をつけられます。操作を間違えた場合はボード内で元に戻せます。</p>
-          
-        </div>
-
-        <h2 data-i18n="manual_whiteboard_section_widget">3. ウィジェットでダッシュボードにする</h2>
-        <p data-i18n="manual_whiteboard_widget_intro">ボード上に集計パネルを置くと、状況をその場で読み取れる進捗ダッシュボードになります。</p>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_widget_types_title">2種類のウィジェット</h3>
-          <p data-i18n="manual_whiteboard_widget_types_desc">ツールバーのウィジェットから配置できます。</p>
-          <ul class="manual-icon-list">
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-gauge"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_whiteboard_widget_progress_title">期間進捗</strong>:
-                <span data-i18n="manual_whiteboard_widget_progress_desc">対象タスクの実績進捗と、日程から計算した『今日の予定』を並べて表示し、予定より何ポイント先行・遅れているかを示します。完了件数、進行中のタスク、期限超過や期限間近の件数、残り作業日数もまとめて確認できます。</span>
-              </div>
-            </li>
-            <li>
-              <span class="manual-icon-wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </span>
-              <div>
-                <strong data-i18n="manual_whiteboard_widget_member_title">メンバー負荷</strong>:
-                <span data-i18n="manual_whiteboard_widget_member_desc">担当者ごとの件数をバーで表示します。実施中・待機の内訳と未担当のタスクも分かるため、負荷の偏りや割り当て漏れに気づけます。</span>
-              </div>
-            </li>
-          </ul>
-          <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/ja/whiteboard-widgets.png" data-screenshot-path="whiteboard-widgets.png" alt="Widgets">
-          </div>
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_widget_scope_title">集計対象を絞り込む</h3>
-          <p data-i18n="manual_whiteboard_widget_scope_desc">ウィジェットは既定でボード全体を集計します。特定の範囲だけを見たい場合は、ウィジェットからタスクカードへコネクタをつないでください。つないだタスクだけが集計対象になり、線を消せば解除されます。集計は対象タスクの配下にある末端のタスクを数えるため、親タスクにつなぐだけでそのまとまり全体の状況が出ます。<br>チーム別・工程別にウィジェットを並べれば、1枚のボードで複数の切り口を同時に見られます。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_export_title">PNG画像として書き出す</h3>
-          <p data-i18n="manual_whiteboard_export_desc">上部のボタンからボードをPNG画像として保存できます。何も選択していなければボード全体が、ノードを選択している場合はその範囲だけが書き出されます。会議資料や報告書に貼り付ける用途に使えます。</p>
-          
-        </div>
-
-        <div class="manual-step-card">
-          <h3 data-i18n="manual_whiteboard_share_title">ボードの共有と閲覧</h3>
-          <p data-i18n="manual_whiteboard_share_desc">プロジェクトファイルを受け取った相手も、ボードを開いて内容を見られます。無料版では、他の人が作成したボードは閲覧のみとなり、表示・パン・ズーム・囲いの開閉やウィジェットの最新表示はそのまま利用できます。ダッシュボードとして共有する使い方であれば、受け取る側の環境を問いません。</p>
-        </div>
-      </article>
+      
     </main>
   </div>
 
