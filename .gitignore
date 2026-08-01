@@ -2,3 +2,9 @@ node_modules/
 npm-debug.log*
 
 .claude/
+
+# ActivePresenter のプロジェクトファイル。
+# マニュアル動画/スクショの編集元だが 200MB を超えるため GitHub には置けない
+# （100MB制限）。書き出した png/gif だけをコミットする。
+*.af
+*.af~lock~
