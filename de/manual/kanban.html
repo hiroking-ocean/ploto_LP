@@ -74,10 +74,10 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=f15f8cb7">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=067282fa" defer=""></script>
 </head>
 
 <body>
@@ -548,7 +548,31 @@
               </div>
             </li>
           </ul>
-          
+          <!-- 4象限の図はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため） -->
+          <figure class="matrix-quadrants" role="img" aria-label="Diagramm der vier Quadranten aus den Achsen Dringlichkeit und Wichtigkeit" data-i18n-aria-label="manual_matrix_figure_alt">
+            <span class="mq-axis mq-axis-top" data-i18n="manual_matrix_axis_importance_high">Wichtigkeit (hoch)</span>
+            <span class="mq-axis mq-axis-bottom" data-i18n="manual_matrix_axis_importance_low">Wichtigkeit (niedrig)</span>
+            <span class="mq-axis mq-axis-left" data-i18n="manual_matrix_axis_urgency_low">Dringlichkeit (niedrig)</span>
+            <span class="mq-axis mq-axis-right" data-i18n="manual_matrix_axis_urgency_high">Dringlichkeit (hoch)</span>
+            <div class="mq-plane">
+              <div class="mq-cell mq-q2">
+                <span class="mq-numeral" aria-hidden="true">II</span>
+                <span class="mq-label" data-i18n="manual_matrix_q2_short">Wichtig, aber nicht dringend</span>
+              </div>
+              <div class="mq-cell mq-q1">
+                <span class="mq-numeral" aria-hidden="true">I</span>
+                <span class="mq-label" data-i18n="manual_matrix_q1_short">Wichtig und dringend</span>
+              </div>
+              <div class="mq-cell mq-q4">
+                <span class="mq-numeral" aria-hidden="true">IV</span>
+                <span class="mq-label" data-i18n="manual_matrix_q4_short">Weder dringend noch wichtig</span>
+              </div>
+              <div class="mq-cell mq-q3">
+                <span class="mq-numeral" aria-hidden="true">III</span>
+                <span class="mq-label" data-i18n="manual_matrix_q3_short">Dringend, aber nicht wichtig</span>
+              </div>
+            </div>
+          </figure>
         </div>
 
         <div class="manual-step-card">

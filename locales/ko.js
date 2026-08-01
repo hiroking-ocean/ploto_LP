@@ -2,8 +2,8 @@ export default {
   locale: "ko",
   screenshotFolder: "en-us",
   meta: {
-    title: "무료 일정 관리·간트 차트 도구 Ploto | 클라우드 불필요, 오프라인",
-    description: "Ploto는 계정 등록이 필요 없고 완전 오프라인으로 작동하는 무료 일정 관리 및 간트 차트 도구입니다. 칸반(진행 보드) 및 우선순위 정리 기능 통합. 모든 데이터는 사용자 PC에 파일로 안전하게 저장되어 기밀 프로젝트 정보 유출 걱정이 없습니다. Windows 10/11 지원."
+    title: "일정 관리·간트 차트 도구 Ploto | 기본 기능 무료, 오프라인",
+    description: "Ploto는 계정 등록 없이 오프라인으로 작동하며 기본 기능을 무료로 제공하는 일정 관리 및 간트 차트 도구입니다. 칸반과 우선순위 매트릭스가 통합되어 있습니다. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
   },
   i18n: {
     nav_features: "기능",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "사용 설명서",
     cta_download: "무료 다운로드",
 
-    hero_badge: "🏢 클라우드 금지·SaaS 도입 불가 현장용 | 로컬 동작 | 무료",
+    hero_badge: "🏢 클라우드 이용이 제한된 환경을 위한 도구 | 로컬 동작 | 기본 기능 무료",
     hero_title: 'Excel 일정 관리,<br><span class="text-gradient">이제 그만 졸업하지 않으시겠습니까?</span>',
-    hero_desc: "클라우드 금지로 툴을 도입할 수 없거나, 무거운 Excel 공정표 관리에 한계를 느끼는 현장에. Ploto는 Microsoft Store에서 즉시 설치 가능한 완전 오프라인형 프로젝트 관리 소프트웨어입니다. 계정 등록이나 번거로운 사내 승인 없이 바로 시작할 수 있습니다.",
+    hero_desc: "클라우드 서비스를 이용할 수 없거나 무거운 Excel 공정표 관리에 한계를 느끼는 현장에 적합합니다. Ploto는 Microsoft Store에서 설치할 수 있는 오프라인형 프로젝트 관리 소프트웨어입니다. 계정 등록 없이 무료 버전부터 시작할 수 있습니다.",
     hero_cta_download: "무료로 받기",
     hero_cta_manual: "매뉴얼 보기",
-    hero_meta: "<span>✓ 계정 등록 없음·완전 무료</span><span>✓ 외부 연결 없음·완전 오프라인</span><span>✓ 독자 파일 저장으로 정보 유출 위험 제로</span>",
+    hero_meta: "<span>✓ 계정 등록 없음·기본 기능 무료</span><span>✓ 프로젝트 데이터는 PC에 저장</span><span>✓ 외부 서버로 자동 전송하지 않음</span>",
 
     mock_tab_gantt: "간트 차트(공정표)",
     mock_tab_kanban: "칸반(진행 보드)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "같은 작업을 공정표·진행 보드·우선순위·노트로 바꿔 가며 볼 수 있습니다. 시트마다 같은 표를 다시 만들거나 옮겨 적다가 숫자가 어긋나는 일이 없어집니다.",
 
     manual_guide_title: "매뉴얼에서 할 수 있는 일을 확인해 보세요",
-    manual_guide_subtitle: "설치 전에 실제 화면과 조작 순서를 확인할 수 있습니다. 계정 등록이 필요 없는 완전 무료 앱이므로, 마음에 드는 기능은 바로 사용해 볼 수 있습니다.",
+    manual_guide_subtitle: "설치 전에 실제 화면과 조작 순서를 확인할 수 있습니다. 계정 등록이 필요 없고 기본 기능이 무료이므로, 마음에 드는 기능은 바로 사용해 볼 수 있습니다.",
     manual_guide_more: "매뉴얼 읽기 →",
 
     manual_guide_basic_title: "기본 조작",
@@ -80,7 +80,7 @@ export default {
 
     pricing_badge: "💡 한 번 결제, 구독 없음",
     pricing_title: "기본 기능은 계속 무료.<br>필요할 때만 한 번 결제하는 Pro.",
-    pricing_desc: "Ploto는 무료로 계속 사용할 수 있습니다. Pro는 한 번 결제하면 이후 비용이 없는 방식으로, 월 사용료나 연 사용료가 없습니다. 구매는 Microsoft Store의 앱 내 구매와, 웹(Stripe)에서 시리얼 코드를 받는 방법 두 가지가 있습니다. 회사 PC에서 결제 페이지를 열 수 없다면 집 PC나 스마트폰으로 구매한 뒤, 받은 코드를 회사 PC에 입력하면 그대로 사용할 수 있습니다.",
+    pricing_desc: "Ploto 무료 버전은 기간 제한 없이 계속 사용할 수 있습니다. Pro는 한 번 결제하면 이후 비용이 없는 방식으로, 월 사용료나 연 사용료가 없습니다. 구매는 Microsoft Store의 앱 내 구매와, 웹(Stripe)에서 시리얼 코드를 받는 방법 두 가지가 있습니다. 회사 PC에서 결제 페이지를 열 수 없다면 집 PC나 스마트폰으로 구매한 뒤, 받은 코드를 회사 PC에 입력하면 그대로 사용할 수 있습니다.",
     pricing_model_label: "요금 방식",
     pricing_model_value: "한 번 결제 (구독 없음)",
     pricing_buy_label: "구매 방법",
@@ -110,13 +110,13 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "데이터 관리와 보안에 대하여",
-    security_subtitle: "클라우드 보안 심사가 엄격하거나 도입이 차단된 환경에서도, Ploto라면 복잡한 승인 절차 없이 즉시 사내 도입이 가능합니다.",
-    security_c1_title: "외부 서버를 거치지 않는 로컬 저장",
-    security_c1_desc: "모든 프로젝트 데이터는 사용자 PC 내에 파일(.ploto)로 저장됩니다. 외부 서버로 작업 내용이나 개인정보를 송신하지 않으므로, 사내 기밀 정보의 취급에도 적합합니다.",
-    security_c2_title: "Microsoft Store를 통한 보안 배포",
-    security_c2_desc: "이 애플리케이션은 Microsoft사의 보안 검사 및 디지털 서명을 거쳐 공식 스토어에서 안전하게 배포됩니다. 출처를 알 수 없는 타사 설치 프로그램과 달리 사내 PC 도입 승인이 비교적 용이합니다.",
-    security_c3_title: "계정 생성 및 개인정보 입력 불필요",
-    security_c3_desc: "이메일 등록이나 로그인, 조직 정보 입력 등이 전혀 필요 없습니다. 설치하고 실행하는 것만으로 오프라인 환경에서 즉시 사용을 시작할 수 있습니다.",
+    security_subtitle: "클라우드 도구 이용이 제한된 환경에서도 Ploto는 프로젝트 데이터를 PC에 저장하는 방식으로 사용할 수 있습니다. 도입 가능 여부는 각 조직의 규정에 따라 확인해 주세요.",
+    security_c1_title: "프로젝트 데이터를 PC에 저장",
+    security_c1_desc: "프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장됩니다. Ploto는 프로젝트 데이터를 외부 서버로 자동 전송하지 않습니다. 파일 보관과 공유 방식은 이용 환경의 규정에 맞게 관리할 수 있습니다.",
+    security_c2_title: "Microsoft Store에서 배포",
+    security_c2_desc: "Ploto는 Microsoft Store를 통해 배포됩니다. Store 페이지에서 게시자와 제품 정보를 확인하여 도입 검토 자료로 활용할 수 있습니다.",
+    security_c3_title: "계정 등록이나 로그인 불필요",
+    security_c3_desc: "이메일 등록, 로그인 또는 조직명 입력이 필요하지 않습니다. 설치 후 계정을 만들지 않고 Ploto 사용을 시작할 수 있습니다.",
 
     // --- Excel vs Ploto Section ---
     views_title: "작업은 하나, 보는 방식은 여섯 가지.",
@@ -311,6 +311,15 @@ export default {
     manual_matrix_q3_desc: "재촉을 받지만 성과에 미치는 영향은 작은 작업입니다. 정형 업무나 단순 문의 대응 등, 맡길 수 없는지 또는 간소화할 수 없는지 검토할 대상입니다.",
     manual_matrix_q4_title: "사분면 IV: 긴급하지도 중요하지도 않음",
     manual_matrix_q4_desc: "정말 필요한지 다시 살펴볼 대상입니다. 그만두어도 되는 작업이 묻혀 있는 경우가 있습니다.",
+    manual_matrix_figure_alt: "긴급도와 중요도 두 축으로 이루어진 4사분면 다이어그램",
+    manual_matrix_axis_importance_high: "중요도 (높음)",
+    manual_matrix_axis_importance_low: "중요도 (낮음)",
+    manual_matrix_axis_urgency_low: "긴급도 (낮음)",
+    manual_matrix_axis_urgency_high: "긴급도 (높음)",
+    manual_matrix_q1_short: "중요하고 긴급",
+    manual_matrix_q2_short: "중요하지만 긴급하지 않음",
+    manual_matrix_q3_short: "긴급하지만 중요하지 않음",
+    manual_matrix_q4_short: "긴급하지도 중요하지도 않음",
 
     manual_matrix_place_title: "작업 배치하기·해제하기",
     manual_matrix_place_desc: "화면 왼쪽의 '미배치 작업'에는 아직 우선순위가 설정되지 않은 작업이 나열됩니다. 여기서 카드를 평면의 원하는 위치로 끌면 배치가 완료됩니다. 배치한 뒤에도 끌어서 위치를 미세 조정할 수 있어, 사분면 경계 부근에 있는 작업을 어떻게 다룰지 검토할 때 도움이 됩니다. 배치를 취소하려면 카드를 '미배치 작업' 영역으로 다시 끌어다 놓으세요.",

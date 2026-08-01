@@ -244,6 +244,11 @@ function buildManualPage(lang, pageName) {
     const key = $(el).attr("data-i18n");
     if (i18n[key] != null) $(el).html(i18n[key]);
   });
+  // 図（role="img"）の読み上げ用ラベルもローカライズする
+  $("[data-i18n-aria-label]").each((_, el) => {
+    const key = $(el).attr("data-i18n-aria-label");
+    if (i18n[key] != null) $(el).attr("aria-label", i18n[key]);
+  });
 
   // 2. html lang
   $("html").attr("lang", lang);

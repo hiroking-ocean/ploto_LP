@@ -562,9 +562,31 @@
               </div>
             </li>
           </ul>
-          <div class="manual-image-container">
-            <img src="assets/manual/ja/matrix-quadrants.png" data-screenshot-path="matrix-quadrants.png" alt="Four Quadrants">
-          </div>
+          <!-- 4象限の図はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため） -->
+          <figure class="matrix-quadrants" role="img" aria-label="Four Quadrants" data-i18n-aria-label="manual_matrix_figure_alt">
+            <span class="mq-axis mq-axis-top" data-i18n="manual_matrix_axis_importance_high">重要度（高）</span>
+            <span class="mq-axis mq-axis-bottom" data-i18n="manual_matrix_axis_importance_low">重要度（低）</span>
+            <span class="mq-axis mq-axis-left" data-i18n="manual_matrix_axis_urgency_low">緊急度（低）</span>
+            <span class="mq-axis mq-axis-right" data-i18n="manual_matrix_axis_urgency_high">緊急度（高）</span>
+            <div class="mq-plane">
+              <div class="mq-cell mq-q2">
+                <span class="mq-numeral" aria-hidden="true">II</span>
+                <span class="mq-label" data-i18n="manual_matrix_q2_short">重要だが非緊急</span>
+              </div>
+              <div class="mq-cell mq-q1">
+                <span class="mq-numeral" aria-hidden="true">I</span>
+                <span class="mq-label" data-i18n="manual_matrix_q1_short">重要かつ緊急</span>
+              </div>
+              <div class="mq-cell mq-q4">
+                <span class="mq-numeral" aria-hidden="true">IV</span>
+                <span class="mq-label" data-i18n="manual_matrix_q4_short">非緊急かつ非重要</span>
+              </div>
+              <div class="mq-cell mq-q3">
+                <span class="mq-numeral" aria-hidden="true">III</span>
+                <span class="mq-label" data-i18n="manual_matrix_q3_short">緊急だが非重要</span>
+              </div>
+            </div>
+          </figure>
         </div>
 
         <div class="manual-step-card">

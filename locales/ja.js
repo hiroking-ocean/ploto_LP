@@ -2,8 +2,8 @@ export default {
   locale: "ja",
   screenshotFolder: "ja-jp",
   meta: {
-    title: "無料の工程管理・ガントチャートツール Ploto | クラウド不要・完全オフライン",
-    description: "Plotoはアカウント登録不要・完全オフラインで動く無料のガントチャートツール。カンバン（進捗ボード）・優先順位整理機能も統合。データはすべてPC内に安全に保存されるため、社外秘のプロジェクト情報も漏洩しません。Windows 10/11対応。"
+    title: "基本機能無料の工程管理・ガントチャートツール Ploto | クラウド不要・オフライン対応",
+    description: "Plotoはアカウント登録不要・オフラインで使える、基本機能無料のガントチャートツール。カンバン（進捗ボード）・優先順位整理機能も統合。プロジェクトデータはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。"
   },
   i18n: {
     nav_features: "特徴",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "使い方マニュアル",
     cta_download: "無料ダウンロード",
 
-    hero_badge: "🏢 クラウド禁止・SaaS導入不可の現場でも使える｜完全ローカル動作｜無料",
+    hero_badge: "🏢 クラウド利用を制限している現場向け｜ローカル動作｜基本機能無料",
     hero_title: 'Excelの工程管理、<br><span class="text-gradient">そろそろ卒業しませんか？</span>',
-    hero_desc: "「クラウド禁止でツールが入らない」「重いExcelでの工程管理に限界を感じている」そんな現場に。PlotoはMicrosoft Storeからすぐにインストールできる、完全オフライン型のプロジェクト管理ソフトです。アカウント登録も社内稟議も不要で、今すぐ使い始められます。",
+    hero_desc: "「クラウドサービスを利用できない」「重いExcelでの工程管理に限界を感じている」そんな現場に。PlotoはMicrosoft Storeからインストールできる、オフライン対応のプロジェクト管理ソフトです。アカウント登録不要で、まずは無料版から試せます。",
     hero_cta_download: "無料で手に入れる",
     hero_cta_manual: "マニュアルを見る",
-    hero_meta: "<span>✓ アカウント登録不要・完全無料</span><span>✓ 外部接続なし・完全オフライン</span><span>✓ 独自ファイル保存で情報漏洩リスクゼロ</span>",
+    hero_meta: "<span>✓ アカウント登録不要・基本機能無料</span><span>✓ プロジェクトデータはPC内に保存</span><span>✓ 外部サーバーへの自動送信なし</span>",
 
     mock_tab_gantt: "ガントチャート（工程表）",
     mock_tab_kanban: "カンバン（進捗ボード）",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "同じタスクを工程表・進捗ボード・優先順位・ノートに切り替えて見られます。シートごとに同じ表を作り直したり、転記漏れで数字が食い違ったりすることがなくなります。",
 
     manual_guide_title: "マニュアルで、できることを見てみる",
-    manual_guide_subtitle: "インストール前に、実際の画面と操作手順を確認できます。アカウント登録不要・完全無料なので、気になった機能はそのまま試せます。",
+    manual_guide_subtitle: "インストール前に、実際の画面と操作手順を確認できます。アカウント登録不要・基本機能無料なので、気になった機能はそのまま試せます。",
     manual_guide_more: "マニュアルを読む →",
 
     manual_guide_basic_title: "基本操作",
@@ -80,7 +80,7 @@ export default {
 
     pricing_badge: "💡 買い切り・サブスクなし",
     pricing_title: "基本機能は無料のまま。<br>足りない分だけ、買い切りのProで。",
-    pricing_desc: "Plotoは無料のまま使い続けられます。Pro版は一度購入すればそれ以降の費用がかからない買い切りで、月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。職場のPCで決済ページを開けない場合も、自宅のPCやスマートフォンで購入し、届いたコードを職場のPCで入力すればそのまま使えます。",
+    pricing_desc: "Plotoの無料版は期限なく使い続けられます。Pro版は一度購入すればそれ以降の費用がかからない買い切りで、月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。職場のPCで決済ページを開けない場合も、自宅のPCやスマートフォンで購入し、届いたコードを職場のPCで入力すればそのまま使えます。",
     pricing_model_label: "料金体系",
     pricing_model_value: "買い切り（サブスクなし）",
     pricing_buy_label: "購入方法",
@@ -110,13 +110,13 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "データ管理とセキュリティについて",
-    security_subtitle: "クラウドツールのセキュリティポリシーが厳しい、あるいは外部ネットワークへの接続が制限されている環境でも、ローカル完結型のPlotoなら比較的スムーズに導入できます。",
-    security_c1_title: "外部サーバーを介さないローカル保存",
-    security_c1_desc: "すべてのプロジェクトデータは、お使いのPC内にファイル（.ploto）として保存されます。外部サーバーへの自動送信を行わないため、社外秘プロジェクトや機密情報の管理にも適しています。",
-    security_c2_title: "Microsoft Store経由でのセキュアな配布",
-    security_c2_desc: "アプリケーションはMicrosoft社のセキュリティ審査およびデジタル署名を経て、公式ストアから配布されています。出所不明のインストーラーとは異なり、社内PCへの導入審査がスムーズになりやすい特徴があります。",
-    security_c3_title: "アカウント作成や個人情報の入力が不要",
-    security_c3_desc: "メールアドレスの登録やサインイン、組織名の入力などは必要ありません。インストールして起動するだけで、オフライン環境ですぐに利用を開始できます。",
+    security_subtitle: "クラウドツールの利用が制限されている環境でも、PlotoはプロジェクトデータをPC内に保存する運用を選べます。導入可否は、各組織の規定に沿ってご確認ください。",
+    security_c1_title: "プロジェクトデータをPC内に保存",
+    security_c1_desc: "プロジェクトデータは、お使いのPC内にファイル（.ploto）として保存されます。Plotoがプロジェクトデータを外部サーバーへ自動送信することはありません。ファイルの保管・共有方法は、利用環境のルールに合わせて管理できます。",
+    security_c2_title: "Microsoft Storeから配布",
+    security_c2_desc: "PlotoはMicrosoft Storeから配布されています。配布元と製品情報をStore上で確認できるため、導入時の確認材料として利用できます。",
+    security_c3_title: "アカウント登録やサインインは不要",
+    security_c3_desc: "メールアドレスの登録やサインイン、組織名の入力は必要ありません。インストール後は、アカウントを作成せずに利用を開始できます。",
 
     // --- Excel vs Ploto Section ---
     views_title: "タスクは1つ。見え方は6つ。",
@@ -311,6 +311,16 @@ export default {
     manual_matrix_q3_desc: "急かされるものの成果への影響が小さいタスクです。定型作業や単純な問い合わせ対応など、任せられないか、簡略化できないかを検討する対象です。",
     manual_matrix_q4_title: "象限 IV: 非緊急かつ非重要",
     manual_matrix_q4_desc: "本当に必要か見直す対象です。やめる判断をしてよいタスクが埋もれていることがあります。",
+    // 4象限の図（HTML/CSSで描画）の軸ラベルと短縮見出し
+    manual_matrix_figure_alt: "緊急度と重要度の2軸でできる4つの象限を示した図",
+    manual_matrix_axis_importance_high: "重要度（高）",
+    manual_matrix_axis_importance_low: "重要度（低）",
+    manual_matrix_axis_urgency_low: "緊急度（低）",
+    manual_matrix_axis_urgency_high: "緊急度（高）",
+    manual_matrix_q1_short: "重要かつ緊急",
+    manual_matrix_q2_short: "重要だが非緊急",
+    manual_matrix_q3_short: "緊急だが非重要",
+    manual_matrix_q4_short: "非緊急かつ非重要",
 
     manual_matrix_place_title: "タスクを配置する・解除する",
     manual_matrix_place_desc: "画面左の『未配置タスク』には、まだ優先度が設定されていないタスクが並びます。ここからカードを平面上の任意の位置へドラッグすると配置が完了します。配置後もドラッグで位置を微調整でき、象限の境界付近にあるタスクの扱いを検討する際に役立ちます。配置を取り消したい場合は、カードを『未配置タスク』のエリアへドラッグして戻してください。",

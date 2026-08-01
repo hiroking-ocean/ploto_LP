@@ -2,8 +2,8 @@ export default {
   locale: "de",
   screenshotFolder: "en-us",
   meta: {
-    title: "Kostenloses Tool für Projektplan & Gantt-Diagramm Ploto | Ohne Cloud, Offline",
-    description: "Ploto ist ein kostenloses, offline nutzbares Tool für Projektpläne und Gantt-Diagramme ohne Registrierung. Integriert Kanban (Statusboards) und Prioritätsmatrix. Alle Daten werden sicher auf Ihrem PC gespeichert, um Datenlecks vertraulicher Projektinfos zu verhindern. Windows 10/11."
+    title: "Projektplan- & Gantt-Tool Ploto | Kernfunktionen kostenlos, Offline",
+    description: "Ploto ist ein offline nutzbares Tool für Projektpläne und Gantt-Diagramme ohne Registrierung; die Kernfunktionen sind kostenlos. Kanban und Prioritätsmatrix sind integriert. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
   },
   i18n: {
     nav_features: "Funktionen",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "Handbuch",
     cta_download: "Kostenloser Download",
 
-    hero_badge: "🏢 Entwickelt für Cloud-eingeschränkte & SaaS-gesperrte Teams | Lokale Nutzung | Kostenlos",
+    hero_badge: "🏢 Für Teams mit eingeschränkter Cloud-Nutzung | Lokale Ausführung | Kernfunktionen kostenlos",
     hero_title: 'Projektpläne in Excel verwalten?<br><span class="text-gradient">Verabschieden Sie sich vom Chaos.</span>',
-    hero_desc: "Kein Cloud-Zugriff erlaubt? Frustriert über langsame Excel-Tabellen? Ploto ist eine offline-fähige Projektmanagement-App, die direkt aus dem Microsoft Store installierbar ist. Starten Sie sofort ohne Registrierung oder langwierige Freigabeprozesse.",
+    hero_desc: "Können Sie keine Cloud-Dienste nutzen? Sind Sie frustriert über langsame Excel-Tabellen? Ploto ist eine offline-fähige Projektmanagement-App aus dem Microsoft Store. Sie benötigen kein Konto und können mit der kostenlosen Version beginnen.",
     hero_cta_download: "Kostenlos herunterladen",
     hero_cta_manual: "Handbuch ansehen",
-    hero_meta: "<span>✓ Kostenlos & Keine Registrierung</span><span>✓ Offline-First · Lokaler Lauf</span><span>✓ Direkte Dateispeicherung ohne Datenrisiko</span>",
+    hero_meta: "<span>✓ Kein Konto · Kernfunktionen kostenlos</span><span>✓ Projektdaten auf Ihrem PC</span><span>✓ Keine automatische Übertragung an externe Server</span>",
 
     mock_tab_gantt: "Gantt-Diagramm (Zeitplan)",
     mock_tab_kanban: "Kanban (Statusboard)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "Dieselben Aufgaben erscheinen als Terminplan, Fortschrittsboard, Prioritätenraster oder Notizen. Kein Nachbauen derselben Tabelle auf einem zweiten Blatt und keine auseinanderlaufenden Zahlen durch vergessene Übertragungen.",
 
     manual_guide_title: "Im Handbuch sehen, was Ploto kann",
-    manual_guide_subtitle: "Sehen Sie sich vor der Installation die echten Bildschirme und Schritt-für-Schritt-Anleitungen an. Ploto ist vollständig kostenlos und benötigt kein Konto – was Ihnen zusagt, können Sie direkt ausprobieren.",
+    manual_guide_subtitle: "Sehen Sie sich vor der Installation die echten Bildschirme und Schritt-für-Schritt-Anleitungen an. Ploto benötigt kein Konto und die Kernfunktionen sind kostenlos – was Ihnen zusagt, können Sie direkt ausprobieren.",
     manual_guide_more: "Handbuch lesen →",
 
     manual_guide_basic_title: "Grundlagen",
@@ -80,7 +80,7 @@ export default {
 
     pricing_badge: "💡 Einmalkauf, kein Abo",
     pricing_title: "Die Kernfunktionen bleiben kostenlos.<br>Pro kaufen Sie einmalig – nur wenn Sie es brauchen.",
-    pricing_desc: "Sie können Ploto dauerhaft kostenlos nutzen. Pro ist ein Einmalkauf, danach fallen keine weiteren Kosten an – weder monatlich noch jährlich. Kaufen können Sie entweder im Microsoft Store oder im Web (Stripe); dort erhalten Sie einen Seriencode per E-Mail. Falls sich Zahlungsseiten auf dem Arbeitsrechner nicht öffnen lassen, kaufen Sie auf dem privaten PC oder Smartphone und geben den Code am Arbeitsrechner ein.",
+    pricing_desc: "Sie können die kostenlose Version von Ploto ohne zeitliche Begrenzung nutzen. Pro ist ein Einmalkauf, danach fallen keine weiteren Kosten an – weder monatlich noch jährlich. Kaufen können Sie entweder im Microsoft Store oder im Web (Stripe); dort erhalten Sie einen Seriencode per E-Mail. Falls sich Zahlungsseiten auf dem Arbeitsrechner nicht öffnen lassen, kaufen Sie auf dem privaten PC oder Smartphone und geben den Code am Arbeitsrechner ein.",
     pricing_model_label: "Preismodell",
     pricing_model_value: "Einmalkauf (kein Abo)",
     pricing_buy_label: "Kaufwege",
@@ -110,13 +110,13 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Datenmanagement und Sicherheit",
-    security_subtitle: "Auch in Unternehmensumgebungen mit strengen Cloud-Richtlinien kann Ploto ohne komplexe Sicherheitsprüfungen sofort eingesetzt werden.",
-    security_c1_title: "Lokale Datenhaltung",
-    security_c1_desc: "Alle Daten werden in einer lokalen Datei (.ploto) auf Ihrem PC gespeichert. Systembedingt werden keine Projektdaten an externe Server übertragen – ideal für geschlossene Intranets und vertrauliche Projekte.",
-    security_c2_title: "Sichere Microsoft Store-Verteilung",
-    security_c2_desc: "Die App wird nach Sicherheitsüberprüfungen und mit Code-Signierung über den Microsoft Store verteilt. Das erleichtert IT-Abteilungen die interne Freigabe im Vergleich zu inoffiziellen Installern.",
-    security_c3_title: "Keine Registrierung oder Anmeldung",
-    security_c3_desc: "Keine E-Mail-Registrierung, Logins oder Angaben zur Organisation erforderlich. Einfach installieren und sofort in einer isolierten Offline-Umgebung nutzen.",
+    security_subtitle: "In Umgebungen mit eingeschränkter Cloud-Nutzung ermöglicht Ploto einen Arbeitsablauf, bei dem Projektdaten auf dem PC gespeichert werden. Prüfen Sie die Einführung anhand der Richtlinien Ihrer Organisation.",
+    security_c1_title: "Projektdaten auf Ihrem PC gespeichert",
+    security_c1_desc: "Projektdaten werden in einer .ploto-Datei auf Ihrem PC gespeichert. Ploto sendet Projektdaten nicht automatisch an externe Server. Speicherung und Freigabe der Datei können Sie nach den Regeln Ihrer Umgebung verwalten.",
+    security_c2_title: "Verteilung über den Microsoft Store",
+    security_c2_desc: "Ploto wird über den Microsoft Store verteilt. Im Store können Sie Herausgeber und Produktinformationen als Teil Ihrer Einführungsprüfung nachvollziehen.",
+    security_c3_title: "Kein Konto und keine Anmeldung erforderlich",
+    security_c3_desc: "Eine E-Mail-Registrierung, Anmeldung oder Angabe des Organisationsnamens ist nicht erforderlich. Nach der Installation können Sie Ploto ohne Konto verwenden.",
 
     // --- Excel vs Ploto Section ---
     views_title: "Eine Aufgabe. Sechs Blickwinkel.",
@@ -311,6 +311,15 @@ export default {
     manual_matrix_q3_desc: "Aufgaben, die drängen, aber wenig beitragen – Routinevorgänge oder einfache Anfragen. Prüfen Sie, ob sie delegiert oder vereinfacht werden können.",
     manual_matrix_q4_title: "Quadrant IV: Weder dringend noch wichtig",
     manual_matrix_q4_desc: "Arbeit, die grundsätzlich hinterfragt werden sollte. Hier verbergen sich oft Aufgaben, die man guten Gewissens streichen kann.",
+    manual_matrix_figure_alt: "Diagramm der vier Quadranten aus den Achsen Dringlichkeit und Wichtigkeit",
+    manual_matrix_axis_importance_high: "Wichtigkeit (hoch)",
+    manual_matrix_axis_importance_low: "Wichtigkeit (niedrig)",
+    manual_matrix_axis_urgency_low: "Dringlichkeit (niedrig)",
+    manual_matrix_axis_urgency_high: "Dringlichkeit (hoch)",
+    manual_matrix_q1_short: "Wichtig und dringend",
+    manual_matrix_q2_short: "Wichtig, aber nicht dringend",
+    manual_matrix_q3_short: "Dringend, aber nicht wichtig",
+    manual_matrix_q4_short: "Weder dringend noch wichtig",
 
     manual_matrix_place_title: "Aufgaben platzieren und wieder entfernen",
     manual_matrix_place_desc: "Im Bereich 'Nicht zugeordnete Aufgaben' links stehen alle Aufgaben ohne festgelegte Priorität. Ziehen Sie eine Karte von dort an eine beliebige Stelle der Fläche, um sie zu platzieren. Auch danach lässt sich die Position durch Ziehen feinjustieren – hilfreich bei Aufgaben nahe einer Quadrantengrenze. Um eine Platzierung aufzuheben, ziehen Sie die Karte zurück in den Bereich 'Nicht zugeordnete Aufgaben'.",

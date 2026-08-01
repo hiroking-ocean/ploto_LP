@@ -74,10 +74,10 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=f15f8cb7">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=067282fa" defer=""></script>
 </head>
 
 <body>
@@ -514,7 +514,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_matrix_add_title">優先度マトリクスを追加する</h3>
           <p data-i18n="manual_matrix_add_desc">画面左側のサイドバーにある『一覧』ボタンをクリックし、『優先度マトリクス』の右にある『＋』ボタンを押します。名前を入力して確定すると、画面上部にタブが追加され、マトリクスが開きます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/matrix-add-view.png" data-screenshot-path="matrix-add-view.png" alt="Add Priority Matrix">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -558,13 +560,39 @@
               </div>
             </li>
           </ul>
-          
+          <!-- 4象限の図はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため） -->
+          <figure class="matrix-quadrants" role="img" aria-label="緊急度と重要度の2軸でできる4つの象限を示した図" data-i18n-aria-label="manual_matrix_figure_alt">
+            <span class="mq-axis mq-axis-top" data-i18n="manual_matrix_axis_importance_high">重要度（高）</span>
+            <span class="mq-axis mq-axis-bottom" data-i18n="manual_matrix_axis_importance_low">重要度（低）</span>
+            <span class="mq-axis mq-axis-left" data-i18n="manual_matrix_axis_urgency_low">緊急度（低）</span>
+            <span class="mq-axis mq-axis-right" data-i18n="manual_matrix_axis_urgency_high">緊急度（高）</span>
+            <div class="mq-plane">
+              <div class="mq-cell mq-q2">
+                <span class="mq-numeral" aria-hidden="true">II</span>
+                <span class="mq-label" data-i18n="manual_matrix_q2_short">重要だが非緊急</span>
+              </div>
+              <div class="mq-cell mq-q1">
+                <span class="mq-numeral" aria-hidden="true">I</span>
+                <span class="mq-label" data-i18n="manual_matrix_q1_short">重要かつ緊急</span>
+              </div>
+              <div class="mq-cell mq-q4">
+                <span class="mq-numeral" aria-hidden="true">IV</span>
+                <span class="mq-label" data-i18n="manual_matrix_q4_short">非緊急かつ非重要</span>
+              </div>
+              <div class="mq-cell mq-q3">
+                <span class="mq-numeral" aria-hidden="true">III</span>
+                <span class="mq-label" data-i18n="manual_matrix_q3_short">緊急だが非重要</span>
+              </div>
+            </div>
+          </figure>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_matrix_place_title">タスクを配置する・解除する</h3>
           <p data-i18n="manual_matrix_place_desc">画面左の『未配置タスク』には、まだ優先度が設定されていないタスクが並びます。ここからカードを平面上の任意の位置へドラッグすると配置が完了します。配置後もドラッグで位置を微調整でき、象限の境界付近にあるタスクの扱いを検討する際に役立ちます。配置を取り消したい場合は、カードを『未配置タスク』のエリアへドラッグして戻してください。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/matrix-place-task.png" data-screenshot-path="matrix-place-task.png" alt="Place Task">
+          </div>
         </div>
 
         <div class="manual-step-card">
@@ -575,7 +603,9 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_matrix_detail_title">詳細パネルから優先度を設定する</h3>
           <p data-i18n="manual_matrix_detail_desc">マトリクス画面を開かずに、タスクの詳細パネルから優先度を設定することもできます。詳細タブの『マトリクスを設定する』をオンにすると小さな平面が表示され、クリックした位置がそのタスクの緊急度・重要度になります（初期値は中央です）。ガントチャートでタスクを作りながら、その場で優先度を決めておく使い方ができます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/matrix-detail-panel.png" data-screenshot-path="matrix-detail-panel.png" alt="Set Priority from Detail Panel">
+          </div>
         </div>
 
         <h2 data-i18n="manual_matrix_section_display">2. 表示の調整と絞り込み</h2>
@@ -584,13 +614,17 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_matrix_mode_title">表示モード（詳細カード / 簡易バッジ / ドット）</h3>
           <p data-i18n="manual_matrix_mode_desc">『詳細カード』は担当者や期限まで表示するため、少数のタスクを検討するときに向いています。タスクが多く重なって見えにくい場合は『簡易バッジ』でタスク名だけの表示に、さらに全体の分布を俯瞰したい場合は『ドット』に切り替えてください。どのモードでもクリックすれば詳細パネルを開けます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/matrix-display-modes.png" data-screenshot-path="matrix-display-modes.png" alt="Display Modes">
+          </div>
         </div>
 
         <div class="manual-step-card">
           <h3 data-i18n="manual_matrix_filter_title">絞り込みとズーム</h3>
           <p data-i18n="manual_matrix_filter_desc">プロジェクト、担当者、タグ、キーワードでの絞り込みに加え、『完了を隠す』で終わったタスクを除外したり、『親タスクを含める』で上位のタスクも配置対象にしたりできます。特定のカンバンビューを選べば、そのボードの工程に乗っているタスクだけを表示することも可能です。平面はズームイン・ズームアウトができ、密集した部分を拡大して確認できます。これらの設定もビューごとに保存されます。</p>
-          
+          <div class="manual-image-container">
+            <img src="/ploto_LP/assets/manual/ja/matrix-filters.png" data-screenshot-path="matrix-filters.png" alt="Filters and Zoom">
+          </div>
         </div>
       </article>
 

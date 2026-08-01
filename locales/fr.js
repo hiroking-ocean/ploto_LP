@@ -2,8 +2,8 @@ export default {
   locale: "fr",
   screenshotFolder: "en-us",
   meta: {
-    title: "Outil gratuit de planification de projet & diagramme de Gantt Ploto | Sans cloud, Hors ligne",
-    description: "Ploto est un outil gratuit de planification de projet et de diagramme de Gantt hors ligne, sans inscription. Intègre Kanban (tableaux de statut) et matrice de priorité. Toutes les données sont stockées en toute sécurité sur votre PC pour éviter les fuites de données confidentielles. Windows 10/11."
+    title: "Planification de projet & Gantt Ploto | Fonctions essentielles gratuites, Hors ligne",
+    description: "Ploto est un outil hors ligne de planification de projet et de diagramme de Gantt, sans compte, dont les fonctions essentielles sont gratuites. Kanban et matrice de priorité sont intégrés. Les données de projet sont stockées dans des fichiers .ploto sur votre PC et ne sont pas envoyées automatiquement à des serveurs externes. Windows 10/11."
   },
   i18n: {
     nav_features: "Fonctionnalités",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "Manuel",
     cta_download: "Téléchargement gratuit",
 
-    hero_badge: "🏢 Conçu pour les équipes restreintes en cloud et sans SaaS | Utilisation locale | Gratuit",
+    hero_badge: "🏢 Pour les équipes dont l'usage du cloud est limité | Exécution locale | Fonctions essentielles gratuites",
     hero_title: 'Gérer des plannings sur Excel ?<br><span class="text-gradient">Dites adieu au désordre.</span>',
-    hero_desc: "Pas d'accès cloud autorisé ? Frustré par les feuilles Excel lentes ? Ploto est une application de gestion de projet hors ligne installable directement depuis le Microsoft Store. Démarrez immédiatement sans création de compte ni processus d'approbation fastidieux.",
+    hero_desc: "Impossible d'utiliser des services cloud ? Frustré par les feuilles Excel lentes ? Ploto est une application de gestion de projet hors ligne disponible dans le Microsoft Store. Aucun compte n'est requis et vous pouvez commencer avec la version gratuite.",
     hero_cta_download: "Télécharger gratuitement",
     hero_cta_manual: "Voir le manuel",
-    hero_meta: "<span>✓ Gratuit & Sans inscription</span><span>✓ Offline-First · Exécution locale</span><span>✓ Stockage direct de fichiers sans risque de fuite</span>",
+    hero_meta: "<span>✓ Sans compte · Fonctions essentielles gratuites</span><span>✓ Données de projet stockées sur votre PC</span><span>✓ Aucun envoi automatique vers des serveurs externes</span>",
 
     mock_tab_gantt: "Gantt (Planning)",
     mock_tab_kanban: "Kanban (Tableau de statut)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "Les mêmes tâches s'affichent en planning, en tableau d'avancement, en matrice de priorités ou en notes. Fini de reconstruire le même tableau sur une autre feuille et de voir les chiffres diverger faute de recopie.",
 
     manual_guide_title: "Découvrez ce que Ploto sait faire, dans le manuel",
-    manual_guide_subtitle: "Consultez les écrans réels et les procédures pas à pas avant d'installer. Ploto est entièrement gratuit et sans inscription : ce qui vous intéresse, vous pouvez l'essayer directement.",
+    manual_guide_subtitle: "Consultez les écrans réels et les procédures pas à pas avant d'installer. Ploto ne demande aucun compte et ses fonctions essentielles sont gratuites : vous pouvez essayer directement ce qui vous intéresse.",
     manual_guide_more: "Lire le manuel →",
 
     manual_guide_basic_title: "Utilisation de base",
@@ -80,7 +80,7 @@ export default {
 
     pricing_badge: "💡 Achat unique, sans abonnement",
     pricing_title: "L'essentiel reste gratuit.<br>Pro s'achète une fois, si vous en avez besoin.",
-    pricing_desc: "Vous pouvez continuer à utiliser Ploto gratuitement. Pro est un achat unique : plus rien à payer ensuite, ni au mois ni à l'année. L'achat se fait au choix dans le Microsoft Store ou sur le web (Stripe), qui vous envoie un code de série par e-mail. Si votre PC professionnel ne peut pas ouvrir les pages de paiement, achetez depuis votre PC personnel ou votre téléphone et saisissez le code sur le PC professionnel.",
+    pricing_desc: "Vous pouvez continuer à utiliser la version gratuite de Ploto sans limite de durée. Pro est un achat unique : plus rien à payer ensuite, ni au mois ni à l'année. L'achat se fait au choix dans le Microsoft Store ou sur le web (Stripe), qui vous envoie un code de série par e-mail. Si votre PC professionnel ne peut pas ouvrir les pages de paiement, achetez depuis votre PC personnel ou votre téléphone et saisissez le code sur le PC professionnel.",
     pricing_model_label: "Modèle tarifaire",
     pricing_model_value: "Achat unique (sans abonnement)",
     pricing_buy_label: "Où acheter",
@@ -109,14 +109,14 @@ export default {
     footer_terms: "Conditions d'utilisation",
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
-    security_title: "Data management and security",
-    security_subtitle: "Même dans les environnements professionnels avec des règles de cloud strictes, Ploto peut être déployé immédiatement sans audit de sécurité complexe.",
-    security_c1_title: "Stockage local des données",
-    security_c1_desc: "Toutes les données sont stockées dans un fichier local (.ploto) sur votre PC. Par conception, aucune donnée de projet n'est transmise à des serveurs externes – idéal pour les intranets fermés et les projets confidentiels.",
-    security_c2_title: "Distribution sécurisée via Microsoft Store",
-    security_c2_desc: "L'application est distribuée via le Microsoft Store après des analyses de sécurité et avec une signature numérique de code. Cela facilite l'approbation interne par les départements informatiques par rapport aux installateurs non officiels.",
-    security_c3_title: "Aucune inscription ni connexion",
-    security_c3_desc: "Aucune inscription par e-mail, identifiants ou informations d'organisation requises. Installez simplement et utilisez immédiatement dans un environnement hors ligne isolé.",
+    security_title: "Gestion des données et sécurité",
+    security_subtitle: "Dans les environnements où les outils cloud sont limités, Ploto permet un fonctionnement où les données de projet restent sur le PC. Vérifiez le déploiement selon les règles de votre organisation.",
+    security_c1_title: "Données de projet stockées sur votre PC",
+    security_c1_desc: "Les données de projet sont stockées dans un fichier .ploto sur votre PC. Ploto ne les envoie pas automatiquement à des serveurs externes. Vous pouvez gérer le stockage et le partage du fichier selon les règles de votre environnement.",
+    security_c2_title: "Distribution via le Microsoft Store",
+    security_c2_desc: "Ploto est distribué via le Microsoft Store. La fiche du Store permet de vérifier l'éditeur et les informations produit dans le cadre de votre examen de déploiement.",
+    security_c3_title: "Aucun compte ni connexion requis",
+    security_c3_desc: "Aucune inscription par e-mail, connexion ou saisie du nom de l'organisation n'est requise. Après l'installation, vous pouvez utiliser Ploto sans créer de compte.",
 
     // --- Excel vs Ploto Section ---
     views_title: "Une tâche. Six façons de la voir.",
@@ -311,6 +311,15 @@ export default {
     manual_matrix_q3_desc: "Des tâches pressantes mais peu contributives, comme les travaux de routine ou les demandes simples. Demandez-vous si elles peuvent être déléguées ou simplifiées.",
     manual_matrix_q4_title: "Quadrant IV : ni urgent ni important",
     manual_matrix_q4_desc: "Du travail dont il faut questionner l'existence même. Les tâches que l'on pourrait raisonnablement décider d'arrêter s'y trouvent souvent enfouies.",
+    manual_matrix_figure_alt: "Schéma des quatre quadrants formés par les axes d'urgence et d'importance",
+    manual_matrix_axis_importance_high: "Importance (élevée)",
+    manual_matrix_axis_importance_low: "Importance (faible)",
+    manual_matrix_axis_urgency_low: "Urgence (faible)",
+    manual_matrix_axis_urgency_high: "Urgence (élevée)",
+    manual_matrix_q1_short: "Important et urgent",
+    manual_matrix_q2_short: "Important mais non urgent",
+    manual_matrix_q3_short: "Urgent mais non important",
+    manual_matrix_q4_short: "Ni urgent ni important",
 
     manual_matrix_place_title: "Placer et retirer des tâches",
     manual_matrix_place_desc: "Le volet « Tâches non placées » à gauche répertorie les tâches dont la priorité n'est pas encore définie. Faites glisser une carte depuis ce volet vers n'importe quelle position du plan pour la placer. Vous pouvez ensuite continuer à la déplacer pour affiner sa position, ce qui aide à trancher le sort des tâches proches d'une frontière de quadrant. Pour annuler un placement, ramenez la carte dans la zone « Tâches non placées ».",

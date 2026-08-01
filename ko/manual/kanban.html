@@ -74,10 +74,10 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=7519c763">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=f15f8cb7">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=bef50e34" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=067282fa" defer=""></script>
 </head>
 
 <body>
@@ -548,7 +548,31 @@
               </div>
             </li>
           </ul>
-          
+          <!-- 4象限の図はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため） -->
+          <figure class="matrix-quadrants" role="img" aria-label="긴급도와 중요도 두 축으로 이루어진 4사분면 다이어그램" data-i18n-aria-label="manual_matrix_figure_alt">
+            <span class="mq-axis mq-axis-top" data-i18n="manual_matrix_axis_importance_high">중요도 (높음)</span>
+            <span class="mq-axis mq-axis-bottom" data-i18n="manual_matrix_axis_importance_low">중요도 (낮음)</span>
+            <span class="mq-axis mq-axis-left" data-i18n="manual_matrix_axis_urgency_low">긴급도 (낮음)</span>
+            <span class="mq-axis mq-axis-right" data-i18n="manual_matrix_axis_urgency_high">긴급도 (높음)</span>
+            <div class="mq-plane">
+              <div class="mq-cell mq-q2">
+                <span class="mq-numeral" aria-hidden="true">II</span>
+                <span class="mq-label" data-i18n="manual_matrix_q2_short">중요하지만 긴급하지 않음</span>
+              </div>
+              <div class="mq-cell mq-q1">
+                <span class="mq-numeral" aria-hidden="true">I</span>
+                <span class="mq-label" data-i18n="manual_matrix_q1_short">중요하고 긴급</span>
+              </div>
+              <div class="mq-cell mq-q4">
+                <span class="mq-numeral" aria-hidden="true">IV</span>
+                <span class="mq-label" data-i18n="manual_matrix_q4_short">긴급하지도 중요하지도 않음</span>
+              </div>
+              <div class="mq-cell mq-q3">
+                <span class="mq-numeral" aria-hidden="true">III</span>
+                <span class="mq-label" data-i18n="manual_matrix_q3_short">긴급하지만 중요하지 않음</span>
+              </div>
+            </div>
+          </figure>
         </div>
 
         <div class="manual-step-card">

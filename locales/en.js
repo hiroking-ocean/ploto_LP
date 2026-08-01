@@ -2,8 +2,8 @@ export default {
   locale: "en",
   screenshotFolder: "en-us",
   meta: {
-    title: "Free Project Scheduling & Gantt Chart Tool Ploto | No Cloud, Offline",
-    description: "Ploto is a free offline project scheduling and Gantt chart tool with no account registration required. Integrates Kanban (status boards) and priority matrix. All data is saved safely on your PC, ensuring zero leakage of confidential project info. Supports Windows 10/11."
+    title: "Project Scheduling & Gantt Chart Tool Ploto | Free Core Features, Offline",
+    description: "Ploto is an offline project scheduling and Gantt chart tool with no account required and free core features. It includes Kanban boards and a priority matrix. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
   },
   i18n: {
     nav_features: "Features",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "User Manual",
     cta_download: "Free Download",
 
-    hero_badge: "🏢 Built for Cloud-Restricted & SaaS-Blocked Teams | Works Locally | Free",
+    hero_badge: "🏢 For Teams with Restricted Cloud Use | Runs Locally | Free Core Features",
     hero_title: 'Tired of Managing Schedules<br>with <span class="text-gradient">Messy Excel Worksheets?</span>',
-    hero_desc: "No cloud access? Frustrated with slow Excel sheets? Ploto is an offline project management app installable directly from the Microsoft Store. Get started instantly without account creation or procurement hassle.",
+    hero_desc: "Unable to use cloud services? Frustrated with slow Excel sheets? Ploto is an offline project management app available from the Microsoft Store. No account is required, and you can start with the free version.",
     hero_cta_download: "Get it for Free",
     hero_cta_manual: "See the manual",
-    hero_meta: "<span>✓ Free & No Registration</span><span>✓ Offline-First · Local Run</span><span>✓ Direct File Storage, No Leakage Risk</span>",
+    hero_meta: "<span>✓ No Account · Free Core Features</span><span>✓ Project Data Stored on Your PC</span><span>✓ No Automatic Upload to External Servers</span>",
 
     mock_tab_gantt: "Gantt Chart (Schedule)",
     mock_tab_kanban: "Kanban (Status Board)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "The same tasks appear as a schedule, a progress board, a priority grid or notes. No rebuilding the same table on another sheet, and no numbers drifting apart because someone missed a copy.",
 
     manual_guide_title: "See what Ploto can do, in the manual",
-    manual_guide_subtitle: "Check the actual screens and step-by-step instructions before installing. Ploto is completely free and needs no account, so anything that looks useful you can simply try.",
+    manual_guide_subtitle: "Check the actual screens and step-by-step instructions before installing. Ploto needs no account and its core features are free, so you can try anything that looks useful.",
     manual_guide_more: "Read the manual →",
 
     manual_guide_basic_title: "Basics",
@@ -80,7 +80,7 @@ export default {
 
     pricing_badge: "💡 One-time purchase, no subscription",
     pricing_title: "The core stays free.<br>Buy Pro once, only if you need it.",
-    pricing_desc: "You can keep using Ploto for free. Pro is a one-time purchase with nothing to pay afterwards — no monthly or yearly fee. You can buy it either in the Microsoft Store or on the web (Stripe), which sends you a serial code by email. If your work PC cannot open payment pages, buy it on your home PC or phone and enter the code on the work PC.",
+    pricing_desc: "You can keep using the free version of Ploto with no time limit. Pro is a one-time purchase with nothing to pay afterwards — no monthly or yearly fee. You can buy it either in the Microsoft Store or on the web (Stripe), which sends you a serial code by email. If your work PC cannot open payment pages, buy it on your home PC or phone and enter the code on the work PC.",
     pricing_model_label: "Pricing model",
     pricing_model_value: "One-time purchase (no subscription)",
     pricing_buy_label: "How to buy",
@@ -110,13 +110,13 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Data Management and Security",
-    security_subtitle: "Even in corporate environments with strict cloud policies, Ploto can be deployed without complex security assessments.",
-    security_c1_title: "Local-First Architecture",
-    security_c1_desc: "All data is saved in a local file (.ploto) on your PC. It never transmits schedule data or task descriptions to external servers, making it ideal for closed intranets and confidential projects.",
-    security_c2_title: "Microsoft Store Secure Distribution",
-    security_c2_desc: "The app is signed and distributed via Microsoft Store after rigorous security scans. Unlike unofficial installers, it simplifies procurement approval from internal IT departments.",
-    security_c3_title: "No Account Creation or Sign-in",
-    security_c3_desc: "No email registration, logins, or corporate domain details are needed. Just install and run immediately in an isolated offline environment.",
+    security_subtitle: "For environments where cloud tools are restricted, Ploto supports a workflow that stores project data on the PC. Confirm deployment against your organization's policies.",
+    security_c1_title: "Project Data Stored on Your PC",
+    security_c1_desc: "Project data is stored in a .ploto file on your PC. Ploto does not automatically send project data to external servers. You can manage file storage and sharing according to the rules of your environment.",
+    security_c2_title: "Distributed through Microsoft Store",
+    security_c2_desc: "Ploto is distributed through Microsoft Store. The store listing lets you verify the publisher and product information as part of your deployment review.",
+    security_c3_title: "No Account or Sign-in Required",
+    security_c3_desc: "No email registration, sign-in, or organization name is required. After installation, you can start using Ploto without creating an account.",
 
     // --- Excel vs Ploto Section ---
     views_title: "One task. Six ways to look at it.",
@@ -311,6 +311,15 @@ export default {
     manual_matrix_q3_desc: "Tasks that feel pressing but contribute little, such as routine paperwork or simple inquiries. Consider whether they can be delegated or simplified.",
     manual_matrix_q4_title: "Quadrant IV: Neither Urgent nor Important",
     manual_matrix_q4_desc: "Work worth questioning altogether. Tasks you could reasonably decide to stop doing are often buried here.",
+    manual_matrix_figure_alt: "Diagram of the four quadrants formed by the urgency and importance axes",
+    manual_matrix_axis_importance_high: "Importance (High)",
+    manual_matrix_axis_importance_low: "Importance (Low)",
+    manual_matrix_axis_urgency_low: "Urgency (Low)",
+    manual_matrix_axis_urgency_high: "Urgency (High)",
+    manual_matrix_q1_short: "Important and Urgent",
+    manual_matrix_q2_short: "Important but Not Urgent",
+    manual_matrix_q3_short: "Urgent but Not Important",
+    manual_matrix_q4_short: "Neither Urgent nor Important",
 
     manual_matrix_place_title: "Placing and Unplacing Tasks",
     manual_matrix_place_desc: "The 'Unplaced Tasks' panel on the left lists tasks with no priority set yet. Drag a card from there to any position on the plane to place it. You can keep dragging it afterwards to fine-tune the position, which helps when deciding how to treat tasks near a quadrant boundary. To undo a placement, drag the card back into the 'Unplaced Tasks' area.",

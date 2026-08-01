@@ -253,3 +253,126 @@ kbd {
   height: 16px;
   stroke-width: 2.5;
 }
+
+/* ==========================================================================
+   優先度マトリクスの「4つの象限」図
+   --------------------------------------------------------------------------
+   以前はスクリーンショット画像(matrix-quadrants.png)だったが、
+   ・軸ラベルが日本語のまま全言語で表示される
+   ・ライトテーマ固定でダークテーマだと浮く
+   という問題があったため、HTML/CSSでの描画に置き換えている。
+   ========================================================================== */
+.matrix-quadrants {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px 12px;
+  margin: 24px 0;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.mq-axis {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.mq-axis-top    { grid-area: 1 / 2 / 2 / 3; text-align: center; }
+.mq-axis-left   { grid-area: 2 / 1 / 3 / 2; text-align: right; }
+.mq-axis-right  { grid-area: 2 / 3 / 3 / 4; text-align: left; }
+.mq-axis-bottom { grid-area: 3 / 2 / 4 / 3; text-align: center; }
+
+.mq-plane {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* 中央の十字（軸）はセルの内側の辺を破線にして描く。
+   --border-color だとダークテーマで沈むため、--text-muted を薄めた色を使う。 */
+.mq-plane {
+  --mq-cross: color-mix(in srgb, var(--text-muted) 45%, transparent);
+}
+
+.mq-q2 { border-right: 1px dashed var(--mq-cross); border-bottom: 1px dashed var(--mq-cross); }
+.mq-q1 { border-bottom: 1px dashed var(--mq-cross); }
+.mq-q4 { border-right: 1px dashed var(--mq-cross); }
+
+.mq-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--bg-card);
+}
+
+.mq-numeral {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 6vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.55;
+}
+
+.mq-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* 象限ごとの色。取るべき行動（急ぐ / 計画する / 任せる / やめる）を色で示す。
+   color-mix 非対応ブラウザでは背景は素の --bg-card のまま（可読性は保たれる）。 */
+.mq-q1 { background-color: color-mix(in srgb, var(--color-danger) 10%, var(--bg-card)); }
+.mq-q2 { background-color: color-mix(in srgb, var(--color-primary) 10%, var(--bg-card)); }
+.mq-q3 { background-color: color-mix(in srgb, var(--color-accent) 10%, var(--bg-card)); }
+
+.mq-q1 .mq-numeral { color: var(--color-danger); }
+.mq-q2 .mq-numeral { color: var(--color-primary); }
+.mq-q3 .mq-numeral { color: var(--color-accent); }
+.mq-q4 .mq-numeral { color: var(--text-muted); }
+
+/* 狭い画面では左右の軸ラベルが平面を潰すので、縦書きにして幅を節約する */
+@media (max-width: 640px) {
+  .matrix-quadrants {
+    padding: 14px;
+    gap: 8px;
+  }
+
+  .mq-plane {
+    aspect-ratio: 1 / 1;
+  }
+
+  .mq-axis {
+    font-size: 0.7rem;
+  }
+
+  .mq-axis-left,
+  .mq-axis-right {
+    writing-mode: vertical-rl;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .mq-axis-left {
+    transform: rotate(180deg);
+  }
+
+  .mq-label {
+    font-size: 0.75rem;
+  }
+}
