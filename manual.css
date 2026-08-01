@@ -376,3 +376,257 @@ kbd {
     font-size: 0.75rem;
   }
 }
+
+/* ==========================================================================
+   カンバンのカード見本
+   --------------------------------------------------------------------------
+   4象限の図と同じ理由（多言語化・テーマ追従・軽量化）でスクリーンショット
+   (kanban-card.png) をHTML/CSSでの再現に置き換えている。
+   タグの色はアプリ側でユーザーが自由に決めるものなので、テーマ変数ではなく
+   見本としての固定色を使う。
+   ========================================================================== */
+.kanban-card-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--bg-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.kc-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.kc-caption-hint {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.kc-card {
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 16px 14px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 8px;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 説明を出す各パーツ。button だがカード内の見た目は素の要素と同じにする。 */
+.kc-part {
+  position: relative;
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  cursor: help;
+  border-radius: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.kc-part:hover,
+.kc-part:focus,
+.kc-part:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-primary) 60%, transparent);
+  outline-offset: 2px;
+}
+
+.kc-assignee {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: var(--bg-card-hover);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.kc-title {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.kc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.kc-tag {
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.kc-tag-a { background-color: #f59e0b; }
+.kc-tag-b { background-color: #f26d6d; }
+
+.kc-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.kc-due,
+.kc-todo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 期限は状態に応じてアプリ側で色が変わる。ここでは「期限切れ」の見た目を示す。 */
+.kc-due {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--color-danger) 14%, transparent);
+  color: var(--color-danger);
+}
+
+.kc-todo {
+  color: var(--text-muted);
+}
+
+.kc-due svg,
+.kc-todo svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.kc-priority {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* --- パーツの説明ツールチップ ---------------------------------------------
+   visibility で開閉する。aria-describedby から参照している要素は非表示でも
+   読み上げ対象になるため、支援技術には常に説明が届く。 */
+.kc-tip {
+  /* ライトテーマではカードとほぼ同じ白になって浮いて見えないため、
+     吹き出しだけ濃い面色にする（三角も同じ変数を参照する）。 */
+  --kc-tip-bg: var(--bg-card-hover);
+  --kc-tip-fg: var(--text-main);
+  --kc-tip-border: var(--border-color);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  width: max-content;
+  max-width: min(260px, 62vw);
+  padding: 10px 12px;
+  border: 1px solid var(--kc-tip-border);
+  border-radius: 8px;
+  background-color: var(--kc-tip-bg);
+  color: var(--kc-tip-fg);
+  font-size: 0.78rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-align: left;
+  white-space: normal;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+/* 吹き出しの三角。枠線と同色の三角の上に背景色の三角を重ねて縁取りを作る。 */
+.kc-tip::before,
+.kc-tip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+}
+
+.kc-tip::before { top: 100%; border-top-color: var(--kc-tip-border); }
+.kc-tip::after  { top: calc(100% - 1px); border-top-color: var(--kc-tip-bg); }
+
+[data-theme="light"] .kc-tip {
+  --kc-tip-bg: #1f2937;
+  --kc-tip-fg: #f8fafc;
+  --kc-tip-border: #111827;
+}
+
+/* カードの上端に近いパーツは、図の外へ飛び出さないよう下側に開く */
+.kc-tip--below {
+  top: calc(100% + 10px);
+  bottom: auto;
+}
+
+.kc-tip--below::before { top: auto; bottom: 100%; border-top-color: transparent; border-bottom-color: var(--kc-tip-border); }
+.kc-tip--below::after  { top: auto; bottom: calc(100% - 1px); border-top-color: transparent; border-bottom-color: var(--kc-tip-bg); }
+
+/* 左端・右端のパーツは中央揃えだとカードからはみ出すので、端に寄せる */
+.kc-tip--start { left: 0; transform: none; }
+.kc-tip--end   { left: auto; right: 0; transform: none; }
+
+.kc-tip--start::before,
+.kc-tip--start::after { left: 20px; }
+
+.kc-tip--end::before,
+.kc-tip--end::after { left: auto; right: 20px; transform: none; }
+
+.kc-part:hover > .kc-tip,
+.kc-part:focus > .kc-tip,
+.kc-part:focus-visible > .kc-tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kc-tip { transition: none; }
+}
+
+@media (max-width: 640px) {
+  .kanban-card-figure {
+    padding: 16px;
+  }
+
+  .kc-meta {
+    flex-wrap: wrap;
+  }
+
+  .kc-tip {
+    max-width: min(240px, 72vw);
+  }
+}

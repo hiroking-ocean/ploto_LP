@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=f15f8cb7">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=f1abead6">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=4b15b304">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=067282fa" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=135b9c92" defer=""></script>
 </head>
 
 <body>
@@ -451,7 +451,51 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_card_title">Ce qu'affiche une carte</h3>
           <p data-i18n="manual_kanban_card_desc">Chaque carte rassemble les informations nécessaires à la décision : responsable, étiquettes, échéance et avancement des ToDo. Les échéances sont signalées par couleur — « En retard », « À échéance aujourd'hui » ou « Échéance proche » — de sorte que les tâches à risque sautent aux yeux. Un clic sur la carte ouvre le panneau de détails à droite, où vous modifiez le même contenu que dans le diagramme de Gantt (Détails, ToDo et Note).</p>
-          
+          <!-- カードの見本はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため）。
+               各項目は button にして、hover と focus の両方で説明を出す（タッチでも開けるようにするため）。
+               説明文は aria-describedby で読み上げにも渡す。 -->
+          <figure class="kanban-card-figure">
+            <div class="kc-card">
+              <button type="button" class="kc-part kc-assignee" aria-describedby="kc-tip-assignee">
+                <span data-i18n="manual_kanban_card_sample_assignee">Dév</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">Responsable : qui prend en charge la tâche. Le tableau peut aussi être filtré par responsable.</span>
+              </button>
+              <button type="button" class="kc-part kc-title" aria-describedby="kc-tip-title">
+                <span data-i18n="manual_kanban_card_sample_title">Implémenter l'authentification</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-title" data-i18n="manual_kanban_card_tip_title">Nom de la tâche : la même tâche que celle qui apparaît dans le diagramme de Gantt et les notes.</span>
+              </button>
+              <div class="kc-tags">
+                <button type="button" class="kc-part kc-tag kc-tag-a" aria-describedby="kc-tip-tag1">
+                  <span data-i18n="manual_kanban_card_sample_tag1">Backend</span>
+                  <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-tag1" data-i18n="manual_kanban_card_tip_tag">Étiquettes : des repères pour classer les tâches. Comme les responsables, elles servent à filtrer le tableau.</span>
+                </button>
+                <button type="button" class="kc-part kc-tag kc-tag-b" aria-describedby="kc-tip-tag2">
+                  <span data-i18n="manual_kanban_card_sample_tag2">Important</span>
+                  <span class="kc-tip kc-tip--below" role="tooltip" id="kc-tip-tag2" data-i18n="manual_kanban_card_tip_tag">Étiquettes : des repères pour classer les tâches. Comme les responsables, elles servent à filtrer le tableau.</span>
+                </button>
+              </div>
+              <div class="kc-meta">
+                <button type="button" class="kc-part kc-due" aria-describedby="kc-tip-due">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
+                  2026-07-15
+                  <span class="kc-tip kc-tip--start" role="tooltip" id="kc-tip-due" data-i18n="manual_kanban_card_tip_due">Échéance : signalée par couleur selon « En retard », « À échéance aujourd'hui » ou « Échéance proche ».</span>
+                </button>
+                <button type="button" class="kc-part kc-todo" aria-describedby="kc-tip-todo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-square" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  1/9
+                  <span class="kc-tip" role="tooltip" id="kc-tip-todo" data-i18n="manual_kanban_card_tip_todo">Avancement des ToDo : le nombre de ToDo terminés sur le total de la tâche.</span>
+                </button>
+                <button type="button" class="kc-part kc-priority" aria-describedby="kc-tip-priority">
+                  <span data-i18n="manual_kanban_card_sample_priority">Haute</span>
+                  <span class="kc-tip kc-tip--end" role="tooltip" id="kc-tip-priority" data-i18n="manual_kanban_card_tip_priority">Priorité : la priorité définie dans l'onglet Détails.</span>
+                </button>
+              </div>
+            </div>
+            <figcaption class="kc-caption">
+              <span data-i18n="manual_kanban_card_figure_alt">Exemple des informations affichées sur une carte Kanban</span>
+              <span class="kc-caption-hint" data-i18n="manual_kanban_card_figure_hint">Survolez un élément — ou touchez-le sur écran tactile — pour savoir de quoi il s'agit.</span>
+            </figcaption>
+          </figure>
         </div>
 
         <div class="manual-step-card">

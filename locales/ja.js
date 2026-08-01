@@ -2,8 +2,8 @@ export default {
   locale: "ja",
   screenshotFolder: "ja-jp",
   meta: {
-    title: "基本機能無料の工程管理・ガントチャートツール Ploto | クラウド不要・オフライン対応",
-    description: "Plotoはアカウント登録不要・オフラインで使える、基本機能無料のガントチャートツール。カンバン（進捗ボード）・優先順位整理機能も統合。プロジェクトデータはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。"
+    title: "無料で使い続けられる工程管理・ガントチャートツール Ploto | クラウド不要・オフライン対応",
+    description: "Plotoはアカウント登録不要・オフラインで使える工程管理・ガントチャートツール。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。プロジェクトデータはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。"
   },
   i18n: {
     nav_features: "特徴",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "使い方マニュアル",
     cta_download: "無料ダウンロード",
 
-    hero_badge: "🏢 クラウド利用を制限している現場向け｜ローカル動作｜基本機能無料",
+    hero_badge: "🏢 クラウド利用を制限している現場向け｜ローカル動作｜主要機能は無料",
     hero_title: 'Excelの工程管理、<br><span class="text-gradient">そろそろ卒業しませんか？</span>',
-    hero_desc: "「クラウドサービスを利用できない」「重いExcelでの工程管理に限界を感じている」そんな現場に。PlotoはMicrosoft Storeからインストールできる、オフライン対応のプロジェクト管理ソフトです。アカウント登録不要で、まずは無料版から試せます。",
+    hero_desc: "「クラウドサービスを利用できない」「重いExcelでの工程管理に限界を感じている」そんな現場に。PlotoはMicrosoft Storeからインストールできる、オフライン対応のプロジェクト管理ソフトです。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。",
     hero_cta_download: "無料で手に入れる",
     hero_cta_manual: "マニュアルを見る",
-    hero_meta: "<span>✓ アカウント登録不要・基本機能無料</span><span>✓ プロジェクトデータはPC内に保存</span><span>✓ 外部サーバーへの自動送信なし</span>",
+    hero_meta: "<span>✓ アカウント登録不要・主要機能は無料</span><span>✓ 日常・業務利用でも期限なし</span><span>✓ プロジェクトデータはPC内に保存</span>",
 
     mock_tab_gantt: "ガントチャート（工程表）",
     mock_tab_kanban: "カンバン（進捗ボード）",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "同じタスクを工程表・進捗ボード・優先順位・ノートに切り替えて見られます。シートごとに同じ表を作り直したり、転記漏れで数字が食い違ったりすることがなくなります。",
 
     manual_guide_title: "マニュアルで、できることを見てみる",
-    manual_guide_subtitle: "インストール前に、実際の画面と操作手順を確認できます。アカウント登録不要・基本機能無料なので、気になった機能はそのまま試せます。",
+    manual_guide_subtitle: "インストール前に、実際の画面と操作手順を確認できます。アカウント登録不要で、主要機能は期限なく無料。気になった機能をそのまま使い始められます。",
     manual_guide_more: "マニュアルを読む →",
 
     manual_guide_basic_title: "基本操作",
@@ -52,10 +52,10 @@ export default {
     manual_guide_matrix_title: "優先度マトリクス",
     manual_guide_matrix_desc: "緊急度と重要度の2軸にタスクを置いて、いま手を付けるべき仕事を見極めます。",
 
-    plan_compare_title: "無料版とPro版でできること",
-    plan_compare_desc: "Plotoは基本機能をすべて無料で使えます。買い切りのPro版を購入すると、下の表の範囲だけが変わります。月額費用はありません。",
+    plan_compare_title: "無料のまま使えること、Proで広がること",
+    plan_compare_desc: "ガントチャート・優先度マトリクス・ノートなどの主要機能は、無料のまま期限なく使えます。より高度な機能が必要になった場合だけ、買い切りのProを追加できます。",
     plan_compare_col_feature: "機能",
-    plan_compare_col_free: "無料版",
+    plan_compare_col_free: "無料のまま",
     plan_compare_col_pro: "Ploto Pro（買い切り）",
     plan_compare_core: "ガントチャート・優先度マトリクス・ノート",
     plan_compare_core_free: "すべて利用可能",
@@ -75,12 +75,12 @@ export default {
     plan_compare_holidays: "祝日の登録",
     plan_compare_holidays_free: "手動で追加・編集",
     plan_compare_holidays_pro: "手動＋国の祝日を一括取込",
-    plan_compare_note: "※ 表にない機能は無料版でも制限なくお使いいただけます。ホワイトボードのみ、他の人が作成したボードは無料版では閲覧のみとなります。",
-    plan_compare_license_note: "※ カンバン・ホワイトボードの枚数制限がかかるのは新規作成のときだけです。Proで作ったボードを含むファイルも、無料版でそのまま開いて編集できます。シリアルコードで購入した場合は自分の環境の複数の端末に登録でき、登録後はオフラインでも認証されます。",
+    plan_compare_note: "※ 表にない機能も、無料のまま制限なくお使いいただけます。ホワイトボードのみ、他の人が作成したボードはProなしでは閲覧のみとなります。",
+    plan_compare_license_note: "※ カンバン・ホワイトボードの枚数制限がかかるのは新規作成のときだけです。Proで作ったボードを含むファイルも、Proなしでそのまま開いて編集できます。シリアルコードで購入した場合は自分の環境の複数の端末に登録でき、登録後はオフラインでも認証されます。",
 
     pricing_badge: "💡 買い切り・サブスクなし",
-    pricing_title: "基本機能は無料のまま。<br>足りない分だけ、買い切りのProで。",
-    pricing_desc: "Plotoの無料版は期限なく使い続けられます。Pro版は一度購入すればそれ以降の費用がかからない買い切りで、月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。職場のPCで決済ページを開けない場合も、自宅のPCやスマートフォンで購入し、届いたコードを職場のPCで入力すればそのまま使えます。",
+    pricing_title: "日常も業務も、主要機能は無料のまま。<br>さらに必要な機能だけ、買い切りのProで。",
+    pricing_desc: "Plotoは、ガントチャート・優先度マトリクス・ノートなど、日常や業務の工程管理に必要な主要機能を無料のまま期限なく使えます。より多くのカンバン・ホワイトボード、ベースライン、Excel / PDF出力などが必要になった場合だけ、買い切りのProを追加できます。Proに月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。",
     pricing_model_label: "料金体系",
     pricing_model_value: "買い切り（サブスクなし）",
     pricing_buy_label: "購入方法",
@@ -272,6 +272,20 @@ export default {
 
     manual_kanban_card_title: "カードの表示内容",
     manual_kanban_card_desc: "カードには、担当者、タグ、期限、ToDoの消化状況といった判断に必要な情報がまとめて表示されます。期限は状態に応じて『期限切れ』『本日が期限』『期限間近』が色分けで示されるため、危ないタスクが目に入ります。カードをクリックすると画面右側に詳細パネルが開き、ガントチャートと同じ内容（詳細・ToDo・メモ）をその場で編集できます。",
+    // カードの図（HTML/CSSで描画）に出すサンプルデータ
+    manual_kanban_card_figure_alt: "カンバンのカードに表示される項目の例",
+    manual_kanban_card_sample_assignee: "開発",
+    manual_kanban_card_sample_title: "認証機能の実装",
+    manual_kanban_card_sample_tag1: "バックエンド",
+    manual_kanban_card_sample_tag2: "重要",
+    manual_kanban_card_sample_priority: "高",
+    manual_kanban_card_figure_hint: "各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。",
+    manual_kanban_card_tip_assignee: "担当者。このタスクを誰が進めるかを示します。ボード上部のバーで担当者による絞り込みもできます。",
+    manual_kanban_card_tip_title: "タスク名。ガントチャートやノートに出てくるものと同じ1件のタスクです。",
+    manual_kanban_card_tip_tag: "タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。",
+    manual_kanban_card_tip_due: "期限。『期限切れ』『本日が期限』『期限間近』の状態に応じて色が変わります。",
+    manual_kanban_card_tip_todo: "ToDoの消化状況。そのタスクのToDoが、全体のうち何件終わったかを表します。",
+    manual_kanban_card_tip_priority: "優先度。詳細タブで設定した優先度が表示されます。",
 
     manual_kanban_todo_template_title: "標準ToDo（工程ごとの定型作業）",
     manual_kanban_todo_template_desc: "列ヘッダーのチェックリストアイコンを押すと、『標準ToDo』の設定欄が開きます。ここに登録した項目は、その列にカードが入ったときに自動でそのタスクのToDoとして作成されます。「レビュー依頼を出す」「検収書を送る」といった毎回同じ手順を登録しておけば、担当者が工程のやり方を思い出す必要がなくなり、抜け漏れも防げます。項目はドラッグで並び替えできます。",

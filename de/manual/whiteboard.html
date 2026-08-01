@@ -73,11 +73,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css?v=9070ac4a">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=f15f8cb7">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=f1abead6">
+  <link rel="stylesheet" href="/ploto_LP/manual.css?v=4b15b304">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=067282fa" defer=""></script>
+  <script type="module" src="/ploto_LP/manual.js?v=135b9c92" defer=""></script>
 </head>
 
 <body>
@@ -451,7 +451,51 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_card_title">Was eine Karte anzeigt</h3>
           <p data-i18n="manual_kanban_card_desc">Jede Karte bündelt die Informationen, die Sie für eine Entscheidung brauchen: Verantwortliche, Tags, Fälligkeit und den Stand der ToDos. Fälligkeiten sind als 'Überfällig', 'Heute fällig' oder 'Bald fällig' farblich gekennzeichnet, sodass kritische Aufgaben auffallen. Ein Klick auf die Karte öffnet rechts das Detailfenster, in dem Sie dieselben Inhalte wie im Gantt-Diagramm bearbeiten (Details, ToDo und Notiz).</p>
-          
+          <!-- カードの見本はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため）。
+               各項目は button にして、hover と focus の両方で説明を出す（タッチでも開けるようにするため）。
+               説明文は aria-describedby で読み上げにも渡す。 -->
+          <figure class="kanban-card-figure">
+            <div class="kc-card">
+              <button type="button" class="kc-part kc-assignee" aria-describedby="kc-tip-assignee">
+                <span data-i18n="manual_kanban_card_sample_assignee">Entwicklung</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">Verantwortliche Person: wer die Aufgabe bearbeitet. Das Board lässt sich auch danach filtern.</span>
+              </button>
+              <button type="button" class="kc-part kc-title" aria-describedby="kc-tip-title">
+                <span data-i18n="manual_kanban_card_sample_title">Authentifizierung umsetzen</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-title" data-i18n="manual_kanban_card_tip_title">Aufgabenname: dieselbe Aufgabe, die auch im Gantt-Diagramm und in den Notizen erscheint.</span>
+              </button>
+              <div class="kc-tags">
+                <button type="button" class="kc-part kc-tag kc-tag-a" aria-describedby="kc-tip-tag1">
+                  <span data-i18n="manual_kanban_card_sample_tag1">Backend</span>
+                  <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-tag1" data-i18n="manual_kanban_card_tip_tag">Tags: Kennzeichnungen zum Gruppieren. Wie Verantwortliche lassen auch sie sich zum Filtern nutzen.</span>
+                </button>
+                <button type="button" class="kc-part kc-tag kc-tag-b" aria-describedby="kc-tip-tag2">
+                  <span data-i18n="manual_kanban_card_sample_tag2">Wichtig</span>
+                  <span class="kc-tip kc-tip--below" role="tooltip" id="kc-tip-tag2" data-i18n="manual_kanban_card_tip_tag">Tags: Kennzeichnungen zum Gruppieren. Wie Verantwortliche lassen auch sie sich zum Filtern nutzen.</span>
+                </button>
+              </div>
+              <div class="kc-meta">
+                <button type="button" class="kc-part kc-due" aria-describedby="kc-tip-due">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
+                  2026-07-15
+                  <span class="kc-tip kc-tip--start" role="tooltip" id="kc-tip-due" data-i18n="manual_kanban_card_tip_due">Fälligkeit: farblich gekennzeichnet als überfällig, heute fällig oder bald fällig.</span>
+                </button>
+                <button type="button" class="kc-part kc-todo" aria-describedby="kc-tip-todo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-square" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  1/9
+                  <span class="kc-tip" role="tooltip" id="kc-tip-todo" data-i18n="manual_kanban_card_tip_todo">ToDo-Stand: wie viele ToDos dieser Aufgabe von insgesamt erledigt sind.</span>
+                </button>
+                <button type="button" class="kc-part kc-priority" aria-describedby="kc-tip-priority">
+                  <span data-i18n="manual_kanban_card_sample_priority">Hoch</span>
+                  <span class="kc-tip kc-tip--end" role="tooltip" id="kc-tip-priority" data-i18n="manual_kanban_card_tip_priority">Priorität: die im Reiter „Details“ gesetzte Priorität.</span>
+                </button>
+              </div>
+            </div>
+            <figcaption class="kc-caption">
+              <span data-i18n="manual_kanban_card_figure_alt">Beispiel für die Angaben auf einer Kanban-Karte</span>
+              <span class="kc-caption-hint" data-i18n="manual_kanban_card_figure_hint">Fahren Sie über ein Element – oder tippen Sie es auf dem Touchscreen an –, um zu sehen, was es ist.</span>
+            </figcaption>
+          </figure>
         </div>
 
         <div class="manual-step-card">

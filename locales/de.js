@@ -2,8 +2,8 @@ export default {
   locale: "de",
   screenshotFolder: "en-us",
   meta: {
-    title: "Projektplan- & Gantt-Tool Ploto | Kernfunktionen kostenlos, Offline",
-    description: "Ploto ist ein offline nutzbares Tool für Projektpläne und Gantt-Diagramme ohne Registrierung; die Kernfunktionen sind kostenlos. Kanban und Prioritätsmatrix sind integriert. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
+    title: "Projektplan- & Gantt-Tool Ploto | Wesentliche Funktionen dauerhaft kostenlos, Offline",
+    description: "Ploto ist ein offline nutzbares Tool für Projektpläne und Gantt-Diagramme ohne Registrierung. Gantt-Diagramme, Prioritätsmatrix, Notizen und weitere wichtige Werkzeuge für Alltag und Beruf bleiben ohne Zeitlimit kostenlos. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
   },
   i18n: {
     nav_features: "Funktionen",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "Handbuch",
     cta_download: "Kostenloser Download",
 
-    hero_badge: "🏢 Für Teams mit eingeschränkter Cloud-Nutzung | Lokale Ausführung | Kernfunktionen kostenlos",
+    hero_badge: "🏢 Für Teams mit eingeschränkter Cloud-Nutzung | Lokale Ausführung | Wesentliche Funktionen dauerhaft kostenlos",
     hero_title: 'Projektpläne in Excel verwalten?<br><span class="text-gradient">Verabschieden Sie sich vom Chaos.</span>',
-    hero_desc: "Können Sie keine Cloud-Dienste nutzen? Sind Sie frustriert über langsame Excel-Tabellen? Ploto ist eine offline-fähige Projektmanagement-App aus dem Microsoft Store. Sie benötigen kein Konto und können mit der kostenlosen Version beginnen.",
+    hero_desc: "Können Sie keine Cloud-Dienste nutzen? Sind Sie frustriert über langsame Excel-Tabellen? Ploto ist eine offline-fähige Projektmanagement-App aus dem Microsoft Store. Gantt-Diagramme, Prioritätsmatrix, Notizen und weitere wichtige Werkzeuge für Alltag und Beruf bleiben ohne Zeitlimit kostenlos.",
     hero_cta_download: "Kostenlos herunterladen",
     hero_cta_manual: "Handbuch ansehen",
-    hero_meta: "<span>✓ Kein Konto · Kernfunktionen kostenlos</span><span>✓ Projektdaten auf Ihrem PC</span><span>✓ Keine automatische Übertragung an externe Server</span>",
+    hero_meta: "<span>✓ Kein Konto · Wesentliche Funktionen kostenlos</span><span>✓ Kein Zeitlimit für Alltag oder Beruf</span><span>✓ Projektdaten auf Ihrem PC</span>",
 
     mock_tab_gantt: "Gantt-Diagramm (Zeitplan)",
     mock_tab_kanban: "Kanban (Statusboard)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "Dieselben Aufgaben erscheinen als Terminplan, Fortschrittsboard, Prioritätenraster oder Notizen. Kein Nachbauen derselben Tabelle auf einem zweiten Blatt und keine auseinanderlaufenden Zahlen durch vergessene Übertragungen.",
 
     manual_guide_title: "Im Handbuch sehen, was Ploto kann",
-    manual_guide_subtitle: "Sehen Sie sich vor der Installation die echten Bildschirme und Schritt-für-Schritt-Anleitungen an. Ploto benötigt kein Konto und die Kernfunktionen sind kostenlos – was Ihnen zusagt, können Sie direkt ausprobieren.",
+    manual_guide_subtitle: "Sehen Sie sich vor der Installation die echten Bildschirme und Schritt-für-Schritt-Anleitungen an. Ploto benötigt kein Konto, und die wesentlichen Funktionen bleiben ohne Zeitlimit kostenlos – was Ihnen zusagt, können Sie direkt verwenden.",
     manual_guide_more: "Handbuch lesen →",
 
     manual_guide_basic_title: "Grundlagen",
@@ -52,10 +52,10 @@ export default {
     manual_guide_matrix_title: "Prioritätsmatrix",
     manual_guide_matrix_desc: "Aufgaben nach Dringlichkeit und Wichtigkeit platzieren und erkennen, was jetzt ansteht.",
 
-    plan_compare_title: "Was die kostenlose Version kann und was Pro ergänzt",
-    plan_compare_desc: "Alle Kernfunktionen von Ploto sind kostenlos. Pro ist ein Einmalkauf ohne Abo und ändert ausschließlich die Punkte in der Tabelle unten.",
+    plan_compare_title: "Was kostenlos bleibt und was Pro ergänzt",
+    plan_compare_desc: "Gantt-Diagramme, Prioritätsmatrix, Notizen und weitere wesentliche Funktionen bleiben ohne Zeitlimit kostenlos. Ergänzen Sie Pro als Einmalkauf nur, wenn Sie die erweiterten Funktionen unten benötigen.",
     plan_compare_col_feature: "Funktion",
-    plan_compare_col_free: "Kostenlos",
+    plan_compare_col_free: "Dauerhaft kostenlos",
     plan_compare_col_pro: "Ploto Pro (Einmalkauf)",
     plan_compare_core: "Gantt-Diagramm, Prioritätsmatrix, Notizen",
     plan_compare_core_free: "Voll verfügbar",
@@ -75,12 +75,12 @@ export default {
     plan_compare_holidays: "Feiertage",
     plan_compare_holidays_free: "Manuell hinzufügen und bearbeiten",
     plan_compare_holidays_pro: "Manuell + Länderfeiertage gesammelt importieren",
-    plan_compare_note: "* Alles, was hier nicht aufgeführt ist, lässt sich in der kostenlosen Version uneingeschränkt nutzen. Einzige Ausnahme: Whiteboards, die jemand anderes erstellt hat, lassen sich kostenlos nur ansehen.",
-    plan_compare_license_note: "* Die Board-Limits greifen nur beim Neuanlegen. Eine Datei mit Boards, die mit Pro erstellt wurden, lässt sich auch in der kostenlosen Version ganz normal öffnen und bearbeiten. Ein Seriencode kann auf mehreren eigenen Geräten registriert werden und wird danach auch offline geprüft.",
+    plan_compare_note: "* Alles, was hier nicht aufgeführt ist, lässt sich ohne Pro uneingeschränkt nutzen. Einzige Ausnahme: Whiteboards, die jemand anderes erstellt hat, lassen sich ohne Pro nur ansehen.",
+    plan_compare_license_note: "* Die Board-Limits greifen nur beim Neuanlegen. Eine Datei mit Boards, die mit Pro erstellt wurden, lässt sich auch ohne Pro ganz normal öffnen und bearbeiten. Ein Seriencode kann auf mehreren eigenen Geräten registriert werden und wird danach auch offline geprüft.",
 
     pricing_badge: "💡 Einmalkauf, kein Abo",
-    pricing_title: "Die Kernfunktionen bleiben kostenlos.<br>Pro kaufen Sie einmalig – nur wenn Sie es brauchen.",
-    pricing_desc: "Sie können die kostenlose Version von Ploto ohne zeitliche Begrenzung nutzen. Pro ist ein Einmalkauf, danach fallen keine weiteren Kosten an – weder monatlich noch jährlich. Kaufen können Sie entweder im Microsoft Store oder im Web (Stripe); dort erhalten Sie einen Seriencode per E-Mail. Falls sich Zahlungsseiten auf dem Arbeitsrechner nicht öffnen lassen, kaufen Sie auf dem privaten PC oder Smartphone und geben den Code am Arbeitsrechner ein.",
+    pricing_title: "Für Alltag und Beruf bleiben die wichtigsten Funktionen kostenlos.<br>Pro kommt einmalig dazu, wenn Sie mehr brauchen.",
+    pricing_desc: "Ploto stellt die wesentlichen Werkzeuge für Terminplanung im Alltag und Beruf ohne Zeitlimit kostenlos bereit, darunter Gantt-Diagramme, Prioritätsmatrix und Notizen. Ergänzen Sie Pro als Einmalkauf nur, wenn Sie mehr Kanban-Boards und Whiteboards, Baselines, Excel- / PDF-Export oder andere erweiterte Funktionen benötigen. Pro hat keine Monats- oder Jahresgebühr und ist im Microsoft Store oder im Web (Stripe) erhältlich.",
     pricing_model_label: "Preismodell",
     pricing_model_value: "Einmalkauf (kein Abo)",
     pricing_buy_label: "Kaufwege",
@@ -272,6 +272,19 @@ export default {
 
     manual_kanban_card_title: "Was eine Karte anzeigt",
     manual_kanban_card_desc: "Jede Karte bündelt die Informationen, die Sie für eine Entscheidung brauchen: Verantwortliche, Tags, Fälligkeit und den Stand der ToDos. Fälligkeiten sind als 'Überfällig', 'Heute fällig' oder 'Bald fällig' farblich gekennzeichnet, sodass kritische Aufgaben auffallen. Ein Klick auf die Karte öffnet rechts das Detailfenster, in dem Sie dieselben Inhalte wie im Gantt-Diagramm bearbeiten (Details, ToDo und Notiz).",
+    manual_kanban_card_figure_alt: "Beispiel für die Angaben auf einer Kanban-Karte",
+    manual_kanban_card_sample_assignee: "Entwicklung",
+    manual_kanban_card_sample_title: "Authentifizierung umsetzen",
+    manual_kanban_card_sample_tag1: "Backend",
+    manual_kanban_card_sample_tag2: "Wichtig",
+    manual_kanban_card_sample_priority: "Hoch",
+    manual_kanban_card_figure_hint: "Fahren Sie über ein Element – oder tippen Sie es auf dem Touchscreen an –, um zu sehen, was es ist.",
+    manual_kanban_card_tip_assignee: "Verantwortliche Person: wer die Aufgabe bearbeitet. Das Board lässt sich auch danach filtern.",
+    manual_kanban_card_tip_title: "Aufgabenname: dieselbe Aufgabe, die auch im Gantt-Diagramm und in den Notizen erscheint.",
+    manual_kanban_card_tip_tag: "Tags: Kennzeichnungen zum Gruppieren. Wie Verantwortliche lassen auch sie sich zum Filtern nutzen.",
+    manual_kanban_card_tip_due: "Fälligkeit: farblich gekennzeichnet als überfällig, heute fällig oder bald fällig.",
+    manual_kanban_card_tip_todo: "ToDo-Stand: wie viele ToDos dieser Aufgabe von insgesamt erledigt sind.",
+    manual_kanban_card_tip_priority: "Priorität: die im Reiter „Details“ gesetzte Priorität.",
 
     manual_kanban_todo_template_title: "Standard-ToDos (Routinearbeiten je Arbeitsschritt)",
     manual_kanban_todo_template_desc: "Über das Checklistensymbol in der Spaltenkopfzeile öffnen Sie die Einstellungen für 'Standard-ToDos'. Hier eingetragene Punkte werden automatisch als ToDos der Aufgabe erzeugt, sobald eine Karte in die Spalte gelangt. Wenn Sie immer wiederkehrende Schritte wie 'Review anfordern' oder 'Abnahmeprotokoll senden' hinterlegen, muss niemand das Vorgehen im Kopf behalten und nichts wird übersehen. Die Einträge lassen sich per Drag & Drop sortieren.",

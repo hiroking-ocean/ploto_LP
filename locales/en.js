@@ -2,8 +2,8 @@ export default {
   locale: "en",
   screenshotFolder: "en-us",
   meta: {
-    title: "Project Scheduling & Gantt Chart Tool Ploto | Free Core Features, Offline",
-    description: "Ploto is an offline project scheduling and Gantt chart tool with no account required and free core features. It includes Kanban boards and a priority matrix. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
+    title: "Project Scheduling & Gantt Chart Tool Ploto | Essential Features Stay Free, Offline",
+    description: "Ploto is an offline project scheduling and Gantt chart tool with no account required. Gantt charts, priority matrices, notes, and other essential tools for everyday and professional work remain free with no time limit. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
   },
   i18n: {
     nav_features: "Features",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "User Manual",
     cta_download: "Free Download",
 
-    hero_badge: "🏢 For Teams with Restricted Cloud Use | Runs Locally | Free Core Features",
+    hero_badge: "🏢 For Teams with Restricted Cloud Use | Runs Locally | Essential Features Stay Free",
     hero_title: 'Tired of Managing Schedules<br>with <span class="text-gradient">Messy Excel Worksheets?</span>',
-    hero_desc: "Unable to use cloud services? Frustrated with slow Excel sheets? Ploto is an offline project management app available from the Microsoft Store. No account is required, and you can start with the free version.",
+    hero_desc: "Unable to use cloud services? Frustrated with slow Excel sheets? Ploto is an offline project management app available from the Microsoft Store. Gantt charts, priority matrices, notes, and other essential tools for everyday and professional work remain free with no time limit.",
     hero_cta_download: "Get it for Free",
     hero_cta_manual: "See the manual",
-    hero_meta: "<span>✓ No Account · Free Core Features</span><span>✓ Project Data Stored on Your PC</span><span>✓ No Automatic Upload to External Servers</span>",
+    hero_meta: "<span>✓ No Account · Essential Features Free</span><span>✓ No Time Limit for Everyday or Professional Use</span><span>✓ Project Data Stored on Your PC</span>",
 
     mock_tab_gantt: "Gantt Chart (Schedule)",
     mock_tab_kanban: "Kanban (Status Board)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "The same tasks appear as a schedule, a progress board, a priority grid or notes. No rebuilding the same table on another sheet, and no numbers drifting apart because someone missed a copy.",
 
     manual_guide_title: "See what Ploto can do, in the manual",
-    manual_guide_subtitle: "Check the actual screens and step-by-step instructions before installing. Ploto needs no account and its core features are free, so you can try anything that looks useful.",
+    manual_guide_subtitle: "Check the actual screens and step-by-step instructions before installing. No account is required, and the essential features remain free with no time limit, so you can start using anything that looks useful.",
     manual_guide_more: "Read the manual →",
 
     manual_guide_basic_title: "Basics",
@@ -52,10 +52,10 @@ export default {
     manual_guide_matrix_title: "Priority matrix",
     manual_guide_matrix_desc: "Place tasks on the urgency and importance axes to decide what deserves your attention now.",
 
-    plan_compare_title: "What the free version does, and what Pro adds",
-    plan_compare_desc: "Every core feature of Ploto is free. Pro is a one-time purchase with no subscription, and it changes only what you see in the table below.",
+    plan_compare_title: "What stays free, and what Pro adds",
+    plan_compare_desc: "Gantt charts, priority matrices, notes, and other essential features remain free with no time limit. Add the one-time-purchase Pro upgrade only if you need the advanced features below.",
     plan_compare_col_feature: "Feature",
-    plan_compare_col_free: "Free",
+    plan_compare_col_free: "Included free",
     plan_compare_col_pro: "Ploto Pro (one-time purchase)",
     plan_compare_core: "Gantt chart, priority matrix, notes",
     plan_compare_core_free: "Fully available",
@@ -75,12 +75,12 @@ export default {
     plan_compare_holidays: "Holiday setup",
     plan_compare_holidays_free: "Add and edit manually",
     plan_compare_holidays_pro: "Manual setup + bulk country import",
-    plan_compare_note: "* Anything not listed here is unrestricted in the free version. The one exception: whiteboards created by someone else are view-only on the free version.",
-    plan_compare_license_note: "* The board limits apply only when creating new boards. A file containing boards made with Pro still opens and edits normally on the free version. A serial code can be registered on several of your own devices, and once registered it validates offline.",
+    plan_compare_note: "* Anything not listed here remains unrestricted without Pro. The one exception: whiteboards created by someone else are view-only without Pro.",
+    plan_compare_license_note: "* The board limits apply only when creating new boards. A file containing boards made with Pro still opens and edits normally without Pro. A serial code can be registered on several of your own devices, and once registered it validates offline.",
 
     pricing_badge: "💡 One-time purchase, no subscription",
-    pricing_title: "The core stays free.<br>Buy Pro once, only if you need it.",
-    pricing_desc: "You can keep using the free version of Ploto with no time limit. Pro is a one-time purchase with nothing to pay afterwards — no monthly or yearly fee. You can buy it either in the Microsoft Store or on the web (Stripe), which sends you a serial code by email. If your work PC cannot open payment pages, buy it on your home PC or phone and enter the code on the work PC.",
+    pricing_title: "Everyday and professional work stays free.<br>Add Pro once, only when you need more.",
+    pricing_desc: "Ploto keeps the essential tools for everyday and professional scheduling free with no time limit, including Gantt charts, priority matrices, and notes. Add the one-time-purchase Pro upgrade only if you need more Kanban boards and whiteboards, baselines, Excel / PDF export, or other advanced features. Pro has no monthly or yearly fee and is available through Microsoft Store or the web (Stripe).",
     pricing_model_label: "Pricing model",
     pricing_model_value: "One-time purchase (no subscription)",
     pricing_buy_label: "How to buy",
@@ -272,6 +272,19 @@ export default {
 
     manual_kanban_card_title: "What a Card Shows",
     manual_kanban_card_desc: "Each card gathers the information you need to make a decision: assignee, tags, due date, and how many ToDos are done. Due dates are color-coded as 'Overdue', 'Due today', or 'Due soon', so tasks at risk stand out. Click a card to open the details panel on the right, where you can edit the same content as in the Gantt chart (Details, ToDo, and Memo).",
+    manual_kanban_card_figure_alt: "Example of the information shown on a Kanban card",
+    manual_kanban_card_sample_assignee: "Dev",
+    manual_kanban_card_sample_title: "Implement authentication",
+    manual_kanban_card_sample_tag1: "Backend",
+    manual_kanban_card_sample_tag2: "Important",
+    manual_kanban_card_sample_priority: "High",
+    manual_kanban_card_figure_hint: "Hover over an item — or tap it on a touch screen — to see what it is.",
+    manual_kanban_card_tip_assignee: "Assignee: who is working on this task. You can also filter the board by assignee.",
+    manual_kanban_card_tip_title: "Task name: the same single task that appears in the Gantt chart and in notes.",
+    manual_kanban_card_tip_tag: "Tags: labels for grouping tasks. Like assignees, they can be used to filter the board.",
+    manual_kanban_card_tip_due: "Due date: color-coded as overdue, due today, or due soon.",
+    manual_kanban_card_tip_todo: "ToDo progress: how many of this task's ToDos are done, out of the total.",
+    manual_kanban_card_tip_priority: "Priority: the priority set on the Details tab.",
 
     manual_kanban_todo_template_title: "Standard ToDos (Routine Work per Stage)",
     manual_kanban_todo_template_desc: "Press the checklist icon in a column header to open the 'Standard ToDo' settings. Items you register here are created automatically as that task's ToDos whenever a card enters the column. Registering steps you repeat every time, such as 'request a review' or 'send the acceptance form', means nobody has to remember the procedure and nothing gets skipped. Items can be reordered by dragging.",

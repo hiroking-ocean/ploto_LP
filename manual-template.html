@@ -457,9 +457,51 @@
         <div class="manual-step-card">
           <h3 data-i18n="manual_kanban_card_title">カードの表示内容</h3>
           <p data-i18n="manual_kanban_card_desc">カードには、担当者、タグ、期限、ToDoの消化状況といった判断に必要な情報がまとめて表示されます。期限は状態に応じて『期限切れ』『本日が期限』『期限間近』が色分けで示されるため、危ないタスクが目に入ります。カードをクリックすると画面右側に詳細パネルが開き、ガントチャートと同じ内容（詳細・ToDo・メモ）をその場で編集できます。</p>
-          <div class="manual-image-container">
-            <img src="assets/manual/ja/kanban-card.png" data-screenshot-path="kanban-card.png" alt="Card Contents">
-          </div>
+          <!-- カードの見本はスクショではなくHTML/CSSで描画する（多言語化・テーマ追従・軽量化のため）。
+               各項目は button にして、hover と focus の両方で説明を出す（タッチでも開けるようにするため）。
+               説明文は aria-describedby で読み上げにも渡す。 -->
+          <figure class="kanban-card-figure">
+            <div class="kc-card">
+              <button type="button" class="kc-part kc-assignee" aria-describedby="kc-tip-assignee">
+                <span data-i18n="manual_kanban_card_sample_assignee">開発</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-assignee" data-i18n="manual_kanban_card_tip_assignee">担当者。このタスクを誰が進めるかを示します。ボード上部のバーで担当者による絞り込みもできます。</span>
+              </button>
+              <button type="button" class="kc-part kc-title" aria-describedby="kc-tip-title">
+                <span data-i18n="manual_kanban_card_sample_title">認証機能の実装</span>
+                <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-title" data-i18n="manual_kanban_card_tip_title">タスク名。ガントチャートやノートに出てくるものと同じ1件のタスクです。</span>
+              </button>
+              <div class="kc-tags">
+                <button type="button" class="kc-part kc-tag kc-tag-a" aria-describedby="kc-tip-tag1">
+                  <span data-i18n="manual_kanban_card_sample_tag1">バックエンド</span>
+                  <span class="kc-tip kc-tip--start kc-tip--below" role="tooltip" id="kc-tip-tag1" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
+                </button>
+                <button type="button" class="kc-part kc-tag kc-tag-b" aria-describedby="kc-tip-tag2">
+                  <span data-i18n="manual_kanban_card_sample_tag2">重要</span>
+                  <span class="kc-tip kc-tip--below" role="tooltip" id="kc-tip-tag2" data-i18n="manual_kanban_card_tip_tag">タグ。分類のための目印です。担当者と同じく、タグでボードを絞り込めます。</span>
+                </button>
+              </div>
+              <div class="kc-meta">
+                <button type="button" class="kc-part kc-due" aria-describedby="kc-tip-due">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 2v4"></path><path d="M16 2v4"></path></svg>
+                  2026-07-15
+                  <span class="kc-tip kc-tip--start" role="tooltip" id="kc-tip-due" data-i18n="manual_kanban_card_tip_due">期限。『期限切れ』『本日が期限』『期限間近』の状態に応じて色が変わります。</span>
+                </button>
+                <button type="button" class="kc-part kc-todo" aria-describedby="kc-tip-todo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-square" aria-hidden="true"><path d="m9 11 3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  1/9
+                  <span class="kc-tip" role="tooltip" id="kc-tip-todo" data-i18n="manual_kanban_card_tip_todo">ToDoの消化状況。そのタスクのToDoが、全体のうち何件終わったかを表します。</span>
+                </button>
+                <button type="button" class="kc-part kc-priority" aria-describedby="kc-tip-priority">
+                  <span data-i18n="manual_kanban_card_sample_priority">高</span>
+                  <span class="kc-tip kc-tip--end" role="tooltip" id="kc-tip-priority" data-i18n="manual_kanban_card_tip_priority">優先度。詳細タブで設定した優先度が表示されます。</span>
+                </button>
+              </div>
+            </div>
+            <figcaption class="kc-caption">
+              <span data-i18n="manual_kanban_card_figure_alt">カンバンのカードに表示される項目の例</span>
+              <span class="kc-caption-hint" data-i18n="manual_kanban_card_figure_hint">各項目にマウスを乗せる（タッチ操作ではタップする）と、その項目の説明が表示されます。</span>
+            </figcaption>
+          </figure>
         </div>
 
         <div class="manual-step-card">

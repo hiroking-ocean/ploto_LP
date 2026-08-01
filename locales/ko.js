@@ -2,8 +2,8 @@ export default {
   locale: "ko",
   screenshotFolder: "en-us",
   meta: {
-    title: "일정 관리·간트 차트 도구 Ploto | 기본 기능 무료, 오프라인",
-    description: "Ploto는 계정 등록 없이 오프라인으로 작동하며 기본 기능을 무료로 제공하는 일정 관리 및 간트 차트 도구입니다. 칸반과 우선순위 매트릭스가 통합되어 있습니다. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
+    title: "무료로 계속 사용할 수 있는 일정 관리·간트 차트 도구 Ploto | 오프라인",
+    description: "Ploto는 계정 등록 없이 오프라인으로 사용할 수 있는 일정 관리 및 간트 차트 도구입니다. 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무에 필요한 주요 기능을 기간 제한 없이 무료로 계속 사용할 수 있습니다. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
   },
   i18n: {
     nav_features: "기능",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "사용 설명서",
     cta_download: "무료 다운로드",
 
-    hero_badge: "🏢 클라우드 이용이 제한된 환경을 위한 도구 | 로컬 동작 | 기본 기능 무료",
+    hero_badge: "🏢 클라우드 이용이 제한된 환경을 위한 도구 | 로컬 동작 | 주요 기능 계속 무료",
     hero_title: 'Excel 일정 관리,<br><span class="text-gradient">이제 그만 졸업하지 않으시겠습니까?</span>',
-    hero_desc: "클라우드 서비스를 이용할 수 없거나 무거운 Excel 공정표 관리에 한계를 느끼는 현장에 적합합니다. Ploto는 Microsoft Store에서 설치할 수 있는 오프라인형 프로젝트 관리 소프트웨어입니다. 계정 등록 없이 무료 버전부터 시작할 수 있습니다.",
+    hero_desc: "클라우드 서비스를 이용할 수 없거나 무거운 Excel 공정표 관리에 한계를 느끼는 현장에 적합합니다. Ploto는 Microsoft Store에서 설치할 수 있는 오프라인형 프로젝트 관리 소프트웨어입니다. 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무에 필요한 주요 기능을 기간 제한 없이 무료로 계속 사용할 수 있습니다.",
     hero_cta_download: "무료로 받기",
     hero_cta_manual: "매뉴얼 보기",
-    hero_meta: "<span>✓ 계정 등록 없음·기본 기능 무료</span><span>✓ 프로젝트 데이터는 PC에 저장</span><span>✓ 외부 서버로 자동 전송하지 않음</span>",
+    hero_meta: "<span>✓ 계정 등록 없음·주요 기능 무료</span><span>✓ 일상·업무 용도로 기간 제한 없음</span><span>✓ 프로젝트 데이터는 PC에 저장</span>",
 
     mock_tab_gantt: "간트 차트(공정표)",
     mock_tab_kanban: "칸반(진행 보드)",
@@ -36,7 +36,7 @@ export default {
     feat_views_desc: "같은 작업을 공정표·진행 보드·우선순위·노트로 바꿔 가며 볼 수 있습니다. 시트마다 같은 표를 다시 만들거나 옮겨 적다가 숫자가 어긋나는 일이 없어집니다.",
 
     manual_guide_title: "매뉴얼에서 할 수 있는 일을 확인해 보세요",
-    manual_guide_subtitle: "설치 전에 실제 화면과 조작 순서를 확인할 수 있습니다. 계정 등록이 필요 없고 기본 기능이 무료이므로, 마음에 드는 기능은 바로 사용해 볼 수 있습니다.",
+    manual_guide_subtitle: "설치 전에 실제 화면과 조작 순서를 확인할 수 있습니다. 계정 등록이 필요 없고 주요 기능은 기간 제한 없이 무료이므로, 마음에 드는 기능을 바로 사용할 수 있습니다.",
     manual_guide_more: "매뉴얼 읽기 →",
 
     manual_guide_basic_title: "기본 조작",
@@ -52,10 +52,10 @@ export default {
     manual_guide_matrix_title: "우선순위 매트릭스",
     manual_guide_matrix_desc: "긴급도와 중요도 두 축에 작업을 배치해 지금 손대야 할 일을 판단합니다.",
 
-    plan_compare_title: "무료 버전과 Pro 버전 비교",
-    plan_compare_desc: "Ploto의 기본 기능은 모두 무료입니다. Pro는 한 번만 결제하는 방식이며 구독료가 없고, 아래 표의 항목만 달라집니다.",
+    plan_compare_title: "무료로 계속 쓸 수 있는 기능과 Pro 추가 기능",
+    plan_compare_desc: "간트 차트, 우선순위 매트릭스, 노트 등 주요 기능은 기간 제한 없이 무료로 계속 사용할 수 있습니다. 아래의 고급 기능이 필요할 때만 한 번 결제하는 Pro를 추가하면 됩니다.",
     plan_compare_col_feature: "기능",
-    plan_compare_col_free: "무료 버전",
+    plan_compare_col_free: "계속 무료",
     plan_compare_col_pro: "Ploto Pro (한 번 결제)",
     plan_compare_core: "간트 차트·우선순위 매트릭스·노트",
     plan_compare_core_free: "모두 이용 가능",
@@ -75,12 +75,12 @@ export default {
     plan_compare_holidays: "공휴일 등록",
     plan_compare_holidays_free: "수동 추가 및 편집",
     plan_compare_holidays_pro: "수동 + 국가별 공휴일 일괄 가져오기",
-    plan_compare_note: "※ 표에 없는 기능은 무료 버전에서도 제한 없이 사용할 수 있습니다. 단, 다른 사람이 만든 화이트보드는 무료 버전에서 보기 전용입니다.",
-    plan_compare_license_note: "※ 보드 개수 제한은 새로 만들 때만 적용됩니다. Pro로 만든 보드가 들어 있는 파일도 무료 버전에서 그대로 열고 편집할 수 있습니다. 시리얼 코드는 본인이 쓰는 여러 기기에 등록할 수 있으며, 등록 후에는 오프라인에서도 인증됩니다.",
+    plan_compare_note: "※ 표에 없는 기능은 Pro 없이도 제한 없이 사용할 수 있습니다. 단, 다른 사람이 만든 화이트보드는 Pro 없이 보기 전용입니다.",
+    plan_compare_license_note: "※ 보드 개수 제한은 새로 만들 때만 적용됩니다. Pro로 만든 보드가 들어 있는 파일도 Pro 없이 그대로 열고 편집할 수 있습니다. 시리얼 코드는 본인이 쓰는 여러 기기에 등록할 수 있으며, 등록 후에는 오프라인에서도 인증됩니다.",
 
     pricing_badge: "💡 한 번 결제, 구독 없음",
-    pricing_title: "기본 기능은 계속 무료.<br>필요할 때만 한 번 결제하는 Pro.",
-    pricing_desc: "Ploto 무료 버전은 기간 제한 없이 계속 사용할 수 있습니다. Pro는 한 번 결제하면 이후 비용이 없는 방식으로, 월 사용료나 연 사용료가 없습니다. 구매는 Microsoft Store의 앱 내 구매와, 웹(Stripe)에서 시리얼 코드를 받는 방법 두 가지가 있습니다. 회사 PC에서 결제 페이지를 열 수 없다면 집 PC나 스마트폰으로 구매한 뒤, 받은 코드를 회사 PC에 입력하면 그대로 사용할 수 있습니다.",
+    pricing_title: "일상과 업무에 필요한 주요 기능은 계속 무료.<br>더 필요할 때만 한 번 결제하는 Pro.",
+    pricing_desc: "Ploto는 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무 일정 관리에 필요한 주요 기능을 기간 제한 없이 무료로 제공합니다. 더 많은 칸반 보드와 화이트보드, 기준선, Excel / PDF 내보내기 등 고급 기능이 필요할 때만 한 번 결제하는 Pro를 추가하면 됩니다. Pro에는 월 사용료나 연 사용료가 없으며 Microsoft Store 또는 웹(Stripe)에서 구매할 수 있습니다.",
     pricing_model_label: "요금 방식",
     pricing_model_value: "한 번 결제 (구독 없음)",
     pricing_buy_label: "구매 방법",
@@ -272,6 +272,19 @@ export default {
 
     manual_kanban_card_title: "카드에 표시되는 정보",
     manual_kanban_card_desc: "카드에는 담당자, 태그, 기한, ToDo 진행 상황처럼 판단에 필요한 정보가 함께 표시됩니다. 기한은 상태에 따라 '기한 초과', '오늘 마감', '마감 임박'으로 색상이 구분되어 위험한 작업이 눈에 들어옵니다. 카드를 클릭하면 화면 오른쪽에 상세 패널이 열려 간트 차트와 동일한 내용(상세·ToDo·메모)을 그 자리에서 편집할 수 있습니다.",
+    manual_kanban_card_figure_alt: "칸반 카드에 표시되는 항목의 예",
+    manual_kanban_card_sample_assignee: "개발",
+    manual_kanban_card_sample_title: "인증 기능 구현",
+    manual_kanban_card_sample_tag1: "백엔드",
+    manual_kanban_card_sample_tag2: "중요",
+    manual_kanban_card_sample_priority: "높음",
+    manual_kanban_card_figure_hint: "각 항목에 마우스를 올리면(터치 화면에서는 탭하면) 설명이 표시됩니다.",
+    manual_kanban_card_tip_assignee: "담당자. 이 작업을 누가 진행하는지 나타냅니다. 보드를 담당자로 필터링할 수도 있습니다.",
+    manual_kanban_card_tip_title: "작업 이름. 간트 차트와 노트에 나오는 것과 같은 하나의 작업입니다.",
+    manual_kanban_card_tip_tag: "태그. 분류를 위한 표시이며, 담당자와 마찬가지로 보드를 필터링하는 데 쓸 수 있습니다.",
+    manual_kanban_card_tip_due: "기한. '기한 초과', '오늘 마감', '마감 임박' 상태에 따라 색이 달라집니다.",
+    manual_kanban_card_tip_todo: "ToDo 진행 상황. 이 작업의 ToDo가 전체 중 몇 건 끝났는지를 나타냅니다.",
+    manual_kanban_card_tip_priority: "우선순위. 상세 탭에서 설정한 우선순위가 표시됩니다.",
 
     manual_kanban_todo_template_title: "표준 ToDo(공정별 정형 작업)",
     manual_kanban_todo_template_desc: "열 머리글의 체크리스트 아이콘을 누르면 '표준 ToDo' 설정란이 열립니다. 여기에 등록한 항목은 그 열에 카드가 들어올 때 해당 작업의 ToDo로 자동 생성됩니다. '검토 요청하기', '검수서 보내기'처럼 매번 같은 절차를 등록해 두면 담당자가 공정 방식을 기억할 필요가 없고 누락도 막을 수 있습니다. 항목은 끌어서 순서를 바꿀 수 있습니다.",
