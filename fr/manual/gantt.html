@@ -34,7 +34,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-manual-title="">Diagramme de Gantt | Manuel Ploto</title>
-  <meta name="description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, panneau de détails et jours fériés.">
+  <meta name="description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, choisir et trier les colonnes depuis la ligne d'en-tête, panneau de détails et jours fériés.">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/gantt.html">
@@ -55,12 +55,12 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Diagramme de Gantt | Manuel Ploto">
-  <meta property="og:description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, panneau de détails et jours fériés.">
+  <meta property="og:description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, choisir et trier les colonnes depuis la ligne d'en-tête, panneau de détails et jours fériés.">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="Diagramme de Gantt">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diagramme de Gantt | Manuel Ploto">
-  <meta name="twitter:description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, panneau de détails et jours fériés.">
+  <meta name="twitter:description" content="Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, choisir et trier les colonnes depuis la ligne d'en-tête, panneau de détails et jours fériés.">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="Diagramme de Gantt">
 
@@ -213,6 +213,22 @@
           <div class="manual-image-container">
             <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_columns_title">Configurer la ligne d'en-tête du tableau (colonnes, tri, largeur)</h3>
+          <p data-i18n="manual_gantt_columns_desc">La ligne d'en-tête de la liste des tâches (grille), à gauche du diagramme de Gantt, regroupe les réglages d'affichage du tableau. On l'oublie facilement, mais elle permet d'obtenir un planning qui n'affiche que les informations dont vous avez réellement besoin.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_config_title">1. Choisir les colonnes affichées (double-clic sur la ligne d'en-tête)</h4>
+          <p data-i18n="manual_gantt_columns_config_desc">Un double-clic sur la ligne d'en-tête ouvre la boîte de dialogue « Paramètres des colonnes ». Cochez les colonnes souhaitées parmi Date de début, Date de fin, Durée, Progression, Responsable, Kanban, Étiquettes, ToDo et Priorité (le nom de la tâche est toujours affiché et ne peut pas être masqué). La poignée située à gauche de chaque entrée permet également de réordonner les colonnes par glisser-déposer. Ces réglages sont enregistrés par vue : vous retrouverez la même disposition à la prochaine ouverture.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_sort_title">2. Trier les lignes (clic sur un en-tête)</h4>
+          <p data-i18n="manual_gantt_columns_sort_desc">Chaque clic sur un en-tête fait défiler « ordre croissant → ordre décroissant → ordre d'origine ». Six colonnes peuvent être triées : nom de la tâche, date de début, date de fin, durée, progression et priorité. Le tri ne modifie que l'affichage : l'ordre manuel créé par glisser-déposer est conservé en interne et revient au troisième clic. Vous pouvez donc comparer librement les tâches par échéance ou par avancement.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_width_title">3. Ajuster la largeur des colonnes (glisser la bordure de l'en-tête)</h4>
+          <p data-i18n="manual_gantt_columns_width_desc">Faites glisser la bordure entre deux en-têtes pour modifier la largeur d'une colonne. Pratique lorsque les noms de tâches sont trop longs, ou pour rétrécir le tableau et laisser plus de place au diagramme. Les largeurs de colonnes sont elles aussi enregistrées par vue.</p>
+
+          
         </div>
 
         <div class="manual-step-card">

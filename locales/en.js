@@ -189,7 +189,7 @@ export default {
 
     // --- Manual Meta Descriptions (検索結果のスニペット用) ---
     manual_basic_meta_desc: "Ploto basics: the startup screen, the File and Help menus, the sidebar panels, and header controls such as saving and undo/redo.",
-    manual_gantt_meta_desc: "How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, the details panel, and holiday settings.",
+    manual_gantt_meta_desc: "How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, changing and sorting grid columns from the header row, the details panel, and holiday settings.",
     manual_kanban_meta_desc: "How to use Ploto's Kanban board: building stage columns, moving cards, standard ToDos per stage, completion checks, and filters.",
     manual_matrix_meta_desc: "How to use Ploto's Priority Matrix: place tasks by urgency and importance, then work with priority scores, display modes, and filters.",
     manual_note_meta_desc: "How to use Ploto's Note view: write meeting minutes and work logs structured by your task hierarchy, with formatting and full-text search.",
@@ -211,6 +211,15 @@ export default {
     
     manual_gantt_add_title: "Adding and Deleting Tasks",
     manual_gantt_add_desc: "Click the '+' button at the top of the task list (grid) on the left, or at the right end of each row, to add a new task. To delete a task, right-click the task name and select 'Delete' from the menu, or select the task and press the Delete key.",
+
+    manual_gantt_columns_title: "Configuring the Grid Header Row (Columns, Sorting, Width)",
+    manual_gantt_columns_desc: "The header row of the task list (grid) on the left side of the Gantt chart is where the display settings for the table live. It is easy to overlook, but setting it up gives you a schedule that shows only the information you actually need.",
+    manual_gantt_columns_config_title: "1. Choose which columns to show (double-click the header row)",
+    manual_gantt_columns_config_desc: "Double-click the header row to open the 'Grid Column Settings' dialog. Tick the columns you want in the table from Start Date, End Date, Duration, Progress, Assignee, Kanban, Tags, ToDo and Priority (Task Name is always shown and cannot be turned off). Drag the grip on the left of each entry to reorder the columns as well. These settings are saved per view, so the same layout is waiting for you the next time you open the file.",
+    manual_gantt_columns_sort_title: "2. Sort the rows (click a header)",
+    manual_gantt_columns_sort_desc: "Each click on a header cycles through 'ascending → descending → original order'. Six columns can be sorted: Task Name, Start Date, End Date, Duration, Progress and Priority. Sorting only changes the display — the manual order you built by dragging is kept internally, and a third click always brings it back, so you can freely compare tasks by due date or by progress.",
+    manual_gantt_columns_width_title: "3. Adjust the column width (drag the header border)",
+    manual_gantt_columns_width_desc: "Drag the border between two headers to change a column's width. Use it when task names are too long to read, or when you want to narrow the table to give the chart more room. Column widths are saved per view as well.",
     
     manual_gantt_drag_title: "Adjusting Duration (Drag & Drop)",
     manual_gantt_drag_desc: "Drag the left or right edge of a task bar (blue bar) on the chart to change the start or end date. Drag the center of the bar to move the entire schedule left or right while maintaining the duration (number of days).",

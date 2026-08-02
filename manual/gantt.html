@@ -34,7 +34,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-manual-title="">ガントチャート (工程表) | Ploto マニュアル</title>
-  <meta name="description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、詳細パネル、祝日・会社休日の登録までを解説します。">
+  <meta name="description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、表の見出し行での表示列の変更と並び替え、詳細パネル、祝日・会社休日の登録までを解説します。">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/manual/gantt.html">
@@ -55,12 +55,12 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="ガントチャート (工程表) | Ploto マニュアル">
-  <meta property="og:description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、詳細パネル、祝日・会社休日の登録までを解説します。">
+  <meta property="og:description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、表の見出し行での表示列の変更と並び替え、詳細パネル、祝日・会社休日の登録までを解説します。">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ja/gantt-overview.png">
   <meta property="og:image:alt" content="ガントチャート (工程表)">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ガントチャート (工程表) | Ploto マニュアル">
-  <meta name="twitter:description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、詳細パネル、祝日・会社休日の登録までを解説します。">
+  <meta name="twitter:description" content="Plotoのガントチャートの使い方。タスクの追加、ドラッグでの期間調整、依存関係の設定、表の見出し行での表示列の変更と並び替え、詳細パネル、祝日・会社休日の登録までを解説します。">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/ja/gantt-overview.png">
   <meta name="twitter:image:alt" content="ガントチャート (工程表)">
 
@@ -213,6 +213,22 @@
           <div class="manual-image-container">
             <img src="/ploto_LP/assets/manual/ja/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task" width="2560" height="1441" loading="lazy" fetchpriority="low" decoding="async">
           </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_columns_title">表の見出し行の設定（表示列・並び替え・列幅）</h3>
+          <p data-i18n="manual_gantt_columns_desc">ガントチャート左側のタスク一覧（グリッド）の見出し行には、表の見せ方を整える操作がまとまっています。見落とされやすい部分ですが、ここを設定しておくと、必要な情報だけが並んだ見やすい工程表になります。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_config_title">① 表示する列を選ぶ（見出し行をダブルクリック）</h4>
+          <p data-i18n="manual_gantt_columns_config_desc">見出し行をダブルクリックすると『表示列の設定』ダイアログが開きます。開始日、終了日、期間、進捗率、管理者、カンバン、タグ、ToDo、優先度の中から、表に出したい列をチェックで選べます（タスク名は常に表示されるため、オフにはできません）。一覧の各項目は左側のグリップをドラッグして、列の並び順も入れ替えられます。設定はビューごとに保存されるので、次に開いたときも同じ並びのまま作業を再開できます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_sort_title">② 並び替える（見出しをクリック）</h4>
+          <p data-i18n="manual_gantt_columns_sort_desc">見出しをクリックするたびに『昇順 → 降順 → 元の並び順』が切り替わります。並び替えできるのは、タスク名・開始日・終了日・期間・進捗率・優先度の6つの列です。並び替えは表示だけを変える機能で、ドラッグで作った手動の並び順は内部に保持されています。3回目のクリックでいつでも元の並びに戻せるため、期限順や進捗順に安心して見比べられます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_width_title">③ 列幅を調整する（見出しの境界をドラッグ）</h4>
+          <p data-i18n="manual_gantt_columns_width_desc">見出しと見出しの境界をドラッグすると、列の幅を変更できます。タスク名が長くて読みきれないときや、逆に表を狭めてチャート側を広く見たいときに使います。列幅もビューごとに保存されます。</p>
+
+          
         </div>
 
         <div class="manual-step-card">

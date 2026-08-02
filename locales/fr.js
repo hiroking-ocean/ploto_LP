@@ -189,7 +189,7 @@ export default {
 
     // --- Manual Meta Descriptions (検索結果のスニペット用) ---
     manual_basic_meta_desc: "Les bases de Ploto : écran de démarrage, menus Fichier et Aide, volets de la barre latérale et commandes d'en-tête (enregistrement, annulation).",
-    manual_gantt_meta_desc: "Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, panneau de détails et jours fériés.",
+    manual_gantt_meta_desc: "Le diagramme de Gantt de Ploto : ajouter des tâches, ajuster les durées par glisser-déposer, dépendances, choisir et trier les colonnes depuis la ligne d'en-tête, panneau de détails et jours fériés.",
     manual_kanban_meta_desc: "Le tableau Kanban de Ploto : créer les colonnes d'étape, déplacer les cartes, ToDo standard par étape, contrôles de clôture et filtres.",
     manual_matrix_meta_desc: "La matrice de priorités de Ploto : placer les tâches selon l'urgence et l'importance, avec score de priorité, modes d'affichage et filtres.",
     manual_note_meta_desc: "La vue Notes de Ploto : rédiger comptes rendus et journaux de travail structurés par votre hiérarchie de tâches, mise en forme et recherche plein texte.",
@@ -211,6 +211,15 @@ export default {
     
     manual_gantt_add_title: "Ajouter et supprimer des tâches",
     manual_gantt_add_desc: "Cliquez sur le bouton '+' en haut de la liste des tâches (grille) à gauche, ou à l'extrémité droite de chaque ligne, pour ajouter une nouvelle tâche. Pour supprimer une tâche, faites un clic droit sur le nom de la tâche et sélectionnez 'Supprimer' dans le menu, ou sélectionnez la tâche et appuyez sur la touche Suppr.",
+
+    manual_gantt_columns_title: "Configurer la ligne d'en-tête du tableau (colonnes, tri, largeur)",
+    manual_gantt_columns_desc: "La ligne d'en-tête de la liste des tâches (grille), à gauche du diagramme de Gantt, regroupe les réglages d'affichage du tableau. On l'oublie facilement, mais elle permet d'obtenir un planning qui n'affiche que les informations dont vous avez réellement besoin.",
+    manual_gantt_columns_config_title: "1. Choisir les colonnes affichées (double-clic sur la ligne d'en-tête)",
+    manual_gantt_columns_config_desc: "Un double-clic sur la ligne d'en-tête ouvre la boîte de dialogue « Paramètres des colonnes ». Cochez les colonnes souhaitées parmi Date de début, Date de fin, Durée, Progression, Responsable, Kanban, Étiquettes, ToDo et Priorité (le nom de la tâche est toujours affiché et ne peut pas être masqué). La poignée située à gauche de chaque entrée permet également de réordonner les colonnes par glisser-déposer. Ces réglages sont enregistrés par vue : vous retrouverez la même disposition à la prochaine ouverture.",
+    manual_gantt_columns_sort_title: "2. Trier les lignes (clic sur un en-tête)",
+    manual_gantt_columns_sort_desc: "Chaque clic sur un en-tête fait défiler « ordre croissant → ordre décroissant → ordre d'origine ». Six colonnes peuvent être triées : nom de la tâche, date de début, date de fin, durée, progression et priorité. Le tri ne modifie que l'affichage : l'ordre manuel créé par glisser-déposer est conservé en interne et revient au troisième clic. Vous pouvez donc comparer librement les tâches par échéance ou par avancement.",
+    manual_gantt_columns_width_title: "3. Ajuster la largeur des colonnes (glisser la bordure de l'en-tête)",
+    manual_gantt_columns_width_desc: "Faites glisser la bordure entre deux en-têtes pour modifier la largeur d'une colonne. Pratique lorsque les noms de tâches sont trop longs, ou pour rétrécir le tableau et laisser plus de place au diagramme. Les largeurs de colonnes sont elles aussi enregistrées par vue.",
     
     manual_gantt_drag_title: "Ajuster la durée (Glisser-Déposer)",
     manual_gantt_drag_desc: "Faites glisser le bord gauche ou droit d'une barre de tâche (barre bleue) sur le diagramme pour modifier la date de début ou de fin. Faites glisser le centre de la barre pour déplacer l'ensemble du planning vers la gauche ou la droite tout en conservant la durée (nombre de jours).",

@@ -317,6 +317,24 @@
         </div>
 
         <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_columns_title">表の見出し行の設定（表示列・並び替え・列幅）</h3>
+          <p data-i18n="manual_gantt_columns_desc">ガントチャート左側のタスク一覧（グリッド）の見出し行には、表の見せ方を整える操作がまとまっています。見落とされやすい部分ですが、ここを設定しておくと、必要な情報だけが並んだ見やすい工程表になります。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_config_title">① 表示する列を選ぶ（見出し行をダブルクリック）</h4>
+          <p data-i18n="manual_gantt_columns_config_desc">見出し行をダブルクリックすると『表示列の設定』ダイアログが開きます。開始日、終了日、期間、進捗率、管理者、カンバン、タグ、ToDo、優先度の中から、表に出したい列をチェックで選べます（タスク名は常に表示されるため、オフにはできません）。一覧の各項目は左側のグリップをドラッグして、列の並び順も入れ替えられます。設定はビューごとに保存されるので、次に開いたときも同じ並びのまま作業を再開できます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_sort_title">② 並び替える（見出しをクリック）</h4>
+          <p data-i18n="manual_gantt_columns_sort_desc">見出しをクリックするたびに『昇順 → 降順 → 元の並び順』が切り替わります。並び替えできるのは、タスク名・開始日・終了日・期間・進捗率・優先度の6つの列です。並び替えは表示だけを変える機能で、ドラッグで作った手動の並び順は内部に保持されています。3回目のクリックでいつでも元の並びに戻せるため、期限順や進捗順に安心して見比べられます。</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_width_title">③ 列幅を調整する（見出しの境界をドラッグ）</h4>
+          <p data-i18n="manual_gantt_columns_width_desc">見出しと見出しの境界をドラッグすると、列の幅を変更できます。タスク名が長くて読みきれないときや、逆に表を狭めてチャート側を広く見たいときに使います。列幅もビューごとに保存されます。</p>
+
+          <div class="manual-image-container">
+            <img src="assets/manual/ja/gantt-column-config.png" data-screenshot-path="gantt-column-config.png" alt="Grid Column Settings">
+          </div>
+        </div>
+
+        <div class="manual-step-card">
           <h3 data-i18n="manual_gantt_drag_title">期間の調整（ドラッグ＆ドロップ）</h3>
           <p data-i18n="manual_gantt_drag_desc">チャート上のタスクバー（青い帯）の左右の端をドラッグすると、開始日や終了日を変更できます。バーの中央をドラッグすると、期間（日数）を維持したままスケジュール全体を左右に移動させることができます。</p>
           <div class="manual-image-container">

@@ -189,7 +189,7 @@ export default {
 
     // --- Manual Meta Descriptions (検索結果のスニペット用) ---
     manual_basic_meta_desc: "Ploto-Grundlagen: Startbildschirm, die Menüs 'Datei' und 'Hilfe', die Panels der Seitenleiste sowie Kopfzeilen-Funktionen wie Speichern und Rückgängig.",
-    manual_gantt_meta_desc: "Das Gantt-Diagramm in Ploto: Aufgaben anlegen, Dauer per Drag & Drop anpassen, Abhängigkeiten, Detailfenster und Feiertagseinstellungen.",
+    manual_gantt_meta_desc: "Das Gantt-Diagramm in Ploto: Aufgaben anlegen, Dauer per Drag & Drop anpassen, Abhängigkeiten, Spalten über die Kopfzeile ein- und ausblenden und sortieren, Detailfenster und Feiertagseinstellungen.",
     manual_kanban_meta_desc: "Das Kanban-Board in Ploto: Spalten für Arbeitsschritte anlegen, Karten verschieben, Standard-ToDos je Schritt, Abschlussprüfungen und Filter.",
     manual_matrix_meta_desc: "Die Prioritätsmatrix in Ploto: Aufgaben nach Dringlichkeit und Wichtigkeit platzieren – mit Prioritätswert, Anzeigemodi und Filtern.",
     manual_note_meta_desc: "Die Notizansicht in Ploto: Besprechungs- und Arbeitsprotokolle entlang Ihrer Aufgabenhierarchie schreiben, formatieren und durchsuchen.",
@@ -211,6 +211,15 @@ export default {
     
     manual_gantt_add_title: "Aufgaben hinzufügen und löschen",
     manual_gantt_add_desc: "Klicken Sie auf die Schaltfläche '+' oben in der Aufgabenliste (Raster) auf der linken Seite oder am rechten Ende jeder Zeile, um eine neue Aufgabe hinzuzufügen. Um eine Aufgabe zu löschen, klicken Sie mit der rechten Maustaste auf den Aufgabennamen und wählen Sie 'Löschen' aus dem Menü, oder wählen Sie die Aufgabe aus und drücken Sie die Entf-Taste.",
+
+    manual_gantt_columns_title: "Kopfzeile der Tabelle einrichten (Spalten, Sortierung, Breite)",
+    manual_gantt_columns_desc: "In der Kopfzeile der Aufgabenliste (Raster) links im Gantt-Diagramm sind die Einstellungen für die Darstellung der Tabelle zusammengefasst. Sie wird leicht übersehen, aber damit zeigt Ihr Projektplan genau die Informationen, die Sie wirklich brauchen.",
+    manual_gantt_columns_config_title: "1. Sichtbare Spalten auswählen (Doppelklick auf die Kopfzeile)",
+    manual_gantt_columns_config_desc: "Ein Doppelklick auf die Kopfzeile öffnet den Dialog „Spalteneinstellungen“. Kreuzen Sie die gewünschten Spalten aus Startdatum, Enddatum, Dauer, Fortschritt, Verantwortlicher, Kanban, Tags, ToDo und Priorität an (der Aufgabenname wird immer angezeigt und lässt sich nicht ausblenden). Über den Griff links neben jedem Eintrag ändern Sie außerdem per Drag & Drop die Reihenfolge der Spalten. Die Einstellungen werden pro Ansicht gespeichert, sodass beim nächsten Öffnen dieselbe Anordnung bereitsteht.",
+    manual_gantt_columns_sort_title: "2. Zeilen sortieren (Klick auf eine Spaltenüberschrift)",
+    manual_gantt_columns_sort_desc: "Jeder Klick auf eine Überschrift wechselt zwischen „aufsteigend → absteigend → ursprüngliche Reihenfolge“. Sortieren lassen sich sechs Spalten: Aufgabenname, Startdatum, Enddatum, Dauer, Fortschritt und Priorität. Die Sortierung ändert nur die Anzeige – die von Hand per Drag & Drop erstellte Reihenfolge bleibt intern erhalten und kehrt beim dritten Klick zurück. So können Sie Aufgaben bedenkenlos nach Termin oder Fortschritt vergleichen.",
+    manual_gantt_columns_width_title: "3. Spaltenbreite anpassen (Trennlinie in der Kopfzeile ziehen)",
+    manual_gantt_columns_width_desc: "Ziehen Sie die Trennlinie zwischen zwei Überschriften, um die Breite einer Spalte zu ändern. Das hilft bei langen Aufgabennamen oder wenn Sie die Tabelle schmaler machen möchten, um mehr Platz für das Diagramm zu haben. Auch die Spaltenbreiten werden pro Ansicht gespeichert.",
     
     manual_gantt_drag_title: "Dauer anpassen (Drag & Drop)",
     manual_gantt_drag_desc: "Ziehen Sie den linken oder rechten Rand eines Aufgabenbalkens (blauer Balken) im Diagramm, um das Start- oder Enddatum zu ändern. Ziehen Sie die Mitte des Balkens, um den gesamten Zeitplan nach links oder rechts zu verschieben, während die Dauer (Anzahl der Tage) beibehalten wird.",

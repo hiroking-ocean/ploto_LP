@@ -34,7 +34,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-manual-title="">간트 차트 (공정표) | Ploto 매뉴얼</title>
-  <meta name="description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
+  <meta name="description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 머리글 행에서 표시 열 변경과 정렬, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/gantt.html">
@@ -55,12 +55,12 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="간트 차트 (공정표) | Ploto 매뉴얼">
-  <meta property="og:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
+  <meta property="og:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 머리글 행에서 표시 열 변경과 정렬, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="간트 차트 (공정표)">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="간트 차트 (공정표) | Ploto 매뉴얼">
-  <meta name="twitter:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
+  <meta name="twitter:description" content="Ploto 간트 차트 사용법. 작업 추가, 드래그로 기간 조정, 의존 관계 설정, 머리글 행에서 표시 열 변경과 정렬, 상세 패널, 공휴일·회사 휴일 등록까지 설명합니다.">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="간트 차트 (공정표)">
 
@@ -213,6 +213,22 @@
           <div class="manual-image-container">
             <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_columns_title">표 머리글 행 설정 (표시 열·정렬·열 너비)</h3>
+          <p data-i18n="manual_gantt_columns_desc">간트 차트 왼쪽 작업 목록(그리드)의 머리글 행에는 표의 표시 방식을 정리하는 기능이 모여 있습니다. 놓치기 쉬운 부분이지만, 여기를 설정해 두면 꼭 필요한 정보만 보이는 알아보기 쉬운 공정표가 됩니다.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_config_title">① 표시할 열 선택하기 (머리글 행 더블클릭)</h4>
+          <p data-i18n="manual_gantt_columns_config_desc">머리글 행을 더블클릭하면 '표시 열 설정' 대화상자가 열립니다. 시작일, 종료일, 기간, 진척률, 관리자, 칸반, 태그, ToDo, 우선도 중에서 표에 표시할 열을 체크로 선택할 수 있습니다(작업 이름은 항상 표시되므로 해제할 수 없습니다). 각 항목 왼쪽의 손잡이를 드래그하면 열 순서도 바꿀 수 있습니다. 설정은 뷰별로 저장되므로 다음에 열었을 때도 같은 구성 그대로 작업을 이어갈 수 있습니다.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_sort_title">② 정렬하기 (머리글 클릭)</h4>
+          <p data-i18n="manual_gantt_columns_sort_desc">머리글을 클릭할 때마다 '오름차순 → 내림차순 → 원래 순서'로 전환됩니다. 정렬할 수 있는 열은 작업 이름, 시작일, 종료일, 기간, 진척률, 우선도의 6개입니다. 정렬은 표시만 바꾸는 기능이며, 드래그로 만든 수동 순서는 내부에 그대로 유지됩니다. 세 번째 클릭으로 언제든 원래 순서로 되돌릴 수 있으므로 마감일순이나 진척순으로 안심하고 비교할 수 있습니다.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_width_title">③ 열 너비 조정하기 (머리글 경계 드래그)</h4>
+          <p data-i18n="manual_gantt_columns_width_desc">머리글과 머리글 사이의 경계를 드래그하면 열 너비를 변경할 수 있습니다. 작업 이름이 길어 다 읽히지 않을 때나, 반대로 표를 좁혀 차트를 넓게 보고 싶을 때 사용합니다. 열 너비도 뷰별로 저장됩니다.</p>
+
+          
         </div>
 
         <div class="manual-step-card">

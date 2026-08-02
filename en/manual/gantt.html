@@ -34,7 +34,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-manual-title="">Gantt Chart | Ploto Manual</title>
-  <meta name="description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, the details panel, and holiday settings.">
+  <meta name="description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, changing and sorting grid columns from the header row, the details panel, and holiday settings.">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/gantt.html">
@@ -55,12 +55,12 @@
   <meta property="og:locale:alternate" content="de_DE">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Gantt Chart | Ploto Manual">
-  <meta property="og:description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, the details panel, and holiday settings.">
+  <meta property="og:description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, changing and sorting grid columns from the header row, the details panel, and holiday settings.">
   <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta property="og:image:alt" content="Gantt Chart">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Gantt Chart | Ploto Manual">
-  <meta name="twitter:description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, the details panel, and holiday settings.">
+  <meta name="twitter:description" content="How to use Ploto's Gantt chart: adding tasks, adjusting durations by dragging, dependencies, changing and sorting grid columns from the header row, the details panel, and holiday settings.">
   <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/gantt-overview.png">
   <meta name="twitter:image:alt" content="Gantt Chart">
 
@@ -213,6 +213,22 @@
           <div class="manual-image-container">
             <img src="/ploto_LP/assets/manual/en/gantt-add-task.png" data-screenshot-path="gantt-add-task.png" alt="Add Task" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
+        </div>
+
+        <div class="manual-step-card">
+          <h3 data-i18n="manual_gantt_columns_title">Configuring the Grid Header Row (Columns, Sorting, Width)</h3>
+          <p data-i18n="manual_gantt_columns_desc">The header row of the task list (grid) on the left side of the Gantt chart is where the display settings for the table live. It is easy to overlook, but setting it up gives you a schedule that shows only the information you actually need.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_config_title">1. Choose which columns to show (double-click the header row)</h4>
+          <p data-i18n="manual_gantt_columns_config_desc">Double-click the header row to open the 'Grid Column Settings' dialog. Tick the columns you want in the table from Start Date, End Date, Duration, Progress, Assignee, Kanban, Tags, ToDo and Priority (Task Name is always shown and cannot be turned off). Drag the grip on the left of each entry to reorder the columns as well. These settings are saved per view, so the same layout is waiting for you the next time you open the file.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_sort_title">2. Sort the rows (click a header)</h4>
+          <p data-i18n="manual_gantt_columns_sort_desc">Each click on a header cycles through 'ascending → descending → original order'. Six columns can be sorted: Task Name, Start Date, End Date, Duration, Progress and Priority. Sorting only changes the display — the manual order you built by dragging is kept internally, and a third click always brings it back, so you can freely compare tasks by due date or by progress.</p>
+
+          <h4 style="font-size: 1.05rem; font-weight: 600; margin: 20px 0 8px;" data-i18n="manual_gantt_columns_width_title">3. Adjust the column width (drag the header border)</h4>
+          <p data-i18n="manual_gantt_columns_width_desc">Drag the border between two headers to change a column's width. Use it when task names are too long to read, or when you want to narrow the table to give the chart more room. Column widths are saved per view as well.</p>
+
+          
         </div>
 
         <div class="manual-step-card">
