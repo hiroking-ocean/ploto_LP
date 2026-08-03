@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III: Dringend, nicht wichtig",
     mock_q4: "Quadrant IV: Weder dringend noch wichtig",
 
-    features_title: "Dieselbe Aufgabe erscheint in jeder Ansicht in einer anderen Form",
-    features_subtitle: "Sie legen sie nur einmal an: als Balken im Terminplan, als Karte im Kanban-Board und als Seite in den Notizen. Jede Ansicht zeigt dieselben Daten in der Form, die dort ganz natürlich passt.",
+    features_title: "Eine Aufgabe lässt sich aus einer einzigen Sicht nicht erfassen",
+    features_subtitle: "Verfolgen Sie von hier an eine einzelne Aufgabe. Sehen Sie dabei, wie unterschiedlich dieselbe Aufgabe auf fünf Bildschirmen erscheint.",
     feat_alert_title: "3-Farben-Status-Warnung",
     feat_alert_desc: "Hebt Aufgaben automatisch rot (überfällig), gelb (verzögert) oder grün (im Zeitplan) hervor. Erkennen Sie Engpässe sofort ohne manuelle Prüfungen.",
     feat_cal_title: "Feiertage & Firmenkalender",

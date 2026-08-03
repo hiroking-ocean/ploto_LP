@@ -631,6 +631,12 @@ button {
 .section-subtitle {
   font-size: 1.1rem;
   color: var(--text-muted);
+  /* 中央揃えのリード文は、語の途中で割れて最終行に短い断片だけが残ると目立つ
+     （「…確か／めてみてください。」）。読点・句点の位置だけを改行位置にし、
+     balance で行の長さを均す。balance 非対応のブラウザでも keep-all は効く。 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 /* --- 8. Manual Guide Section --- */

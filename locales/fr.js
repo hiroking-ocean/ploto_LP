@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III : urgent, non important",
     mock_q4: "Quadrant IV : ni urgent ni important",
 
-    features_title: "La même tâche prend une forme différente dans chaque écran",
-    features_subtitle: "Vous ne la créez qu'une fois : une barre dans le planning, une carte dans le Kanban et une page dans les notes. Chaque écran présente les mêmes données sous la forme qui lui convient naturellement.",
+    features_title: "Une tâche ne se saisit pas d'un seul point de vue",
+    features_subtitle: "À partir d'ici, suivez une seule tâche. En traversant cinq écrans, voyez à quel point la même tâche peut apparaître différemment.",
     feat_alert_title: "Alerte de statut en 3 couleurs",
     feat_alert_desc: "Met automatiquement en évidence les tâches en rouge (en retard), jaune (retardées) ou vert (dans les temps). Repérez les goulots d'étranglement sans vérifications manuelles.",
     feat_cal_title: "Jours fériés & Calendriers d'entreprise",

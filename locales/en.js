@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III: Urgent, not important",
     mock_q4: "Quadrant IV: Neither urgent nor important",
 
-    features_title: "The same task appears in a different form on every screen",
-    features_subtitle: "You create it once. It becomes a bar in the schedule, a card on the Kanban board, and a page in Notes. Each screen shows the same data in the form that fits it naturally.",
+    features_title: "One task is more than a single view can show",
+    features_subtitle: "From here on, follow one task. As it passes through five screens, see how differently the very same task can look.",
     feat_alert_title: "3-Color Health Status Alert",
     feat_alert_desc: "Automatically highlights tasks as red (overdue), yellow (delayed), or green (on track). Quickly spot bottlenecks without manual checks.",
     feat_cal_title: "Holidays & Company Calendars",
