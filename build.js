@@ -99,6 +99,58 @@ function stampAssetVersions($) {
   });
 }
 
+/**
+ * data-screenshot-path が付いた <img> を当該言語の実ファイルへ解決する。
+ * 当該言語 → FALLBACK_LANG の順に探し、同名の .gif があればそちらを優先する
+ * （GIF アニメーションのほうが伝わる操作説明があるため）。
+ * あわせて実寸と lazy 読み込み属性を付ける。width/height が無いと内在アスペクト比が
+ * 決まらず、高さ0の画像が「全部ビューポート内」と判定されて lazy が効かなくなる。
+ *
+ * 見つからなかったときの落とし方は呼び出し側で変わるので onMissing に委ねる。
+ * マニュアルは画像枠ごと消す。LPは画像を消して CSS モックを残す。
+ *
+ * @param {object} opts
+ * @param {boolean} opts.eagerFirst 1枚目を eager + 高優先度で読ませるか（LCP対策）
+ * @param {(el:any)=>void} opts.onMissing 画像が1つも見つからなかったときの処理
+ */
+function resolveScreenshots($, lang, { eagerFirst, onMissing }) {
+  let isFirst = true;
+
+  $("[data-screenshot-path]").each((_, el) => {
+    const file = $(el).attr("data-screenshot-path");
+    const gifFile = file.replace(/\.[^/.]+$/, ".gif");
+
+    const candidates = [
+      `assets/manual/${lang}/${gifFile}`,
+      `assets/manual/${lang}/${file}`,
+      `assets/manual/${FALLBACK_LANG}/${gifFile}`,
+      `assets/manual/${FALLBACK_LANG}/${file}`,
+    ];
+    const found = candidates.find((p) => existsSync(join(__dirname, p)));
+
+    if (!found) {
+      onMissing($(el));
+      return;
+    }
+
+    $(el).attr("src", absolutize(found));
+
+    const size = imageSize(found);
+    if (size) {
+      $(el).attr("width", String(size.width));
+      $(el).attr("height", String(size.height));
+    }
+
+    if (eagerFirst && isFirst) {
+      $(el).attr("loading", "eager").attr("fetchpriority", "high");
+      isFirst = false;
+    } else {
+      $(el).attr("loading", "lazy").attr("fetchpriority", "low");
+    }
+    $(el).attr("decoding", "async");
+  });
+}
+
 const template = readFileSync(join(__dirname, "template.html"), "utf8");
 
 function buildPage(lang) {
@@ -194,6 +246,9 @@ function buildPage(lang) {
     const targetUrl = lang === "ja" ? `${BASE}manual/${targetPage}.html` : `${BASE}${lang}/manual/${targetPage}.html`;
     $(el).attr("href", targetUrl);
   });
+
+  // 主要機能セクションの5画面は HTML/CSS で組んであるので、LP 側に
+  // スクリーンショットの解決処理は要らない（resolveScreenshots はマニュアル専用）。
 
   // 9. アセットパス絶対化（サブ階層 /en/ で 404 しないように）
   $("img[src], script[src]").each((_, el) => {
@@ -361,45 +416,14 @@ function buildManualPage(lang, pageName) {
   $(`#content-${pageName}`).removeAttr("style");
 
   // 11. スクリーンショット画像のローカライズと絶対パス化
-  //     当該言語 → FALLBACK_LANG の順に探し、どちらも無ければ画像枠ごと削除する
-  //     （未撮影のスクショで壊れた画像アイコンが出ないようにするため）。
-  //     同名の .gif があれば GIF アニメーションを優先する。
-  //     あわせて lazy 読み込み属性と実寸を付与する。最初の1枚だけはファースト
-  //     ビューに入るので eager + 高優先度で読ませ、LCP を遅らせないようにする。
-  let isFirstScreenshot = true;
-  $("[data-screenshot-path]").each((_, el) => {
-    const file = $(el).attr("data-screenshot-path");
-    const gifFile = file.replace(/\.[^/.]+$/, ".gif");
-
-    const candidates = [
-      `assets/manual/${lang}/${gifFile}`,
-      `assets/manual/${lang}/${file}`,
-      `assets/manual/${FALLBACK_LANG}/${gifFile}`,
-      `assets/manual/${FALLBACK_LANG}/${file}`,
-    ];
-    const found = candidates.find((p) => existsSync(join(__dirname, p)));
-
-    if (!found) {
-      const container = $(el).closest(".manual-image-container");
-      (container.length ? container : $(el)).remove();
-      return;
-    }
-
-    $(el).attr("src", absolutize(found));
-
-    const size = imageSize(found);
-    if (size) {
-      $(el).attr("width", String(size.width));
-      $(el).attr("height", String(size.height));
-    }
-
-    if (isFirstScreenshot) {
-      $(el).attr("loading", "eager").attr("fetchpriority", "high");
-      isFirstScreenshot = false;
-    } else {
-      $(el).attr("loading", "lazy").attr("fetchpriority", "low");
-    }
-    $(el).attr("decoding", "async");
+  //     未撮影のときは画像枠ごと削除する（壊れた画像アイコンを出さないため）。
+  //     最初の1枚はファーストビューに入るので eager + 高優先度で読ませる。
+  resolveScreenshots($, lang, {
+    eagerFirst: true,
+    onMissing: ($el) => {
+      const container = $el.closest(".manual-image-container");
+      (container.length ? container : $el).remove();
+    },
   });
 
   // 12. アセットパス絶対化

@@ -98,10 +98,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css?v=f1abead6">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=5ba91fa0">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/app.js?v=0ea795a9" defer=""></script>
+  <script type="module" src="/ploto_LP/app.js?v=4ae882ed" defer=""></script>
 </head>
 
 <body>
@@ -203,188 +203,487 @@
       </div>
     </section>
 
-    <!-- One task, many views -->
-    <!-- マニュアル案内（#manual）と同じカード並びにしないこと。
-         ここは「1件のタスク」→「6通りの見え方」という構造そのものを見せる図として作る。 -->
-    <section id="views" class="views-section">
-      <div class="container">
-        <div class="views-layout">
-          <div class="views-intro">
-            <h2 class="section-title views-heading" data-i18n="views_title">Une tâche. Six façons de la voir.</h2>
-            <p class="views-lead" data-i18n="views_subtitle">Ploto se contente d'afficher la même tâche dans la vue adaptée à ce que vous décidez. Où que vous la modifiiez, c'est toujours un seul enregistrement : ni recopie, ni recoupement.</p>
-
-            <p class="views-flow-caption" data-i18n="views_source_caption">C'est cette unique tâche qu'affiche chacune des vues ci-dessous.</p>
-          </div>
-
-          <div class="views-flow">
-            <div class="views-flow-head">
-              <span class="views-source-label" data-i18n="views_source_label">Saisie une seule fois</span>
-              <div class="views-source-card">
-                <span class="views-source-title" data-i18n="views_source_task">Développement de la page d'accueil</span>
-                <div class="views-source-meta">
-                  <span>7/7 → 7/12</span>
-                  <span data-i18n="views_source_progress">40 % réalisé</span>
-                </div>
-                <div class="views-source-bar"><span></span></div>
-              </div>
-            </div>
-            <div class="views-flow-stem" aria-hidden="true"></div>
-
-            <ul class="views-list">
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="8" y1="6" x2="21" y2="6"></line>
-                  <line x1="8" y1="12" x2="18" y2="12"></line>
-                  <line x1="11" y1="18" x2="21" y2="18"></line>
-                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_gantt_title">Diagramme de Gantt (planning)</strong>
-                <span data-i18n="views_gantt_desc">Décider quand commencer et combien de temps prévoir.</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="9" y1="3" x2="9" y2="21"></line>
-                  <line x1="15" y1="3" x2="15" y2="21"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_kanban_title">Kanban</strong>
-                <span data-i18n="views_kanban_desc">Déplacer une carte pour changer l'étape en cours.</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="12" y1="3" x2="12" y2="21"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_matrix_title">Matrice de priorités</strong>
-                <span data-i18n="views_matrix_desc">Classer par urgence et importance pour savoir par quoi commencer.</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_members_title">Tâches par personne</strong>
-                <span data-i18n="views_members_desc">Voir la charge de chacun et rééquilibrer la répartition.</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="8" y1="13" x2="16" y2="13"></line>
-                  <line x1="8" y1="17" x2="13" y2="17"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_note_title">Notes</strong>
-                <span data-i18n="views_note_desc">Consigner décisions et observations tâche par tâche.</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="12" y1="18" x2="12" y2="22"></line>
-                  <line x1="8" y1="22" x2="16" y2="22"></line>
-                  <line x1="6" y1="9" x2="11" y2="9"></line>
-                  <line x1="14" y1="13" x2="18" y2="13"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_whiteboard_title">Tableau blanc</strong>
-                <span data-i18n="views_whiteboard_desc">Disposer les tâches en schéma pour partager la vue d'ensemble.</span>
-              </div>
-            </li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="views-note" data-i18n="views_note">Déplacez par exemple une carte dans la colonne « Développement » : l'étape de la tâche change, et la même information apparaît dans le tableau du planning comme dans les ToDo des notes. Quel que soit le nombre de vues, les données restent uniques.</p>
-      </div>
-    </section>
-
+    <!-- 主要機能: 1件のタスクが5つの画面を通って育っていく -->
+    <!-- 機能セクションを5つ並べるだけだと「別々のツールの寄せ集め」に見えるので、
+         左のタスクカードを sticky で固定したまま、右のステップを通過するたびに
+         そのカードへ項目が増えていく形にしてある。ビューが同じ1件につながっている
+         ことを、文章ではなくスクロールそのもので示すのが狙い。
+         段階表示は app.js が data-active と .is-shown を付け替えて行う。
+         CSS だけの既定状態は「全項目が出ている完成形」なので、JS が動かなくても
+         情報は落ちない（app.js が data-enhanced を立てたときだけ段階表示になる）。 -->
     <section id="features" class="features-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="features_title">Les détails qui font trébucher la planification, réglés d'avance</h2>
-          <p class="section-subtitle" data-i18n="features_subtitle">Des fonctions discrètes mais décisives, conçues pour ne rien avoir à paramétrer.</p>
+          <h2 class="section-title" data-i18n="features_title">Une tâche qui s'enrichit en traversant cinq écrans</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">La carte de gauche est la même tâche unique du début à la fin. Chaque écran traversé y ajoute ce que vous y avez décidé. Rien n'est jamais recopié.</p>
         </div>
 
-        <div class="features-grid">
-          <!-- Feature 1: Alert Line -->
-          <div class="feature-card">
-            <div class="feature-icon alert-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
-                </path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
+        <div class="flow" id="task-flow">
+          <div class="flow-card-col">
+            <div class="flow-card">
+              <span class="flow-card-hint" data-i18n="flow_card_hint">Continuez à faire défiler : cette tâche unique s'enrichit</span>
+
+              <span class="flow-card-title" data-i18n="flow_task_name">Développement de la page d'accueil</span>
+
+              <div class="flow-field" data-step="1">
+                <span class="flow-field-label" data-i18n="flow_field_period_label">Dates</span>
+                <span class="flow-field-value" data-i18n="flow_field_period_value">1/8 → 6/8</span>
+              </div>
+
+              <div class="flow-field" data-step="2">
+                <span class="flow-field-label" data-i18n="flow_field_process_label">Étape</span>
+                <span class="flow-field-value" data-i18n="flow_field_process_value">Développement</span>
+              </div>
+
+              <div class="flow-field" data-step="3">
+                <span class="flow-field-label" data-i18n="flow_field_memo_label">Note</span>
+                <span class="flow-field-value" data-i18n="flow_field_memo_value">09/07 Retours de revue intégrés</span>
+              </div>
+
+              <div class="flow-field" data-step="4">
+                <span class="flow-field-label" data-i18n="flow_field_priority_label">Priorité</span>
+                <span class="flow-field-value" data-i18n="flow_field_priority_value">Important et urgent</span>
+              </div>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_alert_title">Alerte de statut en 3 couleurs</h3>
-            <p class="feature-card-desc" data-i18n="feat_alert_desc">Met automatiquement en évidence les tâches en rouge (en retard), jaune (retardées) ou vert (dans les temps). Repérez les goulots d'étranglement sans vérifications manuelles.</p>
           </div>
 
-          <!-- Feature 2: Calendar UX -->
-          <div class="feature-card">
-            <div class="feature-icon calendar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_cal_title">Jours fériés &amp; Calendriers d'entreprise</h3>
-            <p class="feature-card-desc" data-i18n="feat_cal_desc">Configurez les jours fériés personnalisés et les horaires de travail. L'estompement des week-ends et la mise en évidence des jours fériés assurent une planification précise de la capacité en fonction de votre planning réel.</p>
-          </div>
+          <!-- 番号は CSS カウンタで振る（翻訳もメンテも不要にするため） -->
+          <ol class="flow-steps">
+            <li class="flow-step" data-view="gantt" data-step="1">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab is-on"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">Diagramme de Gantt</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">Tableau Kanban</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">Notes</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">Matrice de priorités</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">Tableau blanc</span></span>
+              </div>
+                <div class="ui-view gv">
+                  <div class="gv-tbl">
+                    <div class="gv-hrow">
+                      <span data-i18n="mock_col_task">Nom de tâche</span>
+                      <span data-i18n="flow_field_priority_label">Priorité</span>
+                      <span data-i18n="mock_col_start">Début</span>
+                      <span data-i18n="flow_field_period_label">Dates</span>
+                    </div>
+                    <div class="gv-row is-group">
+                      <span class="gv-name"><i class="gv-caret"></i><span data-i18n="mock_kanban_col2">Développement</span></span>
+                      <span class="u-pri"><i class="u-pb">I</i>66</span>
+                      <span class="gv-date">2026-07-28</span>
+                      <span class="gv-num">17</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_front">Socle front-end</span>
+                      <span class="u-pri"><i class="u-pb">I</i>52</span>
+                      <span class="gv-date">2026-07-28</span>
+                      <span class="gv-num">4</span>
+                    </div>
+                    <div class="gv-row is-sel">
+                      <span class="gv-name" data-i18n="flow_task_name">Développement de la page d'accueil</span>
+                      <span class="u-pri"><i class="u-pb">I</i>78</span>
+                      <span class="gv-date">2026-08-01</span>
+                      <span class="gv-num">6</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_cms">Intégration CMS</span>
+                      <span class="u-pri"><i class="u-pb p2">II</i>56</span>
+                      <span class="gv-date">2026-08-07</span>
+                      <span class="gv-num">7</span>
+                    </div>
+                  </div>
+                  <div class="gv-tl">
+                    <div class="gv-th"><span data-i18n="mock_month_1">Juillet 2026</span><span data-i18n="mock_month_2">Août 2026</span></div>
+                    <div class="gv-tw">
+                      <span data-i18n="mock_wk1">20/07</span><span data-i18n="mock_wk2">27/07</span><span data-i18n="mock_wk3">03/08</span><span data-i18n="mock_wk4">10/08</span><span data-i18n="mock_wk5">17/08</span>
+                    </div>
+                    <div class="gv-lanes">
+                      <div class="gv-lane"><span class="gv-sum" data-i18n="mock_kanban_col2">Développement</span></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_front">Socle front-end</em></div>
+                      <div class="gv-lane is-sel"><span class="gv-bar"></span><em data-i18n="flow_task_name">Développement de la page d'accueil</em></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_cms">Intégration CMS</em></div>
+                      <span class="gv-dep"></span>
+                      <span class="gv-today"><i data-i18n="mock_today">Aujourd'hui</i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_gantt_title">C'est ici que la tâche naît</h3>
+                <p class="flow-step-lead" data-i18n="feature_gantt_lead">Faites glisser une barre pour fixer les dates et reliez les tâches entre elles. La tâche unique créée ici réapparaît dans tous les écrans suivants. Aucun calcul de dates, aucune fusion de cellules.</p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feat_alert_title">Alerte de statut en 3 couleurs</strong>
+                    <span data-i18n="feat_alert_desc">Met automatiquement en évidence les tâches en rouge (en retard), jaune (retardées) ou vert (dans les temps). Repérez les goulots d'étranglement sans vérifications manuelles.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feat_cal_title">Jours fériés &amp; Calendriers d'entreprise</strong>
+                    <span data-i18n="feat_cal_desc">Configurez les jours fériés personnalisés et les horaires de travail. L'estompement des week-ends et la mise en évidence des jours fériés assurent une planification précise de la capacité en fonction de votre planning réel.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feat_auto_title">Décalez une barre, la suite suit</strong>
+                    <span data-i18n="feat_auto_desc">Reliez les tâches entre elles et activez la planification automatique : si une étape prend du retard, toutes les suivantes se décalent. La durée et l'avancement des tâches parentes se calculent d'emblée à partir des sous-tâches — plus besoin de retoucher tout le tableau à chaque changement.</span>
+                  </li>
+                </ul>
+                <a href="/ploto_LP/fr/manual/gantt.html" data-manual-link="gantt" class="flow-step-more" data-i18n="manual_guide_more">Lire le manuel →</a>
+              </div>
+            </li>
 
-          <!-- Feature 3: 日程の自動追従（依存関係・親子） -->
-          <div class="feature-card">
-            <div class="feature-icon schedule-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_auto_title">Décalez une barre, la suite suit</h3>
-            <p class="feature-card-desc" data-i18n="feat_auto_desc">Reliez les tâches entre elles et activez la planification automatique : si une étape prend du retard, toutes les suivantes se décalent. La durée et l'avancement des tâches parentes se calculent d'emblée à partir des sous-tâches — plus besoin de retoucher tout le tableau à chaque changement.</p>
-          </div>
+            <li class="flow-step" data-view="kanban" data-step="2">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">Diagramme de Gantt</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">Tableau Kanban</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">Notes</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">Matrice de priorités</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">Tableau blanc</span></span>
+              </div>
+                <div class="ui-view kv">
+                  <div class="kv-col c1">
+                    <div class="kv-head"><i class="kv-ic eye"></i><span class="kv-name" data-i18n="mock_kanban_col1">Design</span><span class="kv-count">4</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">Design</span></div>
+                        <div class="uic-t" data-i18n="mock_task_ui">Design UI</div>
+                        <div class="uic-tags"><span class="u-tag tg-design" data-i18n="mock_kanban_col1">Design</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-06-28</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>63</span>
+                          <span class="u-av a2" data-i18n="mock_av2">S</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Refonte du site web</span></div>
+                        <div class="uic-t" data-i18n="mock_task_dsys">Design system</div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-23</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb p2">II</i>58</span>
+                          <span class="u-av a2" data-i18n="mock_av2">S</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kv-col c2">
+                    <div class="kv-head"><i class="kv-ic play"></i><span class="kv-name" data-i18n="mock_kanban_col2">Développement</span><span class="kv-count">3</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-blue is-on">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">Développement</span></div>
+                        <div class="uic-t" data-i18n="flow_task_name">Développement de la page d'accueil</div>
+                        <div class="uic-tags"><span class="u-tag tg-front" data-i18n="mock_tag_front">Front-end</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-08-06</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>78</span>
+                          <span class="u-av a1" data-i18n="mock_av1">Y</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-blue">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Refonte du site web</span></div>
+                        <div class="uic-t" data-i18n="mock_task_front">Socle front-end</div>
+                        <div class="uic-tags"><span class="u-tag tg-front" data-i18n="mock_tag_front">Front-end</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-31</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>52</span>
+                          <span class="u-av a1" data-i18n="mock_av1">Y</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kv-col c3">
+                    <div class="kv-head"><i class="kv-ic search"></i><span class="kv-name" data-i18n="mock_kanban_col3">Revue</span><span class="kv-count">2</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">Design</span></div>
+                        <div class="uic-t" data-i18n="mock_task_visual">Design visuel</div>
+                        <div class="uic-tags"><span class="u-tag tg-design" data-i18n="mock_kanban_col1">Design</span><span class="u-tag tg-imp" data-i18n="mock_tag_imp">Important</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-22</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>82</span>
+                          <span class="u-av a2" data-i18n="mock_av2">S</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Refonte du site web</span></div>
+                        <div class="uic-t" data-i18n="mock_task_wire">Wireframes</div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-13</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb p2">II</i>61</span>
+                          <span class="u-av a2" data-i18n="mock_av2">S</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_kanban_title">Déplacez une carte pour changer d'étape</h3>
+                <p class="flow-step-lead" data-i18n="feature_kanban_lead">La même tâche, vue comme une suite d'étapes. Faites glisser la carte vers la colonne suivante et l'étape de la tâche change avec elle. Le planning change au même instant : il n'y a jamais un second endroit à penser à mettre à jour.</p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_kanban_p1_title">Glisser suffit</strong>
+                    <span data-i18n="feature_kanban_p1_desc">Déplacez la carte d'une colonne à l'autre. Aucun champ d'avancement à retrouver ni à ressaisir.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_kanban_p2_title">Chaque étape apporte sa checklist</strong>
+                    <span data-i18n="feature_kanban_p2_desc">Enregistrez une liste type sur une colonne : chaque carte qui entre dans cette étape la reçoit. Plus rien à réécrire à chaque fois.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_kanban_p3_title">Filtrer par responsable ou par échéance</strong>
+                    <span data-i18n="feature_kanban_p3_desc">N'affichez que ce qui vous revient, ou seulement cette semaine. Un tableau chargé se réduit à ce que vous devez regarder.</span>
+                  </li>
+                </ul>
+                <p class="flow-free-note">
+                  <span class="flow-free-label" data-i18n="flow_free_note_label">Version gratuite</span>
+                  <span data-i18n="plan_compare_kanban_free">Jusqu'à 3 par fichier</span>
+                </p>
+                <a href="/ploto_LP/fr/manual/kanban.html" data-manual-link="kanban" class="flow-step-more" data-i18n="manual_guide_more">Lire le manuel →</a>
+              </div>
+            </li>
 
-          <!-- Feature 4: 同じタスクを複数のビューで -->
-          <div class="feature-card">
-            <div class="feature-icon views-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m12 3-10 5 10 5 10-5-10-5Z"></path>
-                <path d="m2 17 10 5 10-5"></path>
-                <path d="m2 12 10 5 10-5"></path>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_views_title">Saisi une fois, consultable de plusieurs façons</h3>
-            <p class="feature-card-desc" data-i18n="feat_views_desc">Les mêmes tâches s'affichent en planning, en tableau d'avancement, en matrice de priorités ou en notes. Fini de reconstruire le même tableau sur une autre feuille et de voir les chiffres diverger faute de recopie.</p>
-          </div>
+            <li class="flow-step" data-view="note" data-step="3">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">Diagramme de Gantt</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">Tableau Kanban</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">Notes</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">Matrice de priorités</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">Tableau blanc</span></span>
+              </div>
+                <div class="ui-view nv">
+                  <div class="nv-side">
+                    <div class="nv-search"><i></i><span data-i18n="mock_note_search">Rechercher tâches et notes</span></div>
+                    <div class="nv-tree">
+                      <div class="nv-node lv1"><i class="u-doc"></i><span data-i18n="mock_project">Refonte du site web</span><span class="nv-count">4</span></div>
+                      <div class="nv-node lv2"><i class="u-doc"></i><span data-i18n="mock_kanban_col1">Design</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_wire">Wireframes</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_visual">Design visuel</span><i class="nv-dot"></i></div>
+                      <div class="nv-node lv2"><i class="u-doc"></i><span data-i18n="mock_kanban_col2">Développement</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_front">Socle front-end</span></div>
+                      <div class="nv-node lv3 is-on"><i class="u-doc"></i><span data-i18n="flow_task_name">Développement de la page d'accueil</span><i class="nv-dot"></i></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_cms">Intégration CMS</span></div>
+                    </div>
+                  </div>
+                  <div class="nv-main">
+                    <div class="nv-bar">
+                      <span class="nv-sel" data-i18n="mock_note_style">Corps de texte</span>
+                      <span class="nv-fmt"><i>B</i><i>I</i><i>U</i></span>
+                      <span class="nv-chars" data-i18n="mock_note_chars">117 caractères</span>
+                    </div>
+                    <div class="nv-doc">
+                      <div class="nv-crumb"><span data-i18n="mock_project">Refonte du site web</span> / <span data-i18n="mock_kanban_col2">Développement</span> / <span data-i18n="flow_task_name">Développement de la page d'accueil</span></div>
+                      <div class="nv-h1"><i></i><b data-i18n="flow_task_name">Développement de la page d'accueil</b></div>
+                      <div class="nv-meta">
+                        <span><i class="u-cal"></i>2026-08-01 – 2026-08-06</span>
+                        <span><span data-i18n="mock_wb_widget">Avancement</span> 0%</span>
+                        <span data-i18n="mock_owner_name">Yuka Suzuki</span>
+                        <span data-i18n="mock_days_6">6 jours</span>
+                      </div>
+                      <div class="nv-body">
+                        <div>
+                          <h4 data-i18n="mock_note_h">Comment nous réalisons la page d'accueil</h4>
+                          <p data-i18n="mock_note_p1">07/07/2026 Démarrage.</p>
+                          <ul>
+                            <li data-i18n="mock_note_b1">Charger les images du premier écran en différé</li>
+                            <li data-i18n="mock_note_b2">Le bloc actualités sera remplacé après l'intégration CMS, données fixes pour l'instant</li>
+                          </ul>
+                          <p data-i18n="mock_note_p2">09/07/2026 Retours de revue intégrés. Espacements élargis partout.</p>
+                        </div>
+                        <div class="nv-todo">
+                          <div class="nv-todo-h">ToDo<span>0/0</span></div>
+                          <div class="nv-todo-r"><i></i><span data-i18n="mock_kanban_col2">Développement</span><b>0</b></div>
+                          <div class="nv-add" data-i18n="mock_todo_add">+ Ajouter une tâche</div>
+                          <div class="nv-todo-r"><i></i><span data-i18n="mock_kanban_col3">Revue</span><b>0</b></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_note_title">Consigner ce qui a été décidé sur la tâche elle-même</h3>
+                <p class="flow-step-lead" data-i18n="feature_note_lead">Le plan de gauche reprend la hiérarchie du planning, déjà transformée en chapitres : vous n'avez jamais à construire vous-même la structure d'un compte rendu. Ce que vous écrivez appartient à la tâche, donc plus besoin de rechercher ensuite de quelle tâche relevait telle discussion.</p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_note_p1_title">Les chapitres existent déjà</strong>
+                    <span data-i18n="feature_note_p1_desc">La hiérarchie des tâches est la structure des titres. Vous ne partez jamais d'un document vide.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_note_p2_title">Rechercher dans toutes les notes</strong>
+                    <span data-i18n="feature_note_p2_desc">Même sans vous souvenir de la tâche concernée, un mot du texte suffit à la retrouver.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_note_p3_title">Les tâches à faire aussi</strong>
+                    <span data-i18n="feature_note_p3_desc">Créez des points de contrôle en écrivant. Ils se rassemblent au même endroit que les checklists d'étape du kanban.</span>
+                  </li>
+                </ul>
+                <a href="/ploto_LP/fr/manual/note.html" data-manual-link="note" class="flow-step-more" data-i18n="manual_guide_more">Lire le manuel →</a>
+              </div>
+            </li>
+
+            <li class="flow-step" data-view="matrix" data-step="4">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">Diagramme de Gantt</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">Tableau Kanban</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">Notes</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">Matrice de priorités</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">Tableau blanc</span></span>
+              </div>
+                <div class="ui-view xv">
+                  <div class="xv-plane">
+                    <span class="xv-ax t" data-i18n="mock_axis_imp_hi">Importance (élevée)</span>
+                    <span class="xv-ax b" data-i18n="mock_axis_imp_lo">Importance (faible)</span>
+                    <span class="xv-ax l" data-i18n="mock_axis_urg_lo">Urgence (faible)</span>
+                    <span class="xv-ax r" data-i18n="mock_axis_urg_hi">Urgence (élevée)</span>
+                    <div class="xv-q q1"><b>I</b><span data-i18n="mock_q1">Quadrant I : important et urgent</span></div>
+                    <div class="xv-q q2"><b>II</b><span data-i18n="mock_q2">Quadrant II : important, non urgent</span></div>
+                    <div class="xv-q q3"><b>III</b><span data-i18n="mock_q3">Quadrant III : urgent, non important</span></div>
+                    <div class="xv-q q4"><b>IV</b><span data-i18n="mock_q4">Quadrant IV : ni urgent ni important</span></div>
+                    <div class="uic x2 ac-purple">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">Design</span><span class="uic-score">58</span></div>
+                      <div class="uic-t" data-i18n="mock_task_dsys">Design system</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-07-23</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class="p20"></i></span>
+                        <span class="uic-pct">20%</span>
+                        <span class="u-av a2" data-i18n="mock_av2">S</span>
+                      </div>
+                    </div>
+                    <div class="uic x3 ac-blue">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">Développement</span><span class="uic-score">52</span></div>
+                      <div class="uic-t" data-i18n="mock_task_front">Socle front-end</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-07-31</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class="p40"></i></span>
+                        <span class="uic-pct">40%</span>
+                        <span class="u-av a1" data-i18n="mock_av1">Y</span>
+                      </div>
+                    </div>
+                    <div class="uic x1 ac-blue is-on">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">Développement</span><span class="uic-score">75</span></div>
+                      <div class="uic-t" data-i18n="flow_task_name">Développement de la page d'accueil</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-08-06</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class=""></i></span>
+                        <span class="uic-pct">0%</span>
+                        <span class="u-av a1" data-i18n="mock_av1">Y</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_matrix_title">Décider par quoi commencer</h3>
+                <p class="flow-step-lead" data-i18n="feature_matrix_lead">Un plan avec l'urgence sur un axe et l'importance sur l'autre. Le travail important mais non urgent — celui qui coule quand on traite par échéance — reste visible sous forme de position. La priorité définie ici est enregistrée sur cette même tâche unique.</p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_matrix_p1_title">La position donne le score</strong>
+                    <span data-i18n="feature_matrix_p1_desc">Déposez une tâche sur le plan : son score de priorité découle de l'endroit où elle atterrit.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_matrix_p2_title">L'important non urgent reste visible</strong>
+                    <span data-i18n="feature_matrix_p2_desc">Le travail qui disparaît dans un tri par échéance conserve sa place dans le quadrant.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_matrix_p3_title">Changer de niveau de détail</strong>
+                    <span data-i18n="feature_matrix_p3_desc">Basculez entre simples points et cartes ouvertes selon que vous survolez ou vérifiez.</span>
+                  </li>
+                </ul>
+                <a href="/ploto_LP/fr/manual/matrix.html" data-manual-link="matrix" class="flow-step-more" data-i18n="manual_guide_more">Lire le manuel →</a>
+              </div>
+            </li>
+
+            <li class="flow-step" data-view="whiteboard" data-step="5">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">Diagramme de Gantt</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">Tableau Kanban</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">Notes</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">Matrice de priorités</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">Tableau blanc</span></span>
+              </div>
+                <div class="ui-view wb">
+                  <svg class="wb-links" viewBox="0 0 800 480" preserveAspectRatio="none">
+                    <defs>
+                      <marker id="wbArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M0 0 L8 4 L0 8 z" fill="#9aa4b2"></path>
+                      </marker>
+                    </defs>
+                    <path class="wb-link" d="M348 108 C 332 140, 312 152, 294 178" vector-effect="non-scaling-stroke"></path>
+                    <path class="wb-link wb-link-land" d="M290 255 C 380 266, 452 240, 528 196" vector-effect="non-scaling-stroke" marker-end="url(#wbArrow)"></path>
+                  </svg>
+                  <div class="wb-group">
+                    <div class="wb-group-head"><i class="gv-caret"></i><span data-i18n="mock_kanban_col2">Développement</span><b>3 ・ 13%</b></div>
+                    <div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb">I</i><span data-i18n="mock_task_front">Socle front-end</span></div>
+                      <div class="wb-card-m"><span>7/28 - 7/31</span><span data-i18n="mock_owner_name">Yuka Suzuki</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class="p40"></i></span><b>40%</b></div>
+                    </div>
+                    <div class="wb-slot">
+                      <div class="wb-slot-card"><div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb">I</i><span data-i18n="flow_task_name">Développement de la page d'accueil</span></div>
+                      <div class="wb-card-m"><span>8/1 - 8/6</span><span data-i18n="mock_owner_name">Yuka Suzuki</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class=""></i></span><b>0%</b></div>
+                    </div>
+                      </div>
+                    </div>
+                    <div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb p2">II</i><span data-i18n="mock_task_cms">Intégration CMS</span></div>
+                      <div class="wb-card-m"><span>8/7 - 8/13</span><span data-i18n="mock_owner_name2">Daisuke Takahashi</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class=""></i></span><b>0%</b></div>
+                    </div>
+                  </div>
+                  <div class="wb-note" data-i18n="mock_wb_note">Tant que le CMS n'est pas intégré,<br>le bloc actualités reste fixe</div>
+                  <div class="wb-text" data-i18n="mock_wb_focus">Priorité de la semaine</div>
+                  <div class="wb-widget">
+                    <div class="wb-w-h"><span data-i18n="mock_wb_period">Avancement du planning</span><b data-i18n="mock_wb_scope">1 tâche liée</b></div>
+                    <div class="wb-w-n">
+                      <div><span data-i18n="mock_wb_actual">Réel</span><strong>9%</strong></div>
+                      <div class="r"><span data-i18n="mock_wb_planned">Prévu aujourd'hui</span><strong>41%</strong></div>
+                    </div>
+                    <span class="wb-w-bar"><i></i></span>
+                    <div class="wb-w-late" data-i18n="mock_wb_behind">32 pts de retard</div>
+                    <div class="wb-w-done" data-i18n="mock_wb_done">0 sur 3 terminées</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_whiteboard_title">Enfin, voir l'ensemble sur un seul tableau</h3>
+                <p class="flow-step-lead" data-i18n="feature_whiteboard_lead">Cette tâche unique porte désormais des dates, une étape, des notes et une priorité — et elle prend place sur un tableau, aux côtés des autres. Contrairement à un pense-bête, une carte posée ici continue d'afficher son avancement et ses dates à jour. Mettez l'avancement à jour dans le planning : le tableau suit.</p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p1_title">Les cartes ne sont pas des pense-bêtes figés</strong>
+                    <span data-i18n="feature_whiteboard_p1_desc">Une fois posées, elles continuent d'afficher avancement, dates et responsable à jour. Rien à recoller.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p2_title">Dessiner les relations</strong>
+                    <span data-i18n="feature_whiteboard_p2_desc">Ajoutez formes et connecteurs pour tracer dépendances et enchaînements directement sur le tableau.</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p3_title">Poser des widgets de synthèse</strong>
+                    <span data-i18n="feature_whiteboard_p3_desc">Placez des récapitulatifs d'avancement sur le tableau et utilisez-le comme tableau de bord.</span>
+                  </li>
+                </ul>
+                <p class="flow-free-note">
+                  <span class="flow-free-label" data-i18n="flow_free_note_label">Version gratuite</span>
+                  <span data-i18n="plan_compare_whiteboard_free">3 au total par appareil</span>
+                </p>
+                <a href="/ploto_LP/fr/manual/whiteboard.html" data-manual-link="whiteboard" class="flow-step-more" data-i18n="manual_guide_more">Lire le manuel →</a>
+              </div>
+            </li>
+          </ol>
         </div>
+
+        <p class="flow-closing" data-i18n="flow_closing_note">Déplacez par exemple une carte dans la colonne « Développement » : l'étape de la tâche change, et la même information apparaît dans le tableau du planning comme dans les ToDo des notes. Quel que soit le nombre de vues, les données restent uniques.</p>
       </div>
     </section>
 

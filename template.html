@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja" data-theme="light">
-
-<head>
+<!DOCTYPE html><html lang="ja" data-theme="light"><head>
   <!-- Google Analytics 4
        自分自身のアクセスは計測しない。ローカルプレビュー（localhost / file:）は自動で除外され、
        本番サイトは ?ga=off を一度開いたブラウザを恒久的に除外する（解除は ?ga=on）。
@@ -34,12 +31,11 @@
     })();
   </script>
 
-  <meta name="google-site-verification" content="2Lyy2qrZi_Obob4bnB3PW7ITsJMQ0T-Vmx3CV3ra4JU" />
+  <meta name="google-site-verification" content="2Lyy2qrZi_Obob4bnB3PW7ITsJMQ0T-Vmx3CV3ra4JU">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>無料で使い続けられる工程管理・ガントチャートツール Ploto | クラウド不要・オフライン対応</title>
-  <meta name="description"
-    content="Plotoはアカウント登録不要・オフラインで使える工程管理・ガントチャートツール。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。プロジェクトデータはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。">
+  <meta name="description" content="Plotoはアカウント登録不要・オフラインで使える工程管理・ガントチャートツール。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。プロジェクトデータはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/">
@@ -96,16 +92,14 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- Application Script -->
-  <script type="module" src="app.js" defer></script>
+  <script type="module" src="app.js" defer=""></script>
 </head>
 
 <body>
@@ -127,8 +121,7 @@
       <div class="header-actions">
         <!-- Language Switcher (dropdown) -->
         <div class="lang-switcher" id="lang-switcher">
-          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択"
-            title="Change Language">
+          <button id="lang-toggle" class="btn-icon" aria-haspopup="listbox" aria-expanded="false" aria-label="言語を選択" title="Change Language">
             <span class="lang-text">JA</span>
           </button>
           <div class="lang-menu" id="lang-menu" role="listbox" aria-label="言語">
@@ -142,8 +135,7 @@
 
         <!-- Dark/Light Theme Toggle -->
         <button id="theme-toggle" class="btn-icon" aria-label="Toggle Dark Mode" title="Toggle Theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -154,8 +146,7 @@
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
         </button>
@@ -210,217 +201,507 @@
 
         <div class="hero-visual">
           <div class="hero-screenshot-container">
-            <img id="hero-screenshot" src="assets/screenshots/ja-jp/01-gantt.png" alt="Ploto Application UI"
-              class="app-screenshot-img">
+            <img id="hero-screenshot" src="assets/screenshots/ja-jp/01-gantt.png" alt="Ploto Application UI" class="app-screenshot-img">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- One task, many views -->
-    <!-- マニュアル案内（#manual）と同じカード並びにしないこと。
-         ここは「1件のタスク」→「6通りの見え方」という構造そのものを見せる図として作る。 -->
-    <section id="views" class="views-section">
-      <div class="container">
-        <div class="views-layout">
-          <div class="views-intro">
-            <h2 class="section-title views-heading" data-i18n="views_title">タスクは1つ。見え方は6つ。</h2>
-            <p class="views-lead" data-i18n="views_subtitle">
-              Plotoは、同じタスクを目的に合った画面に見せ替えるだけの仕組みです。どの画面で直しても中身は同じ1件なので、転記も突き合わせも要りません。
-            </p>
-
-            <p class="views-flow-caption" data-i18n="views_source_caption">
-              このタスクが、下のどの画面にも同じ1件として出てきます。
-            </p>
-          </div>
-
-          <div class="views-flow">
-            <div class="views-flow-head">
-              <span class="views-source-label" data-i18n="views_source_label">登録するのは1件だけ</span>
-              <div class="views-source-card">
-                <span class="views-source-title" data-i18n="views_source_task">トップページ実装</span>
-                <div class="views-source-meta">
-                  <span>7/7 → 7/12</span>
-                  <span data-i18n="views_source_progress">進捗 40%</span>
-                </div>
-                <div class="views-source-bar"><span></span></div>
-              </div>
-            </div>
-            <div class="views-flow-stem" aria-hidden="true"></div>
-
-            <ul class="views-list">
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <line x1="8" y1="6" x2="21" y2="6"></line>
-                  <line x1="8" y1="12" x2="18" y2="12"></line>
-                  <line x1="11" y1="18" x2="21" y2="18"></line>
-                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_gantt_title">ガントチャート（工程表）</strong>
-                <span data-i18n="views_gantt_desc">いつ始めて、どれくらいかかるかを決める。</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="9" y1="3" x2="9" y2="21"></line>
-                  <line x1="15" y1="3" x2="15" y2="21"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_kanban_title">カンバン</strong>
-                <span data-i18n="views_kanban_desc">いまどの工程にあるかを、カードを動かして切り替える。</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="12" x2="21" y2="12"></line>
-                  <line x1="12" y1="3" x2="12" y2="21"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_matrix_title">優先度マトリクス</strong>
-                <span data-i18n="views_matrix_desc">緊急度と重要度で並べ、どれから手を付けるかを決める。</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_members_title">メンバー別タスク</strong>
-                <span data-i18n="views_members_desc">誰にどれだけ乗っているかを見て、割り振りを調整する。</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="8" y1="13" x2="16" y2="13"></line>
-                  <line x1="8" y1="17" x2="13" y2="17"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_note_title">ノート</strong>
-                <span data-i18n="views_note_desc">決まったこと・気づいたことをタスクごとに書き残す。</span>
-              </div>
-            </li>
-            <li class="views-list-item">
-              <span class="views-list-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="12" y1="18" x2="12" y2="22"></line>
-                  <line x1="8" y1="22" x2="16" y2="22"></line>
-                  <line x1="6" y1="9" x2="11" y2="9"></line>
-                  <line x1="14" y1="13" x2="18" y2="13"></line>
-                </svg>
-              </span>
-              <div class="views-list-text">
-                <strong data-i18n="views_whiteboard_title">ホワイトボード</strong>
-                <span data-i18n="views_whiteboard_desc">タスクを図として並べ、全体の関係を描いて共有する。</span>
-              </div>
-            </li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="views-note" data-i18n="views_note">
-          たとえばカンバンでカードを「実装」の列へ動かすと、そのタスクの工程が切り替わり、工程表の一覧にもノートのToDoにも同じ状態が出ます。ビューをいくつ増やしても、管理するデータは1つのままです。
-        </p>
-      </div>
-    </section>
-
+    <!-- 主要機能: 1件のタスクが5つの画面を通って育っていく -->
+    <!-- 機能セクションを5つ並べるだけだと「別々のツールの寄せ集め」に見えるので、
+         左のタスクカードを sticky で固定したまま、右のステップを通過するたびに
+         そのカードへ項目が増えていく形にしてある。ビューが同じ1件につながっている
+         ことを、文章ではなくスクロールそのもので示すのが狙い。
+         段階表示は app.js が data-active と .is-shown を付け替えて行う。
+         CSS だけの既定状態は「全項目が出ている完成形」なので、JS が動かなくても
+         情報は落ちない（app.js が data-enhanced を立てたときだけ段階表示になる）。 -->
     <section id="features" class="features-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="features_title">無料で使い続けられるガントチャート・プロジェクト管理ツールの特徴</h2>
-          <p class="section-subtitle" data-i18n="features_subtitle">Plotoは使いやすさと高い機能性を両立するために設計されています。</p>
+          <h2 class="section-title" data-i18n="features_title">1件のタスクが、5つの画面を通って育っていく</h2>
+          <p class="section-subtitle" data-i18n="features_subtitle">
+            左のカードは、最初から最後まで同じ1件です。画面を移るたびに、そこで決めたことがこのカードに足されていきます。転記は一度も発生しません。
+          </p>
         </div>
 
-        <div class="features-grid">
-          <!-- Feature 1: Alert Line -->
-          <div class="feature-card">
-            <div class="feature-icon alert-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
-                </path>
-                <line x1="12" y1="9" x2="12" y2="13"></line>
-                <line x1="12" y1="17" x2="12.01" y2="17"></line>
-              </svg>
+        <div class="flow" id="task-flow">
+          <div class="flow-card-col">
+            <div class="flow-card">
+              <span class="flow-card-hint" data-i18n="flow_card_hint">スクロールすると、この1件に情報が増えていきます</span>
+
+              <span class="flow-card-title" data-i18n="flow_task_name">トップページ実装</span>
+
+              <div class="flow-field" data-step="1">
+                <span class="flow-field-label" data-i18n="flow_field_period_label">期間</span>
+                <span class="flow-field-value" data-i18n="flow_field_period_value">8/1 → 8/6</span>
+              </div>
+
+              <div class="flow-field" data-step="2">
+                <span class="flow-field-label" data-i18n="flow_field_process_label">工程</span>
+                <span class="flow-field-value" data-i18n="flow_field_process_value">実装中</span>
+              </div>
+
+              <div class="flow-field" data-step="3">
+                <span class="flow-field-label" data-i18n="flow_field_memo_label">メモ</span>
+                <span class="flow-field-value" data-i18n="flow_field_memo_value">仕様確定 7/6</span>
+              </div>
+
+              <div class="flow-field" data-step="4">
+                <span class="flow-field-label" data-i18n="flow_field_priority_label">優先度</span>
+                <span class="flow-field-value" data-i18n="flow_field_priority_value">緊急かつ重要</span>
+              </div>
             </div>
-            <h3 class="feature-card-title" data-i18n="feat_alert_title">健康度アラートライン</h3>
-            <p class="feature-card-desc" data-i18n="feat_alert_desc">
-              タスクの進行状況を「期限超過（赤）」「開始遅延（オレンジ）」「正常（緑）」の3色で左端にライン表示。対応が必要なタスクが一目でわかります。
-            </p>
           </div>
 
-          <!-- Feature 2: Calendar UX -->
-          <div class="feature-card">
-            <div class="feature-icon calendar-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_cal_title">祝日・週末のカスタマイズ表示</h3>
-            <p class="feature-card-desc" data-i18n="feat_cal_desc">
-              独自の祝日データをインポート・追加可能。週末の減色表示や祝日ハイライトにより、現実に即した稼働スケジュールを視覚化します。
-            </p>
-          </div>
+          <!-- 番号は CSS カウンタで振る（翻訳もメンテも不要にするため） -->
+          <ol class="flow-steps">
+            <li class="flow-step" data-view="gantt" data-step="1">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab is-on"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">ノート</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">優先度マトリクス</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">ホワイトボード</span></span>
+              </div>
+                <div class="ui-view gv">
+                  <div class="gv-tbl">
+                    <div class="gv-hrow">
+                      <span data-i18n="mock_col_task">タスク名</span>
+                      <span data-i18n="flow_field_priority_label">優先度</span>
+                      <span data-i18n="mock_col_start">開始日</span>
+                      <span data-i18n="flow_field_period_label">期間</span>
+                    </div>
+                    <div class="gv-row is-group">
+                      <span class="gv-name"><i class="gv-caret"></i><span data-i18n="mock_kanban_col2">実装</span></span>
+                      <span class="u-pri"><i class="u-pb">I</i>66</span>
+                      <span class="gv-date">2026-07-28</span>
+                      <span class="gv-num">17</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_front">フロント基盤構築</span>
+                      <span class="u-pri"><i class="u-pb">I</i>52</span>
+                      <span class="gv-date">2026-07-28</span>
+                      <span class="gv-num">4</span>
+                    </div>
+                    <div class="gv-row is-sel">
+                      <span class="gv-name" data-i18n="flow_task_name">トップページ実装</span>
+                      <span class="u-pri"><i class="u-pb">I</i>78</span>
+                      <span class="gv-date">2026-08-01</span>
+                      <span class="gv-num">6</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_cms">CMS連携</span>
+                      <span class="u-pri"><i class="u-pb p2">II</i>56</span>
+                      <span class="gv-date">2026-08-07</span>
+                      <span class="gv-num">7</span>
+                    </div>
+                  </div>
+                  <div class="gv-tl">
+                    <div class="gv-th"><span data-i18n="mock_month_1">2026年7月</span><span data-i18n="mock_month_2">2026年8月</span></div>
+                    <div class="gv-tw">
+                      <span data-i18n="mock_wk1">7/20</span><span data-i18n="mock_wk2">7/27</span><span data-i18n="mock_wk3">8/3</span><span data-i18n="mock_wk4">8/10</span><span data-i18n="mock_wk5">8/17</span>
+                    </div>
+                    <div class="gv-lanes">
+                      <div class="gv-lane"><span class="gv-sum" data-i18n="mock_kanban_col2">実装</span></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_front">フロント基盤構築</em></div>
+                      <div class="gv-lane is-sel"><span class="gv-bar"></span><em data-i18n="flow_task_name">トップページ実装</em></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_cms">CMS連携</em></div>
+                      <span class="gv-dep"></span>
+                      <span class="gv-today"><i data-i18n="mock_today">今日</i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_gantt_title">まず、ここでタスクが生まれる</h3>
+                <p class="flow-step-lead" data-i18n="feature_gantt_lead">
+                  バーをドラッグして期間を決め、タスク同士を線でつなぐ。ここで作った1件が、このあとのすべての画面に出てきます。日付の計算やセルの結合に手を取られることはありません。
+                </p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feat_alert_title">進捗が一目でわかる3色アラート</strong>
+                    <span data-i18n="feat_alert_desc">タスクの進行状況を「期限超過（赤）」「開始遅延（黄）」「順調（緑）」の3色で自動判定してライン表示。遅れているタスクを見逃しません。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feat_cal_title">日本の祝日・会社休日の反映</strong>
+                    <span data-i18n="feat_cal_desc">独自の祝日や会社カレンダーを登録可能。土日・祝日の色分け表示により、実際の営業日に合わせた正確なスケジュールを作成できます。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feat_auto_title">1本ずらせば、後ろの予定もついてくる</strong>
+                    <span data-i18n="feat_auto_desc">タスク同士を線でつなぎ、オートスケジューリングをオンにすれば、前工程が延びたぶんだけ後続の日程が自動でずれます。</span>
+                  </li>
+                </ul>
+                <a href="#" data-manual-link="gantt" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+              </div>
+            </li>
 
-          <!-- Feature 3: 日程の自動追従（依存関係・親子） -->
-          <div class="feature-card">
-            <div class="feature-icon schedule-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_auto_title">1本ずらせば、後ろの予定もついてくる</h3>
-            <p class="feature-card-desc" data-i18n="feat_auto_desc">
-              タスク同士を線でつなぎ、オートスケジューリングをオンにすれば、前工程が延びたぶんだけ後続の日程が自動でずれます。親タスクの期間と進捗は最初から子タスクの内容で自動計算。1か所直すたびに表全体を手直しする必要はありません。
-            </p>
-          </div>
+            <li class="flow-step" data-view="kanban" data-step="2">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">ノート</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">優先度マトリクス</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">ホワイトボード</span></span>
+              </div>
+                <div class="ui-view kv">
+                  <div class="kv-col c1">
+                    <div class="kv-head"><i class="kv-ic eye"></i><span class="kv-name" data-i18n="mock_kanban_col1">デザイン</span><span class="kv-count">4</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">デザイン</span></div>
+                        <div class="uic-t" data-i18n="mock_task_ui">UIデザイン</div>
+                        <div class="uic-tags"><span class="u-tag tg-design" data-i18n="mock_kanban_col1">デザイン</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-06-28</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>63</span>
+                          <span class="u-av a2" data-i18n="mock_av2">佐</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Webサイトリニューアル</span></div>
+                        <div class="uic-t" data-i18n="mock_task_dsys">デザインシステム構築</div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-23</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb p2">II</i>58</span>
+                          <span class="u-av a2" data-i18n="mock_av2">佐</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kv-col c2">
+                    <div class="kv-head"><i class="kv-ic play"></i><span class="kv-name" data-i18n="mock_kanban_col2">実装</span><span class="kv-count">3</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-blue is-on">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">実装</span></div>
+                        <div class="uic-t" data-i18n="flow_task_name">トップページ実装</div>
+                        <div class="uic-tags"><span class="u-tag tg-front" data-i18n="mock_tag_front">フロント</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-08-06</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>78</span>
+                          <span class="u-av a1" data-i18n="mock_av1">鈴</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-blue">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Webサイトリニューアル</span></div>
+                        <div class="uic-t" data-i18n="mock_task_front">フロント基盤構築</div>
+                        <div class="uic-tags"><span class="u-tag tg-front" data-i18n="mock_tag_front">フロント</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-31</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>52</span>
+                          <span class="u-av a1" data-i18n="mock_av1">鈴</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kv-col c3">
+                    <div class="kv-head"><i class="kv-ic search"></i><span class="kv-name" data-i18n="mock_kanban_col3">レビュー</span><span class="kv-count">2</span></div>
+                    <div class="kv-body">
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">デザイン</span></div>
+                        <div class="uic-t" data-i18n="mock_task_visual">ビジュアルデザイン</div>
+                        <div class="uic-tags"><span class="u-tag tg-design" data-i18n="mock_kanban_col1">デザイン</span><span class="u-tag tg-imp" data-i18n="mock_tag_imp">重要</span></div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-22</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb">I</i>82</span>
+                          <span class="u-av a2" data-i18n="mock_av2">佐</span>
+                        </div>
+                      </div>
+                      <div class="uic ac-purple">
+                        <div class="uic-top"><span class="uic-pill" data-i18n="mock_project">Webサイトリニューアル</span></div>
+                        <div class="uic-t" data-i18n="mock_task_wire">ワイヤーフレーム</div>
+                        <div class="uic-foot">
+                          <span class="u-date"><i class="u-cal"></i>2026-07-13</span>
+                          <span class="uic-sp"></span>
+                          <span class="u-pri"><i class="u-pb p2">II</i>61</span>
+                          <span class="u-av a2" data-i18n="mock_av2">佐</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_kanban_title">工程を、カードを動かして切り替える</h3>
+                <p class="flow-step-lead" data-i18n="feature_kanban_lead">
+                  同じタスクを「いまどの工程にあるか」の並びで見る画面です。カードを右の列へ動かすと、そのタスクの工程が変わります。工程表の側の表示も同時に変わるので、どちらかを直し忘れることがありません。
+                </p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_kanban_p1_title">動かすだけで状態が変わる</strong>
+                    <span data-i18n="feature_kanban_p1_desc">カードを列から列へドラッグするだけ。進捗の入力欄を探して数字を打ち直す必要はありません。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_kanban_p2_title">工程ごとの標準ToDoが付く</strong>
+                    <span data-i18n="feature_kanban_p2_desc">列に標準のToDoを登録しておけば、その工程に入ったカードへ自動で付きます。毎回の書き起こしが不要になります。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_kanban_p3_title">担当や期限で絞り込める</strong>
+                    <span data-i18n="feature_kanban_p3_desc">自分の担当ぶんだけ、今週ぶんだけ、といった絞り込みができます。ボードが混み合っても見たいものだけ残せます。</span>
+                  </li>
+                </ul>
+                <p class="flow-free-note">
+                  <span class="flow-free-label" data-i18n="flow_free_note_label">無料のまま</span>
+                  <span data-i18n="plan_compare_kanban_free">1ファイルにつき3枚まで</span>
+                </p>
+                <a href="#" data-manual-link="kanban" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+              </div>
+            </li>
 
-          <!-- Feature 4: 同じタスクを複数のビューで -->
-          <div class="feature-card">
-            <div class="feature-icon views-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="m12 3-10 5 10 5 10-5-10-5Z"></path>
-                <path d="m2 17 10 5 10-5"></path>
-                <path d="m2 12 10 5 10-5"></path>
-              </svg>
-            </div>
-            <h3 class="feature-card-title" data-i18n="feat_views_title">入力は1回、見方は何通りでも</h3>
-            <p class="feature-card-desc" data-i18n="feat_views_desc">
-              同じタスクを工程表・進捗ボード・優先順位・ノートに切り替えて見られます。シートごとに同じ表を作り直したり、転記漏れで数字が食い違ったりすることがなくなります。
-            </p>
-          </div>
+            <li class="flow-step" data-view="note" data-step="3">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">ノート</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">優先度マトリクス</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">ホワイトボード</span></span>
+              </div>
+                <div class="ui-view nv">
+                  <div class="nv-side">
+                    <div class="nv-search"><i></i><span data-i18n="mock_note_search">タスク名・ノートを検索</span></div>
+                    <div class="nv-tree">
+                      <div class="nv-node lv1"><i class="u-doc"></i><span data-i18n="mock_project">Webサイトリニューアル</span><span class="nv-count">4</span></div>
+                      <div class="nv-node lv2"><i class="u-doc"></i><span data-i18n="mock_kanban_col1">デザイン</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_wire">ワイヤーフレーム</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_visual">ビジュアルデザイン</span><i class="nv-dot"></i></div>
+                      <div class="nv-node lv2"><i class="u-doc"></i><span data-i18n="mock_kanban_col2">実装</span></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_front">フロント基盤構築</span></div>
+                      <div class="nv-node lv3 is-on"><i class="u-doc"></i><span data-i18n="flow_task_name">トップページ実装</span><i class="nv-dot"></i></div>
+                      <div class="nv-node lv3"><i class="u-doc"></i><span data-i18n="mock_task_cms">CMS連携</span></div>
+                    </div>
+                  </div>
+                  <div class="nv-main">
+                    <div class="nv-bar">
+                      <span class="nv-sel" data-i18n="mock_note_style">本文</span>
+                      <span class="nv-fmt"><i>B</i><i>I</i><i>U</i></span>
+                      <span class="nv-chars" data-i18n="mock_note_chars">117 文字</span>
+                    </div>
+                    <div class="nv-doc">
+                      <div class="nv-crumb"><span data-i18n="mock_project">Webサイトリニューアル</span> / <span data-i18n="mock_kanban_col2">実装</span> / <span data-i18n="flow_task_name">トップページ実装</span></div>
+                      <div class="nv-h1"><i></i><b data-i18n="flow_task_name">トップページ実装</b></div>
+                      <div class="nv-meta">
+                        <span><i class="u-cal"></i>2026-08-01 – 2026-08-06</span>
+                        <span><span data-i18n="mock_wb_widget">進捗</span> 0%</span>
+                        <span data-i18n="mock_owner_name">鈴木 由香</span>
+                        <span data-i18n="mock_days_6">6 日</span>
+                      </div>
+                      <div class="nv-body">
+                        <div>
+                          <h4 data-i18n="mock_note_h">トップページ実装の進め方</h4>
+                          <p data-i18n="mock_note_p1">2026-07-07 着手。</p>
+                          <ul>
+                            <li data-i18n="mock_note_b1">ファーストビューは画像を遅延読み込みにする</li>
+                            <li data-i18n="mock_note_b2">お知らせ枠は CMS 連携後に差し替えるため、いまは固定データで組む</li>
+                          </ul>
+                          <p data-i18n="mock_note_p2">2026-07-09 レビュー指摘を反映。余白を全体的に広げた。</p>
+                        </div>
+                        <div class="nv-todo">
+                          <div class="nv-todo-h">ToDo<span>0/0</span></div>
+                          <div class="nv-todo-r"><i></i><span data-i18n="mock_kanban_col2">実装</span><b>0</b></div>
+                          <div class="nv-add" data-i18n="mock_todo_add">＋ ToDoを追加</div>
+                          <div class="nv-todo-r"><i></i><span data-i18n="mock_kanban_col3">レビュー</span><b>0</b></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_note_title">決まったことを、そのタスクに書き残す</h3>
+                <p class="flow-step-lead" data-i18n="feature_note_lead">
+                  左のアウトラインは工程表の親子関係がそのまま章立てになっています。議事録の構成を自分で作る必要はありません。書いた内容はそのタスクに紐づくので、「あの話はどのタスクの件だったか」を後から探し直さずに済みます。
+                </p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_note_p1_title">章立てが最初からできている</strong>
+                    <span data-i18n="feature_note_p1_desc">タスクの階層がそのまま見出しになります。空のドキュメントから構成を考え始める必要はありません。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_note_p2_title">本文を横断して検索できる</strong>
+                    <span data-i18n="feature_note_p2_desc">どのタスクに書いたか覚えていなくても、本文の言葉から辿れます。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_note_p3_title">ToDoもここに置ける</strong>
+                    <span data-i18n="feature_note_p3_desc">書きながらチェック項目を作れます。カンバンの標準ToDoと同じ場所に集まります。</span>
+                  </li>
+                </ul>
+                <a href="#" data-manual-link="note" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+              </div>
+            </li>
+
+            <li class="flow-step" data-view="matrix" data-step="4">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">ノート</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">優先度マトリクス</span></span>
+  <span class="ui-tab"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">ホワイトボード</span></span>
+              </div>
+                <div class="ui-view xv">
+                  <div class="xv-plane">
+                    <span class="xv-ax t" data-i18n="mock_axis_imp_hi">重要度 (高)</span>
+                    <span class="xv-ax b" data-i18n="mock_axis_imp_lo">重要度 (低)</span>
+                    <span class="xv-ax l" data-i18n="mock_axis_urg_lo">緊急度 (低)</span>
+                    <span class="xv-ax r" data-i18n="mock_axis_urg_hi">緊急度 (高)</span>
+                    <div class="xv-q q1"><b>I</b><span data-i18n="mock_q1">象限 I: 重要かつ緊急</span></div>
+                    <div class="xv-q q2"><b>II</b><span data-i18n="mock_q2">象限 II: 重要だが非緊急</span></div>
+                    <div class="xv-q q3"><b>III</b><span data-i18n="mock_q3">象限 III: 緊急だが非重要</span></div>
+                    <div class="xv-q q4"><b>IV</b><span data-i18n="mock_q4">象限 IV: 非緊急かつ非重要</span></div>
+                    <div class="uic x2 ac-purple">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col1">デザイン</span><span class="uic-score">58</span></div>
+                      <div class="uic-t" data-i18n="mock_task_dsys">デザインシステム構築</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-07-23</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class="p20"></i></span>
+                        <span class="uic-pct">20%</span>
+                        <span class="u-av a2" data-i18n="mock_av2">佐</span>
+                      </div>
+                    </div>
+                    <div class="uic x3 ac-blue">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">実装</span><span class="uic-score">52</span></div>
+                      <div class="uic-t" data-i18n="mock_task_front">フロント基盤構築</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-07-31</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class="p40"></i></span>
+                        <span class="uic-pct">40%</span>
+                        <span class="u-av a1" data-i18n="mock_av1">鈴</span>
+                      </div>
+                    </div>
+                    <div class="uic x1 ac-blue is-on">
+                      <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">実装</span><span class="uic-score">75</span></div>
+                      <div class="uic-t" data-i18n="flow_task_name">トップページ実装</div>
+                      <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-08-06</span></div>
+                      <div class="uic-prog">
+                        <span class="u-track"><i class=""></i></span>
+                        <span class="uic-pct">0%</span>
+                        <span class="u-av a1" data-i18n="mock_av1">鈴</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_matrix_title">どれから手を付けるかを決める</h3>
+                <p class="flow-step-lead" data-i18n="feature_matrix_lead">
+                  緊急度と重要度の2軸にタスクを置く画面です。締切が近い順に処理していると後回しになりがちな「重要だが急ぎではない仕事」が、置いた位置で見えるようになります。ここで決めた優先度も同じ1件に記録されます。
+                </p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_matrix_p1_title">2軸に置くだけで優先度が決まる</strong>
+                    <span data-i18n="feature_matrix_p1_desc">タスクをドラッグして置いた位置から、優先度スコアが自動で計算されます。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_matrix_p2_title">重要だが急がない仕事が見える</strong>
+                    <span data-i18n="feature_matrix_p2_desc">締切だけで並べると沈んでしまう仕事が、象限の位置として残り続けます。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_matrix_p3_title">表示モードを切り替えられる</strong>
+                    <span data-i18n="feature_matrix_p3_desc">点だけの表示とカードを開いた表示を切り替えて、俯瞰と確認を使い分けられます。</span>
+                  </li>
+                </ul>
+                <a href="#" data-manual-link="matrix" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+              </div>
+            </li>
+
+            <li class="flow-step" data-view="whiteboard" data-step="5">
+                            <div class="ui" aria-hidden="true">
+              <div class="ui-tabs">
+                <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
+                <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
+                <span class="ui-tab"><i class="ui-ti tn"></i><span data-i18n="mock_tab_note">ノート</span></span>
+                <span class="ui-tab"><i class="ui-ti tx"></i><span data-i18n="mock_tab_matrix">優先度マトリクス</span></span>
+                <span class="ui-tab is-on"><i class="ui-ti tw"></i><span data-i18n="mock_tab_wb">ホワイトボード</span></span>
+              </div>
+                <div class="ui-view wb">
+                  <svg class="wb-links" viewBox="0 0 800 480" preserveAspectRatio="none">
+                    <defs>
+                      <marker id="wbArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                        <path d="M0 0 L8 4 L0 8 z" fill="#9aa4b2"></path>
+                      </marker>
+                    </defs>
+                    <path class="wb-link" d="M348 108 C 332 140, 312 152, 294 178" vector-effect="non-scaling-stroke"></path>
+                    <path class="wb-link wb-link-land" d="M290 255 C 380 266, 452 240, 528 196" vector-effect="non-scaling-stroke" marker-end="url(#wbArrow)"></path>
+                  </svg>
+                  <div class="wb-group">
+                    <div class="wb-group-head"><i class="gv-caret"></i><span data-i18n="mock_kanban_col2">実装</span><b>3 ・ 13%</b></div>
+                    <div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb">I</i><span data-i18n="mock_task_front">フロント基盤構築</span></div>
+                      <div class="wb-card-m"><span>7/28 - 7/31</span><span data-i18n="mock_owner_name">鈴木 由香</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class="p40"></i></span><b>40%</b></div>
+                    </div>
+                    <div class="wb-slot">
+                      <div class="wb-slot-card"><div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb">I</i><span data-i18n="flow_task_name">トップページ実装</span></div>
+                      <div class="wb-card-m"><span>8/1 - 8/6</span><span data-i18n="mock_owner_name">鈴木 由香</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class=""></i></span><b>0%</b></div>
+                    </div>
+                      </div>
+                    </div>
+                    <div class="wb-card">
+                      <div class="wb-card-h"><i class="u-pb p2">II</i><span data-i18n="mock_task_cms">CMS連携</span></div>
+                      <div class="wb-card-m"><span>8/7 - 8/13</span><span data-i18n="mock_owner_name2">高橋 大輔</span></div>
+                      <div class="wb-card-p"><span class="u-track"><i class=""></i></span><b>0%</b></div>
+                    </div>
+                  </div>
+                  <div class="wb-note" data-i18n="mock_wb_note">CMS連携が終わるまで<br>お知らせ枠は固定データ</div>
+                  <div class="wb-text" data-i18n="mock_wb_focus">今週の重点</div>
+                  <div class="wb-widget">
+                    <div class="wb-w-h"><span data-i18n="mock_wb_period">期間進捗</span><b data-i18n="mock_wb_scope">接続タスク 1件</b></div>
+                    <div class="wb-w-n">
+                      <div><span data-i18n="mock_wb_actual">実績</span><strong>9%</strong></div>
+                      <div class="r"><span data-i18n="mock_wb_planned">今日の予定</span><strong>41%</strong></div>
+                    </div>
+                    <span class="wb-w-bar"><i></i></span>
+                    <div class="wb-w-late" data-i18n="mock_wb_behind">予定より 32pt 遅れ</div>
+                    <div class="wb-w-done" data-i18n="mock_wb_done">完了 0 / 3 件</div>
+                  </div>
+                </div>
+              </div>
+              <div class="flow-step-body">
+                <span class="flow-step-index"></span>
+                <h3 class="flow-step-title" data-i18n="feature_whiteboard_title">最後に、全体を1枚で見渡す</h3>
+                <p class="flow-step-lead" data-i18n="feature_whiteboard_lead">
+                  ここまでで日程・工程・記録・優先度を持った1件が、他のタスクと並んで1枚の盤面に載ります。付箋と違うのは、置いたカードが進捗や期限を最新の状態で表示し続けることです。工程表で進捗を更新すれば、この盤面の表示も追随します。
+                </p>
+                <ul class="flow-points">
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p1_title">カードは静的な付箋ではない</strong>
+                    <span data-i18n="feature_whiteboard_p1_desc">置いたあとも進捗・期限・担当を最新の状態で表示し続けます。貼り替えの作業は発生しません。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p2_title">線でつないで関係を描ける</strong>
+                    <span data-i18n="feature_whiteboard_p2_desc">図形やコネクタを足して、タスク同士の依存や流れをそのまま盤面に描けます。</span>
+                  </li>
+                  <li>
+                    <strong data-i18n="feature_whiteboard_p3_title">集計ウィジェットを置ける</strong>
+                    <span data-i18n="feature_whiteboard_p3_desc">進捗の集計を盤面に置いて、そのままダッシュボードとして使えます。</span>
+                  </li>
+                </ul>
+                <p class="flow-free-note">
+                  <span class="flow-free-label" data-i18n="flow_free_note_label">無料のまま</span>
+                  <span data-i18n="plan_compare_whiteboard_free">1台につき累計3枚まで</span>
+                </p>
+                <a href="#" data-manual-link="whiteboard" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+              </div>
+            </li>
+          </ol>
         </div>
+
+        <p class="flow-closing" data-i18n="flow_closing_note">
+          たとえばカンバンでカードを「実装」の列へ動かすと、そのタスクの工程が切り替わり、工程表の一覧にもノートのToDoにも同じ状態が出ます。ビューをいくつ増やしても、管理するデータは1つのままです。
+        </p>
       </div>
     </section>
 
@@ -438,8 +719,7 @@
           <!-- 基本操作 -->
           <a href="#" data-manual-link="basic" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="3" y1="9" x2="21" y2="9"></line>
                 <line x1="9" y1="21" x2="9" y2="9"></line>
@@ -455,8 +735,7 @@
           <!-- ガントチャート -->
           <a href="#" data-manual-link="gantt" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="8" y1="6" x2="21" y2="6"></line>
                 <line x1="8" y1="12" x2="18" y2="12"></line>
                 <line x1="11" y1="18" x2="21" y2="18"></line>
@@ -475,8 +754,7 @@
           <!-- カンバン -->
           <a href="#" data-manual-link="kanban" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="9" y1="3" x2="9" y2="21"></line>
                 <line x1="15" y1="3" x2="15" y2="21"></line>
@@ -492,8 +770,7 @@
           <!-- ノート -->
           <a href="#" data-manual-link="note" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                 <polyline points="14 2 14 8 20 8"></polyline>
                 <line x1="8" y1="13" x2="16" y2="13"></line>
@@ -510,8 +787,7 @@
           <!-- ホワイトボード -->
           <a href="#" data-manual-link="whiteboard" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="4" width="20" height="14" rx="2" ry="2"></rect>
                 <line x1="12" y1="18" x2="12" y2="22"></line>
                 <line x1="8" y1="22" x2="16" y2="22"></line>
@@ -529,8 +805,7 @@
           <!-- 優先度マトリクス -->
           <a href="#" data-manual-link="matrix" class="manual-guide-card">
             <div class="manual-guide-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="12" y1="3" x2="12" y2="21"></line>
@@ -674,14 +949,7 @@
           <div class="download-buttons">
             <!-- Windows Microsoft Store -->
             <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
-            <ms-store-badge
-              productid="9n4njnmt2b77"
-              productname="Ploto - ガントチャート プロジェクト管理"
-              window-mode="full"
-              theme="dark"
-              size="large"
-              language="ja-jp"
-              animation="on">
+            <ms-store-badge productid="9n4njnmt2b77" productname="Ploto - ガントチャート プロジェクト管理" window-mode="full" theme="dark" size="large" language="ja-jp" animation="on">
             </ms-store-badge>
           </div>
 
@@ -712,24 +980,20 @@
             <div class="form-group-row">
               <div class="form-control-wrap">
                 <label for="fb-name" data-i18n="feedback_name">お名前（任意）</label>
-                <input type="text" id="fb-name" name="name" placeholder="山田 太郎"
-                  data-i18n-placeholder="feedback_name_placeholder">
+                <input type="text" id="fb-name" name="name" placeholder="山田 太郎" data-i18n-placeholder="feedback_name_placeholder">
               </div>
               <div class="form-control-wrap">
                 <label for="fb-email" data-i18n="feedback_email">メールアドレス（任意）</label>
-                <input type="email" id="fb-email" name="email" placeholder="taro@example.com"
-                  data-i18n-placeholder="feedback_email_placeholder">
+                <input type="email" id="fb-email" name="email" placeholder="taro@example.com" data-i18n-placeholder="feedback_email_placeholder">
               </div>
             </div>
 
             <div class="form-control-wrap">
               <label for="fb-message" data-i18n="feedback_msg">フィードバック内容（必須）</label>
-              <textarea id="fb-message" name="message" rows="4" required placeholder="機能の要望や改善点など..."
-                data-i18n-placeholder="feedback_msg_placeholder"></textarea>
+              <textarea id="fb-message" name="message" rows="4" required="" placeholder="機能の要望や改善点など..." data-i18n-placeholder="feedback_msg_placeholder"></textarea>
             </div>
 
-            <button type="submit" id="btn-submit-feedback" class="btn-primary"
-              data-i18n="btn_send">フィードバックを送信する</button>
+            <button type="submit" id="btn-submit-feedback" class="btn-primary" data-i18n="btn_send">フィードバックを送信する</button>
           </form>
           <div id="feedback-success-msg" class="feedback-success" style="display: none;" data-i18n="feedback_success">
             フィードバックを送信しました。ご協力ありがとうございました！
@@ -743,13 +1007,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-bottom">
-        <p>&copy; 2026 Ploto Project. All rights reserved.</p>
+        <p>© 2026 Ploto Project. All rights reserved.</p>
         <div class="footer-links">
           <a href="#" data-i18n="footer_privacy" data-i18n-href="privacy_url" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
         </div>
       </div>
     </div>
   </footer>
-</body>
 
-</html>
+
+
+</body></html>

@@ -599,202 +599,6 @@ button {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Simulated Sidebar */
-.mock-sidebar {
-  background-color: var(--bg-main);
-  border-right: 1px solid var(--border-color);
-  padding: 16px 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.mock-sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.4;
-}
-
-.mock-sidebar-item.active {
-  opacity: 1;
-}
-
-.mock-icon {
-  background-color: var(--text-muted);
-}
-
-.mock-icon.circle {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-}
-
-.mock-line {
-  background-color: var(--text-muted);
-  height: 6px;
-  border-radius: 3px;
-}
-
-.mock-line.short { width: 30px; }
-.mock-line.medium { width: 45px; }
-
-/* Simulated Workspace Main */
-.mock-main {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.mock-toolbar {
-  height: 40px;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-}
-
-.mock-tabs {
-  display: flex;
-  gap: 12px;
-}
-
-.mock-tab-item {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  padding-bottom: 4px;
-}
-
-.mock-tab-item.active {
-  color: var(--color-primary-light);
-  border-bottom: 2px solid var(--color-primary-light);
-}
-
-.mock-btn-sm {
-  font-size: 0.65rem;
-  background: var(--gradient-primary);
-  color: var(--text-inverse);
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-weight: 700;
-}
-
-.mock-workspace {
-  flex: 1;
-  overflow: hidden;
-  background-color: var(--bg-card);
-}
-
-/* Simulated Gantt */
-.mock-gantt {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  height: 100%;
-  font-size: 0.65rem;
-}
-
-.mock-gantt-sidebar {
-  border-right: 1px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-}
-
-.mock-gantt-header-cell {
-  height: 30px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--bg-main);
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.mock-gantt-row {
-  height: 32px;
-  border-bottom: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  padding-left: 12px;
-  position: relative;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.mock-gantt-row.sub-row {
-  padding-left: 24px;
-  color: var(--text-muted);
-}
-
-.mock-text-bold {
-  font-weight: 700;
-}
-
-.mock-alert-line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-}
-
-.mock-alert-line.green { background-color: var(--color-success); }
-.mock-alert-line.orange { background-color: var(--color-accent); }
-.mock-alert-line.red { background-color: var(--color-danger); }
-
-.mock-gantt-timeline {
-  display: flex;
-  flex-direction: column;
-}
-
-.mock-gantt-header-timeline {
-  height: 30px;
-  border-bottom: 1px solid var(--border-color);
-  background-color: var(--bg-main);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  text-align: center;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
-.mock-gantt-grid-rows {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.mock-gantt-bar-row {
-  height: 32px;
-  border-bottom: 1px solid var(--border-color);
-  position: relative;
-  background-image: linear-gradient(to right, var(--border-color) 1px, transparent 1px);
-  background-size: 20% 100%;
-}
-
-.mock-gantt-bar {
-  position: absolute;
-  top: 8px;
-  height: 16px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
-}
-
-.mock-gantt-bar.primary {
-  background: var(--gradient-primary);
-}
-
-.mock-gantt-bar.secondary {
-  background-color: var(--color-secondary);
-}
-
-.mock-gantt-bar.warn {
-  background-color: var(--color-danger);
-}
-
 /* --- 7. Features Section --- */
 .features-section {
   padding: 100px 0;
@@ -820,86 +624,9 @@ button {
   color: var(--text-muted);
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 32px;
-}
-
-.feature-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 40px 32px;
-  transition: var(--transition-smooth);
-  position: relative;
-  overflow: hidden;
-}
-
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--gradient-glow);
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-primary-light);
-  box-shadow: var(--shadow-md);
-}
-
-.feature-card:hover::before {
-  opacity: 1;
-}
-
-.feature-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 24px;
-  color: var(--text-inverse);
-  position: relative;
-  z-index: 2;
-}
-
-.feature-icon svg {
-  width: 24px;
-  height: 24px;
-}
-
-.alert-icon { background: linear-gradient(135deg, #ef4444, #f59e0b); }
-.calendar-icon { background: linear-gradient(135deg, #10b981, #06b6d4); }
-.schedule-icon { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
-.views-icon { background: linear-gradient(135deg, #6366f1, #3b82f6); }
-
-.feature-card-title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  position: relative;
-  z-index: 2;
-}
-
-.feature-card-desc {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  position: relative;
-  z-index: 2;
-}
-
 /* --- 8. Manual Guide Section --- */
-/* マニュアル各ページへの導線。カードは feature-card と同じ質感に揃えつつ、
-   リンクであることが分かるようホバーで矢印を動かす。 */
+/* マニュアル各ページへの導線。リンクであることが分かるよう、
+   ホバーで矢印を動かす。 */
 .manual-guide-section {
   padding: 100px 0;
   background-color: var(--bg-main);
@@ -1442,15 +1169,6 @@ button {
     order: -1;
   }
   
-  .browser-mockup {
-    transform: none;
-    margin: 0 auto;
-  }
-  
-  .browser-mockup:hover {
-    transform: scale(1.02);
-  }
-  
 }
 
 @media (max-width: 768px) {
@@ -1581,197 +1299,239 @@ button {
 }
 
 /* ==========================================================================
-   One Task, Many Views Section
+   主要機能セクション（1件のタスクが5画面を通って育つ流れ）
    --------------------------------------------------------------------------
-   マニュアル案内（.manual-guide-*）がカードの並びなので、こちらは
-   「左＝1件のタスク／右＝6通りの見え方の一覧」という別の形にして重複を避ける。
+   左のカードを sticky で固定したまま、右のステップを通過するたびに項目が増える。
+   段階の切り替えは app.js（IntersectionObserver）が担当し、CSS は状態を描くだけ。
+
+   既定（CSS だけ）の状態は「全項目が出ている完成形」にしてある。JS が動いたときだけ
+   .flow に data-enhanced が付いて段階表示に切り替わるので、JS が落ちても情報は落ちない。
    ========================================================================== */
-.views-section {
-  padding: 5rem 0;
+
+/* 5つの見え方の識別色。dataviz の検証済みカテゴリ配色スロット1〜6をドキュメント順の
+   まま使っている。並び順そのものが CVD 安全性の担保なので入れ替えないこと
+   （隣接ペアで dark / light とも全チェック通過を確認済み）。
+   色は装飾で、どの画面かはモックの形とラベルが担っている。 */
+[data-view='gantt'],      [data-active='gantt']      { --vc: #3987e5; }
+[data-view='kanban'],     [data-active='kanban']     { --vc: #d95926; }
+[data-view='matrix'],     [data-active='matrix']     { --vc: #199e70; }
+[data-view='note'],       [data-active='note']       { --vc: #d55181; }
+[data-view='whiteboard'], [data-active='whiteboard'] { --vc: #008300; }
+
+/* light は同じ6色を明るい面に合わせて踏み直した段。自動反転ではない。 */
+[data-theme='light'] :is([data-view='gantt'],      [data-active='gantt'])      { --vc: #2a78d6; }
+[data-theme='light'] :is([data-view='kanban'],     [data-active='kanban'])     { --vc: #eb6834; }
+[data-theme='light'] :is([data-view='matrix'],     [data-active='matrix'])     { --vc: #1baf7a; }
+[data-theme='light'] :is([data-view='note'],       [data-active='note'])       { --vc: #e87ba4; }
+[data-theme='light'] :is([data-view='whiteboard'], [data-active='whiteboard']) { --vc: #008300; }
+
+/* 共通の .section-header は 700px 上限。日本語の見出しがそこで割れるので
+   この節だけ広げる（他セクションの見出しには影響させない）。 */
+.features-section .section-header {
+  max-width: 860px;
 }
 
-.views-layout {
+.flow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-  gap: 3.5rem;
-  align-items: start;
+  /* 左は短いラベルと値だけなので狭くてよい。実画面のスクショを少しでも
+     大きく見せたいので、その分を右へ回している。 */
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 2.15fr);
+  gap: 3rem;
+  /* align-items は既定の stretch のまま。左列がステップ全体の高さまで
+     伸びていないと .flow-card の sticky に可動域が生まれず、
+     ただ一緒にスクロールして流れ去ってしまう。 */
+  /* 現在地のビュー色。app.js が data-active に応じて差し替える */
+  --vc: var(--color-primary-light);
 }
 
-/* 右のパネルが高いので、左の説明は縦中央に寄せて余白の偏りを抑える */
-.views-intro {
-  align-self: center;
-}
-
-.views-heading {
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.views-lead {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-  line-height: 1.9;
-}
-
-.views-flow-caption {
-  margin-top: 1.5rem;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-/* 1件のタスク → 6通りの見え方。カードと一覧を同じパネルに入れ、
-   幹線（縦）と枝線（横）でつないで「1件が分岐している」ことを図で示す。
-   線の座標はすべてこのパネル内で完結させる（言語で高さが変わっても崩れない）。 */
-.views-flow {
+/* --- 左: 固定されるタスクカード ------------------------------------------ */
+.flow-card {
+  position: sticky;
+  /* ヘッダーが 80px 固定なので、その下に余白を足した位置で止める */
+  top: calc(80px + 2rem);
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
+  border-left: 4px solid var(--vc);
+  border-radius: 14px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color 0.35s ease;
 }
 
-.views-source-label {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-primary-light);
-  margin-bottom: 0.6rem;
-}
-
-.views-source-card {
-  background-color: var(--bg-main);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--color-primary-light);
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
-}
-
-.views-source-title {
+.flow-card-hint {
   display: block;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.views-source-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  font-size: 0.82rem;
+  margin-bottom: 0.9rem;
   color: var(--text-muted);
-  margin-bottom: 0.6rem;
+  font-size: 0.78rem;
+  line-height: 1.6;
 }
 
-.views-source-bar {
-  height: 6px;
-  border-radius: 3px;
-  background-color: var(--bg-card-hover);
+.flow-card-title {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
+.flow-field {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-top: 0.7rem;
+  margin-top: 0.7rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* 先頭の項目だけは上の罫線を出さない（タスク名のすぐ下に来るため） */
+.flow-field[data-step='1'] {
+  border-top: 0;
+  margin-top: 0.9rem;
+  padding-top: 0;
+}
+
+.flow-field-label {
+  flex-shrink: 0;
+  min-width: 4.5em;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.flow-field-value {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+/* 段階表示は JS が動いたときだけ。まだ来ていない項目を畳む。 */
+.flow[data-enhanced] .flow-field {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.flow[data-enhanced] .flow-field:not(.is-shown) {
+  opacity: 0;
+  transform: translateY(-4px);
+  /* 高さも畳まないとカードが最初から最終形の大きさで居座ってしまう */
+  margin-top: 0;
+  padding-top: 0;
+  border-top-width: 0;
+  height: 0;
   overflow: hidden;
 }
 
-.views-source-bar span {
-  display: block;
-  width: 40%;
-  height: 100%;
-  background: var(--gradient-primary);
+/* 直前に足された項目を一瞬だけ目立たせる。何が増えたのかを見失わないため。 */
+.flow[data-enhanced] .flow-field.is-latest .flow-field-value {
+  color: var(--vc);
 }
 
-/* カードから最初の枝までを結ぶ幹線の立ち上がり */
-.views-flow-stem {
-  position: relative;
-  height: 18px;
+/* --- 右: ステップ --------------------------------------------------------- */
+.flow-steps {
+  /* グリッドの子は既定で中身の最小幅より縮まない。モックのタブ列が
+     その最小幅を押し上げ、列からはみ出してページごと横スクロールする。 */
+  min-width: 0;
+  counter-reset: flow-step;
 }
 
-.views-flow-stem::before {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--color-primary-light);
-  opacity: 0.5;
-}
-
-.views-list-item {
-  position: relative;
+.flow-step {
+  min-width: 0;
+  /* 滞留時間を確保しつつ、1画面に収まる高さに留める */
+  min-height: 78vh;
   display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  padding: 0.9rem 0;
-  /* 幹線＋枝線の分だけ左に余白を確保する */
-  padding-left: 52px;
-}
-
-/* 幹線: 各行を縦に貫く。最後の行だけ中心で止めて末端に見せる */
-.views-list-item::before {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--color-primary-light);
-  opacity: 0.5;
-}
-
-.views-list-item:last-child::before {
-  bottom: auto;
-  height: 50%;
-}
-
-/* 枝線: 幹線からアイコンへ伸びる横線 */
-.views-list-item::after {
-  content: '';
-  position: absolute;
-  left: 19px;
-  top: 50%;
-  width: 22px;
-  height: 2px;
-  background-color: var(--color-primary-light);
-  opacity: 0.5;
-}
-
-.views-list-icon {
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: var(--bg-card-hover);
-  border: 1px solid var(--border-color);
-  color: var(--color-primary-light);
-  /* 枝線の終端を隠すために背景の上に重ねる */
-  position: relative;
-  z-index: 1;
+  padding: 3rem 0;
 }
 
-.views-list-icon svg {
-  width: 17px;
-  height: 17px;
+.flow-step-index::before {
+  counter-increment: flow-step;
+  content: counter(flow-step, decimal-leading-zero);
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  color: var(--vc);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
-.views-list-text strong {
-  display: block;
+.flow-step-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.45;
+  margin-bottom: 0.8rem;
+}
+
+.flow-step-lead {
+  color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1.4rem;
+}
+
+.flow-points {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.flow-points li {
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.flow-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--vc);
+}
+
+.flow-points strong {
+  display: block;
+  font-size: 0.95rem;
   font-weight: 700;
   margin-bottom: 0.15rem;
 }
 
-.views-list-text span {
+.flow-points span {
   color: var(--text-muted);
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
+/* 無料枠の但し書き。機能の説明と同じ場所で、どこまで無料かを明示する。 */
+.flow-free-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
 
-/* 「データは1つ」という肝の説明。図の下に置く補足。 */
-.views-note {
+.flow-free-label {
+  font-weight: 700;
+  color: var(--color-success);
+}
+
+.flow-step-more {
+  align-self: start;
+  color: var(--color-primary-light);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.flow-step-more:hover {
+  text-decoration: underline;
+}
+
+.flow-closing {
   max-width: 900px;
-  margin: 2.5rem auto 0;
+  margin: 3rem auto 0;
   padding: 1.25rem 1.5rem;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -1782,12 +1542,1401 @@ button {
   line-height: 1.8;
 }
 
+/* ==========================================================================
+   実画面モック（ガント / カンバン / ノート / 優先度マトリクス）
+
+   スクリーンショットを縮小すると文字が潰れるので、実際の画面の「必要な部分だけ」を
+   HTML/CSS で等倍に組み直したもの。セクションごとに、その機能の説明に要る範囲だけを
+   切り出している。
+
+   配色と寸法はアプリ本体（ライト画面）から取り、LP のテーマには追随させない。
+   ここは「アプリの画面が写っているもの」なので、写真がダークモードで反転しないのと
+   同じ扱いにする。そのため色は var(--text-main) 等ではなく、このブロック内で閉じた
+   --u-* に定義する。
+
+   図は装飾ではなく説明なので aria-hidden を付け、同じ内容は必ずリード文と
+   要点3点で読めるようにしてある。
+   ========================================================================== */
+.ui {
+  --u-bg: #f4f6f9; /* 画面の下地 */
+  --u-surface: #ffffff;
+  --u-line: #e6e9ee;
+  --u-line-soft: #f0f2f5;
+  --u-ink: #1f2733; /* タスク名・見出し */
+  --u-ink-2: #5b6675; /* ラベル */
+  --u-ink-3: #97a1ae; /* 補助 */
+  --u-blue: #3b82f6;
+  --u-blue-ink: #2563eb;
+  --u-blue-soft: #e8effc; /* 選択行 */
+  --u-red: #ef4444;
+  --u-red-soft: #fdecec;
+  --u-amber: #f0a52e;
+  --u-amber-soft: #fdf1de;
+  --u-green: #16a34a;
+  --u-green-soft: #dff2e6;
+  --u-shade: #f1f3f6;
+
+  margin-bottom: 1.75rem;
+  /* タブが横に並ぶぶん中身の最小幅が広くなる。列幅より広がって
+     ページごと横スクロールしてしまうので、ここで頭を押さえる。
+     はみ出したタブは .ui-tabs 側で切り落とす。 */
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--u-surface);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+  color: var(--u-ink);
+  /* 画面の再現なので、ルートの文字サイズには追随させず px で固定する */
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.ui,
+.ui * {
+  box-sizing: border-box;
+}
+
+/* --- タブ列。4つのビューが同じデータの切り替えであることをここで示す ---------
+   幅に収まらないぶんは切り落とす。実画面でもタブは端で切れるので、
+   語の長い言語（de/fr）で崩れるのではなく「続きがある」ように見える。 */
+.ui-tabs {
+  display: flex;
+  align-items: stretch;
+  height: 38px;
+  padding: 0 6px;
+  border-bottom: 1px solid var(--u-line);
+  background-color: var(--u-bg);
+  overflow: hidden;
+}
+
+.ui-tab {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  border-bottom: 2px solid transparent;
+  color: var(--u-ink-2);
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ui-tab.is-on {
+  border-bottom-color: var(--u-blue-ink);
+  border-radius: 8px 8px 0 0;
+  background-color: var(--u-surface);
+  color: var(--u-blue-ink);
+}
+
+/* タブのアイコン。currentColor の矩形を重ねて作るので画像を持たない */
+.ui-ti {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor),
+    linear-gradient(currentColor, currentColor);
+}
+
+.ui-ti.tg {
+  background-size: 7px 2px, 10px 2px, 5px 2px, 0 0;
+  background-position: 0 1px, 2px 5px, 4px 9px, 0 0;
+}
+
+.ui-ti.tk {
+  background-size: 2px 11px, 2px 7px, 2px 9px, 0 0;
+  background-position: 1px 1px, 5px 4px, 9px 2px, 0 0;
+}
+
+.ui-ti.tn {
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  background-size: 5px 1.5px, 3px 1.5px, 0 0, 0 0;
+  background-position: 1.5px 2px, 1.5px 5px, 0 0, 0 0;
+}
+
+.ui-ti.tw {
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  background-size: 4px 3px, 3px 5px, 0 0, 0 0;
+  background-position: 1.5px 1.5px, 1.5px 5px, 0 0, 0 0;
+}
+
+.ui-ti.tx {
+  background-size: 5px 5px, 5px 5px, 5px 5px, 5px 5px;
+  background-position: 0 0, 7px 0, 0 7px, 7px 7px;
+}
+
+.ui-view {
+  height: 330px;
+  overflow: hidden;
+  background-color: var(--u-bg);
+}
+
+/* ==========================================================================
+   共通のタスクカード。カンバンと優先度マトリクスで同じ部品が出るのは
+   実画面でも同じカードコンポーネントを使っているため。
+   ========================================================================== */
+.uic {
+  padding: 9px 10px;
+  border: 1px solid var(--u-line);
+  border-left: 3px solid var(--uic-c, #5b9bf0);
+  border-radius: 8px;
+  background-color: var(--u-surface);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.uic.is-on {
+  border-color: var(--u-blue);
+  box-shadow: 0 0 0 1px var(--u-blue), 0 3px 10px rgba(59, 130, 246, 0.2);
+}
+
+/* カード左端の色は所属する工程のもの */
+.uic.ac-blue { --uic-c: #4a90e8; }
+.uic.ac-purple { --uic-c: #a855f7; }
+.uic.ac-amber { --uic-c: #f0a52e; }
+
+.uic-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.uic-pill {
+  min-width: 0;
+  padding: 2px 7px;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: var(--u-shade);
+  color: var(--u-ink-2);
+  font-size: 9.5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.uic-score {
+  margin-left: auto;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background-color: var(--u-shade);
+  color: var(--u-ink-2);
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.uic-t {
+  margin-top: 7px;
+  overflow: hidden;
+  color: var(--u-ink);
+  font-size: 12.5px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.uic-tags {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.u-tag {
+  padding: 2px 7px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.u-tag.tg-front { background-color: #4a90e8; }
+.u-tag.tg-design { background-color: #a855f7; }
+.u-tag.tg-imp { background-color: #f0803c; }
+
+.uic-foot {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--u-line);
+}
+
+.uic-sp { flex: 1; }
+
+/* 期日チップ。実画面と同じく赤系で、遅れているかどうかが目に留まるようにしてある */
+.u-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 5px;
+  background-color: var(--u-red-soft);
+  color: #e0574c;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.u-cal {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border: 1.2px solid currentColor;
+  border-top-width: 3px;
+  border-radius: 2px;
+}
+
+/* 優先度バッジ。ローマ数字が象限、隣の数字が優先度スコア */
+.u-pb {
+  display: inline-flex;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 4px;
+  background-color: #f4685f;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.u-pb.p2 { background-color: #4a90e8; }
+
+.u-pri {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--u-ink);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.u-av {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.u-av.a1 { background-color: #22c55e; }
+.u-av.a2 { background-color: #a855f7; }
+
+.uic-prog {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+}
+
+.u-track {
+  flex: 1;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: #eceff3;
+}
+
+.u-track i {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 3px;
+  background-color: #4c6ef5;
+}
+
+.u-track i.p20 { width: 20%; }
+.u-track i.p40 { width: 40%; }
+
+.uic-pct {
+  color: var(--u-ink-2);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   1. ガントチャート — 「実装」グループの3行だけを切り出す
+   ========================================================================== */
+/* 行が4つしかないぶん、他のビューより低く切り出す（下の余白は実画面にもある） */
+.gv {
+  display: grid;
+  height: 260px;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  background-color: var(--u-surface);
+}
+
+.gv-tbl {
+  min-width: 0;
+  border-right: 1px solid var(--u-line);
+}
+
+.gv-hrow,
+.gv-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 52px 74px 46px;
+  align-items: center;
+  height: 30px;
+  border-bottom: 1px solid var(--u-line-soft);
+}
+
+/* 左の見出しは、右の「月」「週」2段ぶんの高さを1セルで受ける */
+.gv-hrow {
+  height: 50px;
+  border-bottom: 1px solid var(--u-line);
+  background-color: var(--u-bg);
+  color: var(--u-ink-2);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.gv-hrow > *,
+.gv-row > * {
+  padding: 0 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gv-hrow > * + *,
+.gv-row > * + * {
+  text-align: center;
+}
+
+.gv-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--u-ink);
+}
+
+.gv-row.is-group .gv-name { font-weight: 700; }
+.gv-row:not(.is-group) .gv-name { padding-left: 20px; }
+
+.gv-caret {
+  width: 0;
+  height: 0;
+  flex: none;
+  border: 4px solid transparent;
+  border-top-color: var(--u-ink-3);
+  transform: translateY(2px);
+}
+
+/* 選択行。左端の橙の線と淡い青の帯は表とタイムラインの両方に掛ける */
+.gv-row.is-sel {
+  background-color: var(--u-blue-soft);
+  box-shadow: inset 3px 0 0 var(--u-amber);
+}
+
+.gv-date { color: var(--u-ink-2); font-size: 11px; }
+.gv-num { color: var(--u-ink-2); font-size: 11px; }
+
+.gv-tl {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.gv-th,
+.gv-tw {
+  display: grid;
+  height: 25px;
+  background-color: var(--u-bg);
+}
+
+.gv-th { grid-template-columns: repeat(2, 1fr); border-bottom: 1px solid var(--u-line-soft); }
+.gv-tw { grid-template-columns: repeat(5, 1fr); border-bottom: 1px solid var(--u-line); }
+
+.gv-th span,
+.gv-tw span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.gv-th span {
+  border-right: 1px solid var(--u-line);
+  color: var(--u-ink-2);
+  font-size: 11px;
+}
+
+.gv-tw span { color: var(--u-ink-3); font-size: 10.5px; }
+
+/* 週の区切り線。行が尽きた下も引き続き描かれるのは実画面と同じ */
+.gv-lanes {
+  position: relative;
+  flex: 1;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--u-line-soft) 0 1px,
+    transparent 1px 20%
+  );
+}
+
+.gv-lane { position: relative; height: 30px; }
+.gv-lane.is-sel { background-color: var(--u-blue-soft); }
+
+.gv-bar,
+.gv-sum {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gv-bar {
+  height: 16px;
+  border-radius: 4px;
+  background-color: #5b9bf0;
+}
+
+/* 親行のサマリーバー。子の期間を束ねた帯なので塗りを淡くしてある */
+.gv-sum {
+  display: flex;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: var(--u-amber-soft);
+  color: #cf9227;
+  font-size: 10.5px;
+  font-weight: 700;
+}
+
+.gv-lane em {
+  position: absolute;
+  top: 50%;
+  color: var(--u-ink-2);
+  font-size: 10.5px;
+  font-style: normal;
+  white-space: nowrap;
+  transform: translateY(-50%);
+}
+
+/* 7/20 を左端とした5週ぶん（35日）を 100% とみなした位置 */
+.gv-lane:nth-child(1) .gv-sum { left: 22.9%; width: 45.7%; }
+.gv-lane:nth-child(2) .gv-bar { left: 22.9%; width: 11.4%; }
+.gv-lane:nth-child(2) em { left: 36%; }
+.gv-lane:nth-child(3) .gv-bar { left: 34.3%; width: 17.1%; }
+.gv-lane:nth-child(3) em { left: 53%; }
+.gv-lane:nth-child(4) .gv-bar { left: 51.4%; width: 20%; }
+.gv-lane:nth-child(4) em { left: 73%; }
+
+/* 依存線。前工程の終わりと次の始まりが同じ日なので縦一本になる */
+.gv-dep {
+  position: absolute;
+  left: 34.3%;
+  top: 45px;
+  width: 1px;
+  height: 24px;
+  background-color: #b6bfcc;
+}
+
+.gv-dep::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: -3px;
+  border: 3.5px solid transparent;
+  border-top-color: #b6bfcc;
+}
+
+.gv-today {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 38%;
+  width: 1.5px;
+  background-color: var(--u-red);
+}
+
+.gv-today i {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background-color: var(--u-red);
+  color: #fff;
+  font-size: 9.5px;
+  font-style: normal;
+  font-weight: 700;
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+/* ==========================================================================
+   2. カンバン — 3列ぶん。中央の列の1枚が当該タスク
+   ========================================================================== */
+.kv {
+  display: grid;
+  align-content: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+
+.kv-col {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+
+.kv-col.c1 { --kc: #a855f7; --kc-soft: #f4ebfd; }
+.kv-col.c2 { --kc: #f0a52e; --kc-soft: #fdf1de; }
+.kv-col.c3 { --kc: #f4685f; --kc-soft: #fdeceb; }
+
+.kv-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-top: 3px solid var(--kc);
+  border-radius: 10px 10px 0 0;
+  background-color: var(--kc-soft);
+}
+
+.kv-name {
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kv-count { color: var(--u-ink-2); font-size: 11px; font-weight: 600; }
+
+.kv-body {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* 列のアイコン。実画面の目／再生／虫眼鏡を図形だけで作る */
+.kv-ic {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex: none;
+  color: var(--kc);
+}
+
+.kv-ic.eye {
+  height: 10px;
+  margin-top: 2px;
+  border: 1.5px solid currentColor;
+  border-radius: 50% / 60%;
+}
+
+.kv-ic.play {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  border: 5px solid transparent;
+  border-left-color: currentColor;
+}
+
+.kv-ic.search::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.kv-ic.search::after {
+  content: '';
+  position: absolute;
+  right: 1px;
+  bottom: 1px;
+  width: 5px;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: rotate(45deg);
+}
+
+/* ==========================================================================
+   3. ノート — 左のアウトラインと、当該タスクの本文
+   ========================================================================== */
+.nv {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  background-color: var(--u-surface);
+}
+
+.nv-side {
+  min-width: 0;
+  padding: 10px;
+  overflow: hidden;
+  border-right: 1px solid var(--u-line);
+}
+
+.nv-search {
+  display: flex;
+  height: 26px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px;
+  border: 1px solid var(--u-line);
+  border-radius: 6px;
+  color: var(--u-ink-3);
+  font-size: 10.5px;
+}
+
+.nv-search i {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border: 1.4px solid currentColor;
+  border-radius: 50%;
+}
+
+.nv-tree { margin-top: 8px; }
+
+.nv-node {
+  display: flex;
+  height: 24px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 6px;
+  overflow: hidden;
+  border-radius: 5px;
+  color: var(--u-ink);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.nv-node.lv2 { padding-left: 16px; }
+.nv-node.lv3 { padding-left: 30px; color: var(--u-ink-2); }
+.nv-node.lv1 { font-weight: 600; }
+
+.nv-node.is-on {
+  background-color: var(--u-blue-soft);
+  color: var(--u-blue-ink);
+  font-weight: 700;
+}
+
+.nv-node > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.u-doc {
+  width: 10px;
+  height: 12px;
+  flex: none;
+  border: 1.2px solid var(--u-ink-3);
+  border-radius: 2px;
+}
+
+.nv-node.is-on .u-doc { border-color: var(--u-blue-ink); }
+
+/* ノートが書かれているタスクの印 */
+.nv-dot,
+.nv-count { margin-left: auto; flex: none; }
+
+.nv-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--u-green);
+}
+
+.nv-count { color: var(--u-ink-3); font-size: 10px; }
+
+.nv-main {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.nv-bar {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--u-line);
+  color: var(--u-ink-2);
+  font-size: 11px;
+}
+
+.nv-sel {
+  display: flex;
+  height: 22px;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px solid var(--u-line);
+  border-radius: 5px;
+}
+
+.nv-fmt { display: flex; gap: 10px; font-weight: 700; }
+.nv-fmt i { font-style: normal; }
+.nv-fmt i:nth-child(2) { font-style: italic; }
+.nv-fmt i:nth-child(3) { text-decoration: underline; }
+.nv-chars { margin-left: auto; color: var(--u-ink-3); font-size: 10.5px; }
+
+/* 本文。左の縦線と丸は、タスクの並び順を示す実画面のレール */
+.nv-doc {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px 0 24px;
+  overflow: hidden;
+}
+
+.nv-doc::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #cfe9da;
+}
+
+.nv-doc::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 40px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--u-surface);
+  border-radius: 50%;
+  background-color: var(--u-green);
+}
+
+.nv-crumb { color: var(--u-ink-3); font-size: 10.5px; }
+
+.nv-h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.nv-h1 i {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  border-radius: 7px;
+  background-color: var(--u-green-soft);
+}
+
+.nv-h1 i::before {
+  content: '';
+  width: 11px;
+  height: 14px;
+  border: 1.5px solid var(--u-green);
+  border-radius: 2px;
+}
+
+.nv-h1 b {
+  overflow: hidden;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nv-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  color: var(--u-ink-2);
+  font-size: 10.5px;
+  white-space: nowrap;
+}
+
+.nv-meta > span { display: inline-flex; align-items: center; gap: 5px; }
+
+.nv-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 165px;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--u-line);
+}
+
+.nv-body h4 {
+  margin: 0 0 8px;
+  color: var(--u-ink);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.nv-body p {
+  margin: 0 0 6px;
+  color: #33404f;
+  font-size: 11.5px;
+}
+
+.nv-body ul { margin: 0 0 6px; padding-left: 17px; }
+
+.nv-body li {
+  margin-bottom: 3px;
+  color: #33404f;
+  font-size: 11.5px;
+  list-style: disc;
+}
+
+.nv-todo {
+  align-self: start;
+  padding: 9px 10px;
+  border: 1px solid var(--u-line);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+
+.nv-todo-h {
+  display: flex;
+  align-items: center;
+  color: var(--u-blue-ink);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.nv-todo-h span {
+  margin-left: auto;
+  color: var(--u-ink-3);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.nv-todo-r {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  font-size: 10.5px;
+}
+
+.nv-todo-r i {
+  width: 15px;
+  height: 15px;
+  flex: none;
+  border: 1.4px solid var(--u-blue);
+  border-radius: 50%;
+}
+
+.nv-todo-r b { margin-left: auto; color: var(--u-ink-3); font-weight: 600; }
+
+.nv-add {
+  margin-top: 7px;
+  padding-left: 22px;
+  color: var(--u-ink-3);
+  font-size: 10px;
+}
+
+/* ==========================================================================
+   4. 優先度マトリクス — 4象限とカード3枚。右上（重要かつ緊急）が当該タスク
+   ========================================================================== */
+.xv { padding: 14px; }
+
+.xv-plane {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--u-line);
+  border-radius: 12px;
+  background-color: var(--u-surface);
+}
+
+.xv-plane::before,
+.xv-plane::after {
+  content: '';
+  position: absolute;
+  border-color: #dfe3e9;
+  border-style: dashed;
+  border-width: 0;
+}
+
+.xv-plane::before { left: 7%; right: 7%; top: 50%; border-top-width: 1px; }
+.xv-plane::after { top: 7%; bottom: 7%; left: 50%; border-left-width: 1px; }
+
+/* 象限の番号は下地の一部。カードより後ろに置く */
+.xv-q {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+}
+
+.xv-q b {
+  display: block;
+  color: #eff1f4;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.xv-q span {
+  display: block;
+  margin-top: 4px;
+  color: #e6eaef;
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.xv-q.q1 { left: 50%; top: 14%; }
+.xv-q.q2 { left: 0; top: 14%; }
+.xv-q.q3 { left: 50%; top: 60%; }
+.xv-q.q4 { left: 0; top: 60%; }
+
+.xv-ax {
+  position: absolute;
+  color: var(--u-ink-3);
+  font-size: 10.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.xv-ax.t { top: 7px; left: 50%; transform: translateX(-50%); }
+.xv-ax.b { bottom: 7px; left: 50%; transform: translateX(-50%); }
+.xv-ax.l { left: 8px; top: 50%; transform: translateY(-50%); }
+.xv-ax.r { right: 8px; top: 50%; transform: translateY(-50%); }
+
+.xv .uic { position: absolute; width: 172px; }
+.xv .uic.x1 { left: 53%; top: 10%; z-index: 2; }
+.xv .uic.x2 { left: 17%; top: 20%; }
+.xv .uic.x3 { left: 57%; top: 50%; }
+
+/* ==========================================================================
+   5. ホワイトボード — 締めのビュー
+
+   ここだけ他より背が高い。左の追従カードがこのボードの .wb-slot まで飛んで
+   着地する（app.js の「カードの着地」）ので、その受け皿ぶんの余白が要る。
+   ========================================================================== */
+.wb {
+  position: relative;
+  /* 締めのビューなので他より背が高い。追従カードが等身大に近いまま
+     着地できるだけの受け皿を、囲いの中に確保する必要がある。 */
+  height: 480px;
+  background-color: #fbfcfd;
+  /* キャンバスのドット方眼 */
+  background-image: radial-gradient(#dfe4ea 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+.wb-links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wb-link {
+  fill: none;
+  stroke: #9aa4b2;
+  stroke-width: 1.2;
+}
+
+/* 着地したときだけ現れるコネクタ。線を自分の長さぶんずらしておき、
+   dashoffset を 0 に戻すことで描かれていくように見せる。 */
+.wb-link-land {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  opacity: 0;
+  transition: stroke-dashoffset 0.7s ease-out, opacity 0.3s ease-out;
+}
+
+.flow.is-landed .wb-link-land {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* 親タスクの「囲い」 */
+.wb-group {
+  position: absolute;
+  left: 3%;
+  top: 6%;
+  width: 33%;
+  padding: 10px;
+  border: 1px solid #9cc0f0;
+  border-radius: 10px;
+  background-color: rgba(147, 190, 245, 0.42);
+}
+
+.wb-group-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 2px 8px;
+  color: #1f2733;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.wb-group-head b {
+  margin-left: auto;
+  padding: 1px 7px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 10px;
+}
+
+.wb-card {
+  padding: 7px 9px;
+  border: 1px solid #bcd4f4;
+  border-radius: 7px;
+  background-color: #e9f1fd;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.07);
+}
+
+.wb-card + .wb-slot,
+.wb-slot + .wb-card {
+  margin-top: 8px;
+}
+
+.wb-card-h {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow: hidden;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.wb-card-h span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wb-card-m {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+  color: #5b6675;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.wb-card-m span:last-child {
+  margin-left: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wb-card-p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.wb-card-p b {
+  color: #5b6675;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* 追従カードの着地点。JS が動く環境では空の枠のままで、
+   そこへ左のカードが飛んでくる。 */
+.wb-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 既定はほぼ正方形。JS が動く環境では、飛んでくるカードの実際の縦横比に
+     合わせて高さを入れ直す（言語によってカードの高さが変わるため）。 */
+  aspect-ratio: 1 / 1;
+  max-height: 250px;
+  border: 1.5px dashed #6d9ddb;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.flow.is-landed .wb-slot {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* JS が飛ばせない環境（モバイル・動きを減らす設定・JS無効）では
+   代わりにここへ静的なカードを出す。枠が空のまま終わらないようにするため。 */
+.wb-slot-card {
+  width: 100%;
+}
+
+.flow[data-flight='on'] .wb-slot-card {
+  display: none;
+}
+
+/* 静的なカードを出す側では、受け皿としての破線も余白も要らない */
+.flow:not([data-flight='on']) .wb-slot {
+  aspect-ratio: auto;
+  max-height: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.wb-note {
+  position: absolute;
+  left: 42%;
+  top: 5%;
+  width: 21%;
+  padding: 10px 11px;
+  border-radius: 3px;
+  background-color: #f79b4e;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.16);
+  color: #3d2508;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+/* キャンバスへの書き込み。カードでも図形でもない自由テキスト */
+.wb-text {
+  position: absolute;
+  left: 41%;
+  top: 38%;
+  color: #303a47;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.wb-widget {
+  position: absolute;
+  left: 67%;
+  top: 22%;
+  width: 30%;
+  padding: 10px 11px;
+  border: 1px solid #e6e9ee;
+  border-radius: 9px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+}
+
+.wb-w-h {
+  display: flex;
+  align-items: center;
+  color: #1f2733;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.wb-w-h b {
+  margin-left: auto;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background-color: #f1f3f6;
+  color: #5b6675;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.wb-w-n {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 8px;
+}
+
+.wb-w-n div { display: flex; flex-direction: column; }
+.wb-w-n div.r { margin-left: auto; align-items: flex-end; }
+.wb-w-n span { color: #97a1ae; font-size: 9.5px; }
+.wb-w-n strong { color: #1f2733; font-size: 19px; font-weight: 800; line-height: 1.1; }
+
+.wb-w-bar {
+  display: block;
+  height: 4px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background-color: #eceff3;
+}
+
+.wb-w-bar i {
+  display: block;
+  width: 22%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #f4685f;
+}
+
+.wb-w-late { margin-top: 6px; color: #e0574c; font-size: 10px; font-weight: 700; }
+.wb-w-done { margin-top: 5px; color: #5b6675; font-size: 10px; }
+
+/* --- 飛んでくるカード側 ---------------------------------------------------
+   .flow-card は sticky のまま transform だけを載せる。JS は毎スクロール
+   着地点の現在位置を測り直すので、ボードが動いてもカードは追従する。 */
+.flow[data-flight='on'] .flow-card {
+  z-index: 3;
+  will-change: transform;
+  /* スクロールイベントは間隔が粗いので、間を少しだけ補間して滑らかにする */
+  transition: border-color 0.35s ease, transform 0.14s linear, box-shadow 0.4s ease;
+}
+
+.flow.is-landed .flow-card {
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.28);
+}
+
+/* 着地したらスクロールを促す文言は役目を終える。ここで display を切ると
+   カードの高さが変わって着地点の計算がずれるので、透明にするだけにする。 */
+.flow.is-landed .flow-card-hint {
+  opacity: 0;
+}
+
+.flow-card-hint {
+  transition: opacity 0.3s ease;
+}
+
+
+
+/* --- 狭い画面 ------------------------------------------------------------- */
+/* sticky 2カラムが成立しないので、カードをヘッダー直下に帯状で固定して
+   項目を横並びのチップにする。増えていく様子はスマホでも見え続ける。 */
 @media (max-width: 900px) {
-  .views-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
   }
 
+  .flow-card-col {
+    position: sticky;
+    top: 80px;
+    z-index: 5;
+    /* 帯の下に本文が透けないように、セクション背景で塞ぐ */
+    background-color: var(--bg-main);
+    padding: 0.75rem 0;
+  }
+
+  .flow-card {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+  }
+
+  .flow-card-hint {
+    display: none;
+  }
+
+  .flow-card-title {
+    margin-bottom: 0;
+    font-size: 0.92rem;
+  }
+
+  .flow-field,
+  .flow-field[data-step='1'] {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    font-size: 0.78rem;
+  }
+
+  .flow-field-label {
+    min-width: 0;
+  }
+
+  .flow-field-value {
+    font-size: 0.78rem;
+  }
+
+  .flow-step {
+    min-height: 0;
+    padding: 2.5rem 0;
+  }
+
+  .flow-step-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* 実画面モックは縮小せず、幅に入らない列を落として「もっと狭い切り出し」にする。
+   縮小すると結局スクリーンショットと同じで文字が読めなくなるため。
+   .flow が1カラムになる 900px ではモックはまだ画面幅いっぱいを使えるので、
+   実際に足りなくなる幅まで待ってから間引く。 */
+@media (max-width: 700px) {
+  .ui-view {
+    height: 300px;
+  }
+
+  .gv {
+    height: 210px;
+    grid-template-columns: minmax(0, 150px) minmax(0, 1fr);
+  }
+
+  .gv-hrow,
+  .gv-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gv-hrow > * + *,
+  .gv-row > * + *,
+  .gv-lane em,
+  .kv-col.c3,
+  .nv-side,
+  .nv-todo,
+  .xv-q span,
+  .xv .uic.x2 {
+    display: none;
+  }
+
+  .kv {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nv,
+  .nv-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* カードを減らしたぶん、残る2枚を象限がはっきり分かる位置に置き直す */
+  .xv .uic {
+    width: 150px;
+  }
+
+  /* ホワイトボードは付箋と自由テキストを落として、囲いと集計だけ残す */
+  .wb { height: 400px; }
+  .wb-note,
+  .wb-text,
+  .wb-links { display: none; }
+  .wb-group { left: 2%; width: 52%; }
+  .wb-widget { left: 56%; top: 6%; width: 42%; }
+
+  .xv .uic.x1 { left: 46%; top: 8%; }
+  .xv .uic.x3 { left: 26%; top: 56%; }
+}
+
+/* 段階表示そのものは情報なので残し、動きだけを止める */
+@media (prefers-reduced-motion: reduce) {
+  .flow-card,
+  .flow[data-enhanced] .flow-field {
+    transition: none;
+  }
 }
 
 /* Responsive: モバイルは1カラム */
@@ -1797,8 +2946,7 @@ button {
     gap: 1rem;
   }
 
-  .security-section,
-  .views-section {
+  .security-section {
     padding: 3rem 0;
   }
 }
