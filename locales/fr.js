@@ -2,8 +2,8 @@ export default {
   locale: "fr",
   screenshotFolder: "en-us",
   meta: {
-    title: "Planification de projet & Gantt Ploto | Fonctions essentielles toujours gratuites, Hors ligne",
-    description: "Ploto est un outil hors ligne de planification de projet et de diagramme de Gantt, sans compte. Diagramme de Gantt, matrice de priorité, notes et autres outils essentiels pour un usage quotidien ou professionnel restent gratuits sans limite de durée. Les données de projet sont stockées dans des fichiers .ploto sur votre PC et ne sont pas envoyées automatiquement à des serveurs externes. Windows 10/11."
+    title: "Gestion de projet & Gantt Ploto | Achat unique, sans abonnement, fonctions essentielles gratuites",
+    description: "Ploto est un outil de gestion de projet et de diagramme de Gantt qu'une seule personne peut installer et utiliser immédiatement. Sans abonnement ni compte : diagramme de Gantt, tableaux Kanban, matrice de priorités, notes et tableaux blancs restent gratuits sans limite de durée. Pro s'ajoute en achat unique, uniquement pour ce dont vous avez besoin en plus. Les données de projet sont stockées dans des fichiers .ploto sur votre PC et ne sont pas envoyées automatiquement à des serveurs externes. Windows 10/11."
   },
   i18n: {
     nav_features: "Fonctionnalités",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "Manuel",
     cta_download: "Téléchargement gratuit",
 
-    hero_badge: "🏢 Pour les équipes dont l'usage du cloud est limité | Exécution locale | Fonctions essentielles toujours gratuites",
-    hero_title: 'Gérer des plannings sur Excel ?<br><span class="text-gradient">Dites adieu au désordre.</span>',
-    hero_desc: "Impossible d'utiliser des services cloud ? Frustré par les feuilles Excel lentes ? Ploto est une application de gestion de projet hors ligne disponible dans le Microsoft Store. Diagramme de Gantt, matrice de priorité, notes et autres outils essentiels pour un usage quotidien ou professionnel restent gratuits sans limite de durée.",
+    hero_badge: "💡 Adoptable par une seule personne | Fonctions essentielles toujours gratuites | Achat unique, sans abonnement",
+    hero_title: 'Une vraie gestion de projet,<br><span class="text-gradient">sans abonnement mensuel.</span>',
+    hero_desc: "La plupart des outils de gestion de projet supposent un abonnement mensuel : même pour l'utiliser seul, il faut une validation. Et un planning bâti dans Excel devient si pénible à tenir à jour qu'on ne s'en sert plus. Ploto est fait pour vous. Il suffit de l'installer depuis le Microsoft Store. Sans compte ni frais mensuels : diagramme de Gantt, tableaux Kanban, matrice de priorités, notes, tableaux blancs et les autres fonctions essentielles restent gratuits.",
     hero_cta_download: "Télécharger gratuitement",
     hero_cta_manual: "Voir le manuel",
-    hero_meta: "<span>✓ Sans compte · Fonctions essentielles gratuites</span><span>✓ Sans limite de durée, même pour un usage professionnel</span><span>✓ Données de projet stockées sur votre PC</span>",
+    hero_meta: "<span>✓ Sans compte · Fonctions essentielles gratuites</span><span>✓ Achat unique · Sans frais mensuels</span><span>✓ Données de projet stockées sur votre PC</span>",
 
     mock_tab_gantt: "Diagramme de Gantt",
     mock_tab_kanban: "Tableau Kanban",
@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III : urgent, non important",
     mock_q4: "Quadrant IV : ni urgent ni important",
 
-    features_title: "Une tâche qui s'enrichit en traversant cinq écrans",
-    features_subtitle: "La carte de gauche est la même tâche unique du début à la fin. Chaque écran traversé y ajoute ce que vous y avez décidé. Rien n'est jamais recopié.",
+    features_title: "La même tâche prend une forme différente dans chaque écran",
+    features_subtitle: "Vous ne la créez qu'une fois : une barre dans le planning, une carte dans le Kanban et une page dans les notes. Chaque écran présente les mêmes données sous la forme qui lui convient naturellement.",
     feat_alert_title: "Alerte de statut en 3 couleurs",
     feat_alert_desc: "Met automatiquement en évidence les tâches en rouge (en retard), jaune (retardées) ou vert (dans les temps). Repérez les goulots d'étranglement sans vérifications manuelles.",
     feat_cal_title: "Jours fériés & Calendriers d'entreprise",
@@ -84,7 +84,6 @@ export default {
     feat_auto_desc: "Reliez les tâches entre elles et activez la planification automatique : si une étape prend du retard, toutes les suivantes se décalent. La durée et l'avancement des tâches parentes se calculent d'emblée à partir des sous-tâches — plus besoin de retoucher tout le tableau à chaque changement.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
-    flow_card_hint: "Continuez à faire défiler : cette tâche unique s'enrichit",
     flow_task_name: "Développement de la page d'accueil",
     flow_field_period_value: "1/8 → 6/8",
     flow_field_period_label: "Dates",
@@ -95,7 +94,6 @@ export default {
     flow_field_priority_label: "Priorité",
     flow_field_priority_value: "Important et urgent",
     flow_free_note_label: "Version gratuite",
-    flow_closing_note: "Déplacez par exemple une carte dans la colonne « Développement » : l'étape de la tâche change, et la même information apparaît dans le tableau du planning comme dans les ToDo des notes. Quel que soit le nombre de vues, les données restent uniques.",
     mock_kanban_col1: "Design",
     mock_kanban_col2: "Développement",
     mock_kanban_col3: "Revue",
@@ -108,8 +106,8 @@ export default {
     feature_kanban_p1_desc: "Déplacez la carte d'une colonne à l'autre. Aucun champ d'avancement à retrouver ni à ressaisir.",
     feature_kanban_p2_title: "Chaque étape apporte sa checklist",
     feature_kanban_p2_desc: "Enregistrez une liste type sur une colonne : chaque carte qui entre dans cette étape la reçoit. Plus rien à réécrire à chaque fois.",
-    feature_kanban_p3_title: "Filtrer par responsable ou par échéance",
-    feature_kanban_p3_desc: "N'affichez que ce qui vous revient, ou seulement cette semaine. Un tableau chargé se réduit à ce que vous devez regarder.",
+    feature_kanban_p3_title: "Filtrer par projet, responsable ou étiquette",
+    feature_kanban_p3_desc: "Sur un tableau chargé, ne gardez que ce qui compte. Filtrez par projet (le planning auquel la tâche appartient), responsable ou étiquette, et recherchez par nom de tâche.",
     feature_note_title: "Consigner ce qui a été décidé sur la tâche elle-même",
     feature_note_lead: "Le plan de gauche reprend la hiérarchie du planning, déjà transformée en chapitres : vous n'avez jamais à construire vous-même la structure d'un compte rendu. Ce que vous écrivez appartient à la tâche, donc plus besoin de rechercher ensuite de quelle tâche relevait telle discussion.",
     feature_note_p1_title: "Les chapitres existent déjà",
@@ -179,8 +177,8 @@ export default {
     plan_compare_license_note: "* Les limites de tableaux ne s'appliquent qu'à la création. Un fichier contenant des tableaux créés avec Pro s'ouvre et se modifie normalement sans Pro. Un code de série peut être enregistré sur plusieurs de vos appareils et, une fois enregistré, il se valide hors ligne.",
 
     pricing_badge: "💡 Achat unique, sans abonnement",
-    pricing_title: "Au quotidien comme au travail, l'essentiel reste gratuit.<br>Ajoutez Pro une fois, seulement si vous en voulez plus.",
-    pricing_desc: "Ploto garde gratuits sans limite de durée les outils essentiels de planification au quotidien et au travail, notamment le diagramme de Gantt, la matrice de priorité et les notes. Ajoutez Pro en achat unique uniquement si vous avez besoin de plus de tableaux Kanban et de tableaux blancs, de références, de l'export Excel / PDF ou d'autres fonctions avancées. Pro n'a aucun frais mensuel ou annuel et s'achète dans le Microsoft Store ou sur le web (Stripe).",
+    pricing_title: "Ni par utilisateur, ni par mois.<br>L'essentiel reste gratuit ; vous n'achetez qu'une fois ce qu'il vous faut.",
+    pricing_desc: "La plupart des services de gestion de projet facturent par utilisateur et par mois, aussi longtemps que vous les utilisez. Ploto garde gratuits sans limite de durée les outils essentiels de planification au quotidien et au travail, notamment le diagramme de Gantt, la matrice de priorité et les notes. Ajoutez Pro en achat unique uniquement si vous avez besoin de plus de tableaux Kanban et de tableaux blancs, de références, de l'export Excel / PDF ou d'autres fonctions avancées. Pro n'a aucun frais mensuel ou annuel et s'achète dans le Microsoft Store ou sur le web (Stripe).",
     pricing_model_label: "Modèle tarifaire",
     pricing_model_value: "Achat unique (sans abonnement)",
     pricing_buy_label: "Où acheter",
@@ -199,8 +197,8 @@ export default {
     feedback_sending: "Envoi...",
     feedback_error: "Une erreur s'est produite pendant l'envoi. Veuillez vérifier l'URL d'action.",
 
-    dl_title: "Simplifiez votre gestion de projet maintenant",
-    dl_desc: "Téléchargez l'application et découvrez une gestion de projet fluide et hors ligne dès aujourd'hui.",
+    dl_title: "Commencez aujourd'hui, par vous-même",
+    dl_desc: "Sans compte ni contrat mensuel. Téléchargez l'application : toutes les fonctions essentielles sont gratuites dès le premier jour.",
     dl_win_sub: "Disponible sur",
     dl_win_exe: "Installateur Windows",
     dl_notes: "* Compatible avec Windows 10/11. Livré avec SQLite 3.",
@@ -210,7 +208,7 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Gestion des données et sécurité",
-    security_subtitle: "Dans les environnements où les outils cloud sont limités, Ploto permet un fonctionnement où les données de projet restent sur le PC. Vérifiez le déploiement selon les règles de votre organisation.",
+    security_subtitle: "Les données de projet sont enregistrées dans un fichier sur votre propre PC, aussi bien sur une machine personnelle que dans un environnement de travail où le cloud est limité. Pour un déploiement en organisation, vérifiez selon vos propres règles.",
     security_c1_title: "Données de projet stockées sur votre PC",
     security_c1_desc: "Les données de projet sont stockées dans un fichier .ploto sur votre PC. Ploto ne les envoie pas automatiquement à des serveurs externes. Vous pouvez gérer le stockage et le partage du fichier selon les règles de votre environnement.",
     security_c2_title: "Distribution via le Microsoft Store",

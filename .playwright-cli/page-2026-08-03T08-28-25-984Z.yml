@@ -1,0 +1,567 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Ploto Logo Ploto" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "Ploto Logo" [ref=e5]
+        - generic [ref=e6]: Ploto
+      - navigation [ref=e7]:
+        - link "特徴" [ref=e8] [cursor=pointer]:
+          - /url: "#features"
+        - link "マニュアルを見る" [ref=e9] [cursor=pointer]:
+          - /url: "#manual"
+        - link "料金" [ref=e10] [cursor=pointer]:
+          - /url: "#pricing"
+      - generic [ref=e11]:
+        - button "言語を選択" [ref=e13] [cursor=pointer]:
+          - generic [ref=e14]: JA
+        - button "Toggle Dark Mode" [ref=e15] [cursor=pointer]
+        - link "無料ダウンロード" [ref=e22] [cursor=pointer]:
+          - /url: "#download"
+  - navigation "モバイルナビゲーション" [ref=e23]:
+    - link "特徴" [ref=e24] [cursor=pointer]:
+      - /url: "#features"
+    - link "マニュアルを見る" [ref=e25] [cursor=pointer]:
+      - /url: "#manual"
+    - link "料金" [ref=e26] [cursor=pointer]:
+      - /url: "#pricing"
+    - link "無料ダウンロード" [ref=e28] [cursor=pointer]:
+      - /url: "#download"
+  - main [ref=e29]:
+    - generic [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]: 🏢 クラウド利用を制限している現場向け｜ローカル動作｜主要機能は無料
+        - heading "Excelの工程管理、 そろそろ卒業しませんか？" [level=1] [ref=e34]: Excelの工程管理、そろそろ卒業しませんか？
+        - paragraph [ref=e35]: 「クラウドサービスを利用できない」「重いExcelでの工程管理に限界を感じている」そんな現場に。PlotoはMicrosoft Storeからインストールできる、オフライン対応のプロジェクト管理ソフトです。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。
+        - generic [ref=e36]:
+          - link "無料で手に入れる" [ref=e37] [cursor=pointer]:
+            - /url: "#download"
+          - link "マニュアルを見る" [ref=e38] [cursor=pointer]:
+            - /url: "#manual"
+        - generic [ref=e39]:
+          - generic [ref=e40]: ✓ アカウント登録不要・主要機能は無料
+          - generic [ref=e41]: ✓ 日常・業務利用でも期限なし
+          - generic [ref=e42]: ✓ プロジェクトデータはPC内に保存
+      - img "Plotoのガントチャート画面" [ref=e45]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - heading "同じ1件のタスクが、画面ごとに違う姿で出てくる" [level=2] [ref=e49]
+        - paragraph [ref=e50]: 登録するのは1件。工程表では1本のバー、カンバンでは1枚のカード、ノートでは1ページ。同じデータを、その画面にとって自然な形で見せています。
+      - list [ref=e52]:
+        - listitem [ref=e53]:
+          - generic [ref=e55]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: ガントチャート
+              - generic [ref=e60]: カンバンボード
+              - generic [ref=e63]: ノート
+              - generic [ref=e66]: 優先度マトリクス
+              - generic [ref=e69]: ホワイトボード
+            - generic [ref=e72]:
+              - generic [ref=e73]:
+                - generic [ref=e74]:
+                  - generic [ref=e75]: タスク名
+                  - generic [ref=e76]: 優先度
+                  - generic [ref=e77]: 開始日
+                  - generic [ref=e78]: 期間
+                - generic [ref=e79]:
+                  - generic [ref=e80]: 実装
+                  - generic [ref=e83]:
+                    - generic [ref=e84]: I
+                    - text: "66"
+                  - generic [ref=e85]: 2026-07-28
+                  - generic [ref=e86]: "17"
+                - generic [ref=e87]:
+                  - generic [ref=e88]: フロント基盤構築
+                  - generic [ref=e89]:
+                    - generic [ref=e90]: I
+                    - text: "52"
+                  - generic [ref=e91]: 2026-07-28
+                  - generic [ref=e92]: "4"
+                - generic [ref=e93]:
+                  - generic [ref=e94]: トップページ実装
+                  - generic [ref=e95]:
+                    - generic [ref=e96]: I
+                    - text: "78"
+                  - generic [ref=e97]: 2026-08-01
+                  - generic [ref=e98]: "6"
+                - generic [ref=e99]:
+                  - generic [ref=e100]: CMS連携
+                  - generic [ref=e101]:
+                    - generic [ref=e102]: II
+                    - text: "56"
+                  - generic [ref=e103]: 2026-08-07
+                  - generic [ref=e104]: "7"
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: 2026年7月
+                  - generic [ref=e108]: 2026年8月
+                - generic [ref=e109]:
+                  - generic [ref=e110]: 7/20
+                  - generic [ref=e111]: 7/27
+                  - generic [ref=e112]: 8/3
+                  - generic [ref=e113]: 8/10
+                  - generic [ref=e114]: 8/17
+                - generic [ref=e115]:
+                  - generic [ref=e116]: 実装
+                  - emphasis [ref=e120]: フロント基盤構築
+                  - emphasis [ref=e123]: トップページ実装
+                  - emphasis [ref=e126]: CMS連携
+                  - generic [ref=e128]: 今日
+          - generic [ref=e130]:
+            - heading "まず、ここでタスクが生まれる" [level=3] [ref=e132]
+            - paragraph [ref=e133]: バーをドラッグして期間を決め、タスク同士を線でつなぐ。ここで作った1件が、このあとのすべての画面に出てきます。日付の計算やセルの結合に手を取られることはありません。
+            - list [ref=e134]:
+              - listitem [ref=e135]:
+                - strong [ref=e136]: 進捗が一目でわかる3色アラート
+                - text: タスクの進行状況を「期限超過（赤）」「開始遅延（黄）」「順調（緑）」の3色で自動判定してライン表示。遅れているタスクを見逃しません。
+              - listitem [ref=e137]:
+                - strong [ref=e138]: 日本の祝日・会社休日の反映
+                - text: 独自の祝日や会社カレンダーを登録可能。土日・祝日の色分け表示により、実際の営業日に合わせた正確なスケジュールを作成できます。
+              - listitem [ref=e139]:
+                - strong [ref=e140]: 1本ずらせば、後ろの予定もついてくる
+                - text: タスク同士を線でつなぎ、オートスケジューリングをオンにすれば、前工程が延びたぶんだけ後続の日程が自動でずれます。親タスクの期間と進捗は最初から子タスクの内容で自動計算。1か所直すたびに表全体を手直しする必要はありません。
+            - link "マニュアルを読む →" [ref=e141] [cursor=pointer]:
+              - /url: /ploto_LP/manual/gantt.html
+        - listitem [ref=e142]:
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: ガントチャート
+              - generic [ref=e149]: カンバンボード
+              - generic [ref=e152]: ノート
+              - generic [ref=e155]: 優先度マトリクス
+              - generic [ref=e158]: ホワイトボード
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - generic [ref=e163]:
+                  - generic [ref=e165]: デザイン
+                  - generic [ref=e166]: "4"
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e169]: デザイン
+                    - generic [ref=e171]: UIデザイン
+                    - generic [ref=e172]: デザイン
+                    - generic [ref=e174]:
+                      - generic [ref=e175]: 2026-06-28
+                      - generic [ref=e177]:
+                        - generic [ref=e178]: I
+                        - text: "63"
+                      - generic [ref=e179]: 佐
+                  - generic [ref=e180]:
+                    - generic [ref=e181]: Webサイトリニューアル
+                    - generic [ref=e183]: デザインシステム構築
+                    - generic [ref=e184]:
+                      - generic [ref=e185]: 2026-07-23
+                      - generic [ref=e187]:
+                        - generic [ref=e188]: II
+                        - text: "58"
+                      - generic [ref=e189]: 佐
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - generic [ref=e193]: 実装
+                  - generic [ref=e194]: "3"
+                - generic [ref=e195]:
+                  - generic [ref=e196]:
+                    - generic [ref=e197]: 実装
+                    - generic [ref=e199]: トップページ実装
+                    - generic [ref=e200]: フロント
+                    - generic [ref=e202]:
+                      - generic [ref=e203]: 2026-08-06
+                      - generic [ref=e205]:
+                        - generic [ref=e206]: I
+                        - text: "78"
+                      - generic [ref=e207]: 鈴
+                  - generic [ref=e208]:
+                    - generic [ref=e209]: Webサイトリニューアル
+                    - generic [ref=e211]: フロント基盤構築
+                    - generic [ref=e212]: フロント
+                    - generic [ref=e214]:
+                      - generic [ref=e215]: 2026-07-31
+                      - generic [ref=e217]:
+                        - generic [ref=e218]: I
+                        - text: "52"
+                      - generic [ref=e219]: 鈴
+              - generic [ref=e220]:
+                - generic [ref=e221]:
+                  - generic [ref=e223]: レビュー
+                  - generic [ref=e224]: "2"
+                - generic [ref=e225]:
+                  - generic [ref=e226]:
+                    - generic [ref=e227]: デザイン
+                    - generic [ref=e229]: ビジュアルデザイン
+                    - generic [ref=e230]:
+                      - generic [ref=e231]: デザイン
+                      - generic [ref=e232]: 重要
+                    - generic [ref=e233]:
+                      - generic [ref=e234]: 2026-07-22
+                      - generic [ref=e236]:
+                        - generic [ref=e237]: I
+                        - text: "82"
+                      - generic [ref=e238]: 佐
+                  - generic [ref=e239]:
+                    - generic [ref=e240]: Webサイトリニューアル
+                    - generic [ref=e242]: ワイヤーフレーム
+                    - generic [ref=e243]:
+                      - generic [ref=e244]: 2026-07-13
+                      - generic [ref=e246]:
+                        - generic [ref=e247]: II
+                        - text: "61"
+                      - generic [ref=e248]: 佐
+          - generic [ref=e249]:
+            - heading "工程を、カードを動かして切り替える" [level=3] [ref=e251]
+            - paragraph [ref=e252]: 同じタスクを「いまどの工程にあるか」の並びで見る画面です。カードを右の列へ動かすと、そのタスクの工程が変わります。工程表の側の表示も同時に変わるので、どちらかを直し忘れることがありません。
+            - list [ref=e253]:
+              - listitem [ref=e254]:
+                - strong [ref=e255]: 動かすだけで状態が変わる
+                - text: カードを列から列へドラッグするだけ。進捗の入力欄を探して数字を打ち直す必要はありません。
+              - listitem [ref=e256]:
+                - strong [ref=e257]: 工程ごとの標準ToDoが付く
+                - text: 列に標準のToDoを登録しておけば、その工程に入ったカードへ自動で付きます。毎回の書き起こしが不要になります。
+              - listitem [ref=e258]:
+                - strong [ref=e259]: 担当や期限で絞り込める
+                - text: 自分の担当ぶんだけ、今週ぶんだけ、といった絞り込みができます。ボードが混み合っても見たいものだけ残せます。
+            - paragraph [ref=e260]:
+              - generic [ref=e261]: 無料のまま
+              - generic [ref=e262]: 1ファイルにつき3枚まで
+            - link "マニュアルを読む →" [ref=e263] [cursor=pointer]:
+              - /url: /ploto_LP/manual/kanban.html
+        - listitem [ref=e264]:
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]: ガントチャート
+              - generic [ref=e271]: カンバンボード
+              - generic [ref=e274]: ノート
+              - generic [ref=e277]: 優先度マトリクス
+              - generic [ref=e280]: ホワイトボード
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - generic [ref=e285]: タスク名・ノートを検索
+                - generic [ref=e288]:
+                  - generic [ref=e289]:
+                    - generic [ref=e291]: Webサイトリニューアル
+                    - generic [ref=e292]: "4"
+                  - generic [ref=e293]: デザイン
+                  - generic [ref=e296]: ワイヤーフレーム
+                  - generic [ref=e299]: ビジュアルデザイン
+                  - generic [ref=e303]: 実装
+                  - generic [ref=e306]: フロント基盤構築
+                  - generic [ref=e309]: トップページ実装
+                  - generic [ref=e313]: CMS連携
+              - generic [ref=e316]:
+                - generic [ref=e317]:
+                  - generic [ref=e318]: 本文
+                  - generic [ref=e319]:
+                    - generic [ref=e320]: B
+                    - generic [ref=e321]: I
+                    - generic [ref=e322]: U
+                  - generic [ref=e323]: 117 文字
+                - generic [ref=e324]:
+                  - generic [ref=e325]: Webサイトリニューアル / 実装 / トップページ実装
+                  - generic [ref=e326]: トップページ実装
+                  - generic [ref=e329]:
+                    - generic [ref=e330]: 2026-08-01 – 2026-08-06
+                    - generic [ref=e332]:
+                      - generic [ref=e333]: 進捗
+                      - text: 0%
+                    - generic [ref=e334]: 鈴木 由香
+                    - generic [ref=e335]: 6 日
+                  - generic [ref=e336]:
+                    - generic [ref=e337]:
+                      - heading [level=4] [ref=e338]: トップページ実装の進め方
+                      - paragraph [ref=e339]: 2026-07-07 着手。
+                      - list [ref=e340]:
+                        - listitem [ref=e341]: ファーストビューは画像を遅延読み込みにする
+                        - listitem [ref=e342]: お知らせ枠は CMS 連携後に差し替えるため、いまは固定データで組む
+                      - paragraph [ref=e343]: 2026-07-09 レビュー指摘を反映。余白を全体的に広げた。
+                    - generic [ref=e344]:
+                      - generic [ref=e345]:
+                        - text: ToDo
+                        - generic [ref=e346]: 0/0
+                      - generic [ref=e347]:
+                        - generic [ref=e349]: 実装
+                        - generic [ref=e350]: "0"
+                      - generic [ref=e351]: ＋ ToDoを追加
+                      - generic [ref=e352]:
+                        - generic [ref=e354]: レビュー
+                        - generic [ref=e355]: "0"
+          - generic [ref=e356]:
+            - heading "決まったことを、そのタスクに書き残す" [level=3] [ref=e358]
+            - paragraph [ref=e359]: 左のアウトラインは工程表の親子関係がそのまま章立てになっています。議事録の構成を自分で作る必要はありません。書いた内容はそのタスクに紐づくので、「あの話はどのタスクの件だったか」を後から探し直さずに済みます。
+            - list [ref=e360]:
+              - listitem [ref=e361]:
+                - strong [ref=e362]: 章立てが最初からできている
+                - text: タスクの階層がそのまま見出しになります。空のドキュメントから構成を考え始める必要はありません。
+              - listitem [ref=e363]:
+                - strong [ref=e364]: 本文を横断して検索できる
+                - text: どのタスクに書いたか覚えていなくても、本文の言葉から辿れます。
+              - listitem [ref=e365]:
+                - strong [ref=e366]: ToDoもここに置ける
+                - text: 書きながらチェック項目を作れます。カンバンの標準ToDoと同じ場所に集まります。
+            - link "マニュアルを読む →" [ref=e367] [cursor=pointer]:
+              - /url: /ploto_LP/manual/note.html
+        - listitem [ref=e368]:
+          - generic [ref=e370]:
+            - generic [ref=e371]:
+              - generic [ref=e372]: ガントチャート
+              - generic [ref=e375]: カンバンボード
+              - generic [ref=e378]: ノート
+              - generic [ref=e381]: 優先度マトリクス
+              - generic [ref=e384]: ホワイトボード
+            - generic [ref=e388]:
+              - generic [ref=e389]: 重要度 (高)
+              - generic [ref=e390]: 重要度 (低)
+              - generic [ref=e391]: 緊急度 (低)
+              - generic [ref=e392]: 緊急度 (高)
+              - generic [ref=e393]:
+                - generic [ref=e394]: I
+                - generic [ref=e395]: "象限 I: 重要かつ緊急"
+              - generic [ref=e396]:
+                - generic [ref=e397]: II
+                - generic [ref=e398]: "象限 II: 重要だが非緊急"
+              - generic [ref=e399]:
+                - generic [ref=e400]: III
+                - generic [ref=e401]: "象限 III: 緊急だが非重要"
+              - generic [ref=e402]:
+                - generic [ref=e403]: IV
+                - generic [ref=e404]: "象限 IV: 非緊急かつ非重要"
+              - generic [ref=e405]:
+                - generic [ref=e406]:
+                  - generic [ref=e407]: デザイン
+                  - generic [ref=e408]: "58"
+                - generic [ref=e409]: デザインシステム構築
+                - generic [ref=e410]: 2026-07-23
+                - generic [ref=e413]:
+                  - generic [ref=e416]: 20%
+                  - generic [ref=e417]: 佐
+              - generic [ref=e418]:
+                - generic [ref=e419]:
+                  - generic [ref=e420]: 実装
+                  - generic [ref=e421]: "52"
+                - generic [ref=e422]: フロント基盤構築
+                - generic [ref=e423]: 2026-07-31
+                - generic [ref=e426]:
+                  - generic [ref=e429]: 40%
+                  - generic [ref=e430]: 鈴
+              - generic [ref=e431]:
+                - generic [ref=e432]:
+                  - generic [ref=e433]: 実装
+                  - generic [ref=e434]: "75"
+                - generic [ref=e435]: トップページ実装
+                - generic [ref=e436]: 2026-08-06
+                - generic [ref=e439]:
+                  - generic [ref=e441]: 0%
+                  - generic [ref=e442]: 鈴
+          - generic [ref=e443]:
+            - heading "どれから手を付けるかを決める" [level=3] [ref=e445]
+            - paragraph [ref=e446]: 緊急度と重要度の2軸にタスクを置く画面です。締切が近い順に処理していると後回しになりがちな「重要だが急ぎではない仕事」が、置いた位置で見えるようになります。ここで決めた優先度も同じ1件に記録されます。
+            - list [ref=e447]:
+              - listitem [ref=e448]:
+                - strong [ref=e449]: 2軸に置くだけで優先度が決まる
+                - text: タスクをドラッグして置いた位置から、優先度スコアが自動で計算されます。
+              - listitem [ref=e450]:
+                - strong [ref=e451]: 重要だが急がない仕事が見える
+                - text: 締切だけで並べると沈んでしまう仕事が、象限の位置として残り続けます。
+              - listitem [ref=e452]:
+                - strong [ref=e453]: 表示モードを切り替えられる
+                - text: 点だけの表示とカードを開いた表示を切り替えて、俯瞰と確認を使い分けられます。
+            - link "マニュアルを読む →" [ref=e454] [cursor=pointer]:
+              - /url: /ploto_LP/manual/matrix.html
+        - listitem [ref=e455]:
+          - generic [ref=e457]:
+            - generic [ref=e458]:
+              - generic [ref=e459]: ガントチャート
+              - generic [ref=e462]: カンバンボード
+              - generic [ref=e465]: ノート
+              - generic [ref=e468]: 優先度マトリクス
+              - generic [ref=e471]: ホワイトボード
+            - generic [ref=e474]:
+              - generic [ref=e478]:
+                - generic [ref=e479]:
+                  - generic [ref=e481]: 実装
+                  - generic [ref=e482]: 3 ・ 13%
+                - generic [ref=e483]:
+                  - generic [ref=e484]:
+                    - generic [ref=e485]: I
+                    - generic [ref=e486]: フロント基盤構築
+                  - generic [ref=e487]:
+                    - generic [ref=e488]: 7/28 - 7/31
+                    - generic [ref=e489]: 鈴木 由香
+                  - generic [ref=e490]: 40%
+                - generic [ref=e496]:
+                  - generic [ref=e497]:
+                    - generic [ref=e498]: I
+                    - generic [ref=e499]: トップページ実装
+                  - generic [ref=e500]:
+                    - generic [ref=e501]: 8/1 - 8/6
+                    - generic [ref=e502]: 鈴木 由香
+                  - generic [ref=e503]: 0%
+                - generic [ref=e506]:
+                  - generic [ref=e507]:
+                    - generic [ref=e508]: II
+                    - generic [ref=e509]: CMS連携
+                  - generic [ref=e510]:
+                    - generic [ref=e511]: 8/7 - 8/13
+                    - generic [ref=e512]: 高橋 大輔
+                  - generic [ref=e513]: 0%
+              - generic [ref=e516]: CMS連携が終わるまで お知らせ枠は固定データ
+              - generic [ref=e517]: 今週の重点
+              - generic [ref=e518]:
+                - generic [ref=e519]:
+                  - generic [ref=e520]: 期間進捗
+                  - generic [ref=e521]: 接続タスク 1件
+                - generic [ref=e522]:
+                  - generic [ref=e523]:
+                    - generic [ref=e524]: 実績
+                    - strong [ref=e525]: 9%
+                  - generic [ref=e526]:
+                    - generic [ref=e527]: 今日の予定
+                    - strong [ref=e528]: 41%
+                - generic [ref=e531]: 予定より 32pt 遅れ
+                - generic [ref=e532]: 完了 0 / 3 件
+          - generic [ref=e533]:
+            - heading "最後に、全体を1枚で見渡す" [level=3] [ref=e535]
+            - paragraph [ref=e536]: ここまでで日程・工程・記録・優先度を持った1件が、他のタスクと並んで1枚の盤面に載ります。付箋と違うのは、置いたカードが進捗や期限を最新の状態で表示し続けることです。工程表で進捗を更新すれば、この盤面の表示も追随します。
+            - list [ref=e537]:
+              - listitem [ref=e538]:
+                - strong [ref=e539]: カードは静的な付箋ではない
+                - text: 置いたあとも進捗・期限・担当を最新の状態で表示し続けます。貼り替えの作業は発生しません。
+              - listitem [ref=e540]:
+                - strong [ref=e541]: 線でつないで関係を描ける
+                - text: 図形やコネクタを足して、タスク同士の依存や流れをそのまま盤面に描けます。
+              - listitem [ref=e542]:
+                - strong [ref=e543]: 集計ウィジェットを置ける
+                - text: 進捗の集計を盤面に置いて、そのままダッシュボードとして使えます。
+            - paragraph [ref=e544]:
+              - generic [ref=e545]: 無料のまま
+              - generic [ref=e546]: 1台につき累計3枚まで
+            - link "マニュアルを読む →" [ref=e547] [cursor=pointer]:
+              - /url: /ploto_LP/manual/whiteboard.html
+      - paragraph [ref=e548]: たとえばカンバンでカードを「実装」の列へ動かすと、そのタスクの工程が切り替わり、工程表の一覧にもノートのToDoにも同じ状態が出ます。ビューをいくつ増やしても、管理するデータは1つのままです。
+    - generic [ref=e550]:
+      - generic [ref=e551]:
+        - heading "マニュアルで、できることを見てみる" [level=2] [ref=e552]
+        - paragraph [ref=e553]: インストール前に、実際の画面と操作手順を確認できます。アカウント登録不要で、主要機能は期限なく無料。気になった機能をそのまま使い始められます。
+      - generic [ref=e554]:
+        - link "基本操作 起動から保存までの流れ、ファイル・ヘルプメニュー、サイドバーの使い方。初めての方はここから。 マニュアルを読む →" [ref=e555] [cursor=pointer]:
+          - /url: /ploto_LP/manual/basic.html
+          - heading "基本操作" [level=3] [ref=e559]
+          - paragraph [ref=e560]: 起動から保存までの流れ、ファイル・ヘルプメニュー、サイドバーの使い方。初めての方はここから。
+          - generic [ref=e561]: マニュアルを読む →
+        - link "ガントチャート バーのドラッグで日程と進捗を調整し、依存関係でタスクをつなぐ。祝日・会社休日の設定も行えます。 マニュアルを読む →" [ref=e562] [cursor=pointer]:
+          - /url: /ploto_LP/manual/gantt.html
+          - heading "ガントチャート" [level=3] [ref=e565]
+          - paragraph [ref=e566]: バーのドラッグで日程と進捗を調整し、依存関係でタスクをつなぐ。祝日・会社休日の設定も行えます。
+          - generic [ref=e567]: マニュアルを読む →
+        - link "カンバン 同じタスクを工程の列で管理。カードを動かすだけで状態が変わり、工程ごとの標準ToDoも自動で付きます。 マニュアルを読む →" [ref=e568] [cursor=pointer]:
+          - /url: /ploto_LP/manual/kanban.html
+          - heading "カンバン" [level=3] [ref=e572]
+          - paragraph [ref=e573]: 同じタスクを工程の列で管理。カードを動かすだけで状態が変わり、工程ごとの標準ToDoも自動で付きます。
+          - generic [ref=e574]: マニュアルを読む →
+        - link "ノート タスクごとの記録を1本の長いノートにまとめて書き、あとから串刺しで検索できます。 マニュアルを読む →" [ref=e575] [cursor=pointer]:
+          - /url: /ploto_LP/manual/note.html
+          - heading "ノート" [level=3] [ref=e580]
+          - paragraph [ref=e581]: タスクごとの記録を1本の長いノートにまとめて書き、あとから串刺しで検索できます。
+          - generic [ref=e582]: マニュアルを読む →
+        - link "ホワイトボード タスクを図として自由に配置し、線でつないで全体像を作図。進捗ウィジェットも置けます。 マニュアルを読む →" [ref=e583] [cursor=pointer]:
+          - /url: /ploto_LP/manual/whiteboard.html
+          - heading "ホワイトボード" [level=3] [ref=e587]
+          - paragraph [ref=e588]: タスクを図として自由に配置し、線でつないで全体像を作図。進捗ウィジェットも置けます。
+          - generic [ref=e589]: マニュアルを読む →
+        - link "優先度マトリクス 緊急度と重要度の2軸にタスクを置いて、いま手を付けるべき仕事を見極めます。 マニュアルを読む →" [ref=e590] [cursor=pointer]:
+          - /url: /ploto_LP/manual/matrix.html
+          - heading "優先度マトリクス" [level=3] [ref=e594]
+          - paragraph [ref=e595]: 緊急度と重要度の2軸にタスクを置いて、いま手を付けるべき仕事を見極めます。
+          - generic [ref=e596]: マニュアルを読む →
+    - generic [ref=e599]:
+      - generic [ref=e600]: 💡 買い切り・サブスクなし
+      - heading "日常も業務も、主要機能は無料のまま。 さらに必要な機能だけ、買い切りのProで。" [level=2] [ref=e601]: 日常も業務も、主要機能は無料のまま。さらに必要な機能だけ、買い切りのProで。
+      - paragraph [ref=e602]: Plotoは、ガントチャート・優先度マトリクス・ノートなど、日常や業務の工程管理に必要な主要機能を無料のまま期限なく使えます。より多くのカンバン・ホワイトボード、ベースライン、Excel / PDF出力などが必要になった場合だけ、買い切りのProを追加できます。Proに月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。
+      - generic [ref=e603]:
+        - generic [ref=e604]:
+          - generic [ref=e605]: 料金体系
+          - generic [ref=e606]: 買い切り（サブスクなし）
+        - generic [ref=e607]:
+          - generic [ref=e608]: 購入方法
+          - generic [ref=e609]: Microsoft Store ／ Web（シリアルコード）
+      - generic [ref=e610]:
+        - heading "無料のまま使えること、Proで広がること" [level=3] [ref=e611]
+        - paragraph [ref=e612]: ガントチャート・優先度マトリクス・ノートなどの主要機能は、無料のまま期限なく使えます。より高度な機能が必要になった場合だけ、買い切りのProを追加できます。
+        - table [ref=e614]:
+          - rowgroup [ref=e615]:
+            - row [ref=e616]:
+              - columnheader "機能" [ref=e617]
+              - columnheader "無料のまま" [ref=e618]
+              - columnheader "Ploto Pro（買い切り）" [ref=e619]
+          - rowgroup [ref=e620]:
+            - row [ref=e621]:
+              - rowheader "ガントチャート・優先度マトリクス・ノート" [ref=e622]
+              - cell "すべて利用可能" [ref=e623]
+              - cell "すべて利用可能" [ref=e624]
+            - row [ref=e625]:
+              - rowheader "カンバンボード" [ref=e626]
+              - cell "1ファイルにつき3枚まで" [ref=e627]
+              - cell "作成数の制限なし" [ref=e628]
+            - row [ref=e629]:
+              - rowheader "ホワイトボード" [ref=e630]
+              - cell "1台につき累計3枚まで" [ref=e631]
+              - cell "作成数の制限なし" [ref=e632]
+            - row [ref=e633]:
+              - rowheader "ベースライン" [ref=e634]
+              - cell "利用不可" [ref=e635]
+              - cell "計画を保存して現在と比較" [ref=e636]
+            - row [ref=e637]:
+              - rowheader "Excel / PDF出力" [ref=e638]
+              - cell "利用不可" [ref=e639]
+              - cell "工程表を書き出し・印刷" [ref=e640]
+            - row [ref=e641]:
+              - rowheader "祝日の登録" [ref=e642]
+              - cell "手動で追加・編集" [ref=e643]
+              - cell "手動＋国の祝日を一括取込" [ref=e644]
+        - paragraph [ref=e645]: ※ 表にない機能も、無料のまま制限なくお使いいただけます。ホワイトボードのみ、他の人が作成したボードはProなしでは閲覧のみとなります。
+        - paragraph [ref=e646]: ※ カンバン・ホワイトボードの枚数制限がかかるのは新規作成のときだけです。Proで作ったボードを含むファイルも、Proなしでそのまま開いて編集できます。シリアルコードで購入した場合は自分の環境の複数の端末に登録でき、登録後はオフラインでも認証されます。
+    - generic [ref=e648]:
+      - generic [ref=e649]:
+        - heading "データ管理とセキュリティについて" [level=2] [ref=e650]
+        - paragraph [ref=e651]: クラウドツールの利用が制限されている環境でも、PlotoはプロジェクトデータをPC内に保存する運用を選べます。導入可否は、各組織の規定に沿ってご確認ください。
+      - generic [ref=e652]:
+        - generic [ref=e653]:
+          - generic [ref=e654]: 🔒
+          - heading "プロジェクトデータをPC内に保存" [level=3] [ref=e655]
+          - paragraph [ref=e656]: プロジェクトデータは、お使いのPC内にファイル（.ploto）として保存されます。Plotoがプロジェクトデータを外部サーバーへ自動送信することはありません。ファイルの保管・共有方法は、利用環境のルールに合わせて管理できます。
+        - generic [ref=e657]:
+          - generic [ref=e658]: 🏪
+          - heading "Microsoft Storeから配布" [level=3] [ref=e659]
+          - paragraph [ref=e660]: PlotoはMicrosoft Storeから配布されています。配布元と製品情報をStore上で確認できるため、導入時の確認材料として利用できます。
+        - generic [ref=e661]:
+          - generic [ref=e662]: 👤
+          - heading "アカウント登録やサインインは不要" [level=3] [ref=e663]
+          - paragraph [ref=e664]: メールアドレスの登録やサインイン、組織名の入力は必要ありません。インストール後は、アカウントを作成せずに利用を開始できます。
+    - generic [ref=e667]:
+      - heading "Plotoでプロジェクト管理をシンプルに" [level=2] [ref=e668]
+      - paragraph [ref=e669]: 今すぐアプリケーションをダウンロードして、ローカルファーストで快適なプロジェクト管理を開始しましょう。
+      - generic [ref=e672] [cursor=pointer]:
+        - button "Microsoft Store app badge" [ref=e673]
+        - iframe
+      - paragraph [ref=e674]: "* Windows 10/11 対応。SQLite 3標準搭載。"
+    - generic [ref=e677]:
+      - heading "フィードバックを送る" [level=2] [ref=e678]
+      - paragraph [ref=e679]: バグ報告、機能のご要望、ご感想などをお寄せください。
+      - generic [ref=e680]:
+        - generic [ref=e681]:
+          - generic [ref=e682]:
+            - generic [ref=e683]: お名前（任意）
+            - textbox "お名前（任意）" [ref=e684]:
+              - /placeholder: 山田 太郎
+          - generic [ref=e685]:
+            - generic [ref=e686]: メールアドレス（任意）
+            - textbox "メールアドレス（任意）" [ref=e687]:
+              - /placeholder: taro@example.com
+        - generic [ref=e688]:
+          - generic [ref=e689]: フィードバック内容（必須）
+          - textbox "フィードバック内容（必須）" [ref=e690]:
+            - /placeholder: 機能の要望や改善点など...
+        - button "フィードバックを送信する" [ref=e691] [cursor=pointer]
+  - contentinfo [ref=e692]:
+    - generic [ref=e694]:
+      - paragraph [ref=e695]: © 2026 Ploto Project. All rights reserved.
+      - link "プライバシーポリシー" [ref=e697] [cursor=pointer]:
+        - /url: https://github.com/hiroking-ocean/ploto-privacy

@@ -2,8 +2,8 @@ export default {
   locale: "de",
   screenshotFolder: "en-us",
   meta: {
-    title: "Projektplan- & Gantt-Tool Ploto | Wesentliche Funktionen dauerhaft kostenlos, Offline",
-    description: "Ploto ist ein offline nutzbares Tool für Projektpläne und Gantt-Diagramme ohne Registrierung. Gantt-Diagramme, Prioritätsmatrix, Notizen und weitere wichtige Werkzeuge für Alltag und Beruf bleiben ohne Zeitlimit kostenlos. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
+    title: "Projektmanagement- & Gantt-Tool Ploto | Einmalkauf, kein Abo, Kernfunktionen kostenlos",
+    description: "Ploto ist ein Tool für Projektpläne und Gantt-Diagramme, das eine einzelne Person selbst installieren und sofort nutzen kann. Ohne Abo und ohne Registrierung: Gantt-Diagramme, Kanban-Boards, Prioritätsmatrix, Notizen und Whiteboards bleiben ohne Zeitlimit kostenlos. Pro kommt als Einmalkauf nur für das dazu, was Sie zusätzlich brauchen. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
   },
   i18n: {
     nav_features: "Funktionen",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "Handbuch",
     cta_download: "Kostenloser Download",
 
-    hero_badge: "🏢 Für Teams mit eingeschränkter Cloud-Nutzung | Lokale Ausführung | Wesentliche Funktionen dauerhaft kostenlos",
-    hero_title: 'Projektpläne in Excel verwalten?<br><span class="text-gradient">Verabschieden Sie sich vom Chaos.</span>',
-    hero_desc: "Können Sie keine Cloud-Dienste nutzen? Sind Sie frustriert über langsame Excel-Tabellen? Ploto ist eine offline-fähige Projektmanagement-App aus dem Microsoft Store. Gantt-Diagramme, Prioritätsmatrix, Notizen und weitere wichtige Werkzeuge für Alltag und Beruf bleiben ohne Zeitlimit kostenlos.",
+    hero_badge: "💡 Von einer Person einführbar | Wesentliche Funktionen dauerhaft kostenlos | Einmalkauf, kein Abo",
+    hero_title: 'Vollwertiges Projektmanagement –<br><span class="text-gradient">ganz ohne Monatsgebühr.</span>',
+    hero_desc: "Die meisten Projektmanagement-Tools setzen einen Monatsvertrag voraus – selbst wer allein damit arbeiten will, braucht eine Freigabe. Und ein Terminplan in Excel ist so mühsam aktuell zu halten, dass er am Ende ungenutzt bleibt. Ploto ist für Sie gemacht. Einfach aus dem Microsoft Store installieren. Ohne Konto und ohne Monatsgebühr: Gantt-Diagramme, Kanban-Boards, Prioritätsmatrix, Notizen, Whiteboards und die übrigen Kernfunktionen bleiben kostenlos.",
     hero_cta_download: "Kostenlos herunterladen",
     hero_cta_manual: "Handbuch ansehen",
-    hero_meta: "<span>✓ Kein Konto · Wesentliche Funktionen kostenlos</span><span>✓ Kein Zeitlimit für Alltag oder Beruf</span><span>✓ Projektdaten auf Ihrem PC</span>",
+    hero_meta: "<span>✓ Kein Konto · Wesentliche Funktionen kostenlos</span><span>✓ Einmalkauf · Keine Monatsgebühr</span><span>✓ Projektdaten auf Ihrem PC</span>",
 
     mock_tab_gantt: "Gantt-Diagramm",
     mock_tab_kanban: "Kanban-Board",
@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III: Dringend, nicht wichtig",
     mock_q4: "Quadrant IV: Weder dringend noch wichtig",
 
-    features_title: "Eine Aufgabe, die durch fünf Ansichten wächst",
-    features_subtitle: "Die Karte links ist von Anfang bis Ende dieselbe eine Aufgabe. Jede Ansicht, die Sie durchlaufen, fügt ihr das hinzu, was Sie dort entschieden haben. Übertragen wird nie etwas.",
+    features_title: "Dieselbe Aufgabe erscheint in jeder Ansicht in einer anderen Form",
+    features_subtitle: "Sie legen sie nur einmal an: als Balken im Terminplan, als Karte im Kanban-Board und als Seite in den Notizen. Jede Ansicht zeigt dieselben Daten in der Form, die dort ganz natürlich passt.",
     feat_alert_title: "3-Farben-Status-Warnung",
     feat_alert_desc: "Hebt Aufgaben automatisch rot (überfällig), gelb (verzögert) oder grün (im Zeitplan) hervor. Erkennen Sie Engpässe sofort ohne manuelle Prüfungen.",
     feat_cal_title: "Feiertage & Firmenkalender",
@@ -84,7 +84,6 @@ export default {
     feat_auto_desc: "Verknüpfen Sie Aufgaben und aktivieren Sie die automatische Planung: Verzögert sich ein Schritt, verschieben sich alle nachfolgenden Termine mit. Dauer und Fortschritt übergeordneter Aufgaben werden von Anfang an aus den Teilaufgaben berechnet – kein Nacharbeiten der ganzen Tabelle nach jeder Änderung.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
-    flow_card_hint: "Weiterscrollen – diese eine Aufgabe sammelt Informationen",
     flow_task_name: "Startseite umsetzen",
     flow_field_period_value: "1.8. → 6.8.",
     flow_field_period_label: "Zeitraum",
@@ -95,7 +94,6 @@ export default {
     flow_field_priority_label: "Priorität",
     flow_field_priority_value: "Wichtig und dringend",
     flow_free_note_label: "Kostenlos",
-    flow_closing_note: "Schieben Sie eine Karte etwa in die Spalte „Entwicklung“, wechselt der Arbeitsschritt dieser Aufgabe – und dieselbe Angabe steht in der Terminplan-Tabelle wie in den To-dos der Notizen. Wie viele Ansichten Sie auch anlegen: die Daten bleiben ein einziger Bestand.",
     mock_kanban_col1: "Design",
     mock_kanban_col2: "Umsetzung",
     mock_kanban_col3: "Review",
@@ -108,8 +106,8 @@ export default {
     feature_kanban_p1_desc: "Schieben Sie die Karte von einer Spalte in die nächste. Es gibt kein Fortschrittsfeld, das Sie suchen und neu eintippen müssten.",
     feature_kanban_p2_title: "Jede Phase bringt ihre Checkliste mit",
     feature_kanban_p2_desc: "Hinterlegen Sie eine Standard-To-do-Liste an einer Spalte, und jede Karte, die in diese Phase kommt, erhält sie. Nichts muss jedes Mal neu geschrieben werden.",
-    feature_kanban_p3_title: "Nach Zuständigkeit oder Termin filtern",
-    feature_kanban_p3_desc: "Zeigen Sie nur Ihre Aufgaben oder nur diese Woche. Ein volles Board lässt sich auf das reduzieren, was Sie ansehen wollen.",
+    feature_kanban_p3_title: "Nach Projekt, Verantwortlichem oder Tag filtern",
+    feature_kanban_p3_desc: "Behalten Sie auf einem vollen Board nur das im Blick, was gerade zählt. Filtern Sie nach Projekt (dem zugehörigen Zeitplan), Verantwortlichem oder Tag – und suchen Sie nach Aufgabennamen.",
     feature_note_title: "Festhalten, was entschieden wurde – an der Aufgabe selbst",
     feature_note_lead: "Die Gliederung links ist die Eltern-Kind-Struktur des Terminplans, bereits als Kapitel. Sie müssen den Aufbau eines Protokolls nie selbst anlegen. Geschriebenes gehört zur Aufgabe – Sie suchen später nicht danach, zu welcher Aufgabe ein Gespräch gehörte.",
     feature_note_p1_title: "Die Kapitel stehen schon",
@@ -179,8 +177,8 @@ export default {
     plan_compare_license_note: "* Die Board-Limits greifen nur beim Neuanlegen. Eine Datei mit Boards, die mit Pro erstellt wurden, lässt sich auch ohne Pro ganz normal öffnen und bearbeiten. Ein Seriencode kann auf mehreren eigenen Geräten registriert werden und wird danach auch offline geprüft.",
 
     pricing_badge: "💡 Einmalkauf, kein Abo",
-    pricing_title: "Für Alltag und Beruf bleiben die wichtigsten Funktionen kostenlos.<br>Pro kommt einmalig dazu, wenn Sie mehr brauchen.",
-    pricing_desc: "Ploto stellt die wesentlichen Werkzeuge für Terminplanung im Alltag und Beruf ohne Zeitlimit kostenlos bereit, darunter Gantt-Diagramme, Prioritätsmatrix und Notizen. Ergänzen Sie Pro als Einmalkauf nur, wenn Sie mehr Kanban-Boards und Whiteboards, Baselines, Excel- / PDF-Export oder andere erweiterte Funktionen benötigen. Pro hat keine Monats- oder Jahresgebühr und ist im Microsoft Store oder im Web (Stripe) erhältlich.",
+    pricing_title: "Nicht pro Nutzer, nicht pro Monat.<br>Das Wesentliche bleibt kostenlos – dazu kaufen Sie einmalig nur, was Sie brauchen.",
+    pricing_desc: "Die meisten Projektmanagement-Dienste rechnen pro Nutzer und Monat ab – so lange, wie Sie sie nutzen. Ploto stellt die wesentlichen Werkzeuge für Terminplanung im Alltag und Beruf ohne Zeitlimit kostenlos bereit, darunter Gantt-Diagramme, Prioritätsmatrix und Notizen. Ergänzen Sie Pro als Einmalkauf nur, wenn Sie mehr Kanban-Boards und Whiteboards, Baselines, Excel- / PDF-Export oder andere erweiterte Funktionen benötigen. Pro hat keine Monats- oder Jahresgebühr und ist im Microsoft Store oder im Web (Stripe) erhältlich.",
     pricing_model_label: "Preismodell",
     pricing_model_value: "Einmalkauf (kein Abo)",
     pricing_buy_label: "Kaufwege",
@@ -199,8 +197,8 @@ export default {
     feedback_sending: "Wird gesendet...",
     feedback_error: "Beim Senden ist ein Fehler aufgetreten. Bitte überprüfen Sie die Aktions-URL.",
 
-    dl_title: "Vereinfachen Sie jetzt Ihr Projektmanagement",
-    dl_desc: "Laden Sie die Anwendung herunter und erleben Sie heute reibungsloses, offlinefähiges Projektmanagement.",
+    dl_title: "Fangen Sie heute an – allein",
+    dl_desc: "Kein Konto, kein Monatsvertrag. Laden Sie Ploto herunter und nutzen Sie ab dem ersten Tag alle wesentlichen Funktionen kostenlos.",
     dl_win_sub: "Erhältlich bei",
     dl_win_exe: "Windows-Installer",
     dl_notes: "* Kompatibel mit Windows 10/11. Enthält SQLite 3.",
@@ -210,7 +208,7 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Datenmanagement und Sicherheit",
-    security_subtitle: "In Umgebungen mit eingeschränkter Cloud-Nutzung ermöglicht Ploto einen Arbeitsablauf, bei dem Projektdaten auf dem PC gespeichert werden. Prüfen Sie die Einführung anhand der Richtlinien Ihrer Organisation.",
+    security_subtitle: "Projektdaten werden als Datei auf Ihrem eigenen PC gespeichert – auf einem privaten Rechner ebenso wie in einer Arbeitsumgebung mit eingeschränkter Cloud-Nutzung. Für die Einführung in einer Organisation prüfen Sie dies bitte anhand Ihrer eigenen Richtlinien.",
     security_c1_title: "Projektdaten auf Ihrem PC gespeichert",
     security_c1_desc: "Projektdaten werden in einer .ploto-Datei auf Ihrem PC gespeichert. Ploto sendet Projektdaten nicht automatisch an externe Server. Speicherung und Freigabe der Datei können Sie nach den Regeln Ihrer Umgebung verwalten.",
     security_c2_title: "Verteilung über den Microsoft Store",

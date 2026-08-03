@@ -291,158 +291,352 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ==========================================================================
-     主要機能セクション: スクロールに合わせて左のタスクカードを育てる
+     主要機能セクション: 同じ1件が画面ごとに姿を変えるジャーニー
      --------------------------------------------------------------------------
-     ステップを通過するたびに、そのステップまでの項目をカードに出す。
-     「6つのビューが同じ1件につながっている」を、文章ではなくスクロールで示す。
-
-     data-enhanced はここで初めて付ける。CSS だけの既定状態は全項目が出た完成形
-     なので、このスクリプトが動かなくても情報は落ちない（段階表示にしてよい、と
-     JS 側が宣言してから初めて畳まれる）。
+     マークアップの既定は「モック → 説明」の縦並び。デスクトップかつ motion
+     許可時だけ data-enhanced を立て、sticky と flyer を有効にする。
      ========================================================================== */
-  const flow = document.getElementById("task-flow");
+  const journey = document.getElementById("task-journey");
 
-  if (flow) {
-    const steps = Array.from(flow.querySelectorAll(".flow-step"));
-    const fields = Array.from(flow.querySelectorAll(".flow-field"));
+  if (journey) {
+    const steps = Array.from(journey.querySelectorAll(".journey-step"));
+    const anchors = steps.map((step) => step.querySelector("[data-journey-anchor]"));
+    const screens = steps.map((step) => step.querySelector(".journey-screen"));
+    const wide = window.matchMedia("(min-width: 901px)");
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+    const lerp = (from, to, amount) => from + (to - from) * amount;
+    const ease = (value) => value * value * (3 - 2 * value);
+    /* ステップ内の進行度 p は「モックが sticky で止まっていられる範囲」で
+       正規化する（p=1 が、モックが上へ流れ出す瞬間）。フェードアウト完了を
+       p=1 より手前に置けば、説明が消えきるまでモックは動かない。 */
+    const STICKY_TOP = 80 + 24; /* ヘッダー80px + .journey-screen の top 1.5rem */
+    const PANEL_IN_START = 0.05;
+    const PANEL_IN_END = 0.52;
+    const PANEL_OUT_START = 0.72;
+    const PANEL_OUT_END = 0.90;
+    const FLIGHT_START = PANEL_OUT_END;
+    const SCREEN_ENTRY_END = 0.99;
+    const center = (rect) => ({
+      x: rect.left + rect.width / 2,
+      y: rect.top + rect.height / 2
+    });
+    const t = (key) => localesData[currentLang]?.i18n[key]
+      || localesData.ja.i18n[key]
+      || "";
 
-    if (steps.length) {
-      flow.dataset.enhanced = "true";
+    if (steps.length === 5 && anchors.every(Boolean)) {
+      const flyer = document.createElement("div");
+      flyer.className = "journey-flyer";
+      flyer.id = "journey-flyer";
+      flyer.setAttribute("aria-hidden", "true");
+      flyer.innerHTML = `
+        <div class="jf-plate"></div>
 
-      let current = -1;
+        <div class="jf-face" data-face="gantt">
+          <div class="gv-row is-sel jf-gantt-row">
+            <span class="gv-name">${t("flow_task_name")}</span>
+            <span class="jf-gantt-period">
+              <span>${t("flow_field_period_label")}</span>
+              <b>${t("flow_field_period_value")}</b>
+            </span>
+          </div>
+        </div>
 
-      /** 現在地 = 画面の中央線を最後に越えたステップ。越える前は 0（何も出ていない）。 */
-      function activeStep() {
-        const line = window.innerHeight / 2;
-        let step = 0;
-        for (const el of steps) {
-          if (el.getBoundingClientRect().top <= line) step = Number(el.dataset.step);
-        }
-        return step;
+        <div class="jf-face" data-face="kanban">
+          <div class="uic ac-blue">
+            <div class="uic-top jf-new"><span class="uic-pill">${t("flow_field_process_value")}</span></div>
+            <div class="uic-t">${t("flow_task_name")}</div>
+            <div class="uic-tags jf-new"><span class="u-tag tg-front">${t("mock_tag_front")}</span></div>
+            <div class="uic-foot">
+              <span class="u-date"><i class="u-cal"></i>2026-08-06</span>
+              <span class="uic-sp"></span>
+              <span class="u-pri"><i class="u-pb">I</i>78</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="jf-face jf-note" data-face="note">
+          <div class="nv-doc jf-note-doc">
+            <div class="nv-crumb">${t("mock_project")} / ${t("flow_field_process_value")}</div>
+            <div class="nv-h1"><i></i><b>${t("flow_task_name")}</b></div>
+            <div class="nv-meta"><span>${t("flow_field_period_value")}</span><span>${t("flow_field_process_value")}</span></div>
+            <div class="jf-note-copy jf-new">
+              <p><b>${t("flow_field_memo_label")}</b></p>
+              <p>${t("flow_field_memo_value")}</p>
+              <p>${t("mock_note_p2")}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="jf-face" data-face="matrix">
+          <div class="uic ac-blue jf-matrix-card">
+            <div class="uic-top"><span class="uic-pill">${t("flow_field_process_value")}</span><span class="uic-score jf-new">75</span></div>
+            <div class="uic-t">${t("flow_task_name")}</div>
+            <div class="uic-foot jf-new"><span class="u-pri"><i class="u-pb">I</i>${t("flow_field_priority_value")}</span></div>
+            <div class="uic-prog"><span class="u-track"><i></i></span><span class="uic-pct">0%</span></div>
+          </div>
+        </div>
+
+        <div class="jf-face" data-face="whiteboard">
+          <div class="wb-card jf-whiteboard-card">
+            <div class="wb-card-h"><i class="u-pb">I</i><span>${t("flow_task_name")}</span></div>
+            <div class="wb-card-m jf-new"><span>${t("flow_field_period_value")}</span><span>${t("mock_owner_name")}</span></div>
+            <div class="wb-card-p jf-new"><span class="u-track"><i></i></span><b>0%</b></div>
+          </div>
+        </div>`;
+      journey.append(flyer);
+
+      const plate = flyer.querySelector(".jf-plate");
+      const faces = Array.from(flyer.querySelectorAll(".jf-face"));
+      let sizes = faces.map(() => ({ width: 228, height: 132 }));
+      let holdLeftX = window.innerWidth * 0.3;
+      let holdRightX = window.innerWidth * 0.7;
+      /* 説明は nth-child(even)＝インデックスが奇数のステップで左に出る。
+         着地しながら次の説明が立ち上がるので、その反対側で待たせる。 */
+      const holdXFor = (targetIndex) =>
+        (targetIndex % 2 === 1 ? holdRightX : holdLeftX);
+      let frame = 0;
+
+      function measureFaces() {
+        const oldDisplay = flyer.style.display;
+        const oldVisibility = flyer.style.visibility;
+        flyer.style.display = "block";
+        flyer.style.visibility = "hidden";
+        sizes = faces.map((face) => ({
+          width: face.offsetWidth,
+          height: face.offsetHeight
+        }));
+
+        const container = journey.closest(".container")?.getBoundingClientRect();
+        const widest = Math.max(...sizes.map((size) => size.width));
+        const safeHalf = widest / 2 + 24;
+        const left = container ? container.left : 0;
+        const right = container ? container.right : window.innerWidth;
+        const inset = Math.max(safeHalf, (right - left) * 0.26);
+        holdLeftX = clamp(left + inset, safeHalf, window.innerWidth - safeHalf);
+        holdRightX = clamp(right - inset, safeHalf, window.innerWidth - safeHalf);
+
+        flyer.style.display = oldDisplay;
+        flyer.style.visibility = oldVisibility;
       }
 
-      function updateFields() {
-        const step = activeStep();
-        if (step === current) return;
-        current = step;
+/* 語の長い言語（de/fr）や背の低いウィンドウでは、説明が画面からはみ出す。
+         収まらないぶんだけ縮める。内容は削らない。 */
+      function fitPanels() {
+        const available = window.innerHeight - 80 - 56;
+        steps.forEach((step) => {
+          const panel = step.querySelector(".journey-panel");
+          if (!panel) return;
+          panel.style.removeProperty("--journey-panel-scale");
+          const height = panel.offsetHeight;
+          if (!height) return;
+          const scale = Math.min(1, available / height);
+          panel.style.setProperty("--journey-panel-scale", scale.toFixed(3));
+        });
+      }
 
-        fields.forEach((field) => {
-          const at = Number(field.dataset.step);
-          field.classList.toggle("is-shown", at <= step);
-          // 直前に増えた項目だけ色を変えて、何が足されたのか見失わないようにする
-          field.classList.toggle("is-latest", at === step);
+      function hideFlyer() {
+        flyer.style.display = "none";
+        flyer.style.opacity = "0";
+        flyer.classList.remove("is-active");
+        faces.forEach((face) => {
+          face.style.opacity = "0";
+          face.classList.remove("is-incoming", "is-revealed");
+        });
+      }
+
+      function clearStepState() {
+        steps.forEach((step) => {
+          step.classList.remove("is-current", "is-back", "is-departing", "is-arrived", "is-panel-visible");
+          step.style.removeProperty("--journey-panel-opacity");
+          step.style.removeProperty("--journey-panel-p");
+          step.style.removeProperty("--journey-entry-y");
+        });
+      }
+
+      function renderJourney() {
+        frame = 0;
+        if (!journey.hasAttribute("data-enhanced")) return;
+
+        /* Read phase: step positions first, then only the two anchors involved in
+           the active transition. Sticky anchors are deliberately remeasured. */
+        const viewportHeight = window.innerHeight;
+        const stepRects = steps.map((step) => step.getBoundingClientRect());
+        /* 分母はステップの高さではなく sticky の可動域。ここを取り違えると
+           p がモックの固定より速く進み、説明が消える前にモックが流れ出す。 */
+        const progress = stepRects.map((rect, index) => {
+          const screenHeight = screens[index]
+            ? screens[index].getBoundingClientRect().height
+            : 0;
+          const range = Math.max(1, rect.height - screenHeight - STICKY_TOP);
+          return clamp((STICKY_TOP - rect.top) / range);
         });
 
-        const view = steps.find((s) => Number(s.dataset.step) === step);
-        if (view) flow.dataset.active = view.dataset.view;
-      }
+        let currentIndex = 0;
+        stepRects.forEach((rect, index) => {
+          if (rect.top <= viewportHeight * 0.5) currentIndex = index;
+        });
 
-      /* --- 締め: 育ったカードをホワイトボードへ着地させる --------------------
-         左の追従カードに transform だけを載せて、ボード上の受け皿（.wb-slot）
-         まで運ぶ。着地点はページと一緒にスクロールし続けるので、位置は毎回
-         測り直す。そうすればスクロールの向きにも速さにも依存しない。 */
-      const card = flow.querySelector(".flow-card");
-      const slot = flow.querySelector(".wb-slot");
-      const lastStep = steps[steps.length - 1];
-
-      const wide = window.matchMedia("(min-width: 901px)");
-      const still = window.matchMedia("(prefers-reduced-motion: reduce)");
-      // 2カラムの sticky が成立する幅でだけ飛ばす。狭い画面ではカードが
-      // ヘッダー下の帯になっていて、飛ばす距離も意味も無くなるため。
-      const flyable = () => !!card && !!slot && wide.matches && !still.matches;
-
-      let base = null; // 変形前のカード位置。sticky で止まっている間は動かない
-      let landed = false;
-
-      function flightProgress() {
-        const top = lastStep.getBoundingClientRect().top;
-        const h = window.innerHeight;
-        // ステップの上端が画面の 72% を切ったら飛び始め、30% で着地する
-        return Math.min(1, Math.max(0, (h * 0.72 - top) / (h * 0.42)));
-      }
-
-      function resetFlight() {
-        if (card) card.style.transform = "";
-        base = null;
-        if (landed) {
-          landed = false;
-          flow.classList.remove("is-landed");
+        let transitionIndex = -1;
+        for (let index = 0; index < steps.length - 1; index += 1) {
+          if (progress[index] > FLIGHT_START) transitionIndex = index;
         }
-      }
 
-      function updateFlight() {
-        const p = flightProgress();
-        if (p <= 0) {
-          if (base || landed) resetFlight();
+        let flight = null;
+        if (transitionIndex >= 0) {
+          const fromRect = anchors[transitionIndex].getBoundingClientRect();
+          const toRect = anchors[transitionIndex + 1].getBoundingClientRect();
+          const from = center(fromRect);
+          const to = center(toRect);
+          const holdY = viewportHeight * 0.34;
+          const startLandingY = viewportHeight * 0.78;
+          const landingY = viewportHeight * 0.5;
+          const a = clamp((progress[transitionIndex] - FLIGHT_START) / 0.14);
+          const s = clamp(
+            (startLandingY - to.y) / Math.max(1, startLandingY - landingY)
+          );
+          flight = { index: transitionIndex, from, to, holdY, a, s };
+        }
+
+        /* Write phase. Step-local custom properties drive the panel fade and the
+           next mock's entrance; moving-task geometry stays on the fixed flyer. */
+        steps.forEach((step, index) => {
+          const p = progress[index];
+          /* 入りは段階表示（番号→見出し→リード→要点→リンク）を CSS 側に任せるため
+             進行度をそのまま渡す。出は一括なので不透明度を渡す。 */
+          const panelIn = clamp(
+            (p - PANEL_IN_START) / (PANEL_IN_END - PANEL_IN_START)
+          );
+          const fadeOut = p <= PANEL_OUT_START
+            ? 1
+            : 1 - ease(clamp(
+              (p - PANEL_OUT_START) / (PANEL_OUT_END - PANEL_OUT_START)
+            ));
+          const panelOpacity = p < PANEL_IN_START ? 0 : fadeOut;
+
+          step.style.setProperty("--journey-panel-p", panelIn.toFixed(4));
+          step.style.setProperty("--journey-panel-opacity", panelOpacity.toFixed(4));
+          const previousProgress = index > 0 ? progress[index - 1] : SCREEN_ENTRY_END;
+          const entryProgress = ease(clamp(
+            (previousProgress - PANEL_OUT_END) / (SCREEN_ENTRY_END - PANEL_OUT_END)
+          ));
+          const entryY = index > 0
+            ? (1 - entryProgress) * viewportHeight * 0.45
+            : 0;
+          step.style.setProperty("--journey-entry-y", `${entryY.toFixed(2)}px`);
+          step.classList.toggle("is-current", index === currentIndex);
+          step.classList.toggle("is-back", p > PANEL_IN_START);
+          /* フェードアウト完了までは固定したまま、以降で初めて次の移動へ進む。 */
+          step.classList.toggle(
+            "is-panel-visible",
+            panelOpacity > 0.001
+          );
+          step.classList.toggle(
+            "is-departing",
+            !!flight && index === flight.index && flight.a > 0
+          );
+          step.classList.toggle(
+            "is-arrived",
+            !!flight && index === flight.index + 1 && flight.s >= 0.88
+          );
+        });
+
+        /* s は着地点の位置で決まるので、アンカーが背の高い要素だと 1 に
+           届かないことがある（ノートで実際に起きた）。次のステップの説明が
+           出はじめたら、着地判定に関わらず必ず片付ける。 */
+        const movedOn = flight
+          && progress[flight.index + 1] > PANEL_IN_START;
+        if (!flight || flight.a <= 0 || flight.s >= 1 || movedOn) {
+          hideFlyer();
           return;
         }
 
-        // 変形前の位置は transform が載っていないときにしか測れない。
-        // p が 0 から動き出す瞬間はまだ素の状態なので、そこで一度だけ測る。
-        // このとき項目は5つとも出ているので、カードは最終的な高さになっている。
-        if (!base) {
-          base = card.getBoundingClientRect();
-          // 受け皿をカードと同じ縦横比にしておく。固定比のままだと、縦長の
-          // カード（項目の多い言語）が必要以上に縮んで文字が読めなくなる。
-          const w = slot.getBoundingClientRect().width;
-          slot.style.height = `${(w * base.height) / base.width}px`;
-        }
+        const sourceIndex = flight.index;
+        const targetIndex = sourceIndex + 1;
+        const landingEase = ease(flight.s);
+        const peelEase = ease(flight.a);
+        const x = flight.s > 0
+          ? lerp(holdXFor(targetIndex), flight.to.x, landingEase)
+          : lerp(flight.from.x, holdXFor(targetIndex), peelEase);
+        const y = flight.s > 0
+          ? lerp(flight.holdY, flight.to.y, landingEase)
+          : lerp(flight.from.y, flight.holdY, peelEase);
+        const width = lerp(sizes[sourceIndex].width, sizes[targetIndex].width, landingEase);
+        const height = lerp(sizes[sourceIndex].height, sizes[targetIndex].height, landingEase);
+        const peelOpacity = clamp(flight.a / 0.3);
+        const landOpacity = 1 - clamp((flight.s - 0.88) / 0.12);
+        const sourceOpacity = 1 - clamp((flight.s - 0.15) / 0.3);
+        const targetOpacity = clamp((flight.s - 0.35) / 0.35);
 
-        const target = slot.getBoundingClientRect();
+        flyer.style.display = "block";
+        flyer.style.visibility = "visible";
+        /* contain: paint のクリップ領域を確保する。plate は補間中の寸法、
+           face は自然寸法なので、両 face の大きいほうを flyer 本体に持たせる。 */
+        flyer.style.width = `${Math.max(sizes[sourceIndex].width, sizes[targetIndex].width) + 72}px`;
+        flyer.style.height = `${Math.max(sizes[sourceIndex].height, sizes[targetIndex].height) + 72}px`;
+        flyer.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+        flyer.style.opacity = String(peelOpacity * landOpacity);
+        flyer.classList.add("is-active");
+        plate.style.width = `${width}px`;
+        plate.style.height = `${height}px`;
 
-        // 等速だと機械的に見えるので、出だしと着地をなだらかにする
-        const e = p * p * (3 - 2 * p);
-        // 受け皿からはみ出さないよう、縦横の縮小率の小さいほうに合わせる
-        const fit = Math.min(target.width / base.width, target.height / base.height);
-        const k = 1 + (fit - 1) * e;
-        const dx = (target.left + target.width / 2 - base.left - base.width / 2) * e;
-        const dy = (target.top + target.height / 2 - base.top - base.height / 2) * e;
-
-        card.style.transform = `translate(${dx}px, ${dy}px) scale(${k})`;
-
-        const done = p > 0.99;
-        if (done !== landed) {
-          landed = done;
-          flow.classList.toggle("is-landed", done);
-        }
+        faces.forEach((face, index) => {
+          face.style.opacity = index === sourceIndex
+            ? String(sourceOpacity)
+            : index === targetIndex
+              ? String(targetOpacity)
+              : "0";
+          face.classList.toggle("is-incoming", index === targetIndex);
+          face.classList.toggle(
+            "is-revealed",
+            index === targetIndex && flight.s >= 0.43
+          );
+        });
       }
 
-      function update() {
-        updateFields();
-        if (flow.dataset.flight === "on") updateFlight();
+      function scheduleRender() {
+        if (!frame) frame = window.requestAnimationFrame(renderJourney);
       }
 
-      // 幅や「動きを減らす」設定が変わったら、飛ばすかどうかを取り直す。
-      // 飛ばさない側に倒れたときは、受け皿に静的なカードを出して枠を埋める。
-      function syncFlight() {
-        if (flyable()) {
-          flow.dataset.flight = "on";
+      function syncEnhancement() {
+        const enabled = wide.matches && !still.matches;
+        journey.toggleAttribute("data-enhanced", enabled);
+        if (enabled) {
+          measureFaces();
+          fitPanels();
+          scheduleRender();
         } else {
-          delete flow.dataset.flight;
-          resetFlight();
-          // 静的なカードを入れる側では、受け皿の高さは中身に任せる
-          if (slot) slot.style.height = "";
+          if (frame) window.cancelAnimationFrame(frame);
+          frame = 0;
+          clearStepState();
+          hideFlyer();
+          /* 縦並びに戻る側では縮小も左右振りも無し。素の大きさに戻す。 */
+          steps.forEach((step) => {
+            step.querySelector(".journey-panel")
+              ?.style.removeProperty("--journey-panel-scale");
+          });
         }
-        update();
       }
 
-      // 交差の通知ではなく毎回いまの位置を測り直す。
-      // IntersectionObserver だと「どのステップも帯に入っていない」通知で終わったとき
-      // 状態が取り残されるが、都度測れば上下どちらへ動いても必ず辻褄が合う。
-      // requestAnimationFrame は挟まない。読むのは矩形2つだけで、
-      // 書き込みも変化があったときに限られるため間引く必要がない。
-      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("scroll", scheduleRender, { passive: true });
       window.addEventListener("resize", () => {
-        // 幅が変われば素のカード位置も着地点も変わるので、測り直しから始める
-        if (card) card.style.transform = "";
-        base = null;
-        update();
+        measureFaces();
+        fitPanels();
+        scheduleRender();
       });
-      wide.addEventListener("change", syncFlight);
-      still.addEventListener("change", syncFlight);
+      wide.addEventListener("change", syncEnhancement);
+      still.addEventListener("change", syncEnhancement);
 
-      // 途中の位置で読み込み直されても辻褄が合うように、初期状態もここで決める
-      syncFlight();
+      if (document.fonts?.ready) {
+        document.fonts.ready.then(() => {
+          measureFaces();
+          fitPanels();
+          scheduleRender();
+        });
+      }
+
+      syncEnhancement();
     }
   }
 

@@ -2,8 +2,8 @@ export default {
   locale: "en",
   screenshotFolder: "en-us",
   meta: {
-    title: "Project Scheduling & Gantt Chart Tool Ploto | Essential Features Stay Free, Offline",
-    description: "Ploto is an offline project scheduling and Gantt chart tool with no account required. Gantt charts, priority matrices, notes, and other essential tools for everyday and professional work remain free with no time limit. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
+    title: "One-Time Purchase Project Management & Gantt Tool Ploto | Adopt It Alone, Core Features Free",
+    description: "Ploto is a project management and Gantt chart tool one person can install and start using today. No subscription and no account required: Gantt charts, Kanban boards, priority matrices, notes, and whiteboards stay free with no time limit. Add the one-time-purchase Pro upgrade only for the extras you need. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
   },
   i18n: {
     nav_features: "Features",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "User Manual",
     cta_download: "Free Download",
 
-    hero_badge: "🏢 For Teams with Restricted Cloud Use | Runs Locally | Essential Features Stay Free",
-    hero_title: 'Tired of Managing Schedules<br>with <span class="text-gradient">Messy Excel Worksheets?</span>',
-    hero_desc: "Unable to use cloud services? Frustrated with slow Excel sheets? Ploto is an offline project management app available from the Microsoft Store. Gantt charts, priority matrices, notes, and other essential tools for everyday and professional work remain free with no time limit.",
+    hero_badge: "💡 One Person Can Adopt It | Essential Features Stay Free | One-Time Purchase, No Subscription",
+    hero_title: 'Serious Project Management,<br><span class="text-gradient">Without the Monthly Fee.</span>',
+    hero_desc: "Most project management tools assume a monthly contract, so using one on your own still means getting it approved. Build the schedule in Excel instead and keeping it current becomes such a chore that it ends up unused. Ploto is made for you. Just install it from the Microsoft Store. No account and no monthly fee: Gantt charts, Kanban boards, priority matrices, notes, whiteboards and the other core features stay free.",
     hero_cta_download: "Get it for Free",
     hero_cta_manual: "See the manual",
-    hero_meta: "<span>✓ No Account · Essential Features Free</span><span>✓ No Time Limit for Everyday or Professional Use</span><span>✓ Project Data Stored on Your PC</span>",
+    hero_meta: "<span>✓ No Account · Essential Features Free</span><span>✓ One-Time Purchase · No Monthly Fee</span><span>✓ Project Data Stored on Your PC</span>",
 
     mock_tab_gantt: "Gantt chart",
     mock_tab_kanban: "Kanban board",
@@ -74,8 +74,8 @@ export default {
     mock_q3: "Quadrant III: Urgent, not important",
     mock_q4: "Quadrant IV: Neither urgent nor important",
 
-    features_title: "One task, growing as it passes through five screens",
-    features_subtitle: "The card on the left is the same single task from start to finish. Each screen you move through adds what you decided there to that same card. Nothing is ever copied across.",
+    features_title: "The same task appears in a different form on every screen",
+    features_subtitle: "You create it once. It becomes a bar in the schedule, a card on the Kanban board, and a page in Notes. Each screen shows the same data in the form that fits it naturally.",
     feat_alert_title: "3-Color Health Status Alert",
     feat_alert_desc: "Automatically highlights tasks as red (overdue), yellow (delayed), or green (on track). Quickly spot bottlenecks without manual checks.",
     feat_cal_title: "Holidays & Company Calendars",
@@ -84,7 +84,6 @@ export default {
     feat_auto_desc: "Link tasks together, turn on auto-scheduling, and a delay in one step shifts every task after it. Parent duration and progress are calculated from their subtasks out of the box, so one change no longer means reworking the whole sheet.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
-    flow_card_hint: "Keep scrolling — this one task keeps gaining information",
     flow_task_name: "Homepage build",
     flow_field_period_value: "Aug 1 → Aug 6",
     flow_field_period_label: "Dates",
@@ -95,7 +94,6 @@ export default {
     flow_field_priority_label: "Priority",
     flow_field_priority_value: "Important and urgent",
     flow_free_note_label: "Free plan",
-    flow_closing_note: "Move a card into the \"Development\" column on the board, for example, and that task's stage changes — the schedule grid and the to-do list in Notes show the same state. However many views you add, there is still only one set of data.",
     mock_kanban_col1: "Design",
     mock_kanban_col2: "Development",
     mock_kanban_col3: "Review",
@@ -108,8 +106,8 @@ export default {
     feature_kanban_p1_desc: "Move the card from one column to the next. There is no progress field to hunt down and retype.",
     feature_kanban_p2_title: "Each stage brings its own checklist",
     feature_kanban_p2_desc: "Put a standard to-do list on a column and every card entering that stage gets it. Nothing has to be written out again.",
-    feature_kanban_p3_title: "Filter by owner or due date",
-    feature_kanban_p3_desc: "Show only what is yours, or only this week. A crowded board narrows down to just what you need to look at.",
+    feature_kanban_p3_title: "Filter by project, owner, or tag",
+    feature_kanban_p3_desc: "Keep only what matters on a crowded board. Filter by project (the schedule a task belongs to), owner, or tag, and search by task name.",
     feature_note_title: "Write what was decided onto the task itself",
     feature_note_lead: "The outline on the left is the schedule's own parent-child structure, already turned into chapters, so you never have to build the shape of a meeting note yourself. What you write belongs to that task — you are not left hunting for which task a discussion belonged to.",
     feature_note_p1_title: "The chapters are already there",
@@ -179,8 +177,8 @@ export default {
     plan_compare_license_note: "* The board limits apply only when creating new boards. A file containing boards made with Pro still opens and edits normally without Pro. A serial code can be registered on several of your own devices, and once registered it validates offline.",
 
     pricing_badge: "💡 One-time purchase, no subscription",
-    pricing_title: "Everyday and professional work stays free.<br>Add Pro once, only when you need more.",
-    pricing_desc: "Ploto keeps the essential tools for everyday and professional scheduling free with no time limit, including Gantt charts, priority matrices, and notes. Add the one-time-purchase Pro upgrade only if you need more Kanban boards and whiteboards, baselines, Excel / PDF export, or other advanced features. Pro has no monthly or yearly fee and is available through Microsoft Store or the web (Stripe).",
+    pricing_title: "Not per seat, not per month.<br>The essentials stay free; buy only what you need, once.",
+    pricing_desc: "Most project management services charge per user every month, for as long as you keep using them. Ploto keeps the essential tools for everyday and professional scheduling free with no time limit, including Gantt charts, priority matrices, and notes. Add the one-time-purchase Pro upgrade only if you need more Kanban boards and whiteboards, baselines, Excel / PDF export, or other advanced features. Pro has no monthly or yearly fee and is available through Microsoft Store or the web (Stripe).",
     pricing_model_label: "Pricing model",
     pricing_model_value: "One-time purchase (no subscription)",
     pricing_buy_label: "How to buy",
@@ -199,8 +197,8 @@ export default {
     feedback_sending: "Sending...",
     feedback_error: "An error occurred while sending. Please verify your action URL.",
 
-    dl_title: "Simplify Your Project Management Now",
-    dl_desc: "Download the application and experience smooth, offline project management today.",
+    dl_title: "Start Today, On Your Own",
+    dl_desc: "No account, no monthly contract. Download it and every essential feature is yours to use for free from day one.",
     dl_win_sub: "Get it from",
     dl_win_exe: "Windows Installer",
     dl_notes: "* Compatible with Windows 10/11. Ships with local SQLite 3 support.",
@@ -210,7 +208,7 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "Data Management and Security",
-    security_subtitle: "For environments where cloud tools are restricted, Ploto supports a workflow that stores project data on the PC. Confirm deployment against your organization's policies.",
+    security_subtitle: "Project data is stored as a file on your own PC. That works the same way on a personal machine and in a workplace where cloud tools are restricted. For deployment across an organization, confirm against your own policies.",
     security_c1_title: "Project Data Stored on Your PC",
     security_c1_desc: "Project data is stored in a .ploto file on your PC. Ploto does not automatically send project data to external servers. You can manage file storage and sharing according to the rules of your environment.",
     security_c2_title: "Distributed through Microsoft Store",

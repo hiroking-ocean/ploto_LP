@@ -535,10 +535,17 @@ button {
 .hero-title {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 3.5rem;
-  line-height: 1.15;
+  /* 見出しの1行がカラム幅（最大600px）に収まる大きさまで自動で縮める。
+     固定サイズだと日本語・韓国語で語の途中に改行が入ってしまうため。 */
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
   letter-spacing: -1.5px;
   margin-bottom: 24px;
+  /* CJK は既定だと文字単位で折り返せてしまう（「プロジェクト管／理」）。
+     keep-all で読点・スペースの位置だけを改行位置にし、
+     それでも収まらない極端に狭い画面でのみ break-word を効かせる。 */
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .hero-description {
@@ -617,6 +624,8 @@ button {
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 16px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .section-subtitle {
@@ -736,6 +745,8 @@ button {
   line-height: 1.3;
   letter-spacing: -0.5px;
   margin-bottom: 24px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .pricing-desc {
@@ -1008,10 +1019,12 @@ button {
 
 .download-title {
   font-family: var(--font-display);
-  font-size: 2.8rem;
+  font-size: clamp(1.75rem, 5vw, 2.8rem);
   font-weight: 800;
   letter-spacing: -1px;
   margin-bottom: 16px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .download-subtitle {
@@ -1152,6 +1165,12 @@ button {
     text-align: center;
     gap: 60px;
   }
+
+  /* 1カラムになるとテキスト幅は min(600px, 画面幅) になるので、
+     2カラム時（4vw）より速く縮める必要がある。 */
+  .hero-title {
+    font-size: clamp(1.5rem, 7.5vw, 3rem);
+  }
   
   .hero-content {
     margin: 0 auto;
@@ -1178,10 +1197,6 @@ button {
   
   .nav-menu {
     display: none; /* Can build simple menu toggler or keep it simple */
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
   }
   
   .section-title {
@@ -1299,13 +1314,9 @@ button {
 }
 
 /* ==========================================================================
-   主要機能セクション（1件のタスクが5画面を通って育つ流れ）
+   主要機能セクションのビュー識別色と見出し幅
    --------------------------------------------------------------------------
-   左のカードを sticky で固定したまま、右のステップを通過するたびに項目が増える。
-   段階の切り替えは app.js（IntersectionObserver）が担当し、CSS は状態を描くだけ。
-
-   既定（CSS だけ）の状態は「全項目が出ている完成形」にしてある。JS が動いたときだけ
-   .flow に data-enhanced が付いて段階表示に切り替わるので、JS が落ちても情報は落ちない。
+   レイアウトとスクロール演出は、実画面モックの定義後にある .journey で扱う。
    ========================================================================== */
 
 /* 5つの見え方の識別色。dataviz の検証済みカテゴリ配色スロット1〜6をドキュメント順の
@@ -1330,218 +1341,6 @@ button {
 .features-section .section-header {
   max-width: 860px;
 }
-
-.flow {
-  display: grid;
-  /* 左は短いラベルと値だけなので狭くてよい。実画面のスクショを少しでも
-     大きく見せたいので、その分を右へ回している。 */
-  grid-template-columns: minmax(0, 0.85fr) minmax(0, 2.15fr);
-  gap: 3rem;
-  /* align-items は既定の stretch のまま。左列がステップ全体の高さまで
-     伸びていないと .flow-card の sticky に可動域が生まれず、
-     ただ一緒にスクロールして流れ去ってしまう。 */
-  /* 現在地のビュー色。app.js が data-active に応じて差し替える */
-  --vc: var(--color-primary-light);
-}
-
-/* --- 左: 固定されるタスクカード ------------------------------------------ */
-.flow-card {
-  position: sticky;
-  /* ヘッダーが 80px 固定なので、その下に余白を足した位置で止める */
-  top: calc(80px + 2rem);
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-left: 4px solid var(--vc);
-  border-radius: 14px;
-  padding: 1.35rem 1.4rem;
-  box-shadow: var(--shadow-md);
-  transition: border-color 0.35s ease;
-}
-
-.flow-card-hint {
-  display: block;
-  margin-bottom: 0.9rem;
-  color: var(--text-muted);
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-.flow-card-title {
-  display: block;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.9rem;
-}
-
-.flow-field {
-  display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
-  padding-top: 0.7rem;
-  margin-top: 0.7rem;
-  border-top: 1px solid var(--border-color);
-}
-
-/* 先頭の項目だけは上の罫線を出さない（タスク名のすぐ下に来るため） */
-.flow-field[data-step='1'] {
-  border-top: 0;
-  margin-top: 0.9rem;
-  padding-top: 0;
-}
-
-.flow-field-label {
-  flex-shrink: 0;
-  min-width: 4.5em;
-  color: var(--text-muted);
-  font-size: 0.78rem;
-}
-
-.flow-field-value {
-  font-size: 0.88rem;
-  font-weight: 700;
-}
-
-/* 段階表示は JS が動いたときだけ。まだ来ていない項目を畳む。 */
-.flow[data-enhanced] .flow-field {
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.flow[data-enhanced] .flow-field:not(.is-shown) {
-  opacity: 0;
-  transform: translateY(-4px);
-  /* 高さも畳まないとカードが最初から最終形の大きさで居座ってしまう */
-  margin-top: 0;
-  padding-top: 0;
-  border-top-width: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-/* 直前に足された項目を一瞬だけ目立たせる。何が増えたのかを見失わないため。 */
-.flow[data-enhanced] .flow-field.is-latest .flow-field-value {
-  color: var(--vc);
-}
-
-/* --- 右: ステップ --------------------------------------------------------- */
-.flow-steps {
-  /* グリッドの子は既定で中身の最小幅より縮まない。モックのタブ列が
-     その最小幅を押し上げ、列からはみ出してページごと横スクロールする。 */
-  min-width: 0;
-  counter-reset: flow-step;
-}
-
-.flow-step {
-  min-width: 0;
-  /* 滞留時間を確保しつつ、1画面に収まる高さに留める */
-  min-height: 78vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 3rem 0;
-}
-
-.flow-step-index::before {
-  counter-increment: flow-step;
-  content: counter(flow-step, decimal-leading-zero);
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  color: var(--vc);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.flow-step-title {
-  font-size: 1.6rem;
-  font-weight: 800;
-  line-height: 1.45;
-  margin-bottom: 0.8rem;
-}
-
-.flow-step-lead {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.9;
-  margin-bottom: 1.4rem;
-}
-
-.flow-points {
-  display: grid;
-  gap: 0.9rem;
-  margin-bottom: 1.4rem;
-}
-
-.flow-points li {
-  padding-left: 1.1rem;
-  position: relative;
-}
-
-.flow-points li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--vc);
-}
-
-.flow-points strong {
-  display: block;
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 0.15rem;
-}
-
-.flow-points span {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-/* 無料枠の但し書き。機能の説明と同じ場所で、どこまで無料かを明示する。 */
-.flow-free-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.2rem;
-  padding: 0.45rem 0.8rem;
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  color: var(--text-muted);
-  font-size: 0.82rem;
-}
-
-.flow-free-label {
-  font-weight: 700;
-  color: var(--color-success);
-}
-
-.flow-step-more {
-  align-self: start;
-  color: var(--color-primary-light);
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.flow-step-more:hover {
-  text-decoration: underline;
-}
-
-.flow-closing {
-  max-width: 900px;
-  margin: 3rem auto 0;
-  padding: 1.25rem 1.5rem;
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-left: 3px solid var(--color-primary-light);
-  border-radius: 0 12px 12px 0;
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
 /* ==========================================================================
    実画面モック（ガント / カンバン / ノート / 優先度マトリクス）
 
@@ -1672,7 +1471,9 @@ button {
 }
 
 .ui-view {
-  height: 330px;
+  /* 既定は「画面の一部を切り出した」高さ。ジャーニーのステージに
+     置かれたときだけ --ui-view-h で画面いっぱいに差し替わる。 */
+  height: var(--ui-view-h, 330px);
   overflow: hidden;
   background-color: var(--u-bg);
 }
@@ -1871,7 +1672,7 @@ button {
 /* 行が4つしかないぶん、他のビューより低く切り出す（下の余白は実画面にもある） */
 .gv {
   display: grid;
-  height: 260px;
+  height: var(--ui-view-h, 260px);
   grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
   background-color: var(--u-surface);
 }
@@ -2024,20 +1825,35 @@ button {
   transform: translateY(-50%);
 }
 
-/* 7/20 を左端とした5週ぶん（35日）を 100% とみなした位置 */
-.gv-lane:nth-child(1) .gv-sum { left: 22.9%; width: 45.7%; }
-.gv-lane:nth-child(2) .gv-bar { left: 22.9%; width: 11.4%; }
-.gv-lane:nth-child(2) em { left: 36%; }
-.gv-lane:nth-child(3) .gv-bar { left: 34.3%; width: 17.1%; }
-.gv-lane:nth-child(3) em { left: 53%; }
-.gv-lane:nth-child(4) .gv-bar { left: 51.4%; width: 20%; }
-.gv-lane:nth-child(4) em { left: 73%; }
+/* 7/20 を左端とした5週ぶん（35日）を 100% とみなした位置。
+   上から デザイン(親) / ワイヤーフレーム / ビジュアルデザイン / デザインシステム構築 /
+   実装(親) / フロント基盤構築 / トップページ実装 / CMS連携 の8行。 */
+.gv-lane:nth-child(1) .gv-sum { left: 0; width: 31.4%; }
+.gv-lane:nth-child(2) .gv-bar { left: 0; width: 8.6%; }
+.gv-lane:nth-child(2) em { left: 9.6%; }
+.gv-lane:nth-child(3) .gv-bar { left: 5.7%; width: 14.3%; }
+.gv-lane:nth-child(3) em { left: 21%; }
+.gv-lane:nth-child(4) .gv-bar { left: 11.4%; width: 22.9%; }
+.gv-lane:nth-child(4) em { left: 35.3%; }
+.gv-lane:nth-child(5) .gv-sum { left: 22.9%; width: 45.7%; }
+.gv-lane:nth-child(6) .gv-bar { left: 22.9%; width: 11.4%; }
+.gv-lane:nth-child(6) em { left: 35.3%; }
+.gv-lane:nth-child(7) .gv-bar { left: 34.3%; width: 17.1%; }
+.gv-lane:nth-child(7) em { left: 52.4%; }
+.gv-lane:nth-child(8) .gv-bar { left: 51.4%; width: 20%; }
+.gv-lane:nth-child(8) em { left: 72.5%; }
+
+/* デザイン工程のサマリーバー。工程ごとに色が変わるのは実画面と同じ */
+.gv-sum.design {
+  background-color: #efe3fb;
+  color: #8b5cd0;
+}
 
 /* 依存線。前工程の終わりと次の始まりが同じ日なので縦一本になる */
 .gv-dep {
   position: absolute;
   left: 34.3%;
-  top: 45px;
+  top: 165px;
   width: 1px;
   height: 24px;
   background-color: #b6bfcc;
@@ -2081,7 +1897,6 @@ button {
    ========================================================================== */
 .kv {
   display: grid;
-  align-content: start;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   padding: 12px;
@@ -2532,14 +2347,14 @@ button {
 /* ==========================================================================
    5. ホワイトボード — 締めのビュー
 
-   ここだけ他より背が高い。左の追従カードがこのボードの .wb-slot まで飛んで
-   着地する（app.js の「カードの着地」）ので、その受け皿ぶんの余白が要る。
+   ここだけ他より背が高い。flyer がこのボードの .wb-slot へ収まるため、
+   その受け皿ぶんの余白が要る。
    ========================================================================== */
 .wb {
   position: relative;
-  /* 締めのビューなので他より背が高い。追従カードが等身大に近いまま
+  /* 締めのビューなので他より背が高い。主役カードが等身大に近いまま
      着地できるだけの受け皿を、囲いの中に確保する必要がある。 */
-  height: 480px;
+  height: var(--ui-view-h, 480px);
   background-color: #fbfcfd;
   /* キャンバスのドット方眼 */
   background-image: radial-gradient(#dfe4ea 1px, transparent 1px);
@@ -2566,11 +2381,6 @@ button {
   stroke-dashoffset: 320;
   opacity: 0;
   transition: stroke-dashoffset 0.7s ease-out, opacity 0.3s ease-out;
-}
-
-.flow.is-landed .wb-link-land {
-  stroke-dashoffset: 0;
-  opacity: 1;
 }
 
 /* 親タスクの「囲い」 */
@@ -2659,8 +2469,7 @@ button {
   font-weight: 600;
 }
 
-/* 追従カードの着地点。JS が動く環境では空の枠のままで、
-   そこへ左のカードが飛んでくる。 */
+/* flyer の着地点。中の静的カードへ重なってからフェードアウトする。 */
 .wb-slot {
   display: flex;
   align-items: center;
@@ -2675,27 +2484,10 @@ button {
   transition: border-color 0.4s ease, background-color 0.4s ease;
 }
 
-.flow.is-landed .wb-slot {
-  border-color: transparent;
-  background-color: transparent;
-}
-
 /* JS が飛ばせない環境（モバイル・動きを減らす設定・JS無効）では
    代わりにここへ静的なカードを出す。枠が空のまま終わらないようにするため。 */
 .wb-slot-card {
   width: 100%;
-}
-
-.flow[data-flight='on'] .wb-slot-card {
-  display: none;
-}
-
-/* 静的なカードを出す側では、受け皿としての破線も余白も要らない */
-.flow:not([data-flight='on']) .wb-slot {
-  aspect-ratio: auto;
-  max-height: none;
-  border-color: transparent;
-  background-color: transparent;
 }
 
 .wb-note {
@@ -2782,110 +2574,17 @@ button {
 
 .wb-w-late { margin-top: 6px; color: #e0574c; font-size: 10px; font-weight: 700; }
 .wb-w-done { margin-top: 5px; color: #5b6675; font-size: 10px; }
-
-/* --- 飛んでくるカード側 ---------------------------------------------------
-   .flow-card は sticky のまま transform だけを載せる。JS は毎スクロール
-   着地点の現在位置を測り直すので、ボードが動いてもカードは追従する。 */
-.flow[data-flight='on'] .flow-card {
-  z-index: 3;
-  will-change: transform;
-  /* スクロールイベントは間隔が粗いので、間を少しだけ補間して滑らかにする */
-  transition: border-color 0.35s ease, transform 0.14s linear, box-shadow 0.4s ease;
-}
-
-.flow.is-landed .flow-card {
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.28);
-}
-
-/* 着地したらスクロールを促す文言は役目を終える。ここで display を切ると
-   カードの高さが変わって着地点の計算がずれるので、透明にするだけにする。 */
-.flow.is-landed .flow-card-hint {
-  opacity: 0;
-}
-
-.flow-card-hint {
-  transition: opacity 0.3s ease;
-}
-
-
-
-/* --- 狭い画面 ------------------------------------------------------------- */
-/* sticky 2カラムが成立しないので、カードをヘッダー直下に帯状で固定して
-   項目を横並びのチップにする。増えていく様子はスマホでも見え続ける。 */
-@media (max-width: 900px) {
-  .flow {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
-  }
-
-  .flow-card-col {
-    position: sticky;
-    top: 80px;
-    z-index: 5;
-    /* 帯の下に本文が透けないように、セクション背景で塞ぐ */
-    background-color: var(--bg-main);
-    padding: 0.75rem 0;
-  }
-
-  .flow-card {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.5rem 0.9rem;
-    padding: 0.8rem 1rem;
-    border-radius: 10px;
-  }
-
-  .flow-card-hint {
-    display: none;
-  }
-
-  .flow-card-title {
-    margin-bottom: 0;
-    font-size: 0.92rem;
-  }
-
-  .flow-field,
-  .flow-field[data-step='1'] {
-    display: flex;
-    align-items: baseline;
-    gap: 0.35rem;
-    margin: 0;
-    padding: 0;
-    border-top: 0;
-    font-size: 0.78rem;
-  }
-
-  .flow-field-label {
-    min-width: 0;
-  }
-
-  .flow-field-value {
-    font-size: 0.78rem;
-  }
-
-  .flow-step {
-    min-height: 0;
-    padding: 2.5rem 0;
-  }
-
-  .flow-step-title {
-    font-size: 1.3rem;
-  }
-}
-
 /* 実画面モックは縮小せず、幅に入らない列を落として「もっと狭い切り出し」にする。
    縮小すると結局スクリーンショットと同じで文字が読めなくなるため。
-   .flow が1カラムになる 900px ではモックはまだ画面幅いっぱいを使えるので、
+   .journey が通常の縦並びになる 900px ではモックはまだ画面幅いっぱいを使えるので、
    実際に足りなくなる幅まで待ってから間引く。 */
 @media (max-width: 700px) {
   .ui-view {
-    height: 300px;
+    height: var(--ui-view-h, 300px);
   }
 
   .gv {
-    height: 210px;
+    height: var(--ui-view-h, 210px);
     grid-template-columns: minmax(0, 150px) minmax(0, 1fr);
   }
 
@@ -2920,7 +2619,7 @@ button {
   }
 
   /* ホワイトボードは付箋と自由テキストを落として、囲いと集計だけ残す */
-  .wb { height: 400px; }
+  .wb { height: var(--ui-view-h, 400px); }
   .wb-note,
   .wb-text,
   .wb-links { display: none; }
@@ -2931,11 +2630,482 @@ button {
   .xv .uic.x3 { left: 26%; top: 56%; }
 }
 
-/* 段階表示そのものは情報なので残し、動きだけを止める */
-@media (prefers-reduced-motion: reduce) {
-  .flow-card,
-  .flow[data-enhanced] .flow-field {
-    transition: none;
+/* ==========================================================================
+   主要機能ジャーニー（同じ1件が画面ごとに姿を変える）
+   --------------------------------------------------------------------------
+   既定は素直な縦並び。デスクトップかつ motion 許可時に app.js が
+   data-enhanced を付けたときだけ sticky と飛行演出を有効にする。
+   ========================================================================== */
+.journey {
+  position: relative;
+  min-width: 0;
+  --vc: var(--color-primary-light);
+}
+
+.journey-steps,
+.journey-step {
+  min-width: 0;
+}
+
+.journey-steps {
+  counter-reset: journey-step;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.journey-step {
+  padding: 3rem 0 5rem;
+}
+
+.journey-screen {
+  position: relative;
+  min-width: 0;
+  transform-origin: 50% 12%;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.45s ease, filter 0.45s ease;
+}
+
+.journey-screen .ui {
+  min-width: 0;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+html body .journey-panel,
+html body .journey .journey-panel,
+.journey-panel {
+  position: relative;
+  z-index: 30;
+  width: min(100%, 620px);
+  margin: 0 0 0 auto;
+  padding: 1rem 0.5rem !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  transition: opacity 0.45s ease;
+}
+
+/* 説明の裏。白い円を敷くと、文字が出そろう前に円だけが浮いて見えるので、
+   塗りはほとんど持たせず「背景をぼかすだけ」にしてある。縁は mask で溶かす。 */
+.journey-panel::before {
+  content: '';
+  position: absolute;
+  inset: -52px -76px;
+  z-index: -1;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0.28) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  /* 縁を切り落とさずに溶かす。border-radius だと輪郭が出てしまう */
+  mask-image: radial-gradient(ellipse at center, #000 0%, #000 50%, transparent 86%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, #000 50%, transparent 86%);
+  pointer-events: none;
+}
+
+[data-theme='dark'] .journey-panel::before {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(18, 24, 38, 0.62) 0%,
+    rgba(18, 24, 38, 0.34) 55%,
+    rgba(18, 24, 38, 0) 100%
+  );
+}
+
+/* ぼかしは文字より少しだけ先に立ち上げる。いきなり出ると切り替わりが目立つ */
+.journey[data-enhanced] .journey-panel::before {
+  opacity: clamp(0, calc(var(--journey-panel-p, 1) * 2.4), 1);
+}
+
+.journey[data-enhanced] .journey-panel {
+  position: fixed;
+  /* 上端固定だと、語の長い言語で下にはみ出す。中央に置いて上下の逃げを均す。 */
+  top: 50%;
+  z-index: 30;
+  width: min(calc(100vw - 48px), 620px);
+  margin: 0;
+  opacity: var(--journey-panel-opacity, 0);
+  pointer-events: none;
+  transform: none !important;
+  transition: none;
+  /* それでも収まらないぶんは縮める。倍率は app.js が言語・ステップごとに
+     実測して入れる（1 を超えることはない＝拡大はしない）。 */
+  translate: 0 -50%;
+  scale: var(--journey-panel-scale, 1);
+  transform-origin: var(--journey-panel-origin, right) center;
+}
+
+/* 説明は左右交互に出す。ガント=右、カンバン=左、ノート=右… と振ることで、
+   モックのどちら側を見せたいかを切り替えられる。 */
+.journey[data-enhanced] .journey-step:nth-child(odd) .journey-panel {
+  right: max(24px, calc((100vw - 1200px) / 2 + 24px));
+  left: auto;
+  --journey-panel-origin: right;
+}
+
+.journey[data-enhanced] .journey-step:nth-child(even) .journey-panel {
+  left: max(24px, calc((100vw - 1200px) / 2 + 24px));
+  right: auto;
+  --journey-panel-origin: left;
+}
+
+.journey[data-enhanced] .journey-step.is-panel-visible .journey-panel {
+  pointer-events: auto;
+  transform: none !important;
+}
+
+/* 説明は一度に出さず、番号 → 見出し → リード → 要点 → リンク の順に出す。
+   --journey-panel-p はステップ内の進行度 0→1（app.js が毎フレーム入れる）。
+   --d はその要素が出はじめる位置。消えるときは親の不透明度で一括。 */
+.journey[data-enhanced] .journey-index,
+.journey[data-enhanced] .journey-title,
+.journey[data-enhanced] .journey-lead,
+.journey[data-enhanced] .journey-points,
+.journey[data-enhanced] .journey-free-note,
+.journey[data-enhanced] .journey-more {
+  --jp: clamp(0, calc((var(--journey-panel-p, 1) - var(--d, 0)) * 2.6), 1);
+  opacity: var(--jp);
+  translate: 0 calc((1 - var(--jp)) * 14px);
+}
+
+.journey[data-enhanced] .journey-index { --d: 0; }
+.journey[data-enhanced] .journey-title { --d: 0.08; }
+.journey[data-enhanced] .journey-lead { --d: 0.24; }
+.journey[data-enhanced] .journey-points { --d: 0.40; }
+.journey[data-enhanced] .journey-free-note,
+.journey[data-enhanced] .journey-more { --d: 0.56; }
+
+.journey-index::before {
+  counter-increment: journey-step;
+  content: counter(journey-step, decimal-leading-zero);
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  color: var(--vc);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.journey-title {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.journey-lead {
+  margin-bottom: 1.4rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.journey-points {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.journey-points li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.journey-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--vc);
+}
+
+.journey-points strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.journey-points span {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.journey-free-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.journey-free-label {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+.journey-more {
+  display: block;
+  width: fit-content;
+  color: var(--color-primary-light);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.journey-more:hover {
+  text-decoration: underline;
+}
+
+
+/* JS が動かない環境でも、ホワイトボードの主役カードは静的に見える。 */
+.journey .wb-slot {
+  aspect-ratio: auto;
+  max-height: none;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.journey[data-enhanced] .journey-step {
+  /* 内訳: モックが sticky で止まる可動域 + モック自身の高さ。
+     ここを削ると、説明のフェードに割けるスクロール量が減る。 */
+  min-height: 210vh;
+  padding: 2rem 0;
+}
+
+/* 背の高いホワイトボードも、説明のフェードアウト完了まではstickyを保つ。 */
+.journey[data-enhanced] .journey-step:last-child {
+  min-height: 240vh;
+}
+
+.journey[data-enhanced] .journey-screen {
+  position: sticky;
+  top: calc(80px + 1.5rem);
+  z-index: 1;
+  translate: 0 var(--journey-entry-y, 0px);
+}
+
+/* ステージに置くようになったので、モックはヘッダー下から画面下までを使う。
+   .ui-view 330px / .gv 260px / .wb 480px は、右カラムの上部に小さく
+   置いていた頃の固定値で、画面の高さに対して足りていなかった。
+
+   内訳: 80px（固定ヘッダー）+ 1.5rem（sticky の余白）+ 24px（画面下の余白）
+         + 38px（モックのタブ列）。上限は、内側が px 組みで間延びしない範囲。 */
+@media (min-width: 901px) {
+  .journey[data-enhanced] {
+    --ui-view-h: clamp(360px, calc(100vh - 190px), 820px);
+  }
+}
+
+.journey[data-enhanced] .journey-step.is-back .journey-screen {
+  transform: scale(0.98);
+  opacity: 0.92;
+}
+
+.journey-step [data-journey-anchor] {
+  transition: box-shadow 0.35s ease, opacity 0.35s ease;
+}
+
+.journey-step.is-current [data-journey-anchor],
+.journey-step.is-arrived [data-journey-anchor] {
+  box-shadow: 0 0 0 2px var(--vc),
+    0 0 0 8px color-mix(in srgb, var(--vc) 28%, transparent);
+}
+
+.journey-step.is-departing [data-journey-anchor] {
+  opacity: 0.4;
+  box-shadow: none;
+}
+
+/* ホワイトボードへ収まったときだけ、主役カードから先の線を描く。 */
+.journey-step.is-arrived .wb-link-land {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+/* --- 飛ぶタスク ---------------------------------------------------------- */
+.journey-flyer {
+  --u-bg: #f4f6f9;
+  --u-surface: #ffffff;
+  --u-line: #e6e9ee;
+  --u-line-soft: #f0f2f5;
+  --u-ink: #1f2733;
+  --u-ink-2: #5b6675;
+  --u-ink-3: #97a1ae;
+  --u-blue: #3b82f6;
+  --u-blue-ink: #2563eb;
+  --u-blue-soft: #e8effc;
+  --u-red: #ef4444;
+  --u-red-soft: #fdecec;
+  --u-amber: #f0a52e;
+  --u-amber-soft: #fdf1de;
+  --u-green: #16a34a;
+  --u-green-soft: #dff2e6;
+  --u-shade: #f1f3f6;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 40;
+  display: none;
+  contain: layout paint;
+  pointer-events: none;
+  color: var(--u-ink);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.journey-flyer,
+.journey-flyer * {
+  box-sizing: border-box;
+}
+
+.journey-flyer.is-active {
+  will-change: transform;
+}
+
+.jf-plate,
+.jf-face {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.jf-plate {
+  z-index: 0;
+  border: 1.5px solid color-mix(in srgb, var(--vc, #3b82f6) 45%, rgba(15, 23, 42, 0.18));
+  border-radius: 11px;
+  background-color: var(--u-surface);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.32), 0 0 28px color-mix(in srgb, var(--vc, #3b82f6) 30%, transparent);
+}
+
+.jf-face {
+  z-index: 1;
+  max-width: calc(100vw - 48px);
+  overflow: hidden;
+  opacity: 0;
+}
+
+.jf-face[data-face='gantt'] {
+  width: min(520px, calc(100vw - 48px));
+}
+
+.jf-gantt-row {
+  width: 100%;
+  min-height: 38px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  border: 0;
+  border-radius: 9px;
+}
+
+.jf-gantt-row .gv-name {
+  padding-left: 14px;
+  font-weight: 700;
+}
+
+.jf-gantt-period {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  padding-right: 14px;
+  color: var(--u-ink-2);
+  font-size: 10.5px;
+}
+
+.jf-gantt-period b {
+  color: var(--u-ink);
+  font-size: 11.5px;
+}
+
+.jf-face[data-face='kanban'] {
+  width: 228px;
+}
+
+.jf-face[data-face='note'] {
+  width: min(360px, calc(100vw - 48px));
+  height: 140px;
+  border-radius: 9px;
+  background-color: var(--u-surface);
+}
+
+.jf-note-doc {
+  width: 100%;
+  height: 100%;
+  padding: 12px 16px 10px 18px;
+}
+
+.jf-note-copy {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--u-line);
+  color: #33404f;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.jf-note-copy p {
+  margin: 0 0 5px;
+}
+
+.jf-face[data-face='matrix'] {
+  width: 190px;
+  min-height: 150px;
+}
+
+.jf-matrix-card {
+  min-height: 150px;
+}
+
+.jf-face[data-face='whiteboard'] {
+  width: 228px;
+}
+
+.jf-whiteboard-card {
+  width: 100%;
+}
+
+.jf-face.is-incoming .jf-new {
+  transition: opacity 0.25s ease 0.12s, transform 0.25s ease 0.12s;
+}
+
+.jf-face.is-incoming:not(.is-revealed) .jf-new {
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+  .journey-step {
+    min-height: 0;
+    padding: 2.5rem 0;
+  }
+
+  .journey-title {
+    font-size: 1.3rem;
+  }
+
+  .journey-flyer {
+    display: none !important;
+  }
+
+  /* 縦並びに落ちる側ではステージが無いので、切り出しの既定値に戻す */
+  .journey[data-enhanced] {
+    --ui-view-h: initial;
   }
 }
 

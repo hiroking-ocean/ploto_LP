@@ -80,7 +80,7 @@
       "price": "0",
       "priceCurrency": "JPY"
     },
-    "description": "クラウド不要・オフラインで使えるプロジェクト管理アプリ。日常や業務に必要な主要機能を無料のまま使い続けられ、より高度な機能は買い切りのProで追加できます。",
+    "description": "1人で導入できる買い切りのプロジェクト管理アプリ。月額課金もアカウント登録も不要で、日常や業務に必要な主要機能を無料のまま使い続けられ、より高度な機能だけ買い切りのProで追加できます。",
     "url": "https://hiroking-ocean.github.io/ploto_LP/",
     "downloadUrl": "https://apps.microsoft.com/detail/9N4NJNMT2B77",
     "screenshot": "https://hiroking-ocean.github.io/ploto_LP/assets/screenshots/ja-jp/01-gantt.png"
@@ -183,18 +183,18 @@
 
       <div class="hero-container">
         <div class="hero-content">
-          <div class="badge" data-i18n="hero_badge">🏢 クラウド利用を制限している現場向け｜ローカル動作｜主要機能は無料</div>
+          <div class="badge" data-i18n="hero_badge">💡 1人で導入できる｜主要機能は無料のまま｜買い切り・サブスクなし</div>
           <h1 class="hero-title" data-i18n="hero_title">
-            プロジェクト管理を、<br><span class="text-gradient">もっと直感的に、美しく。</span>
+            月額課金のいらない、<br><span class="text-gradient">本格的なプロジェクト管理</span>
           </h1>
-          <p class="hero-description" data-i18n="hero_desc">「クラウドサービスを利用できない」「重いExcel工程表」に悩む現場へ。PlotoはMicrosoft Storeからインストールできる、オフライン対応のプロジェクト管理ツールです。ガントチャート・優先度マトリクス・ノートなど、日常や業務に必要な主要機能を無料のまま使い続けられます。</p>
+          <p class="hero-description" data-i18n="hero_desc">プロジェクト管理ツールの多くは月額契約が前提で、1人で使いたくても稟議が必要。Excelの工程表を作っても、更新が面倒で結局使わない。Plotoは、そんなあなたのためにあります。Microsoft Storeからインストールするだけ。アカウント登録も月額課金も不要で、ガントチャート・カンバン・優先度マトリクス・ノート・ホワイトボードなどの主要機能を、無料のまま使えます。</p>
           <div class="hero-buttons">
             <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">無料で手に入れる</a>
             <a href="#manual" class="btn-secondary btn-large" data-i18n="hero_cta_manual">マニュアルを見る</a>
           </div>
           <div class="hero-meta-info" data-i18n="hero_meta">
             <span>✓ アカウント登録不要・主要機能は無料</span>
-            <span>✓ 日常・業務利用でも期限なし</span>
+            <span>✓ 買い切り・月額課金なし</span>
             <span>✓ プロジェクトデータはPC内に保存</span>
           </div>
         </div>
@@ -218,45 +218,18 @@
     <section id="features" class="features-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="features_title">1件のタスクが、5つの画面を通って育っていく</h2>
+          <h2 class="section-title" data-i18n="features_title">同じ1件のタスクが、画面ごとに違う姿で出てくる</h2>
           <p class="section-subtitle" data-i18n="features_subtitle">
-            左のカードは、最初から最後まで同じ1件です。画面を移るたびに、そこで決めたことがこのカードに足されていきます。転記は一度も発生しません。
+            登録するのは1件。工程表では1本のバー、カンバンでは1枚のカード、ノートでは1ページ。同じデータを、その画面にとって自然な形で見せています。
           </p>
         </div>
 
-        <div class="flow" id="task-flow">
-          <div class="flow-card-col">
-            <div class="flow-card">
-              <span class="flow-card-hint" data-i18n="flow_card_hint">スクロールすると、この1件に情報が増えていきます</span>
-
-              <span class="flow-card-title" data-i18n="flow_task_name">トップページ実装</span>
-
-              <div class="flow-field" data-step="1">
-                <span class="flow-field-label" data-i18n="flow_field_period_label">期間</span>
-                <span class="flow-field-value" data-i18n="flow_field_period_value">8/1 → 8/6</span>
-              </div>
-
-              <div class="flow-field" data-step="2">
-                <span class="flow-field-label" data-i18n="flow_field_process_label">工程</span>
-                <span class="flow-field-value" data-i18n="flow_field_process_value">実装中</span>
-              </div>
-
-              <div class="flow-field" data-step="3">
-                <span class="flow-field-label" data-i18n="flow_field_memo_label">メモ</span>
-                <span class="flow-field-value" data-i18n="flow_field_memo_value">仕様確定 7/6</span>
-              </div>
-
-              <div class="flow-field" data-step="4">
-                <span class="flow-field-label" data-i18n="flow_field_priority_label">優先度</span>
-                <span class="flow-field-value" data-i18n="flow_field_priority_value">緊急かつ重要</span>
-              </div>
-            </div>
-          </div>
-
+        <div class="journey" id="task-journey">
           <!-- 番号は CSS カウンタで振る（翻訳もメンテも不要にするため） -->
-          <ol class="flow-steps">
-            <li class="flow-step" data-view="gantt" data-step="1">
-                            <div class="ui" aria-hidden="true">
+          <ol class="journey-steps">
+            <li class="journey-step" data-view="gantt" data-step="1">
+              <div class="journey-screen">
+                <div class="ui" aria-hidden="true">
               <div class="ui-tabs">
                 <span class="ui-tab is-on"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
                 <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
@@ -273,6 +246,30 @@
                       <span data-i18n="flow_field_period_label">期間</span>
                     </div>
                     <div class="gv-row is-group">
+                      <span class="gv-name"><i class="gv-caret"></i><span data-i18n="mock_kanban_col1">デザイン</span></span>
+                      <span class="u-pri"><i class="u-pb">I</i>71</span>
+                      <span class="gv-date">2026-07-20</span>
+                      <span class="gv-num">12</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_wire">ワイヤーフレーム</span>
+                      <span class="u-pri"><i class="u-pb p2">II</i>61</span>
+                      <span class="gv-date">2026-07-20</span>
+                      <span class="gv-num">3</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_visual">ビジュアルデザイン</span>
+                      <span class="u-pri"><i class="u-pb">I</i>82</span>
+                      <span class="gv-date">2026-07-22</span>
+                      <span class="gv-num">5</span>
+                    </div>
+                    <div class="gv-row">
+                      <span class="gv-name" data-i18n="mock_task_dsys">デザインシステム構築</span>
+                      <span class="u-pri"><i class="u-pb p2">II</i>58</span>
+                      <span class="gv-date">2026-07-24</span>
+                      <span class="gv-num">8</span>
+                    </div>
+                    <div class="gv-row is-group">
                       <span class="gv-name"><i class="gv-caret"></i><span data-i18n="mock_kanban_col2">実装</span></span>
                       <span class="u-pri"><i class="u-pb">I</i>66</span>
                       <span class="gv-date">2026-07-28</span>
@@ -284,7 +281,7 @@
                       <span class="gv-date">2026-07-28</span>
                       <span class="gv-num">4</span>
                     </div>
-                    <div class="gv-row is-sel">
+                    <div class="gv-row is-sel" data-journey-anchor="gantt">
                       <span class="gv-name" data-i18n="flow_task_name">トップページ実装</span>
                       <span class="u-pri"><i class="u-pb">I</i>78</span>
                       <span class="gv-date">2026-08-01</span>
@@ -303,6 +300,10 @@
                       <span data-i18n="mock_wk1">7/20</span><span data-i18n="mock_wk2">7/27</span><span data-i18n="mock_wk3">8/3</span><span data-i18n="mock_wk4">8/10</span><span data-i18n="mock_wk5">8/17</span>
                     </div>
                     <div class="gv-lanes">
+                      <div class="gv-lane"><span class="gv-sum design" data-i18n="mock_kanban_col1">デザイン</span></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_wire">ワイヤーフレーム</em></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_visual">ビジュアルデザイン</em></div>
+                      <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_dsys">デザインシステム構築</em></div>
                       <div class="gv-lane"><span class="gv-sum" data-i18n="mock_kanban_col2">実装</span></div>
                       <div class="gv-lane"><span class="gv-bar"></span><em data-i18n="mock_task_front">フロント基盤構築</em></div>
                       <div class="gv-lane is-sel"><span class="gv-bar"></span><em data-i18n="flow_task_name">トップページ実装</em></div>
@@ -312,14 +313,15 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="flow-step-body">
-                <span class="flow-step-index"></span>
-                <h3 class="flow-step-title" data-i18n="feature_gantt_title">まず、ここでタスクが生まれる</h3>
-                <p class="flow-step-lead" data-i18n="feature_gantt_lead">
+              <div class="journey-panel">
+                <span class="journey-index"></span>
+                <h3 class="journey-title" data-i18n="feature_gantt_title">まず、ここでタスクが生まれる</h3>
+                <p class="journey-lead" data-i18n="feature_gantt_lead">
                   バーをドラッグして期間を決め、タスク同士を線でつなぐ。ここで作った1件が、このあとのすべての画面に出てきます。日付の計算やセルの結合に手を取られることはありません。
                 </p>
-                <ul class="flow-points">
+                <ul class="journey-points">
                   <li>
                     <strong data-i18n="feat_alert_title">進捗が一目でわかる3色アラート</strong>
                     <span data-i18n="feat_alert_desc">タスクの進行状況を「期限超過（赤）」「開始遅延（黄）」「順調（緑）」の3色で自動判定してライン表示。遅れているタスクを見逃しません。</span>
@@ -333,12 +335,13 @@
                     <span data-i18n="feat_auto_desc">タスク同士を線でつなぎ、オートスケジューリングをオンにすれば、前工程が延びたぶんだけ後続の日程が自動でずれます。</span>
                   </li>
                 </ul>
-                <a href="#" data-manual-link="gantt" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+                <a href="#" data-manual-link="gantt" class="journey-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
               </div>
             </li>
 
-            <li class="flow-step" data-view="kanban" data-step="2">
-                            <div class="ui" aria-hidden="true">
+            <li class="journey-step" data-view="kanban" data-step="2">
+              <div class="journey-screen">
+                <div class="ui" aria-hidden="true">
               <div class="ui-tabs">
                 <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
                 <span class="ui-tab is-on"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
@@ -376,7 +379,7 @@
                   <div class="kv-col c2">
                     <div class="kv-head"><i class="kv-ic play"></i><span class="kv-name" data-i18n="mock_kanban_col2">実装</span><span class="kv-count">3</span></div>
                     <div class="kv-body">
-                      <div class="uic ac-blue is-on">
+                      <div class="uic ac-blue is-on" data-journey-anchor="kanban">
                         <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">実装</span></div>
                         <div class="uic-t" data-i18n="flow_task_name">トップページ実装</div>
                         <div class="uic-tags"><span class="u-tag tg-front" data-i18n="mock_tag_front">フロント</span></div>
@@ -427,14 +430,15 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="flow-step-body">
-                <span class="flow-step-index"></span>
-                <h3 class="flow-step-title" data-i18n="feature_kanban_title">工程を、カードを動かして切り替える</h3>
-                <p class="flow-step-lead" data-i18n="feature_kanban_lead">
+              <div class="journey-panel">
+                <span class="journey-index"></span>
+                <h3 class="journey-title" data-i18n="feature_kanban_title">工程を、カードを動かして切り替える</h3>
+                <p class="journey-lead" data-i18n="feature_kanban_lead">
                   同じタスクを「いまどの工程にあるか」の並びで見る画面です。カードを右の列へ動かすと、そのタスクの工程が変わります。工程表の側の表示も同時に変わるので、どちらかを直し忘れることがありません。
                 </p>
-                <ul class="flow-points">
+                <ul class="journey-points">
                   <li>
                     <strong data-i18n="feature_kanban_p1_title">動かすだけで状態が変わる</strong>
                     <span data-i18n="feature_kanban_p1_desc">カードを列から列へドラッグするだけ。進捗の入力欄を探して数字を打ち直す必要はありません。</span>
@@ -448,16 +452,17 @@
                     <span data-i18n="feature_kanban_p3_desc">自分の担当ぶんだけ、今週ぶんだけ、といった絞り込みができます。ボードが混み合っても見たいものだけ残せます。</span>
                   </li>
                 </ul>
-                <p class="flow-free-note">
-                  <span class="flow-free-label" data-i18n="flow_free_note_label">無料のまま</span>
+                <p class="journey-free-note">
+                  <span class="journey-free-label" data-i18n="flow_free_note_label">無料のまま</span>
                   <span data-i18n="plan_compare_kanban_free">1ファイルにつき3枚まで</span>
                 </p>
-                <a href="#" data-manual-link="kanban" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+                <a href="#" data-manual-link="kanban" class="journey-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
               </div>
             </li>
 
-            <li class="flow-step" data-view="note" data-step="3">
-                            <div class="ui" aria-hidden="true">
+            <li class="journey-step" data-view="note" data-step="3">
+              <div class="journey-screen">
+                <div class="ui" aria-hidden="true">
               <div class="ui-tabs">
                 <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
                 <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
@@ -485,9 +490,9 @@
                       <span class="nv-fmt"><i>B</i><i>I</i><i>U</i></span>
                       <span class="nv-chars" data-i18n="mock_note_chars">117 文字</span>
                     </div>
-                    <div class="nv-doc">
+                        <div class="nv-doc">
                       <div class="nv-crumb"><span data-i18n="mock_project">Webサイトリニューアル</span> / <span data-i18n="mock_kanban_col2">実装</span> / <span data-i18n="flow_task_name">トップページ実装</span></div>
-                      <div class="nv-h1"><i></i><b data-i18n="flow_task_name">トップページ実装</b></div>
+                      <div class="nv-h1" data-journey-anchor="note"><i></i><b data-i18n="flow_task_name">トップページ実装</b></div>
                       <div class="nv-meta">
                         <span><i class="u-cal"></i>2026-08-01 – 2026-08-06</span>
                         <span><span data-i18n="mock_wb_widget">進捗</span> 0%</span>
@@ -514,14 +519,15 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="flow-step-body">
-                <span class="flow-step-index"></span>
-                <h3 class="flow-step-title" data-i18n="feature_note_title">決まったことを、そのタスクに書き残す</h3>
-                <p class="flow-step-lead" data-i18n="feature_note_lead">
+              <div class="journey-panel">
+                <span class="journey-index"></span>
+                <h3 class="journey-title" data-i18n="feature_note_title">決まったことを、そのタスクに書き残す</h3>
+                <p class="journey-lead" data-i18n="feature_note_lead">
                   左のアウトラインは工程表の親子関係がそのまま章立てになっています。議事録の構成を自分で作る必要はありません。書いた内容はそのタスクに紐づくので、「あの話はどのタスクの件だったか」を後から探し直さずに済みます。
                 </p>
-                <ul class="flow-points">
+                <ul class="journey-points">
                   <li>
                     <strong data-i18n="feature_note_p1_title">章立てが最初からできている</strong>
                     <span data-i18n="feature_note_p1_desc">タスクの階層がそのまま見出しになります。空のドキュメントから構成を考え始める必要はありません。</span>
@@ -535,12 +541,13 @@
                     <span data-i18n="feature_note_p3_desc">書きながらチェック項目を作れます。カンバンの標準ToDoと同じ場所に集まります。</span>
                   </li>
                 </ul>
-                <a href="#" data-manual-link="note" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+                <a href="#" data-manual-link="note" class="journey-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
               </div>
             </li>
 
-            <li class="flow-step" data-view="matrix" data-step="4">
-                            <div class="ui" aria-hidden="true">
+            <li class="journey-step" data-view="matrix" data-step="4">
+              <div class="journey-screen">
+                <div class="ui" aria-hidden="true">
               <div class="ui-tabs">
                 <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
                 <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
@@ -578,7 +585,7 @@
                         <span class="u-av a1" data-i18n="mock_av1">鈴</span>
                       </div>
                     </div>
-                    <div class="uic x1 ac-blue is-on">
+                    <div class="uic x1 ac-blue is-on" data-journey-anchor="matrix">
                       <div class="uic-top"><span class="uic-pill" data-i18n="mock_kanban_col2">実装</span><span class="uic-score">75</span></div>
                       <div class="uic-t" data-i18n="flow_task_name">トップページ実装</div>
                       <div class="uic-foot"><span class="u-date"><i class="u-cal"></i>2026-08-06</span></div>
@@ -590,14 +597,15 @@
                     </div>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="flow-step-body">
-                <span class="flow-step-index"></span>
-                <h3 class="flow-step-title" data-i18n="feature_matrix_title">どれから手を付けるかを決める</h3>
-                <p class="flow-step-lead" data-i18n="feature_matrix_lead">
+              <div class="journey-panel">
+                <span class="journey-index"></span>
+                <h3 class="journey-title" data-i18n="feature_matrix_title">どれから手を付けるかを決める</h3>
+                <p class="journey-lead" data-i18n="feature_matrix_lead">
                   緊急度と重要度の2軸にタスクを置く画面です。締切が近い順に処理していると後回しになりがちな「重要だが急ぎではない仕事」が、置いた位置で見えるようになります。ここで決めた優先度も同じ1件に記録されます。
                 </p>
-                <ul class="flow-points">
+                <ul class="journey-points">
                   <li>
                     <strong data-i18n="feature_matrix_p1_title">2軸に置くだけで優先度が決まる</strong>
                     <span data-i18n="feature_matrix_p1_desc">タスクをドラッグして置いた位置から、優先度スコアが自動で計算されます。</span>
@@ -611,12 +619,13 @@
                     <span data-i18n="feature_matrix_p3_desc">点だけの表示とカードを開いた表示を切り替えて、俯瞰と確認を使い分けられます。</span>
                   </li>
                 </ul>
-                <a href="#" data-manual-link="matrix" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+                <a href="#" data-manual-link="matrix" class="journey-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
               </div>
             </li>
 
-            <li class="flow-step" data-view="whiteboard" data-step="5">
-                            <div class="ui" aria-hidden="true">
+            <li class="journey-step" data-view="whiteboard" data-step="5">
+              <div class="journey-screen">
+                <div class="ui" aria-hidden="true">
               <div class="ui-tabs">
                 <span class="ui-tab"><i class="ui-ti tg"></i><span data-i18n="mock_tab_gantt">ガントチャート</span></span>
                 <span class="ui-tab"><i class="ui-ti tk"></i><span data-i18n="mock_tab_kanban">カンバンボード</span></span>
@@ -641,7 +650,7 @@
                       <div class="wb-card-m"><span>7/28 - 7/31</span><span data-i18n="mock_owner_name">鈴木 由香</span></div>
                       <div class="wb-card-p"><span class="u-track"><i class="p40"></i></span><b>40%</b></div>
                     </div>
-                    <div class="wb-slot">
+                    <div class="wb-slot" data-journey-anchor="whiteboard">
                       <div class="wb-slot-card"><div class="wb-card">
                       <div class="wb-card-h"><i class="u-pb">I</i><span data-i18n="flow_task_name">トップページ実装</span></div>
                       <div class="wb-card-m"><span>8/1 - 8/6</span><span data-i18n="mock_owner_name">鈴木 由香</span></div>
@@ -668,14 +677,15 @@
                     <div class="wb-w-done" data-i18n="mock_wb_done">完了 0 / 3 件</div>
                   </div>
                 </div>
+                </div>
               </div>
-              <div class="flow-step-body">
-                <span class="flow-step-index"></span>
-                <h3 class="flow-step-title" data-i18n="feature_whiteboard_title">最後に、全体を1枚で見渡す</h3>
-                <p class="flow-step-lead" data-i18n="feature_whiteboard_lead">
+              <div class="journey-panel">
+                <span class="journey-index"></span>
+                <h3 class="journey-title" data-i18n="feature_whiteboard_title">最後に、全体を1枚で見渡す</h3>
+                <p class="journey-lead" data-i18n="feature_whiteboard_lead">
                   ここまでで日程・工程・記録・優先度を持った1件が、他のタスクと並んで1枚の盤面に載ります。付箋と違うのは、置いたカードが進捗や期限を最新の状態で表示し続けることです。工程表で進捗を更新すれば、この盤面の表示も追随します。
                 </p>
-                <ul class="flow-points">
+                <ul class="journey-points">
                   <li>
                     <strong data-i18n="feature_whiteboard_p1_title">カードは静的な付箋ではない</strong>
                     <span data-i18n="feature_whiteboard_p1_desc">置いたあとも進捗・期限・担当を最新の状態で表示し続けます。貼り替えの作業は発生しません。</span>
@@ -689,19 +699,15 @@
                     <span data-i18n="feature_whiteboard_p3_desc">進捗の集計を盤面に置いて、そのままダッシュボードとして使えます。</span>
                   </li>
                 </ul>
-                <p class="flow-free-note">
-                  <span class="flow-free-label" data-i18n="flow_free_note_label">無料のまま</span>
+                <p class="journey-free-note">
+                  <span class="journey-free-label" data-i18n="flow_free_note_label">無料のまま</span>
                   <span data-i18n="plan_compare_whiteboard_free">1台につき累計3枚まで</span>
                 </p>
-                <a href="#" data-manual-link="whiteboard" class="flow-step-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
+                <a href="#" data-manual-link="whiteboard" class="journey-more" data-i18n="manual_guide_more">マニュアルを読む →</a>
               </div>
             </li>
           </ol>
         </div>
-
-        <p class="flow-closing" data-i18n="flow_closing_note">
-          たとえばカンバンでカードを「実装」の列へ動かすと、そのタスクの工程が切り替わり、工程表の一覧にもノートのToDoにも同じ状態が出ます。ビューをいくつ増やしても、管理するデータは1つのままです。
-        </p>
       </div>
     </section>
 
@@ -826,9 +832,9 @@
       <div class="container">
         <div class="pricing-box">
           <div class="badge" data-i18n="pricing_badge">💡 買い切り・サブスクなし</div>
-          <h2 class="pricing-title" data-i18n="pricing_title">日常も業務も、主要機能は無料のまま。<br>さらに必要な機能だけ、買い切りのProで。</h2>
+          <h2 class="pricing-title" data-i18n="pricing_title">人数でも、月額でもなく。<br>主要機能は無料のまま、必要な分だけ買い切りで。</h2>
           <p class="pricing-desc" data-i18n="pricing_desc">
-            Plotoは、ガントチャート・優先度マトリクス・ノートなど、日常や業務の工程管理に必要な主要機能を無料のまま期限なく使えます。より多くのカンバン・ホワイトボード、ベースライン、Excel / PDF出力などが必要になった場合だけ、買い切りのProを追加できます。Proに月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。
+            一般的なプロジェクト管理サービスは1ユーザーあたりの月額課金で、使い続けるかぎり費用がかかります。Plotoは、ガントチャート・優先度マトリクス・ノートなど、日常や業務の工程管理に必要な主要機能を無料のまま期限なく使えます。より多くのカンバン・ホワイトボード、ベースライン、Excel / PDF出力などが必要になった場合だけ、買い切りのProを追加できます。Proに月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。
           </p>
           <div class="pricing-info-card">
             <div class="info-card-item">
@@ -909,7 +915,7 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" data-i18n="security_title">データ管理とセキュリティについて</h2>
-          <p class="section-subtitle" data-i18n="security_subtitle">クラウドツールの利用が制限されている環境でも、PlotoはプロジェクトデータをPC内に保存する運用を選べます。導入可否は、各組織の規定に沿ってご確認ください。</p>
+          <p class="section-subtitle" data-i18n="security_subtitle">プロジェクトデータは、お使いのPC内のファイルに保存されます。個人のPCでも、クラウドサービスの利用が制限された職場でも、同じように使えます。組織で導入する場合の可否は、各社の規定に沿ってご確認ください。</p>
         </div>
         <div class="security-grid">
           <!-- Card 1: Local project data storage -->
@@ -941,9 +947,9 @@
       </div>
       <div class="container">
         <div class="download-box">
-          <h2 class="download-title" data-i18n="dl_title">Plotoでプロジェクト管理をシンプルに</h2>
+          <h2 class="download-title" data-i18n="dl_title">今日から、1人で始められます</h2>
           <p class="download-subtitle" data-i18n="dl_desc">
-            今すぐアプリケーションをダウンロードして、ローカルファーストで快適なプロジェクト管理を開始しましょう。
+            アカウント登録も、月額契約も不要です。ダウンロードして開いたその日から、主要機能をすべて無料のまま使えます。
           </p>
 
           <div class="download-buttons">

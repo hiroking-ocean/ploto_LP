@@ -2,8 +2,8 @@ export default {
   locale: "ko",
   screenshotFolder: "en-us",
   meta: {
-    title: "무료로 계속 사용할 수 있는 일정 관리·간트 차트 도구 Ploto | 오프라인",
-    description: "Ploto는 계정 등록 없이 오프라인으로 사용할 수 있는 일정 관리 및 간트 차트 도구입니다. 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무에 필요한 주요 기능을 기간 제한 없이 무료로 계속 사용할 수 있습니다. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
+    title: "한 번 결제로 쓰는 일정 관리·간트 차트 도구 Ploto | 혼자 도입·주요 기능 무료·구독 없음",
+    description: "Ploto는 개인이 혼자 설치해서 바로 쓸 수 있는 일정 관리 및 간트 차트 도구입니다. 구독도 계정 등록도 필요 없이 간트 차트, 칸반 보드, 우선순위 매트릭스, 노트, 화이트보드 등 주요 기능을 기간 제한 없이 무료로 사용할 수 있습니다. 더 필요한 기능만 한 번 결제하는 Pro로 추가하면 됩니다. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
   },
   i18n: {
     nav_features: "기능",
@@ -12,12 +12,12 @@ export default {
     nav_manual: "사용 설명서",
     cta_download: "무료 다운로드",
 
-    hero_badge: "🏢 클라우드 이용이 제한된 환경을 위한 도구 | 로컬 동작 | 주요 기능 계속 무료",
-    hero_title: 'Excel 일정 관리,<br><span class="text-gradient">이제 그만 졸업하지 않으시겠습니까?</span>',
-    hero_desc: "클라우드 서비스를 이용할 수 없거나 무거운 Excel 공정표 관리에 한계를 느끼는 현장에 적합합니다. Ploto는 Microsoft Store에서 설치할 수 있는 오프라인형 프로젝트 관리 소프트웨어입니다. 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무에 필요한 주요 기능을 기간 제한 없이 무료로 계속 사용할 수 있습니다.",
+    hero_badge: "💡 혼자서도 도입 가능 | 주요 기능 계속 무료 | 한 번 결제, 구독 없음",
+    hero_title: '월 구독료가 필요 없는<br><span class="text-gradient">본격적인 프로젝트 관리</span>',
+    hero_desc: "대부분의 프로젝트 관리 도구는 월 구독이 전제라, 혼자 쓰고 싶어도 결재가 필요하다. Excel로 공정표를 만들어도 업데이트가 번거로워 결국 쓰지 않는다. Ploto는 그런 당신을 위해 있습니다. Microsoft Store에서 설치하기만 하면 됩니다. 계정 등록도 월 구독료도 없이 간트 차트, 칸반 보드, 우선순위 매트릭스, 노트, 화이트보드 등 주요 기능을 무료로 사용할 수 있습니다.",
     hero_cta_download: "무료로 받기",
     hero_cta_manual: "매뉴얼 보기",
-    hero_meta: "<span>✓ 계정 등록 없음·주요 기능 무료</span><span>✓ 일상·업무 용도로 기간 제한 없음</span><span>✓ 프로젝트 데이터는 PC에 저장</span>",
+    hero_meta: "<span>✓ 계정 등록 없음·주요 기능 무료</span><span>✓ 한 번 결제·월 사용료 없음</span><span>✓ 프로젝트 데이터는 PC에 저장</span>",
 
     mock_tab_gantt: "간트 차트",
     mock_tab_kanban: "칸반 보드",
@@ -74,8 +74,8 @@ export default {
     mock_q3: "사분면 III: 긴급하지만 중요하지 않음",
     mock_q4: "사분면 IV: 긴급하지도 중요하지도 않음",
 
-    features_title: "하나의 작업이 다섯 화면을 지나며 자란다",
-    features_subtitle: "왼쪽 카드는 처음부터 끝까지 같은 한 건입니다. 화면을 지날 때마다 거기서 정한 내용이 이 카드에 더해집니다. 옮겨 적는 일은 한 번도 일어나지 않습니다.",
+    features_title: "같은 작업 하나가 화면마다 다른 모습으로 나타납니다",
+    features_subtitle: "등록은 한 번뿐입니다. 일정표에서는 막대 하나, 칸반에서는 카드 한 장, 노트에서는 페이지 하나로 보입니다. 같은 데이터를 각 화면에 가장 자연스러운 형태로 보여 줍니다.",
     feat_alert_title: "진행 상태를 보여주는 3색 알림",
     feat_alert_desc: "작업 상태를 기한 초과(빨강), 시작 지연(노랑), 순조(초록)의 3가지 색상으로 자동 판정하여 표시합니다. 지연된 작업을 수동 체크 없이 바로 확인할 수 있습니다.",
     feat_cal_title: "공휴일 및 회사 휴일 반영",
@@ -84,7 +84,6 @@ export default {
     feat_auto_desc: "작업을 선으로 연결하고 자동 스케줄링을 켜면, 앞 공정이 밀린 만큼 뒤 일정이 자동으로 이동합니다. 상위 작업의 기간과 진행률은 처음부터 하위 작업에서 자동 계산되므로, 한 곳을 고칠 때마다 표 전체를 손볼 필요가 없습니다.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
-    flow_card_hint: "스크롤하면 이 한 건에 정보가 쌓입니다",
     flow_task_name: "메인 페이지 구현",
     flow_field_period_value: "8/1 → 8/6",
     flow_field_period_label: "기간",
@@ -95,7 +94,6 @@ export default {
     flow_field_priority_label: "우선순위",
     flow_field_priority_value: "중요하고 긴급",
     flow_free_note_label: "무료 그대로",
-    flow_closing_note: "예를 들어 칸반에서 카드를 '구현' 열로 옮기면 그 작업의 공정이 바뀌고, 공정표 목록에도 노트의 ToDo에도 같은 상태가 나타납니다. 뷰를 아무리 늘려도 관리하는 데이터는 하나뿐입니다.",
     mock_kanban_col1: "디자인",
     mock_kanban_col2: "구현",
     mock_kanban_col3: "리뷰",
@@ -108,8 +106,8 @@ export default {
     feature_kanban_p1_desc: "카드를 열에서 열로 끌기만 하면 됩니다. 진행률 입력란을 찾아 숫자를 다시 칠 필요가 없습니다.",
     feature_kanban_p2_title: "공정마다 표준 ToDo가 붙습니다",
     feature_kanban_p2_desc: "열에 표준 ToDo를 등록해 두면 그 공정에 들어온 카드에 자동으로 붙습니다. 매번 옮겨 적을 필요가 없습니다.",
-    feature_kanban_p3_title: "담당이나 기한으로 걸러낼 수 있습니다",
-    feature_kanban_p3_desc: "내 담당분만, 이번 주분만 같은 방식으로 좁힐 수 있습니다. 보드가 붐벼도 볼 것만 남길 수 있습니다.",
+    feature_kanban_p3_title: "프로젝트·관리자·태그로 좁힐 수 있다",
+    feature_kanban_p3_desc: "보드가 복잡해져도 지금 볼 것만 남길 수 있습니다. 프로젝트(공정표), 관리자, 태그로 필터링하고 작업 이름으로 검색할 수 있습니다.",
     feature_note_title: "정해진 내용을 그 작업에 적어 둡니다",
     feature_note_lead: "왼쪽 아웃라인은 공정표의 상하 관계가 그대로 장 구성이 된 것입니다. 회의록의 구성을 직접 만들 필요가 없습니다. 쓴 내용은 그 작업에 묶이므로, 나중에 그 이야기가 어느 작업 건이었는지 다시 찾을 일이 없습니다.",
     feature_note_p1_title: "장 구성이 처음부터 되어 있습니다",
@@ -179,8 +177,8 @@ export default {
     plan_compare_license_note: "※ 보드 개수 제한은 새로 만들 때만 적용됩니다. Pro로 만든 보드가 들어 있는 파일도 Pro 없이 그대로 열고 편집할 수 있습니다. 시리얼 코드는 본인이 쓰는 여러 기기에 등록할 수 있으며, 등록 후에는 오프라인에서도 인증됩니다.",
 
     pricing_badge: "💡 한 번 결제, 구독 없음",
-    pricing_title: "일상과 업무에 필요한 주요 기능은 계속 무료.<br>더 필요할 때만 한 번 결제하는 Pro.",
-    pricing_desc: "Ploto는 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무 일정 관리에 필요한 주요 기능을 기간 제한 없이 무료로 제공합니다. 더 많은 칸반 보드와 화이트보드, 기준선, Excel / PDF 내보내기 등 고급 기능이 필요할 때만 한 번 결제하는 Pro를 추가하면 됩니다. Pro에는 월 사용료나 연 사용료가 없으며 Microsoft Store 또는 웹(Stripe)에서 구매할 수 있습니다.",
+    pricing_title: "인원수도, 월 사용료도 아닙니다.<br>주요 기능은 계속 무료, 필요한 만큼만 한 번 결제로.",
+    pricing_desc: "일반적인 프로젝트 관리 서비스는 사용자 수만큼 매달 비용이 들고, 쓰는 동안 계속 청구됩니다. Ploto는 간트 차트, 우선순위 매트릭스, 노트 등 일상과 업무 일정 관리에 필요한 주요 기능을 기간 제한 없이 무료로 제공합니다. 더 많은 칸반 보드와 화이트보드, 기준선, Excel / PDF 내보내기 등 고급 기능이 필요할 때만 한 번 결제하는 Pro를 추가하면 됩니다. Pro에는 월 사용료나 연 사용료가 없으며 Microsoft Store 또는 웹(Stripe)에서 구매할 수 있습니다.",
     pricing_model_label: "요금 방식",
     pricing_model_value: "한 번 결제 (구독 없음)",
     pricing_buy_label: "구매 방법",
@@ -199,8 +197,8 @@ export default {
     feedback_sending: "전송 중...",
     feedback_error: "전송 중 오류가 발생했습니다. action URL을 확인하세요.",
 
-    dl_title: "지금 프로젝트 관리를 간소화하세요",
-    dl_desc: "앱을 다운로드하고 지금 바로 매끄러운 오프라인 프로젝트 관리를 경험하세요.",
+    dl_title: "오늘, 혼자서 시작할 수 있습니다",
+    dl_desc: "계정 등록도 월 구독 계약도 필요 없습니다. 내려받은 첫날부터 주요 기능을 모두 무료로 사용할 수 있습니다.",
     dl_win_sub: "에서 받기",
     dl_win_exe: "Windows 설치 프로그램",
     dl_notes: "* Windows 10/11 호환. SQLite 3 기본 탑재.",
@@ -210,7 +208,7 @@ export default {
     privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
     // --- Security Section ---
     security_title: "데이터 관리와 보안에 대하여",
-    security_subtitle: "클라우드 도구 이용이 제한된 환경에서도 Ploto는 프로젝트 데이터를 PC에 저장하는 방식으로 사용할 수 있습니다. 도입 가능 여부는 각 조직의 규정에 따라 확인해 주세요.",
+    security_subtitle: "프로젝트 데이터는 사용자 PC의 파일로 저장됩니다. 개인 PC에서도, 클라우드 도구 이용이 제한된 직장에서도 똑같이 사용할 수 있습니다. 조직에 도입할 경우의 가능 여부는 각 조직의 규정에 따라 확인해 주세요.",
     security_c1_title: "프로젝트 데이터를 PC에 저장",
     security_c1_desc: "프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장됩니다. Ploto는 프로젝트 데이터를 외부 서버로 자동 전송하지 않습니다. 파일 보관과 공유 방식은 이용 환경의 규정에 맞게 관리할 수 있습니다.",
     security_c2_title: "Microsoft Store에서 배포",
