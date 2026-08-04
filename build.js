@@ -21,7 +21,7 @@ const BASE = "/ploto_LP/"; // GitHub Pages のサブパス（絶対パス化に�
 const LANGS = ["ja", "en", "de", "fr", "ko"];
 // マニュアルのスクリーンショットが当該言語に無い場合の代替言語。
 const FALLBACK_LANG = "en";
-const LASTMOD = "2026-07-30"; // sitemap の更新日。内容を更新したらここも上げる
+const LASTMOD = "2026-08-04"; // sitemap の更新日。内容を更新したらここも上げる
 
 const OG_LOCALE = { ja: "ja_JP", en: "en_US", de: "de_DE", fr: "fr_FR", ko: "ko_KR" };
 const IMG_ALT = {

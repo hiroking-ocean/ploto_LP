@@ -2,7 +2,7 @@ export default {
   locale: "fr",
   screenshotFolder: "en-us",
   meta: {
-    title: "Gestion de projet & Gantt Ploto | Achat unique, sans abonnement, fonctions essentielles gratuites",
+    title: "Ploto - Gestion de projet & diagramme de Gantt sans abonnement mensuel | Achat unique, fonctions essentielles gratuites",
     description: "Ploto est un outil de gestion de projet et de diagramme de Gantt qu'une seule personne peut installer et utiliser immédiatement. Sans abonnement ni compte : diagramme de Gantt, tableaux Kanban, matrice de priorités, notes et tableaux blancs restent gratuits sans limite de durée. Pro s'ajoute en achat unique, uniquement pour ce dont vous avez besoin en plus. Les données de projet sont stockées dans des fichiers .ploto sur votre PC et ne sont pas envoyées automatiquement à des serveurs externes. Windows 10/11."
   },
   i18n: {
@@ -76,12 +76,6 @@ export default {
 
     features_title: "Une tâche ne se saisit pas d'un seul point de vue",
     features_subtitle: "À partir d'ici, suivez une seule tâche. En traversant cinq écrans, voyez à quel point la même tâche peut apparaître différemment.",
-    feat_alert_title: "Alerte de statut en 3 couleurs",
-    feat_alert_desc: "Met automatiquement en évidence les tâches en rouge (en retard), jaune (retardées) ou vert (dans les temps). Repérez les goulots d'étranglement sans vérifications manuelles.",
-    feat_cal_title: "Jours fériés & Calendriers d'entreprise",
-    feat_cal_desc: "Configurez les jours fériés personnalisés et les horaires de travail. L'estompement des week-ends et la mise en évidence des jours fériés assurent une planification précise de la capacité en fonction de votre planning réel.",
-    feat_auto_title: "Décalez une barre, la suite suit",
-    feat_auto_desc: "Reliez les tâches entre elles et activez la planification automatique : si une étape prend du retard, toutes les suivantes se décalent. La durée et l'avancement des tâches parentes se calculent d'emblée à partir des sous-tâches — plus besoin de retoucher tout le tableau à chaque changement.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
     flow_task_name: "Développement de la page d'accueil",
@@ -98,8 +92,14 @@ export default {
     mock_kanban_col2: "Développement",
     mock_kanban_col3: "Revue",
     mock_wb_widget: "Avancement",
-    feature_gantt_title: "C'est ici que la tâche naît",
-    feature_gantt_lead: "Faites glisser une barre pour fixer les dates et reliez les tâches entre elles. La tâche unique créée ici réapparaît dans tous les écrans suivants. Aucun calcul de dates, aucune fusion de cellules.",
+    feature_gantt_title: "La première vue, c'est le temps",
+    feature_gantt_lead: "Quand commence-t-elle, quand se termine-t-elle ? Que faut-il finir avant de pouvoir la commencer ? Ce qu'un diagramme de Gantt montre, c'est une coupe parmi d'autres, faite selon l'axe du temps.",
+    feature_gantt_p1_title: "Poser le déroulé tel que vous l'imaginez",
+    feature_gantt_p1_desc: "Vous ne saisissez pas des dates de début et de fin pour ensuite construire un tableau. Tirez l'extrémité d'une barre et la durée est fixée ; attrapez-la au milieu et tout le planning se déplace. L'ordre que vous avez en tête se pose directement, à la main.",
+    feature_gantt_p2_title: "Structurer un gros chantier",
+    feature_gantt_p2_desc: "Une tâche peut en contenir d'autres. La profondeur n'est pas limitée : la structure réelle du travail entre telle quelle. La durée et l'avancement d'une tâche parente se calculent à partir de ses sous-tâches, rien n'est à reprendre au-dessus après le découpage.",
+    feature_gantt_p3_title: "Tracer les liens dans le temps",
+    feature_gantt_p3_desc: "Reliez deux tâches par un trait et leur ordre est enregistré comme une dépendance temporelle. Activez la planification automatique : tout ce qui suit une étape retardée se décale avec elle. Plus besoin de refaire tout le planning à chaque modification.",
     feature_kanban_title: "Déplacez une carte pour changer d'étape",
     feature_kanban_lead: "La même tâche, vue comme une suite d'étapes. Faites glisser la carte vers la colonne suivante et l'étape de la tâche change avec elle. Le planning change au même instant : il n'y a jamais un second endroit à penser à mettre à jour.",
     feature_kanban_p1_title: "Glisser suffit",

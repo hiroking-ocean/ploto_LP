@@ -2,7 +2,7 @@ export default {
   locale: "de",
   screenshotFolder: "en-us",
   meta: {
-    title: "Projektmanagement- & Gantt-Tool Ploto | Einmalkauf, kein Abo, Kernfunktionen kostenlos",
+    title: "Ploto - Projektmanagement- & Gantt-Tool ganz ohne Monatsgebühr | Einmalkauf, Kernfunktionen kostenlos",
     description: "Ploto ist ein Tool für Projektpläne und Gantt-Diagramme, das eine einzelne Person selbst installieren und sofort nutzen kann. Ohne Abo und ohne Registrierung: Gantt-Diagramme, Kanban-Boards, Prioritätsmatrix, Notizen und Whiteboards bleiben ohne Zeitlimit kostenlos. Pro kommt als Einmalkauf nur für das dazu, was Sie zusätzlich brauchen. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
   },
   i18n: {
@@ -76,12 +76,6 @@ export default {
 
     features_title: "Eine Aufgabe lässt sich aus einer einzigen Sicht nicht erfassen",
     features_subtitle: "Verfolgen Sie von hier an eine einzelne Aufgabe. Sehen Sie dabei, wie unterschiedlich dieselbe Aufgabe auf fünf Bildschirmen erscheint.",
-    feat_alert_title: "3-Farben-Status-Warnung",
-    feat_alert_desc: "Hebt Aufgaben automatisch rot (überfällig), gelb (verzögert) oder grün (im Zeitplan) hervor. Erkennen Sie Engpässe sofort ohne manuelle Prüfungen.",
-    feat_cal_title: "Feiertage & Firmenkalender",
-    feat_cal_desc: "Konfigurieren Sie benutzerdefinierte Feiertage und Arbeitszeiten. Wochenend-Abblendung und Feiertags-Hervorhebung sorgen für eine präzise Ressourcenplanung passend zu Ihrem realen Arbeitsalltag.",
-    feat_auto_title: "Einen Balken verschieben, der Rest zieht nach",
-    feat_auto_desc: "Verknüpfen Sie Aufgaben und aktivieren Sie die automatische Planung: Verzögert sich ein Schritt, verschieben sich alle nachfolgenden Termine mit. Dauer und Fortschritt übergeordneter Aufgaben werden von Anfang an aus den Teilaufgaben berechnet – kein Nacharbeiten der ganzen Tabelle nach jeder Änderung.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
     flow_task_name: "Startseite umsetzen",
@@ -98,8 +92,14 @@ export default {
     mock_kanban_col2: "Umsetzung",
     mock_kanban_col3: "Review",
     mock_wb_widget: "Fortschritt",
-    feature_gantt_title: "Hier entsteht die Aufgabe",
-    feature_gantt_lead: "Ziehen Sie einen Balken, um den Zeitraum festzulegen, und verbinden Sie Aufgaben miteinander. Die eine Aufgabe, die hier entsteht, taucht in jeder folgenden Ansicht auf. Kein Rechnen mit Datumsangaben, keine verbundenen Zellen.",
+    feature_gantt_title: "Die erste Sicht ist die Zeit",
+    feature_gantt_lead: "Wann beginnt sie, wann endet sie? Was muss fertig sein, damit sie starten kann? Was ein Gantt-Diagramm zeigt, ist ein Schnitt entlang der Achse der Zeit – einer von mehreren.",
+    feature_gantt_p1_title: "Den Ablauf so ablegen, wie Sie ihn denken",
+    feature_gantt_p1_desc: "Sie tragen nicht erst Start- und Enddatum ein, um daraus eine Tabelle zu bauen. Ziehen Sie am Ende eines Balkens, und die Dauer steht; fassen Sie ihn in der Mitte, und der ganze Termin verschiebt sich. Die Reihenfolge aus Ihrem Kopf legen Sie direkt mit der Hand ab.",
+    feature_gantt_p2_title: "Große Arbeit strukturieren",
+    feature_gantt_p2_desc: "In einer Aufgabe stecken weitere Aufgaben. Die Tiefe ist nicht begrenzt, die tatsächliche Struktur der Arbeit lässt sich also unverändert abbilden. Dauer und Fortschritt der übergeordneten Aufgabe berechnen sich aus den untergeordneten – nach dem Aufteilen muss oben nichts nachgezogen werden.",
+    feature_gantt_p3_title: "Zeitliche Zusammenhänge einzeichnen",
+    feature_gantt_p3_desc: "Verbinden Sie zwei Aufgaben mit einer Linie, und die Reihenfolge ist als zeitliche Abhängigkeit festgehalten. Mit eingeschalteter automatischer Terminplanung rückt alles Nachfolgende mit, sobald sich ein Schritt verzögert. Das Neuzeichnen des ganzen Plans nach jeder Änderung entfällt.",
     feature_kanban_title: "Die Phase ändern, indem Sie eine Karte verschieben",
     feature_kanban_lead: "Dieselbe Aufgabe, gesehen als Abfolge von Phasen. Ziehen Sie die Karte in die nächste Spalte, und die Phase der Aufgabe ändert sich mit. Der Terminplan ändert sich im selben Moment – es gibt keine zweite Stelle, an die Sie denken müssten.",
     feature_kanban_p1_title: "Ziehen ist die Aktualisierung",

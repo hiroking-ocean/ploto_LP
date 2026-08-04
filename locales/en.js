@@ -2,7 +2,7 @@ export default {
   locale: "en",
   screenshotFolder: "en-us",
   meta: {
-    title: "One-Time Purchase Project Management & Gantt Tool Ploto | Adopt It Alone, Core Features Free",
+    title: "Ploto - Project Management & Gantt Chart Tool Without the Monthly Fee | One-Time Purchase, Core Features Free",
     description: "Ploto is a project management and Gantt chart tool one person can install and start using today. No subscription and no account required: Gantt charts, Kanban boards, priority matrices, notes, and whiteboards stay free with no time limit. Add the one-time-purchase Pro upgrade only for the extras you need. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
   },
   i18n: {
@@ -76,12 +76,6 @@ export default {
 
     features_title: "One task is more than a single view can show",
     features_subtitle: "From here on, follow one task. As it passes through five screens, see how differently the very same task can look.",
-    feat_alert_title: "3-Color Health Status Alert",
-    feat_alert_desc: "Automatically highlights tasks as red (overdue), yellow (delayed), or green (on track). Quickly spot bottlenecks without manual checks.",
-    feat_cal_title: "Holidays & Company Calendars",
-    feat_cal_desc: "Configure custom holidays and work schedules. Weekend dimming and holiday highlighting ensure accurate capacity planning matching your real schedule.",
-    feat_auto_title: "Move one bar and the rest follows",
-    feat_auto_desc: "Link tasks together, turn on auto-scheduling, and a delay in one step shifts every task after it. Parent duration and progress are calculated from their subtasks out of the box, so one change no longer means reworking the whole sheet.",
 
     // --- 主要機能セクション（1件のタスクが5画面を通って育つ流れ） ---
     flow_task_name: "Homepage build",
@@ -98,8 +92,14 @@ export default {
     mock_kanban_col2: "Development",
     mock_kanban_col3: "Review",
     mock_wb_widget: "Progress",
-    feature_gantt_title: "This is where the task is born",
-    feature_gantt_lead: "Drag a bar to set the dates, and link tasks to one another. The one task you create here is what turns up in every screen that follows. No date arithmetic, no merged cells.",
+    feature_gantt_title: "The first view is time",
+    feature_gantt_lead: "When does it start, when does it end? What has to finish before it can begin? What a Gantt chart shows you is one cross-section, cut along the axis of time.",
+    feature_gantt_p1_title: "Put the plan down as you picture it",
+    feature_gantt_p1_desc: "You don't type in a start and an end date to build the sheet. Grab the end of a bar and pull to set the duration; grab the middle and slide to move the whole thing. The order in your head goes onto the chart by hand.",
+    feature_gantt_p2_title: "Give big work a structure",
+    feature_gantt_p2_desc: "A task can hold tasks. There is no limit on depth, so the real structure of the work goes in as it is. A parent's dates and progress are calculated from its children, so nothing above needs fixing after you split it.",
+    feature_gantt_p3_title: "Draw the links across time",
+    feature_gantt_p3_desc: "Connect two tasks with a line and the order between them is recorded as a dependency in time. Turn on auto-scheduling and everything after a delayed step moves with it. Redrawing the whole sheet after every change is over.",
     feature_kanban_title: "Move a card to change the stage",
     feature_kanban_lead: "The same task, seen as a row of stages. Drag the card into the next column and the task's stage changes with it. The schedule view changes at the same moment, so there is never a second place you have to remember to update.",
     feature_kanban_p1_title: "Dragging is the update",
