@@ -98,10 +98,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css?v=bf9fcbd3">
+  <link rel="stylesheet" href="/ploto_LP/styles.css?v=70340e5d">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/app.js?v=44dc2930" defer=""></script>
+  <script type="module" src="/ploto_LP/app.js?v=d38a3bcd" defer=""></script>
 </head>
 
 <body>
@@ -802,8 +802,8 @@
       <div class="container">
         <div class="pricing-box">
           <div class="badge" data-i18n="pricing_badge">💡 Achat unique, sans abonnement</div>
-          <h2 class="pricing-title" data-i18n="pricing_title">Ni par utilisateur, ni par mois.<br>L'essentiel reste gratuit ; vous n'achetez qu'une fois ce qu'il vous faut.</h2>
-          <p class="pricing-desc" data-i18n="pricing_desc">La plupart des services de gestion de projet facturent par utilisateur et par mois, aussi longtemps que vous les utilisez. Ploto garde gratuits sans limite de durée les outils essentiels de planification au quotidien et au travail, notamment le diagramme de Gantt, la matrice de priorité et les notes. Ajoutez Pro en achat unique uniquement si vous avez besoin de plus de tableaux Kanban et de tableaux blancs, de références, de l'export Excel / PDF ou d'autres fonctions avancées. Pro n'a aucun frais mensuel ou annuel et s'achète dans le Microsoft Store ou sur le web (Stripe).</p>
+          <h2 class="pricing-title" data-i18n="pricing_title">Commencez gratuitement. Passez à Pro seulement si nécessaire.</h2>
+          <p class="pricing-desc" data-i18n="pricing_desc">Les outils essentiels pour avancer, notamment le diagramme de Gantt et les notes, restent gratuits. Débloquez des fonctions supplémentaires avec un achat unique de Pro, uniquement lorsque vous en avez besoin.</p>
           <div class="pricing-info-card">
             <div class="info-card-item">
               <span class="info-label" data-i18n="pricing_model_label">Modèle tarifaire</span>
@@ -825,16 +825,11 @@
                 <thead>
                   <tr>
                     <th scope="col" data-i18n="plan_compare_col_feature">Fonction</th>
-                    <th scope="col" data-i18n="plan_compare_col_free">Toujours gratuit</th>
-                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Ploto Pro (achat unique)</th>
+                    <th scope="col" data-i18n="plan_compare_col_free">Gratuit</th>
+                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Pro</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_core">Diagramme de Gantt, matrice de priorités, notes</th>
-                    <td data-i18n="plan_compare_core_free">Entièrement disponible</td>
-                    <td class="is-pro" data-i18n="plan_compare_core_pro">Entièrement disponible</td>
-                  </tr>
                   <tr>
                     <th scope="row" data-i18n="plan_compare_kanban">Tableaux kanban</th>
                     <td data-i18n="plan_compare_kanban_free">Jusqu'à 3 par fichier</td>
@@ -876,27 +871,27 @@
     <section id="security" class="security-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="security_title">Gestion des données et sécurité</h2>
-          <p class="section-subtitle" data-i18n="security_subtitle">Les données de projet sont enregistrées dans un fichier sur votre propre PC, aussi bien sur une machine personnelle que dans un environnement de travail où le cloud est limité. Pour un déploiement en organisation, vérifiez selon vos propres règles.</p>
+          <h2 class="section-title" data-i18n="security_title">Sans dépendre du cloud, vos données restent chez vous</h2>
+          <p class="section-subtitle" data-i18n="security_subtitle">Ploto ne dépend ni d'une connexion Internet ni d'un stockage dans le cloud. Les données de projet restent sur votre PC, tandis que l'application et ses mises à jour passent par le Microsoft Store.</p>
         </div>
         <div class="security-grid">
-          <!-- Card 1: Local project data storage -->
+          <!-- Card 1: Fully offline operation -->
           <div class="security-card">
-            <div class="security-card-icon">🔒</div>
-            <h3 class="security-card-title" data-i18n="security_c1_title">Données de projet stockées sur votre PC</h3>
-            <p class="security-card-desc" data-i18n="security_c1_desc">Les données de projet sont stockées dans un fichier .ploto sur votre PC. Ploto ne les envoie pas automatiquement à des serveurs externes. Vous pouvez gérer le stockage et le partage du fichier selon les règles de votre environnement.</p>
+            <div class="security-card-icon">📴</div>
+            <h3 class="security-card-title" data-i18n="security_c1_title">Fonctionne entièrement hors ligne</h3>
+            <p class="security-card-desc" data-i18n="security_c1_desc">La création, la modification et l'enregistrement des tâches ne nécessitent aucune connexion Internet. Vous pouvez utiliser Ploto sans créer de compte ni vous connecter.</p>
           </div>
-          <!-- Card 2: MS Store official -->
+          <!-- Card 2: Local project data storage -->
+          <div class="security-card">
+            <div class="security-card-icon">💾</div>
+            <h3 class="security-card-title" data-i18n="security_c2_title">Données de projet enregistrées dans un fichier local</h3>
+            <p class="security-card-desc" data-i18n="security_c2_desc">Vos données sont enregistrées dans un fichier .ploto sur votre PC. Ploto n'envoie pas automatiquement son contenu à des serveurs externes.</p>
+          </div>
+          <!-- Card 3: Microsoft Store installation and updates -->
           <div class="security-card">
             <div class="security-card-icon">🏪</div>
-            <h3 class="security-card-title" data-i18n="security_c2_title">Distribution via le Microsoft Store</h3>
-            <p class="security-card-desc" data-i18n="security_c2_desc">Ploto est distribué via le Microsoft Store. La fiche du Store permet de vérifier l'éditeur et les informations produit dans le cadre de votre examen de déploiement.</p>
-          </div>
-          <!-- Card 3: No account -->
-          <div class="security-card">
-            <div class="security-card-icon">👤</div>
-            <h3 class="security-card-title" data-i18n="security_c3_title">Aucun compte ni connexion requis</h3>
-            <p class="security-card-desc" data-i18n="security_c3_desc">Aucune inscription par e-mail, connexion ou saisie du nom de l'organisation n'est requise. Après l'installation, vous pouvez utiliser Ploto sans créer de compte.</p>
+            <h3 class="security-card-title" data-i18n="security_c3_title">Installation et mises à jour via le Microsoft Store</h3>
+            <p class="security-card-desc" data-i18n="security_c3_desc">Installez Ploto depuis le Microsoft Store et recevez également les mises à jour via le Store. Il n'est pas nécessaire de rechercher un nouvel installateur et de réinstaller l'application à chaque version.</p>
           </div>
         </div>
       </div>

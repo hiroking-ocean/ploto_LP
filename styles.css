@@ -902,9 +902,17 @@ button {
   white-space: nowrap;
 }
 
+.plan-compare-table thead th:first-child,
 .plan-compare-table tbody th {
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--border-color);
   font-weight: 600;
   width: 34%;
+}
+
+.plan-compare-table thead th:nth-child(2),
+.plan-compare-table tbody td:first-of-type {
+  background-color: var(--bg-main);
 }
 
 .plan-compare-table td {
@@ -1236,6 +1244,11 @@ button {
 }
 
 @media (max-width: 768px) {
+  .pricing-section .container {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
   .header-container {
     padding: 0 16px;
   }
@@ -1249,7 +1262,17 @@ button {
   }
   
   .pricing-box {
-    padding: 40px 24px;
+    padding: 40px 16px;
+  }
+
+  .pricing-title {
+    font-size: 1.8rem;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  .pricing-desc {
+    font-size: 1rem;
   }
   
   .pricing-info-card {
@@ -1264,14 +1287,52 @@ button {
     width: 100%;
   }
 
-  /* 比較表はスマホでも縮めず、枠の中だけを横スクロールさせて可読性を保つ */
+  /* スマホでも3列の比較表を保ち、横スクロールなしで一覧できるようにする */
   .plan-compare {
     margin-top: 40px;
   }
 
-  .plan-compare-table th,
-  .plan-compare-table td {
-    padding: 14px 16px;
+  .plan-compare-scroll {
+    overflow: hidden;
+  }
+
+  .plan-compare-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 0.78rem;
+  }
+
+  .plan-compare-table thead th {
+    padding: 10px 8px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .plan-compare-table thead th:first-child,
+  .plan-compare-table tbody th {
+    width: 34%;
+  }
+
+  .plan-compare-table thead th:nth-child(2) {
+    width: 27%;
+  }
+
+  .plan-compare-table thead th:nth-child(3) {
+    width: 39%;
+  }
+
+  .plan-compare-table tbody th,
+  .plan-compare-table tbody td {
+    padding: 11px 8px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .plan-compare-table tbody th {
+    font-size: 0.8rem;
   }
 
   .footer-bottom {
@@ -2619,62 +2680,6 @@ button {
 
 .wb-w-late { margin-top: 6px; color: #e0574c; font-size: 10px; font-weight: 700; }
 .wb-w-done { margin-top: 5px; color: #5b6675; font-size: 10px; }
-/* 実画面モックは縮小せず、幅に入らない列を落として「もっと狭い切り出し」にする。
-   縮小すると結局スクリーンショットと同じで文字が読めなくなるため。
-   .journey が通常の縦並びになる 900px ではモックはまだ画面幅いっぱいを使えるので、
-   実際に足りなくなる幅まで待ってから間引く。 */
-@media (max-width: 700px) {
-  .ui-view {
-    height: var(--ui-view-h, 300px);
-  }
-
-  .gv {
-    height: var(--ui-view-h, 210px);
-    grid-template-columns: minmax(0, 150px) minmax(0, 1fr);
-  }
-
-  .gv-hrow,
-  .gv-row {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .gv-hrow > * + *,
-  .gv-row > * + *,
-  .gv-lane em,
-  .kv-col.c3,
-  .nv-side,
-  .nv-todo,
-  .xv-q span,
-  .xv .uic.x2 {
-    display: none;
-  }
-
-  .kv {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .nv,
-  .nv-body {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  /* カードを減らしたぶん、残る2枚を象限がはっきり分かる位置に置き直す */
-  .xv .uic {
-    width: 150px;
-  }
-
-  /* ホワイトボードは付箋と自由テキストを落として、囲いと集計だけ残す */
-  .wb { height: var(--ui-view-h, 400px); }
-  .wb-note,
-  .wb-text,
-  .wb-links { display: none; }
-  .wb-group { left: 2%; width: 52%; }
-  .wb-widget { left: 56%; top: 6%; width: 42%; }
-
-  .xv .uic.x1 { left: 46%; top: 8%; }
-  .xv .uic.x3 { left: 26%; top: 56%; }
-}
-
 /* ==========================================================================
    主要機能ジャーニー（同じ1件が画面ごとに姿を変える）
    --------------------------------------------------------------------------
@@ -3176,5 +3181,26 @@ html body .journey .journey-panel,
 
   .security-section {
     padding: 3rem 0;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Preserve the desktop mock's proportions on phones and shrink it as one
+     canvas, rather than compressing or removing its internal columns. */
+  .journey-screen {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    overflow: visible;
+  }
+
+  .journey-screen .ui {
+    --ui-view-h: 608px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1152px;
+    max-width: none;
+    transform: scale(calc((100vw - 48px) / 1152px));
+    transform-origin: top left;
   }
 }

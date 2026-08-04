@@ -832,9 +832,9 @@
       <div class="container">
         <div class="pricing-box">
           <div class="badge" data-i18n="pricing_badge">💡 買い切り・サブスクなし</div>
-          <h2 class="pricing-title" data-i18n="pricing_title">人数でも、月額でもなく。<br>主要機能は無料のまま、必要な分だけ買い切りで。</h2>
+          <h2 class="pricing-title" data-i18n="pricing_title">ひとりで始めて、必要なときだけProへ。</h2>
           <p class="pricing-desc" data-i18n="pricing_desc">
-            一般的なプロジェクト管理サービスは1ユーザーあたりの月額課金で、使い続けるかぎり費用がかかります。Plotoは、ガントチャート・優先度マトリクス・ノートなど、日常や業務の工程管理に必要な主要機能を無料のまま期限なく使えます。より多くのカンバン・ホワイトボード、ベースライン、Excel / PDF出力などが必要になった場合だけ、買い切りのProを追加できます。Proに月額・年額の課金はありません。購入方法は Microsoft Store でのアプリ内購入と、Web（Stripe）でシリアルコードを受け取る方法の2通りです。
+            ガントチャートやノートなど、仕事を進める主要機能は無料で使い続けられます。さらに必要な機能だけ、買い切りのProで追加できます。
           </p>
           <div class="pricing-info-card">
             <div class="info-card-item">
@@ -859,16 +859,11 @@
                 <thead>
                   <tr>
                     <th scope="col" data-i18n="plan_compare_col_feature">機能</th>
-                    <th scope="col" data-i18n="plan_compare_col_free">無料のまま</th>
-                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Ploto Pro（買い切り）</th>
+                    <th scope="col" data-i18n="plan_compare_col_free">無料</th>
+                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Pro</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_core">ガントチャート・優先度マトリクス・ノート</th>
-                    <td data-i18n="plan_compare_core_free">すべて利用可能</td>
-                    <td class="is-pro" data-i18n="plan_compare_core_pro">すべて利用可能</td>
-                  </tr>
                   <tr>
                     <th scope="row" data-i18n="plan_compare_kanban">カンバンボード</th>
                     <td data-i18n="plan_compare_kanban_free">1ファイルにつき3枚まで</td>
@@ -914,27 +909,27 @@
     <section id="security" class="security-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title" data-i18n="security_title">データ管理とセキュリティについて</h2>
-          <p class="section-subtitle" data-i18n="security_subtitle">プロジェクトデータは、お使いのPC内のファイルに保存されます。個人のPCでも、クラウドサービスの利用が制限された職場でも、同じように使えます。組織で導入する場合の可否は、各社の規定に沿ってご確認ください。</p>
+          <h2 class="section-title" data-i18n="security_title">通信に頼らず、データは手元に</h2>
+          <p class="section-subtitle" data-i18n="security_subtitle">Plotoは、通信やクラウドへの保存を前提としません。プロジェクトデータは手元のPCで管理し、アプリと更新版はMicrosoft Storeから受け取れます。</p>
         </div>
         <div class="security-grid">
-          <!-- Card 1: Local project data storage -->
+          <!-- Card 1: Fully offline operation -->
           <div class="security-card">
-            <div class="security-card-icon">🔒</div>
-            <h3 class="security-card-title" data-i18n="security_c1_title">プロジェクトデータをPC内に保存</h3>
-            <p class="security-card-desc" data-i18n="security_c1_desc">プロジェクトデータは、お使いのPC内にファイル（.ploto）として保存されます。Plotoがプロジェクトデータを外部サーバーへ自動送信することはありません。ファイルの保管・共有方法は、利用環境のルールに合わせて管理できます。</p>
+            <div class="security-card-icon">📴</div>
+            <h3 class="security-card-title" data-i18n="security_c1_title">完全オフラインで動作</h3>
+            <p class="security-card-desc" data-i18n="security_c1_desc">タスクの作成・編集・保存に、インターネット接続は必要ありません。アカウント登録やサインインなしで、そのまま使えます。</p>
           </div>
-          <!-- Card 2: MS Store official -->
+          <!-- Card 2: Local project data storage -->
+          <div class="security-card">
+            <div class="security-card-icon">💾</div>
+            <h3 class="security-card-title" data-i18n="security_c2_title">プロジェクトデータは、ローカルファイルに保存</h3>
+            <p class="security-card-desc" data-i18n="security_c2_desc">データはPC内に.plotoファイルとして保存されます。Plotoがその内容を外部サーバーへ自動送信することはありません。</p>
+          </div>
+          <!-- Card 3: Microsoft Store installation and updates -->
           <div class="security-card">
             <div class="security-card-icon">🏪</div>
-            <h3 class="security-card-title" data-i18n="security_c2_title">Microsoft Storeから配布</h3>
-            <p class="security-card-desc" data-i18n="security_c2_desc">PlotoはMicrosoft Storeから配布されています。配布元と製品情報をStore上で確認できるため、導入時の確認材料として利用できます。</p>
-          </div>
-          <!-- Card 3: No account -->
-          <div class="security-card">
-            <div class="security-card-icon">👤</div>
-            <h3 class="security-card-title" data-i18n="security_c3_title">アカウント登録やサインインは不要</h3>
-            <p class="security-card-desc" data-i18n="security_c3_desc">メールアドレスの登録やサインイン、組織名の入力は必要ありません。インストール後は、アカウントを作成せずに利用を開始できます。</p>
+            <h3 class="security-card-title" data-i18n="security_c3_title">インストールも更新も、Microsoft Storeから</h3>
+            <p class="security-card-desc" data-i18n="security_c3_desc">PlotoはMicrosoft Storeからインストールでき、更新版もStoreを通じて受け取れます。新しいバージョンが出るたびに、インストーラーを探して入れ直す必要はありません。</p>
           </div>
         </div>
       </div>
