@@ -293,8 +293,10 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================================================
      主要機能セクション: 同じ1件が画面ごとに姿を変えるジャーニー
      --------------------------------------------------------------------------
-     マークアップの既定は「モック → 説明」の縦並び。デスクトップかつ motion
-     許可時だけ data-enhanced を立て、sticky と flyer を有効にする。
+     マークアップの既定は「モック → 説明」の縦並び。motion許可時は幅を問わず
+     data-enhanced を立て、sticky と flyer（タスクが飛ぶ演出）を有効にする。
+     説明パネルの固定表示・段階フェード・モックの縮小は 901px 以上だけ
+     styles.css 側のメディアクエリで効かせる（モバイルは通常フローのまま）。
      ========================================================================== */
   const journey = document.getElementById("task-journey");
 
@@ -302,7 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const steps = Array.from(journey.querySelectorAll(".journey-step"));
     const anchors = steps.map((step) => step.querySelector("[data-journey-anchor]"));
     const screens = steps.map((step) => step.querySelector(".journey-screen"));
-    const wide = window.matchMedia("(min-width: 901px)");
     const still = window.matchMedia("(prefers-reduced-motion: reduce)");
     const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
     const lerp = (from, to, amount) => from + (to - from) * amount;
@@ -600,7 +601,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       function syncEnhancement() {
-        const enabled = wide.matches && !still.matches;
+        const enabled = !still.matches;
         journey.toggleAttribute("data-enhanced", enabled);
         if (enabled) {
           measureFaces();
@@ -625,7 +626,6 @@ document.addEventListener("DOMContentLoaded", () => {
         fitPanels();
         scheduleRender();
       });
-      wide.addEventListener("change", syncEnhancement);
       still.addEventListener("change", syncEnhancement);
 
       if (document.fonts?.ready) {

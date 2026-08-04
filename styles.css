@@ -716,6 +716,45 @@ button {
   letter-spacing: 0.5px;
 }
 
+/* スマホ幅では6枚のフルカードが縦に長く並んでしまい、直前のジャーニーの
+   長いスクロールに続けてさらにスクロールを強いることになるため、
+   説明文を落として2列×3行のコンパクトなアイコン+タイトルだけに圧縮する。
+   カード自体がリンクなので、説明文が無くてもタップ先は変わらない。 */
+@media (max-width: 640px) {
+  .manual-guide-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .manual-guide-card {
+    align-items: center;
+    padding: 14px 8px;
+    text-align: center;
+  }
+
+  .manual-guide-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+
+  .manual-guide-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .manual-guide-card-title {
+    margin-bottom: 0;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  .manual-guide-card-desc,
+  .manual-guide-more {
+    display: none;
+  }
+}
+
 /* --- 9. Pricing --- */
 .pricing-section {
   padding: 100px 0;
@@ -2726,68 +2765,74 @@ html body .journey .journey-panel,
   );
 }
 
-/* ぼかしは文字より少しだけ先に立ち上げる。いきなり出ると切り替わりが目立つ */
-.journey[data-enhanced] .journey-panel::before {
-  opacity: clamp(0, calc(var(--journey-panel-p, 1) * 2.4), 1);
-}
+/* パネルの固定表示・段階フェードはデスクトップだけ。狭い画面ではモックの
+   隣に置く余地がなく、指スクロールと合わない浮遊演出になってしまうため、
+   901px未満は通常フロー（下の素の .journey-panel）のまま何もしない。
+   タスクが飛ぶ演出（flyer）はここでは触らない＝幅を問わず有効。 */
+@media (min-width: 901px) {
+  /* ぼかしは文字より少しだけ先に立ち上げる。いきなり出ると切り替わりが目立つ */
+  .journey[data-enhanced] .journey-panel::before {
+    opacity: clamp(0, calc(var(--journey-panel-p, 1) * 2.4), 1);
+  }
 
-.journey[data-enhanced] .journey-panel {
-  position: fixed;
-  /* 上端固定だと、語の長い言語で下にはみ出す。中央に置いて上下の逃げを均す。 */
-  top: 50%;
-  z-index: 30;
-  width: min(calc(100vw - 48px), 620px);
-  margin: 0;
-  opacity: var(--journey-panel-opacity, 0);
-  pointer-events: none;
-  transform: none !important;
-  transition: none;
-  /* それでも収まらないぶんは縮める。倍率は app.js が言語・ステップごとに
-     実測して入れる（1 を超えることはない＝拡大はしない）。 */
-  translate: 0 -50%;
-  scale: var(--journey-panel-scale, 1);
-  transform-origin: var(--journey-panel-origin, right) center;
-}
+  .journey[data-enhanced] .journey-panel {
+    position: fixed;
+    /* 上端固定だと、語の長い言語で下にはみ出す。中央に置いて上下の逃げを均す。 */
+    top: 50%;
+    z-index: 30;
+    width: min(calc(100vw - 48px), 620px);
+    margin: 0;
+    opacity: var(--journey-panel-opacity, 0);
+    pointer-events: none;
+    transform: none !important;
+    transition: none;
+    /* それでも収まらないぶんは縮める。倍率は app.js が言語・ステップごとに
+       実測して入れる（1 を超えることはない＝拡大はしない）。 */
+    translate: 0 -50%;
+    scale: var(--journey-panel-scale, 1);
+    transform-origin: var(--journey-panel-origin, right) center;
+  }
 
-/* 説明は左右交互に出す。ガント=右、カンバン=左、ノート=右… と振ることで、
-   モックのどちら側を見せたいかを切り替えられる。 */
-.journey[data-enhanced] .journey-step:nth-child(odd) .journey-panel {
-  right: max(24px, calc((100vw - 1200px) / 2 + 24px));
-  left: auto;
-  --journey-panel-origin: right;
-}
+  /* 説明は左右交互に出す。ガント=右、カンバン=左、ノート=右… と振ることで、
+     モックのどちら側を見せたいかを切り替えられる。 */
+  .journey[data-enhanced] .journey-step:nth-child(odd) .journey-panel {
+    right: max(24px, calc((100vw - 1200px) / 2 + 24px));
+    left: auto;
+    --journey-panel-origin: right;
+  }
 
-.journey[data-enhanced] .journey-step:nth-child(even) .journey-panel {
-  left: max(24px, calc((100vw - 1200px) / 2 + 24px));
-  right: auto;
-  --journey-panel-origin: left;
-}
+  .journey[data-enhanced] .journey-step:nth-child(even) .journey-panel {
+    left: max(24px, calc((100vw - 1200px) / 2 + 24px));
+    right: auto;
+    --journey-panel-origin: left;
+  }
 
-.journey[data-enhanced] .journey-step.is-panel-visible .journey-panel {
-  pointer-events: auto;
-  transform: none !important;
-}
+  .journey[data-enhanced] .journey-step.is-panel-visible .journey-panel {
+    pointer-events: auto;
+    transform: none !important;
+  }
 
-/* 説明は一度に出さず、番号 → 見出し → リード → 要点 → リンク の順に出す。
-   --journey-panel-p はステップ内の進行度 0→1（app.js が毎フレーム入れる）。
-   --d はその要素が出はじめる位置。消えるときは親の不透明度で一括。 */
-.journey[data-enhanced] .journey-index,
-.journey[data-enhanced] .journey-title,
-.journey[data-enhanced] .journey-lead,
-.journey[data-enhanced] .journey-points,
-.journey[data-enhanced] .journey-free-note,
-.journey[data-enhanced] .journey-more {
-  --jp: clamp(0, calc((var(--journey-panel-p, 1) - var(--d, 0)) * 2.6), 1);
-  opacity: var(--jp);
-  translate: 0 calc((1 - var(--jp)) * 14px);
-}
+  /* 説明は一度に出さず、番号 → 見出し → リード → 要点 → リンク の順に出す。
+     --journey-panel-p はステップ内の進行度 0→1（app.js が毎フレーム入れる）。
+     --d はその要素が出はじめる位置。消えるときは親の不透明度で一括。 */
+  .journey[data-enhanced] .journey-index,
+  .journey[data-enhanced] .journey-title,
+  .journey[data-enhanced] .journey-lead,
+  .journey[data-enhanced] .journey-points,
+  .journey[data-enhanced] .journey-free-note,
+  .journey[data-enhanced] .journey-more {
+    --jp: clamp(0, calc((var(--journey-panel-p, 1) - var(--d, 0)) * 2.6), 1);
+    opacity: var(--jp);
+    translate: 0 calc((1 - var(--jp)) * 14px);
+  }
 
-.journey[data-enhanced] .journey-index { --d: 0; }
-.journey[data-enhanced] .journey-title { --d: 0.08; }
-.journey[data-enhanced] .journey-lead { --d: 0.24; }
-.journey[data-enhanced] .journey-points { --d: 0.40; }
-.journey[data-enhanced] .journey-free-note,
-.journey[data-enhanced] .journey-more { --d: 0.56; }
+  .journey[data-enhanced] .journey-index { --d: 0; }
+  .journey[data-enhanced] .journey-title { --d: 0.08; }
+  .journey[data-enhanced] .journey-lead { --d: 0.24; }
+  .journey[data-enhanced] .journey-points { --d: 0.40; }
+  .journey[data-enhanced] .journey-free-note,
+  .journey[data-enhanced] .journey-more { --d: 0.56; }
+}
 
 .journey-index::before {
   counter-increment: journey-step;
@@ -2890,13 +2935,13 @@ html body .journey .journey-panel,
 .journey[data-enhanced] .journey-step {
   /* 内訳: モックが sticky で止まる可動域 + モック自身の高さ。
      ここを削ると、説明のフェードに割けるスクロール量が減る。 */
-  min-height: 210vh;
+  min-height: 180vh;
   padding: 2rem 0;
 }
 
 /* 背の高いホワイトボードも、説明のフェードアウト完了まではstickyを保つ。 */
 .journey[data-enhanced] .journey-step:last-child {
-  min-height: 240vh;
+  min-height: 205vh;
 }
 
 .journey[data-enhanced] .journey-screen {
@@ -2916,11 +2961,13 @@ html body .journey .journey-panel,
   .journey[data-enhanced] {
     --ui-view-h: clamp(360px, calc(100vh - 190px), 820px);
   }
-}
 
-.journey[data-enhanced] .journey-step.is-back .journey-screen {
-  transform: scale(0.98);
-  opacity: 0.92;
+  /* 固定パネルのぶんモックを少し引かせる演出。パネルが通常フローのままの
+     モバイルでは隣に避けるスペースが要らないので、デスクトップだけで良い。 */
+  .journey[data-enhanced] .journey-step.is-back .journey-screen {
+    transform: scale(0.98);
+    opacity: 0.92;
+  }
 }
 
 .journey-step [data-journey-anchor] {
@@ -3095,14 +3142,19 @@ html body .journey .journey-panel,
   transform: translateY(4px);
 }
 
-@media (max-width: 900px), (prefers-reduced-motion: reduce) {
+@media (max-width: 900px) {
+  .journey-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* reduced-motion は幅を問わず常に縦並びの素の見た目に落とす
+   （sticky も flyer も data-enhanced も JS 側で立てないが、CSS 側にも
+   保険として同じ既定値に戻す処理を残す）。 */
+@media (prefers-reduced-motion: reduce) {
   .journey-step {
     min-height: 0;
     padding: 2.5rem 0;
-  }
-
-  .journey-title {
-    font-size: 1.3rem;
   }
 
   .journey-flyer {
