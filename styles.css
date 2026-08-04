@@ -3190,7 +3190,7 @@ html body .journey .journey-panel,
   .journey-screen {
     height: auto;
     aspect-ratio: 16 / 9;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .journey-screen .ui {
