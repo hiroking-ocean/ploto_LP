@@ -37,18 +37,18 @@
   <meta name="description" content="How to use Ploto's Kanban board: building stage columns, moving cards, standard ToDos per stage, completion checks, and filters.">
 
   <!-- SEO & OGP -->
-  <link rel="canonical" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html">
-  <link rel="alternate" hreflang="ja" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
-  <link rel="alternate" hreflang="en" href="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html">
-  <link rel="alternate" hreflang="de" href="https://hiroking-ocean.github.io/ploto_LP/de/manual/kanban.html">
-  <link rel="alternate" hreflang="fr" href="https://hiroking-ocean.github.io/ploto_LP/fr/manual/kanban.html">
-  <link rel="alternate" hreflang="ko" href="https://hiroking-ocean.github.io/ploto_LP/ko/manual/kanban.html">
-  <link rel="alternate" hreflang="x-default" href="https://hiroking-ocean.github.io/ploto_LP/manual/kanban.html">
+  <link rel="canonical" href="https://ploto-app.com/en/manual/kanban.html">
+  <link rel="alternate" hreflang="ja" href="https://ploto-app.com/manual/kanban.html">
+  <link rel="alternate" hreflang="en" href="https://ploto-app.com/en/manual/kanban.html">
+  <link rel="alternate" hreflang="de" href="https://ploto-app.com/de/manual/kanban.html">
+  <link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/manual/kanban.html">
+  <link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/manual/kanban.html">
+  <link rel="alternate" hreflang="x-default" href="https://ploto-app.com/manual/kanban.html">
 
   <!-- OGP / Twitter （中身は build.js が各言語・各ページの値で埋める） -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Ploto">
-  <meta property="og:url" content="https://hiroking-ocean.github.io/ploto_LP/en/manual/kanban.html">
+  <meta property="og:url" content="https://ploto-app.com/en/manual/kanban.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ko_KR">
   <meta property="og:locale:alternate" content="fr_FR">
@@ -56,16 +56,16 @@
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:title" content="Kanban Board | Ploto Manual">
   <meta property="og:description" content="How to use Ploto's Kanban board: building stage columns, moving cards, standard ToDos per stage, completion checks, and filters.">
-  <meta property="og:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/kanban-overview.png">
+  <meta property="og:image" content="https://ploto-app.com/assets/manual/en/kanban-overview.png">
   <meta property="og:image:alt" content="Kanban Board">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Kanban Board | Ploto Manual">
   <meta name="twitter:description" content="How to use Ploto's Kanban board: building stage columns, moving cards, standard ToDos per stage, completion checks, and filters.">
-  <meta name="twitter:image" content="https://hiroking-ocean.github.io/ploto_LP/assets/manual/en/kanban-overview.png">
+  <meta name="twitter:image" content="https://ploto-app.com/assets/manual/en/kanban-overview.png">
   <meta name="twitter:image:alt" content="Kanban Board">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/ploto_LP/assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,25 +73,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="/ploto_LP/styles.css?v=cbdc4621">
-  <link rel="stylesheet" href="/ploto_LP/manual.css?v=3335fef3">
+  <link rel="stylesheet" href="/styles.css?v=cbdc4621">
+  <link rel="stylesheet" href="/manual.css?v=3335fef3">
 
   <!-- Application Script -->
-  <script type="module" src="/ploto_LP/manual.js?v=2ebce4f0" defer=""></script>
+  <script type="module" src="/manual.js?v=ef1f074c" defer=""></script>
 </head>
 
 <body>
   <!-- Header -->
   <header class="header">
     <div class="header-container">
-      <a href="/ploto_LP/en/" class="logo-area" data-lp-href="">
-        <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+      <a href="/en/" class="logo-area" data-lp-href="">
+        <img src="/assets/logo.svg" alt="Ploto Logo" class="logo-img">
         <span class="logo-text">Ploto</span>
       </a>
 
       <!-- ナビゲーションメニュー（モバイルドロワー用） -->
       <nav class="nav-menu">
-        <a href="/ploto_LP/en/" data-lp-href="" data-i18n="manual_back_to_lp">← Back to Official Site</a>
+        <a href="/en/" data-lp-href="" data-i18n="manual_back_to_lp">← Back to Official Site</a>
       </nav>
 
       <div class="header-actions">
@@ -127,7 +127,7 @@
           </svg>
         </button>
 
-        <a href="/ploto_LP/en/#download" data-lp-download-href="" class="btn-primary" data-i18n="cta_download">Free Download</a>
+        <a href="/en/#download" data-lp-download-href="" class="btn-primary" data-i18n="cta_download">Free Download</a>
 
         <!-- ハンバーガーボタン（スマホのみ表示） -->
         <button id="hamburger-btn" class="hamburger-btn" aria-label="メニューを開く" aria-expanded="false">
@@ -141,12 +141,12 @@
 
   <!-- モバイル用ドロワーナビ（スマホでのみ表示） -->
   <nav id="nav-mobile" class="nav-menu-mobile" aria-label="モバイルナビゲーション">
-    <a href="/ploto_LP/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
-    <a href="/ploto_LP/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
-    <a href="/ploto_LP/en/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban Board</a>
-    <a href="/ploto_LP/en/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Priority Matrix</a>
+    <a href="/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
+    <a href="/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
+    <a href="/en/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban Board</a>
+    <a href="/en/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Priority Matrix</a>
     <div class="nav-mobile-cta">
-      <a href="/ploto_LP/en/" data-lp-href="" data-i18n="manual_back_to_lp">← Back to Official Site</a>
+      <a href="/en/" data-lp-href="" data-i18n="manual_back_to_lp">← Back to Official Site</a>
     </div>
   </nav>
 
@@ -156,26 +156,26 @@
       <div class="manual-sidebar-title" data-i18n="manual_sidebar_title">Ploto Manual</div>
       <ul class="manual-menu-list">
         <li class="manual-menu-item" data-menu-id="basic">
-          <a href="/ploto_LP/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
+          <a href="/en/manual/basic.html" data-manual-link="basic" data-i18n="manual_menu_basic">Basic Operations</a>
         </li>
         <li class="manual-menu-item" data-menu-id="gantt">
-          <a href="/ploto_LP/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
+          <a href="/en/manual/gantt.html" data-manual-link="gantt" data-i18n="manual_menu_gantt">Gantt Chart</a>
         </li>
         <li class="manual-menu-item active" data-menu-id="kanban">
-          <a href="/ploto_LP/en/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban Board</a>
+          <a href="/en/manual/kanban.html" data-manual-link="kanban" data-i18n="manual_menu_kanban">Kanban Board</a>
         </li>
         <li class="manual-menu-item" data-menu-id="note">
-          <a href="/ploto_LP/en/manual/note.html" data-manual-link="note" data-i18n="manual_menu_note">Notes</a>
+          <a href="/en/manual/note.html" data-manual-link="note" data-i18n="manual_menu_note">Notes</a>
         </li>
         <li class="manual-menu-item" data-menu-id="whiteboard">
-          <a href="/ploto_LP/en/manual/whiteboard.html" data-manual-link="whiteboard" data-i18n="manual_menu_whiteboard">Whiteboard</a>
+          <a href="/en/manual/whiteboard.html" data-manual-link="whiteboard" data-i18n="manual_menu_whiteboard">Whiteboard</a>
         </li>
         <li class="manual-menu-item" data-menu-id="matrix">
-          <a href="/ploto_LP/en/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Priority Matrix</a>
+          <a href="/en/manual/matrix.html" data-manual-link="matrix" data-i18n="manual_menu_matrix">Priority Matrix</a>
         </li>
       </ul>
       <div class="manual-back-link">
-        <a href="/ploto_LP/en/" data-lp-href="">
+        <a href="/en/" data-lp-href="">
           <span data-i18n="manual_back_to_lp">← Back to Official Site</span>
         </a>
       </div>
@@ -195,7 +195,7 @@
         <p data-i18n="manual_kanban_intro">The Kanban board manages the same tasks as your Gantt chart, but arranged as a series of stages (columns). Simply dragging a card to the right records its progress, and the result is reflected in the Gantt chart as well. While the Gantt chart is about dates, the Kanban board is best for seeing who is working on what stage right now.</p>
 
         <div class="manual-image-container">
-          <img src="/ploto_LP/assets/manual/en/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview" width="2560" height="1440" loading="eager" fetchpriority="high" decoding="async">
+          <img src="/assets/manual/en/kanban-overview.png" data-screenshot-path="kanban-overview.png" alt="Kanban Board Overview" width="2560" height="1440" loading="eager" fetchpriority="high" decoding="async">
           <div class="manual-image-caption" data-i18n="manual_menu_kanban">Kanban Board</div>
         </div>
 
@@ -332,7 +332,7 @@
           <h3 data-i18n="manual_kanban_filter_title">Filters and Search</h3>
           <p data-i18n="manual_kanban_filter_desc">The bar at the top of the board lets you filter by project, assignee, and tag, and search task names by keyword. This makes it easy to view only your own workload or follow just one project's flow. Filter settings are saved per board, so reopening the file resumes exactly where you left off.</p>
           <div class="manual-image-container">
-            <img src="/ploto_LP/assets/manual/en/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
+            <img src="/assets/manual/en/kanban-filters.png" data-screenshot-path="kanban-filters.png" alt="Filters" width="2560" height="1440" loading="lazy" fetchpriority="low" decoding="async">
           </div>
         </div>
 
@@ -357,8 +357,8 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-left">
-        <div class="logo-area" data-lp-href="" href="/ploto_LP/en/">
-          <img src="/ploto_LP/assets/logo.svg" alt="Ploto Logo" class="logo-img">
+        <div class="logo-area" data-lp-href="" href="/en/">
+          <img src="/assets/logo.svg" alt="Ploto Logo" class="logo-img">
           <span class="logo-text">Ploto</span>
         </div>
         <p class="footer-copy">© 2026 Ploto. All rights reserved.</p>

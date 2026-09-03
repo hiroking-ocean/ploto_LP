@@ -16,12 +16,12 @@ import locales from "./locales/index.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // --- 設定 -----------------------------------------------------------------
-const SITE = "https://hiroking-ocean.github.io/ploto_LP/"; // 末尾スラッシュ必須
-const BASE = "/ploto_LP/"; // GitHub Pages のサブパス（絶対パス化に使用）
+const SITE = "https://ploto-app.com/"; // 末尾スラッシュ必須
+const BASE = "/"; // カスタムドメインのルート（絶対パス化に使用）
 const LANGS = ["ja", "en", "de", "fr", "ko"];
 // マニュアルのスクリーンショットが当該言語に無い場合の代替言語。
 const FALLBACK_LANG = "en";
-const LASTMOD = "2026-08-17"; // sitemap の更新日。内容を更新したらここも上げる
+const LASTMOD = "2026-09-03"; // sitemap の更新日。内容を更新したらここも上げる
 
 const OG_LOCALE = { ja: "ja_JP", en: "en_US", de: "de_DE", fr: "fr_FR", ko: "ko_KR" };
 const IMG_ALT = {
@@ -35,7 +35,7 @@ const IMG_ALT = {
 // ja はルート、その他は /{lang}/ サブディレクトリ
 const urlFor = (lang) => (lang === "ja" ? SITE : `${SITE}${lang}/`);
 
-// 相対パス（assets/… styles.css app.js）を /ploto_LP/… へ絶対化する。
+// 相対パス（assets/… styles.css app.js）を /… へ絶対化する。
 // http(s):// , // , #anchor , 既に絶対の / は対象外。
 const absolutize = (val) => {
   if (!val) return val;
@@ -186,7 +186,7 @@ function buildPage(lang) {
   $('link[hreflang="x-default"]').attr("href", urlFor("ja"));
 
   // 5. OGP / Twitter （当該言語にローカライズ）
-  // 画像はサイトルート直下（/ploto_LP/assets/…）にあるため、ページURLではなく SITE 基準にする
+  // 画像はサイトルート直下（/assets/…）にあるため、ページURLではなく SITE 基準にする
   const shot = `${SITE}assets/screenshots/${locale.screenshotFolder}/01-gantt.png`;
   $('meta[property="og:url"]').attr("content", url);
   $('meta[property="og:locale"]').attr("content", OG_LOCALE[lang]);

@@ -8,7 +8,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
-  const BASE = "/ploto_LP/";
+  const BASE = "/";
   let currentLang = (document.documentElement.getAttribute("lang") || "ja").split("-")[0].toLowerCase();
   let currentTheme = localStorage.getItem("ploto-theme") || "light";
 

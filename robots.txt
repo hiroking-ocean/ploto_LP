@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hiroking-ocean.github.io/ploto_LP/sitemap.xml
-Sitemap: https://hiroking-ocean.github.io/ploto_LP/sitemap.txt
+Sitemap: https://ploto-app.com/sitemap.xml
+Sitemap: https://ploto-app.com/sitemap.txt

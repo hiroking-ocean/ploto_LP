@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 1. State Management ---
   // 初期言語は「ページが持つ言語」(<html lang>) を正とする。
   // 各言語は別URLでプリレンダリングされており、これによりSSR内容とJSの再適用が一致する。
-  const BASE = "/ploto_LP/";
+  const BASE = "/";
   const urlForLang = (lang) => (lang === "ja" ? BASE : `${BASE}${lang}/`);
   let currentLang = (document.documentElement.getAttribute("lang") || "ja").split("-")[0].toLowerCase();
   let currentTheme = localStorage.getItem("ploto-theme") || "light";
