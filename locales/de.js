@@ -202,7 +202,7 @@ export default {
 
     footer_privacy: "Datenschutz",
     footer_terms: "Nutzungsbedingungen",
-    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
+    privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "Ohne Cloud-Zwang. Ihre Daten bleiben bei Ihnen.",
     security_subtitle: "Ploto setzt weder eine Internetverbindung noch Cloud-Speicher voraus. Projektdaten bleiben auf Ihrem PC; die App und ihre Updates erhalten Sie über den Microsoft Store.",

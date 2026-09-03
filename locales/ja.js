@@ -202,7 +202,7 @@ export default {
 
     footer_privacy: "プライバシーポリシー",
     footer_terms: "利用規約",
-    privacy_url: "https://github.com/hiroking-ocean/ploto-privacy",
+    privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "通信に頼らず、データは手元に",
     security_subtitle: "Plotoは、通信やクラウドへの保存を前提としません。プロジェクトデータは手元のPCで管理し、アプリと更新版はMicrosoft Storeから受け取れます。",
