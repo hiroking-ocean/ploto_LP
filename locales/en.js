@@ -171,7 +171,7 @@ export default {
     plan_compare_holidays_free: "Add and edit manually",
     plan_compare_holidays_pro: "Manual setup + bulk country import",
     plan_compare_note: "* Creating a new Priority Matrix, Member Tasks view, or Note needs Pro too, same as Kanban (anything already created stays editable). Anything not listed here remains unrestricted without Pro. The one exception: whiteboards created by someone else are view-only without Pro.",
-    plan_compare_license_note: "* Pro is only required when creating a new view. A file containing views made with Pro still opens and edits normally without Pro. A serial code can be registered on several of your own devices, and once registered it validates offline.",
+    plan_compare_license_note: "* Pro is only required when creating a new view. A file containing views made with Pro still opens and edits normally without Pro. A serial code is tied to a single PC, and once registered it validates offline.",
 
     pricing_badge: "💡 One-time purchase, no subscription",
     pricing_title: "WBS and Gantt charts, free for good.",

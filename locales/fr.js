@@ -171,7 +171,7 @@ export default {
     plan_compare_holidays_free: "Ajout et modification manuels",
     plan_compare_holidays_pro: "Manuel + import groupé par pays",
     plan_compare_note: "* Créer une nouvelle matrice de priorité, vue par membre ou note nécessite Pro, comme pour Kanban (ce qui existe déjà reste modifiable). Tout ce qui ne figure pas ici reste sans restriction sans Pro. Seule exception : les tableaux blancs créés par une autre personne sont en lecture seule sans Pro.",
-    plan_compare_license_note: "* Pro n'est nécessaire que pour créer une nouvelle vue. Un fichier contenant des vues créées avec Pro s'ouvre et se modifie normalement sans Pro. Un code de série peut être enregistré sur plusieurs de vos appareils et, une fois enregistré, il se valide hors ligne.",
+    plan_compare_license_note: "* Pro n'est nécessaire que pour créer une nouvelle vue. Un fichier contenant des vues créées avec Pro s'ouvre et se modifie normalement sans Pro. Un code de série est lié à un seul PC et, une fois enregistré, il se valide hors ligne.",
 
     pricing_badge: "💡 Achat unique, sans abonnement",
     pricing_title: "WBS et diagramme de Gantt, gratuits pour de bon.",

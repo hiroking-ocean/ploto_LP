@@ -171,7 +171,7 @@ export default {
     plan_compare_holidays_free: "Manuell hinzufügen und bearbeiten",
     plan_compare_holidays_pro: "Manuell + Länderfeiertage gesammelt importieren",
     plan_compare_note: "* Eine neue Prioritätsmatrix, Ansicht für Mitglieder oder Notiz anzulegen benötigt ebenso Pro wie Kanban (bereits Erstelltes bleibt bearbeitbar). Alles, was hier nicht aufgeführt ist, lässt sich ohne Pro uneingeschränkt nutzen. Einzige Ausnahme: Whiteboards, die jemand anderes erstellt hat, lassen sich ohne Pro nur ansehen.",
-    plan_compare_license_note: "* Pro ist nur beim Anlegen einer neuen Ansicht nötig. Eine Datei mit Ansichten, die mit Pro erstellt wurden, lässt sich auch ohne Pro ganz normal öffnen und bearbeiten. Ein Seriencode kann auf mehreren eigenen Geräten registriert werden und wird danach auch offline geprüft.",
+    plan_compare_license_note: "* Pro ist nur beim Anlegen einer neuen Ansicht nötig. Eine Datei mit Ansichten, die mit Pro erstellt wurden, lässt sich auch ohne Pro ganz normal öffnen und bearbeiten. Ein Seriencode ist an einen einzelnen PC gebunden und wird nach der Registrierung auch offline geprüft.",
 
     pricing_badge: "💡 Einmalkauf, kein Abo",
     pricing_title: "WBS und Gantt-Diagramm, dauerhaft kostenlos.",
