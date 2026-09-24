@@ -1,6 +1,6 @@
 # Ploto LP
 
-Ploto ランディングページ。日本語・英語・ドイツ語・フランス語・韓国語の5言語に対応し、各言語を**独立した静的URL**としてプリレンダリングして配信します。GitHub Pages（`hiroking-ocean.github.io/ploto_LP/`）から公開しています。
+Ploto ランディングページ。日本語・英語・ドイツ語・フランス語・韓国語の5言語に対応し、各言語を**独立した静的URL**としてプリレンダリングして配信します。公開URLは `https://ploto-app.com/` です。
 
 ---
 
@@ -39,11 +39,11 @@ git push origin main
 
 push 後、GitHub Pages が自動でデプロイし、以下の5URLすべてが同時に更新されます。
 
-- `https://hiroking-ocean.github.io/ploto_LP/`      … 日本語（ルート）
-- `https://hiroking-ocean.github.io/ploto_LP/en/`   … English
-- `https://hiroking-ocean.github.io/ploto_LP/de/`   … Deutsch
-- `https://hiroking-ocean.github.io/ploto_LP/fr/`   … Français
-- `https://hiroking-ocean.github.io/ploto_LP/ko/`   … 한국어
+- `https://ploto-app.com/`     … 日本語（ルート）
+- `https://ploto-app.com/en/`  … English
+- `https://ploto-app.com/de/`  … Deutsch
+- `https://ploto-app.com/fr/`  … Français
+- `https://ploto-app.com/ko/`  … 한국어
 
 > 初回のみ依存パッケージのインストールが必要です: `npm install`
 
@@ -113,7 +113,7 @@ ploto_LP/
 - `data-i18n` / `data-i18n-placeholder` 箇所へ翻訳を流し込み
 - `<html lang>`、`<title>`、`meta description` を各言語に設定
 - `canonical` / `hreflang`（5言語 + x-default）/ OGP / Twitter Card / JSON-LD を各言語URL向けに生成
-- アセットパスを `/ploto_LP/…` の絶対パスへ変換（サブディレクトリでの404防止）
+- アセットパスを `/…` の絶対パスへ変換（言語別サブディレクトリでの404防止）
 - `sitemap.xml` を全URL分（hreflang 付き）生成
 
 これにより各言語が検索エンジンに個別ページとして認識され、多言語SEOが機能します。
@@ -142,17 +142,14 @@ ploto_LP/
 
 ## ローカルでの動作確認方法
 
-Ploto LPは、GitHub Pagesのサブディレクトリ `/ploto_LP/` を想定してアセットパスを絶対パス化（例: `/ploto_LP/styles.css`）しています。
-そのため、ローカルでHTMLファイルをダブルクリックして直接ブラウザで開く（`file:///` 経由）と、パスが壊れてスタイルが適用されません。
-
-ローカルで正しく動作確認するには、**親ディレクトリをルートとしたローカルサーバー**を立ち上げる必要があります。
+Ploto LPはカスタムドメインのルート `/` を想定し、CSSなどを `/styles.css` のようなルートからのパスで参照します。ローカルでも**このリポジトリをサーバーの公開ルート**にしてください。親ディレクトリを公開して `/ploto_LP/` で開くと、CSSは `http://localhost:8080/styles.css` を参照して404になります。
 
 **例: Node.js (http-server) を使用する場合**
-1. リポジトリの親ディレクトリ（`ploto_LP` フォルダがある場所）に移動します。
+1. リポジトリのディレクトリ（`ploto_LP`）に移動します。
 2. 以下のコマンドでサーバーを起動します。
    ```bash
-   npx http-server -p 8080
+   npx http-server . -p 8080
    ```
 3. ブラウザで以下のURLにアクセスします。
-   - LPトップ: `http://localhost:8080/ploto_LP/`
-   - マニュアル: `http://localhost:8080/ploto_LP/manual/gantt.html`
+   - LPトップ: `http://localhost:8080/`
+   - マニュアル: `http://localhost:8080/manual/gantt.html`

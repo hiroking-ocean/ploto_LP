@@ -3,7 +3,7 @@ export default {
   screenshotFolder: "en-us",
   meta: {
     title: "Ploto - Diagramme de Gantt & WBS gratuit | Importez votre planning Excel tel quel",
-    description: "Créez un WBS ou un diagramme de Gantt gratuitement, dès maintenant, comme application. L'import et l'export Excel restent gratuits sans limite de durée. Quand le diagramme de Gantt seul ne suffit plus, ajoutez Kanban, la matrice de priorités et le tableau blanc avec la mise à niveau Pro en achat unique. Sans compte, sans frais mensuels. Les données de projet sont stockées dans des fichiers .ploto sur votre PC et ne sont pas envoyées automatiquement à des serveurs externes. Windows 10/11."
+    description: "Créez WBS et diagrammes de Gantt, importez et exportez Excel gratuitement sans limite de durée. Ajoutez Kanban et d'autres vues avec Pro en achat unique. Le Terminal IA, vendu séparément, offre 60 opérations IA gratuites à essayer. Les projets restent dans des fichiers .ploto sur votre PC. Windows 10/11."
   },
   i18n: {
     nav_features: "Fonctionnalités",
@@ -14,7 +14,7 @@ export default {
 
     hero_badge: "💡 Importez votre planning Excel ou WBS tel quel | Fonctions essentielles toujours gratuites | Achat unique, sans abonnement",
     hero_title: 'WBS & diagramme de Gantt,<br><span class="text-gradient">créés là, comme application.</span>',
-    hero_desc: "Un planning Excel se fragilise un peu plus à chaque ligne insérée. Ploto l'importe tel quel et le transforme en diagramme de Gantt — création, modification et export Excel gratuits. Quand le diagramme de Gantt seul ne suffit plus, ajoutez Kanban ou la matrice de priorités avec la mise à niveau Pro en achat unique.",
+    hero_desc: "Un planning Excel se fragilise un peu plus à chaque ligne insérée. Ploto l'importe tel quel et le transforme en diagramme de Gantt — création, modification et export Excel gratuits. Ajoutez Kanban et d'autres vues avec Pro en achat unique. Le Terminal IA, vendu séparément, permet de planifier avec votre IA et d'essayer 60 opérations gratuites.",
     hero_cta_download: "Télécharger gratuitement",
     hero_cta_manual: "Voir le manuel",
     hero_meta: "<span>✓ Importez votre planning Excel ou WBS tel quel</span><span>✓ Diagramme de Gantt & import/export Excel gratuits pour toujours</span><span>✓ Achat unique · Sans frais mensuels</span>",
@@ -175,7 +175,7 @@ export default {
 
     pricing_badge: "💡 Achat unique, sans abonnement",
     pricing_title: "WBS et diagramme de Gantt, gratuits pour de bon.",
-    pricing_desc: "Créer et modifier des diagrammes de Gantt, ainsi que l'import et l'export Excel, restent gratuits sans limite de durée. Quand le diagramme de Gantt seul ne suffit plus, ajoutez Kanban ou la matrice de priorités avec la mise à niveau Pro en achat unique, uniquement pour en créer une nouvelle.",
+    pricing_desc: "La création et la modification des diagrammes de Gantt, ainsi que l'import et l'export Excel, restent gratuits sans limite de durée. Choisissez Pro en achat unique pour créer Kanban et d'autres vues, ou le Terminal IA vendu séparément pour travailler avec votre IA.",
     pricing_model_label: "Modèle tarifaire",
     pricing_model_value: "Achat unique (sans abonnement)",
     pricing_buy_label: "Où acheter",
@@ -205,9 +205,9 @@ export default {
     privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "Sans dépendre du cloud, vos données restent chez vous",
-    security_subtitle: "Ploto ne dépend ni d'une connexion Internet ni d'un stockage dans le cloud. Les données de projet restent sur votre PC, tandis que l'application et ses mises à jour passent par le Microsoft Store.",
-    security_c1_title: "Fonctionne entièrement hors ligne",
-    security_c1_desc: "La création, la modification et l'enregistrement des tâches ne nécessitent aucune connexion Internet. Vous pouvez utiliser Ploto sans créer de compte ni vous connecter.",
+    security_subtitle: "La création, la modification et l'enregistrement habituels ne nécessitent ni connexion Internet ni stockage cloud. Les données restent sur votre PC. L'intégration IA peut communiquer avec le service IA de votre choix.",
+    security_c1_title: "Les opérations habituelles fonctionnent hors ligne",
+    security_c1_desc: "Créer, modifier et enregistrer des tâches ne nécessite pas d'Internet. L'intégration IA dépend des conditions de connexion de votre client CLI et du service IA.",
     security_c2_title: "Données de projet enregistrées dans un fichier local",
     security_c2_desc: "Vos données sont enregistrées dans un fichier .ploto sur votre PC. Ploto n'envoie pas automatiquement son contenu à des serveurs externes.",
     security_c3_title: "Installation et mises à jour via le Microsoft Store",

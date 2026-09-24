@@ -35,7 +35,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ploto - Free Gantt Chart &amp; WBS Maker | Import Your Excel Schedule As-Is</title>
-  <meta name="description" content="Build a WBS or Gantt chart for free, right now, as an app. Importing your Excel schedule or WBS, and exporting back to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban, Priority Matrix, and Whiteboard as a one-time-purchase Pro upgrade. No account, no monthly fee. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11.">
+  <meta name="description" content="Create WBS and Gantt charts and import or export Excel schedules for free without a time limit. Add Kanban and other views with a one-time Pro purchase. AI Terminal is a separate one-time purchase with 60 free AI operations in Ploto. Projects stay in .ploto files on your PC. Windows 10/11.">
 
   <!-- SEO & OGP -->
   <link rel="canonical" href="https://ploto-app.com/en/">
@@ -47,7 +47,7 @@
   <link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/">
   <link rel="alternate" hreflang="x-default" href="https://ploto-app.com/">
   <meta property="og:title" content="Ploto - Free Gantt Chart &amp; WBS Maker | Import Your Excel Schedule As-Is">
-  <meta property="og:description" content="Build a WBS or Gantt chart for free, right now, as an app. Importing your Excel schedule or WBS, and exporting back to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban, Priority Matrix, and Whiteboard as a one-time-purchase Pro upgrade. No account, no monthly fee. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11.">
+  <meta property="og:description" content="Create WBS and Gantt charts and import or export Excel schedules for free without a time limit. Add Kanban and other views with a one-time Pro purchase. AI Terminal is a separate one-time purchase with 60 free AI operations in Ploto. Projects stay in .ploto files on your PC. Windows 10/11.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ploto-app.com/en/">
   <meta property="og:site_name" content="Ploto">
@@ -66,7 +66,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Ploto - Free Gantt Chart &amp; WBS Maker | Import Your Excel Schedule As-Is">
-  <meta name="twitter:description" content="Build a WBS or Gantt chart for free, right now, as an app. Importing your Excel schedule or WBS, and exporting back to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban, Priority Matrix, and Whiteboard as a one-time-purchase Pro upgrade. No account, no monthly fee. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11.">
+  <meta name="twitter:description" content="Create WBS and Gantt charts and import or export Excel schedules for free without a time limit. Add Kanban and other views with a one-time Pro purchase. AI Terminal is a separate one-time purchase with 60 free AI operations in Ploto. Projects stay in .ploto files on your PC. Windows 10/11.">
   <meta name="twitter:image" content="https://ploto-app.com/assets/screenshots/en-us/01-gantt.png">
   <meta name="twitter:image:alt" content="Ploto Gantt chart screen">
 
@@ -98,10 +98,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="/styles.css?v=cbdc4621">
+  <link rel="stylesheet" href="/styles.css?v=0f229807">
 
   <!-- Application Script -->
-  <script type="module" src="/app.js?v=bd2d2ea1" defer=""></script>
+  <script type="module" src="/app.js?v=5d703002" defer=""></script>
 </head>
 
 <body>
@@ -187,7 +187,7 @@
         <div class="hero-content">
           <div class="badge" data-i18n="hero_badge">💡 Import Your Excel Schedule or WBS As-Is | Essential Features Stay Free | One-Time Purchase, No Subscription</div>
           <h1 class="hero-title" data-i18n="hero_title">WBS &amp; Gantt Charts,<br><span class="text-gradient">Made Right Now, As an App.</span></h1>
-          <p class="hero-description" data-i18n="hero_desc">An Excel schedule breaks a little more with every row you insert. Ploto imports it as-is and turns it into a Gantt chart — free to build, edit, and export back to Excel. When a Gantt chart alone isn't enough, add Kanban or Priority Matrix as a one-time-purchase Pro upgrade.</p>
+          <p class="hero-description" data-i18n="hero_desc">An Excel schedule breaks a little more with every row you insert. Ploto imports it as-is and turns it into a Gantt chart — free to build, edit, and export back to Excel. Add Kanban and other views with a one-time Pro purchase. AI Terminal lets your own AI work with the schedule and is available separately with 60 free operations.</p>
           <div class="hero-buttons">
             <a href="#download" class="btn-primary btn-large" data-i18n="hero_cta_download">Get it for Free</a>
             <a href="#manual" class="btn-secondary btn-large" data-i18n="hero_cta_manual">See the manual</a>
@@ -695,6 +695,85 @@
       </div>
     </section>
 
+    <!-- AI integration, shown after the five feature views. -->
+    <section id="ai" class="ai-feature-section" aria-labelledby="ai-feature-title">
+      <div class="container">
+        <!-- アプリで使用しているLucideアイコンと同じ形状をモック内で再利用する。 -->
+        <svg class="ai-story-symbols" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <symbol id="ai-icon-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></symbol>
+          <symbol id="ai-icon-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></symbol>
+          <symbol id="ai-icon-terminal" viewBox="0 0 24 24"><path d="m7 11 2-2-2-2"></path><path d="M11 13h4"></path><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect></symbol>
+          <symbol id="ai-icon-compare" viewBox="0 0 24 24"><circle cx="5" cy="6" r="3"></circle><path d="M12 6h5a2 2 0 0 1 2 2v7"></path><path d="m15 9-3-3 3-3"></path><circle cx="19" cy="18" r="3"></circle><path d="M12 18H7a2 2 0 0 1-2-2V9"></path><path d="m9 15 3 3-3 3"></path></symbol>
+          <symbol id="ai-icon-settings" viewBox="0 0 24 24"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+          <symbol id="ai-icon-gantt" viewBox="0 0 24 24"><path d="M10 6h8"></path><path d="M12 16h6"></path><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M8 11h7"></path></symbol>
+          <symbol id="ai-icon-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></symbol>
+          <symbol id="ai-icon-redo" viewBox="0 0 24 24"><path d="m15 14 5-5-5-5"></path><path d="M20 9H9.5A5.5 5.5 0 0 0 4 14.5A5.5 5.5 0 0 0 9.5 20H13"></path></symbol>
+          <symbol id="ai-icon-save" viewBox="0 0 24 24"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path><path d="M7 3v4a1 1 0 0 0 1 1h7"></path></symbol>
+          <symbol id="ai-icon-paint" viewBox="0 0 24 24"><path d="M11 7 6 2"></path><path d="M18.992 12H2.041"></path><path d="M21.145 18.38A3.34 3.34 0 0 1 20 16.5a3.3 3.3 0 0 1-1.145 1.88c-.575.46-.855 1.02-.855 1.595A2 2 0 0 0 20 22a2 2 0 0 0 2-2.025c0-.58-.285-1.13-.855-1.595"></path><path d="m8.5 4.5 2.148-2.148a1.205 1.205 0 0 1 1.704 0l7.296 7.296a1.205 1.205 0 0 1 0 1.704l-7.592 7.592a3.615 3.615 0 0 1-5.112 0l-3.888-3.888a3.615 3.615 0 0 1 0-5.112L5.67 7.33"></path></symbol>
+          <symbol id="ai-icon-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></symbol>
+          <symbol id="ai-icon-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></symbol>
+          <symbol id="ai-icon-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+          <symbol id="ai-icon-plug" viewBox="0 0 24 24"><path d="M12 22v-5"></path><path d="M15 8V2"></path><path d="M17 8a1 1 0 0 1 1 1v4a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1z"></path><path d="M9 8V2"></path></symbol>
+        </svg>
+        <div class="section-header">
+          <span class="ai-feature-eyebrow" data-i18n="ai_eyebrow">Work with your AI</span>
+          <h2 id="ai-feature-title" class="section-title" data-i18n="ai_title">Your AI can work directly in Ploto.</h2>
+          <p class="section-subtitle" data-i18n="ai_subtitle">Start the AI agent you already use in the sidebar terminal. Describe your plan, and it can build a Gantt chart by working directly with Ploto.</p>
+        </div>
+
+        <div class="ai-feature-layout">
+          <div class="ai-story" data-i18n-aria-label="ai_mock_label" aria-label="Example of Claude Code adding tasks to a Gantt chart from the terminal">
+            <div class="ai-story-topbar"><img class="ai-story-appmark" src="/assets/logo.svg" alt="" aria-hidden="true"><strong>Ploto <em>Beta</em></strong><span class="ai-story-menu" data-i18n="ai_mock_file_menu">File⌄</span><span class="ai-story-menu" data-i18n="ai_mock_help_menu">Help⌄</span><span class="ai-story-file"><span data-i18n="ai_mock_filename">Store opening plan.ploto</span> <b>*</b></span><span class="ai-story-top-actions" aria-hidden="true"><svg class="ai-story-icon"><use href="#ai-icon-undo"></use></svg><svg class="ai-story-icon"><use href="#ai-icon-redo"></use></svg><svg class="ai-story-icon"><use href="#ai-icon-save"></use></svg></span></div>
+            <div class="ai-story-workspace">
+              <div class="ai-story-rail" aria-hidden="true"><span><svg class="ai-story-icon"><use href="#ai-icon-layers"></use></svg></span><span><svg class="ai-story-icon"><use href="#ai-icon-search"></use></svg></span><span class="is-active"><svg class="ai-story-icon"><use href="#ai-icon-terminal"></use></svg></span><span><svg class="ai-story-icon"><use href="#ai-icon-compare"></use></svg></span><span class="ai-story-rail-settings"><svg class="ai-story-icon"><use href="#ai-icon-settings"></use></svg></span></div>
+              <div class="ai-story-sidebar">
+                <div class="ai-story-sidehead"><strong data-i18n="ai_mock_panel_title">AI · Terminal</strong> <span aria-hidden="true"><svg class="ai-story-icon"><use href="#ai-icon-help"></use></svg></span></div>
+                <div class="ai-story-permission"><span><strong><svg class="ai-story-icon"><use href="#ai-icon-shield"></use></svg><span data-i18n="ai_mock_permission_title">Allow AI editing</span></strong><small data-i18n="ai_mock_permission_desc">Writing Gantt tasks and dependencies is enabled.</small></span><i aria-hidden="true"></i></div>
+                <div class="ai-story-tab">PowerShell 1 <span aria-hidden="true">＋</span></div>
+                <div class="ai-story-terminal" data-i18n-aria-label="ai_mock_terminal_label" aria-label="Example of starting Claude Code in PowerShell and asking it to edit Ploto">
+                  <div class="ai-story-terminal-line ai-story-command" data-ai-time="0"><b>&gt;</b> claude</div>
+                  <div class="ai-story-terminal-line ai-story-client" data-ai-time="350"><b>✦</b> Claude Code <small>Ploto connected</small></div>
+                  <div class="ai-story-terminal-line ai-story-prompt" data-ai-time="800"><b>›</b> <span data-i18n="ai_mock_prompt_1">Make a schedule for next month's store opening</span></div>
+                  <div class="ai-story-terminal-line ai-story-tool" data-ai-time="1250"><b>●</b> ploto - context <small>(MCP)</small></div>
+                  <div class="ai-story-terminal-line ai-story-result" data-ai-time="1550">└ <span data-i18n="ai_mock_result_1">Checked the empty Gantt chart</span></div>
+                  <div class="ai-story-terminal-line ai-story-tool" data-ai-time="1900"><b>●</b> ploto - batch_execute <small>(MCP)</small></div>
+                  <div class="ai-story-terminal-line ai-story-result" data-ai-time="2150">└ <span data-i18n="ai_mock_result_2">Added tasks and dates</span></div>
+                  <div class="ai-story-terminal-line ai-story-reply" data-ai-time="3450" data-i18n="ai_mock_reply_1">The schedule is ready. Please review it.</div>
+                  <div class="ai-story-terminal-line ai-story-prompt" data-ai-time="4250"><b>›</b> <span data-i18n="ai_mock_prompt_2">Interior work will take two weeks</span></div>
+                  <div class="ai-story-terminal-line ai-story-tool" data-ai-time="4650"><b>●</b> ploto - batch_execute <small>(MCP)</small></div>
+                  <div class="ai-story-terminal-line ai-story-result" data-ai-time="5050">└ <span data-i18n="ai_mock_result_3">Changed interior work to two weeks</span></div>
+                  <div class="ai-story-terminal-line ai-story-prompt" data-ai-time="5900"><b>›</b> <span data-i18n="ai_mock_prompt_3">Add an announcement before opening</span></div>
+                  <div class="ai-story-terminal-line ai-story-tool" data-ai-time="6300"><b>●</b> ploto - batch_execute <small>(MCP)</small></div>
+                  <div class="ai-story-terminal-line ai-story-result" data-ai-time="6650">└ <span data-i18n="ai_mock_result_4">Added the announcement task</span></div>
+                  <div class="ai-story-terminal-line ai-story-reply" data-ai-time="7150" data-i18n="ai_mock_reply_2">Review the changes and save them in Ploto.</div>
+                  <div class="ai-story-terminal-cursor" aria-hidden="true">› <span>▍</span></div>
+                </div>
+                <div class="ai-story-connection"><svg class="ai-story-icon"><use href="#ai-icon-plug"></use></svg><span data-i18n="ai_mock_connection">Connection settings</span></div>
+              </div>
+              <div class="ai-story-gantt">
+                <div class="ai-story-gantt-head"><strong><svg class="ai-story-icon"><use href="#ai-icon-gantt"></use></svg><span data-i18n="ai_mock_gantt_title">Gantt chart</span></strong><span aria-hidden="true">×</span></div>
+                <div class="ai-story-gantt-toolbar"><span><svg class="ai-story-icon"><use href="#ai-icon-paint"></use></svg>⌄</span><span><svg class="ai-story-icon"><use href="#ai-icon-star"></use></svg>⌄</span><span class="ai-story-toolbar-pro"><svg class="ai-story-icon"><use href="#ai-icon-compare"></use></svg><span data-i18n="ai_mock_compare">Compare plans</span> <b>PRO</b></span><span class="ai-story-toolbar-level" data-i18n="ai_mock_level">Level 1 ⌄</span></div>
+                <div class="ai-story-calendar"><span data-i18n="ai_mock_task_column">Task name</span><span data-i18n="ai_mock_week_1">Wk 1</span><span data-i18n="ai_mock_week_2">Wk 2</span><span data-i18n="ai_mock_week_3">Wk 3</span><span data-i18n="ai_mock_week_4">Wk 4</span></div>
+                <div class="ai-story-row" data-ai-time="2300"><span><span class="ai-story-row-title"><b>1</b> <span data-i18n="ai_mock_task_1">Sign lease</span></span><small data-i18n="ai_mock_date_1">9/28 → 10/2</small></span><div class="ai-story-track"><i class="ai-story-bar ai-story-bar-one"></i></div></div>
+                <div class="ai-story-row" data-ai-time="2750"><span><span class="ai-story-row-title"><b>2</b> <span data-i18n="ai_mock_task_2">Design &amp; order</span></span><small data-i18n="ai_mock_date_2">10/3 → 10/9</small></span><div class="ai-story-track"><i class="ai-story-bar ai-story-bar-two"></i></div></div>
+                <div class="ai-story-row ai-story-construction" data-ai-time="3200"><span><span class="ai-story-row-title"><b>3</b> <span data-i18n="ai_mock_task_3">Interior work</span></span><small data-i18n="ai_mock_date_3">10/10 → 10/23</small></span><div class="ai-story-track"><i class="ai-story-bar ai-story-bar-three"></i></div></div>
+                <div class="ai-story-row ai-story-launch" data-ai-time="6900"><span><span class="ai-story-row-title"><b>4</b> <span data-i18n="ai_mock_task_4">Opening announcement</span></span><small data-i18n="ai_mock_date_4">10/24 → 10/30</small></span><div class="ai-story-track"><i class="ai-story-bar ai-story-bar-four"></i></div></div>
+              </div>
+            </div>
+            <div class="ai-story-footer"><span data-i18n="ai_mock_footer">The same schedule updates as you give instructions</span><button type="button" class="ai-story-replay" data-i18n-aria-label="ai_mock_replay_label" aria-label="Replay the AI integration example">↻ <span data-i18n="ai_mock_replay">Replay</span></button></div>
+          </div>
+
+          <div class="ai-feature-copy">
+            <div class="ai-feature-point"><span>01</span><div><h3 data-i18n="ai_point_1_title">Start your AI in the terminal</h3><p data-i18n="ai_point_1_desc">Launch your installed Claude Code, Codex, or opencode from PowerShell in the sidebar. Ploto provides the connection setup.</p></div></div>
+            <div class="ai-feature-point"><span>02</span><div><h3 data-i18n="ai_point_2_title">AI reads and edits your schedule</h3><p data-i18n="ai_point_2_desc">Ask it to plan next month's store opening. Via MCP, AI can edit tasks, dates, and dependencies while you watch the chart change.</p></div></div>
+            <div class="ai-feature-point"><span>03</span><div><h3 data-i18n="ai_point_3_title">Review before you save</h3><p data-i18n="ai_point_3_desc">You control whether AI may edit. Check its changes in Ploto and save the project when you are satisfied.</p></div></div>
+            <p class="ai-feature-plan" data-i18n="ai_plan">Try up to 60 AI operations in Ploto for free. AI Terminal is a separate one-time purchase from Pro.</p>
+            <a class="ai-feature-link" href="#pricing"><span data-i18n="ai_pricing_link">See AI Terminal pricing and free trial</span> <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Manual Guide Section -->
     <section id="manual" class="manual-guide-section">
       <div class="container">
@@ -803,65 +882,32 @@
         <div class="pricing-box">
           <div class="badge" data-i18n="pricing_badge">💡 One-time purchase, no subscription</div>
           <h2 class="pricing-title" data-i18n="pricing_title">WBS and Gantt charts, free for good.</h2>
-          <p class="pricing-desc" data-i18n="pricing_desc">Building and editing Gantt charts, plus importing from and exporting to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban or Priority Matrix as a one-time Pro purchase, only when you create a new one.</p>
-          <div class="pricing-info-card">
-            <div class="info-card-item">
-              <span class="info-label" data-i18n="pricing_model_label">Pricing model</span>
-              <span class="info-value text-green" data-i18n="pricing_model_value">One-time purchase (no subscription)</span>
-            </div>
-            <div class="info-card-item border-left">
-              <span class="info-label" data-i18n="pricing_buy_label">How to buy</span>
-              <span class="info-value" data-i18n="pricing_buy_value">Microsoft Store / Web (serial code)</span>
-            </div>
+          <p class="pricing-desc" data-i18n="pricing_desc">Creating and editing Gantt charts and importing or exporting Excel files stay free without a time limit. Choose the one-time Pro upgrade to create Kanban and other views, or the separately sold AI Terminal to work with your own AI.</p>
+          <div class="license-options" data-i18n-aria-label="license_options_label" aria-label="Free edition and one-time purchases">
+            <article class="license-option license-option-free">
+              <span class="license-option-tag" data-i18n="license_free_tag">Free forever</span>
+              <h3 data-i18n="license_free_title">Free edition</h3>
+              <p class="license-option-summary" data-i18n="license_free_summary">Use WBS and Gantt charts without a time limit.</p>
+              <ul><li data-i18n="license_free_1">Create and edit Gantt charts</li><li data-i18n="license_free_2">Import and export Excel files</li><li data-i18n="license_free_3">Save .ploto files on your PC</li></ul>
+              <a href="#download" class="license-option-link"><span data-i18n="license_free_cta">Get started free</span> <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="license-option license-option-pro">
+              <span class="license-option-tag" data-i18n="license_pro_tag">One-time feature upgrade</span>
+              <h3>Ploto Pro</h3>
+              <p class="license-option-summary" data-i18n="license_pro_summary">Manage the same tasks from more perspectives.</p>
+              <ul><li data-i18n="license_pro_1">Kanban, Notes, Priority Matrix, and more views</li><li data-i18n="license_pro_2">Whiteboard and Member Tasks views too</li><li data-i18n="license_pro_3">Plan comparison, templates, and more</li></ul>
+              <a href="#download" class="license-option-link"><span data-i18n="license_pro_cta">See how to buy in the app</span> <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="license-option license-option-ai">
+              <span class="license-option-tag" data-i18n="license_ai_tag">Separate one-time purchase from Pro</span>
+              <h3 data-i18n="license_ai_title">AI Terminal</h3>
+              <p class="license-option-summary" data-i18n="license_ai_summary">Let your own AI work directly with Ploto tasks.</p>
+              <ul><li data-i18n="license_ai_1">Edit tasks, dates, and dependencies with AI</li><li data-i18n="license_ai_2">Try 60 operations in Ploto for free</li><li data-i18n="license_ai_3">No operation limit after purchase</li></ul>
+              <a href="#download" class="license-option-link"><span data-i18n="license_ai_cta">Install the app and try 60 operations</span> <span aria-hidden="true">→</span></a>
+            </article>
           </div>
-
-          <!-- 無料版 / Pro の比較表。行の内容はアプリ内ライセンス画面（license.compare_*）と揃えること。 -->
-          <div class="plan-compare">
-            <h3 class="plan-compare-title" data-i18n="plan_compare_title">What stays free, and what Pro adds</h3>
-            <p class="plan-compare-desc" data-i18n="plan_compare_desc">Building and editing Gantt charts, plus importing from and exporting to Excel, stay free with no time limit. Views beyond Gantt — Kanban, Priority Matrix, Notes, and more — need Pro only when you create a new one.</p>
-
-            <div class="plan-compare-scroll">
-              <table class="plan-compare-table">
-                <thead>
-                  <tr>
-                    <th scope="col" data-i18n="plan_compare_col_feature">Feature</th>
-                    <th scope="col" data-i18n="plan_compare_col_free">Free</th>
-                    <th scope="col" class="is-pro" data-i18n="plan_compare_col_pro">Pro</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_kanban">Kanban boards</th>
-                    <td data-i18n="plan_compare_kanban_free">New boards need Pro (existing ones stay editable)</td>
-                    <td class="is-pro" data-i18n="plan_compare_kanban_pro">Unlimited</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_whiteboard">Whiteboards</th>
-                    <td data-i18n="plan_compare_whiteboard_free">New boards need Pro (existing ones stay editable)</td>
-                    <td class="is-pro" data-i18n="plan_compare_whiteboard_pro">Unlimited</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_baseline">Baselines</th>
-                    <td class="is-off" data-i18n="plan_compare_baseline_free">Not available</td>
-                    <td class="is-pro" data-i18n="plan_compare_baseline_pro">Save plans and compare with current progress</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_template">Project templates</th>
-                    <td data-i18n="plan_compare_template_free">Importing is free</td>
-                    <td class="is-pro" data-i18n="plan_compare_template_pro">Exporting (.ploto-pack) too</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" data-i18n="plan_compare_holidays">Holiday setup</th>
-                    <td data-i18n="plan_compare_holidays_free">Add and edit manually</td>
-                    <td class="is-pro" data-i18n="plan_compare_holidays_pro">Manual setup + bulk country import</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <p class="plan-compare-note" data-i18n="plan_compare_note">* Creating a new Priority Matrix, Member Tasks view, or Note needs Pro too, same as Kanban (anything already created stays editable). Anything not listed here remains unrestricted without Pro. The one exception: whiteboards created by someone else are view-only without Pro.</p>
-            <p class="plan-compare-note" data-i18n="plan_compare_license_note">* Pro is only required when creating a new view. A file containing views made with Pro still opens and edits normally without Pro. A serial code is tied to a single PC, and once registered it validates offline.</p>
-          </div>
+          <p class="license-purchase-note" data-i18n="license_usage_note">Pro is needed to create new views such as Kanban. You can still edit existing views without Pro (whiteboards created by someone else are view-only). AI control of whiteboards is planned for a future update.</p>
+          <p class="license-purchase-note" data-i18n="license_purchase_note">Buy Pro and AI Terminal separately from the License screen in the app, via Microsoft Store or the web. A web serial code is tied to the PC specified at purchase and validates offline after activation. AI service fees are separate.</p>
 
         </div>
       </div>
@@ -872,14 +918,14 @@
       <div class="container">
         <div class="section-header">
           <h2 class="section-title" data-i18n="security_title">No Cloud Required. Your Data Stays with You.</h2>
-          <p class="section-subtitle" data-i18n="security_subtitle">Ploto does not depend on an internet connection or cloud storage. Project data stays on your PC, while the app and its updates come through Microsoft Store.</p>
+          <p class="section-subtitle" data-i18n="security_subtitle">Normal creation, editing, and saving do not require an internet connection or cloud storage. Project data stays on your PC. AI integration may connect to the AI service you choose.</p>
         </div>
         <div class="security-grid">
           <!-- Card 1: Fully offline operation -->
           <div class="security-card">
             <div class="security-card-icon">📴</div>
-            <h3 class="security-card-title" data-i18n="security_c1_title">Works Completely Offline</h3>
-            <p class="security-card-desc" data-i18n="security_c1_desc">Creating, editing, and saving tasks requires no internet connection. You can use Ploto without creating or signing in to an account.</p>
+            <h3 class="security-card-title" data-i18n="security_c1_title">Everyday work stays offline</h3>
+            <p class="security-card-desc" data-i18n="security_c1_desc">Creating, editing, and saving tasks requires no internet connection. AI integration follows the connection requirements of your AI CLI and service.</p>
           </div>
           <!-- Card 2: Local project data storage -->
           <div class="security-card">

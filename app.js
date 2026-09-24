@@ -152,6 +152,10 @@ document.addEventListener("DOMContentLoaded", () => {
         el.innerHTML = locale.i18n[key];
       }
     });
+    document.querySelectorAll("[data-i18n-aria-label]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria-label");
+      if (locale.i18n[key]) el.setAttribute("aria-label", locale.i18n[key]);
+    });
 
     // Replace inputs with data-i18n-placeholder
     document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
@@ -298,6 +302,43 @@ document.addEventListener("DOMContentLoaded", () => {
      説明パネルの固定表示・段階フェード・モックの縮小は 901px 以上だけ
      styles.css 側のメディアクエリで効かせる（モバイルは通常フローのまま）。
      ========================================================================== */
+  const aiStory = document.querySelector(".ai-story");
+  if (aiStory) {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const replay = aiStory.querySelector(".ai-story-replay");
+    if (reduceMotion.matches) {
+      replay.hidden = true;
+    } else {
+      aiStory.dataset.aiAnimated = "";
+      const timers = [];
+      const terminal = aiStory.querySelector(".ai-story-terminal");
+      const timedElements = aiStory.querySelectorAll("[data-ai-time]");
+      const later = (ms, action) => timers.push(window.setTimeout(action, ms));
+      const play = () => {
+        timers.forEach(window.clearTimeout);
+        timers.length = 0;
+        timedElements.forEach((el) => el.classList.remove("is-visible"));
+        aiStory.querySelector(".ai-story-construction")?.classList.remove("is-extended");
+        terminal.scrollTop = 0;
+        timedElements.forEach((el) => later(Number(el.dataset.aiTime), () => {
+          el.classList.add("is-visible");
+          if (terminal.contains(el)) later(380, () => { terminal.scrollTop = terminal.scrollHeight; });
+        }));
+        later(5250, () => aiStory.querySelector(".ai-story-construction")?.classList.add("is-extended"));
+      };
+      replay.addEventListener("click", play);
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            observer.disconnect();
+            play();
+          }
+        }, { threshold: 0.2 });
+        observer.observe(aiStory);
+      } else play();
+    }
+  }
+
   const journey = document.getElementById("task-journey");
 
   if (journey) {

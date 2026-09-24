@@ -3,7 +3,7 @@ export default {
   screenshotFolder: "en-us",
   meta: {
     title: "Ploto - Free Gantt Chart & WBS Maker | Import Your Excel Schedule As-Is",
-    description: "Build a WBS or Gantt chart for free, right now, as an app. Importing your Excel schedule or WBS, and exporting back to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban, Priority Matrix, and Whiteboard as a one-time-purchase Pro upgrade. No account, no monthly fee. Project data is stored in .ploto files on your PC and is not automatically sent to external servers. Supports Windows 10/11."
+    description: "Create WBS and Gantt charts and import or export Excel schedules for free without a time limit. Add Kanban and other views with a one-time Pro purchase. AI Terminal is a separate one-time purchase with 60 free AI operations in Ploto. Projects stay in .ploto files on your PC. Windows 10/11."
   },
   i18n: {
     nav_features: "Features",
@@ -14,7 +14,7 @@ export default {
 
     hero_badge: "💡 Import Your Excel Schedule or WBS As-Is | Essential Features Stay Free | One-Time Purchase, No Subscription",
     hero_title: 'WBS & Gantt Charts,<br><span class="text-gradient">Made Right Now, As an App.</span>',
-    hero_desc: "An Excel schedule breaks a little more with every row you insert. Ploto imports it as-is and turns it into a Gantt chart — free to build, edit, and export back to Excel. When a Gantt chart alone isn't enough, add Kanban or Priority Matrix as a one-time-purchase Pro upgrade.",
+    hero_desc: "An Excel schedule breaks a little more with every row you insert. Ploto imports it as-is and turns it into a Gantt chart — free to build, edit, and export back to Excel. Add Kanban and other views with a one-time Pro purchase. AI Terminal lets your own AI work with the schedule and is available separately with 60 free operations.",
     hero_cta_download: "Get it for Free",
     hero_cta_manual: "See the manual",
     hero_meta: "<span>✓ Import Your Excel Schedule or WBS As-Is</span><span>✓ Gantt Charts & Excel Import/Export Free Forever</span><span>✓ One-Time Purchase · No Monthly Fee</span>",
@@ -175,7 +175,7 @@ export default {
 
     pricing_badge: "💡 One-time purchase, no subscription",
     pricing_title: "WBS and Gantt charts, free for good.",
-    pricing_desc: "Building and editing Gantt charts, plus importing from and exporting to Excel, stay free with no time limit. When a Gantt chart alone isn't enough, add Kanban or Priority Matrix as a one-time Pro purchase, only when you create a new one.",
+    pricing_desc: "Creating and editing Gantt charts and importing or exporting Excel files stay free without a time limit. Choose the one-time Pro upgrade to create Kanban and other views, or the separately sold AI Terminal to work with your own AI.",
     pricing_model_label: "Pricing model",
     pricing_model_value: "One-time purchase (no subscription)",
     pricing_buy_label: "How to buy",
@@ -205,9 +205,9 @@ export default {
     privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "No Cloud Required. Your Data Stays with You.",
-    security_subtitle: "Ploto does not depend on an internet connection or cloud storage. Project data stays on your PC, while the app and its updates come through Microsoft Store.",
-    security_c1_title: "Works Completely Offline",
-    security_c1_desc: "Creating, editing, and saving tasks requires no internet connection. You can use Ploto without creating or signing in to an account.",
+    security_subtitle: "Normal creation, editing, and saving do not require an internet connection or cloud storage. Project data stays on your PC. AI integration may connect to the AI service you choose.",
+    security_c1_title: "Everyday work stays offline",
+    security_c1_desc: "Creating, editing, and saving tasks requires no internet connection. AI integration follows the connection requirements of your AI CLI and service.",
     security_c2_title: "Project Data Saved as a Local File",
     security_c2_desc: "Your data is stored in a .ploto file on your PC. Ploto does not automatically send its contents to external servers.",
     security_c3_title: "Install and Update through Microsoft Store",

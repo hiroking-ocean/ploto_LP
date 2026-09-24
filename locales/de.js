@@ -3,7 +3,7 @@ export default {
   screenshotFolder: "en-us",
   meta: {
     title: "Ploto - Gantt-Diagramm & PSP kostenlos erstellen | Excel-Terminplan direkt importieren",
-    description: "Erstellen Sie einen PSP oder ein Gantt-Diagramm kostenlos, sofort als App. Import aus und Export nach Excel bleiben ohne Zeitlimit kostenlos. Reicht das Gantt-Diagramm allein nicht mehr aus, ergänzen Sie Kanban, Prioritätsmatrix und Whiteboard als Einmalkauf-Upgrade Pro. Ohne Konto, ohne Monatsgebühr. Projektdaten werden in .ploto-Dateien auf Ihrem PC gespeichert und nicht automatisch an externe Server gesendet. Windows 10/11."
+    description: "PSP und Gantt-Diagramme sowie Excel-Import und -Export dauerhaft kostenlos. Kanban und weitere Ansichten per Einmalkauf Pro. Das separat erhältliche KI-Terminal lässt sich für 60 KI-Aktionen kostenlos testen. Projektdaten bleiben in .ploto-Dateien auf Ihrem PC. Windows 10/11."
   },
   i18n: {
     nav_features: "Funktionen",
@@ -14,7 +14,7 @@ export default {
 
     hero_badge: "💡 Excel-Terminplan oder PSP direkt importieren | Wesentliche Funktionen dauerhaft kostenlos | Einmalkauf, kein Abo",
     hero_title: 'PSP & Gantt-Diagramm,<br><span class="text-gradient">jetzt sofort als App.</span>',
-    hero_desc: "Ein Excel-Terminplan wird mit jeder eingefügten Zeile ein Stück brüchiger. Ploto importiert ihn direkt und macht daraus ein Gantt-Diagramm – kostenlos erstellen, bearbeiten und nach Excel exportieren. Reicht das Gantt-Diagramm allein nicht mehr aus, ergänzen Sie Kanban oder die Prioritätsmatrix als Einmalkauf-Upgrade Pro.",
+    hero_desc: "Ein Excel-Terminplan wird mit jeder eingefügten Zeile ein Stück brüchiger. Ploto importiert ihn direkt und macht daraus ein Gantt-Diagramm – kostenlos erstellen, bearbeiten und nach Excel exportieren. Kanban und weitere Ansichten gibt es mit Pro als Einmalkauf. Mit dem separat erhältlichen KI-Terminal planen Sie mit Ihrer KI und testen 60 Aktionen kostenlos.",
     hero_cta_download: "Kostenlos herunterladen",
     hero_cta_manual: "Handbuch ansehen",
     hero_meta: "<span>✓ Excel-Terminplan oder PSP direkt importieren</span><span>✓ Gantt-Diagramm & Excel-Import/-Export für immer kostenlos</span><span>✓ Einmalkauf · Keine Monatsgebühr</span>",
@@ -175,7 +175,7 @@ export default {
 
     pricing_badge: "💡 Einmalkauf, kein Abo",
     pricing_title: "WBS und Gantt-Diagramm, dauerhaft kostenlos.",
-    pricing_desc: "Gantt-Diagramme erstellen und bearbeiten sowie Excel-Import und -Export bleiben ohne Zeitlimit kostenlos. Reicht das Gantt-Diagramm allein nicht mehr aus, ergänzen Sie Kanban oder die Prioritätsmatrix als Einmalkauf-Upgrade Pro, nur wenn Sie eine neue Ansicht anlegen.",
+    pricing_desc: "Gantt-Diagramme erstellen und bearbeiten sowie Excel importieren und exportieren bleiben dauerhaft kostenlos. Neue Kanban- und andere Ansichten erhalten Sie mit Pro als Einmalkauf; für die Arbeit mit Ihrer KI gibt es das separat erhältliche KI-Terminal.",
     pricing_model_label: "Preismodell",
     pricing_model_value: "Einmalkauf (kein Abo)",
     pricing_buy_label: "Kaufwege",
@@ -205,9 +205,9 @@ export default {
     privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "Ohne Cloud-Zwang. Ihre Daten bleiben bei Ihnen.",
-    security_subtitle: "Ploto setzt weder eine Internetverbindung noch Cloud-Speicher voraus. Projektdaten bleiben auf Ihrem PC; die App und ihre Updates erhalten Sie über den Microsoft Store.",
-    security_c1_title: "Vollständig offline nutzbar",
-    security_c1_desc: "Zum Erstellen, Bearbeiten und Speichern von Aufgaben ist keine Internetverbindung erforderlich. Sie können Ploto ohne Konto oder Anmeldung verwenden.",
+    security_subtitle: "Normales Erstellen, Bearbeiten und Speichern erfordert weder Internet noch Cloud-Speicher. Projektdaten bleiben auf Ihrem PC. Bei KI-Integration kann eine Verbindung zum gewählten KI-Dienst nötig sein.",
+    security_c1_title: "Normale Arbeit funktioniert offline",
+    security_c1_desc: "Zum Erstellen, Bearbeiten und Speichern von Aufgaben ist keine Internetverbindung nötig. Für KI-Integration gelten die Verbindungsbedingungen Ihrer KI-CLI und des Dienstes.",
     security_c2_title: "Projektdaten als lokale Datei gespeichert",
     security_c2_desc: "Ihre Daten werden in einer .ploto-Datei auf Ihrem PC gespeichert. Ploto sendet deren Inhalte nicht automatisch an externe Server.",
     security_c3_title: "Installation und Updates über den Microsoft Store",

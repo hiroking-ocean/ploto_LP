@@ -3,7 +3,7 @@ export default {
   screenshotFolder: "ja-jp",
   meta: {
     title: "Ploto - WBS・ガントチャートを無料で作成 | Excelの工程表をそのまま取り込み",
-    description: "WBSやガントチャートを、無料でアプリとして今すぐ作れます。Excelの工程表・WBSを取り込み、そのままExcelへ書き出すのも無期限無料。ガントチャートだけで物足りなくなったら、カンバン・優先度マトリクス・ホワイトボードを買い切りのProで追加できます。アカウント登録・月額課金なし。データはPC内の.plotoファイルに保存され、外部サーバーへ自動送信されません。Windows 10/11対応。"
+    description: "WBSやガントチャート、Excelの工程表の取り込み・書き出しを無期限無料で。カンバンなどは買い切りのProで追加できます。AIターミナルはProとは別の買い切りで、PlotoへのAI操作を合計60回まで無料体験できます。データはPC内の.plotoファイルに保存。Windows 10/11対応。"
   },
   i18n: {
     nav_features: "特徴",
@@ -14,7 +14,7 @@ export default {
 
     hero_badge: "💡 Excelの工程表・WBSをそのまま取り込み｜主要機能は無料｜買い切り・サブスクなし",
     hero_title: 'WBS・ガントチャートが、<br><span class="text-gradient">今すぐアプリで作れます</span>',
-    hero_desc: "Excelの工程表は、行を挿入するたびに崩れて面倒。Plotoなら、そのまま取り込んでガントチャートに。作成・編集・Excel書き出しまで無料です。ガントチャートだけで物足りなくなったら、カンバンや優先度マトリクスを買い切りのProで追加できます。",
+    hero_desc: "Excelの工程表は、行を挿入するたびに崩れて面倒。Plotoなら、そのまま取り込んでガントチャートに。作成・編集・Excel書き出しまで無料です。カンバンなどは買い切りのProで追加。いつものAIと工程表を作れるAIターミナルは、Proとは別に60回まで体験できます。",
     hero_cta_download: "無料で手に入れる",
     hero_cta_manual: "マニュアルを見る",
     hero_meta: "<span>✓ Excelの工程表・WBSをそのまま取り込める</span><span>✓ ガントチャート・Excel入出力は無期限無料</span><span>✓ 買い切り・月額課金なし</span>",
@@ -170,14 +170,14 @@ export default {
     plan_compare_holidays: "祝日の登録",
     plan_compare_holidays_free: "手動で追加・編集",
     plan_compare_holidays_pro: "手動＋国の祝日を一括取込",
-    plan_compare_note: "※ 優先度マトリクス・メンバー別タスク・ノートの新規作成も、カンバンと同様に新規作成のときだけProが必要です（作成済みのものはそのまま編集・閲覧できます）。表にない機能は無料のまま制限なくお使いいただけます。ホワイトボードのみ、他の人が作成したボードはProなしでは閲覧のみとなります。",
+    plan_compare_note: "※ 優先度マトリクス・メンバー別タスク・ノートの新規作成も、カンバンと同様にProが必要です（作成済みのものはそのまま編集・閲覧できます）。AI連携はProに含まれない別の買い切り機能です。ホワイトボードのみ、他の人が作成したボードはProなしでは閲覧のみとなります。",
     plan_compare_license_note: "※ カンバン・ホワイトボードなどの新規作成にProが必要になるのは、新しく追加するときだけです。Proで作ったビューを含むファイルも、Proなしでそのまま開いて編集できます。シリアルコードは1台のPCに紐づき、登録後はオフラインでも認証されます。",
 
     pricing_badge: "💡 買い切り・サブスクなし",
     pricing_title: "WBS・ガントチャートは、ずっと無料。",
-    pricing_desc: "ガントチャートの作成・編集、Excelの取り込み・書き出しは無期限で無料です。カンバンや優先度マトリクスなど、ガントチャートだけでは物足りなくなったときに使う機能は、新規作成のときだけ買い切りのProを追加できます。",
+    pricing_desc: "ガントチャートの作成・編集、Excelの取り込み・書き出しは無期限で無料です。カンバンなどの新規作成には買い切りのProを、AI連携には別売りの買い切りAIターミナルを選べます。",
     pricing_model_label: "料金体系",
-    pricing_model_value: "買い切り（サブスクなし）",
+    pricing_model_value: "Pro・AIターミナルはそれぞれ買い切り",
     pricing_buy_label: "購入方法",
     pricing_buy_value: "Microsoft Store ／ Web（シリアルコード）",
 
@@ -205,9 +205,9 @@ export default {
     privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "通信に頼らず、データは手元に",
-    security_subtitle: "Plotoは、通信やクラウドへの保存を前提としません。プロジェクトデータは手元のPCで管理し、アプリと更新版はMicrosoft Storeから受け取れます。",
-    security_c1_title: "完全オフラインで動作",
-    security_c1_desc: "タスクの作成・編集・保存に、インターネット接続は必要ありません。アカウント登録やサインインなしで、そのまま使えます。",
+    security_subtitle: "通常の作成・編集・保存は通信やクラウドへの保存を必要としません。プロジェクトデータは手元のPCで管理します。AI連携では、利用者が選んだAIサービスの通信が発生する場合があります。",
+    security_c1_title: "通常の操作はオフラインで動作",
+    security_c1_desc: "タスクの作成・編集・保存に、インターネット接続は必要ありません。AI連携を利用する場合は、お使いのAI CLIとサービス側の接続条件に従います。",
     security_c2_title: "プロジェクトデータは、ローカルファイルに保存",
     security_c2_desc: "データはPC内に.plotoファイルとして保存されます。Plotoがその内容を外部サーバーへ自動送信することはありません。",
     security_c3_title: "インストールも更新も、Microsoft Storeから",

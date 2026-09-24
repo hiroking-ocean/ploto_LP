@@ -3,7 +3,7 @@ export default {
   screenshotFolder: "en-us",
   meta: {
     title: "Ploto - 간트 차트 프로젝트 관리 | Excel 공정표·WBS 그대로 가져오기, 주요 기능 무료",
-    description: "WBS나 간트 차트를 무료로, 지금 바로 앱으로 만들 수 있습니다. Excel 공정표·WBS 가져오기와 Excel로 내보내기는 기간 제한 없이 무료입니다. 간트 차트만으로 부족해지면, 칸반·우선순위 매트릭스·화이트보드를 한 번 결제하는 Pro로 추가할 수 있습니다. 계정 등록·월 구독료 없음. 프로젝트 데이터는 사용자 PC의 .ploto 파일에 저장되며 외부 서버로 자동 전송되지 않습니다. Windows 10/11 지원."
+    description: "WBS·간트 차트 만들기와 Excel 공정표 가져오기·내보내기를 기간 제한 없이 무료로 사용하세요. 칸반 등 추가 화면은 한 번 구매하는 Pro로 이용할 수 있습니다. 별도 구매하는 AI 터미널은 Ploto에서 AI 조작 60회를 무료 체험할 수 있습니다. 프로젝트는 PC의 .ploto 파일에 저장됩니다. Windows 10/11 지원."
   },
   i18n: {
     nav_features: "기능",
@@ -14,7 +14,7 @@ export default {
 
     hero_badge: "💡 Excel 공정표·WBS 그대로 가져오기 | 주요 기능 계속 무료 | 한 번 결제, 구독 없음",
     hero_title: 'WBS·간트 차트를,<br><span class="text-gradient">지금 바로 앱으로 만드세요.</span>',
-    hero_desc: "Excel 공정표는 행을 추가할 때마다 조금씩 무너집니다. Ploto는 그대로 가져와 간트 차트로 바꿔줍니다. 만들기·편집·Excel로 내보내기까지 모두 무료입니다. 간트 차트만으로 부족해지면, 칸반이나 우선순위 매트릭스를 한 번 결제하는 Pro로 추가할 수 있습니다.",
+    hero_desc: "Excel 공정표는 행을 추가할 때마다 조금씩 무너집니다. Ploto는 그대로 가져와 간트 차트로 바꿔줍니다. 만들기·편집·Excel로 내보내기까지 무료입니다. 칸반 등은 한 번 구매하는 Pro로 추가하세요. 평소 쓰는 AI와 함께 일정을 만드는 AI 터미널은 Pro와 별도로 60회까지 체험할 수 있습니다.",
     hero_cta_download: "무료로 받기",
     hero_cta_manual: "매뉴얼 보기",
     hero_meta: "<span>✓ Excel 공정표·WBS 그대로 가져오기</span><span>✓ 간트 차트·Excel 가져오기·내보내기 기간 제한 없이 무료</span><span>✓ 한 번 결제·월 사용료 없음</span>",
@@ -175,7 +175,7 @@ export default {
 
     pricing_badge: "💡 한 번 결제, 구독 없음",
     pricing_title: "WBS·간트 차트는 계속 무료.",
-    pricing_desc: "간트 차트 작성·편집과 Excel 가져오기·내보내기는 기간 제한 없이 무료입니다. 간트 차트만으로 부족해지면, 칸반이나 우선순위 매트릭스를 새로 만들 때만 한 번 결제하는 Pro로 추가할 수 있습니다.",
+    pricing_desc: "간트 차트 만들기·편집과 Excel 가져오기·내보내기는 기간 제한 없이 무료입니다. 칸반 등의 새 화면은 한 번 구매하는 Pro로, AI 연동은 별도 구매하는 AI 터미널로 이용할 수 있습니다.",
     pricing_model_label: "요금 방식",
     pricing_model_value: "한 번 결제 (구독 없음)",
     pricing_buy_label: "구매 방법",
@@ -205,9 +205,9 @@ export default {
     privacy_url: "https://hiroking-ocean.github.io/ploto-privacy/",
     // --- Security Section ---
     security_title: "연결에 의존하지 않고, 데이터는 내 PC에",
-    security_subtitle: "Ploto는 인터넷 연결이나 클라우드 저장을 전제로 하지 않습니다. 프로젝트 데이터는 사용자의 PC에서 관리하고, 앱과 업데이트는 Microsoft Store를 통해 받을 수 있습니다.",
-    security_c1_title: "완전 오프라인으로 작동",
-    security_c1_desc: "작업을 만들고 편집하고 저장하는 데 인터넷 연결이 필요하지 않습니다. 계정을 만들거나 로그인하지 않고도 Ploto를 사용할 수 있습니다.",
+    security_subtitle: "일반적인 만들기·편집·저장에는 인터넷이나 클라우드 저장이 필요하지 않습니다. 프로젝트 데이터는 PC에서 관리합니다. AI 연동 시에는 사용자가 선택한 AI 서비스와 통신할 수 있습니다.",
+    security_c1_title: "일반 작업은 오프라인으로 작동",
+    security_c1_desc: "작업을 만들고 편집하고 저장하는 데 인터넷이 필요하지 않습니다. AI 연동은 사용 중인 AI CLI와 서비스의 연결 조건을 따릅니다.",
     security_c2_title: "프로젝트 데이터는 로컬 파일에 저장",
     security_c2_desc: "데이터는 사용자 PC의 .ploto 파일에 저장됩니다. Ploto는 그 내용을 외부 서버로 자동 전송하지 않습니다.",
     security_c3_title: "설치와 업데이트 모두 Microsoft Store에서",

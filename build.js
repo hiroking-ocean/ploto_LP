@@ -21,7 +21,7 @@ const BASE = "/"; // カスタムドメインのルート（絶対パス化に�
 const LANGS = ["ja", "en", "de", "fr", "ko"];
 // マニュアルのスクリーンショットが当該言語に無い場合の代替言語。
 const FALLBACK_LANG = "en";
-const LASTMOD = "2026-09-06"; // sitemap の更新日。内容を更新したらここも上げる
+const LASTMOD = "2026-09-24"; // sitemap の更新日。内容を更新したらここも上げる
 
 const OG_LOCALE = { ja: "ja_JP", en: "en_US", de: "de_DE", fr: "fr_FR", ko: "ko_KR" };
 const IMG_ALT = {
@@ -48,7 +48,7 @@ const absolutize = (val) => {
 // 掴んだままだと「HTMLは新しいのに見た目だけ壊れる」状態になる（新しいセクションの
 // CSSだけ当たらない、など）。中身のハッシュを ?v= に付けて、変更時だけURLを変える。
 // app.js は locales/*.js を import するため、翻訳の変更もハッシュに含める。
-const LOCALE_FILES = ["locales/index.js", ...LANGS.map((l) => `locales/${l}.js`)];
+const LOCALE_FILES = ["locales/index.js", "locales/addons.js", ...LANGS.map((l) => `locales/${l}.js`)];
 const hashOf = (files) => {
   const h = createHash("sha1");
   for (const f of files) h.update(readFileSync(join(__dirname, f)));
@@ -159,9 +159,27 @@ function buildPage(lang) {
   const url = urlFor(lang);
   const $ = cheerio.load(template, { decodeEntities: false });
 
+  // 段階的に公開する原稿は、対象言語以外の生成ページから除く。
+  $("[data-only-lang]").each((_, el) => {
+    if ($(el).attr("data-only-lang") !== lang) {
+      if (el.prev?.type === "text" && !el.prev.data.trim()) $(el.prev).remove();
+      $(el).remove();
+    } else $(el).removeAttr("data-only-lang");
+  });
+  $("[data-except-lang]").each((_, el) => {
+    if ($(el).attr("data-except-lang") === lang) {
+      if (el.prev?.type === "text" && !el.prev.data.trim()) $(el.prev).remove();
+      $(el).remove();
+    }
+    else $(el).removeAttr("data-except-lang");
+  });
+
   // 1. data-i18n テキスト注入（innerHTML。<br><span> 等の入れ子も保持）
   $("[data-i18n]").each((_, el) => {
     const key = $(el).attr("data-i18n");
+    if (lang !== "ja" && /^(ai_|license_)/.test(key) && i18n[key] == null) {
+      throw new Error(`Missing ${lang} translation: ${key}`);
+    }
     if (i18n[key] != null) $(el).html(i18n[key]);
   });
   $("[data-i18n-placeholder]").each((_, el) => {
@@ -171,6 +189,13 @@ function buildPage(lang) {
   $("[data-i18n-href]").each((_, el) => {
     const key = $(el).attr("data-i18n-href");
     if (i18n[key] != null) $(el).attr("href", i18n[key]);
+  });
+  $("[data-i18n-aria-label]").each((_, el) => {
+    const key = $(el).attr("data-i18n-aria-label");
+    if (lang !== "ja" && i18n[key] == null) {
+      throw new Error(`Missing ${lang} translation: ${key}`);
+    }
+    if (i18n[key] != null) $(el).attr("aria-label", i18n[key]);
   });
 
   // 2. <html lang> （app.js が初期言語の正として読む）
