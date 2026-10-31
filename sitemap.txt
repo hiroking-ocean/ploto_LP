@@ -3,6 +3,8 @@ https://ploto-app.com/en/
 https://ploto-app.com/de/
 https://ploto-app.com/fr/
 https://ploto-app.com/ko/
+https://ploto-app.com/es/
+https://ploto-app.com/pt-br/
 https://ploto-app.com/manual/basic.html
 https://ploto-app.com/en/manual/basic.html
 https://ploto-app.com/de/manual/basic.html

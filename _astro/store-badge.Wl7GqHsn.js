@@ -1,0 +1,1 @@
+document.addEventListener(`click`,e=>{let t=e.target.closest(`ms-store-badge`);if(!t)return;e.preventDefault(),e.stopPropagation();let n=t.getAttribute(`language`)||`en-us`;window.open(`https://apps.microsoft.com/${n}/detail/9n4njnmt2b77`,`_blank`)},!0);
