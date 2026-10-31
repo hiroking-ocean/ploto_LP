@@ -1,1 +1,0 @@
-var e=JSON.parse(document.getElementById(`lp-messages`)?.textContent||`{}`),t=t=>e[t]||``;export{t};
