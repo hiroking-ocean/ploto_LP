@@ -687,4 +687,298 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://ploto-app.com/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/de/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/fr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/ko/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/es/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/pt-br/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/en/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/de/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/fr/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/ko/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/es/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/pt-br/privacy/it/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/en/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/de/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/fr/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/ko/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/es/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ploto-app.com/pt-br/privacy/it/ai-skill/</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ploto-app.com/en/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://ploto-app.com/de/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ploto-app.com/fr/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://ploto-app.com/ko/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ploto-app.com/es/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://ploto-app.com/pt-br/privacy/it/ai-skill/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ploto-app.com/privacy/it/ai-skill/"/>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

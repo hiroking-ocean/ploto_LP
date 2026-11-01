@@ -1,0 +1,9 @@
+# Task ToDos
+
+- Task `todos` are the task's checklist actions, written as a **whole-list replacement** under one revision: read the current list with `task.get`, send the complete new list, and any ToDo you leave out is deleted. A default `tasks.list` row reports only `todo_count`/`todo_done`, which is never enough to rewrite the list from. Each item is `{ "id": "existing-todo-id", "text": "Draft the spec", "status": "in_progress", "due": "2026-10-01T18:30", "assignee_id": "member-id" }`. Omit `id` to create a ToDo — Ploto always generates ToDo IDs, so you cannot choose them. Pass back the `id` you read to keep an existing ToDo along with its start/completion timestamps, Kanban stage and template origin. Array order is the display order. `status` is `not_started`, `in_progress` or `completed` and defaults to the existing value, or `not_started` for a new ToDo; Ploto records the execution timestamps for you. `due` is local time as `"YYYY-MM-DD"` (meaning 00:00) or `"YYYY-MM-DDTHH:MM"`; send `null` to clear it. `assignee_id` must be an ID from `members.list`; send `null` to unassign. Limits: 200 ToDos per task, 1,000 characters each, no markup.
+
+- ToDos and task progress are linked. When a task calculates progress from its ToDos, writing `todos` recalculates `progress` in the same update — completed counts 100, in progress 50 — and `task.update` rejects a manual `progress` on that task with `automatic_progress`. Change the ToDo statuses instead. On `task.add`, sending `progress` together with `todos` means you want manual progress and switches automatic calculation off for that task.
+
+- New ToDos written through task.update have no Kanban stage; they are task-wide actions. A stage-less ToDo must be completed before the card can reach the final column. Existing ToDo ids preserve their stage and template origin. For stage transitions and single-ToDo work reports on the selected board, use the [Kanban methods](kanban.md).
+
+<!-- PLOTO-DOC-END -->
