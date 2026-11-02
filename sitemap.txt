@@ -68,3 +68,11 @@ https://ploto-app.com/fr/privacy/it/ai-skill/
 https://ploto-app.com/ko/privacy/it/ai-skill/
 https://ploto-app.com/es/privacy/it/ai-skill/
 https://ploto-app.com/pt-br/privacy/it/ai-skill/
+https://ploto-app.com/articles/
+https://ploto-app.com/en/articles/
+https://ploto-app.com/de/articles/
+https://ploto-app.com/fr/articles/
+https://ploto-app.com/ko/articles/
+https://ploto-app.com/es/articles/
+https://ploto-app.com/pt-br/articles/
+https://ploto-app.com/articles/excel-koteihyo/
