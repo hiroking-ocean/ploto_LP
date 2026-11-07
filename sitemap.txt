@@ -76,3 +76,9 @@ https://ploto-app.com/ko/articles/
 https://ploto-app.com/es/articles/
 https://ploto-app.com/pt-br/articles/
 https://ploto-app.com/articles/excel-koteihyo/
+https://ploto-app.com/en/articles/excel-koteihyo/
+https://ploto-app.com/de/articles/excel-koteihyo/
+https://ploto-app.com/fr/articles/excel-koteihyo/
+https://ploto-app.com/ko/articles/excel-koteihyo/
+https://ploto-app.com/es/articles/excel-koteihyo/
+https://ploto-app.com/pt-br/articles/excel-koteihyo/
