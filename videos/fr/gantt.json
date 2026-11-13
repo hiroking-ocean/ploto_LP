@@ -1,5 +1,5 @@
 {
-  "duration": 22.57,
+  "duration": 22.38,
   "points": [
     {
       "id": "link",
@@ -7,15 +7,15 @@
     },
     {
       "id": "hierarchy",
-      "at": 6.4
+      "at": 6.68
     },
     {
       "id": "drag",
-      "at": 10.79
+      "at": 10.69
     },
     {
       "id": "milestone",
-      "at": 17.28
+      "at": 17.2
     }
   ]
 }

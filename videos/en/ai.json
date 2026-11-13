@@ -1,5 +1,5 @@
 {
-  "duration": 26.38,
+  "duration": 26.32,
   "points": [
     {
       "id": "prompt",
@@ -7,11 +7,11 @@
     },
     {
       "id": "build",
-      "at": 8.13
+      "at": 8.19
     },
     {
       "id": "rainbow",
-      "at": 12.65
+      "at": 12.66
     }
   ]
 }

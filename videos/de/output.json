@@ -1,5 +1,5 @@
 {
-  "duration": 25.99,
+  "duration": 26.84,
   "points": [
     {
       "id": "pdf",
@@ -7,11 +7,11 @@
     },
     {
       "id": "excel",
-      "at": 10.22
+      "at": 10.38
     },
     {
       "id": "import",
-      "at": 22.07
+      "at": 22.93
     }
   ]
 }

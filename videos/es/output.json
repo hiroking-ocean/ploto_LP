@@ -1,17 +1,17 @@
 {
-  "duration": 25.75,
+  "duration": 26.5,
   "points": [
     {
       "id": "pdf",
-      "at": 0.4
+      "at": 0.41
     },
     {
       "id": "excel",
-      "at": 9.86
+      "at": 10.22
     },
     {
       "id": "import",
-      "at": 21.77
+      "at": 22.64
     }
   ]
 }

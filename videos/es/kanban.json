@@ -1,5 +1,5 @@
 {
-  "duration": 23.1,
+  "duration": 22.98,
   "points": [
     {
       "id": "columns",
@@ -7,15 +7,15 @@
     },
     {
       "id": "todos",
-      "at": 4.1
+      "at": 4.09
     },
     {
       "id": "memo",
-      "at": 9.73
+      "at": 9.8
     },
     {
       "id": "sync",
-      "at": 13.59
+      "at": 13.73
     }
   ]
 }
