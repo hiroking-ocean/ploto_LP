@@ -1,21 +1,21 @@
 {
-  "duration": 22.09,
+  "duration": 21.69,
   "points": [
     {
       "id": "link",
-      "at": 0.61
+      "at": 0.6
     },
     {
       "id": "hierarchy",
-      "at": 6.48
+      "at": 6.33
     },
     {
       "id": "drag",
-      "at": 10.4
+      "at": 10.29
     },
     {
       "id": "milestone",
-      "at": 16.82
+      "at": 16.51
     }
   ]
 }

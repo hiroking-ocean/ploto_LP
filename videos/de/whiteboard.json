@@ -1,17 +1,17 @@
 {
-  "duration": 22.79,
+  "duration": 22.88,
   "points": [
     {
       "id": "place",
-      "at": 0.51
+      "at": 0.5
     },
     {
       "id": "widget",
-      "at": 8.51
+      "at": 9.09
     },
     {
       "id": "png",
-      "at": 14.96
+      "at": 15.45
     }
   ]
 }

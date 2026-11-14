@@ -1,17 +1,17 @@
 {
-  "duration": 16.55,
+  "duration": 16.42,
   "points": [
     {
       "id": "note",
-      "at": 0.41
+      "at": 0.4
     },
     {
       "id": "matrix",
-      "at": 5.03
+      "at": 5.02
     },
     {
       "id": "members",
-      "at": 11.63
+      "at": 11.46
     }
   ]
 }
